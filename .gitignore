@@ -22,3 +22,4 @@ gpx/
 # MkDocs build output
 site/
 _local_test/
+notes/
