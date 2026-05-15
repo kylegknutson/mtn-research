@@ -1,0 +1,24 @@
+# Python
+scripts/.venv/
+__pycache__/
+*.pyc
+
+# Credentials — never commit
+scripts/cts.ini
+*.env
+.env
+
+# macOS noise
+.DS_Store
+
+# Personal data — never publish to public repo
+# (CalTopo map dumps with personal planning, Kyle's climb tracks, etc.)
+caltopo/
+gpx/
+
+# Local Claude Code project state
+.claude/
+
+# MkDocs build output
+site/
+_local_test/

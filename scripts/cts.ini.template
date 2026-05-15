@@ -1,0 +1,13 @@
+# CalTopo API credentials — copy this file to cts.ini and fill in the values.
+# DO NOT commit cts.ini — it's gitignored.
+#
+# Get values from caltopo.com → click your login name (top right, next to "Your Data")
+# → "Your Account" dialog → "Credentials" section.
+#
+# The section header MUST match the email passed as the `account` argument
+# in fetch_caltopo.py (default: kyleg.knutson@gmail.com).
+
+[kyleg.knutson@gmail.com]
+id=PASTE_12_CHAR_CREDENTIAL_ID_HERE
+key=PASTE_44_CHAR_PUBLIC_KEY_HERE
+accountId=PASTE_6_CHAR_ACCOUNT_ID_HERE

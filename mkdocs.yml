@@ -1,0 +1,63 @@
+site_name: Kyle's Peak Research
+site_description: Colorado peak research notes — routes, link-ups, conditions, trip reports
+site_url: https://kylegknutson.github.io/mtn-research/
+site_author: Kyle Knutson
+
+repo_url: https://github.com/kylegknutson/mtn-research
+repo_name: kylegknutson/mtn-research
+edit_uri: edit/main/docs/
+
+theme:
+  name: material
+  palette:
+    # Light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: green
+      accent: deep orange
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    # Dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: green
+      accent: deep orange
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.sections
+    - navigation.indexes
+    - navigation.top
+    - toc.integrate
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+
+nav:
+  - Home: index.md
+  - Peaks:
+    - Brown Mountain: peaks/brown_mountain.md
+    - Dolores + Middle Peak: peaks/dolores_middle_peak.md
+    - Telluride + T 7 + T 8: peaks/telluride_t7_t8.md
+
+markdown_extensions:
+  - tables
+  - admonition
+  - attr_list
+  - md_in_html
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+
+plugins:
+  - search
+
+# Don't fail builds on minor link issues — research notes have lots of external refs
+strict: false
