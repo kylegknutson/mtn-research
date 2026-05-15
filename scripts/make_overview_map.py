@@ -133,9 +133,13 @@ def px_to_img(px: float, py: float,
               origin_px: float, origin_py: float,
               scale_x: float, scale_y: float,
               img_h: int) -> tuple[int, int]:
-    """Global tile-pixel → image pixel (y flipped)."""
+    """Global tile-pixel → image pixel.
+
+    Both coordinate systems have y=0 at top, y increasing downward (north → south),
+    so NO flip is needed. (The img_h parameter is retained for call-site stability.)
+    """
     ix = (px - origin_px) * scale_x
-    iy = img_h - (py - origin_py) * scale_y
+    iy = (py - origin_py) * scale_y
     return int(round(ix)), int(round(iy))
 
 
@@ -368,7 +372,7 @@ def build_map(slug: str, out_path: Path, zoom: int | None = None, title: str = "
     origin_px = px_lo   # now px_lo is our new "zero"
     origin_py = py_lo
     scale_x = IMG_W_PX / (px_hi - px_lo)
-    scale_y = IMG_H_PX / (py_hi - py_lo)   # will be applied with y-flip
+    scale_y = IMG_H_PX / (py_hi - py_lo)
 
     draw = ImageDraw.Draw(img, "RGBA")
 
