@@ -1,6 +1,13 @@
-#!/usr/bin/env python3
+#!/usr/bin/env -S uv run --script
+# /// script
+# requires-python = ">=3.11"
+# dependencies = ["caltopo_python"]
+# ///
 """
 Upload one or more .gpx files to a CalTopo map for visualization.
+
+Runs via uv (PEP 723 inline deps) — no venv to manage. Install once per Mac:
+  brew install uv
 
 Two modes:
   --new-map TITLE   create a new map for this research session
@@ -11,10 +18,10 @@ into folders by source (parsed from filename suffix `_caltopo_<MAP_ID>.gpx`,
 or the bare filename stem otherwise).
 
 Usage:
-    python gpx_to_caltopo.py --gpx-dir ../gpx/dolores_peak \\
+    scripts/gpx_to_caltopo.py --gpx-dir ../gpx/dolores_peak \\
         --new-map "Research: Dolores + Middle Peak" --sharing URL
 
-    python gpx_to_caltopo.py --gpx <one.gpx> --gpx <two.gpx> --map-id ABC1234
+    scripts/gpx_to_caltopo.py --gpx <one.gpx> --gpx <two.gpx> --map-id ABC1234
 
 The map URL is printed at the end. Default sharing for new maps is URL
 (anyone with the link can view) — change with --sharing.

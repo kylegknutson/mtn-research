@@ -1,16 +1,23 @@
-#!/usr/bin/env python3
+#!/usr/bin/env -S uv run --script
+# /// script
+# requires-python = ">=3.11"
+# dependencies = ["caltopo_python"]
+# ///
 """
 Fetch CalTopo account data using caltopo_python.
 
+Runs via uv (PEP 723 inline deps) — no venv to manage. Install once per Mac:
+  brew install uv
+
 Usage:
     # List all maps in your CalTopo account:
-    python fetch_caltopo.py --list
+    scripts/fetch_caltopo.py --list
 
     # Dump a specific map's full contents as JSON to ../caltopo/<map_id>.json:
-    python fetch_caltopo.py --map <MAP_ID>
+    scripts/fetch_caltopo.py --map <MAP_ID>
 
     # Dump every map you own:
-    python fetch_caltopo.py --all
+    scripts/fetch_caltopo.py --all
 
 Credentials live in ./cts.ini (gitignored). See cts.ini.template.
 """

@@ -1,14 +1,26 @@
-#!/usr/bin/env python3
+#!/usr/bin/env -S uv run --script
+# /// script
+# requires-python = ">=3.11"
+# dependencies = [
+#   "requests",
+#   "mercantile",
+#   "Pillow",
+#   "pyproj",
+# ]
+# ///
 """
 make_overview_map.py — generate a static PNG overview map for a research peak.
 
 Uses Pillow + direct OpenTopoMap tile fetching (no matplotlib/contextily).
-Venv: ~/dev/mtn_venv  (outside iCloud to avoid dylib eviction issues)
+
+Runs via uv (PEP 723 inline deps) — no venv to manage. Install once per Mac:
+  brew install uv
 
 Usage:
-  ~/dev/mtn_venv/bin/python3.13 scripts/make_overview_map.py brown_mountain
-  ~/dev/mtn_venv/bin/python3.13 scripts/make_overview_map.py dolores_peak --title "Dolores Peak + Middle Peak"
-  ~/dev/mtn_venv/bin/python3.13 scripts/make_overview_map.py telluride_t7_t8 --zoom 12
+  scripts/make_overview_map.py brown_mountain
+  scripts/make_overview_map.py dolores_peak --title "Dolores Peak + Middle Peak"
+  scripts/make_overview_map.py telluride_t7_t8 --zoom 12
+  # equivalent: uv run scripts/make_overview_map.py brown_mountain
 
 Output: maps/{slug}.png (or --out path)
 
