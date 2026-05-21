@@ -43,6 +43,8 @@ nav:
     - Brown Mountain: peaks/brown_mountain.md
     - Dolores + Middle Peak: peaks/dolores_middle_peak.md
     - Telluride + T 7 + T 8: peaks/telluride_t7_t8.md
+    - Hunts Peak: peaks/hunts_peak.md
+    - PT 13,557 (Huerfano): peaks/pt_13557.md
 
 markdown_extensions:
   - tables
