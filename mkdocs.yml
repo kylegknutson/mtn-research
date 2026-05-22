@@ -39,6 +39,7 @@ theme:
 
 nav:
   - Home: index.md
+  - Architecture: architecture.md
   - Peaks:
     - Brown Mountain: peaks/brown_mountain.md
     - Dolores + Middle Peak: peaks/dolores_middle_peak.md
