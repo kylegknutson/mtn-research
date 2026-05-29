@@ -67,5 +67,8 @@ markdown_extensions:
 plugins:
   - search
 
+extra_javascript:
+  - javascripts/external-links-new-tab.js
+
 # Don't fail builds on minor link issues — research notes have lots of external refs
 strict: false
