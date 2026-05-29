@@ -34,8 +34,8 @@ PEAKS = [
         "slug": "jacque_peak",
         "name": "Jacque Peak",
         "peak_db_id": 603,
-        # Nearby unclimbed ranked 13ers within 8 mi (peak_db ids)
-        "nearby_unclimbed": [402],  # Bartlett Mtn 13,348 @ 5.74mi — only nearby ranked unclimbed (different drive)
+        # No same-day-combo neighbors: Bartlett (5.74 mi) is on opposite side of Climax Mine — different drive
+        "nearby_unclimbed": [],
         "landmarks": [
             ("Copper Mtn Resort base TH (Woodward Express area)", 39.4914, -106.1568, 9712),
             ("CO 91 / Graveline Gulch pullout (alt TH, off-piste season)", 39.3938, -106.1469, 10500),
@@ -46,7 +46,8 @@ PEAKS = [
         "slug": "pennsylvania_mountain",
         "name": "Pennsylvania Mountain",
         "peak_db_id": 812,
-        "nearby_unclimbed": [402],  # Bartlett Mtn at 7.82 mi (barely in range, different drainage)
+        # No same-day-combo neighbors: Bartlett (7.82 mi) is across Climax Mine — different drainage
+        "nearby_unclimbed": [],
         "landmarks": [
             ("Pika Trailhead (standard, off Hwy 9)", 39.2658, -106.1638, 11716),
             ("Mountain View Drive end (alt TH)", 39.2580, -106.1530, 11200),

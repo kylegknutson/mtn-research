@@ -338,6 +338,17 @@ def build_map(slug: str, out_path: Path, zoom: int | None = None, title: str = "
     _bx = bbox_lons if bbox_lons else all_lons
     _by = bbox_lats if bbox_lats else all_lats
 
+    # If bbox is degenerate (single peak with no tracks/co-peaks), fall back to
+    # all waypoints so the landmarks/THs give us a visible extent.
+    if len(set(_bx)) < 2 or len(set(_by)) < 2:
+        _bx, _by = all_lons, all_lats
+    # And if STILL degenerate (e.g. one waypoint total), pad ~3 km each way
+    if len(set(_bx)) < 2 or len(set(_by)) < 2:
+        center_lon = _bx[0] if _bx else 0
+        center_lat = _by[0] if _by else 0
+        _bx = [center_lon - 0.04, center_lon + 0.04]
+        _by = [center_lat - 0.03, center_lat + 0.03]
+
     pad = 0.08
     lon_span = max(_bx) - min(_bx)
     lat_span = max(_by) - min(_by)
