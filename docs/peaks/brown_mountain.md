@@ -15,6 +15,7 @@
 |---|---|
 | Elevation (LiDAR) | 13,347' (climb13ers + 14ers consensus); your sheet says 13,339' |
 | Lat / Lon | 37.92078, −108.63785 |
+| Weather | [NOAA forecast](https://forecast.weather.gov/MapClick.php?lat=37.92078&lon=-108.63785) (same target as 14ers / LoJ / peakbagger weather links) |
 | 14ers.com peak page | https://www.14ers.com/peaks/10441/13er-brown-mountain-a |
 | Range | San Juan Mountains |
 | Class (standard) | 2 |

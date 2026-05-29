@@ -12,6 +12,7 @@
 |---|---|---|---|
 | Elevation (LiDAR) | 13,514' | 13,360' | 13,315' |
 | Lat / Lon | 37.92479, −107.73596 | 37.93418, −107.72316 | 37.94190, −107.71606 |
+| Weather (Telluride Pk) | [NOAA forecast](https://forecast.weather.gov/MapClick.php?lat=37.92479&lon=-107.73596) — same target on all 3 sites; one link covers the whole cluster |
 | Class (standard) | 2 | 2 (ridge approach) | 2–3 (ridge bypass) / 3–4 (crest) |
 | Range | San Juan | San Juan | San Juan |
 | County | Ouray / San Miguel | Ouray | Ouray |

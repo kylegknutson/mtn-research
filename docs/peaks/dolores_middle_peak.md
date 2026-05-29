@@ -13,6 +13,7 @@
 | Elevation (LiDAR) | 13,289' | 13,305' | 12,612' |
 | Prominence | 730' | **1,960'** | unranked |
 | Lat / Lon | 37.84056, −108.09621 | 37.85368, −108.10804 | 37.84639, −108.12561 |
+| Weather (Dolores Pk) | [NOAA forecast](https://forecast.weather.gov/MapClick.php?lat=37.84056&lon=-108.09621) — same target on all 3 sites; one link covers the whole cluster |
 | Class (standard) | 2 | 2 (with exposure, false summit) | 2 |
 | Range | San Miguel Mountains | San Miguel Mountains | San Miguel Mountains |
 | Wilderness | Lizard Head | Lizard Head | Lizard Head |

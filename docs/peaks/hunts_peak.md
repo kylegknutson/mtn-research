@@ -16,6 +16,7 @@
 |---|---|
 | Elevation | 13,061' (14ers consensus 13,071' on TRs) |
 | Lat / Lon | 38.3831, −105.94582 |
+| Weather | [NOAA forecast](https://forecast.weather.gov/MapClick.php?lat=38.3831&lon=-105.94582) (same target as 14ers / LoJ / peakbagger weather links) |
 | 14ers.com peak page | https://www.14ers.com/peaks/10684/13er-hunts-peak |
 | Range / Wilderness | Sangre de Cristo / Sangre de Cristo Wilderness |
 | Class (standard) | 2 |

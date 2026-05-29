@@ -16,6 +16,7 @@
 |---|---|
 | Elevation | 13,217' (LiDAR; map 13,209') |
 | Lat / Lon | 39.36757, −106.41454 |
+| Weather | [NOAA forecast](https://forecast.weather.gov/MapClick.php?lat=39.36757&lon=-106.41454) (same target as 14ers / LoJ / peakbagger weather links) |
 | 14ers.com peak page | https://www.14ers.com/peaks/10798/13er-homestake-peak |
 | listsofjohn.com | https://listsofjohn.com/peak/596 |
 | peakbagger.com | https://peakbagger.com/peak.aspx?pid=16688 |

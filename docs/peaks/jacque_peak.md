@@ -15,6 +15,7 @@
 |---|---|
 | Elevation | 13,212' (LiDAR; map 13,205') |
 | Lat / Lon | 39.45485, −106.19713 |
+| Weather | [NOAA forecast](https://forecast.weather.gov/MapClick.php?lat=39.45485&lon=-106.19713) (same target as 14ers / LoJ / peakbagger weather links) |
 | 14ers.com peak page | https://www.14ers.com/peaks/10229/13er-jacque-peak |
 | listsofjohn.com | https://listsofjohn.com/peak/603 |
 | peakbagger.com | https://peakbagger.com/peak.aspx?pid=5781 |

@@ -39,6 +39,7 @@
 |---|---|
 | Elevation | 13,527' (LiDAR; map 13,521') |
 | Lat / Lon | 38.97964, −106.79953 |
+| Weather | [NOAA forecast](https://forecast.weather.gov/MapClick.php?lat=38.97964&lon=-106.79953) (same target as 14ers / LoJ / peakbagger weather links) |
 | 14ers.com peak page | https://www.14ers.com/peaks/10099/13er-star-peak-a |
 | listsofjohn.com | https://listsofjohn.com/peak/301 |
 | peakbagger.com | https://peakbagger.com/peak.aspx?pid=14666 |

@@ -20,6 +20,7 @@
 |---|---|
 | Elevation | 13,135' (LiDAR; map 13,139') |
 | Lat / Lon | 39.38053, −106.52061 |
+| Weather | [NOAA forecast](https://forecast.weather.gov/MapClick.php?lat=39.38053&lon=-106.52061) (same target as 14ers / LoJ / peakbagger weather links) |
 | 14ers.com peak page | https://www.14ers.com/peaks/10810/13er-savage-peak |
 | 14ers.com NE Ridge route | https://www.14ers.com/route.php?route=201207031210033 |
 | listsofjohn.com | https://listsofjohn.com/peak/674 |

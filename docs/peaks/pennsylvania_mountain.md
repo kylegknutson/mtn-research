@@ -15,6 +15,7 @@
 |---|---|
 | Elevation | 13,013' (LiDAR; map 13,006') |
 | Lat / Lon | 39.26461, −106.14243 |
+| Weather | [NOAA forecast](https://forecast.weather.gov/MapClick.php?lat=39.26461&lon=-106.14243) (same target as 14ers / LoJ / peakbagger weather links) |
 | 14ers.com peak page | https://www.14ers.com/peaks/10275/13er-pennsylvania-mountain |
 | 14ers.com SE Ridge route | https://www.14ers.com/route.php?route=2021042410280187761 |
 | listsofjohn.com | https://listsofjohn.com/peak/812 |
