@@ -113,6 +113,7 @@ TMC describes a Middle Peak loop from the same parking spot with **Class 4 scram
 ## Trailhead — Fish Creek TH
 
 - **Location:** 37.82419, −108.11985
+- **Drive from Boulder:** **[7h 30m via Google Maps](https://www.google.com/maps/dir/?api=1&origin=1162+Peakview+Circle,+Boulder,+CO+80302&destination=37.82419,-108.11985)** (359 mi, origin: 1162 Peakview Circle)
 - **Elevation:** ~10,250'
 - **Vehicle:** 2WD dirt road, 5 miles from Dunton, CO. Your high-clearance vehicle is overkill — anything will make it. (TR notes "4WD option to park 50 yards further" but unnecessary.)
 - **Parking:** Dispersed camping area. Plenty of room. No fees.

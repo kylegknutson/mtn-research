@@ -61,6 +61,7 @@ The standard out-and-back. Class 2, half-day, no link-up obligations, no permits
 | | |
 |---|---|
 | Location | Off US 285 in N San Luis Valley, ~12 mi S of Poncha Pass |
+| Drive from Boulder | **[3h 37m via Google Maps](https://www.google.com/maps/dir/?api=1&origin=1162+Peakview+Circle,+Boulder,+CO+80302&destination=38.4068,-105.9756)** (176 mi via US 285 S, origin: 1162 Peakview Circle) |
 | Access road | FR 980 (gravel, 3.65 mi east of US 285) → jct with FR 982 (camping area) → 0.6 mi SE to TH |
 | Vehicle | 2WD OK to the camping area at FR 980/982 junction; **last 0.6 mi narrow, two creek crossings, room for ~2 vehicles** — better to park at the camping area on weekends/wet days |
 | Start elev | ~9,500' |

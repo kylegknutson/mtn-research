@@ -81,6 +81,7 @@ This is itself a 3-ranked-13er link-up. Every reasonable approach naturally chai
 ## Trailhead — Idarado Mine pullout
 
 - **Approx location:** 37.9038, −107.7032 (verify mile post 90 on US 550)
+- **Drive from Boulder:** **[6h 19m via Google Maps](https://www.google.com/maps/dir/?api=1&origin=1162+Peakview+Circle,+Boulder,+CO+80302&destination=37.9038,-107.7032)** (326 mi, origin: 1162 Peakview Circle)
 - **~12 mi south of Ouray** on US 550 (paved highway — no special vehicle needed for the drive)
 - Large parking circle overlooks the historic Idarado Mine
 - Summer toilets at the pullout

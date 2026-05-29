@@ -85,6 +85,7 @@ The Corkscrew Pass / Hurricane Pass 4WD road starts off US 550 at the Ironton gh
 | | |
 |---|---|
 | TH location | Off US 550, ~7.8 mi south of Ouray (near Ironton) — turn left at "dam" with wood bridge and large parking |
+| Drive from Boulder | **[6h 21m via Google Maps](https://www.google.com/maps/dir/?api=1&origin=1162+Peakview+Circle,+Boulder,+CO+80302&destination=37.94,-107.6688)** (328 mi, origin: 1162 Peakview Circle) |
 | Length, US 550 → Hurricane Pass top | ~7.1 mi (4.8 mi to Corkscrew Pass at ~12,200', +2.3 mi to Hurricane Pass at ~12,500') |
 | Difficulty | "Easy 2" / Moderate. Wide and graded most of the way. |
 | Crux | Narrow switchbacks at the top approaching Hurricane Pass — intimidating but not technically hard |
