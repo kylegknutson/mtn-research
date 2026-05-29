@@ -303,7 +303,8 @@ def build_map(slug: str, out_path: Path, zoom: int | None = None, title: str = "
 
     buckets = {"track_public": [], "track_kyle": [], "peak": [], "drive_in": [], "th": []}
     all_lons, all_lats = [], []
-    bbox_lons, bbox_lats = [], []   # only tracks + peaks → drives zoom/extent
+    track_lons, track_lats = [], []   # tracks only — preferred bbox driver when present
+    peak_lons, peak_lats = [], []     # peak markers — fallback bbox driver when no tracks
 
     def _ingest(path, is_kyle):
         kind = classify_file(path, is_kyle)
@@ -313,20 +314,20 @@ def build_map(slug: str, out_path: Path, zoom: int | None = None, title: str = "
             for seg in segs:
                 for lon, lat in seg:
                     all_lons.append(lon); all_lats.append(lat)
-                    bbox_lons.append(lon); bbox_lats.append(lat)
+                    track_lons.append(lon); track_lats.append(lat)
         elif kind == "mixed_wpt":
             for lon, lat, name in parse_waypoints(path):
                 wkind = classify_waypoint_by_name(name)
                 buckets[wkind].append((lon, lat, name))
                 all_lons.append(lon); all_lats.append(lat)
                 if wkind == "peak":
-                    bbox_lons.append(lon); bbox_lats.append(lat)
+                    peak_lons.append(lon); peak_lats.append(lat)
         else:
             for lon, lat, name in parse_waypoints(path):
                 buckets[kind].append((lon, lat, name))
                 all_lons.append(lon); all_lats.append(lat)
                 if kind == "peak":
-                    bbox_lons.append(lon); bbox_lats.append(lat)
+                    peak_lons.append(lon); peak_lats.append(lat)
 
     for f in public_files: _ingest(f, False)
     for f in kyle_files:   _ingest(f, True)
@@ -335,21 +336,44 @@ def build_map(slug: str, out_path: Path, zoom: int | None = None, title: str = "
         print(f"ERROR: no coordinates found in {gpx_dir}", file=sys.stderr)
         sys.exit(1)
 
-    _bx = bbox_lons if bbox_lons else all_lons
-    _by = bbox_lats if bbox_lats else all_lats
-
-    # If bbox is degenerate (single peak with no tracks/co-peaks), fall back to
-    # all waypoints so the landmarks/THs give us a visible extent.
-    if len(set(_bx)) < 2 or len(set(_by)) < 2:
+    # Bbox priority:
+    # 1. Tracks if present (the actual climb area — don't let distant cluster
+    #    markers zoom us out). Nearby ranked-peak markers may render off-canvas;
+    #    that's intentional — the wider cluster context lives on the interactive
+    #    CalTopo map. The PNG overview is for "what does the standard route
+    #    actually look like".
+    # 2. Else peak markers (so an unclimbed peak with no tracks still gets a
+    #    map centered on the summit/cluster).
+    # 3. Else all waypoints (landmarks/THs only).
+    if track_lons:
+        _bx, _by = track_lons, track_lats
+    elif peak_lons:
+        _bx, _by = peak_lons, peak_lats
+    else:
         _bx, _by = all_lons, all_lats
-    # And if STILL degenerate (e.g. one waypoint total), pad ~3 km each way
+
+    # If bbox is degenerate (single point), pad ~3 km each way
     if len(set(_bx)) < 2 or len(set(_by)) < 2:
         center_lon = _bx[0] if _bx else 0
         center_lat = _by[0] if _by else 0
         _bx = [center_lon - 0.04, center_lon + 0.04]
         _by = [center_lat - 0.03, center_lat + 0.03]
 
-    pad = 0.08
+    # Clip bbox to a sane radius around the primary summit (~ first peak waypoint).
+    # This trims tracks that extend WAY beyond the actual peak (e.g. a TR's
+    # long sub-13k outback that drags the extent miles south).
+    # Default: ~10 mi × 7 mi viewing window.
+    MAX_LON_HALF_SPAN = 0.10  # ~5.5 mi at 39°N
+    MAX_LAT_HALF_SPAN = 0.07  # ~4.8 mi
+    if buckets["peak"]:
+        summit_lon, summit_lat, _ = buckets["peak"][0]
+        clipped_bx = [x for x in _bx if abs(x - summit_lon) <= MAX_LON_HALF_SPAN]
+        clipped_by = [y for y in _by if abs(y - summit_lat) <= MAX_LAT_HALF_SPAN]
+        # Use clipped only if we still have enough variation
+        if len(set(clipped_bx)) >= 2 and len(set(clipped_by)) >= 2:
+            _bx, _by = clipped_bx, clipped_by
+
+    pad = 0.12
     lon_span = max(_bx) - min(_bx)
     lat_span = max(_by) - min(_by)
     lon_min = min(_bx) - lon_span * pad
