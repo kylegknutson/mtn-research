@@ -46,6 +46,11 @@ nav:
     - Telluride + T 7 + T 8: peaks/telluride_t7_t8.md
     - Hunts Peak: peaks/hunts_peak.md
     - PT 13,557 (Huerfano): peaks/pt_13557.md
+    - Jacque Peak: peaks/jacque_peak.md
+    - Pennsylvania Mountain: peaks/pennsylvania_mountain.md
+    - Homestake Peak: peaks/homestake_peak.md
+    - Savage Peak: peaks/savage_peak.md
+    - Star Peak A: peaks/star_peak_a.md
 
 markdown_extensions:
   - tables

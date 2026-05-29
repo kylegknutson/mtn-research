@@ -19,6 +19,12 @@ gpx/
 # Local Claude Code project state
 .claude/
 
+# Playwright MCP browser session scratch
+.playwright-mcp/
+
+# Scratch JSON dumps from research sessions (root-level only — anything in docs/ is real)
+/*.json
+
 # MkDocs build output
 site/
 _local_test/

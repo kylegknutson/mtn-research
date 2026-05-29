@@ -1,10 +1,12 @@
 # Hunts Peak (Northern Sangre de Cristo)
 
 **Researched:** 2026-05-21
+**Freshness pass:** 2026-05-29 (added LoJ + peakbagger sources per 3-source methodology; reconfirmed cluster status)
 **CalTopo research map:** TODO (build on map C105AEV — existing Hunts data already layered there)
-**Status in DB:** 0 ascents (unclimbed). **Cluster status:**
+**Status in DB:** 0 ascents (unclimbed). **Cluster status (reconfirmed 2026-05-29):**
 - ✓ Done nearby (Sangre N tip): Bushnell Pk (4.22 mi), Twin Sisters North (3.19 mi)
 - ✗ **No unclimbed ranked 13ers within 8 mi** — Hunts is a true standalone day, no link-up payoff
+- **Combos: Solo** (per the ranked-13er+ rule — Twin Sisters and Bushnell are climbed; Red Mtn at 12,994' is sub-13k and doesn't count even when paired in TRs like Mtnman200's)
 
 ---
 
@@ -97,17 +99,36 @@ The standard out-and-back. Class 2, half-day, no link-up obligations, no permits
 
 ---
 
-## Trip reports (14ers.com)
+## Trip reports
+
+### 14ers.com (per existing research, 2026-05-21)
 
 | Date | Source | Stats | Notes |
 |---|---|---|---|
 | 5/16/2021 | [WildWanderer TR 21037](https://www.14ers.com/php14ers/tripreport.php?trip=21037) | 6.79 mi / 3,528' / 4h20 | **Recommended baseline.** Standard W Slopes from Rock Creek TH, solo. Detailed road + gate notes. **GPX in 14ers library.** |
 | 7/12/2022 | [brianr56 TR 21757](https://www.14ers.com/php14ers/tripreport.php?trip=21757) | 12 mi / 3,890' gain | Traverse over Hunts to Rainbow Trail (Hunts Lake gully descent). Class 2 but "scralus" gully. Needs shuttle. |
-| 8/11/2021 | Mtnman200 (multi-peak) | 9 pages of photos | Hunts + Red Mtn (12,994) + UN 12,924 + Twin Sisters N + Bushnell — big northern Sangres day |
+| 8/11/2021 | Mtnman200 (multi-peak) | 9 pages of photos | Hunts + Red Mtn (12,994 — sub-13k, doesn't count) + UN 12,924 + Twin Sisters N + Bushnell — big northern Sangres day |
 | 7/26/2020 | astranko "Sangre Traverse" | reference | Multi-day epic, includes Hunts |
 | Route info | [14ers W Slopes route](https://www.14ers.com/php14ers/peak.php?peakid=10684&t=routes) | 6 mi / 3,450' / Class 2 | Official route page; 281 member ascents, 11 winter, 2 ski |
 
 **GPX library:** 6 entries for Hunts (1 route + 4 TR tracks + 1 library upload) — all available on the [GPX library locator](https://www.14ers.com/php14ers/gpxlib_locator.php?peakid=10684).
+
+### listsofjohn.com (added 2026-05-29 freshness pass — 6 TRs)
+
+| Date | Source | Notes |
+|---|---|---|
+| 2024-06-07 | [josephnephi TR 26782](https://listsofjohn.com/tr?Id=26782&pkid=748) | Recent solo, post-existing-research |
+| 2023-07-13 | [longranger TR 28359](https://listsofjohn.com/tr?Id=28359&pkid=748) | Solo summer |
+| 2020-05-21 | [whileyh TR 16208](https://listsofjohn.com/tr?Id=16208&pkid=748) | Spring conditions, near gate-open date |
+| 2011-06-18 | [Brian Kalet TR 1244](https://listsofjohn.com/tr?Id=1244&pkid=748) | Earlier-era reference |
+| 2011-03-25 | [Furthermore TR 1984](https://listsofjohn.com/tr?Id=1984&pkid=748) | Early-spring ski/snow ascent — relevant for shoulder-season planning |
+| 2006-06-11 | [Gary Neben TR 23840](https://listsofjohn.com/tr?Id=23840&pkid=748) | Classic-era reference |
+
+LoJ summary: **137 members ascended, Class 2, Sangre de Cristo Wilderness, Fremont & Saguache counties** — reconfirms existing report's elevation/coords/class. No discrepancies with 14ers data.
+
+### peakbagger.com
+
+Existing peak page: https://peakbagger.com/peak.aspx?pid=5648 (linked from LoJ). Reference for additional climber ascents beyond the 14ers + LoJ pool. **Freshness pass did not deep-dive PB ascents** — existing 14ers TRs (WildWanderer 5/16/2021 baseline) remain the recommended planning source.
 
 ---
 
