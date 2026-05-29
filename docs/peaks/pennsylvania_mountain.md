@@ -68,7 +68,7 @@ The 14ers.com route. The quickest, easiest, most documented option of any peak o
 | | |
 |---|---|
 | Location | Off Hwy 9 between Fairplay and Hoosier Pass, accessed via Sacramento Creek Road area |
-| Drive from Boulder | **2h 5m via Google Maps** |
+| Drive from Boulder | **[2h 5m via Google Maps](https://www.google.com/maps/dir/?api=1&origin=1162+Peakview+Circle,+Boulder,+CO+80302&destination=39.2658,-106.1638)** (origin: 1162 Peakview Circle) |
 | Vehicle | 2WD per kalestew ("Parking lot is accessible season-round") |
 | Start elev | ~11,512–11,716' (varies by GPS reading) |
 | Parking | Lot at the TH. Stratmoen 1/20/2020: "trailhead parking area had not been plowed, so we parked at a wide spot a bit down the road. A local walking by said we'd be OK parking there." — Winter access requires flexibility |

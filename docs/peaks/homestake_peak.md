@@ -100,7 +100,7 @@ If you want the combo: design a 2-3 day Holy Cross-area backpacking trip (baseca
 | | |
 |---|---|
 | Location | **7 mi north of Leadville off Hwy 24** (heading toward Minturn). Turn west at Webster's Sand and Gravel Pit sign (Carsonite "19"), milepost ~167.5, old yellow road grader at the turn |
-| Drive from Boulder | **3h 14m via Google Maps** |
+| Drive from Boulder | **[3h 14m via Google Maps](https://www.google.com/maps/dir/?api=1&origin=1162+Peakview+Circle,+Boulder,+CO+80302&destination=39.3500,-106.3700)** (origin: 1162 Peakview Circle) |
 | Sequence | Hwy 24 → west on FR 19 (1 mi) → right at 19A junction (sign says "Slide Lake" or carsonite "100") → 0.5 mi to small parking spot at 10th Mountain Winter Trail / Wurts Ditch Rd / Mitchell Trail Loop sign → 0.5 mi past old cabin to gate |
 | Vehicle | 2WD to the 0.5-mi parking spot in summer; **gate closed in winter** (then ski/snowshoe the road) |
 | Beyond gate | Easy 4WD road to 10th Mountain Memorial Hut. In winter "mostly 2-4 inches of snow with a few stretches having more" (avalletta Nov 2012). One chained-up vehicle had packed the snow ahead of him |

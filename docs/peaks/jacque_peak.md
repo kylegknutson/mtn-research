@@ -83,7 +83,7 @@ The most common modern approach. Up through Copper ski terrain, over Union Mount
 | | |
 |---|---|
 | Location | I-70 Exit 195 (Copper Mountain), summit county. ~75 mi west of Boulder |
-| Drive from Boulder | **1h 42m via Google Maps** |
+| Drive from Boulder | **[1h 42m via Google Maps](https://www.google.com/maps/dir/?api=1&origin=1162+Peakview+Circle,+Boulder,+CO+80302&destination=39.4914,-106.1568)** (origin: 1162 Peakview Circle) |
 | Vehicle | Anything — paved to base village |
 | Start elev | ~9,712' (base village) |
 | Parking | Free in summer (off-season). In ski season, public lots near "Far East" or "Beeline" are free for hikers. Avoid the resort core paid lots. |
@@ -94,7 +94,7 @@ The most common modern approach. Up through Copper ski terrain, over Union Mount
 | | |
 |---|---|
 | Location | East side of CO 91, ~1.5 mi south of Copper exit, **across from closed mine** |
-| Drive from Boulder | ~1h 45m (similar to Copper) |
+| Drive from Boulder | **[~1h 45m via Google Maps](https://www.google.com/maps/dir/?api=1&origin=1162+Peakview+Circle,+Boulder,+CO+80302&destination=39.3938,-106.1469)** (similar to Copper) |
 | Vehicle | Anything — pull off paved highway |
 | Start elev | ~10,500' |
 | Parking | Side of CO 91 — "no signs where I parked" (avalletta). Mine has aggressive No Parking signs by concrete barriers — park before them. |

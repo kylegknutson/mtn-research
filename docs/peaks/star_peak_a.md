@@ -130,7 +130,7 @@ The 2,766' / 6.6 mi from 10,760' TH option (PB aid 992811). Lowest gain, fastest
 | | |
 |---|---|
 | Location | End of CO 742 (Cottonwood Pass Rd, east of Taylor Park Reservoir, accessed from Buena Vista via Cottonwood Pass) |
-| Drive from Boulder | **3h 39m via Google Maps** |
+| Drive from Boulder | **[3h 39m via Google Maps](https://www.google.com/maps/dir/?api=1&origin=1162+Peakview+Circle,+Boulder,+CO+80302&destination=39.0095,-106.7833)** (origin: 1162 Peakview Circle) |
 | 2WD/4WD | High-clearance recommended for the final road section; 2WD passable in dry conditions to the standard TH |
 | Start elev | ~10,748-10,760' |
 | Trail | Mt Tilton Trail (national forest trail) |

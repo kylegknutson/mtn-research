@@ -110,7 +110,7 @@ jacolc 8/16/2024 (LoJ TR 27181): **15.5 mi / 6,300' / 11h35** — Sawatch main r
 | | |
 |---|---|
 | Location | West side of Holy Cross Wilderness, accessed via Homestake Rd from Hwy 24 between Leadville and Minturn |
-| Drive from Boulder | **3h 39m via Google Maps** |
+| Drive from Boulder | **[3h 39m via Google Maps](https://www.google.com/maps/dir/?api=1&origin=1162+Peakview+Circle,+Boulder,+CO+80302&destination=39.3858,-106.4717)** (origin: 1162 Peakview Circle) |
 | From Hwy 24 | From Minturn: ~11 mi south on Hwy 24. From Leadville: ~19 mi north on Hwy 24. **Turn west onto Homestake Road (dirt, FS 703)**. |
 | Continue | Drive ~8 mi on Homestake Rd → right onto **Missouri Creek Road** → continue **2.25 mi** to Fancy Lake TH on your right, then **turn LEFT** to reach Missouri Lakes TH |
 | 2WD parking | Yes — Missouri Lakes TH lot at 10,000' |
