@@ -1,7 +1,7 @@
 # Jacque Peak (Gore Range)
 
 **Researched:** 2026-05-28
-**CalTopo research map:** TODO
+**CalTopo research map:** https://caltopo.com/m/R2NF0S2
 **Status in DB:** 0 ascents (unclimbed). **Cluster status:**
 - ✗ **No same-drainage unclimbed ranked 13ers** — Bartlett Mtn (5.74 mi) is the only nearby unclimbed ranked peak, but it sits on the opposite side of Fremont Pass / Climax Mine and is a different drive entirely
 - ✓ Done nearby (Tenmile/Mosquito group): Pacific (4.49 mi), Crystal A (4.62), Atlantic (4.74), PT 13,207 (4.89), Fletcher (5.08), Peak 10 (5.08), Wheeler (6.08), Quandary (6.25), Clinton (6.51), N Star (6.74)
@@ -27,7 +27,7 @@
 | County | Summit |
 
 ![Overview map](../maps/jacque_peak.png)
-*[Interactive CalTopo map — TODO]*
+*[Interactive CalTopo map](https://caltopo.com/m/R2NF0S2)*
 
 ---
 

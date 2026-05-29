@@ -1,7 +1,7 @@
 # Star Peak A (Elk Mountains / Taylor Park cluster)
 
 **Researched:** 2026-05-28
-**CalTopo research map:** TODO
+**CalTopo research map:** https://caltopo.com/m/607Q6C8
 **Status in DB:** 0 ascents (unclimbed).
 
 ## ⚠️ CRITICAL CLUSTER ALERT
@@ -54,7 +54,7 @@
 | 14ers winter ascents | 3 / Ski descents 23 |
 
 ![Overview map](../maps/star_peak_a.png)
-*[Interactive CalTopo map — TODO]*
+*[Interactive CalTopo map](https://caltopo.com/m/607Q6C8)*
 
 ---
 

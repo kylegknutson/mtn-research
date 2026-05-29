@@ -1,7 +1,7 @@
 # Savage Peak (Sawatch Range / Holy Cross Wilderness)
 
 **Researched:** 2026-05-28
-**CalTopo research map:** TODO
+**CalTopo research map:** https://caltopo.com/m/QL51DBE
 **Status in DB:** 0 ascents (unclimbed). **Cluster status:**
 - ✗ **PT 13,089 (4.25 mi) — unclimbed ranked** ← potential same-TH combo
 - ✗ **PT 13,100 A (5.17 mi) — unclimbed ranked** ← potential same-TH combo
@@ -37,7 +37,7 @@
 | 14ers winter ascents | 1 / Ski descents 29 — popular ski peak (Savage Couloir) |
 
 ![Overview map](../maps/savage_peak.png)
-*[Interactive CalTopo map — TODO]*
+*[Interactive CalTopo map](https://caltopo.com/m/QL51DBE)*
 
 ---
 

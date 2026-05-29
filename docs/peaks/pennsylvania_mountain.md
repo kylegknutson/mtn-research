@@ -1,7 +1,7 @@
 # Pennsylvania Mountain (Mosquito Range)
 
 **Researched:** 2026-05-28
-**CalTopo research map:** TODO
+**CalTopo research map:** https://caltopo.com/m/P2V1QG5
 **Status in DB:** 0 ascents (unclimbed). **Cluster status:**
 - ✗ **No unclimbed ranked 13ers within 8 mi** — Bartlett Mtn at 7.82 mi is the only one and it's on the opposite side of Climax Mine (different approach entirely)
 - ✓ Every other Mosquito Range 13er and 14er within 8 mi is done: London Mtn (1.62), Mt Evans B (2.19), Dyer Mtn (2.79), Mt Sherman (3.12), Mosquito Peak (3.28), Mt Buckskin (3.91), Mt Tweto (4.23), Mt Sheridan (4.46), Arkansas Mtn (5.07), Mt Democrat (5.18), Mt Bross (5.23), Horseshoe Mtn A (5.94), Mt Lincoln (6.22), Clinton Pk (7.16), N Star Mtn (7.82)
@@ -29,7 +29,7 @@
 | Member ascents | 724 (14ers) + 270 (LoJ) — heavily climbed |
 
 ![Overview map](../maps/pennsylvania_mountain.png)
-*[Interactive CalTopo map — TODO]*
+*[Interactive CalTopo map](https://caltopo.com/m/P2V1QG5)*
 
 ---
 

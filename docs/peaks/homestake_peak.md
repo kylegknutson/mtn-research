@@ -1,7 +1,7 @@
 # Homestake Peak (Sawatch Range / Holy Cross Wilderness)
 
 **Researched:** 2026-05-28
-**CalTopo research map:** TODO
+**CalTopo research map:** https://caltopo.com/m/V4D61FV
 **Status in DB:** 0 ascents (unclimbed). **Cluster status:**
 - ✗ **Savage Peak 5.72 mi unclimbed** ← also on Kyle's "do" list. See Multi-peak combo section below.
 - ✓ Done nearby (Holy Cross / Sawatch): Whitney Pk (5.37 mi), Fancy Pk (5.99), PT 13,786 (6.85), PT 13,253 (7.16), Holly Cross Ridge (7.38), Mt of the Holy Cross 14er (7.74)
@@ -32,7 +32,7 @@
 | 14ers winter ascents | 71 / Ski descents 61 — heavily skied peak |
 
 ![Overview map](../maps/homestake_peak.png)
-*[Interactive CalTopo map — TODO]*
+*[Interactive CalTopo map](https://caltopo.com/m/V4D61FV)*
 
 ---
 
