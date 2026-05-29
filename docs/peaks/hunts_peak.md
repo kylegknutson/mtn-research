@@ -2,7 +2,7 @@
 
 **Researched:** 2026-05-21
 **Freshness pass:** 2026-05-29 (added LoJ + peakbagger sources per 3-source methodology; reconfirmed cluster status)
-**CalTopo research map:** TODO (build on map C105AEV — existing Hunts data already layered there)
+**CalTopo research map:** https://caltopo.com/m/2SCT1B6 (Sangres-tip dedicated research map; existing C105AEV still has Bushnell/Twin Sisters planning data)
 **Status in DB:** 0 ascents (unclimbed). **Cluster status (reconfirmed 2026-05-29):**
 - ✓ Done nearby (Sangre N tip): Bushnell Pk (4.22 mi), Twin Sisters North (3.19 mi)
 - ✗ **No unclimbed ranked 13ers within 8 mi** — Hunts is a true standalone day, no link-up payoff
@@ -23,7 +23,7 @@
 | Peak DB id | 748 |
 
 ![Overview map](../maps/hunts_peak.png)
-*[Interactive CalTopo map — TODO]*
+*[Interactive CalTopo map](https://caltopo.com/m/2SCT1B6)*
 
 ---
 
