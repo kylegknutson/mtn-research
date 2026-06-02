@@ -1,0 +1,30 @@
+# Climber profile — Emily (friend)
+# See climbers/_schema.md for the field spec.
+
+name: Emily Sharpe
+slug: emily
+is_default: false
+
+# Drive-time origin for "closest" calculations and Maps directions links.
+# TODO: confirm Emily's home address + lat/lon (placeholder = Boulder).
+home_address: "Boulder, CO"
+home_latlon: [40.0150, -105.2705]
+
+# Climbed list comes from Emily's public 14ers checklist (kept up to date by her).
+climbed_list:
+  source: 14ers_checklist
+  checklist_url: "https://www.14ers.com/php14ers/checklist.php?usernum=45697&checklist=13ers"
+
+# Site this climber's reports publish to.
+site:
+  mkdocs_config: mkdocs.emily.yml
+  url: "https://kylegknutson.github.io/mtn-research-emily/"
+
+# 14ers username (from the checklist): emilysharpe24.
+accounts:
+  14ers: "emilysharpe24"
+
+preferences:
+  default_list: co_13_14ers
+  closest_means: drive_time
+  combo_rule: ranked_13er_plus

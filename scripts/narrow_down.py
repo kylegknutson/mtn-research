@@ -1,7 +1,7 @@
 #!/usr/bin/env -S uv run --script
 # /// script
 # requires-python = ">=3.11"
-# dependencies = ["PyYAML"]
+# dependencies = ["PyYAML", "requests"]
 # ///
 """
 narrow_down.py — run a candidate-netting query against peak_db and save the
@@ -32,7 +32,9 @@ import yaml
 ROOT = Path(__file__).resolve().parent.parent
 LISTS = ROOT / "docs" / "lists"
 sys.path.insert(0, "/Users/kyleknutson/Library/Mobile Documents/com~apple~CloudDocs/shared/peak_db")
-from peak_db_client import peaks, ascents, peak_lists  # noqa: E402
+sys.path.insert(0, str(ROOT / "scripts"))
+from peak_db_client import peaks, peak_lists  # noqa: E402
+from climber import climbed_ids  # noqa: E402
 
 LIST_ID = "co_13_14ers"
 
@@ -69,7 +71,7 @@ def main():
     home = prof["home_latlon"]
 
     by_id = {p["id"]: p for p in peaks()}
-    climbed = {a["peak_id"] for a in ascents()}
+    climbed = climbed_ids(args.climber)   # climber-agnostic (peak_db or 14ers checklist)
     in_list = {r["peak_id"] for r in peak_lists() if r["list_id"] == LIST_ID}
 
     rows = []
