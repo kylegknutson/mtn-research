@@ -35,3 +35,6 @@ gpx/*/*
 site/
 _local_test/
 notes/
+
+# research_peak.py working skeletons (intermediate, not published)
+docs/peaks/*.skeleton.md

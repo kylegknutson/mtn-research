@@ -98,14 +98,22 @@ def main():
             er = f"{s['min_ft']:.0f}-{s['max_ft']:.0f}'" if s['min_ft'] else "—"
             print(f"{s['dist_mi']:>7.1f}mi  {s['gain_ft']:>6.0f}'  {er:>16}  {s['npts']:>6}  {f.name}")
 
-    dmin = min(s['dist_mi'] for _, s in rows); dmax = max(s['dist_mi'] for _, s in rows)
-    gmin = min(s['gain_ft'] for _, s in rows); gmax = max(s['gain_ft'] for _, s in rows)
-    longest = max(rows, key=lambda r: r[1]['dist_mi'])
-    print(f"\nAcross {len(rows)} track(s):")
+    # Robust aggregate: drop tracks with no elevation data (gain==0) and distance
+    # outliers (> 2.5x the median distance — e.g. a TR where the peak was a minor
+    # add to a much longer day) so the quoted range reflects the actual objective.
+    dists = sorted(s['dist_mi'] for _, s in rows)
+    med = dists[len(dists)//2]
+    core = [(f, s) for f, s in rows if s['gain_ft'] > 0 and s['dist_mi'] <= 2.5 * med]
+    used = core or rows
+    n_drop = len(rows) - len(used)
+    dmin = min(s['dist_mi'] for _, s in used); dmax = max(s['dist_mi'] for _, s in used)
+    gmin = min(s['gain_ft'] for _, s in used); gmax = max(s['gain_ft'] for _, s in used)
+    longest = max(used, key=lambda r: r[1]['dist_mi'])
+    print(f"\nAcross {len(used)} track(s)" + (f" ({n_drop} outlier/no-elev dropped)" if n_drop else "") + ":")
     print(f"  distance range: {dmin:.1f}–{dmax:.1f} mi")
     print(f"  gain range:     {gmin:.0f}–{gmax:.0f} ft")
     print(f"  longest track:  {longest[0].name}  ({longest[1]['dist_mi']:.1f} mi / {longest[1]['gain_ft']:.0f} ft)")
-    print(f"  → report stats line: ~{dmin:.0f}–{dmax:.0f} mi, ~{round(gmin,-2):.0f}–{round(gmax,-2):.0f} ft")
+    print(f"  STATS_LINE: ~{dmin:.0f}–{dmax:.0f} mi, ~{round(gmin,-2):.0f}–{round(gmax,-2):.0f} ft")
 
 
 if __name__ == "__main__":

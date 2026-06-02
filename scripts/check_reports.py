@@ -84,7 +84,7 @@ def main():
     reports = []
     for d in REPORT_DIRS:
         if d.exists():
-            reports += sorted(p for p in d.glob("*.md"))
+            reports += sorted(p for p in d.glob("*.md") if not p.name.endswith(".skeleton.md"))
 
     n_fail = 0
     for p in reports:

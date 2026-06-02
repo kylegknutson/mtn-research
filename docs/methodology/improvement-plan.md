@@ -111,8 +111,8 @@ Build in order of *value per effort*, smallest-first within a wave so each step 
 **Wave 2 — consolidation (M):** A5, B1, C1 ✅ *(done 2026-06-02)*; **A4 → moved to Wave 3**
 → Generic GPX builder, the map-QA gate, machine-readable frontmatter. **A4 (`sweep_gpx`) was moved to Wave 3:** a headless cross-domain GPX sweep needs the authenticated-session-reuse that `research_peak.py` has to design anyway (a browser can only fetch same-origin, so it must navigate each of the 3 sites logged-in). Building it before that auth is solved would force a second login — explicitly avoided. Until then, the sweep is done in-chat via the MCP browser (already efficient).
 
-**Wave 3 — the orchestrator (L):** **A4** + A6 (+ A7)
-→ Solve session-reuse auth first (A4 `sweep_gpx`), then `research_peak.py` (A6). This is where the big LLM-usage/approval savings land. Depends on Wave 1–2.
+**Wave 3 — the orchestrator (L):** A6 ✅ *(done 2026-06-02)* · A4 (resolved) · A7 (next)
+→ **A6 `research_peak.py` built:** the auth question was resolved by *not* fighting it — the authenticated TR/GPX sweep stays an in-chat Playwright-MCP step (already logged in, no second login), and `research_peak.py` does everything mechanical *after* the sweep: regenerate waypoints, cluster analysis, combo stats, drive-time URL, and emit a data-filled report skeleton (`<slug>.skeleton.md`) with frontmatter + Quick Stats + cluster + Sources footer + `<!-- TODO -->` narrative blocks, then prints the map-build commands. The LLM fills the judgment sections and verifies. This is the big tool-call/approval saver. **A4 standalone `sweep_gpx` is therefore not needed** as separate infra — the sweep lives in the MCP browser. **A7 (`narrow_down.py`) is the remaining Wave 3 item.**
 
 **Wave 4 — surface & scale (M):** C2, C3, C4, D1, D2, D3
 → Auto-built index/table, saved lists, and multi-climper proven end-to-end.
