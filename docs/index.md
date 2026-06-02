@@ -12,6 +12,7 @@ Personal research notes for Colorado peaks I'm working through. Each report cove
 ### Sangre de Cristo
 - [Hunts Peak](peaks/hunts_peak.md) — Northern Sangres. Standalone day. ⭐ Solo
 - [PT 13,557 (Huerfano)](peaks/pt_13557.md) — Huerfano County.
+- [Crestolita + Broken Hand Peak](peaks/crestolita_broken_hand.md) — Crestone group. **Day trip, 2 peaks.** ~11–14 mi / 6,400–7,100 ft, Class 3. South Colony Lakes approach.
 
 ### Closest unclimbed CO 13ers under 4,000 ft (researched 2026-05-28)
 - [Jacque Peak](peaks/jacque_peak.md) — Gore Range. **1h 42m drive** — closest. Effectively solo. Copper Mtn Ski Area approach.

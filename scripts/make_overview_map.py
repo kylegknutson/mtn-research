@@ -359,17 +359,34 @@ def build_map(slug: str, out_path: Path, zoom: int | None = None, title: str = "
         _bx = [center_lon - 0.04, center_lon + 0.04]
         _by = [center_lat - 0.03, center_lat + 0.03]
 
-    # Clip bbox to a sane radius around the primary summit (~ first peak waypoint).
-    # This trims tracks that extend WAY beyond the actual peak (e.g. a TR's
-    # long sub-13k outback that drags the extent miles south).
-    # Default: ~10 mi × 7 mi viewing window.
-    MAX_LON_HALF_SPAN = 0.10  # ~5.5 mi at 39°N
-    MAX_LAT_HALF_SPAN = 0.07  # ~4.8 mi
-    if buckets["peak"]:
-        summit_lon, summit_lat, _ = buckets["peak"][0]
-        clipped_bx = [x for x in _bx if abs(x - summit_lon) <= MAX_LON_HALF_SPAN]
-        clipped_by = [y for y in _by if abs(y - summit_lat) <= MAX_LAT_HALF_SPAN]
-        # Use clipped only if we still have enough variation
+    # Clip bbox around the OBJECTIVE — the peak markers being researched — plus a
+    # margin. This trims tracks that wander far from the actual summit(s) (a TR
+    # where the peak was a minor add to a different range's day, a mega-traverse,
+    # a long sub-13k outback). The objective box auto-sizes: one peak → tight
+    # window; a multi-peak combo → box spanning the peaks. Margin gives room for
+    # the approach/descent to render without drowning the summits.
+    #
+    # MARGIN_MI is the buffer added around the peak bounding box on every side.
+    # MIN_HALF_SPAN floors the window so a single peak (zero-span box) still gets
+    # a usable view. MAX_HALF_SPAN caps it so a far-flung combo can't blow out.
+    MARGIN_MI = 1.5
+    MIN_LON_HALF, MIN_LAT_HALF = 0.035, 0.025   # ~1.9mi x 1.7mi floor
+    MAX_LON_HALF, MAX_LAT_HALF = 0.11, 0.08      # ~6mi x 5.5mi ceiling
+    MI_PER_DEG_LON = 53.0   # ~at 38°N
+    MI_PER_DEG_LAT = 69.0
+    if peak_lons:
+        pk_lon_c = (min(peak_lons) + max(peak_lons)) / 2
+        pk_lat_c = (min(peak_lats) + max(peak_lats)) / 2
+        lon_half = (max(peak_lons) - min(peak_lons)) / 2 + MARGIN_MI / MI_PER_DEG_LON
+        lat_half = (max(peak_lats) - min(peak_lats)) / 2 + MARGIN_MI / MI_PER_DEG_LAT
+        lon_half = max(MIN_LON_HALF, min(MAX_LON_HALF, lon_half))
+        lat_half = max(MIN_LAT_HALF, min(MAX_LAT_HALF, lat_half))
+        clipped_bx = [x for x in _bx if abs(x - pk_lon_c) <= lon_half]
+        clipped_by = [y for y in _by if abs(y - pk_lat_c) <= lat_half]
+        # Always anchor the window to the objective box corners so the peaks are
+        # centered even if no track points fall near an edge.
+        clipped_bx += [pk_lon_c - lon_half, pk_lon_c + lon_half]
+        clipped_by += [pk_lat_c - lat_half, pk_lat_c + lat_half]
         if len(set(clipped_bx)) >= 2 and len(set(clipped_by)) >= 2:
             _bx, _by = clipped_bx, clipped_by
 
