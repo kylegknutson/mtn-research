@@ -253,6 +253,7 @@ def main() -> None:
                     choices=["SECRET", "PRIVATE", "URL", "PUBLIC"],
                     help="Sharing mode for newly-created maps (default URL)")
     ap.add_argument("--color", help="Hex color (#RRGGBB) overriding the palette for ALL tracks/markers in this run. Useful when appending a second source to an existing map so it's visually distinct.")
+    ap.add_argument("--marker-symbol", default="point", help="CalTopo marker symbol for waypoints in this run (e.g. 'point' for generic, 'peak' for summits). Default 'point'.")
     ap.add_argument("--color-offset", type=int, default=0,
                     help="Skip N colors in the palette before assigning. Use when appending so colors don't collide with prior uploads.")
     ap.add_argument("--vary-colors", action="store_true",
@@ -400,6 +401,7 @@ def main() -> None:
                             title=name,
                             description=desc or f"From {f.name}",
                             color=color,
+                            symbol=args.marker_symbol,
                             folderId=folder_id,
                         )
                         wpt_count += 1
