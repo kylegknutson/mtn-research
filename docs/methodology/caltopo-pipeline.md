@@ -47,18 +47,23 @@ scripts/gpx_to_caltopo.py --gpx-dir gpx/<slug> --map-id <REGIONAL_MAP_ID>
 - For a multi-range objective, add to each relevant regional map.
 
 #### Regional map registry
-> ⚠️ **IDs TBD — confirm with Kyle before writing.** The regional maps are maintained/re-rendered in their own workflow; don't guess IDs from local `caltopo/*.json` dumps, which can be stale after a re-render. Ask for the current regional map ID for the range, then record it here.
+Regional maps follow the **"GPS Tracks — <Range>"** naming on CalTopo. Get the current list any time with `scripts/fetch_caltopo.py --list` (authoritative — don't rely on local `caltopo/*.json` dumps, which go stale after a re-render).
 
-| Range | Regional CalTopo map ID |
-|---|---|
-| Sangre de Cristo | _TBD_ |
-| Sawatch | _TBD_ |
-| San Juan | _TBD_ |
-| Elk | _TBD_ |
-| Gore | _TBD_ |
-| Mosquito / Tenmile | _TBD_ |
+| Range | Regional map | CalTopo ID |
+|---|---|---|
+| Sangre de Cristo | GPS Tracks — Sangre De Cristo | `VKGB00L` |
+| Sawatch | GPS Tracks — Sawatch | `L5VH4BU` |
+| San Juan | GPS Tracks — San Juan | `06AR6BF` |
+| Elk | GPS Tracks — Elk | `1G2G7DM` |
+| Gore | GPS Tracks — Gore | `6E4GJV2` |
+| Mosquito | GPS Tracks — Mosquito | `LECF68J` |
+| Tenmile | GPS Tracks — Tenmile | `7QE01UK` |
+| Front | GPS Tracks — Front | `DLES5CC` |
+| Weminuche | GPS Tracks — Weminuche | `7AQN6TS` |
 
-**Coordination note:** if another session is actively re-rendering a regional map, **hold off** on writing to it until that finishes (a concurrent append can be lost or conflict).
+(Also non-CO archives: Washington, California, Nevada, Arizona, Utah, Oregon, Wyoming, Maine, NH, VT, NY, MA, Hawaii, Europe — same naming.)
+
+**Coordination note:** these regional maps are maintained/re-rendered in a separate workflow. If another session is actively re-rendering one, **hold off** writing to it until that finishes (a concurrent append can be lost or conflict). Re-fetch with `fetch_caltopo.py --map <ID>` before deduping against it so the local snapshot is current.
 
 ### 4. Wire the map ID into the report
 Update the header `**CalTopo research map:**` line and the caption `*[Interactive CalTopo map](https://caltopo.com/m/<id>)*`.
