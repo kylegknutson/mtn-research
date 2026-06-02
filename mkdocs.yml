@@ -85,6 +85,12 @@ markdown_extensions:
 plugins:
   - search
 
+# Keep climber-specific + skeleton files off Kyle's site (peak slugs have no dot,
+# so a second dot ⇒ a <slug>.<climber>.md / .skeleton.md / index.<climber>.md file).
+exclude_docs: |
+  index.*.md
+  peaks/*.*.md
+
 extra_javascript:
   - javascripts/external-links-new-tab.js
   - https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js
