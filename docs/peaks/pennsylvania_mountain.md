@@ -1,3 +1,7 @@
+---
+image: maps/pennsylvania_mountain.png
+---
+
 # Pennsylvania Mountain (Mosquito Range)
 
 **Researched:** 2026-05-28

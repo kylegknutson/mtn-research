@@ -1,3 +1,7 @@
+---
+image: maps/star_peak_a.png
+---
+
 # Star Peak A (Elk Mountains / Taylor Park cluster)
 
 **Researched:** 2026-05-28

@@ -1,3 +1,7 @@
+---
+image: maps/brown_mountain.png
+---
+
 # Brown Mountain (San Juan Mountains, between Ouray & Silverton)
 
 **Researched:** 2026-05-14 (rev 4 — cluster status confirmed 5/15)

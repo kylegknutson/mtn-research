@@ -1,3 +1,7 @@
+---
+image: maps/telluride_t7_t8.png
+---
+
 # Telluride Peak + T 7 + T 8 (San Juan Mountains, Imogene Pass area)
 
 **Researched:** 2026-05-14

@@ -1,3 +1,7 @@
+---
+image: maps/hunts_peak.png
+---
+
 # Hunts Peak (Northern Sangre de Cristo)
 
 **Researched:** 2026-05-21

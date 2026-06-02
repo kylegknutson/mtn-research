@@ -1,3 +1,7 @@
+---
+image: maps/dolores_peak.png
+---
+
 # Dolores Peak + Middle Peak (San Miguel Mountains, CO)
 
 **Researched:** 2026-05-13

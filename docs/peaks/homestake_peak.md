@@ -1,3 +1,7 @@
+---
+image: maps/homestake_peak.png
+---
+
 # Homestake Peak (Sawatch Range / Holy Cross Wilderness)
 
 **Researched:** 2026-05-28

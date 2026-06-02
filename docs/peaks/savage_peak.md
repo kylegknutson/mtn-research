@@ -1,3 +1,7 @@
+---
+image: maps/savage_peak.png
+---
+
 # Savage Peak (Sawatch Range / Holy Cross Wilderness)
 
 **Researched:** 2026-05-28

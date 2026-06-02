@@ -1,3 +1,7 @@
+---
+image: maps/crestolita_broken_hand.png
+---
+
 # Crestolita + Broken Hand Peak — combination day (Sangre de Cristo)
 
 **Researched:** 2026-05-31

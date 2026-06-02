@@ -1,3 +1,7 @@
+---
+image: maps/jacque_peak.png
+---
+
 # Jacque Peak (Gore Range)
 
 **Researched:** 2026-05-28
