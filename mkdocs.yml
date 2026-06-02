@@ -58,6 +58,7 @@ nav:
     - CalTopo + PNG pipeline: methodology/caltopo-pipeline.md
     - Report template: methodology/report-template.md
     - Site conventions: methodology/conventions.md
+    - Automation roadmap: methodology/automation-roadmap.md
     - 'Workflow: Narrow-down': methodology/workflows/narrow-down.md
     - 'Workflow: Single-peak report': methodology/workflows/single-peak-report.md
     - 'Workflow: Day-trip report': methodology/workflows/day-trip-report.md
