@@ -114,8 +114,8 @@ Build in order of *value per effort*, smallest-first within a wave so each step 
 **Wave 3 — the orchestrator (L):** A6 ✅ *(done 2026-06-02)* · A4 (resolved) · A7 (next)
 → **A6 `research_peak.py` built:** the auth question was resolved by *not* fighting it — the authenticated TR/GPX sweep stays an in-chat Playwright-MCP step (already logged in, no second login), and `research_peak.py` does everything mechanical *after* the sweep: regenerate waypoints, cluster analysis, combo stats, drive-time URL, and emit a data-filled report skeleton (`<slug>.skeleton.md`) with frontmatter + Quick Stats + cluster + Sources footer + `<!-- TODO -->` narrative blocks, then prints the map-build commands. The LLM fills the judgment sections and verifies. This is the big tool-call/approval saver. **A4 standalone `sweep_gpx` is therefore not needed** as separate infra — the sweep lives in the MCP browser. **A7 (`narrow_down.py`) is the remaining Wave 3 item.**
 
-**Wave 4 — surface & scale (M):** C2, C3, C4, D1, D2, D3
-→ Auto-built index/table, saved lists, and multi-climper proven end-to-end.
+**Wave 4 — surface & scale (M):** C2 ✅ C3 ✅ C4 ✅ *(done 2026-06-02)* · D1–D3 deferred
+→ Auto-built sortable index table from frontmatter (C2/C3, CI-checked) + saved list artifacts (C4) are done. **D1–D3 (multi-climber) deferred until there's a real friend to onboard:** they need (a) the friend's actual 14ers checklist URL to build/test the scraper against, and (b) a real person for the per-site build. Recon notes for D1: the checklist URL pattern is `14ers.com/checklist.php?usernum=<N>&checklist={13ers|14ers}` (Kyle's usernum=9918), but the page is JS-rendered and the bare URL 404s on direct fetch — the scraper will need to drive the rendered page or find the data endpoint. Build it when a friend provides their checklist. The research scripts are already `--climber`-aware, so onboarding is mostly D1 + a per-site mkdocs config + CI matrix (D2).
 
 **Wave 5 — depth (M–L):** E1, E2, F2, F4, B4, B5, E3
 → Multi-day reports, elevation profiles, freshness/link-rot checks, script consolidation, trip packets.
