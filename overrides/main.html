@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{#
+  Adds Open Graph + Twitter Card meta so links unfurl with a preview image
+  when shared in chat apps (iMessage, Slack, Discord, WhatsApp, etc.).
+
+  Default preview image is the site social card; a page can override it with
+  frontmatter `image: <path-relative-to-docs>` (e.g. a peak's overview map).
+#}
+{% block extrahead %}
+  {{ super() }}
+  {% if page and page.meta and page.meta.image %}
+    {% set preview_image = config.site_url ~ page.meta.image %}
+  {% else %}
+    {% set preview_image = config.site_url ~ "assets/social-card.png" %}
+  {% endif %}
+  {% if page and page.title and not page.is_homepage %}
+    {% set preview_title = page.title ~ " · " ~ config.site_name %}
+  {% else %}
+    {% set preview_title = config.site_name %}
+  {% endif %}
+  {% if page and page.meta and page.meta.description %}
+    {% set preview_desc = page.meta.description %}
+  {% else %}
+    {% set preview_desc = config.site_description %}
+  {% endif %}
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="{{ preview_title }}">
+  <meta property="og:description" content="{{ preview_desc }}">
+  <meta property="og:image" content="{{ preview_image }}">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:url" content="{{ page.canonical_url if page else config.site_url }}">
+  <meta property="og:site_name" content="{{ config.site_name }}">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{ preview_title }}">
+  <meta name="twitter:description" content="{{ preview_desc }}">
+  <meta name="twitter:image" content="{{ preview_image }}">
+{% endblock %}

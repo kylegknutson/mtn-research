@@ -9,9 +9,9 @@ edit_uri: edit/main/docs/
 
 theme:
   name: material
+  custom_dir: overrides
   favicon: assets/favicon.png
-  icon:
-    logo: material/image-filter-hdr
+  logo: assets/favicon.png
   palette:
     # Light mode
     - media: "(prefers-color-scheme: light)"
