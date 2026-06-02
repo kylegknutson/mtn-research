@@ -200,3 +200,7 @@ Earthline 8/11/2020 — 7.6 mi / 2,500' from Pt 12,947' high TH. Bags Brown + Ab
 - **Best season:** July through early October. Don't drive after rain (slippery clay).
 - **Cluster context:** Houghton, Tuttle, UN 13078, Hanson are done. Hurricane / California / Emery are unranked 12ers, not tracked.
 - **Research map:** https://caltopo.com/m/Q2C5650 — yellow peaks, red trailheads, purple drive-in waypoints, green public track (Neapolitan), blue your imported tracks.
+
+---
+
+**Sources checked:** 14ers.com · listsofjohn.com · peakbagger.com

@@ -214,3 +214,7 @@ If you want the combo: design a 2-3 day Holy Cross-area backpacking trip (baseca
 - **TH directions:** Hwy 24 → Webster's Sand and Gravel Pit (mp 167.5) → FR 19 → FR 19A toward Slide Lake → parking before gate
 - **Cell:** weak in the basin, good on the ridge. Carry InReach
 - **Drive:** **3h 14m from Boulder**
+
+---
+
+**Sources checked:** 14ers.com · listsofjohn.com · peakbagger.com

@@ -209,3 +209,7 @@ The most common modern approach. Up through Copper ski terrain, over Union Mount
 - **Best season:** late June through October. Winter doable but lift access or Mayflower Gulch logistics required
 - **Cell:** strong on the Copper side; carry InReach for backcountry
 - **Drive:** **1h 42m from Boulder** — closest unclimbed CO 13er under 4,000' gain
+
+---
+
+**Sources checked:** 14ers.com · listsofjohn.com · peakbagger.com

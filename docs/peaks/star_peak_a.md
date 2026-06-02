@@ -238,3 +238,7 @@ Different access from SH 82 between Aspen and Independence Pass. **Not used in a
 - **Cell: DEAD** — Elk Mtns interior. Carry InReach
 - **Best season:** late June through October. Cold mornings even in summer (Furthermore: low-30s F mid-Sept)
 - **Drive:** **3h 39m from Boulder**
+
+---
+
+**Sources checked:** 14ers.com · listsofjohn.com · peakbagger.com

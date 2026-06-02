@@ -152,3 +152,8 @@ This is itself a 3-ranked-13er link-up. Every reasonable approach naturally chai
 - **Watch for:** lightning (long ridge exposure); be off summits by early afternoon.
 - **Avoid:** longer Imogene Pass base approach (5,100' gain, exceeds your filter); Black Bear Rd routes (only bag 2 peaks).
 - **No public GPX** found — request from Wild Wanderer if you want one, or manually grab the climb13ers CalTopo map link.
+
+---
+
+<!-- pre-3-source-rule -->
+**Sources checked:** 14ers.com · peakbagger.com · _LoJ not pulled — pre-3-source-rule report, pending a freshness pass_

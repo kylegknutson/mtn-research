@@ -228,3 +228,7 @@ jacolc 8/16/2024 (LoJ TR 27181): **15.5 mi / 6,300' / 11h35** — Sawatch main r
 - **Trail traffic:** popular Missouri Lakes / Fancy Pass loop crowds the first 2.5 mi in summer. Plan for early start
 - **Cell:** dead in the drainage, returns on the upper NE ridge. Carry InReach
 - **Drive:** **3h 39m from Boulder**
+
+---
+
+**Sources checked:** 14ers.com · listsofjohn.com · peakbagger.com

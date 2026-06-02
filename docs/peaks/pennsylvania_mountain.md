@@ -203,3 +203,7 @@ The 14ers.com route. The quickest, easiest, most documented option of any peak o
 - **Truly standalone day** — the Mosquito Range is essentially done for Kyle's ranked-13er+ list. Bartlett Mtn 7.82 mi away on the opposite side of Climax Mine is the closest unclimbed ranked peer, different drive entirely.
 - **Cell:** strong — exposed SE ridge with LOS to Hwy 9 / Fairplay corridor
 - **Drive:** **2h 5m from Boulder** — easy day trip
+
+---
+
+**Sources checked:** 14ers.com · listsofjohn.com · peakbagger.com

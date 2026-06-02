@@ -156,3 +156,7 @@ Already layered from prior planning of Bushnell/Twin Sisters:
 - **Best season:** mid-May (gate open) through October.
 - **Cell:** likely dead at TH, signal returning on the upper ridge with LOS to Salida. No community reports — carry InReach.
 - **Existing CalTopo data:** map C105AEV already has Hunts markers + tracks from previous Bushnell/Twin Sisters planning.
+
+---
+
+**Sources checked:** 14ers.com · listsofjohn.com · peakbagger.com

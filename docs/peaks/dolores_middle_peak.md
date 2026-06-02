@@ -190,3 +190,7 @@ TMC describes a Middle Peak loop from the same parking spot with **Class 4 scram
 - **Drive in:** Dunton, CO → Fish Creek TH (5 mi 2WD dirt). High-clearance overkill.
 - **Best season:** July–early October.
 - **Skip:** Dunn Peak (12,612', unranked) — available essentially for free on the loop variant but doesn't move the needle on any list.
+
+---
+
+**Sources checked:** 14ers.com · listsofjohn.com · peakbagger.com
