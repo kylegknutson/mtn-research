@@ -9,7 +9,8 @@ site_description: Colorado peak research tailored for Emily
 # Drop Kyle's content from Emily's build; keep shared maps + methodology.
 # (gitignore semantics: exclude, then re-include the .emily.md reports.)
 exclude_docs: |
-  index.md
+  /index.md
+  /architecture.md
   lists/
   peaks/*.md
   !peaks/*.emily.md
