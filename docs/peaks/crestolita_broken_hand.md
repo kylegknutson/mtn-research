@@ -73,13 +73,32 @@ Expect roughly **~11–14 mi and ~6,400–7,100 ft** depending on how high you d
 ### Route sequence (South Colony → Broken Hand Pass)
 1. From the South Colony 2WD/4WD lot, follow the South Colony Lakes trail toward the lakes / Crestone Needle junction
 2. Ascend to **Broken Hand Pass** (~12,900'), the saddle between Crestone Needle and Broken Hand Peak
-3. **Broken Hand Peak (13,575', Class 3):** from the pass, scramble the ridge/slopes to the summit. The **south ridge** is the notable scramble line (Marmot72 / Doggler's Crestones-to-Milwaukee traverse beta)
-4. **Crestolita (13,264', Class 2):** drop and traverse SW ~0.6 mi along the connecting ridge. Standard is the **Class 2 south face**; the north couloirs are snow-climb alternates in season (supranihilest, Furthermore)
-5. Return over or around Broken Hand Pass to the South Colony trail
+3. **Broken Hand Peak (13,575', Class 3):** from the pass, take the standard Class 3 line to the summit (NW/west side off the pass — *not* the south ridge, which is a hard technical variant; see below)
+4. **Crestolita (13,264', Class 2):** the two summits do **not** connect at easy class via the direct ridge — that ridge is the 4th–low-5th "Analemma/South Ridge" traverse. For the non-technical pairing, return toward Broken Hand Pass and gain Crestolita via its **Class 2 south-facing summit gully** (drops from the summit; per the 23274 author it "allegedly goes at Class 2," adding some mileage/gain). This means some up-and-down rather than a clean ridge link.
+5. Return over Broken Hand Pass to the South Colony trail
+
+> **Honest caveat:** the cleanest *easy-class* way to bag both may actually be from **Cottonwood Creek**, where each peak has a Class 2 south side and you skip the Broken Hand Pass elevation — at the cost of a longer, rougher approach (see Alternate below). From South Colony you get a shorter approach but the link between the two involves descending/contouring, not a simple ridge walk.
 
 ### Crestolita route notes
-- supranihilest: *"The easiest route is the Class 2 south face from Cottonwood Creek (the approach is harder than the climb of the peak)"* — but from South Colony you reach it via the Broken Hand ridge, so you climb it off the connecting traverse rather than the Cottonwood south face
-- North-central / north couloirs offer moderate snow lines into early summer for those wanting a snow climb
+- **Easiest line:** supranihilest — *"the easiest route is the Class 2 south face from Cottonwood Creek (the approach is harder than the climb of the peak)."* There's also a **south-facing summit gully** that reportedly goes Class 2 from the Broken Hand Pass side.
+- **NE couloir / north couloirs:** moderate snow lines into early summer (Furthermore April, supranihilest May) — axe/crampons, couloir experience. Easy to spot conditions from Broken Hand Pass.
+
+---
+
+## Technical alternate — Analemma (NE Ridge) + South Ridge of Broken Hand 🪨
+
+For scramblers, the classic hard linkup of these two is a separate, far more serious objective (TR [23274](https://www.14ers.com/php14ers/tripreport.php?trip=23274)):
+
+| | |
+|---|---|
+| Route | Analemma (Crestolita NE Ridge) + South Ridge of Broken Hand Peak |
+| Stats | ~12 mi, ~5,700' (Broken Hand Pass approach) |
+| Class | **5.easy** (4th class to low-5th along Broken Hand's gendarmes) |
+| Exposure | **Extreme** · Rockfall High (NE couloir descent) · Commitment **Extreme** |
+| Bail | **None** once on the ridges/gendarmes — "you are committed, especially not to the East" |
+| Season | Later summer (once Crestolita's NE couloir melts out) |
+
+This is one of the range's premier non-standard scrambles on excellent conglomerate, but it is **not** the way to simply tick both summits — it's a committing 5th-class day. Only relevant if you specifically want the scramble.
 
 ---
 
@@ -109,6 +128,16 @@ For the efficient two-peak day, South Colony is the better base.
 - Sangre de Cristo Wilderness — no permits required
 - Rio Grande / San Isabel National Forest — no fee
 - South Colony Road: 2WD to the lower lot; high-clearance 4WD for the upper ~2.5 mi (drivable in a careful stock AWD per Marmot72)
+
+---
+
+## Cell coverage
+
+- **14ers.com community DB:** 0 reports for both Broken Hand Peak and Crestolita (consistent with the broader Sangre de Cristo gap — these summits have no submitted reception data).
+- **Geographic reasoning:**
+  - **South Colony TH / approach:** likely **dead** — the trailhead and lower basin sit deep on the east side of the range, topographically shadowed from the San Luis Valley towers
+  - **Broken Hand Pass / summits:** **possible signal on the high points** — the summits and the pass have line-of-sight west toward the San Luis Valley (Crestone/Moffat) and the high Sangres often catch signal even where approaches are dead. Don't count on it.
+- **Standard recommendation:** carry an **InReach / satellite messenger** — community data is nonexistent here and the terrain is committing (especially the technical traverse, which has no bail).
 
 ---
 
@@ -142,10 +171,12 @@ For the efficient two-peak day, South Colony is the better base.
 
 ## TL;DR
 
-- **The plan:** Crestolita + Broken Hand as one day from **South Colony Lakes**, linked via **Broken Hand Pass** and the 0.6-mi connecting ridge. **~11–14 mi, ~6,400–7,100 ft, Class 3** (Broken Hand) + Class 2 (Crestolita south face).
-- **Well-established combo** — whileyh, Alyson Kirk, Furthermore, Marmot72, and josephnephi all did both together. Each is a true ranked-13er partner for the other.
+- **The plan:** Crestolita + Broken Hand as one day via **Broken Hand Pass**. **Broken Hand = Class 3** standard from the pass; **Crestolita = Class 2** (south-facing gully / south face). The two do **not** link at easy class via the direct ridge — expect some up-and-down to bag both, ~11–14 mi and ~6,400–7,100 ft. **A big full day, not a half-day.**
+- **Approach choice:** **South Colony Lakes** = shorter approach but the inter-peak link involves descending/contouring. **Cottonwood Creek** = longer/rougher but each peak has an easy-class south side (supranihilest's "easiest" for Crestolita).
+- **Technical option:** the **Analemma NE Ridge + South Ridge of Broken Hand** traverse is a committing **5.easy / Extreme-exposure** scramble (~12 mi, 5,700', no bail) — a premier hard Sangres day, but *not* the way to simply tick both.
+- **Well-established combo** — whileyh, Alyson Kirk, Furthermore, Marmot72, josephnephi all did both together. Each is a true ranked-13er partner for the other.
 - **Cleans up the Crestone cirque** — Crestone Peak/Needle/Humboldt already done; these are the last two ranked satellites.
 - **Drive:** [3h 58m / 199 mi](https://www.google.com/maps/dir/?api=1&origin=1162+Peakview+Circle,+Boulder,+CO+80302&destination=37.97592,-105.50657) from home to the South Colony 2WD lot; careful stock AWD gets most of the way up the 4WD road.
-- **Big day, not a short one** — well over 4,000 ft. Full alpine start, off the Class 3 ridge before afternoon storms.
-- **Snow option:** Crestolita's north couloirs are a legit spring snow climb (axe/crampons).
+- **Snow option:** Crestolita's NE/north couloirs are a legit spring snow climb (axe/crampons).
+- **Cell:** no community data; likely dead at the TH, possible signal on the summits. Carry an InReach.
 - **Research map:** https://caltopo.com/m/6TKA0RH — 21 GPX tracks layered, colored by source.
