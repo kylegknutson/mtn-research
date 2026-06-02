@@ -1,5 +1,12 @@
 ---
 image: maps/star_peak_a.png
+range: Elk
+drive_time: "3h 39m"
+yds_class: "2+"
+gain: "2,766 ft (Star+Taylor)"
+status: unclimbed
+caltopo_id: 607Q6C8
+regional_map_id: 1G2G7DM
 ---
 
 # Star Peak A (Elk Mountains / Taylor Park cluster)

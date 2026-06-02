@@ -1,5 +1,12 @@
 ---
 image: maps/homestake_peak.png
+range: Sawatch
+drive_time: "3h 14m"
+yds_class: "2"
+gain: "2,500–3,551 ft"
+status: unclimbed
+caltopo_id: V4D61FV
+regional_map_id: L5VH4BU
 ---
 
 # Homestake Peak (Sawatch Range / Holy Cross Wilderness)

@@ -50,3 +50,27 @@ After writing/updating a report:
 2. Add to `docs/index.md` (grouped by region/category)
 3. Commit + push
 4. Confirm the GitHub Actions deploy is green before calling it done
+
+## Report frontmatter (structured, machine-readable)
+
+Every report opens with a YAML frontmatter block. Beyond `image:` (the link-preview
+card), these fields make reports queryable — they drive the auto-generated index /
+sortable peak table (planned) and the link-preview metadata.
+
+```yaml
+---
+image: maps/<slug>.png        # link-preview card (the report's own overview map)
+range: Sangre de Cristo       # peak_db range — drives grouping/filtering
+drive_time: "3h 58m"          # from the climber's home (matches the report's drive row)
+yds_class: "3"                # YDS class of the standard line (quoted; `yds_class` not
+                              #   `class`, to avoid the Jinja reserved-word gotcha)
+gain: "6,400–7,100 ft"        # standard-route gain (range if multiple TRs)
+status: unclimbed             # unclimbed | climbed (for the default climber)
+caltopo_id: 6TKA0RH           # research map ID (omit if none yet)
+regional_map_id: VKGB00L      # the range's regional "GPS Tracks" map
+---
+```
+
+`check_reports.py` warns on any report missing the recommended fields (range,
+drive_time, yds_class, gain, status, regional_map_id). It's a warning, not a hard
+fail — but new reports should always include them.

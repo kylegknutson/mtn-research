@@ -1,5 +1,12 @@
 ---
 image: maps/brown_mountain.png
+range: San Juan
+drive_time: "6h 21m"
+yds_class: "2"
+gain: "1,600–4,380 ft"
+status: unclimbed
+caltopo_id: Q2C5650
+regional_map_id: 06AR6BF
 ---
 
 # Brown Mountain (San Juan Mountains, between Ouray & Silverton)

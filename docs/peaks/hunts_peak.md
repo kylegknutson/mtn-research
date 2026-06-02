@@ -1,5 +1,12 @@
 ---
 image: maps/hunts_peak.png
+range: Sangre de Cristo
+drive_time: "3h 37m"
+yds_class: "2"
+gain: "3,450–3,528 ft"
+status: unclimbed
+caltopo_id: 2SCT1B6
+regional_map_id: VKGB00L
 ---
 
 # Hunts Peak (Northern Sangre de Cristo)

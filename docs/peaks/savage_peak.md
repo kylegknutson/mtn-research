@@ -1,5 +1,12 @@
 ---
 image: maps/savage_peak.png
+range: Sawatch
+drive_time: "3h 39m"
+yds_class: "2"
+gain: "3,200 ft"
+status: unclimbed
+caltopo_id: QL51DBE
+regional_map_id: L5VH4BU
 ---
 
 # Savage Peak (Sawatch Range / Holy Cross Wilderness)

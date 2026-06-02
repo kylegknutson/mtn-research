@@ -1,5 +1,12 @@
 ---
 image: maps/jacque_peak.png
+range: Gore
+drive_time: "1h 42m"
+yds_class: "2"
+gain: "3,500 ft"
+status: unclimbed
+caltopo_id: R2NF0S2
+regional_map_id: 6E4GJV2
 ---
 
 # Jacque Peak (Gore Range)

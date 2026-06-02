@@ -1,5 +1,12 @@
 ---
 image: maps/pennsylvania_mountain.png
+range: Mosquito
+drive_time: "2h 5m"
+yds_class: "1"
+gain: "1,500 ft"
+status: unclimbed
+caltopo_id: P2V1QG5
+regional_map_id: LECF68J
 ---
 
 # Pennsylvania Mountain (Mosquito Range)

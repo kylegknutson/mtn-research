@@ -1,5 +1,12 @@
 ---
 image: maps/telluride_t7_t8.png
+range: San Juan
+drive_time: "6h 19m"
+yds_class: "2–3"
+gain: "~4,000 ft"
+status: unclimbed
+caltopo_id: 6FM1FEK
+regional_map_id: 06AR6BF
 ---
 
 # Telluride Peak + T 7 + T 8 (San Juan Mountains, Imogene Pass area)

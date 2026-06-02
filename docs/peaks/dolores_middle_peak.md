@@ -1,5 +1,12 @@
 ---
 image: maps/dolores_peak.png
+range: San Juan
+drive_time: "7h 30m"
+yds_class: "2"
+gain: "~4,000 ft"
+status: unclimbed
+caltopo_id: 1R09CLT
+regional_map_id: 06AR6BF
 ---
 
 # Dolores Peak + Middle Peak (San Miguel Mountains, CO)

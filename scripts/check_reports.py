@@ -57,6 +57,14 @@ def check(path: Path):
             bucket.append(f'Sources-checked footer missing: {", ".join(missing)}'
                           + (" (grandfathered)" if grandfathered else ""))
 
+    # WARN: structured frontmatter (machine-readable fields for the index/table)
+    fm = re.match(r"---\n(.*?)\n---\n", text, re.S)
+    fm_block = fm.group(1) if fm else ""
+    RECOMMENDED_FM = ["range", "drive_time", "yds_class", "gain", "status", "regional_map_id"]
+    missing_fm = [k for k in RECOMMENDED_FM if not re.search(rf"^{k}:", fm_block, re.M)]
+    if missing_fm:
+        warns.append(f"frontmatter missing: {', '.join(missing_fm)}")
+
     # WARN: template basics
     if "![Overview map]" not in text and "/maps/" not in text:
         warns.append("no embedded overview map")

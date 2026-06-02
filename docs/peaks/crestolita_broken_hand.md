@@ -1,5 +1,12 @@
 ---
 image: maps/crestolita_broken_hand.png
+range: Sangre de Cristo
+drive_time: "3h 58m"
+yds_class: "3"
+gain: "6,400–7,100 ft"
+status: unclimbed
+caltopo_id: 6TKA0RH
+regional_map_id: VKGB00L
 ---
 
 # Crestolita + Broken Hand Peak — combination day (Sangre de Cristo)
