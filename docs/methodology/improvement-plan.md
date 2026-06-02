@@ -108,11 +108,11 @@ Build in order of *value per effort*, smallest-first within a wave so each step 
 **Wave 1 — quick wins (mostly S):** A1, A2, A3, B2, F1, B3
 → Removes the most repetitive per-session steps, fixes the stale architecture doc, makes source-rigor enforceable, and gets source-colored PNGs.
 
-**Wave 2 — consolidation (M):** A4, A5, B1, C1
-→ One GPX-sweep command, a generic GPX builder, the map-QA gate, and machine-readable frontmatter.
+**Wave 2 — consolidation (M):** A5, B1, C1 ✅ *(done 2026-06-02)*; **A4 → moved to Wave 3**
+→ Generic GPX builder, the map-QA gate, machine-readable frontmatter. **A4 (`sweep_gpx`) was moved to Wave 3:** a headless cross-domain GPX sweep needs the authenticated-session-reuse that `research_peak.py` has to design anyway (a browser can only fetch same-origin, so it must navigate each of the 3 sites logged-in). Building it before that auth is solved would force a second login — explicitly avoided. Until then, the sweep is done in-chat via the MCP browser (already efficient).
 
-**Wave 3 — the orchestrator (L):** A6 (+ A7)
-→ `research_peak.py`. This is where the big LLM-usage/approval savings land. Depends on Wave 1–2.
+**Wave 3 — the orchestrator (L):** **A4** + A6 (+ A7)
+→ Solve session-reuse auth first (A4 `sweep_gpx`), then `research_peak.py` (A6). This is where the big LLM-usage/approval savings land. Depends on Wave 1–2.
 
 **Wave 4 — surface & scale (M):** C2, C3, C4, D1, D2, D3
 → Auto-built index/table, saved lists, and multi-climper proven end-to-end.
