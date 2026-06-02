@@ -93,7 +93,13 @@ Net effect: one clean set of **blue mountain summit pins** + a quiet **gray** wa
 | Objective summit | `peak` | `#2E78C7` (blue) |
 | Any other imported waypoint | `point` | `#9E9E9E` (gray) |
 
-> **Implementation:** `scripts/sync_to_regional.py` enforces this for regional-map syncs (it reuses `gpx_to_caltopo.py --marker-symbol`). The base `gpx_to_caltopo.py` now accepts `--marker-symbol` (default `point`). Per-research maps built earlier may still carry gold (`#FFCC00`) summit pins from before this rule — a `scripts/restyle_markers.py` (parallel session) normalizes existing markers to the blue-peak/gray-point scheme; reconcile with it rather than duplicating.
+> **Implementation:**
+> - **New uploads:** `scripts/sync_to_regional.py` enforces the scheme (reuses `gpx_to_caltopo.py --marker-symbol`, default `point`).
+> - **Normalizing existing maps:** `scripts/restyle_markers.py` rewrites every marker on a map in place via `editFeature` — summit-named or summit-located markers → `peak`/`#2E78C7`, everything else → `point`/gray. It snaps to summits from a peak-export GPX (generate one from peak_db: all CO ranked 13er+ summits). Run with `--poi-color "#9E9E9E"` to match the regional gray.
+>   ```
+>   scripts/restyle_markers.py --export /tmp/peakdb_summits.gpx --map <ID> --poi-color "#9E9E9E" --apply
+>   ```
+> - All 10 `Research:` maps + the regional maps have been normalized to this scheme (48 summit→blue, 50 POI→gray across the research maps, 2026-06-02). No more gold summit pins.
 
 ## Map waypoint scope — objective only
 
