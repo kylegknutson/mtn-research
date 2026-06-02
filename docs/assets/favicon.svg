@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <!-- rounded green tile -->
+  <rect width="64" height="64" rx="14" fill="#2e7d32"/>
+  <!-- sun -->
+  <circle cx="46" cy="20" r="6" fill="#ff7043"/>
+  <!-- back mountain -->
+  <path d="M4 50 L24 22 L40 50 Z" fill="#a5d6a7"/>
+  <!-- front mountain with snow cap -->
+  <path d="M22 50 L42 18 L60 50 Z" fill="#e8f5e9"/>
+  <path d="M42 18 L35 30 L39 33 L42 29 L45 33 L49 30 Z" fill="#ffffff"/>
+  <!-- ground line -->
+  <rect x="4" y="49" width="56" height="3" rx="1.5" fill="#1b5e20"/>
+</svg>
