@@ -1,0 +1,13 @@
+# Waypoint config for build_peak_gpx.py — Savage Peak.
+objective_ids: [674]
+
+nearby:
+  include: true
+  radius_mi: 8
+  exclude: []
+
+landmarks:
+  - {name: "Missouri Lakes TH (2WD, 10,000')", lat: 39.3858, lon: -106.4717, ele_ft: 10000, kind: trailhead}
+  - {name: "Missouri Lakes 4WD parking (0.6 mi up)", lat: 39.385, lon: -106.479, ele_ft: 10060, kind: trailhead}
+  - {name: "⚠️ Homestake Rd (FS 703) — gated Nov 22-May 21", lat: 39.3939, lon: -106.4119, ele_ft: 8870, kind: landmark}
+  - {name: "Homestake Rd / Missouri Creek Rd junction", lat: 39.3863, lon: -106.4623, ele_ft: 9700, kind: landmark}

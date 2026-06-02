@@ -1,0 +1,11 @@
+# Waypoint config for build_peak_gpx.py — Crestolita + Broken Hand day trip.
+objective_ids: [258, 524]      # Broken Hand Peak (258), "Crestolita" (524)
+
+nearby:
+  include: false               # the rest of the Crestone cirque (Peak/Needle/Humboldt) is climbed
+
+landmarks:
+  - {name: "South Colony Lakes 2WD TH (lower lot)", lat: 37.97592, lon: -105.50657, ele_ft: 9880, kind: trailhead}
+  - {name: "South Colony 4WD upper lot (~2.5mi rough road)", lat: 37.9747, lon: -105.5530, ele_ft: 11000, kind: trailhead}
+  - {name: "Broken Hand Pass (saddle to Crestone Needle)", lat: 37.9614, lon: -105.5760, ele_ft: 12900, kind: landmark}
+  - {name: "Cottonwood Creek TH (longer/rougher approach)", lat: 37.9870, lon: -105.6010, ele_ft: 8400, kind: trailhead}

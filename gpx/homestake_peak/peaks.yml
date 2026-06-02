@@ -1,0 +1,13 @@
+# Waypoint config for build_peak_gpx.py — Homestake Peak.
+objective_ids: [596]
+
+nearby:
+  include: true
+  radius_mi: 8
+  exclude: []
+
+landmarks:
+  - {name: "Wurts Ditch Rd parking (before gate)", lat: 39.35, lon: -106.37, ele_ft: 10400, kind: trailhead}
+  - {name: "10th Mountain Memorial Hut", lat: 39.3631, lon: -106.4055, ele_ft: 10872, kind: trailhead}
+  - {name: "Hwy 24 turnoff at Webster's Sand & Gravel Pit (mp 167.5)", lat: 39.3289, lon: -106.3289, ele_ft: 9420, kind: landmark}
+  - {name: "Crane Park TH (alt full-hike start)", lat: 39.3294, lon: -106.33, ele_ft: 10148, kind: trailhead}

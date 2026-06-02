@@ -10,7 +10,7 @@ Every report ships **three artifacts as one unit**:
 ## Pipeline
 
 ### 1. Build waypoint GPX
-Generate `gpx/<slug>/<slug>_peaks_only.gpx` (summit + nearby same-objective unclimbed ranked peaks) and `<slug>_landmarks.gpx` (trailheads + key drive-in landmarks: gates, closed roads, seasonal closures). Summit + nearby-peak coords come from peak_db.
+`scripts/build_peak_gpx.py --slug <slug>` reads `gpx/<slug>/peaks.yml` and writes `<slug>_peaks_only.gpx` (objective summit(s) `sym=peak` + optionally nearby unclimbed ranked 13er+ neighbors, with an `exclude` list for different-drive peaks — the Bartlett rule) and `<slug>_landmarks.gpx` (trailheads + key drive-in landmarks: gates, closed roads, seasonal closures). Summit/neighbor coords come from peak_db; TH/landmark coords are hand-researched in the config. **`peaks.yml` is the one tracked-in-git file under `gpx/`** (everything else there is gitignored derived/bulk data).
 
 ### 2. Download GPX tracks from ALL THREE sources
 Not just LoJ. *"Always download the tracks from all sites not just LoJ. That's an important part of the research, finding all GPX files out there and pulling them together into one map."* (Kyle, 2026-05-29)

@@ -1,0 +1,12 @@
+# Waypoint config for build_peak_gpx.py — Jacque Peak.
+objective_ids: [603]
+
+nearby:
+  include: false
+  radius_mi: 8
+  exclude: []
+
+landmarks:
+  - {name: "Copper Mtn Resort base TH (Woodward Express area)", lat: 39.4914, lon: -106.1568, ele_ft: 9712, kind: trailhead}
+  - {name: "CO 91 / Graveline Gulch pullout (alt TH, off-piste season)", lat: 39.3938, lon: -106.1469, ele_ft: 10500, kind: trailhead}
+  - {name: "Mayflower Gulch TH (winter alt — AVOID tailings)", lat: 39.39056, lon: -106.13889, ele_ft: 10963, kind: trailhead}

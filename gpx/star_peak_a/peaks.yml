@@ -1,0 +1,11 @@
+# Waypoint config for build_peak_gpx.py — Star Peak A.
+objective_ids: [301]
+
+nearby:
+  include: true
+  radius_mi: 8
+  exclude: []
+
+landmarks:
+  - {name: "End of CO 742 — Mt Tilton Trail TH", lat: 39.0095, lon: -106.7833, ele_ft: 10760, kind: trailhead}
+  - {name: "⚠️ Cottonwood Pass / CO 742 — seasonal closure late May–late October", lat: 38.8275, lon: -106.4119, ele_ft: 12126, kind: landmark}

@@ -14,7 +14,13 @@ scripts/cts.ini
 # Personal data — never publish to public repo
 # (CalTopo map dumps with personal planning, Kyle's climb tracks, etc.)
 caltopo/
-gpx/
+# Ignore all GPX data EXCEPT the per-peak waypoint configs (hand-researched
+# TH/landmark coords — authoritative input to build_peak_gpx.py, not bulky
+# derived data). Idiom: ignore files, descend into subdirs, keep peaks.yml.
+gpx/*
+!gpx/*/
+gpx/*/*
+!gpx/*/peaks.yml
 
 # Local Claude Code project state
 .claude/

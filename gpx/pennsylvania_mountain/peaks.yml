@@ -1,0 +1,12 @@
+# Waypoint config for build_peak_gpx.py — Pennsylvania Mountain.
+objective_ids: [812]
+
+nearby:
+  include: false
+  radius_mi: 8
+  exclude: []
+
+landmarks:
+  - {name: "Pika Trailhead (standard, off Hwy 9)", lat: 39.2658, lon: -106.1638, ele_ft: 11716, kind: trailhead}
+  - {name: "Mountain View Drive end (alt TH)", lat: 39.258, lon: -106.153, ele_ft: 11200, kind: trailhead}
+  - {name: "⚠️ CR 696 (Mosquito Pass Rd) — hostile claim-holder, AVOID", lat: 39.295, lon: -106.13, ele_ft: 11500, kind: landmark}
