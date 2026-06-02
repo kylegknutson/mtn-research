@@ -131,10 +131,12 @@ For the efficient two-peak day, South Colony is the better base.
 | [23274](https://www.14ers.com/php14ers/tripreport.php?trip=23274) | — | "Analemma and the South Ridge of BHP" — both, south ridge line |
 | [18794](https://www.14ers.com/php14ers/tripreport.php?trip=18794) | — | "Crestones via Cottonwood Creek" — both, Cottonwood approach |
 
-### peakbagger.com
-3 ascent GPX tracks pulled (pids 5910 / 32622). Note: peakbagger session was logged out during this pull, but GPX exports were publicly accessible.
+### peakbagger.com (logged in as Kyle Knutson)
+8 ascent GPX tracks pulled — Broken Hand (pid 5910): 5 of 6 ascents had GPX; Crestolita (pid 32622): 3 of 3 ascents had GPX.
 
-**GPX collected: 16 track files across all three sources** (LoJ + 14ers TR uploads + 14ers GPX library + peakbagger ascents) — all layered on the CalTopo research map.
+**GPX collected: 21 track files across all three sources** (LoJ + 14ers TR uploads + 14ers GPX library + peakbagger ascents) — all layered on the CalTopo research map.
+
+**Sources checked:** 14ers.com ✓ (logged in, "Basin") · listsofjohn.com ✓ (logged in, "letsgocu") · peakbagger.com ✓ (logged in, "Kyle Knutson")
 
 ---
 
@@ -146,4 +148,4 @@ For the efficient two-peak day, South Colony is the better base.
 - **Drive:** [3h 58m / 199 mi](https://www.google.com/maps/dir/?api=1&origin=1162+Peakview+Circle,+Boulder,+CO+80302&destination=37.97592,-105.50657) from home to the South Colony 2WD lot; careful stock AWD gets most of the way up the 4WD road.
 - **Big day, not a short one** — well over 4,000 ft. Full alpine start, off the Class 3 ridge before afternoon storms.
 - **Snow option:** Crestolita's north couloirs are a legit spring snow climb (axe/crampons).
-- **Research map:** https://caltopo.com/m/6TKA0RH — 16 GPX tracks layered, colored by source.
+- **Research map:** https://caltopo.com/m/6TKA0RH — 21 GPX tracks layered, colored by source.
