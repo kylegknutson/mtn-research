@@ -1,13 +1,35 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
-  <!-- rounded green tile -->
-  <rect width="64" height="64" rx="14" fill="#2e7d32"/>
-  <!-- sun -->
-  <circle cx="46" cy="20" r="6" fill="#ff7043"/>
-  <!-- back mountain -->
-  <path d="M4 50 L24 22 L40 50 Z" fill="#a5d6a7"/>
-  <!-- front mountain with snow cap -->
-  <path d="M22 50 L42 18 L60 50 Z" fill="#e8f5e9"/>
-  <path d="M42 18 L35 30 L39 33 L42 29 L45 33 L49 30 Z" fill="#ffffff"/>
-  <!-- ground line -->
-  <rect x="4" y="49" width="56" height="3" rx="1.5" fill="#1b5e20"/>
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#bfe0f2"/>
+      <stop offset="1" stop-color="#eaf5fc"/>
+    </linearGradient>
+    <clipPath id="tile"><rect width="64" height="64" rx="14"/></clipPath>
+  </defs>
+  <g clip-path="url(#tile)">
+    <rect width="64" height="64" fill="url(#sky)"/>
+
+    <!-- Flatiron slabs: strongly right-leaning, overlapping, parallel.
+         Big east-facing plane (apex -> base-right) is the lit face;
+         thin west edge (base-left -> apex) is shadowed. -->
+
+    <!-- Slab 1 (tallest, back-left) -->
+    <polygon points="5,54 18,12 42,54" fill="#bb7a50"/>
+    <polygon points="5,54 18,12 14,54" fill="#8f5236"/>
+    <line x1="5" y1="54" x2="18" y2="12" stroke="#e2ac7c" stroke-width="1.5" stroke-linecap="round"/>
+
+    <!-- Slab 2 (middle) -->
+    <polygon points="21,54 33,18 55,54" fill="#b0703f"/>
+    <polygon points="21,54 33,18 30,54" fill="#854c31" />
+    <line x1="21" y1="54" x2="33" y2="18" stroke="#d99a6e" stroke-width="1.4" stroke-linecap="round"/>
+
+    <!-- Slab 3 (front-right, shortest) -->
+    <polygon points="37,54 48,26 63,54" fill="#a4642f"/>
+    <polygon points="37,54 48,26 45,54" fill="#7c4329"/>
+    <line x1="37" y1="54" x2="48" y2="26" stroke="#cf8d62" stroke-width="1.3" stroke-linecap="round"/>
+
+    <!-- forested base across the bottom -->
+    <path d="M0 50 Q 16 47 32 50 T 64 50 L64 64 L0 64 Z" fill="#2f6b3a"/>
+    <path d="M0 55 Q 20 52 40 55 T 64 55 L64 64 L0 64 Z" fill="#23512d"/>
+  </g>
 </svg>
