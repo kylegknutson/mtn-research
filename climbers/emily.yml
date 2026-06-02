@@ -6,19 +6,18 @@ slug: emily
 is_default: false
 
 # Drive-time origin for "closest" calculations and Maps directions links.
-# TODO: confirm Emily's home address + lat/lon (placeholder = Boulder).
-home_address: "Boulder, CO"
-home_latlon: [40.0150, -105.2705]
+home_address: "Highland, Denver, CO"
+home_latlon: [39.7625, -105.0103]
 
 # Climbed list comes from Emily's public 14ers checklist (kept up to date by her).
 climbed_list:
   source: 14ers_checklist
   checklist_url: "https://www.14ers.com/php14ers/checklist.php?usernum=45697&checklist=13ers"
 
-# Site this climber's reports publish to.
+# Site this climber's reports publish to (a subpath of the main repo's Pages site).
 site:
   mkdocs_config: mkdocs.emily.yml
-  url: "https://kylegknutson.github.io/mtn-research-emily/"
+  url: "https://kylegknutson.github.io/mtn-research/emily/"
 
 # 14ers username (from the checklist): emilysharpe24.
 accounts:

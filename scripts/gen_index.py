@@ -41,7 +41,10 @@ def drive_minutes(s) -> int:
 def build_table() -> str:
     rows = []
     for p in sorted(PEAKS.glob("*.md")):
-        if p.name.endswith(".skeleton.md"):
+        # Kyle's index lists only his unsuffixed reports. Skip skeletons and any
+        # climber-suffixed report (e.g. <slug>.emily.md) — those belong to a
+        # friend's own site. Peak slugs never contain a dot, so a second dot ⇒ suffix.
+        if p.name.count(".") > 1:
             continue
         fm = frontmatter(p)
         title = re.search(r"^#\s+(.+)$", p.read_text(), re.M)

@@ -1,0 +1,21 @@
+# Emily's site — inherits theme/plugins/extensions from mkdocs.yml, overrides the
+# climber-specific bits. Builds to the /emily/ subpath of the main Pages site.
+INHERIT: mkdocs.yml
+
+site_name: Emily's Peak Research
+site_url: https://kylegknutson.github.io/mtn-research/emily/
+site_description: Colorado peak research tailored for Emily
+
+# Drop Kyle's content from Emily's build; keep shared maps + methodology.
+# (gitignore semantics: exclude, then re-include the .emily.md reports.)
+exclude_docs: |
+  index.md
+  lists/
+  peaks/*.md
+  !peaks/*.emily.md
+
+nav:
+  - Home: index.emily.md
+  - Peaks:
+    - Crestolita + Broken Hand: peaks/crestolita_broken_hand.emily.md
+  - Methodology: methodology/index.md

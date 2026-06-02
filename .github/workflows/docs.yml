@@ -44,8 +44,10 @@ jobs:
       - name: Install MkDocs Material
         run: pip install mkdocs-material
 
-      - name: Build site
+      - name: Build site (Kyle, root)
         run: mkdocs build --site-dir _site
+      - name: Build site (Emily, /emily/)
+        run: mkdocs build -f mkdocs.emily.yml --site-dir _site/emily
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
