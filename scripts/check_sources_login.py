@@ -34,10 +34,13 @@ import yaml
 ROOT = Path(__file__).resolve().parent.parent
 PROFILE_DIR = Path.home() / "Library/Application Support/mtn-research/pw-profile"
 
-# (key, url, regex that matches ONLY when logged in capturing the username)
+# (key, url, regex that matches ONLY when logged in; group 1 = username if the
+#  site exposes it). 14ers is detected by its Log Out link (the "hi <name>"
+#  greeting is unreliable — it false-matched "...Basin..." page text once and
+#  isn't the login username anyway), so no username is asserted for it.
 SITES = [
     ("14ers",       "https://www.14ers.com/",
-        re.compile(r"\bhi\s+([A-Za-z0-9_]+)\b|Log\s*Out", re.I)),
+        re.compile(r"mode=logout|Log\s*Out", re.I)),
     ("listsofjohn", "https://listsofjohn.com/",
         re.compile(r"Signed in as\s+([A-Za-z0-9_]+)", re.I)),
     ("peakbagger",  "https://peakbagger.com/",

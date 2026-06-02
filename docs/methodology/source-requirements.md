@@ -6,7 +6,7 @@
 
 | Source | Login (Kyle) | What it's good for |
 |---|---|---|
-| **14ers.com** | "Basin" | Route descriptions (when they exist), trip reports, per-peak GPX library |
+| **14ers.com** | "letsgocu" | Route descriptions (when they exist), trip reports, per-peak GPX library |
 | **listsofjohn.com** | "letsgocu" | Peak stats (LiDAR elev, prominence, saddle), TRs with "Additional Peaks" header (combo detection), per-TR GPX |
 | **peakbagger.com** | "Kyle Knutson" | Ascent records with structured gain/distance/trailhead, ascent GPX tracks |
 
@@ -32,7 +32,7 @@ Cross-reference gain/distance across multiple TRs. A peak's "standard route gain
 
 **Every report must end with a line naming all three sites + the confirmed logged-in username**, e.g.:
 
-> **Sources checked:** 14ers.com ✓ (logged in, "Basin") · listsofjohn.com ✓ (logged in, "letsgocu") · peakbagger.com ✓ (logged in, "Kyle Knutson")
+> **Sources checked:** 14ers.com ✓ (logged in, "letsgocu") · listsofjohn.com ✓ (logged in, "letsgocu") · peakbagger.com ✓ (logged in, "Kyle Knutson")
 
 If any source isn't confirmed logged-in, the footer must say so, and the research is flagged incomplete.
 

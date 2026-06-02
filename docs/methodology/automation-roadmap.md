@@ -71,6 +71,9 @@ scripts/research_peak.py --peaks <id|slug>[,<id>...] [--climber kyle] [--flavor 
 
 `research_peak.py` orchestrates the first four.
 
+### Auth approach (decided 2026-06-02)
+The headless scrapers (`check_sources_login`, `sweep_gpx`, `research_peak`) need the 3 sources logged in. **Do not require a second, separate login.** `check_sources_login.py` currently uses its own Playwright profile (a one-time `--login`), but the intended direction is to **reuse an already-authenticated session** — e.g. point the scripts at Kyle's existing Chrome/Playwright profile, or load an exported storage-state file — so there's zero extra login. Claude never enters credentials; the human establishes the session once in their normal browser and the scripts borrow it. Design `sweep_gpx`/`research_peak` against that before leaning on the separate-profile path.
+
 ---
 
 ## Map QA tests (also reduces redo loops)
