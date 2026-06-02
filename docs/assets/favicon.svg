@@ -28,8 +28,14 @@
     <polygon points="37,54 48,26 45,54" fill="#7c4329"/>
     <line x1="37" y1="54" x2="48" y2="26" stroke="#cf8d62" stroke-width="1.3" stroke-linecap="round"/>
 
-    <!-- forested base across the bottom -->
-    <path d="M0 50 Q 16 47 32 50 T 64 50 L64 64 L0 64 Z" fill="#2f6b3a"/>
-    <path d="M0 55 Q 20 52 40 55 T 64 55 L64 64 L0 64 Z" fill="#23512d"/>
+    <!-- flat forested base band + a small pine at each edge -->
+    <rect x="0" y="52" width="64" height="12" fill="#367640"/>
+    <rect x="0" y="57" width="64" height="7" fill="#265831"/>
+    <!-- left pine -->
+    <polygon points="8,44 4,51 12,51" fill="#22542a"/>
+    <polygon points="8,41 4.2,47 11.8,47" fill="#22542a"/>
+    <!-- right pine -->
+    <polygon points="58,43 54,51 62,51" fill="#22542a"/>
+    <polygon points="58,40 54.2,46.5 61.8,46.5" fill="#22542a"/>
   </g>
 </svg>
