@@ -48,8 +48,29 @@ from pyproj import Transformer
 # ── constants ────────────────────────────────────────────────────────────────
 GPX_NS_URI = "http://www.topografix.com/GPX/1/1"
 
-COLOR_PUBLIC   = (204, 51,  51,  220)   # red
+COLOR_PUBLIC   = (204, 51,  51,  220)   # red (fallback / unclassified public)
 COLOR_KYLE     = (0,   102, 255, 180)   # blue
+
+# Source-colored tracks (match the CalTopo research-map scheme).
+SOURCE_COLORS = {
+    "loj":   (204, 51,  51,  220),   # LoJ      — red
+    "14ers": (0,   170, 0,   220),   # 14ers    — green
+    "pb":    (0,   102, 255, 220),   # peakbagger — blue
+    "public":(204, 51,  51,  220),   # unclassified — red
+}
+SOURCE_LABELS = {"loj": "LoJ", "14ers": "14ers", "pb": "peakbagger", "public": "Public"}
+
+
+def track_source(path) -> str:
+    """Classify a public track GPX by source from its filename suffix."""
+    n = path.name.lower()
+    if "pbascent" in n:
+        return "pb"
+    if "14ers" in n or "_unknown_" in n:
+        return "14ers"
+    if "loj" in n:
+        return "loj"
+    return "public"
 COLOR_PEAK     = (255, 204, 0,   255)   # gold
 COLOR_DRIVE_IN = (153, 51,  204, 220)   # purple
 COLOR_TH       = (255, 102, 0,   220)   # orange
@@ -264,9 +285,10 @@ def draw_label(draw: ImageDraw.ImageDraw, ix: int, iy: int, text: str, font):
 
 # ── legend ────────────────────────────────────────────────────────────────────
 
-def draw_legend(img: Image.Image, has_public, has_kyle, has_peak, has_drive_in, has_th, font):
+def draw_legend(img: Image.Image, public_sources, has_kyle, has_peak, has_drive_in, has_th, font):
     items = []
-    if has_public:  items.append(("Public routes",          COLOR_PUBLIC[:3]))
+    for src in (public_sources or []):
+        items.append((f"{SOURCE_LABELS.get(src, src)} routes", SOURCE_COLORS.get(src, COLOR_PUBLIC)[:3]))
     if has_kyle:    items.append(("Imported tracks (Kyle)", COLOR_KYLE[:3]))
     if has_peak:    items.append(("Summit ★",               COLOR_PEAK[:3]))
     if has_drive_in:items.append(("Drive-in / landmark ▲", COLOR_DRIVE_IN[:3]))
@@ -310,7 +332,11 @@ def build_map(slug: str, out_path: Path, zoom: int | None = None, title: str = "
         kind = classify_file(path, is_kyle)
         if kind.startswith("track"):
             segs = parse_tracks(path)
-            buckets[kind].extend(segs)
+            if kind == "track_public":
+                src = track_source(path)
+                buckets["track_public"].extend((seg, src) for seg in segs)
+            else:
+                buckets[kind].extend(segs)
             for seg in segs:
                 for lon, lat in seg:
                     all_lons.append(lon); all_lats.append(lat)
@@ -441,8 +467,8 @@ def build_map(slug: str, out_path: Path, zoom: int | None = None, title: str = "
     draw = ImageDraw.Draw(img, "RGBA")
 
     # ── draw tracks ─────────────────────────────────────────────────────────
-    for seg in buckets["track_public"]:
-        draw_track(draw, seg, COLOR_PUBLIC, 3, origin_px, origin_py, scale_x, scale_y, IMG_H_PX, zoom)
+    for seg, src in buckets["track_public"]:
+        draw_track(draw, seg, SOURCE_COLORS.get(src, COLOR_PUBLIC), 3, origin_px, origin_py, scale_x, scale_y, IMG_H_PX, zoom)
     for seg in buckets["track_kyle"]:
         draw_track(draw, seg, COLOR_KYLE, 2, origin_px, origin_py, scale_x, scale_y, IMG_H_PX, zoom, dashed=True)
 
@@ -482,7 +508,11 @@ def build_map(slug: str, out_path: Path, zoom: int | None = None, title: str = "
     draw.text((tx, 8), display_title, fill=(20, 20, 20, 255), font=font_title)
 
     # ── legend ───────────────────────────────────────────────────────────────
-    draw_legend(img, bool(buckets["track_public"]), bool(buckets["track_kyle"]),
+    present_sources = []
+    for _seg, src in buckets["track_public"]:
+        if src not in present_sources:
+            present_sources.append(src)
+    draw_legend(img, present_sources, bool(buckets["track_kyle"]),
                 bool(buckets["peak"]), bool(buckets["drive_in"]), bool(buckets["th"]), font_sm)
 
     # ── attribution ──────────────────────────────────────────────────────────
