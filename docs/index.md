@@ -4,22 +4,26 @@ Personal research notes for Colorado peaks I'm working through. Each report cove
 
 ## Peaks
 
-### San Juans / San Miguels
-- [Brown Mountain](peaks/brown_mountain.md) — San Juan Mountains. Multi-peak Brown + Bonita + Proposal opportunity.
-- [Dolores Peak + Middle Peak](peaks/dolores_middle_peak.md) — San Miguel Mountains. Lizard Head Wilderness.
-- [Telluride Peak + T 7 + T 8](peaks/telluride_t7_t8.md) — San Juan Mountains. Imogene Pass area, 3-peak ridge link-up.
+*Sorted by drive time. Click a column header to re-sort. This table is
+auto-generated from each report's frontmatter (`scripts/gen_index.py`).*
 
-### Sangre de Cristo
-- [Hunts Peak](peaks/hunts_peak.md) — Northern Sangres. Standalone day. ⭐ Solo
-- [PT 13,557 (Huerfano)](peaks/pt_13557.md) — Huerfano County.
-- [Crestolita + Broken Hand Peak](peaks/crestolita_broken_hand.md) — Crestone group. **Day trip, 2 peaks.** ~11–14 mi / 6,400–7,100 ft, Class 3. South Colony Lakes approach.
+<!-- PEAKS_TABLE_START -->
+| Peak | Range | Drive | Class | Gain | Status |
+|---|---|---|---|---|---|
+| [Jacque Peak](peaks/jacque_peak.md) | Gore | 1h 42m | 2 | 3,500 ft | unclimbed |
+| [Pennsylvania Mountain](peaks/pennsylvania_mountain.md) | Mosquito | 2h 5m | 1 | 1,500 ft | unclimbed |
+| [Homestake Peak](peaks/homestake_peak.md) | Sawatch | 3h 14m | 2 | 2,500–3,551 ft | unclimbed |
+| [Hunts Peak](peaks/hunts_peak.md) | Sangre de Cristo | 3h 37m | 2 | 3,450–3,528 ft | unclimbed |
+| [Savage Peak](peaks/savage_peak.md) | Sawatch | 3h 39m | 2 | 3,200 ft | unclimbed |
+| [Star Peak A](peaks/star_peak_a.md) | Elk | 3h 39m | 2+ | 2,766 ft (Star+Taylor) | unclimbed |
+| [Crestolita + Broken Hand Peak](peaks/crestolita_broken_hand.md) | Sangre de Cristo | 3h 58m | 3 | 6,400–7,100 ft | unclimbed |
+| [PT 13,557](peaks/pt_13557.md) | Sangre de Cristo | 4h 41m | 2 | ~3,540 ft | unclimbed |
+| [Telluride Peak + T 7 + T 8](peaks/telluride_t7_t8.md) | San Juan | 6h 19m | 2–3 | ~4,000 ft | unclimbed |
+| [Brown Mountain](peaks/brown_mountain.md) | San Juan | 6h 21m | 2 | 1,600–4,380 ft | unclimbed |
+| [Dolores Peak + Middle Peak](peaks/dolores_middle_peak.md) | San Juan | 7h 30m | 2 | ~4,000 ft | unclimbed |
+<!-- PEAKS_TABLE_END -->
 
-### Closest unclimbed CO 13ers under 4,000 ft (researched 2026-05-28)
-- [Jacque Peak](peaks/jacque_peak.md) — Gore Range. **1h 42m drive** — closest. Effectively solo. Copper Mtn Ski Area approach.
-- [Pennsylvania Mountain](peaks/pennsylvania_mountain.md) — Mosquito Range. **2h 5m drive.** Class 1, 1,500' gain, year-round Pika TH. ⭐ The quickest of the bunch.
-- [Homestake Peak](peaks/homestake_peak.md) — Sawatch / Holy Cross Wilderness. **3h 14m drive.** 10th Mtn Hut area approach. Solo.
-- [Savage Peak](peaks/savage_peak.md) — Sawatch / Holy Cross. **3h 39m drive.** NE Ridge from Missouri Lakes TH. ⚠️ Homestake Rd Nov 22 – May 21 gate closure.
-- [Star Peak A](peaks/star_peak_a.md) — Elk Mountains. **3h 39m drive.** **MASSIVE CLUSTER** — 14 unclimbed ranked 13ers within 8 mi. Star + Taylor + Italian combo recommended.
+See also the saved candidate **[Lists](lists/2026-06-02_closest-unclimbed-sangre-13ers.md)**.
 
 ## How to read a report
 

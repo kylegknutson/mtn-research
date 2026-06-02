@@ -27,6 +27,8 @@ jobs:
         run: python scripts/check_reports.py
       - name: Map-QA gate (overview PNGs not blank / dotless / over-zoomed)
         run: pip install Pillow && python scripts/check_maps.py
+      - name: Index freshness (peak table matches report frontmatter)
+        run: pip install PyYAML && python scripts/gen_index.py --check
 
   build:
     needs: lint

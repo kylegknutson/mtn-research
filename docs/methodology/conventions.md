@@ -74,3 +74,16 @@ regional_map_id: VKGB00L      # the range's regional "GPS Tracks" map
 `check_reports.py` warns on any report missing the recommended fields (range,
 drive_time, yds_class, gain, status, regional_map_id). It's a warning, not a hard
 fail — but new reports should always include them.
+
+## Landing-page peak table (auto-generated)
+
+`docs/index.md` has a sortable peak table between `<!-- PEAKS_TABLE_START -->` and
+`<!-- PEAKS_TABLE_END -->`, generated from each report's frontmatter by
+`scripts/gen_index.py` (sorted by drive time; click headers to re-sort via
+tablesort). **Don't hand-edit between the markers.** After adding/editing a report:
+
+```
+scripts/gen_index.py     # regenerate the table
+```
+
+CI runs `gen_index.py --check` and fails if the table is stale.
