@@ -29,6 +29,7 @@ This section is the **canonical source of truth** for how peak research is done 
 - This is a **multi-climber** system. Each climber has a profile in `climbers/<name>.yml` (home address for drive times, climbed-list source).
 - **Kyle** is the default/owner: his reports are `docs/peaks/<slug>.md` (no suffix), his climbed list comes from the Supabase peak_db.
 - **Friends** get per-climber reports `docs/peaks/<slug>.<climber>.md` and their own published site; their climbed list comes from a 14ers.com checklist URL they provide.
+- **Default to Kyle only.** A report request builds *just Kyle's* report unless he explicitly says otherwise — "for Emily", "for Emily and me", "for everyone", etc. Don't fan a report out to all climbers by default. (Kyle, 2026-06-02)
 - See [`climbers/_schema.md`](https://github.com/kylegknutson/mtn-research/blob/main/climbers/_schema.md) for the profile format.
 
 ### Where things live
