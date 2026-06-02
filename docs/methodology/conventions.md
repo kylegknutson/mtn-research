@@ -1,0 +1,52 @@
+# Site conventions
+
+Small, consistent rules that apply to every report and page.
+
+## Weather link (required in Quick Stats)
+
+Every report's Quick Stats table includes a **Weather** row directly under Lat/Lon:
+
+- URL: `https://forecast.weather.gov/MapClick.php?lat=<summit_lat>&lon=<summit_lon>` (primary summit's LiDAR coords)
+- This is the **same NOAA target** that 14ers / LoJ / peakbagger all link to — one link covers all three
+- Value format: `[NOAA forecast](URL) (same target as 14ers / LoJ / peakbagger weather links)`
+- Multi-peak reports: use the primary peak's coords, label `Weather (Primary Pk)` — the forecast resolution covers the cluster
+
+## Drive-from-home (required, clickable)
+
+The "Drive from Boulder" / "Drive from home" row must be a **clickable Google Maps directions link**:
+
+- Origin: the climber's home address (Kyle: `1162 Peakview Circle, Boulder, CO 80302`)
+- Destination: the primary trailhead's coordinates
+- URL: `https://www.google.com/maps/dir/?api=1&origin=<url-encoded-address>&destination=<lat>,<lon>`
+- Format: `**[1h 42m via Google Maps](URL)** (origin: <short address>)`
+- Drive time itself is measured via Maps directions (Playwright), not estimated
+
+## "Closest" = drive time, not haversine
+
+When ranking peaks by proximity, default to **drive time from the climber's home**, not straight-line distance. Haversine badly misorders Colorado peaks (a Sangre peak can be farther in miles but a shorter drive than an Elk Range peak). Use haversine only as a first-cut net to pull candidates (top 50–75), then rank the finalists by Maps drive time.
+
+## External links open in a new tab
+
+Implemented site-wide via `docs/javascripts/external-links-new-tab.js` (Material `document$`-subscribed; marks every external-origin `a[href^="http"]` with `target="_blank" rel="noopener noreferrer"` on load and on instant-nav). 
+
+- Just write plain markdown links `[text](url)` — do NOT add `{target="_blank"}` or raw HTML
+- Internal links (peak↔peak, anchors) stay same-tab automatically
+- If a theme/plugin update breaks it, fix the JS — don't add per-link attributes
+
+## Naming conventions
+
+- Slugs use underscores: `jacque_peak`, `crestolita_broken_hand`
+- Single-peak / day-trip reports: `docs/peaks/<slug>.md`
+- Multi-day trips: `docs/trips/<slug>.md`
+- Per-climber (friend) reports: `docs/peaks/<slug>.<climber>.md` (Kyle = unsuffixed default)
+- Saved narrow-downs: `docs/lists/YYYY-MM-DD_<slug>.md`
+- GPX: `gpx/<slug>/<slug>_<author>_<year>_<source><id>.gpx`
+- Maps: `docs/maps/<slug>.png`
+
+## Publishing checklist
+
+After writing/updating a report:
+1. Add to `mkdocs.yml` nav
+2. Add to `docs/index.md` (grouped by region/category)
+3. Commit + push
+4. Confirm the GitHub Actions deploy is green before calling it done

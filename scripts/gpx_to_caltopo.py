@@ -255,6 +255,8 @@ def main() -> None:
     ap.add_argument("--color", help="Hex color (#RRGGBB) overriding the palette for ALL tracks/markers in this run. Useful when appending a second source to an existing map so it's visually distinct.")
     ap.add_argument("--color-offset", type=int, default=0,
                     help="Skip N colors in the palette before assigning. Use when appending so colors don't collide with prior uploads.")
+    ap.add_argument("--vary-colors", action="store_true",
+                    help="Cycle the palette per TRACK (not per group) so adjacent tracks are easier to tell apart.")
     ap.add_argument("--dry-run", action="store_true",
                     help="Parse and group files but don't upload")
     ap.add_argument("--no-dedupe", action="store_true",
@@ -325,6 +327,7 @@ def main() -> None:
 
     # Add a folder per source group, then features inside
     track_count = wpt_count = skipped_tracks = skipped_markers = 0
+    track_color_idx = 0  # for --vary-colors
     folder_id_cache: dict[str, str | None] = {}
 
     def get_folder_id(label: str):
@@ -364,16 +367,18 @@ def main() -> None:
                             skipped_tracks += 1
                             continue
                     folder_id = get_folder_id(label)
+                    line_color = PALETTE[track_color_idx % len(PALETTE)] if args.vary_colors else color
+                    track_color_idx += 1
                     try:
                         session.addLine(
                             points=coords,
                             title=name,
                             description=desc or f"From {f.name}",
-                            color=color,
+                            color=line_color,
                             folderId=folder_id,
                         )
                         track_count += 1
-                        print(f"    track  ({color}) {name}  [{len(coords)} pts]")
+                        print(f"    track  ({line_color}) {name}  [{len(coords)} pts]")
                     except Exception as e:
                         print(f"    ERROR addLine {name!r}: {e}")
                 elif kind == "wpt":

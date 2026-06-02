@@ -1,0 +1,33 @@
+# Climber profile — Kyle (owner / default)
+# See climbers/_schema.md for the field spec.
+
+name: Kyle Knutson
+slug: kyle
+is_default: true          # Kyle's reports are unsuffixed (docs/peaks/<slug>.md)
+
+# Drive-time origin for "closest" calculations and Maps directions links.
+home_address: "1162 Peakview Circle, Boulder, CO 80302"
+home_latlon: [40.0982883, -105.3275335]
+
+# Where this climber's "done / unclimbed" list comes from.
+climbed_list:
+  source: peak_db          # Supabase peak_db (ascents table)
+  # peak_db is the source of truth for Kyle — no checklist URL needed.
+
+# Site this climber's reports publish to.
+site:
+  mkdocs_config: mkdocs.yml
+  url: "https://kylegknutson.github.io/mtn-research/"
+
+# Logged-in usernames on the three research sources (for the
+# "Sources checked" footer + login verification).
+accounts:
+  14ers: "Basin"
+  listsofjohn: "letsgocu"
+  peakbagger: "Kyle Knutson"
+
+# Default research preferences.
+preferences:
+  default_list: co_13_14ers      # Colorado 13ers + 14ers
+  closest_means: drive_time       # never haversine for final ranking
+  combo_rule: ranked_13er_plus    # sub-13k/unranked partners don't count as "combined"
