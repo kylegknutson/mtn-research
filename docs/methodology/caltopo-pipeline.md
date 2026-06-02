@@ -34,6 +34,32 @@ scripts/gpx_to_caltopo.py --gpx-dir gpx/<slug> --new-map "Research: <Peak>" --no
 ```
 `--no-dedupe` is required for research maps so summit/peak markers always render even if they exist in other maps. Color by source: LoJ red (palette default), 14ers green (`#00AA00`), peakbagger blue (`#0066FF`). Capture the returned map ID.
 
+### 3b. Also add the new tracks to the REGIONAL map
+**Requirement (Kyle, 2026-06):** every external GPX track pulled during research goes into **two** CalTopo maps — the per-research map (above) *and* the **regional map** for the range those peaks sit in. The per-research map is the focused working view; the regional map is the durable, cumulative archive of every track for that range, built up over time across all research sessions.
+
+```
+scripts/gpx_to_caltopo.py --gpx-dir gpx/<slug> --map-id <REGIONAL_MAP_ID>
+```
+
+- Append to the existing regional map (`--map-id`, not `--new-map`).
+- **Leave dedupe ON** here (omit `--no-dedupe`) — the regional map accumulates many peaks, so duplicate tracks/markers already present should be skipped. Only the per-research map needs `--no-dedupe` (so its own summit markers always render).
+- Pick the regional map by the peaks' `range` field in peak_db (Sangre de Cristo, Sawatch, San Juan, Elk, Gore, Mosquito, Tenmile, etc.).
+- For a multi-range objective, add to each relevant regional map.
+
+#### Regional map registry
+> ⚠️ **IDs TBD — confirm with Kyle before writing.** The regional maps are maintained/re-rendered in their own workflow; don't guess IDs from local `caltopo/*.json` dumps, which can be stale after a re-render. Ask for the current regional map ID for the range, then record it here.
+
+| Range | Regional CalTopo map ID |
+|---|---|
+| Sangre de Cristo | _TBD_ |
+| Sawatch | _TBD_ |
+| San Juan | _TBD_ |
+| Elk | _TBD_ |
+| Gore | _TBD_ |
+| Mosquito / Tenmile | _TBD_ |
+
+**Coordination note:** if another session is actively re-rendering a regional map, **hold off** on writing to it until that finishes (a concurrent append can be lost or conflict).
+
 ### 4. Wire the map ID into the report
 Update the header `**CalTopo research map:**` line and the caption `*[Interactive CalTopo map](https://caltopo.com/m/<id>)*`.
 
