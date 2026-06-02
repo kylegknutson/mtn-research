@@ -25,6 +25,8 @@ jobs:
           python-version: "3.13"
       - name: Source-rigor gate (every report names all 3 sources)
         run: python scripts/check_reports.py
+      - name: Map-QA gate (overview PNGs not blank / dotless / over-zoomed)
+        run: pip install Pillow && python scripts/check_maps.py
 
   build:
     needs: lint
