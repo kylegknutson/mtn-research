@@ -72,6 +72,17 @@ Auto-renders track lines on OpenTopoMap tiles.
 ### 6. Commit, push, verify deploy green
 Do NOT mark a peak "researched" or update the index until all three artifacts are committed and the GitHub Pages deploy succeeds.
 
+## Imported-GPX marker handling — strip summits, gray the rest
+**Requirement (Kyle, 2026-06):** trip-report GPX files arrive with their *own* embedded waypoints (the author's summit pins, camps, trailheads, junctions, water, random marks). These must not be uploaded as-is — they duplicate and clash with the climber's authoritative markers and clutter the map. On import:
+
+1. **Summit markers → DROP.** Any imported waypoint at/near a known summit (matches a `peaks_only.gpx` summit by name, or within ~75 m of one) is discarded. **Kyle's own gold summit markers** (authoritative peak_db coords) are the canonical ones — keep only those.
+2. **All other imported markers → recolor to GRAY** (`#9E9E9E`). They stay on the map as useful context (camps, junctions, the TR author's trailhead) but are visually subordinated to the intentional markers: **gold** summits (Kyle's) and **colored** trailheads/landmarks (from `landmarks.gpx`).
+3. The **tracks** themselves are unaffected — still kept and colored by source (LoJ red / 14ers green / peakbagger blue).
+
+Net effect: one clean set of gold summit pins + deliberate colored trailheads, with the imported route lines and a quiet gray wash of secondary author waypoints behind them.
+
+> **Implementation:** belongs in the GPX→CalTopo import path (`gpx_to_caltopo.py`, or a preprocessing pass). As of writing the upload script uploads every embedded waypoint with palette colors and no summit-stripping — this rule is **not yet enforced in code**. (Note: a `scripts/restyle_markers.py` exists from a parallel session that may already cover part of this — reconcile before implementing to avoid duplication.)
+
 ## Map waypoint scope — objective only
 
 - **Include**: the summit(s), trailhead(s), key drive-in landmarks, and nearby unclimbed ranked 13ers+ that are *plausibly same-outing* (same drainage / ridge-connected / shared approach).
