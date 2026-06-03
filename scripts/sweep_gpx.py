@@ -176,10 +176,12 @@ def main():
         # reliably than bundled Chromium; fall back to Chromium if Chrome's absent.
         try:
             ctx = pw.chromium.launch_persistent_context(
-                str(PROFILE_DIR), headless=not args.headed, channel="chrome", user_agent=ua)
+                str(PROFILE_DIR), headless=not args.headed, channel="chrome",
+                user_agent=ua, chromium_sandbox=True)
         except Exception:
             ctx = pw.chromium.launch_persistent_context(
-                str(PROFILE_DIR), headless=not args.headed, user_agent=ua)
+                str(PROFILE_DIR), headless=not args.headed, user_agent=ua,
+                chromium_sandbox=True)
         page = ctx.pages[0] if ctx.pages else ctx.new_page()
 
         # LoJ

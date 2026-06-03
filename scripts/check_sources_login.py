@@ -79,11 +79,13 @@ def main():
               "(KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36")
         try:
             ctx = p.chromium.launch_persistent_context(
-                str(PROFILE_DIR), headless=not args.login, channel="chrome", user_agent=ua)
+                str(PROFILE_DIR), headless=not args.login, channel="chrome",
+                user_agent=ua, chromium_sandbox=True)
         except Exception:
             try:
                 ctx = p.chromium.launch_persistent_context(
-                    str(PROFILE_DIR), headless=not args.login, user_agent=ua)
+                    str(PROFILE_DIR), headless=not args.login, user_agent=ua,
+                    chromium_sandbox=True)
             except Exception as e:
                 sys.exit(f"Could not launch a browser ({e}).\n"
                          f"Run once: uv run --with playwright playwright install chromium")
