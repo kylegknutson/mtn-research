@@ -257,7 +257,7 @@ def main():
     ap.add_argument("--all", action="store_true", help="All region maps")
     ap.add_argument("--research", action="store_true", help="Also include the mtn-research / drawn maps")
     ap.add_argument("--symbol", default="peak", help="CalTopo marker-symbol (default 'peak' = mountain)")
-    ap.add_argument("--color", default="#2E78C7", help="summit marker-color hex (default muted blue)")
+    ap.add_argument("--color", default="#39FF14", help="summit marker-color hex (default neon green)")
     ap.add_argument("--poi-color", default="#888888", help="non-summit POI marker-color hex (default grey)")
     ap.add_argument("--apply", action="store_true")
     args = ap.parse_args()

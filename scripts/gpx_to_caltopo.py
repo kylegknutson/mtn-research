@@ -51,16 +51,26 @@ DEFAULT_ACCOUNT = "kyleg.knutson@gmail.com"
 
 GPX_NS = "{http://www.topografix.com/GPX/1/1}"
 
-# A small palette to distinguish sources visually.
+# Track color palette — 16 visually distinct colors for per-track variety.
+# Source convention (used by sync_to_regional.py): red=LoJ, green=14ers, blue=PB,
+# purple=personal recordings. #39FF14 is reserved for summit markers — not here.
 PALETTE = [
-    "#FF0000",  # red
-    "#0066FF",  # blue
-    "#00AA00",  # green
+    "#FF0000",  # red       (LoJ)
+    "#0066FF",  # blue      (peakbagger)
+    "#00AA00",  # green     (14ers)
     "#FF8800",  # orange
-    "#9933CC",  # purple
-    "#0099AA",  # teal
-    "#CC3366",  # magenta
-    "#666666",  # gray
+    "#9933CC",  # purple    (personal recordings)
+    "#00BBCC",  # teal
+    "#FF3399",  # hot pink
+    "#FFCC00",  # yellow
+    "#FF6633",  # coral
+    "#0099FF",  # sky blue
+    "#CC0055",  # crimson
+    "#99CC00",  # chartreuse
+    "#6633FF",  # indigo
+    "#FF66CC",  # rose
+    "#009966",  # sea green
+    "#FF6600",  # amber
 ]
 
 

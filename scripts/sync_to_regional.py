@@ -37,8 +37,8 @@ NST = f"{{{NS}}}"
 ROOT = Path(__file__).resolve().parent.parent
 SCRIPTS = ROOT / "scripts"
 
-GRAY = "#9E9E9E"          # non-summit imported markers (symbol=point)
-SUMMIT_BLUE = "#2E78C7"   # objective summits — blue mountain markers (symbol=peak)
+GRAY = "#9E9E9E"           # non-summit imported markers (symbol=point)
+SUMMIT_COLOR = "#39FF14"  # objective summits — neon green mountain markers (symbol=peak)
 SRC_COLOR = {"loj": "#FF0000", "14ers": "#00AA00", "pb": "#0066FF"}
 
 
@@ -162,7 +162,7 @@ def main():
 
     # 3. objective summits → blue mountain markers (symbol=peak)
     if not args.dry_run and peaks_only.exists():
-        up, sk, _ = run_upload(str(peaks_only), args.map_id, SUMMIT_BLUE, is_dir=False, symbol="peak")
+        up, sk, _ = run_upload(str(peaks_only), args.map_id, SUMMIT_COLOR, is_dir=False, symbol="peak")
         print(f"  [markers/summit] +{up}  ({sk or 'no skips'})")
 
     print(f"  DONE — {total_tracks} new tracks added")

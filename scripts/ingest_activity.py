@@ -37,9 +37,26 @@ CONFIG_PATH = SCRIPT_DIR / "cts.ini"
 ACCOUNT = "kyleg.knutson@gmail.com"
 GPX_NS = "{http://www.topografix.com/GPX/1/1}"
 
-TRACK_COLOR = "#9933CC"   # purple — personal recordings (matches caltopo_mytracks.py)
-SUMMIT_COLOR = "#2E78C7"  # blue mountain
+SUMMIT_COLOR = "#39FF14"  # neon green mountain marker
 POI_COLOR = "#9E9E9E"     # grey dot
+
+# Per-track palette — cycles starting at purple (personal recordings).
+# #39FF14 summit green is intentionally absent.
+TRACK_PALETTE = [
+    "#9933CC",  # purple    ← index 0, default for single-track GPX
+    "#FF8800",  # orange
+    "#00BBCC",  # teal
+    "#FF3399",  # hot pink
+    "#FFCC00",  # yellow
+    "#FF6633",  # coral
+    "#0099FF",  # sky blue
+    "#CC0055",  # crimson
+    "#99CC00",  # chartreuse
+    "#6633FF",  # indigo
+    "#FF66CC",  # rose
+    "#009966",  # sea green
+    "#FF6600",  # amber
+]
 
 # ---------------------------------------------------------------------------
 # Region registry
@@ -281,7 +298,8 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("gpx", type=Path, help="GPX file to ingest")
     ap.add_argument("--map-id", help="Override auto-classification with this regional map ID")
-    ap.add_argument("--color", default=TRACK_COLOR, help=f"Track color hex (default {TRACK_COLOR})")
+    ap.add_argument("--color", default=None,
+                    help="Fix all tracks to this hex color (default: cycle per-track from palette)")
     ap.add_argument("--export", type=Path,
                     help="14ers peak-export GPX for summit snap detection (auto-detected if omitted)")
     ap.add_argument("--apply", action="store_true", help="Write to CalTopo (default is dry-run)")
@@ -375,17 +393,20 @@ def main():
     existing = s.getFeatures() or []
 
     added_tracks = added_summits = added_pois = skipped = 0
+    track_idx = 0
 
-    # Tracks
+    # Tracks — cycle palette per track; --color pins all to one color
     for name, pts in tracks:
         if _is_dup_track(pts, existing):
             print(f"  SKIP  track {name!r}  (duplicate)")
             skipped += 1
             continue
+        color = args.color or TRACK_PALETTE[track_idx % len(TRACK_PALETTE)]
+        track_idx += 1
         coords = [[lon, lat] for lat, lon in pts]
-        s.addLine(points=coords, title=name, color=args.color,
+        s.addLine(points=coords, title=name, color=color,
                   description=f"From {args.gpx.name}")
-        print(f"  +track  ({args.color}) {name!r}  [{len(pts)} pts]")
+        print(f"  +track  ({color}) {name!r}  [{len(pts)} pts]")
         added_tracks += 1
 
     # Summit markers

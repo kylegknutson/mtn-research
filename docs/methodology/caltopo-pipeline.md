@@ -92,26 +92,36 @@ Do NOT mark a peak "researched" or update the index until all three artifacts ar
 ## Imported-GPX marker handling — strip summits, gray the rest
 **Requirement (Kyle, 2026-06):** trip-report GPX files arrive with their *own* embedded waypoints (the author's summit pins, camps, trailheads, junctions, water, random marks). These must not be uploaded as-is — they duplicate and clash with the climber's authoritative markers and clutter the map. On import:
 
-1. **Summit markers → DROP, use mine.** Any imported waypoint at/near a known summit (matches a `peaks_only.gpx` summit by name, or within ~75 m of one) is discarded. The objective summits are added from `peaks_only.gpx` as **blue mountain markers — `symbol=peak`, `color=#2E78C7`** (the canonical summit scheme on the regional maps). Dedupe ON, so they're added only if not already present.
-2. **All other imported markers → GRAY — `symbol=point`, `color=#9E9E9E`.** They stay on the map as useful context (camps, junctions, the TR author's trailhead) but are visually subordinated to the blue summit pins.
-3. The **tracks** themselves are unaffected — still kept and colored by source (LoJ red `#FF0000` / 14ers green `#00AA00` / peakbagger blue `#0066FF`).
+1. **Summit markers → DROP, use mine.** Any imported waypoint at/near a known summit (matches a `peaks_only.gpx` summit by name, or within ~75 m of one) is discarded. The objective summits are added from `peaks_only.gpx` as **neon-green mountain markers — `symbol=peak`, `color=#39FF14`** (the canonical summit scheme on the regional maps). Dedupe ON, so they're added only if not already present.
+2. **All other imported markers → GRAY — `symbol=point`, `color=#9E9E9E`.** They stay on the map as useful context (camps, junctions, the TR author's trailhead) but are visually subordinated to the summit pins.
+3. The **tracks** themselves are unaffected — still kept and colored by source (LoJ red `#FF0000` / 14ers green `#00AA00` / peakbagger blue `#0066FF` / personal purple `#9933CC`).
 
-Net effect: one clean set of **blue mountain summit pins** + a quiet **gray** wash of secondary author waypoints, with the source-colored route lines on top.
+Net effect: one clean set of **neon-green summit pins** + a quiet **gray** wash of secondary author waypoints, with the source-colored route lines on top.
 
 **Exact marker scheme (matches the regional maps):**
 
 | Marker kind | `symbol` | `color` |
 |---|---|---|
-| Objective summit | `peak` | `#2E78C7` (blue) |
+| Objective summit | `peak` | `#39FF14` (neon green) |
 | Any other imported waypoint | `point` | `#9E9E9E` (gray) |
 
+**Track color convention:**
+
+| Source | Color |
+|---|---|
+| LoJ trip reports | `#FF0000` red |
+| 14ers.com | `#00AA00` green |
+| Peakbagger | `#0066FF` blue |
+| Personal recordings (Kyle's GPS) | `#9933CC` purple — cycles per-track for multi-track GPX |
+
 > **Implementation:**
-> - **New uploads:** `scripts/sync_to_regional.py` enforces the scheme (reuses `gpx_to_caltopo.py --marker-symbol`, default `point`).
-> - **Normalizing existing maps:** `scripts/restyle_markers.py` rewrites every marker on a map in place via `editFeature` — summit-named or summit-located markers → `peak`/`#2E78C7`, everything else → `point`/gray. It snaps to summits from a peak-export GPX (generate one from peak_db: all CO ranked 13er+ summits). Run with `--poi-color "#9E9E9E"` to match the regional gray.
+> - **New uploads:** `scripts/sync_to_regional.py` enforces the marker scheme (reuses `gpx_to_caltopo.py --marker-symbol`, default `point`).
+> - **Personal activity ingestion:** `scripts/ingest_activity.py` auto-classifies by region and applies the same marker rules; tracks cycle through the 13-color palette starting at purple.
+> - **Normalizing existing maps:** `scripts/restyle_markers.py` rewrites every marker on a map in place via `editFeature` — summit-named or summit-located markers → `peak`/`#39FF14`, everything else → `point`/gray. Also renames markers to the canonical peak name when known. Run with `--poi-color "#9E9E9E"` to match the regional gray.
 >   ```
 >   scripts/restyle_markers.py --export /tmp/peakdb_summits.gpx --map <ID> --poi-color "#9E9E9E" --apply
 >   ```
-> - All 10 `Research:` maps + the regional maps have been normalized to this scheme (48 summit→blue, 50 POI→gray across the research maps, 2026-06-02). No more gold summit pins.
+> - All regional maps were normalized to the prior blue scheme on 2026-06-02; re-run `restyle_markers.py --apply` to update to neon green.
 
 ## Map waypoint scope — objective only
 
