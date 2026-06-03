@@ -48,9 +48,11 @@ All **Class 2** on the standard lines — the difficulty here is **distance, gai
 | | |
 |---|---|
 | **Drive from Highland** | **[3h 24m via Google Maps](https://www.google.com/maps/dir/?api=1&origin=Highland,+Denver,+CO&destination=38.1006,-105.7707)** (183 mi) to the **Wild Cherry Creek TH** (San Luis Valley, near Moffat) |
-| West approach (recommended) | **Wild Cherry Creek** or **Rito Alto Creek** TH from the SLV side — the standard way into the Lakes of the Clouds basin |
-| East approach (alt) | **Horn Creek / Wet Mountain Valley** side — longer drive around the range, different basin |
+| East approach (most documented) | **Gibson Creek TH** (Gibson Trailhead), Wet Mountain Valley near Westcliffe — the trailhead most 14ers TRs use for these peaks (De Anza/Gibbs/Marcy via Gibson Creek + the Rainbow Trail) |
+| West approach | **Cotton Creek / Wild Cherry Creek / Rito Alto Creek** from the San Luis Valley side (Moffat) — the line the logged loop GPX on the research map follow |
 | Vehicle | Dirt forest roads to the THs; 2WD-passable in dry conditions, rough/​muddy when wet |
+
+> The seven can be linked from **either side** of the range. The logged loop tracks on the [research map](https://caltopo.com/m/J9G39T0) are the **west (SLV)** approach (drive time above); many 14ers parties use **Gibson Creek (east)** — check both before committing, depending on which THs you want to start/finish at.
 
 ---
 
@@ -98,13 +100,19 @@ The seven ring the **Lakes of the Clouds** cirque. The natural line climbs to th
 
 The loop is well documented as N + S arcs:
 
-| Source | Notable TRs | GPX |
-|---|---|---|
-| **listsofjohn.com** | whileyh 2020 (De Anza+Gibbs+Marcy+Silver, N arc), josephnephi 2024 (N arc), josephnephi 2024 (Cotton King+13,130+Owen, S arc), Alyson Kirk 2014 (S arc) | [8083](https://listsofjohn.com/gpx/8083.gpx) ⭐ N, [15989](https://listsofjohn.com/gpx/15989.gpx) N, [15992](https://listsofjohn.com/gpx/15992.gpx) ⭐ S, [978](https://listsofjohn.com/gpx/978.gpx) S |
-| **14ers.com** | per-peak GPX libraries across all 7 | 16 files |
-| **peakbagger.com** (logged in, Kyle Knutson) | ascent tracks for all 7 pids (sparse for these remote points) | checked |
+**14ers.com** has extensive TRs for these peaks (69 across the seven) — the multi-peak ones are the loop beta:
 
-**GPX collected: 20 track files across all three sources** — all layered on the [CalTopo research map](https://caltopo.com/m/J9G39T0).
+- **"Traverse from Cottonwood Pk to Mt Owen in the Sangres"** ([18396](https://www.14ers.com/php14ers/tripreport.php?trip=18396)) — the big ridge traverse covering this whole zone
+- **"Sangre 13ers: De Anza, Gibbs, and Marcy"** ([18633](https://www.14ers.com/php14ers/tripreport.php?trip=18633)) — the north-arc trio
+- **"Cotton Creek 13ers (Sangre de Cristos)"** ([17527](https://www.14ers.com/php14ers/tripreport.php?trip=17527)) — west-side Cotton Creek approach
+- **"Central Sangre 5 pack"** ([10455](https://www.14ers.com/php14ers/tripreport.php?trip=10455)) · **"This Trip Report goes to Eleven!"** ([14262](https://www.14ers.com/php14ers/tripreport.php?trip=14262)) — multi-peak days
+- **"De Anza Peak A - Gibson Trailhead"** ([11708](https://www.14ers.com/php14ers/tripreport.php?trip=11708)) / **"From Gibson Trailhead"** ([21454](https://www.14ers.com/php14ers/tripreport.php?trip=21454)) — the east (Gibson Creek) approach
+
+**listsofjohn.com** loop tracks (37 TRs across the seven): whileyh 2020 N arc ([8083](https://listsofjohn.com/gpx/8083.gpx) ⭐), josephnephi 2024 N ([15989](https://listsofjohn.com/gpx/15989.gpx)) + S ([15992](https://listsofjohn.com/gpx/15992.gpx) ⭐), Alyson Kirk 2014 S ([978](https://listsofjohn.com/gpx/978.gpx)).
+
+**peakbagger.com:** checked; sparse/​duplicate GPX for these remote points.
+
+**GPX collected: 24 track files (LoJ + 14ers)** — all layered on the [CalTopo research map](https://caltopo.com/m/J9G39T0). Swept via `scripts/sweep_gpx.py` (69 named 14ers TRs + 37 LoJ TRs in the manifest).
 
 **Sources checked:** 14ers.com · listsofjohn.com · peakbagger.com
 
