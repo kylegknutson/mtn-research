@@ -184,6 +184,8 @@ RESEARCH_MAPS = {
     "hanson_group": "R7AHHPK", "nja_from_west": "VM98Q5D", "west_cuba_gulch": "8P140C2",
     "jacque": "2V59P1V", "snoden_n2": "C77EC4B", "sultan_grand_turk": "V0DJ6R0",
     "h548": "R3B1J97", "first": "8G650AG",
+    "lakes_of_clouds_emily": "J9G39T0", "chipeta_mtn": "CDMT01G",
+    "powell_eagles_nest": "GG1BKFL",
 }
 
 SNAP_M = 40.0
