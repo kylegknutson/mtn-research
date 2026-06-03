@@ -10,7 +10,7 @@ caltopo_id: 6TKA0RH
 regional_map_id: VKGB00L
 ---
 
-# Crestolita + Broken Hand Peak — combination day (Sangre de Cristo)
+# Broken Hand Peak Group — combination day (Sangre de Cristo)
 
 *Written for **Emily** — both peaks unclimbed on her 14ers checklist.*
 

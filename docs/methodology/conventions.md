@@ -87,3 +87,7 @@ scripts/gen_index.py     # regenerate the table
 ```
 
 CI runs `gen_index.py --check` and fails if the table is stale.
+
+## Naming multi-peak reports
+
+A **single-day** multi-peak report (a combo/cluster day, *not* a stated multi-day trip) is titled **`<tallest peak name> Group`** + the after-dash subtitle, e.g. `# Broken Hand Peak Group — combination day (Sangre de Cristo)` (Broken Hand 13,575' > Crestolita 13,264'), `# Mount Powell Group — combination day (Gore Range)`. A **stated multi-day** report keeps a descriptive title (e.g. "Lakes of the Clouds — 7-peak loop"). (Kyle, 2026-06-03)

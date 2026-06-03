@@ -9,7 +9,7 @@ caltopo_id: 6TKA0RH
 regional_map_id: VKGB00L
 ---
 
-# Crestolita + Broken Hand Peak — combination day (Sangre de Cristo)
+# Broken Hand Peak Group — combination day (Sangre de Cristo)
 
 **Researched:** 2026-05-31
 **Report type:** Day trip (2 ranked 13ers, one outing)

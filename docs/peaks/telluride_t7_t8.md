@@ -9,7 +9,7 @@ caltopo_id: 6FM1FEK
 regional_map_id: 06AR6BF
 ---
 
-# Telluride Peak + T 7 + T 8 (San Juan Mountains, Imogene Pass area)
+# Telluride Peak Group (San Juan Mountains, Imogene Pass area)
 
 **Researched:** 2026-05-14
 **CalTopo research map:** https://caltopo.com/m/6FM1FEK

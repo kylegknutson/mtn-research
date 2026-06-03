@@ -9,7 +9,7 @@ caltopo_id: GG1BKFL
 regional_map_id: 6E4GJV2
 ---
 
-# Mount Powell + Eagles Nest — combination day (Gore Range)
+# Mount Powell Group — combination day (Gore Range)
 
 **Researched:** 2026-06-02
 **Report type:** Day trip (2 ranked 13ers, one outing)
