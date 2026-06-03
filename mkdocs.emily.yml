@@ -21,6 +21,6 @@ hooks:
 nav:
   - Home: index.emily.md
   - Peaks:
-    - Broken Hand Peak Group: peaks/crestolita_broken_hand.emily.md
+    - Crestolita + Broken Hand: peaks/crestolita_broken_hand.emily.md
     - Lakes of the Clouds (7-peak loop): peaks/lakes_of_clouds_loop.emily.md
   - Methodology: methodology/index.md

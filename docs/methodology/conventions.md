@@ -90,4 +90,9 @@ CI runs `gen_index.py --check` and fails if the table is stale.
 
 ## Naming multi-peak reports
 
-A **single-day** multi-peak report (a combo/cluster day, *not* a stated multi-day trip) is titled **`<tallest peak name> Group`** + the after-dash subtitle, e.g. `# Broken Hand Peak Group — combination day (Sangre de Cristo)` (Broken Hand 13,575' > Crestolita 13,264'), `# Mount Powell Group — combination day (Gore Range)`. A **stated multi-day** report keeps a descriptive title (e.g. "Lakes of the Clouds — 7-peak loop"). (Kyle, 2026-06-03)
+For a **single-day** multi-peak report (a combo/cluster day, *not* a stated multi-day trip):
+
+- **2 peaks → list both**, e.g. `# Crestolita + Broken Hand Peak — combination day (Sangre de Cristo)`, `# Mount Powell + Eagles Nest — combination day (Gore Range)`.
+- **3+ peaks → `<tallest peak name> Group`**, e.g. `# Telluride Peak Group (San Juan Mountains, Imogene Pass area)` (Telluride 13,514' is tallest of Telluride/T7/T8).
+
+Keep the after-dash / parenthetical subtitle either way. A **stated multi-day** report keeps a descriptive title (e.g. "Lakes of the Clouds — 7-peak loop"). (Kyle, 2026-06-03)

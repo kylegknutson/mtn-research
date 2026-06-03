@@ -9,7 +9,7 @@ Same research engine as the [main site](https://kylegknutson.github.io/mtn-resea
 
 | Peak | Range | Drive (Highland) | Class | Gain | Status |
 |---|---|---|---|---|---|
-| [Broken Hand Peak Group](peaks/crestolita_broken_hand.emily.md) | Sangre de Cristo | 3h 26m | 3 | 6,400–7,100 ft | unclimbed |
+| [Crestolita + Broken Hand](peaks/crestolita_broken_hand.emily.md) | Sangre de Cristo | 3h 26m | 3 | 6,400–7,100 ft | unclimbed |
 | [Lakes of the Clouds (7-peak loop)](peaks/lakes_of_clouds_loop.emily.md) | Sangre de Cristo | 3h 24m | 2 | 8,000–12,000 ft | unclimbed |
 
 *More to come — this site seeds from the Crestolita + Broken Hand day trip.*
