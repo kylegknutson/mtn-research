@@ -9,6 +9,9 @@ known 14ers/13ers summit (within SNAP_M of the authoritative 14ers export) is
 changed from the default red dot to the CalTopo `peak` mountain symbol in a
 muted blue. Trailhead / camp / note markers (not on a summit) are left as-is.
 
+When a canonical peak name is known (CO snap → GPX wpt name; NE_PEAKS →
+dict value) and the current marker title differs, the title is also updated.
+
 Edits in place via editFeature (no duplicates, keeps marker IDs).
 
 Usage:
@@ -37,34 +40,118 @@ POI_WORDS = re.compile(r"\b(trailhead|th|camp|campground|campsite|lake|creek|pas
                        r"hut|shelter|spur|divide|crossing|gate|tunnel|mine|ranch|store|"
                        r"hotel|home|car|truck|pickup|start|finish|trail|trailway|twinway|"
                        r"notch|woods|water|photo|height|national|wilderness|park|ridge|"
-                       r"headwall|caretaker|possible|turnoff|turn|drop|spot|reception)\b", re.I)
+                       r"headwall|caretaker|possible|turnoff|turn|drop|spot|reception|"
+                       r"take|look)\b", re.I)
 
-# Distinctive New England peak names (NH 4000-footers + notable ME/VT/MA) that do
-# not contain a peak word. Whole-word matched against the marker title.
-NE_PEAKS = {
-    "bondcliff", "galehead", "guyot", "moosilauke", "carrigain", "passaconaway",
-    "tecumseh", "osceola", "tripyramid", "kinsman", "moriah", "waumbek",
-    "isolation", "lafayette", "lincoln", "garfield", "liberty", "flume",
-    "whiteface", "cannon", "zealand", "owls head", "owl's head", "south twin",
-    "north twin", "west bond", "little haystack", "wildcat", "hancock",
-    "tom", "field", "willey", "hale", "jackson", "pierce", "eisenhower",
-    "monroe", "madison", "adams", "jefferson", "washington", "katahdin",
-    "bigelow", "sugarloaf", "saddleback", "abraham", "spaulding", "crocker",
-    "old speck", "mansfield", "killington", "camels hump", "camel's hump",
-    "ellen", "greylock", "bond", "twin",
+# Distinctive New England peak names that do not contain a peak word.
+# Value = canonical CalTopo marker title; "" = detect as summit but don't rename
+# (ambiguous peaks like "bond" that could be Bond / West Bond / North Bond).
+NE_PEAKS: dict[str, str] = {
+    # NH 4000-footers
+    "bondcliff": "Bondcliff",
+    "galehead": "Galehead Mountain",
+    "guyot": "Mount Guyot",
+    "moosilauke": "Mount Moosilauke",
+    "carrigain": "Mount Carrigain",
+    "passaconaway": "Mount Passaconaway",
+    "tecumseh": "Mount Tecumseh",
+    "osceola": "Mount Osceola",
+    "tripyramid": "Mount Tripyramid",
+    "kinsman": "Kinsman Mountain",
+    "moriah": "Mount Moriah",
+    "waumbek": "Mount Waumbek",
+    "isolation": "Mount Isolation",
+    "lafayette": "Mount Lafayette",
+    "lincoln": "Mount Lincoln",
+    "garfield": "Mount Garfield",
+    "liberty": "Mount Liberty",
+    "flume": "Mount Flume",
+    "whiteface": "Whiteface Mountain",
+    "cannon": "Cannon Mountain",
+    "zealand": "Mount Zealand",
+    "owls head": "Owl's Head",
+    "owl's head": "Owl's Head",
+    "south twin": "South Twin Mountain",
+    "north twin": "North Twin Mountain",
+    "west bond": "West Bond",
+    "little haystack": "Little Haystack Mountain",
+    "wildcat": "Wildcat Mountain",
+    "hancock": "Mount Hancock",
+    "tom": "Mount Tom",
+    "field": "Mount Field",
+    "willey": "Mount Willey",
+    "hale": "Mount Hale",
+    "jackson": "Mount Jackson",
+    "pierce": "Mount Pierce",
+    "eisenhower": "Mount Eisenhower",
+    "monroe": "Mount Monroe",
+    "madison": "Mount Madison",
+    "adams": "Mount Adams",
+    "jefferson": "Mount Jefferson",
+    "washington": "Mount Washington",
+    "bond": "",      # ambiguous: Bond / West Bond / North Bond
+    "twin": "",      # ambiguous: North Twin / South Twin
+    # Maine 4000-footers / Baxter State Park
+    "katahdin": "Katahdin",
+    "top of maine": "Katahdin",   # summit sign text, no standard peak name in it
+    "bigelow": "Bigelow Mountain",
+    "sugarloaf": "Sugarloaf Mountain",
+    "saddleback": "Saddleback Mountain",
+    "abraham": "Mount Abraham",
+    "spaulding": "Spaulding Mountain",
+    "crocker": "Crocker Mountain",
+    "old speck": "Old Speck Mountain",
+    "redington": "Redington",
+    "north brother": "North Brother",
+    "south brother": "South Brother",
+    "pamola": "Pamola Peak",
+    # Vermont 4000-footers / notable summits
+    "mansfield": "Mount Mansfield",
+    "killington": "Killington Peak",
+    "camels hump": "Camel's Hump",
+    "camel's hump": "Camel's Hump",
+    "ellen": "Mount Ellen",
+    "bread loaf": "Bread Loaf Mountain",
+    "equinox": "Mount Equinox",
+    # MA
+    "greylock": "Mount Greylock",
 }
 _NE_RE = re.compile(r"\b(" + "|".join(re.escape(n) for n in NE_PEAKS) + r")\b", re.I)
 
+# Summit phrases that override POI-word filtering. "Top of Maine and End of
+# the Appalachian Trail" is Katahdin's summit even though "trail" is a POI word.
+_SUMMIT_OVERRIDES = re.compile(r"\b(top of maine)\b", re.I)
 
-def name_is_summit(name):
-    if not name:
-        return False
-    # Strip a trailing duplicate-suffix digit ("West Bond1", "Trail1") so it
-    # doesn't break word-boundary matching.
-    name = re.sub(r"\d+\s*$", "", name).strip()
+
+def name_canonical(title: str) -> tuple[bool, str | None]:
+    """Return (is_summit, canonical_title_or_None) for name-based detection.
+
+    canonical_title_or_None is set only when we know the definitive peak name.
+    PEAK_WORDS-only matches are summits but return None (unknown which peak).
+    """
+    if not title:
+        return False, None
+    name = re.sub(r"\d+\s*$", "", title).strip()
+
+    # Explicit override phrases checked before POI filter
+    if _SUMMIT_OVERRIDES.search(name):
+        m = _NE_RE.search(name)
+        canonical = NE_PEAKS.get(m.group(1).lower(), "") if m else ""
+        return True, canonical or None
+
     if POI_WORDS.search(name):
-        return False
-    return bool(PEAK_WORDS.search(name) or _NE_RE.search(name))
+        return False, None
+
+    m = _NE_RE.search(name)
+    if m:
+        canonical = NE_PEAKS.get(m.group(1).lower(), "")
+        return True, canonical or None
+
+    if PEAK_WORDS.search(name):
+        return True, None  # is a summit but canonical name unknown
+
+    return False, None
+
 
 logging.getLogger("caltopo_python").setLevel(logging.ERROR)
 logging.basicConfig(level=logging.ERROR)
@@ -109,27 +196,31 @@ def hav(a, b, c, d):
     return 2*R*math.asin(math.sqrt(min(x, 1.0)))
 
 
-def load_summits(export_path):
+def load_summits(export_path: Path) -> list[tuple[float, float, str]]:
+    """Return (lat, lon, name) for every wpt in the GPX export."""
     pts = []
     for w in ET.parse(export_path).getroot().findall(f"{NS}wpt"):
-        pts.append((float(w.get("lat")), float(w.get("lon"))))
+        name_el = w.find(f"{NS}name")
+        name = name_el.text.strip() if name_el is not None and name_el.text else ""
+        pts.append((float(w.get("lat")), float(w.get("lon")), name))
     return pts
 
 
-def is_summit(lat, lon, summits):
-    for slat, slon in summits:
+def snap_canonical(lat: float, lon: float, summits: list[tuple[float, float, str]]) -> str | None:
+    """Return the GPX wpt name if this point snaps to a known summit, else None."""
+    for slat, slon, name in summits:
         if abs(slat - lat) > 0.0006 or abs(slon - lon) > 0.0008:
             continue
         if hav(lat, lon, slat, slon) <= SNAP_M:
-            return True
-    return False
+            return name
+    return None
 
 
 def restyle_map(map_id, summits, symbol, color, poi_color, apply):
     s = CaltopoSession(domainAndPort="caltopo.com", mapID=map_id,
                        configpath=str(CONFIG_PATH), account=ACCOUNT)
     feats = s.getFeatures(featureClass="Marker") or []
-    changed = poi = 0
+    changed = poi = renamed = 0
     for f in feats:
         geom = f.get("geometry") or {}
         c = geom.get("coordinates") or []
@@ -137,18 +228,26 @@ def restyle_map(map_id, summits, symbol, color, poi_color, apply):
             continue
         lon, lat = c[0], c[1]
         title = (f.get("properties") or {}).get("title", "")
-        if is_summit(lat, lon, summits) or name_is_summit(title):
+
+        snap = snap_canonical(lat, lon, summits)
+        name_is_sum, name_canon = name_canonical(title)
+        is_sum = snap is not None or name_is_sum
+        canonical = snap if snap is not None else name_canon
+
+        if is_sum:
+            props: dict = {"marker-symbol": symbol, "marker-color": color}
+            if canonical and canonical != title:
+                props["title"] = canonical
+                renamed += 1
             if apply:
-                s.editFeature(id=f.get("id"), className="Marker",
-                              properties={"marker-symbol": symbol, "marker-color": color})
+                s.editFeature(id=f.get("id"), className="Marker", properties=props)
             changed += 1
         else:
-            # non-summit POI -> grey dot
             if apply:
                 s.editFeature(id=f.get("id"), className="Marker",
                               properties={"marker-symbol": "point", "marker-color": poi_color})
             poi += 1
-    return changed, poi
+    return changed, poi, renamed
 
 
 def main():
@@ -176,14 +275,14 @@ def main():
     mode = "APPLYING" if args.apply else "DRY RUN"
     print(f"[{mode}] summit symbol={args.symbol!r} color={args.color}  POI color={args.poi_color}\n")
 
-    tot_c = tot_p = 0
+    tot_c = tot_p = tot_r = 0
     for region, mid in targets:
         if not mid:
             continue
-        c, p = restyle_map(mid, summits, args.symbol, args.color, args.poi_color, args.apply)
-        tot_c += c; tot_p += p
-        print(f"  {region:18} {mid}  summit(mtn)={c:4}  POI(grey)={p:4}")
-    print(f"\nTotal: {tot_c} summit markers -> blue mountain, {tot_p} POIs -> grey dot.")
+        c, p, r = restyle_map(mid, summits, args.symbol, args.color, args.poi_color, args.apply)
+        tot_c += c; tot_p += p; tot_r += r
+        print(f"  {region:18} {mid}  summit={c:4}  POI={p:4}  rename={r:3}")
+    print(f"\nTotal: {tot_c} summit markers -> blue mountain, {tot_p} POIs -> grey dot, {tot_r} renamed.")
     if not args.apply:
         print("Re-run with --apply to write.")
 
