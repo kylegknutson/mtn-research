@@ -1,0 +1,8 @@
+# Mount Powell + Eagles Nest combo (Gore Range, Eagles Nest Wilderness).
+objective_ids: [245, 380]   # Mount Powell A (245), Eagles Nest A (380)
+nearby:
+  include: true
+  radius_mi: 8
+  exclude: []
+landmarks:
+  - {name: "Piney Lake / Piney River Ranch TH (N of Vail)", lat: 39.7203, lon: -106.4051, ele_ft: 9350, kind: trailhead}

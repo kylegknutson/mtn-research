@@ -1,0 +1,8 @@
+# Chipeta Mtn (southern Sawatch, near Marshall Pass).
+objective_ids: [337]
+nearby:
+  include: true
+  radius_mi: 8
+  exclude: []
+landmarks:
+  - {name: "Marshall Pass TH (CR 200 / Colorado Trail)", lat: 38.3942, lon: -106.2472, ele_ft: 10842, kind: trailhead}
