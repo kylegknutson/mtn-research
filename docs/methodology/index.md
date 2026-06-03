@@ -79,3 +79,7 @@ These must always hold. They're elaborated in the linked pages.
 | Source of truth | Git / GitHub |
 
 *Last updated: 2026-05-31*
+
+## Resolving peak names
+
+When the user names a set of peaks, **resolve them yourself by geography** — if the names cluster tightly in one area (peak_db lat/lon), pick the matching peaks in that cluster rather than asking. Only ask when a name has **zero match** in peak_db, LoJ, *and* 14ers (e.g. an informal/local name like "Cotton King" = PT 13,494 — no database entry, genuinely unresolvable without the user). (Kyle, 2026-06-03)
