@@ -112,7 +112,9 @@ The loop is well documented as N + S arcs:
 
 **peakbagger.com:** checked; sparse/​duplicate GPX for these remote points.
 
-**GPX collected: 24 track files (LoJ + 14ers)** — all layered on the [CalTopo research map](https://caltopo.com/m/J9G39T0). Swept via `scripts/sweep_gpx.py` (69 named 14ers TRs + 37 LoJ TRs in the manifest).
+**Kyle's own CalTopo tracks** (his recorded GPS + collected archive) add the on-the-ground beta the web sources miss — incl. **Cotton Creek 13ers**, **Gibbs Peak loop**, **Rito Alto–Hermit–Eureka**, **Lakes/Electric**, and several recorded GPX dumps. Layered in purple on the research map.
+
+**GPX collected: 60 track files** across all sources — LoJ + 14ers (swept via `scripts/sweep_gpx.py`; 69 named 14ers TRs + 37 LoJ TRs in the manifest) **+ 16 of Kyle's own CalTopo tracks** (`scripts/caltopo_mytracks.py`) — all layered on the [CalTopo research map](https://caltopo.com/m/J9G39T0).
 
 **Sources checked:** 14ers.com · listsofjohn.com · peakbagger.com
 

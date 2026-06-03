@@ -30,6 +30,17 @@ Filename convention (keeps colors/groups distinct on upload):
 ```
 Over-pulling is fine — the upload script dedupes identical tracks. Better to grab everything than miss a route variation.
 
+### 2b. Cross-reference KYLE'S OWN CalTopo maps (required)
+**Requirement (Kyle, 2026-06-03):** *"There are missing tracks… you did not cross reference my own caltopo maps. Always look there also when building the report-specific maps."* The three web sources are not enough — Kyle's CalTopo account holds his **recorded GPS tracks + collected archive** (his big "All" map, the range's regional map) with on-the-ground beta the web misses.
+
+```
+scripts/fetch_caltopo.py --map C105AEV          # refresh the big "All" archive (large)
+scripts/fetch_caltopo.py --map <REGIONAL_ID>    # refresh the range's regional map
+scripts/caltopo_mytracks.py --slug <slug>       # add his tracks in the report's bbox
+```
+
+`caltopo_mytracks.py` computes the bbox from `<slug>_peaks_only.gpx` (+ margin), scans the local `caltopo/*.json` dumps for LineStrings inside it, and writes the ones **not already collected** (geometry-deduped against the web sweep) as `<slug>_caltopo_<mapid>_<name>.gpx`. Upload these to the research map in a distinct color (purple `#9933CC`) so his own tracks are visible vs. the web sources. Sanity-check the result — a stray far-away track can clip a generous bbox (drop it).
+
 ### 3. Upload to CalTopo
 ```
 scripts/gpx_to_caltopo.py --gpx-dir gpx/<slug> --new-map "Research: <Peak>" --no-dedupe
