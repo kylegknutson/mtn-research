@@ -169,8 +169,17 @@ def main():
         (gdir / f"{args.slug}_{label}.gpx").write_text(text)
         return True
 
+    ua = ("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 "
+          "(KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36")
     with sync_playwright() as pw:
-        ctx = pw.chromium.launch_persistent_context(str(PROFILE_DIR), headless=not args.headed)
+        # Real Chrome (channel="chrome") clears peakbagger's Cloudflare far more
+        # reliably than bundled Chromium; fall back to Chromium if Chrome's absent.
+        try:
+            ctx = pw.chromium.launch_persistent_context(
+                str(PROFILE_DIR), headless=not args.headed, channel="chrome", user_agent=ua)
+        except Exception:
+            ctx = pw.chromium.launch_persistent_context(
+                str(PROFILE_DIR), headless=not args.headed, user_agent=ua)
         page = ctx.pages[0] if ctx.pages else ctx.new_page()
 
         # LoJ

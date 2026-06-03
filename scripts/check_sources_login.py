@@ -72,12 +72,21 @@ def main():
     results = {}
 
     with sync_playwright() as p:
+        # Prefer the real Chrome binary (channel="chrome") — Cloudflare (peakbagger)
+        # trusts it far more than Playwright's bundled Chromium, which it often
+        # blocks at the bot check. Fall back to bundled Chromium if Chrome isn't found.
+        ua = ("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 "
+              "(KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36")
         try:
             ctx = p.chromium.launch_persistent_context(
-                str(PROFILE_DIR), headless=not args.login)
-        except Exception as e:
-            sys.exit(f"Could not launch Chromium ({e}).\n"
-                     f"Run once: uv run --with playwright playwright install chromium")
+                str(PROFILE_DIR), headless=not args.login, channel="chrome", user_agent=ua)
+        except Exception:
+            try:
+                ctx = p.chromium.launch_persistent_context(
+                    str(PROFILE_DIR), headless=not args.login, user_agent=ua)
+            except Exception as e:
+                sys.exit(f"Could not launch a browser ({e}).\n"
+                         f"Run once: uv run --with playwright playwright install chromium")
         page = ctx.pages[0] if ctx.pages else ctx.new_page()
 
         if args.login:
