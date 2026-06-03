@@ -13,6 +13,8 @@ Every report ships **three artifacts as one unit**:
 `scripts/build_peak_gpx.py --slug <slug>` reads `gpx/<slug>/peaks.yml` and writes `<slug>_peaks_only.gpx` (objective summit(s) `sym=peak` + optionally nearby unclimbed ranked 13er+ neighbors, with an `exclude` list for different-drive peaks — the Bartlett rule) and `<slug>_landmarks.gpx` (trailheads + key drive-in landmarks: gates, closed roads, seasonal closures). Summit/neighbor coords come from peak_db; TH/landmark coords are hand-researched in the config. **`peaks.yml` is the one tracked-in-git file under `gpx/`** (everything else there is gitignored derived/bulk data).
 
 ### 2. Download GPX tracks from ALL THREE sources
+**Preferred: `scripts/sweep_gpx.py --slug <slug>`** — one command sweeps all three sources (resolves cross-site IDs from peak_db, pulls every GPX, dedupes by content hash) and writes a **`tr_manifest.md`** listing the *named* trip reports per source (so 14ers TRs are always enumerated, not just the GPX library). Needs the one-time automation-profile login (`check_sources_login.py --login`); falls back to a `--headed` run if peakbagger's Cloudflare blocks the headless pull. If the profile isn't set up, do the sweep in-chat via the MCP browser using the same endpoints below.
+
 Not just LoJ. *"Always download the tracks from all sites not just LoJ. That's an important part of the research, finding all GPX files out there and pulling them together into one map."* (Kyle, 2026-05-29)
 
 - **LoJ**: `/gpx/<id>.gpx` per trip report — pull every TR's GPX, each has route variations
