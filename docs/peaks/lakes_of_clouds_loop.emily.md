@@ -39,6 +39,8 @@ In rough ridge order around the cirque (N → S → back):
 
 All **Class 2** on the standard lines — the difficulty here is **distance, gain, and ridge route-finding**, not technical climbing.
 
+**Weather:** [NOAA forecast for the cirque](https://forecast.weather.gov/MapClick.php?lat=38.146&lon=-105.676) (Mt Marcy / Lakes of the Clouds — covers the whole loop at this resolution; same target as the 14ers / LoJ / peakbagger weather links).
+
 ---
 
 ## Drive + approach (from Highland, Denver)
