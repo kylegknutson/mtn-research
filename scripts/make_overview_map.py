@@ -25,11 +25,13 @@ Usage:
 Output: maps/{slug}.png (or --out path)
 
 Color scheme matches CalTopo research maps:
-  Red    (#CC3333) : public / external GPX tracks
-  Blue   (#0066FF) : Kyle's existing imported tracks (_kyle_existing/)
+  Red    (#CC3333) : LoJ trip reports (*_loj*.gpx) / unclassified
+  Green  (#00AA00) : 14ers.com tracks (*_14ers*.gpx)
+  Blue   (#0066FF) : Peakbagger ascents (*_pbAscent*.gpx)
+  Purple (#9933CC) : Kyle's personal GPS (*_caltopo_*.gpx)
   Gold   (#FFCC00) : peak summit waypoints (*peaks_only*, *summit*)
-  Purple (#9933CC) : drive-in / approach waypoints (*landmarks*, *drive_in*)
   Orange (#FF6600) : trailheads
+  Purple (#9933CC) : drive-in / approach waypoints (*landmarks*, *drive_in*)
 """
 
 import argparse
@@ -53,19 +55,25 @@ COLOR_KYLE     = (0,   102, 255, 180)   # blue
 
 # Source-colored tracks (match the CalTopo research-map scheme).
 SOURCE_COLORS = {
-    "loj":   (204, 51,  51,  220),   # LoJ      — red
-    "14ers": (0,   170, 0,   220),   # 14ers    — green
-    "pb":    (0,   102, 255, 220),   # peakbagger — blue
-    "public":(204, 51,  51,  220),   # unclassified — red
+    "loj":     (204, 51,  51,  220),   # LoJ        — red    #CC3333
+    "14ers":   (0,   170, 0,   220),   # 14ers      — green  #00AA00
+    "pb":      (0,   102, 255, 220),   # peakbagger — blue   #0066FF
+    "caltopo": (153, 51,  204, 220),   # personal   — purple #9933CC
+    "public":  (204, 51,  51,  220),   # unclassified — red
 }
-SOURCE_LABELS = {"loj": "LoJ", "14ers": "14ers", "pb": "peakbagger", "public": "Public"}
+SOURCE_LABELS = {
+    "loj": "LoJ", "14ers": "14ers", "pb": "Peakbagger",
+    "caltopo": "Kyle's GPS", "public": "Public",
+}
 
 
 def track_source(path) -> str:
-    """Classify a public track GPX by source from its filename suffix."""
+    """Classify a GPX file by source from its filename suffix."""
     n = path.name.lower()
     if "pbascent" in n:
         return "pb"
+    if "_caltopo_" in n:
+        return "caltopo"
     if "14ers" in n or "_unknown_" in n:
         return "14ers"
     if "loj" in n:
