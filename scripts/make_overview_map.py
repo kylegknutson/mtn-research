@@ -427,7 +427,7 @@ def build_map(slug: str, out_path: Path, zoom: int | None = None, title: str = "
         if len(set(clipped_bx)) >= 2 and len(set(clipped_by)) >= 2:
             _bx, _by = clipped_bx, clipped_by
 
-    pad = 0.12
+    pad = 0.04
     lon_span = max(_bx) - min(_bx)
     lat_span = max(_by) - min(_by)
     lon_min = min(_bx) - lon_span * pad
