@@ -48,7 +48,7 @@ regional_map_id: 6E4GJV2
 | Primary trailhead | Copper Mountain Resort base village, I-70 Exit 195 |
 | Vehicle | Anything — paved to base village |
 | Start elev | ~9,712' (base village) |
-| Parking | Free in summer. In ski season: "Far East" or "Beeline" public lots free for hikers |
+| Parking | Free in summer. In ski season: interior lots free before 8:30am and after 2pm; pick up a hangtag at the Mammut Store when you get your uphill armband |
 | Facilities | Full village amenities (food, restrooms, water) in season |
 
 ### Alt TH — CO 91 / Graveline Gulch
@@ -91,7 +91,9 @@ Up through Copper ski terrain, over Union Mountain (12,313'), then long ridge wa
 - Game trail on climbers' right most of the way (Lochary 4/10/2026)
 - ⚠️ Park *before* the concrete mine barriers on CO 91
 
-**Winter (non-passholder):** Graveline Gulch is the cleanest legal option. Mayflower Gulch approaches cross the Mayflower Tailings Pond — confirmed trespassing per Westra 3/16/2025, don't do it.
+**Winter via Copper ski terrain:** requires **mandatory annual registration** + visible armband. Free for Copper Season Pass or Ikon Pass holders — register online, pick up armband ($5 new) at the Mammut Store in Center Village. Non-pass holders can purchase an Uphill Access Pass. Must use designated routes only; **Route 1 (Aerie/PHQ, 2,210 ft) is mornings only, 5am–8:30am**, and you must descend the same route. Details: [coppercolorado.com/events-activities/winter-activities/uphill-access/](https://www.coppercolorado.com/events-activities/winter-activities/uphill-access/)
+
+**Winter (skip the ski area):** Graveline Gulch from CO 91 is the cleanest option — no registration needed. Mayflower Gulch crosses the tailings pond, confirmed trespassing (Westra 3/16/2025), don't do it.
 
 **Don't bother:** Searle Gulch is no longer viable due to active mining (per Stratmoen).
 
@@ -101,7 +103,7 @@ Up through Copper ski terrain, over Union Mountain (12,313'), then long ridge wa
 
 - **Best window:** late June through October
 - **Afternoon storms:** exposed west ridge — start early
-- **Winter:** Graveline Gulch or lift-served uphill pass at Copper; multiple winter PB ascents on record
+- **Winter:** Copper route requires uphill registration (free for Copper/Ikon pass holders, mandatory armband, mornings only 5am–8:30am on Route 1). Graveline Gulch (CO 91) avoids the ski area entirely — multiple winter PB ascents on record via both options
 
 ---
 

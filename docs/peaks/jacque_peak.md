@@ -97,7 +97,7 @@ The most common modern approach. Up through Copper ski terrain, over Union Mount
 | Drive from Boulder | **[1h 42m via Google Maps](https://www.google.com/maps/dir/?api=1&origin=1162+Peakview+Circle,+Boulder,+CO+80302&destination=39.4914,-106.1568)** (origin: 1162 Peakview Circle) |
 | Vehicle | Anything — paved to base village |
 | Start elev | ~9,712' (base village) |
-| Parking | Free in summer (off-season). In ski season, public lots near "Far East" or "Beeline" are free for hikers. Avoid the resort core paid lots. |
+| Parking | Free in summer. In ski season: interior lots free before 8:30am and after 2pm; hangtag (pick up at Mammut Store when getting your uphill armband) required during daytime. |
 | Facilities | Full village amenities (food, restrooms, water) in season |
 | Trail start | Walk up under Woodward Express lift area (look for the lift access road) |
 
@@ -119,7 +119,7 @@ The most common modern approach. Up through Copper ski terrain, over Union Mount
 - **Best window:** late June through October. Talus crux is unpleasant under snow but doable
 - **Summer storms:** standard Colorado afternoon storm risk on the exposed west ridge — early start needed. Stratmoen got smoke obscuring the views in August (wildfire season factor)
 - **Winter:** Multiple winter ascents in PB record (Dec/Feb/March). Stratmoen's late-Aug climb mentions smoky views. jacolc winter 2017 ascent took 9h46 vs 5.5h summer
-- **Lift-served winter (skin track up Copper)** is technically possible with an uphill pass purchase; otherwise Graveline Gulch or Mayflower Gulch (legally — NOT the tailings pond)
+- **Lift-served winter (Copper uphill access):** hiking through Copper ski terrain during ski season requires **mandatory annual registration** + visible armband. **Free for Copper Season Pass or Ikon Pass holders** — but you must still register online and pick up the armband at the Mammut Store in Center Village ($5 for a new armband, free insert). Non-pass holders can purchase an Uphill Access Pass separately. Must use designated routes only — **Route 1 (Aerie/PHQ, 2,210 ft) runs mornings only, 5am–8:30am**, and you must descend the same route. See [Copper uphill access page](https://www.coppercolorado.com/events-activities/winter-activities/uphill-access/). Otherwise Graveline Gulch (CO 91) is the clean ski-area-free option for anyone.
 - **Wind:** typical Gore Range exposure on the west ridge
 
 ---
@@ -139,7 +139,7 @@ The most common modern approach. Up through Copper ski terrain, over Union Mount
 
 - White River National Forest — no permits, no fees
 - **NOT in Eagles Nest Wilderness** (peak sits on the boundary; standard route from Copper is outside)
-- Copper Mountain Resort base parking is free for hikers in summer; check current ski season parking policy if visiting Dec–April
+- Copper Mountain Resort base parking: free in summer. In ski season, interior lots are free before 8:30am and after 2pm (hangtag from Mammut Store required during the day — you get it when picking up your uphill armband)
 - ⚠️ **CO 91 / Graveline approach:** be careful with closed mine boundary — Lochary, avalletta, and Stratmoen all flag No Parking enforcement on the concrete-barrier side
 
 ---
@@ -213,7 +213,7 @@ The most common modern approach. Up through Copper ski terrain, over Union Mount
 - **DO NOT** try Searle Gulch — no longer viable due to active mining (per Stratmoen)
 - **Effectively a SOLO day** — Tucker/Union/Copper trifecta is the standard combo but all sub-13k, so they don't count toward Kyle's ranked partner rule
 - **No same-drainage unclimbed ranked 13er link-up** — Bartlett Mtn 5.74 mi away but on the opposite side of Climax Mine, different drive entirely
-- **Best season:** late June through October. Winter doable but lift access or Mayflower Gulch logistics required
+- **Best season:** late June through October. Winter doable — Copper route requires uphill registration (free for pass holders, mandatory armband, mornings only 5am–8:30am); Graveline Gulch avoids ski area entirely
 - **Cell:** strong on the Copper side; carry InReach for backcountry
 - **Drive:** **1h 42m from Boulder** — closest unclimbed CO 13er under 4,000' gain
 
