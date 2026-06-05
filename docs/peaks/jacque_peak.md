@@ -47,6 +47,8 @@ regional_map_id: 6E4GJV2
 
 The most common modern approach. Up through Copper ski terrain, over Union Mountain (12,313'), then a long ridge walk + boulder hop to Jacque's summit.
 
+> ⚠️ **Ski season restriction (roughly late Nov – early May):** hiking through Copper ski terrain requires **mandatory annual uphill registration**. Free for Copper Season Pass or Ikon Pass holders, but you must register online and pick up a physical armband at the Mammut Store in Center Village before going. Route 1 (Aerie/PHQ) is **mornings only, 5am–8:30am**. See [Copper uphill access page](https://www.coppercolorado.com/events-activities/winter-activities/uphill-access/). Outside ski season: no restrictions, hike freely.
+
 | Route | Stats (Alex Gaab PB 8/8/2025) |
 |---|---|
 | Difficulty | Class 2 (one short section of "actual climbing" per Gaab; otherwise long talus/boulder fields) |
