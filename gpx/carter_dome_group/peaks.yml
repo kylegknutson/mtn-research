@@ -1,0 +1,16 @@
+# Carter Dome Group — Wildcat–Carter–Moriah traverse (Carter-Moriah Range, NH)
+# 6 NH 48 peaks: Wildcat D, Wildcat A, Carter Dome, South Carter, Middle Carter, Mount Moriah
+objective_ids: [-38, -50, -60, -66, -113, -118]
+  # -38  Carter Dome          4,839 ft  (high point)
+  # -50  Middle Carter Mtn    4,623 ft
+  # -60  South Carter Mtn     4,445 ft
+  # -66  Wildcat Mountain (A) 4,399 ft
+  # -113 Wildcat D            4,060 ft
+  # -118 Mount Moriah         4,047 ft
+nearby:
+  include: false
+landmarks:
+  - {name: "Pinkham Notch Visitor Center (South TH)", lat: 44.2574, lon: -71.2530, ele_ft: 2032, kind: trailhead}
+  - {name: "Rattle River Trailhead (North TH, RT 2)", lat: 44.3862, lon: -71.0919, ele_ft: 800, kind: trailhead}
+  - {name: "AMC Carter Notch Hut", lat: 44.2617, lon: -71.1956, ele_ft: 3290, kind: landmark}
+  - {name: "Imp Campsite (last water, AT)", lat: 44.3188, lon: -71.1455, ele_ft: 3245, kind: landmark}
