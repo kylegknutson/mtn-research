@@ -134,4 +134,4 @@ No same-drainage ranked 13er link-up: Bartlett Mtn (5.74 mi, the only nearby ran
 
 ---
 
-**Sources:** 14ers.com · listsofjohn.com · peakbagger.com · [base report](jacque_peak.md)
+**Sources checked:** 14ers.com · listsofjohn.com · peakbagger.com
