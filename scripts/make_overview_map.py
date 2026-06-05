@@ -396,31 +396,34 @@ def build_map(slug: str, out_path: Path, zoom: int | None = None, title: str = "
     # Clip bbox around the OBJECTIVE — the peak markers being researched — plus a
     # margin. This trims tracks that wander far from the actual summit(s) (a TR
     # where the peak was a minor add to a different range's day, a mega-traverse,
-    # a long sub-13k outback). The objective box auto-sizes: one peak → tight
-    # window; a multi-peak combo → box spanning the peaks. Margin gives room for
-    # the approach/descent to render without drowning the summits.
+    # a long sub-13k outback).
     #
-    # MARGIN_MI is the buffer added around the peak bounding box on every side.
-    # MIN_HALF_SPAN floors the window so a single peak (zero-span box) still gets
-    # a usable view. MAX_HALF_SPAN caps it so a far-flung combo can't blow out.
-    MARGIN_MI = 3.5
-    MIN_LON_HALF, MIN_LAT_HALF = 0.07, 0.055   # ~3.7mi x 3.8mi floor
-    MAX_LON_HALF, MAX_LAT_HALF = 0.11, 0.08      # ~6mi x 5.5mi ceiling
+    # CLIP_MARGIN_MI: how far from the objective box we accept track points.
+    #   Large enough that THs 3+ miles from the summit are never cut off.
+    # CLIP_MAX: hard cap so a far-flung combo can't blow out.
+    # MIN_DISPLAY_*: minimum view half-span, applied as a floor ONLY when
+    #   tracks don't fill the area — does NOT force extra empty terrain.
+    #   The bbox is driven by actual track extent; these just keep a
+    #   single-waypoint-only map usable.
+    CLIP_MARGIN_MI = 3.5
+    CLIP_MAX_LON, CLIP_MAX_LAT = 0.11, 0.08
+    MIN_DISPLAY_LON, MIN_DISPLAY_LAT = 0.035, 0.025   # ~1.9mi x 1.7mi floor
     MI_PER_DEG_LON = 53.0   # ~at 38°N
     MI_PER_DEG_LAT = 69.0
     if peak_lons:
         pk_lon_c = (min(peak_lons) + max(peak_lons)) / 2
         pk_lat_c = (min(peak_lats) + max(peak_lats)) / 2
-        lon_half = (max(peak_lons) - min(peak_lons)) / 2 + MARGIN_MI / MI_PER_DEG_LON
-        lat_half = (max(peak_lats) - min(peak_lats)) / 2 + MARGIN_MI / MI_PER_DEG_LAT
-        lon_half = max(MIN_LON_HALF, min(MAX_LON_HALF, lon_half))
-        lat_half = max(MIN_LAT_HALF, min(MAX_LAT_HALF, lat_half))
-        clipped_bx = [x for x in _bx if abs(x - pk_lon_c) <= lon_half]
-        clipped_by = [y for y in _by if abs(y - pk_lat_c) <= lat_half]
-        # Always anchor the window to the objective box corners so the peaks are
-        # centered even if no track points fall near an edge.
-        clipped_bx += [pk_lon_c - lon_half, pk_lon_c + lon_half]
-        clipped_by += [pk_lat_c - lat_half, pk_lat_c + lat_half]
+        clip_lon = min(CLIP_MAX_LON, (max(peak_lons) - min(peak_lons)) / 2 + CLIP_MARGIN_MI / MI_PER_DEG_LON)
+        clip_lat = min(CLIP_MAX_LAT, (max(peak_lats) - min(peak_lats)) / 2 + CLIP_MARGIN_MI / MI_PER_DEG_LAT)
+        clipped_bx = [x for x in _bx if abs(x - pk_lon_c) <= clip_lon]
+        clipped_by = [y for y in _by if abs(y - pk_lat_c) <= clip_lat]
+        # Anchor: always include the summit(s) + minimum display margin.
+        # Unlike the old approach, we do NOT add the full clip-window corners —
+        # that forced the view to be as wide as the clip radius even when tracks
+        # don't fill it. The view is sized to actual track extent; MIN_DISPLAY_*
+        # is just a floor for when there are no tracks at all.
+        clipped_bx += peak_lons + [pk_lon_c - MIN_DISPLAY_LON, pk_lon_c + MIN_DISPLAY_LON]
+        clipped_by += peak_lats + [pk_lat_c - MIN_DISPLAY_LAT, pk_lat_c + MIN_DISPLAY_LAT]
         if len(set(clipped_bx)) >= 2 and len(set(clipped_by)) >= 2:
             _bx, _by = clipped_bx, clipped_by
 
