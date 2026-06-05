@@ -23,6 +23,7 @@ auto-generated from each report's frontmatter (`scripts/gen_index.py`).*
 | [Telluride Peak Group](peaks/telluride_t7_t8.md) | San Juan | 6h 19m | 2–3 | ~4,000 ft | unclimbed |
 | [Brown Mountain](peaks/brown_mountain.md) | San Juan | 6h 21m | 2 | 1,600–4,380 ft | unclimbed |
 | [Dolores Peak + Middle Peak](peaks/dolores_middle_peak.md) | San Juan | 7h 30m | 2 | ~4,000 ft | unclimbed |
+| [Carter Dome Group](peaks/carter_dome_group.md) | Carter-Moriah Range | ~32h drive (fly: MHT or BOS + ~2h) | 1 | ~7,400–7,650 ft | unclimbed |
 <!-- PEAKS_TABLE_END -->
 
 See also the saved candidate **[Lists](lists/2026-06-02_closest-unclimbed-sangre-13ers.md)**.

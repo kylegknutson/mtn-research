@@ -1,0 +1,34 @@
+# Climber profile — Shawn (friend)
+# See climbers/_schema.md for the field spec.
+
+name: Shawn D Keil
+slug: shawn
+is_default: false
+
+# Drive-time origin for "closest" calculations and Maps directions links.
+# TODO: fill in Shawn's home address and coordinates
+home_address: "Edgewater, CO 80214"
+home_latlon: [39.7442, -105.0614]
+
+# Climbed list comes from Shawn's public 14ers checklist.
+# 14ers: 53/53 ranked, 64/73 ranked+unranked (as of 2026-05-26)
+# 13ers: 352/583 ranked, 408/788 ranked+unranked, 438 total summits
+climbed_list:
+  source: 14ers_checklist
+  checklist_url: "https://www.14ers.com/php14ers/checklist.php?usernum=872&checklist=13ers&rk=unranked&nm=both&climbstatus=all&listd=range&hidesummary=no"
+
+# Site this climber's reports publish to (a subpath of the main repo's Pages site).
+site:
+  mkdocs_config: mkdocs.shawn.yml
+  url: "https://kylegknutson.github.io/mtn-research/shawn/"
+
+# 14ers username: sdkeil, usernum: 872
+accounts:
+  14ers: "sdkeil"
+  listsofjohn: ""
+  peakbagger: ""
+
+preferences:
+  default_list: co_13_14ers
+  closest_means: drive_time
+  combo_rule: ranked_13er_plus

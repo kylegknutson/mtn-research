@@ -41,6 +41,9 @@ RANGE_TO_REGIONAL = {
     "Sangre de Cristo": "VKGB00L", "Sawatch": "L5VH4BU", "San Juan": "06AR6BF",
     "Elk": "1G2G7DM", "Gore": "6E4GJV2", "Mosquito": "LECF68J",
     "Tenmile": "7QE01UK", "Front": "DLES5CC", "Weminuche": "7AQN6TS",
+    # New England
+    "Eastern White Mountains": "UDK6ETR", "Western White Mountains": "UDK6ETR",
+    "Carter-Moriah Range": "UDK6ETR", "Presidential Range": "UDK6ETR",
 }
 
 
