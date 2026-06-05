@@ -370,62 +370,69 @@ def build_map(slug: str, out_path: Path, zoom: int | None = None, title: str = "
         print(f"ERROR: no coordinates found in {gpx_dir}", file=sys.stderr)
         sys.exit(1)
 
-    # Bbox priority:
-    # 1. Tracks if present (the actual climb area — don't let distant cluster
-    #    markers zoom us out). Nearby ranked-peak markers may render off-canvas;
-    #    that's intentional — the wider cluster context lives on the interactive
-    #    CalTopo map. The PNG overview is for "what does the standard route
-    #    actually look like".
-    # 2. Else peak markers (so an unclimbed peak with no tracks still gets a
-    #    map centered on the summit/cluster).
-    # 3. Else all waypoints (landmarks/THs only).
-    if track_lons:
+    # ── segment-level clip + bbox ─────────────────────────────────────────────
+    # A segment is "in scope" if its centroid is within CLIP_MARGIN_MI of the
+    # objective cluster. In-scope segments contribute ALL their points to the
+    # bbox and are the only segments drawn. This prevents the split where a
+    # segment's far-end points are clipped from the bbox but still drawn,
+    # causing visible cut-offs at the canvas edge.
+    #
+    # Out-of-scope segments (a peak as a minor add to a far-away range day,
+    # a mega-traverse, a sub-13k outback) are dropped from both bbox and drawing.
+    #
+    # CLIP_MARGIN_MI: centroid must be within this distance of the objective box.
+    # CLIP_MAX_*: fallback hard cap for very spread-out peak clusters.
+    # MIN_DISPLAY_*: floor so a single-waypoint-only map stays usable.
+    CLIP_MARGIN_MI  = 3.5
+    CLIP_MAX_LON    = 0.11
+    CLIP_MAX_LAT    = 0.08
+    MIN_DISPLAY_LON = 0.035   # ~1.9 mi floor
+    MIN_DISPLAY_LAT = 0.025   # ~1.7 mi floor
+    MI_PER_DEG_LON  = 53.0    # ~at 38°N; close enough for a centroid check
+    MI_PER_DEG_LAT  = 69.0
+
+    if peak_lons:
+        pk_lon_c = (min(peak_lons) + max(peak_lons)) / 2
+        pk_lat_c = (min(peak_lats) + max(peak_lats)) / 2
+        clip_lon = min(CLIP_MAX_LON,
+                       (max(peak_lons) - min(peak_lons)) / 2 + CLIP_MARGIN_MI / MI_PER_DEG_LON)
+        clip_lat = min(CLIP_MAX_LAT,
+                       (max(peak_lats) - min(peak_lats)) / 2 + CLIP_MARGIN_MI / MI_PER_DEG_LAT)
+
+        def _seg_in_scope(seg):
+            n = len(seg)
+            c_lon = sum(lon for lon, _ in seg) / n
+            c_lat = sum(lat for _, lat in seg) / n
+            return abs(c_lon - pk_lon_c) <= clip_lon and abs(c_lat - pk_lat_c) <= clip_lat
+
+        # Filter drawing buckets in-place — only in-scope segments are drawn
+        # and only their points contribute to the bbox.
+        buckets["track_public"] = [(s, src) for s, src in buckets["track_public"] if _seg_in_scope(s)]
+        buckets["track_kyle"]   = [s        for s        in buckets["track_kyle"]   if _seg_in_scope(s)]
+
+        bbox_lons = (list(peak_lons)
+                     + [pk_lon_c - MIN_DISPLAY_LON, pk_lon_c + MIN_DISPLAY_LON])
+        bbox_lats = (list(peak_lats)
+                     + [pk_lat_c - MIN_DISPLAY_LAT, pk_lat_c + MIN_DISPLAY_LAT])
+        for s, _ in buckets["track_public"]:
+            bbox_lons.extend(lon for lon, _ in s)
+            bbox_lats.extend(lat for _, lat in s)
+        for s in buckets["track_kyle"]:
+            bbox_lons.extend(lon for lon, _ in s)
+            bbox_lats.extend(lat for _, lat in s)
+        _bx, _by = bbox_lons, bbox_lats
+
+    elif track_lons:
         _bx, _by = track_lons, track_lats
-    elif peak_lons:
-        _bx, _by = peak_lons, peak_lats
     else:
         _bx, _by = all_lons, all_lats
 
-    # If bbox is degenerate (single point), pad ~3 km each way
+    # Degenerate guard (single point): pad ~3 km each way
     if len(set(_bx)) < 2 or len(set(_by)) < 2:
         center_lon = _bx[0] if _bx else 0
         center_lat = _by[0] if _by else 0
         _bx = [center_lon - 0.04, center_lon + 0.04]
         _by = [center_lat - 0.03, center_lat + 0.03]
-
-    # Clip bbox around the OBJECTIVE — the peak markers being researched — plus a
-    # margin. This trims tracks that wander far from the actual summit(s) (a TR
-    # where the peak was a minor add to a different range's day, a mega-traverse,
-    # a long sub-13k outback).
-    #
-    # CLIP_MARGIN_MI: how far from the objective box we accept track points.
-    #   Large enough that THs 3+ miles from the summit are never cut off.
-    # CLIP_MAX: hard cap so a far-flung combo can't blow out.
-    # MIN_DISPLAY_*: minimum view half-span, applied as a floor ONLY when
-    #   tracks don't fill the area — does NOT force extra empty terrain.
-    #   The bbox is driven by actual track extent; these just keep a
-    #   single-waypoint-only map usable.
-    CLIP_MARGIN_MI = 3.5
-    CLIP_MAX_LON, CLIP_MAX_LAT = 0.11, 0.08
-    MIN_DISPLAY_LON, MIN_DISPLAY_LAT = 0.035, 0.025   # ~1.9mi x 1.7mi floor
-    MI_PER_DEG_LON = 53.0   # ~at 38°N
-    MI_PER_DEG_LAT = 69.0
-    if peak_lons:
-        pk_lon_c = (min(peak_lons) + max(peak_lons)) / 2
-        pk_lat_c = (min(peak_lats) + max(peak_lats)) / 2
-        clip_lon = min(CLIP_MAX_LON, (max(peak_lons) - min(peak_lons)) / 2 + CLIP_MARGIN_MI / MI_PER_DEG_LON)
-        clip_lat = min(CLIP_MAX_LAT, (max(peak_lats) - min(peak_lats)) / 2 + CLIP_MARGIN_MI / MI_PER_DEG_LAT)
-        clipped_bx = [x for x in _bx if abs(x - pk_lon_c) <= clip_lon]
-        clipped_by = [y for y in _by if abs(y - pk_lat_c) <= clip_lat]
-        # Anchor: always include the summit(s) + minimum display margin.
-        # Unlike the old approach, we do NOT add the full clip-window corners —
-        # that forced the view to be as wide as the clip radius even when tracks
-        # don't fill it. The view is sized to actual track extent; MIN_DISPLAY_*
-        # is just a floor for when there are no tracks at all.
-        clipped_bx += peak_lons + [pk_lon_c - MIN_DISPLAY_LON, pk_lon_c + MIN_DISPLAY_LON]
-        clipped_by += peak_lats + [pk_lat_c - MIN_DISPLAY_LAT, pk_lat_c + MIN_DISPLAY_LAT]
-        if len(set(clipped_bx)) >= 2 and len(set(clipped_by)) >= 2:
-            _bx, _by = clipped_bx, clipped_by
 
     pad = 0.04
     lon_span = max(_bx) - min(_bx)
