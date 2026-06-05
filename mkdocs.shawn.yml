@@ -1,0 +1,24 @@
+# Shawn's site — inherits theme/plugins/extensions from mkdocs.yml, overrides the
+# climber-specific bits. Builds to the /shawn/ subpath of the main Pages site.
+INHERIT: mkdocs.yml
+
+site_name: Shawn's Peak Research
+site_url: https://kylegknutson.github.io/mtn-research/shawn/
+site_description: Colorado peak research tailored for Shawn
+
+# Drop Kyle's content from Shawn's build; keep shared maps + methodology.
+exclude_docs: |
+  /index.md
+  /architecture.md
+  lists/
+  peaks/*.md
+  !peaks/*.shawn.md
+
+hooks:
+  - hooks/climber_home.py
+
+nav:
+  - Home: index.shawn.md
+  - Peaks:
+    - Jacque Peak: peaks/jacque_peak.shawn.md
+  - Methodology: methodology/index.md
