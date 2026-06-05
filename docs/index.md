@@ -28,6 +28,11 @@ auto-generated from each report's frontmatter (`scripts/gen_index.py`).*
 
 See also the saved candidate **[Lists](lists/2026-06-02_closest-unclimbed-sangre-13ers.md)**.
 
+## Other climbers
+
+- **[Emily's research](https://kylegknutson.github.io/mtn-research/emily/)** — drive times from Highland (Denver), unclimbed from her checklist
+- **[Shawn's research](https://kylegknutson.github.io/mtn-research/shawn/)** — drive times from Edgewater, unclimbed from his checklist
+
 ## How to read a report
 
 Each report follows the same shape:
