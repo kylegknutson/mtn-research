@@ -128,6 +128,53 @@ No same-drainage ranked 13er link-up: Bartlett Mtn (5.74 mi, the only nearby ran
 
 ---
 
+## Trip reports
+
+*Data from Kyle's research (2026-05-28) — within 2 weeks, reused as-is.*
+
+### 14ers.com (15 reports)
+
+| Date | Source | Notes |
+|---|---|---|
+| 7/10/2025 | [mountain_guy TR 23116](https://www.14ers.com/php14ers/tripreport.php?trip=23116) | "Jacque Peak and Friends — A Day in the Southern Gore Range" — multi-peak |
+| 7/10/2024 | [Peaks4Days TR 22610](https://www.14ers.com/php14ers/tripreport.php?trip=22610) | "Jacque Peak Loop" — solo loop |
+| 7/10/2024 | [WildWanderer TR 22609](https://www.14ers.com/php14ers/tripreport.php?trip=22609) | "From Copper Mountain Ski Area" — Jacque + Union (standard modern route) |
+| 9/4/2022 | [d_baker TR 21988](https://www.14ers.com/php14ers/tripreport.php?trip=21988) | "My Summer Vacation" — big multi-peak day |
+| 7/21/2019 | [supranihilest TR 19639](https://www.14ers.com/php14ers/tripreport.php?trip=19639) | "Jacquerebleu" — Jacque + Copper trifecta |
+| 7/1/2017 | [rajz06 TR 17861](https://www.14ers.com/php14ers/tripreport.php?trip=17861) | "Just Between Jacque et Moi" — Jacque + Copper trifecta |
+| 9/18/2016 | [WillRobnett TR 17481](https://www.14ers.com/php14ers/tripreport.php?trip=17481) | "Gore Range 13ers" — 10-peak mega-traverse including ranked peaks |
+| 6/29/2016 | [dillonsarnelli TR 17183](https://www.14ers.com/php14ers/tripreport.php?trip=17183) | "Jacque to Music, and Some Extra Credit" — Jacque + Music + Savage |
+| 11/3/2012 | [piper14er TR 13115](https://www.14ers.com/php14ers/tripreport.php?trip=13115) | "Jacque-ularity" — Copper trifecta |
+| 5/26/2012 | [milan TR 11905](https://www.14ers.com/php14ers/tripreport.php?trip=11905) | "Mosquito Memorial" — Jacque + Tweto + Mosquito + Pennsylvania + W Buffalo |
+| 4/22/2012 | [skiingrock TR 11674](https://www.14ers.com/php14ers/tripreport.php?trip=11674) | "Duffy's Rage" — solo ski |
+| 7/30/2011 | [BobbyFinn TR 10818](https://www.14ers.com/php14ers/tripreport.php?trip=10818) | "Jacque the Long Way" — solo |
+| 7/22/2010 | [kaiman TR 8587](https://www.14ers.com/php14ers/tripreport.php?trip=8587) | "Jacque Peak via Copper Creek" — solo |
+| 11/11/2007 | [stevevets689 TR 3984](https://www.14ers.com/php14ers/tripreport.php?trip=3984) | "Tour de Tucker Gulch" — solo |
+| pre-2007 | [TR 2986](https://www.14ers.com/php14ers/tripreport.php?trip=2986) | "Jacque Peak Take 2: A Postcard Day" |
+
+### listsofjohn.com (6 reports)
+
+| Date | Climber | Stats | Style |
+|---|---|---|---|
+| 2025-10-09 | [Andrew Wahr TR 29420](https://listsofjohn.com/tr?Id=29420&pkid=603) | 11-peak Vail Pass ridge traverse | Mega ridge day, sub-13k partners only |
+| 2024-07-30 | [josephnephi TR 27037](https://listsofjohn.com/tr?Id=27037&pkid=603) | Jacque + Copper + Tucker + Union | Copper trifecta, sub-13k partners |
+| 2021-08-30 | [PaulStratmoen TR 20181](https://listsofjohn.com/tr?Id=20181&pkid=603) | Jacque + Union, via Woodward Express | Ski-area route |
+| 2017-12-28 | [jacolc TR 27210](https://listsofjohn.com/tr?Id=27210&pkid=603) | **8.2 mi / 4k' / 9h46** winter | Copper trifecta winter |
+| 2012-11-03 | [avalletta TR 1721](https://listsofjohn.com/tr?Id=1721&pkid=603) | **7.5 mi / 3,700' / 5.5h** Graveline Gulch | CO 91 start, sub-13k partners |
+| 2008-11-01 | [RyanKowalski TR 1548](https://listsofjohn.com/tr?Id=1548&pkid=603) | **7.5 mi / 4,000'** Jacque + Copper | CO 91 start |
+
+### peakbagger.com (193 members ascended; 5 recent ascents detailed)
+
+| Date | Climber | Stats | Notes |
+|---|---|---|---|
+| 2026-04-10 | [Michael Lochary](https://peakbagger.com/climber/ascent.aspx?aid=3161419) | — | Graveline Gulch. **"nice game trail on the climbers right most of the way"** |
+| 2025-08-23 | [Lee Newton](https://peakbagger.com/climber/ascent.aspx?aid=2956076) | **3,422' / 9.8 mi / 5h29** | Single Jacque, from ~Copper base |
+| 2025-08-08 | [Alex Gaab](https://peakbagger.com/climber/ascent.aspx?aid=2934720) | **3,500' / 10.2 mi / 3h** | Copper Mountain. "Long scrambles, a few actual climbing spots, but never anything truly dangerous, rock was stable" |
+| 2025-03-16 | [Xander Westra](https://peakbagger.com/climber/ascent.aspx?aid=2784737) | **2,249' / 9.1 mi / 7h14** from 10,963' TH | Mayflower Gulch. ⚠️ crossed tailings pond — "do not recommend, learned it is trespassing." |
+| 2025-06-22 | [Jack Murdoch](https://peakbagger.com/climber/ascent.aspx?aid=2879347) | — | — |
+
+---
+
 ## TL;DR
 
 ~10 mi RT, ~3,500', Class 2 from Copper Mountain base (I-70 Exit 195). ~5h typical pace. About 1h 50m from Edgewater. Standalone ranked day — no nearby ranked partners worth the detour. Go early for the exposed west ridge. Graveline Gulch (CO 91) saves mileage if you'd rather skip the ski area.

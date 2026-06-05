@@ -403,8 +403,8 @@ def build_map(slug: str, out_path: Path, zoom: int | None = None, title: str = "
     # MARGIN_MI is the buffer added around the peak bounding box on every side.
     # MIN_HALF_SPAN floors the window so a single peak (zero-span box) still gets
     # a usable view. MAX_HALF_SPAN caps it so a far-flung combo can't blow out.
-    MARGIN_MI = 1.5
-    MIN_LON_HALF, MIN_LAT_HALF = 0.035, 0.025   # ~1.9mi x 1.7mi floor
+    MARGIN_MI = 3.5
+    MIN_LON_HALF, MIN_LAT_HALF = 0.07, 0.055   # ~3.7mi x 3.8mi floor
     MAX_LON_HALF, MAX_LAT_HALF = 0.11, 0.08      # ~6mi x 5.5mi ceiling
     MI_PER_DEG_LON = 53.0   # ~at 38°N
     MI_PER_DEG_LAT = 69.0
@@ -436,7 +436,7 @@ def build_map(slug: str, out_path: Path, zoom: int | None = None, title: str = "
     if zoom is None:
         lon_span_padded = lon_max - lon_min
         if   lon_span_padded > 0.5:  zoom = 11
-        elif lon_span_padded > 0.2:  zoom = 12
+        elif lon_span_padded > 0.12: zoom = 12
         elif lon_span_padded > 0.08: zoom = 13
         else:                        zoom = 14
 
