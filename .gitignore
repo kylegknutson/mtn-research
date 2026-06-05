@@ -38,3 +38,6 @@ notes/
 
 # research_peak.py working skeletons (intermediate, not published)
 docs/peaks/*.skeleton.md
+
+# tr manifests from sweep_gpx (intermediate)
+gpx/*/tr_manifest.md

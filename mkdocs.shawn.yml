@@ -9,6 +9,7 @@ site_description: Colorado peak research tailored for Shawn
 # Drop Kyle's content from Shawn's build; keep shared maps + methodology.
 exclude_docs: |
   /index.md
+  /index.emily.md
   /architecture.md
   lists/
   peaks/*.md
