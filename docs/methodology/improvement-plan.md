@@ -2,7 +2,7 @@
 
 A formal, prioritized plan for evolving this project. Supersedes the narrower [automation roadmap](automation-roadmap.md) (now folded in as Theme A). Living document — check items off and re-prioritize as things land.
 
-*Last updated: 2026-06-02*
+*Last updated: 2026-06-07*
 
 ---
 
@@ -127,3 +127,9 @@ Build in order of *value per effort*, smallest-first within a wave so each step 
 - When starting an improvement, mark it in-flight here and link the commit/PR.
 - New ideas get an ID under the right theme.
 - Re-sequence freely — the waves are a default, not a contract.
+
+---
+
+## Pending one-off chores
+
+- [ ] **Retroactive regional-map backfill** *(noted 2026-06-07)* — regional-map sync (caltopo-pipeline §3b) is now standard for *new* reports, but the **14 pre-existing reports were never backfilled**. Run `sync_to_regional.py --slug <slug> --map-id <regional_map_id>` (dedupe ON) for each: brown_mountain, carter_dome_group, chipeta_mtn, crestolita_broken_hand, homestake_peak, hunts_peak, jacque_peak, pennsylvania_mountain, powell_eagles_nest, pt_13155_group, pt_13557, savage_peak, star_peak_a, telluride_t7_t8. (`dolores_middle_peak` has no local tracks.) Each report's regional id is in its frontmatter. Requires the local `gpx/<slug>/` tracks (gitignored — must run on Kyle's Mac) + CalTopo creds. A `--dry-run` first shows the per-map track counts. `star_peak_group` + `pearl_oyster` are already done.
