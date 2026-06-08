@@ -1,6 +1,6 @@
 # Architecture & deployment
 
-**Last updated:** 2026-06-02
+**Last updated:** 2026-06-07
 
 ## What it is
 
@@ -130,6 +130,8 @@ It is **not** an app. It is **a static site fed by an iCloud-synced repo, with s
 - Arrows across the boundary: network hop with auth (token / cookie / key)
 
 ## One research cycle, step by step
+
+> **Fast path (low-prompt):** `preflight.py` (flight check: resolve peaks, creds, login indicators → GO/NO-GO) → in-chat GPX sweep + `ingest_gpx.py` → `scaffold_report.py` (dir + peaks.yml) → `build_report.py` (one command: waypoints → CalTopo cross-ref → combo stats → drive → PNG → CalTopo map → regional sync) → write prose → `build_report.py --finalize` (climber-status + index + QA gates) → commit → **push (the one deliberate publish gate)**. The mechanical work lives inside these allowlisted scripts, so a build has two human touch points: approve the flight-check, approve the publish. See [caltopo-pipeline §Fast path](methodology/caltopo-pipeline.md). The numbered steps below are the detailed reference the fast path chains.
 
 1. **Kyle:** "Find me unclimbed Sangre 13ers under 4,000 ft / 8 mi" (narrow-down) or "do a report on Peak X" (report).
 2. **Claude reads `docs/methodology/`** (pointed to by the memory bootstrap) → knows the workflow, source rules, pipeline, conventions.

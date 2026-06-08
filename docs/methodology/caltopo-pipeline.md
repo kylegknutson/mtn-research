@@ -7,6 +7,43 @@ Every report ships **three artifacts as one unit**:
 2. CalTopo research map (`https://caltopo.com/m/XXXXXXX`) — interactive, linked from the report header
 3. `docs/maps/<slug>.png` — overview PNG embedded near the top of the report
 
+## Fast path — kick off and walk away (preflight → build → publish)
+
+The whole report build is designed around **two human touch points**: approve the flight-check at kickoff, approve the publish at the end. Everything in between runs without per-step permission prompts (the mechanical work lives inside allowlisted scripts, not raw Bash — no ad-hoc `mkdir`/`cp`/`rm`/heredocs).
+
+**0. Preflight (the flight check) — one attended moment.**
+```
+scripts/preflight.py --peaks "Star, Taylor, Italian" --range Elk --climber kyle
+```
+Resolves the peaks → peak_db ids (flags ambiguous/unknown names *now*), checks CalTopo creds + climber profile, and prints the per-site **login indicators** to confirm in the Playwright-MCP browser. Confirm all 3 logins there (hard stop if any is out — see [source requirements](source-requirements.md)). Output: GO/NO-GO + the `objective_ids`.
+
+**1. Sweep GPX in-chat (MCP browser), then file + scaffold.**
+Sweep all 3 sources via the logged-in MCP browser (`browser_evaluate`, allowlisted), saving the fetched tracks to a JSON blob (the evaluate `filename`), then:
+```
+scripts/ingest_gpx.py     --slug <slug> --json <blob.json>     # files tracks → gpx/<slug>/
+scripts/scaffold_report.py --slug <slug> --objective-ids 301,365,420 \
+    --landmark "Mt Tilton Trail TH (end of CO 742)|38.9872|-106.7573|10750|trailhead" --no-nearby
+```
+
+**2. One command does all the mechanical build.**
+```
+scripts/build_report.py --slug <slug> --title "Star Peak Group" --climber kyle
+```
+Runs waypoints → your CalTopo cross-ref (tight 1 mi margin) → combo stats → drive time → overview PNG → **new CalTopo research map** → **regional-map sync**, then prints the `caltopo_id` / `regional_map_id` / PNG path / stats to drop into the report. (Re-run with `--caltopo-id <ID>` to append instead of making a duplicate map.)
+
+**3. Write the prose.** The LLM fills `docs/peaks/<slug>.md` from the swept trip reports + the printed values (this is the only non-mechanical step).
+
+**4. Finalize + publish.**
+```
+scripts/build_report.py --slug <slug> --finalize     # climber-status + index + all QA gates
+git add -A && git commit -m "..."                    # allowlisted
+git push                                              # the ONE deliberate gate — review, then publish
+```
+
+The detailed per-step reference is below; the fast path just chains it.
+
+---
+
 ## Pipeline
 
 ### 1. Build waypoint GPX
