@@ -1,0 +1,25 @@
+# Waypoint config — south_san_juans_3day (scaffold_report.py)
+objective_ids:
+- 607
+- 633
+- 488
+- 796
+- 654
+nearby:
+  include: false
+landmarks:
+- name: Bennett Pk TH (FS 265, Del Norte side)
+  lat: 37.46
+  lon: -106.415
+  kind: trailhead
+  ele_ft: 10400
+- name: Trio TH — Elwood Pass/Treasure Creek (FS 380/243)
+  lat: 37.363
+  lon: -106.67
+  kind: trailhead
+  ele_ft: 11400
+- name: Conejos Pk TH (FS 250/105, Conejos River)
+  lat: 37.296
+  lon: -106.539
+  kind: trailhead
+  ele_ft: 10600

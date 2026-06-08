@@ -97,8 +97,9 @@ def main():
     by_id = {p["id"]: p for p in peaks()}
     climbed = {c: climbed_ids(c) for c in names}
 
+    reports = sorted(PEAKS.glob("*.md")) + sorted((ROOT / "docs" / "trips").glob("*.md"))
     stale = []
-    for path in sorted(PEAKS.glob("*.md")):
+    for path in reports:
         if path.name.endswith(".skeleton.md"):
             continue
         owner = owner_of(path)

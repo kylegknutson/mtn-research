@@ -77,9 +77,12 @@ def main():
     written = 0
     if args.json:
         data = json.loads(Path(args.json).read_text())
-        # unwrap a top-level {"result": ...} or {"data": ...} wrapper
-        if isinstance(data, dict) and set(data) & {"result", "data"} and len(data) <= 2:
-            data = data.get("data") or data.get("result") or data
+        # unwrap a {"result"/"data": {...tracks...}, ...summary fields...} wrapper
+        # (the shape browser_evaluate sweeps produce: data + summ/count/log siblings)
+        for key in ("data", "result"):
+            if isinstance(data, dict) and isinstance(data.get(key), dict):
+                data = data[key]
+                break
         for name, gpx in collect(data):
             fn = gdir / f"{safe(prefix)}_{safe(name)}.gpx"
             print(f"  {'(dry) ' if args.dry_run else ''}{fn.name}  ({len(gpx)} bytes)")
