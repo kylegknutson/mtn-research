@@ -42,6 +42,8 @@ git push                                              # the ONE deliberate gate 
 
 The detailed per-step reference is below; the fast path just chains it.
 
+> **Only summiting tracks belong on a report's map (Kyle, 2026-06-08).** A track goes on the PNG and the CalTopo map **only if it actually summits one of the researched (objective) peaks** — within ~240 m of an `objective_ids` summit. A track that merely passes through the area (an adjacent peak's route, an approach-only fragment, another day of a trip) is **not** route beta and must be left off. This is enforced automatically now: `caltopo_mytracks.py` drops non-summiting tracks at collection, and `make_overview_map.py` re-applies the filter at render. To clean a map built before this rule, use **`scripts/prune_caltopo_tracks.py --slug <slug>`** (dry-run) then `--apply` — it deletes line features that don't top out on an objective (markers/folders untouched). Pass `--objective-ids` for older reports whose `peaks.yml` predates the field.
+
 ---
 
 ## Pipeline
