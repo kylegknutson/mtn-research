@@ -1,0 +1,9 @@
+# Uncompahgre's "Three Children" — PT 13,155 / 13,110 / 13,108, off Nellie Creek (San Juan).
+objective_ids: [645, 707, 726]   # PT 13,155 / PT 13,110 / PT 13,108
+nearby:
+  include: true
+  radius_mi: 6
+  exclude: []
+landmarks:
+  - {name: "Nellie Creek 2WD TH (lower, Uncompahgre road)", lat: 38.0204, lon: -107.4007, ele_ft: 9320, kind: trailhead}
+  - {name: "Nellie Creek 4WD upper TH (~4 mi rough road)", lat: 38.0478, lon: -107.4058, ele_ft: 11430, kind: trailhead}
