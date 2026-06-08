@@ -184,8 +184,16 @@ def main():
                 chromium_sandbox=True)
         page = ctx.pages[0] if ctx.pages else ctx.new_page()
 
-        # LoJ
+        def stop(src):
+            ctx.close()
+            sys.exit(f"\n✗ STOP: {src} is LOGGED OUT in the automation profile.\n"
+                     f"  Per the source-rigor rule, do NOT build a partial report.\n"
+                     f"  Fix: scripts/check_sources_login.py --login   then re-run this sweep.")
+
+        # LoJ — verify login, then sweep
         page.goto("https://listsofjohn.com/", wait_until="domcontentloaded"); page.wait_for_timeout(1500)
+        if not re.search(r"Signed in as", page.content(), re.I):
+            stop("listsofjohn")
         loj = page.evaluate(JS_LOJ, pk)
         for p in pk:
             r = loj.get(str(p["db"])) or loj.get(p["db"]) or {}
@@ -194,27 +202,23 @@ def main():
             for gid, g in (r.get("gpx") or {}).items():
                 save(f'{g["author"] or "loj"}_{g["date"]}_loj{gid}', g["text"])
 
-        # 14ers
+        # 14ers — verify login, then sweep
         page.goto("https://www.14ers.com/", wait_until="domcontentloaded"); page.wait_for_timeout(1500)
+        if not re.search(r"mode=logout|Log\s*Out", page.content(), re.I):
+            stop("14ers")
         f14 = page.evaluate(JS_14ERS, pk)
         for p in pk:
             r = f14.get(str(p["db"])) or f14.get(p["db"]) or {}
             manifest["14ers"][p["name"]] = r.get("trs", [])
             for label, g in (r.get("gpx") or {}).items():
                 save(label, g["text"])
-
-        # peakbagger (clear Cloudflare via homepage first)
-        page.goto("https://peakbagger.com/", wait_until="domcontentloaded"); page.wait_for_timeout(4000)
-        pbres = page.evaluate(JS_PB, pk)
-        if pbres.get("loggedOut"):
-            print("  ⚠ peakbagger logged-out / Cloudflare not cleared — rerun with --headed "
-                  "or sweep PB in-chat. (Other two sources are complete.)")
-        else:
-            for p in pk:
-                r = pbres.get(str(p["db"])) or pbres.get(p["db"]) or {}
-                for label, g in (r.get("gpx") or {}).items():
-                    save(label, g["text"])
         ctx.close()
+
+    # peakbagger is NOT swept here — Cloudflare blocks the automation profile.
+    # It is a separate in-chat (MCP browser) step: confirm "Logged in: Kyle
+    # Knutson" FIRST, and if logged out, STOP and prompt Kyle (don't build partial).
+    print("  → peakbagger: pull in-chat via the MCP browser (verify login first; "
+          "HARD-STOP + prompt Kyle if logged out — don't build a partial report).")
 
     # write TR manifest
     lines = [f"# Trip-report manifest — {args.slug}", ""]

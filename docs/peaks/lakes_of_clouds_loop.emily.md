@@ -110,7 +110,7 @@ The loop is well documented as N + S arcs:
 
 **listsofjohn.com** loop tracks (37 TRs across the seven): whileyh 2020 N arc ([8083](https://listsofjohn.com/gpx/8083.gpx) ⭐), josephnephi 2024 N ([15989](https://listsofjohn.com/gpx/15989.gpx)) + S ([15992](https://listsofjohn.com/gpx/15992.gpx) ⭐), Alyson Kirk 2014 S ([978](https://listsofjohn.com/gpx/978.gpx)).
 
-**peakbagger.com:** checked; sparse/​duplicate GPX for these remote points.
+**peakbagger.com** (logged in, Kyle Knutson): 8 ascent GPX tracks across the seven, layered on the map.
 
 **Kyle's own CalTopo tracks** (his recorded GPS + collected archive) add the on-the-ground beta the web sources miss — incl. **Cotton Creek 13ers**, **Gibbs Peak loop**, **Rito Alto–Hermit–Eureka**, **Lakes/Electric**, and several recorded GPX dumps. Layered in purple on the research map.
 

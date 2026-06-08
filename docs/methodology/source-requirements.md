@@ -2,6 +2,8 @@
 
 **Multiple sources is a hard requirement.** If all three sources weren't confirmed logged-in and checked, the research isn't valid — redo it.
 
+> **HARD STOP on a logged-out source (Kyle, 2026-06-03):** if at any point you find a required source (14ers / LoJ / peakbagger) is **not logged in**, **stop right there and prompt Kyle to log in.** Do **not** build the report from the remaining sources and patch peakbagger later — a missing source means rebuilding the GPX collection, CalTopo map, and PNG once the data arrives, which wastes the whole pipeline. Pause, ask, wait for confirmation, then continue. (Supersedes the earlier "warn and continue / PB-in-chat" degrade-gracefully behavior.)
+
 ## The three sources
 
 | Source | Login (Kyle) | What it's good for |
