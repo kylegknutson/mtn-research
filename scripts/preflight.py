@@ -34,7 +34,7 @@ sys.path.insert(0, "/Users/kyleknutson/Library/Mobile Documents/com~apple~CloudD
 LOGIN_INDICATORS = {
     "14ers.com":        'a "Log Out" link present (and your username, e.g. "Basin", top-right)',
     "listsofjohn.com":  'NO "log in to view ascents" text on a peak page (logged-in shows your ascents)',
-    "peakbagger.com":   'the plain text "Logged in: <name>" on the home page — NOT the always-present "Log In" menu anchor',
+    "peakbagger.com":   'on the HOME page (Default.aspx): "Logged in: <name>" and/or a personalized "My Home Page" → climber.aspx?cid=<id> link. The cid link is the reliable signal (the "Logged in:" string and the always-present "Log In" anchor are both unreliable via fetch / on peak pages).',
 }
 
 

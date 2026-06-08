@@ -30,6 +30,8 @@ A common narrow-down isn't "rank a pool by drive time" — it's **"here's a set 
 
 **Output of the grouping variant:** peaks bucketed by approach, each bucket labeled *single-day* / *long-day* / *separate-day-same-weekend*, with the trailhead, drive-from-home, trailhead-to-trailhead drives between buckets, and a cited TR/GPX for each proposed combination. Don't lead with a distance matrix.
 
+**All three sources are required at the narrow-down stage too — not just LoJ (Kyle, 2026-06-07).** A grouping/scoping answer is still research: confirm 14ers + listsofjohn + peakbagger are all logged in *and actually consult each* (approaches, TR combo evidence, peakbagger isolation/prominence as a cross-check on the clustering). "I'll verify the other two at report time" is not acceptable — leaning on a single source at narrow-down is the same invalid-research shortcut as skipping a source on a full report. Run `preflight.py` and confirm all three logins before pulling anything.
+
 ## Candidate table format (required columns, in order)
 
 `# | Peak | Range | Drive (Maps) | Class | Gain | Trailhead | Confidence | Combos`
