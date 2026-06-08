@@ -1,0 +1,13 @@
+# Waypoint config — telluride_t7_t8 (scaffold_report.py)
+objective_ids:
+- 311
+- 434
+- 472
+nearby:
+  include: false
+landmarks:
+- name: Idarado Mine TH (US 550, MP ~90)
+  lat: 37.9356
+  lon: -107.6664
+  kind: trailhead
+  ele_ft: 11200
