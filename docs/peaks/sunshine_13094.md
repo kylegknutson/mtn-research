@@ -16,8 +16,6 @@ regional_map_id: 06AR6BF
 **CalTopo research map:** https://caltopo.com/m/11EMC0L
 **Status in DB:** Both 0 ascents (unclimbed). A natural pair on the **American Flats / Engineer Pass** side of the Uncompahgre high country (Lake City / Henson Creek access).
 
-> **Note on "13,099":** peak_db and listsofjohn both list this point as **PT 13,094** (LiDAR; pre-LiDAR 13,093'). 14ers/USGS map elevation may show ~13,099'. It's the only unclimbed ranked 13er within 1.4 mi of Sunshine Mtn A, so this is the intended peak — flag if you meant a different point.
-
 ![Overview map](../maps/sunshine_13094.png)
 *[Interactive CalTopo map](https://caltopo.com/m/11EMC0L)*
 
