@@ -107,6 +107,25 @@ def main():
     mlon = args.margin_mi / 53.0
     lat0 = min(p[0] for p in pk) - mlat; lat1 = max(p[0] for p in pk) + mlat
     lon0 = min(p[1] for p in pk) - mlon; lon1 = max(p[1] for p in pk) + mlon
+
+    # A track only belongs on the report if it SUMMITS a researched (objective)
+    # peak — passing through the bbox is not enough (Kyle, 2026-06-08). Load the
+    # objective summit coords from objective_ids; require a track point within
+    # ~240 m of one.
+    cfg2 = yaml.safe_load((gdir / "peaks.yml").read_text()) or {}
+    obj_summits = []
+    try:
+        from peak_db_client import peaks as _pks
+        _by = {p["id"]: p for p in _pks()}
+        obj_summits = [(_by[i]["lat"], _by[i]["lon"]) for i in cfg2.get("objective_ids", []) if i in _by]
+    except Exception as e:
+        print(f"⚠ could not load objective summits ({e}); summit filter off")
+    STOL_LAT, STOL_LON = 0.15 / 69.0, 0.15 / 53.0
+    def _summits(pts):
+        if not obj_summits:
+            return True
+        return any(abs(la - sla) <= STOL_LAT and abs(lo - slo) <= STOL_LON
+                   for la, lo in pts for sla, slo in obj_summits)
     print(f"box: lat {lat0:.3f}..{lat1:.3f}  lon {lon0:.3f}..{lon1:.3f}  (+{args.margin_mi}mi)")
 
     # signatures of tracks already collected for this report (any source)
@@ -132,6 +151,8 @@ def main():
             pts = [(c[1], c[0]) for c in coords if isinstance(c, (list, tuple)) and len(c) >= 2]
             if len(pts) < 2: continue
             if not any(lat0 <= la <= lat1 and lon0 <= lo <= lon1 for la, lo in pts[::10]):
+                continue
+            if not _summits(pts):     # passes through the area but doesn't top out — skip
                 continue
             title = ((ft.get("properties") or {}).get("title") or f"track{idx}")
             if SKIP_TITLE.search(title):   # running/biking/etc. — not route beta

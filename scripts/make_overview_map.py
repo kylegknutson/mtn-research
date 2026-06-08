@@ -6,6 +6,7 @@
 #   "mercantile",
 #   "Pillow",
 #   "pyproj",
+#   "PyYAML",
 # ]
 # ///
 """
@@ -44,11 +45,33 @@ from pathlib import Path
 
 import requests
 import mercantile
+import yaml
 from PIL import Image, ImageDraw, ImageFont
 from pyproj import Transformer
 
+PEAKDB_PATH = "/Users/kyleknutson/Library/Mobile Documents/com~apple~CloudDocs/shared/peak_db"
+
 # ── constants ────────────────────────────────────────────────────────────────
 GPX_NS_URI = "http://www.topografix.com/GPX/1/1"
+
+
+def objective_summits(slug):
+    """(lon, lat) of the report's OBJECTIVE summits (peaks.yml objective_ids →
+    peak_db). Used to keep only tracks that actually SUMMIT a researched peak.
+    Returns None if it can't be determined (caller falls back to a looser clip)."""
+    try:
+        cfg = yaml.safe_load((Path(__file__).parent.parent / "gpx" / slug / "peaks.yml").read_text())
+        ids = cfg.get("objective_ids") or []
+        if not ids:
+            return None
+        if PEAKDB_PATH not in sys.path:
+            sys.path.insert(0, PEAKDB_PATH)
+        from peak_db_client import peaks as _peaks
+        by = {p["id"]: p for p in _peaks()}
+        out = [(by[i]["lon"], by[i]["lat"]) for i in ids if i in by]
+        return out or None
+    except Exception:
+        return None
 
 COLOR_PUBLIC   = (204, 51,  51,  220)   # red (fallback / unclassified public)
 COLOR_KYLE     = (0,   102, 255, 180)   # blue
@@ -408,20 +431,31 @@ def build_map(slug: str, out_path: Path, zoom: int | None = None, title: str = "
         pk_lat_c = (min(peak_lats) + max(peak_lats)) / 2
         peaks_ll = list(zip(peak_lons, peak_lats))
 
-        # In scope if the segment's centroid is within CLIP_NEAR_MI of the
-        # NEAREST objective peak (not the cluster center). This matters for
-        # spread-out multi-day maps: an outlier peak's tracks (e.g. Conejos,
-        # ~9 mi from its neighbors) must not be clipped just for sitting far
-        # from the centroid of all peaks. A genuine mega-traverse, whose
-        # centroid lands far from EVERY objective, is still dropped.
-        CLIP_NEAR_MI = 5.0
-        def _seg_in_scope(seg):
-            n = len(seg)
-            c_lon = sum(lon for lon, _ in seg) / n
-            c_lat = sum(lat for _, lat in seg) / n
-            return any(abs(c_lon - plon) * MI_PER_DEG_LON <= CLIP_NEAR_MI
-                       and abs(c_lat - plat) * MI_PER_DEG_LAT <= CLIP_NEAR_MI
-                       for plon, plat in peaks_ll)
+        # A track belongs on the map ONLY if it actually SUMMITS a researched
+        # (objective) peak — a track that merely passes nearby is not route beta
+        # (Kyle, 2026-06-08). Objectives come from peaks.yml objective_ids
+        # (authoritative), so neighbor-peak markers don't qualify a track.
+        obj = objective_summits(slug)
+        if obj:
+            SUMMIT_TOL_MI = 0.15   # ~240 m — covers GPS noise / LiDAR-vs-track offset
+            def _seg_in_scope(seg):
+                for lon, lat in seg:
+                    for olon, olat in obj:
+                        if abs(lon - olon) * MI_PER_DEG_LON <= SUMMIT_TOL_MI \
+                           and abs(lat - olat) * MI_PER_DEG_LAT <= SUMMIT_TOL_MI:
+                            return True
+                return False
+        else:
+            # Fallback (no objective_ids available): keep tracks whose centroid
+            # is within 5 mi of the nearest peak marker.
+            CLIP_NEAR_MI = 5.0
+            def _seg_in_scope(seg):
+                n = len(seg)
+                c_lon = sum(lon for lon, _ in seg) / n
+                c_lat = sum(lat for _, lat in seg) / n
+                return any(abs(c_lon - plon) * MI_PER_DEG_LON <= CLIP_NEAR_MI
+                           and abs(c_lat - plat) * MI_PER_DEG_LAT <= CLIP_NEAR_MI
+                           for plon, plat in peaks_ll)
 
         # Filter drawing buckets in-place — only in-scope segments are drawn
         # and only their points contribute to the bbox.

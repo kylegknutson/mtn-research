@@ -99,6 +99,10 @@ Boulder → **Bennett Pk TH** (FS 265, Del Norte side), **~5h 10m**. Car camp ne
 
 > Conejos ↔ Bennett directly is ~3h 19m / 109 mi (US-160 around) — which is why Bennett goes first/on-the-way-in rather than as a side trip from Platoro.
 
+### Driving directions between approaches
+- **Bennett Pk TH → Trio TH (Elwood Pass / Treasure Creek)**: [directions](https://www.google.com/maps/dir/?api=1&origin=37.46,-106.415&destination=37.363,-106.67)
+- **Trio TH → Conejos Pk TH (Conejos River Rd)**: [directions](https://www.google.com/maps/dir/?api=1&origin=37.363,-106.67&destination=37.296,-106.539)
+
 ---
 
 ## Camps & water

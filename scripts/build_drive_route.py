@@ -80,6 +80,14 @@ def main():
     out.write_text(gpx)
     print(f"✓ {out}")
 
+    # Clickable Google Maps directions per leg — paste into the trip report's
+    # "Driving directions between approaches" section (standard for trips).
+    print("\nDIRECTIONS (markdown — one clickable leg per line):")
+    for a, b in zip(ths, ths[1:]):
+        url = (f"https://www.google.com/maps/dir/?api=1"
+               f'&origin={a["lat"]},{a["lon"]}&destination={b["lat"]},{b["lon"]}')
+        print(f'- **{a["name"]} → {b["name"]}**: [directions]({url})')
+
 
 if __name__ == "__main__":
     main()
