@@ -406,16 +406,22 @@ def build_map(slug: str, out_path: Path, zoom: int | None = None, title: str = "
     if peak_lons:
         pk_lon_c = (min(peak_lons) + max(peak_lons)) / 2
         pk_lat_c = (min(peak_lats) + max(peak_lats)) / 2
-        clip_lon = min(CLIP_MAX_LON,
-                       (max(peak_lons) - min(peak_lons)) / 2 + CLIP_MARGIN_MI / MI_PER_DEG_LON)
-        clip_lat = min(CLIP_MAX_LAT,
-                       (max(peak_lats) - min(peak_lats)) / 2 + CLIP_MARGIN_MI / MI_PER_DEG_LAT)
+        peaks_ll = list(zip(peak_lons, peak_lats))
 
+        # In scope if the segment's centroid is within CLIP_NEAR_MI of the
+        # NEAREST objective peak (not the cluster center). This matters for
+        # spread-out multi-day maps: an outlier peak's tracks (e.g. Conejos,
+        # ~9 mi from its neighbors) must not be clipped just for sitting far
+        # from the centroid of all peaks. A genuine mega-traverse, whose
+        # centroid lands far from EVERY objective, is still dropped.
+        CLIP_NEAR_MI = 5.0
         def _seg_in_scope(seg):
             n = len(seg)
             c_lon = sum(lon for lon, _ in seg) / n
             c_lat = sum(lat for _, lat in seg) / n
-            return abs(c_lon - pk_lon_c) <= clip_lon and abs(c_lat - pk_lat_c) <= clip_lat
+            return any(abs(c_lon - plon) * MI_PER_DEG_LON <= CLIP_NEAR_MI
+                       and abs(c_lat - plat) * MI_PER_DEG_LAT <= CLIP_NEAR_MI
+                       for plon, plat in peaks_ll)
 
         # Filter drawing buckets in-place — only in-scope segments are drawn
         # and only their points contribute to the bbox.
