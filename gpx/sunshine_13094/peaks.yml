@@ -1,0 +1,12 @@
+# Waypoint config — sunshine_13094 (scaffold_report.py)
+objective_ids:
+- 468
+- 725
+nearby:
+  include: false
+landmarks:
+- name: Sunshine/13,094 combo TH (~11,000')
+  lat: 37.978
+  lon: -107.541
+  kind: trailhead
+  ele_ft: 11000
