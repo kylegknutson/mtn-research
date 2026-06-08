@@ -284,6 +284,12 @@ def main() -> None:
     if args.gpx_dir:
         files.extend(sorted(args.gpx_dir.glob("*.gpx")))
     files.extend(args.gpx)
+    # *_drive*.gpx is a PNG-only annotation (the road between camps, drawn black
+    # on the overview) — never upload it to CalTopo.
+    skipped_drive = [f for f in files if f.stem.endswith("_drive") or "_drive_" in f.stem]
+    files = [f for f in files if f not in skipped_drive]
+    for f in skipped_drive:
+        print(f"  skip (PNG-only drive route): {f.name}")
     if not files:
         sys.exit("No .gpx files specified. Use --gpx-dir or --gpx.")
 

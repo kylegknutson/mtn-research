@@ -82,6 +82,9 @@ def track_source(path) -> str:
 COLOR_PEAK     = (255, 204, 0,   255)   # gold
 COLOR_DRIVE_IN = (153, 51,  204, 220)   # purple
 COLOR_TH       = (255, 102, 0,   220)   # orange
+COLOR_DRIVE    = (0,   0,   0,   235)   # black — the driving route between camps
+                                        # (reserved: not used on the CalTopo map, so
+                                        #  it reads as "road", not a GPS track)
 COLOR_BG       = (232, 224, 213)        # warm beige fallback
 
 TILE_SIZE   = 256    # px per OSM tile
@@ -139,6 +142,8 @@ def parse_waypoints(gpx_path: Path) -> list[tuple[float, float, str]]:
 
 def classify_file(path: Path, is_kyle: bool) -> str:
     stem = path.stem.lower()
+    if stem.endswith("_drive") or "_drive_" in stem:
+        return "drive_route"      # the road connecting camps (multi-day) — PNG only
     if "peaks_only" in stem or "summit" in stem:
         return "peak"
     if any(k in stem for k in TH_KEYWORDS):
@@ -293,11 +298,12 @@ def draw_label(draw: ImageDraw.ImageDraw, ix: int, iy: int, text: str, font):
 
 # ── legend ────────────────────────────────────────────────────────────────────
 
-def draw_legend(img: Image.Image, public_sources, has_kyle, has_peak, has_drive_in, has_th, font):
+def draw_legend(img: Image.Image, public_sources, has_kyle, has_peak, has_drive_in, has_th, font, has_drive_route=False):
     items = []
     for src in (public_sources or []):
         items.append((f"{SOURCE_LABELS.get(src, src)} routes", SOURCE_COLORS.get(src, COLOR_PUBLIC)[:3]))
     if has_kyle:    items.append(("Imported tracks (Kyle)", COLOR_KYLE[:3]))
+    if has_drive_route: items.append(("Driving route (road)",  COLOR_DRIVE[:3]))
     if has_peak:    items.append(("Summit ★",               COLOR_PEAK[:3]))
     if has_drive_in:items.append(("Drive-in / landmark ▲", COLOR_DRIVE_IN[:3]))
     if has_th:      items.append(("Trailhead ■",            COLOR_TH[:3]))
@@ -331,13 +337,19 @@ def build_map(slug: str, out_path: Path, zoom: int | None = None, title: str = "
     public_files = list(gpx_dir.glob("*.gpx"))
     kyle_files   = list(kyle_dir.glob("*.gpx")) if kyle_dir.exists() else []
 
-    buckets = {"track_public": [], "track_kyle": [], "peak": [], "drive_in": [], "th": []}
+    buckets = {"track_public": [], "track_kyle": [], "peak": [], "drive_in": [], "th": [], "drive_route": []}
     all_lons, all_lats = [], []
     track_lons, track_lats = [], []   # tracks only — preferred bbox driver when present
     peak_lons, peak_lats = [], []     # peak markers — fallback bbox driver when no tracks
 
     def _ingest(path, is_kyle):
         kind = classify_file(path, is_kyle)
+        if kind == "drive_route":
+            # Drawn (clipped to frame by PIL) but NOT a bbox driver — the road
+            # loops far through valleys; letting it set the extent would blow the
+            # frame. The peak markers define the extent; this just overlays on it.
+            buckets["drive_route"].extend(parse_tracks(path))
+            return
         if kind.startswith("track"):
             segs = parse_tracks(path)
             if kind == "track_public":
@@ -489,6 +501,9 @@ def build_map(slug: str, out_path: Path, zoom: int | None = None, title: str = "
         draw_track(draw, seg, SOURCE_COLORS.get(src, COLOR_PUBLIC), 3, origin_px, origin_py, scale_x, scale_y, IMG_H_PX, zoom)
     for seg in buckets["track_kyle"]:
         draw_track(draw, seg, COLOR_KYLE, 2, origin_px, origin_py, scale_x, scale_y, IMG_H_PX, zoom, dashed=True)
+    # driving route between camps — drawn last/on top, black dashed (multi-day)
+    for seg in buckets["drive_route"]:
+        draw_track(draw, seg, COLOR_DRIVE, 3, origin_px, origin_py, scale_x, scale_y, IMG_H_PX, zoom, dashed=True)
 
     # ── load font ────────────────────────────────────────────────────────────
     try:
@@ -531,7 +546,8 @@ def build_map(slug: str, out_path: Path, zoom: int | None = None, title: str = "
         if src not in present_sources:
             present_sources.append(src)
     draw_legend(img, present_sources, bool(buckets["track_kyle"]),
-                bool(buckets["peak"]), bool(buckets["drive_in"]), bool(buckets["th"]), font_sm)
+                bool(buckets["peak"]), bool(buckets["drive_in"]), bool(buckets["th"]), font_sm,
+                has_drive_route=bool(buckets["drive_route"]))
 
     # ── attribution ──────────────────────────────────────────────────────────
     attr = "Map tiles © OpenTopoMap (CC-BY-SA) | SRTM"

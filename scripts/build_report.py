@@ -82,6 +82,13 @@ def data_phase(args):
     title = args.title or slug.replace("_", " ").title()
 
     run([SCRIPTS / "build_peak_gpx.py", "--slug", slug])
+
+    # Multi-day trip: draw the road between camps on the PNG (≥2 trailheads).
+    cfg = yaml.safe_load((gdir / "peaks.yml").read_text())
+    n_th = sum(1 for lm in cfg.get("landmarks", []) if lm.get("kind", "trailhead") == "trailhead")
+    if n_th >= 2:
+        run([SCRIPTS / "build_drive_route.py", "--slug", slug])
+
     if regional:
         run([SCRIPTS / "caltopo_mytracks.py", "--slug", slug, "--maps", regional,
              "--margin-mi", str(args.mytracks_margin)])

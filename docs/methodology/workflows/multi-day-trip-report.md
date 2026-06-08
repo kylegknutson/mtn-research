@@ -40,5 +40,6 @@ Source rigor (all three sources, confirmed logged-in) on **every peak** in the i
 
 ## Notes
 
-- **No reference implementation yet.** First multi-day report will set the concrete pattern; refine this page from it.
-- Camps/water/pack-route are first-class map features here (unlike day-trips). The objective box for the PNG should span the basecamp + the peaks, not just the summits.
+- **Reference implementation:** [South San Juans 3-Day](../../trips/south_san_juans_3day.md) (Bennett + Conejos + Summit/Montezuma/Unicorn trio). It's a **car-camp / move-camp-by-vehicle** trip, not a backpack — so the "pack-in/basecamp" sections become **vehicle relocations + dispersed car camps near each day's trailhead**. Adapt the template to the trip's style (backpack vs. car-camp).
+- **Driving route on the PNG (Kyle, 2026-06-07).** For multi-day trips, show the road connecting the camps/trailheads on the overview PNG. `build_drive_route.py --slug <slug>` routes the actual road (OSRM) through the `kind: trailhead` landmarks in `peaks.yml` order and writes `<slug>_drive.gpx`; `make_overview_map` renders any `*_drive*` file as a **reserved black dashed line** (a color *not* used on the CalTopo map, so it reads as "road", not a GPS track), and `gpx_to_caltopo` skips it (PNG-only, never uploaded). `build_report.py` runs this automatically when a trip has ≥2 trailheads.
+- Camps/water/pack-route are first-class map features here (unlike day-trips). The objective box for the PNG should span the basecamp + the peaks, not just the summits. For trips whose zones are far apart (e.g. ~17 mi), the single PNG is a **regional locator** (peaks small, drive route shown) — per-area route detail lives on the interactive CalTopo map.
