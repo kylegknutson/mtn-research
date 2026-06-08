@@ -20,6 +20,10 @@ regional_map_id: 6E4GJV2
 
 ---
 
+<!-- CLIMBERS_START -->
+**Other climbers:** Emily Sharpe — not yet · Shawn D Keil — not yet
+<!-- CLIMBERS_END -->
+
 ## Quick stats
 
 | | Jacque Peak |

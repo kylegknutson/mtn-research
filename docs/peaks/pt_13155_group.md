@@ -21,6 +21,10 @@ regional_map_id: 06AR6BF
 
 ---
 
+<!-- CLIMBERS_START -->
+**Other climbers:** Emily Sharpe — not yet · Shawn D Keil — not yet
+<!-- CLIMBERS_END -->
+
 ## Quick stats
 
 | | PT 13,155 | PT 13,110 | PT 13,108 |

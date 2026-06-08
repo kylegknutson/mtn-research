@@ -21,6 +21,10 @@ regional_map_id: 6E4GJV2
 
 ---
 
+<!-- CLIMBERS_START -->
+**Other climbers:** Emily Sharpe — 1 of 2 (Mount Powell A) · Shawn D Keil — not yet
+<!-- CLIMBERS_END -->
+
 ## Quick stats
 
 | | Mount Powell A | Eagles Nest A |

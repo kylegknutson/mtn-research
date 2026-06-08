@@ -8,6 +8,10 @@ status: unclimbed
 regional_map_id: UDK6ETR
 ---
 
+<!-- CLIMBERS_START -->
+**Other climbers:** Emily Sharpe — not yet · Shawn D Keil — not yet
+<!-- CLIMBERS_END -->
+
 # Carter Dome Group — day traverse (Carter-Moriah Range)
 
 **Researched:** 2026-06-04

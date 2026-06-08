@@ -10,6 +10,10 @@ caltopo_id: J9G39T0
 regional_map_id: VKGB00L
 ---
 
+<!-- CLIMBERS_START -->
+**Other climbers:** Kyle Knutson — ✓ all · Shawn D Keil — not yet
+<!-- CLIMBERS_END -->
+
 # Lakes of the Clouds — 7-peak loop (northern Sangre de Cristo)
 
 *Written for **Emily** — all seven unclimbed on her 14ers checklist.*

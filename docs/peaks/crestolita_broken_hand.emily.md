@@ -23,6 +23,10 @@ regional_map_id: VKGB00L
 
 ---
 
+<!-- CLIMBERS_START -->
+**Other climbers:** Kyle Knutson — not yet · Shawn D Keil — not yet
+<!-- CLIMBERS_END -->
+
 ## Quick stats
 
 | | Broken Hand Peak | "Crestolita" |

@@ -23,6 +23,10 @@ regional_map_id: 6E4GJV2
 
 ---
 
+<!-- CLIMBERS_START -->
+**Other climbers:** Emily Sharpe — not yet · Kyle Knutson — ✓ climbed
+<!-- CLIMBERS_END -->
+
 ## Quick stats
 
 | | Jacque Peak |

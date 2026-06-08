@@ -20,6 +20,10 @@ regional_map_id: LECF68J
 
 ---
 
+<!-- CLIMBERS_START -->
+**Other climbers:** Emily Sharpe — ✓ climbed · Shawn D Keil — not yet
+<!-- CLIMBERS_END -->
+
 ## Quick stats
 
 | | Pennsylvania Mountain |

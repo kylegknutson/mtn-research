@@ -25,6 +25,10 @@ regional_map_id: L5VH4BU
 
 ---
 
+<!-- CLIMBERS_START -->
+**Other climbers:** Emily Sharpe — not yet · Shawn D Keil — not yet
+<!-- CLIMBERS_END -->
+
 ## Quick stats
 
 | | Savage Peak |

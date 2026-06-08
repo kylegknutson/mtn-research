@@ -31,6 +31,8 @@ jobs:
         run: python scripts/check_map_extents.py
       - name: Index freshness (peak table matches report frontmatter)
         run: pip install PyYAML && python scripts/gen_index.py --check
+      - name: Climber-status freshness (other-climber lines current)
+        run: pip install PyYAML requests && python scripts/climber_status.py --check
 
   build:
     needs: lint
