@@ -32,8 +32,18 @@ ROOT = Path(__file__).resolve().parent.parent
 PEAKS = ROOT / "docs" / "peaks"
 sys.path.insert(0, str(ROOT / "scripts"))
 sys.path.insert(0, "/Users/kyleknutson/Library/Mobile Documents/com~apple~CloudDocs/shared/peak_db")
-from peak_db_client import peaks  # noqa: E402
-from climber import climbed_ids   # noqa: E402
+
+# peak_db (Kyle's local Supabase client) and climber helpers depend on the local
+# peak_db checkout, which is NOT present in CI. Import lazily/optionally so the
+# freshness check can degrade gracefully there instead of crashing.
+try:
+    from peak_db_client import peaks  # noqa: E402
+    from climber import climbed_ids   # noqa: E402
+    DATA_AVAILABLE = True
+except ModuleNotFoundError:
+    DATA_AVAILABLE = False
+    def peaks(): return []
+    def climbed_ids(_): return set()
 
 START, END = "<!-- CLIMBERS_START -->", "<!-- CLIMBERS_END -->"
 
@@ -73,6 +83,15 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--check", action="store_true")
     args = ap.parse_args()
+
+    if not DATA_AVAILABLE:
+        # CI / any machine without the local peak_db checkout cannot recompute
+        # climbed status. Don't fail the build — this check is enforced locally
+        # before commit, where peak_db + the 14ers session are available.
+        if args.check:
+            print("peak_db unavailable here — skipping climber-status freshness check")
+            sys.exit(0)
+        sys.exit("peak_db unavailable — run climber_status.py on a machine with the peak_db checkout")
 
     names = all_climbers()
     by_id = {p["id"]: p for p in peaks()}
