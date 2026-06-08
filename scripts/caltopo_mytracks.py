@@ -108,10 +108,10 @@ def main():
     lat0 = min(p[0] for p in pk) - mlat; lat1 = max(p[0] for p in pk) + mlat
     lon0 = min(p[1] for p in pk) - mlon; lon1 = max(p[1] for p in pk) + mlon
 
-    # A track only belongs on the report if it SUMMITS a researched (objective)
+    # A track only belongs on the report if it reaches a researched (objective)
     # peak — passing through the bbox is not enough (Kyle, 2026-06-08). Load the
     # objective summit coords from objective_ids; require a track point within
-    # ~240 m of one.
+    # ½ mi of one.
     cfg2 = yaml.safe_load((gdir / "peaks.yml").read_text()) or {}
     obj_summits = []
     try:
@@ -120,7 +120,7 @@ def main():
         obj_summits = [(_by[i]["lat"], _by[i]["lon"]) for i in cfg2.get("objective_ids", []) if i in _by]
     except Exception as e:
         print(f"⚠ could not load objective summits ({e}); summit filter off")
-    STOL_LAT, STOL_LON = 0.15 / 69.0, 0.15 / 53.0
+    STOL_LAT, STOL_LON = 0.5 / 69.0, 0.5 / 53.0   # ½ mi keeper threshold
     def _summits(pts):
         if not obj_summits:
             return True

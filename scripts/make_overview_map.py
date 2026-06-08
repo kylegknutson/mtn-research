@@ -437,7 +437,7 @@ def build_map(slug: str, out_path: Path, zoom: int | None = None, title: str = "
         # (authoritative), so neighbor-peak markers don't qualify a track.
         obj = objective_summits(slug)
         if obj:
-            SUMMIT_TOL_MI = 0.15   # ~240 m — covers GPS noise / LiDAR-vs-track offset
+            SUMMIT_TOL_MI = 0.5    # within ~½ mi of a researched summit counts (Kyle, 2026-06-08)
             def _seg_in_scope(seg):
                 for lon, lat in seg:
                     for olon, olat in obj:

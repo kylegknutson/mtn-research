@@ -35,7 +35,7 @@ ROOT = Path(__file__).resolve().parent.parent
 PEAKDB_PATH = "/Users/kyleknutson/Library/Mobile Documents/com~apple~CloudDocs/shared/peak_db"
 CONFIG = ROOT / "scripts" / "cts.ini"
 ACCOUNT = "kyleg.knutson@gmail.com"
-STOL_LAT, STOL_LON = 0.15 / 69.0, 0.15 / 53.0   # ~240 m
+STOL_LAT, STOL_LON = 0.5 / 69.0, 0.5 / 53.0   # ½ mi keeper threshold
 
 
 def report_caltopo_id(slug: str) -> str | None:
