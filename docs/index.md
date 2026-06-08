@@ -17,8 +17,10 @@ auto-generated from each report's frontmatter (`scripts/gen_index.py`).*
 | [Hunts Peak](peaks/hunts_peak.md) | Sangre de Cristo | 3h 37m | 2 | 3,450–3,528 ft | unclimbed |
 | [Savage Peak](peaks/savage_peak.md) | Sawatch | 3h 39m | 2 | 3,200 ft | unclimbed |
 | [Star Peak A](peaks/star_peak_a.md) | Elk | 3h 39m | 2+ | 2,766 ft (Star+Taylor) | unclimbed |
+| [Star Peak Group](peaks/star_peak_group.md) | Elk | 3h 40m | 2 | 4,300 ft (Star+Taylor) — up to ~8,000 ft (all three) | unclimbed |
 | [Crestolita + Broken Hand Peak](peaks/crestolita_broken_hand.md) | Sangre de Cristo | 3h 58m | 3 | 6,400–7,100 ft | unclimbed |
 | [Chipeta Mountain](peaks/chipeta_mtn.md) | Sawatch | 4h 13m | 2 | 1,100–3,000 ft | unclimbed |
+| [Pearl Mountain + Oyster Peak](peaks/pearl_oyster.md) | Elk | 4h 22m | 2+ | ~4,300 ft | unclimbed |
 | [PT 13,557](peaks/pt_13557.md) | Sangre de Cristo | 4h 41m | 2 | ~3,540 ft | unclimbed |
 | [PT 13,155 Group](peaks/pt_13155_group.md) | San Juan | 5h 34m | 2 | 3,000–4,000 ft | unclimbed |
 | [Telluride Peak Group](peaks/telluride_t7_t8.md) | San Juan | 6h 19m | 2–3 | ~4,000 ft | unclimbed |

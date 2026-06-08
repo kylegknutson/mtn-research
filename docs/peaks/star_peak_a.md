@@ -11,6 +11,8 @@ regional_map_id: 1G2G7DM
 
 # Star Peak A (Elk Mountains / Taylor Park cluster)
 
+> 📋 **See also: [Star Peak Group (Star + Taylor + Italian)](star_peak_group.md)** — the day-trip/weekend combo report that plans these three together. This page is the single-peak deep dive on Star itself.
+
 **Researched:** 2026-05-28
 **CalTopo research map:** https://caltopo.com/m/607Q6C8
 **Status in DB:** 0 ascents (unclimbed).

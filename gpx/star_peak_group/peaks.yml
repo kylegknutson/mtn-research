@@ -1,0 +1,8 @@
+# Waypoint config — Star Peak Group day trip (Star + Taylor + Italian).
+objective_ids: [301, 365, 420]   # Star Pk A (301), Taylor Pk A (365), Italian Mtn (420)
+
+nearby:
+  include: false
+
+landmarks:
+  - {name: "Mt Tilton Trail TH (end of CO 742)", lat: 38.9872, lon: -106.7573, ele_ft: 10750, kind: trailhead}

@@ -17,6 +17,19 @@
 6. **Rank by drive time** from the climber's home (Maps directions), not haversine.
 7. **Write the artifact** (template below) and surface the table in chat.
 
+## Grouping variant: "which of these peaks combine into days / a weekend?"
+
+A common narrow-down isn't "rank a pool by drive time" — it's **"here's a set of peaks; which group into a single day, and which into a multi-day weekend, because the approaches are close?"** (e.g. "Italian, Taylor, Star, Pearl, Oyster in the Eastern Elks").
+
+**Summit-to-summit straight-line distance is NOT the metric here — it's often misleading.** Two summits 2 mi apart can sit on opposite sides of a divide whose trailheads are *hours* apart by car. What actually determines combinability (Kyle, 2026-06-07):
+
+1. **How people actually climb them** — read the trip reports. What's the standard outing for each peak, and what gets bagged together?
+2. **Which side / drainage the approach comes from** — group peaks by the basin/trailhead they're climbed *from*, not by where the summits sit.
+3. **Trailhead-to-trailhead driving proximity** — for peaks on different approaches, how far apart are the *start points by car*? Close trailheads → a weekend of separate days from one basecamp. Far-apart trailheads → separate trips.
+4. **Commonly-combined groups** — what link-ups already appear in TRs/GPX (with a real track to back them), vs. what's only theoretically adjacent.
+
+**Output of the grouping variant:** peaks bucketed by approach, each bucket labeled *single-day* / *long-day* / *separate-day-same-weekend*, with the trailhead, drive-from-home, trailhead-to-trailhead drives between buckets, and a cited TR/GPX for each proposed combination. Don't lead with a distance matrix.
+
 ## Candidate table format (required columns, in order)
 
 `# | Peak | Range | Drive (Maps) | Class | Gain | Trailhead | Confidence | Combos`
