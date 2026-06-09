@@ -14,9 +14,9 @@ regional_map_id: 06AR6BF
 **Researched:** 2026-06-08
 **Report type:** Day trip (3 peaks, one outing)
 **CalTopo research map:** https://caltopo.com/m/DCQ8UKS
-**Status in DB:** All three 0 ascents (unclimbed). A natural **Cuba Gulch** day off the **Lake Fork (Lake City)** side, in the Half Peak / Cataract Gulch pocket.
+**Status in DB:** All three 0 ascents (unclimbed), all **ranked** San Juan 13ers. A natural **Cuba Gulch** day off the **Lake Fork (Lake City)** side, in the Half Peak / Cataract Gulch pocket.
 
-> **Note on "13,003":** Unnamed 13,003 is a **LiDAR-dropped soft-rank** — still listed on 14ers ("Unnamed 13003", CO 13er rank 581/583) and LoJ (peak 822), but **not in peak_db** (its prominence fell below the ranked threshold after LiDAR). It's carried here as a non-peak_db objective. The other two are ranked 13ers.
+> **Data note on PT 13,003:** it **is** a ranked peak_db peak (id 822, CO rank 635, Class 1) — but its peak_db row is **missing coordinates** (lat/lon and the 14ers cross-link are null), which is why automated geo-resolution initially missed it. Coordinates here come from LoJ (peak 822) / 14ers (peakid 10871). *peak_db fix needed: populate id 822 with lat 37.84968, lon −107.49465, fourteeners_id 10871.*
 
 ![Overview map](../maps/cuba_gulch_trio.png)
 *[Interactive CalTopo map](https://caltopo.com/m/DCQ8UKS)*
@@ -34,14 +34,14 @@ regional_map_id: 06AR6BF
 | Elevation | 13,076' | 13,003' | 13,179' |
 | Lat / Lon | 37.82997, −107.52956 | 37.84968, −107.49465 | 37.84723, −107.47533 |
 | Weather | [NOAA](https://forecast.weather.gov/MapClick.php?lat=37.82997&lon=-107.52956) | [NOAA](https://forecast.weather.gov/MapClick.php?lat=37.84968&lon=-107.49465) | [NOAA](https://forecast.weather.gov/MapClick.php?lat=37.84723&lon=-107.47533) (same target on all 3 sites) |
-| Class (standard) | 2 | 2 | 2 |
-| Rank | ranked 13er | **soft-rank** (LiDAR-dropped; 14ers 581/583) | ranked 13er |
-| 14ers.com | [10577](https://www.14ers.com/php14ers/peak.php?peakid=10577) | "Unnamed 13003" | [10527](https://www.14ers.com/php14ers/peak.php?peakid=10527) |
+| Class (standard) | 2 | 1 | 2 |
+| Rank | ranked (CO 589) | ranked (CO 635) | ranked (CO 497) |
+| 14ers.com | [10577](https://www.14ers.com/php14ers/peak.php?peakid=10577) | [10871](https://www.14ers.com/peaks/10871/unnamed-13er-13003) | [10527](https://www.14ers.com/php14ers/peak.php?peakid=10527) |
 | LoJ | [752](https://listsofjohn.com/peak/752) | [822](https://listsofjohn.com/peak/822) | [639](https://listsofjohn.com/peak/639) |
 | peakbagger | [pid 15336](https://peakbagger.com/peak.aspx?pid=15336) | [pid 39877](https://peakbagger.com/peak.aspx?pid=39877) | [pid 39878](https://peakbagger.com/peak.aspx?pid=39878) |
-| Peak DB id | 752 | — (not in peak_db) | 639 |
+| Peak DB id | 752 | 822 *(coords missing in peak_db — see note)* | 639 |
 
-The three sit in a ~2.3 mi arc: **13,003 is the middle peak** (~1.1 mi from 13,179, ~2.3 mi from 13,076), so the natural order is 13,076 → 13,003 → 13,179 (or reverse).
+The three sit in a ~2.3 mi arc: **13,003 is the middle peak** (~1.1 mi from 13,179, ~2.3 mi from 13,076), so the natural order is 13,076 → 13,003 → 13,179 (or reverse). All three are **ranked** 13ers.
 
 ---
 
@@ -49,7 +49,7 @@ The three sit in a ~2.3 mi arc: **13,003 is the middle peak** (~1.1 mi from 13,1
 
 A **standard Cuba Gulch outing** — the three are climbed together, confirmed by trip reports across all three sources **and Kyle's own GPS track** ("Cuba Gulch – 13076, 13003, 13179"). They share the single Cuba Gulch approach off the Lake Fork.
 
-**Combos (ranked rule):** PT 13,076 and PT 13,179 are ranked 13ers (a true ranked pair); Unnamed 13,003 is a soft-rank bump on the connecting ridge that Kyle wants on the list. The neighboring ranked peaks (Half Peak, Quarter Peak, Canby, Cataract, Sheep Mtn A) are already done — this cleans up what's left in the Cuba Gulch / Cataract pocket.
+**Combos (ranked rule):** all three are **ranked** San Juan 13ers, so it's a true 3-ranked-peak day. The neighboring ranked peaks (Half Peak, Quarter Peak, Canby, Cataract, Sheep Mtn A) are already done — this cleans up what's left in the Cuba Gulch / Cataract pocket.
 
 ---
 
@@ -87,7 +87,7 @@ Expect roughly **~11 mi and ~3,900 ft** for the clean three-peak day, Class 2 th
 ## Per-peak route notes
 
 - **PT 13,076** — Class 2; the SW end of the arc. No formal 14ers route description (TR-only beta).
-- **Unnamed 13,003** — Class 2; the middle bump (LiDAR soft-rank). Grabbed on the ridge between the two ranked points.
+- **PT 13,003** — **Class 1**; the middle, gentlest peak. Ranked (peak_db id 822) — its coordinates were missing from peak_db (supplied from LoJ/14ers). Grabbed on the ridge between the other two.
 - **PT 13,179** — Class 2; the NE end, ~1.1 mi from 13,003, near Half Peak's south ridge.
 
 ---
@@ -138,9 +138,9 @@ Ascent GPX pulled for all three — PT 13,076 (pid 15336), Unnamed 13,003 (pid 3
 
 ## TL;DR
 
-- **Three peaks in Cuba Gulch** — PT 13,076 + Unnamed 13,003 + PT 13,179, in a ~2.3 mi Class 2 arc off the **Lake Fork (Lake City)** side.
-- **The plan:** Cuba Gulch TH (~9,540') → 13,076 → 13,003 → 13,179 ridge → out. **~11 mi, ~3,900 ft, Class 2.** A moderate day.
-- **13,003 = LiDAR soft-rank** (14ers "Unnamed 13003", LoJ 822) — not in peak_db, carried as an extra objective.
+- **Three ranked San Juan 13ers in Cuba Gulch** — PT 13,076 + PT 13,003 + PT 13,179, in a ~2.3 mi arc off the **Lake Fork (Lake City)** side.
+- **The plan:** Cuba Gulch TH (~9,540') → 13,076 → 13,003 → 13,179 ridge → out. **~11 mi, ~3,900 ft, Class 2** (13,003 itself is Class 1). A moderate day.
+- **13,003 is a ranked peak_db peak** (id 822) whose coordinates are *missing* from peak_db — a data gap to fix (lat 37.84968, lon −107.49465, 14ers id 10871).
 - **Confirmed combo** — done together in TRs across all three sources, and on Kyle's own "Cuba Gulch – 13076, 13003, 13179" track.
 - **Drive:** [5h 52m](https://www.google.com/maps/dir/?api=1&origin=1162+Peakview+Circle,+Boulder,+CO+80302&destination=37.8993,-107.4332) to the Cuba Gulch TH via Lake City — a long day or an overnight.
 - **Season:** July–September; rough road up high. Cell dead — carry an InReach.
