@@ -153,6 +153,25 @@ Net effect: one clean set of **neon-green summit pins** + a quiet **gray** wash 
 | Peakbagger | `#0066FF` blue |
 | Personal recordings (Kyle's GPS) | `#9933CC` purple — cycles per-track for multi-track GPX |
 
+> **Summit-marker dedup gotcha (Kyle, 2026-06-09):** `gpx_to_caltopo.py` dedupes
+> markers **account-wide** (it loads the `caltopo/*.json` regional dumps and skips
+> any marker within ~25 m of an existing one). So when a per-report research map is
+> built *after* the objective already exists on its regional map, the report map's
+> summit markers get **silently skipped** — the map ends up with trailhead/POI
+> markers but **no green summit peaks**. (Surfaced on the Trinchera group: its map had
+> only the Blue Lakes TH marker.) The PNG is unaffected — `make_overview_map.py`
+> draws `peaks_only.gpx` directly.
+> - **In the pipeline:** `build_report.py` adds an explicit summit-marker step after
+>   the CalTopo upload — `gpx_to_caltopo.py --gpx <slug>_peaks_only.gpx
+>   --marker-symbol peak --color #39FF14 --no-dedupe` — so research maps always carry
+>   their objectives.
+> - **Repairing an existing map:** `scripts/fix_summit_markers.py --slug <slug>`
+>   (dry-run) / `--apply`, or `--all --apply` for every report. Idempotent: deletes
+>   any marker within ~120 m of an objective summit, then re-adds exactly one
+>   `peak`/`#39FF14` marker per summit from `peaks_only.gpx`. Reads `caltopo_id` from
+>   the report frontmatter and objectives from `peaks.yml` (`objective_ids` +
+>   `extra_summits`). Skips reports lacking a `peaks.yml` or `caltopo_id`.
+>
 > **Implementation:**
 > - **New uploads:** `scripts/sync_to_regional.py` enforces the marker scheme (reuses `gpx_to_caltopo.py --marker-symbol`, default `point`).
 > - **Personal activity ingestion:** `scripts/ingest_activity.py` auto-classifies by region and applies the same marker rules; tracks cycle through the 13-color palette starting at purple.

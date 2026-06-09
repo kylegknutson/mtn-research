@@ -17,6 +17,10 @@ regional_map_id: 06AR6BF
 
 ---
 
+<!-- CLIMBERS_START -->
+**Other climbers:** Emily Sharpe — not yet · Shawn D Keil — not yet
+<!-- CLIMBERS_END -->
+
 ## Quick stats
 
 | | Telluride Peak | T 7 | T 8 |

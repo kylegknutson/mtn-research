@@ -112,6 +112,14 @@ def data_phase(args):
         m = re.search(r"caltopo\.com/m/(\w+)", ct.stdout or "")
         caltopo_id = m.group(1) if m else None
 
+    # Summit markers: gpx_to_caltopo dedupes markers account-wide, so the per-
+    # report map's summit markers get SKIPPED when they already exist in the
+    # regional map. Add them explicitly as peak/#39FF14 (--no-dedupe) so the
+    # research map always shows its objectives.
+    if caltopo_id:
+        run([SCRIPTS / "gpx_to_caltopo.py", "--gpx", str(gdir / f"{slug}_peaks_only.gpx"),
+             "--map-id", caltopo_id, "--marker-symbol", "peak", "--color", "#39FF14", "--no-dedupe"])
+
     if regional:
         run([SCRIPTS / "sync_to_regional.py", "--slug", slug, "--map-id", regional])
 
