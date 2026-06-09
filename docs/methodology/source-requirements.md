@@ -2,15 +2,27 @@
 
 **Multiple sources is a hard requirement.** If all three sources weren't confirmed logged-in and checked, the research isn't valid — redo it.
 
+> **ALWAYS all three — on EVERY question, not just report builds (Kyle, 2026-06-09):** 14ers.com + listsofjohn.com + peakbagger.com get checked every time, including quick/informational/one-off questions (access, ownership, conditions, "which peaks are X"). Do **not** shortcut to one or two sources because a question feels small. Origin: answered a Cielo Vista / private-land question from only 14ers + LoJ and skipped peakbagger — whose **"Ownership / Land"** field was the most on-point data (it stamps Purgatoire Peak "Private Land," confirms the northern Culebra peaks as "Pike & San Isabel NF").
+>
+> **For general/informational questions, also go beyond the three (Kyle, 2026-06-09):** for land ownership, ranch boundaries, access/permits, regulations, history, etc., pull in relevant outside web sources too — the landowner's own site (e.g. Cielo Vista Ranch), CPW / USFS, climbing forums, SummitPost — via WebSearch/WebFetch, **in addition to** the three core sites. The three are necessary, not always sufficient.
+
 > **HARD STOP on a logged-out source (Kyle, 2026-06-03):** if at any point you find a required source (14ers / LoJ / peakbagger) is **not logged in**, **stop right there and prompt Kyle to log in.** Do **not** build the report from the remaining sources and patch peakbagger later — a missing source means rebuilding the GPX collection, CalTopo map, and PNG once the data arrives, which wastes the whole pipeline. Pause, ask, wait for confirmation, then continue. (Supersedes the earlier "warn and continue / PB-in-chat" degrade-gracefully behavior.)
 
-## The three sources
+## The sources
+
+The three logged-in core sources, checked **every time**:
 
 | Source | Login (Kyle) | What it's good for |
 |---|---|---|
 | **14ers.com** | "letsgocu" | Route descriptions (when they exist), trip reports, per-peak GPX library |
 | **listsofjohn.com** | "letsgocu" | Peak stats (LiDAR elev, prominence, saddle), TRs with "Additional Peaks" header (combo detection), per-TR GPX |
-| **peakbagger.com** | "Kyle Knutson" | Ascent records with structured gain/distance/trailhead, ascent GPX tracks |
+| **peakbagger.com** | "Kyle Knutson" | Ascent records with structured gain/distance/trailhead, ascent GPX tracks; **"Ownership / Land"** field (NF vs "Private Land") |
+
+> **climb13ers.com — ALWAYS consult for any Colorado peak (Kyle, 2026-06-09):** for CO peaks it's a **required 4th source**, not optional. It's the canonical 13er-focused authority and often carries the access/trailhead/private-land detail the three core sites lack — e.g. its Cielo Vista trailhead page is what definitively resolved which Culebra-Range 13ers are on the ranch vs. public, and the Whiskey-Pass / Mariquita boundary. No login needed, **but it bot-blocks WebFetch/curl (HTTP 403) → fetch it via the browser MCP** (Playwright), per [[feedback-browser-tools]]. (Its companion `climb14ers`/route pages apply for 14ers.)
+
+| Source | Login | What it's good for |
+|---|---|---|
+| **climb13ers.com** | none (browser MCP only) | CO 13er route beta, trailhead + **access/ownership** detail, driving directions; required for every CO peak |
 
 ## Login verification — do this FIRST, every session
 
@@ -32,9 +44,9 @@ Cross-reference gain/distance across multiple TRs. A peak's "standard route gain
 
 ## The "Sources checked" footer
 
-**Every report must end with a line naming all three sites + the confirmed logged-in username**, e.g.:
+**Every report must end with a line naming all sites checked + the confirmed logged-in username** (and **climb13ers.com for any CO peak**), e.g.:
 
-> **Sources checked:** 14ers.com ✓ (logged in, "letsgocu") · listsofjohn.com ✓ (logged in, "letsgocu") · peakbagger.com ✓ (logged in, "Kyle Knutson")
+> **Sources checked:** 14ers.com ✓ (logged in, "letsgocu") · listsofjohn.com ✓ (logged in, "letsgocu") · peakbagger.com ✓ (logged in, "Kyle Knutson") · climb13ers.com ✓
 
 If any source isn't confirmed logged-in, the footer must say so, and the research is flagged incomplete.
 

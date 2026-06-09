@@ -71,6 +71,7 @@ nav:
   - Methodology:
     - Overview: methodology/index.md
     - Source requirements: methodology/source-requirements.md
+    - 'Access: Culebra / Cielo Vista': methodology/access-culebra-cielo-vista.md
     - CalTopo + PNG pipeline: methodology/caltopo-pipeline.md
     - Report template: methodology/report-template.md
     - Site conventions: methodology/conventions.md
