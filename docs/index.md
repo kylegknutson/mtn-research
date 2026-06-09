@@ -21,6 +21,7 @@ auto-generated from each report's frontmatter (`scripts/gen_index.py`).*
 | [Crestolita + Broken Hand Peak](peaks/crestolita_broken_hand.md) | Sangre de Cristo | 3h 58m | 3 | 6,400–7,100 ft | unclimbed |
 | [Chipeta Mountain](peaks/chipeta_mtn.md) | Sawatch | 4h 13m | 2 | 1,100–3,000 ft | unclimbed |
 | [Trinchera Group](peaks/trinchera_group.md) | Sangre de Cristo | 4h 14m | 2 | ~4,900–7,100 ft (full traverse) | unclimbed |
+| [Grizzly Pk E + PT 13,145 + Jenkins Mtn](peaks/grizzly_jenkins_group.md) | Sawatch | ~4h 15m | 2+ | ~4,800 ft (trio loop) · ~5,300–6,800 ft (GPX range) | unclimbed |
 | [Pearl Mountain + Oyster Peak](peaks/pearl_oyster.md) | Elk | 4h 22m | 2+ | ~4,300 ft | unclimbed |
 | [PT 13,557](peaks/pt_13557.md) | Sangre de Cristo | 4h 41m | 2 | ~3,540 ft | unclimbed |
 | [PT 13,155 Group](peaks/pt_13155_group.md) | San Juan | 5h 34m | 2 | 3,000–4,000 ft | unclimbed |
