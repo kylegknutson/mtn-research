@@ -60,8 +60,8 @@ These signals are encoded in `scripts/preflight.py` (`LOGIN_INDICATORS`).
 
 ## Resolving peaks: never silently drop coord-null rows (Kyle, 2026-06-09)
 
-**peak_db can contain a ranked peak with MISSING coordinates** (null lat/lon). As of 2026-06-09 that's true for 6 of the lowest-ranked 13ers: ids **822 (PT 13,003), 817 (PT 13,005), 825 (Peak 8), 839 (PT 13,002), 819 (PT 13,000), 652 (PT 13,159)**. The trap: most resolution/nearby code filters `if p['lat'] and p['lon']`, which **silently excludes these rows** — so a peak that *is* in the database looks "missing." This caused a wrong "not in peak_db" conclusion on PT 13,003.
+**peak_db can contain a ranked peak with MISSING coordinates** (null lat/lon). This happened with 6 of the lowest-ranked 13ers (ids 822/817/825/839/819/652) — **backfilled 2026-06-09, now 0 remaining** — but it can recur on newly-added peaks. The trap: most resolution/nearby code filters `if p['lat'] and p['lon']`, which **silently excludes such rows** — so a peak that *is* in the database looks "missing." This caused a wrong "not in peak_db" conclusion on PT 13,003.
 
-**Rule:** when resolving a named/numbered peak, match by **id / name / elevation FIRST, without the coord filter**, and only then check coords. If a matched peak has null coords, treat it as "in peak_db but needs coordinates" (look them up on LoJ/14ers), not "not in peak_db." *peak_db fix:* populate lat/lon + `fourteeners_id` for those 6 ids.
+**Rule:** when resolving a named/numbered peak, match by **id / name / elevation FIRST, without the coord filter**, and only then check coords. If a matched peak has null coords, treat it as "in peak_db but needs coordinates" (look them up on LoJ/14ers), not "not in peak_db."
 
 **Workaround in a report config** (until peak_db is fixed): carry the peak in `gpx/<slug>/peaks.yml` as `extra_summits: [{name, lat, lon[, ele_ft]}]` (coords from LoJ/14ers). `build_peak_gpx` adds them to `peaks_only`, and the summit-only-tracks filter (`make_overview_map` / `caltopo_mytracks` / `prune_caltopo_tracks`) counts them so their tracks aren't dropped.

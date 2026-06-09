@@ -1,12 +1,8 @@
-# Waypoint config — Cuba Gulch trio (PT 13,076 + Unnamed 13,003 + PT 13,179).
-objective_ids: [752, 639]        # PT 13,076 (752), PT 13,179 (639) — in peak_db
-
-# PT 13,003 IS a ranked peak_db peak (id 822) but its row is MISSING coordinates
-# (lat/lon null) — so it must be supplied here until peak_db id 822 is fixed
-# (lat 37.84968, lon -107.49465, fourteeners_id 10871). Carried via extra_summits
-# because the id->coord path is broken for it.
-extra_summits:
-  - {name: "Unnamed 13,003", lat: 37.84968, lon: -107.49465, ele_ft: 13003}
+# Waypoint config — Cuba Gulch trio (PT 13,076 + PT 13,003 + PT 13,179).
+# All three are ranked San Juan 13ers in peak_db. (PT 13,003 = id 822; its
+# coordinates were backfilled in peak_db on 2026-06-09, so it's a normal
+# objective now — no extra_summits workaround needed.)
+objective_ids: [752, 822, 639]   # PT 13,076 (752), PT 13,003 (822), PT 13,179 (639)
 
 nearby:
   include: false
