@@ -1,5 +1,6 @@
 ---
 image: maps/dolores_peak.png
+peak_ids: [508, 489]
 range: San Juan
 drive_time: "7h 30m"
 yds_class: "2"

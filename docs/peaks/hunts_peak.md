@@ -1,5 +1,6 @@
 ---
 image: maps/hunts_peak.png
+peak_ids: [748]
 range: Sangre de Cristo
 drive_time: "3h 37m"
 yds_class: "2"

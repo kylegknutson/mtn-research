@@ -136,9 +136,10 @@ def data_phase(args):
 
 
 def finalize_phase(args):
-    print("== finalize: inject climber status, regen index, run QA gates ==")
+    print("== finalize: inject climber status, regen index + peak map, run QA gates ==")
     run([SCRIPTS / "climber_status.py"])
     run([SCRIPTS / "gen_index.py"])
+    run([SCRIPTS / "gen_peak_map.py"])
     fails = []
     for chk in ("check_reports.py", "check_maps.py", "check_map_extents.py"):
         r = run([SCRIPTS / chk])

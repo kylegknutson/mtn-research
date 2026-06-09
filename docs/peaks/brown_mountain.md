@@ -1,5 +1,6 @@
 ---
 image: maps/brown_mountain.png
+peak_ids: [451]
 range: San Juan
 drive_time: "6h 21m"
 yds_class: "2"

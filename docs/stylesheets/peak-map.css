@@ -1,0 +1,28 @@
+/* Interactive peak map */
+#peak-map {
+  height: 560px;
+  width: 100%;
+  border-radius: 8px;
+  border: 1px solid var(--md-default-fg-color--lightest, #ddd);
+  z-index: 0;            /* keep below the Material header */
+}
+#peak-map.fullpage { height: calc(100vh - 220px); min-height: 480px; }
+
+.peakmap-legend {
+  background: rgba(255, 255, 255, 0.92);
+  padding: 5px 9px;
+  border-radius: 5px;
+  font-size: 0.78rem;
+  color: #222;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.25);
+  line-height: 1.4;
+}
+.peakmap-legend .dot {
+  display: inline-block; width: 11px; height: 11px; border-radius: 50%;
+  vertical-align: -1px; margin-right: 2px;
+}
+.peakmap-legend .dot.rep { background: #2ecc40; border: 2px solid #0a6e26; }
+.peakmap-legend .dot.ctx { background: #c4c4c4; border: 1px solid #777; }
+
+/* Leaflet popups: readable in dark mode too */
+.leaflet-popup-content { color: #222; }

@@ -2,6 +2,12 @@
 
 Personal research notes for Colorado peaks I'm working through. Each report covers route options, link-ups, conditions, trailheads, and trip-report references — distilled from public sources (14ers.com, climb13ers, Lists of John, blogs) and overlaid on CalTopo research maps.
 
+## Map
+
+Every ranked Colorado 13er/14er — **green = has a report** (click to open), gray = not yet. [Open the full-screen map →](peak-map.md)
+
+<div id="peak-map" data-root=""></div>
+
 ## Peaks
 
 *Sorted by drive time. Click a column header to re-sort. This table is

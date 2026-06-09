@@ -42,6 +42,7 @@ theme:
 
 nav:
   - Home: index.md
+  - Peak Map: peak-map.md
   - Architecture: architecture.md
   - Peaks:
     - Brown Mountain: peaks/brown_mountain.md
@@ -106,10 +107,19 @@ exclude_docs: |
   /index.*.md
   peaks/*.*.md
 
+extra_css:
+  - https://unpkg.com/leaflet@1.9.4/dist/leaflet.css
+  - https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css
+  - https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css
+  - stylesheets/peak-map.css
+
 extra_javascript:
   - javascripts/external-links-new-tab.js
   - https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js
   - javascripts/tablesort.js
+  - https://unpkg.com/leaflet@1.9.4/dist/leaflet.js
+  - https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js
+  - javascripts/peak-map.js
 
 # Don't fail builds on minor link issues — research notes have lots of external refs
 strict: false

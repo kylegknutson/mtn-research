@@ -1,6 +1,6 @@
 # Architecture & deployment
 
-**Last updated:** 2026-06-07
+**Last updated:** 2026-06-09
 
 ## What it is
 
@@ -158,6 +158,7 @@ It is **not** an app. It is **a static site fed by an iCloud-synced repo, with s
 - **Report flavors.** Single-peak · day-trip (multi-peak, one outing) · multi-day backpack (`docs/trips/`).
 - **Narrow-downs as artifacts.** Saved to `docs/lists/` (snapshot + re-runnable criteria) rather than chat-only. *(Planned — see improvement-plan.)*
 - **Site polish.** Flatirons favicon + home logo; per-report Open Graph link previews (own overview map as the card) via `overrides/main.html`; external links open in a new tab.
+- **Interactive peak map (home + `/peak-map/`).** `scripts/gen_peak_map.py` reads every ranked **Colorado** peak from peak_db and flags which have a report (via each `gpx/<slug>/peaks.yml` `objective_ids`, or a `peak_ids:` frontmatter fallback), writing `docs/data/peaks.json` (committed — the static deploy serves it; CI never touches peak_db). A Leaflet + markercluster map (`docs/javascripts/peak-map.js`, CDN libs in `mkdocs.yml`) shows reported peaks green/clickable and all other ranked 13ers/14ers as clustered gray context. Regenerated in `build_report --finalize`.
 
 ## What's reproducible vs. authoritative
 
