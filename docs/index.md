@@ -4,7 +4,7 @@ Personal research notes for Colorado peaks I'm working through. Each report cove
 
 ## Map
 
-Every ranked Colorado 13er/14er — **green = has a report** (click to open), gray = not yet. [Open the full-screen map →](peak-map.md)
+Every ranked Colorado 13er/14er — **green peak = has a report** (click it to open), **grey = climbed**, **red = still to do**. [Open the full-screen map →](peak-map.md)
 
 <div id="peak-map" data-root=""></div>
 

@@ -80,11 +80,12 @@ def main():
     args = ap.parse_args()
 
     sys.path.insert(0, PEAKDB)
-    from peak_db_client import peaks as _peaks
+    from peak_db_client import peaks as _peaks, ascents as _ascents
 
     reports = id_to_report()
+    climbed = {a["peak_id"] for a in _ascents() if a.get("peak_id") is not None}
     feats = []
-    n_rep = n_14 = 0
+    n_rep = n_14 = n_climbed = n_todo = 0
     for p in _peaks():
         if not p.get("ranked"):
             continue
@@ -96,6 +97,7 @@ def main():
         ft = p.get("elevation_ft") or 0
         is14 = ft >= 14000
         rep = reports.get(p["id"])
+        is_climbed = p["id"] in climbed
         rec = {
             "id": p["id"],
             "n": (p.get("display_name") or "").strip().strip('"'),
@@ -105,9 +107,16 @@ def main():
             "r": p.get("co_rank"),
             "f": 1 if is14 else 0,
         }
+        # status precedence: report (green) > climbed (grey) > todo (red)
         if rep:
             rec["u"], rec["t"] = rep
-            n_rep += 1
+            rec["s"] = "rep"; n_rep += 1
+        elif is_climbed:
+            rec["s"] = "done"; n_climbed += 1
+        else:
+            rec["s"] = "todo"; n_todo += 1
+        if is_climbed:
+            rec["c"] = 1
         if is14:
             n_14 += 1
         feats.append(rec)
@@ -116,7 +125,8 @@ def main():
     payload = {
         "generated": date.today().isoformat(),
         "counts": {"total": len(feats), "fourteeners": n_14,
-                   "with_report": n_rep, "reports": len(set(id(r) for r in reports.values()))},
+                   "with_report": n_rep, "climbed": n_climbed, "todo": n_todo,
+                   "reports": len(set(id(r) for r in reports.values()))},
         "peaks": feats,
     }
     text = json.dumps(payload, separators=(",", ":"), ensure_ascii=False)
