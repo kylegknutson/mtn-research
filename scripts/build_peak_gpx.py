@@ -106,6 +106,13 @@ def main():
         peak_wpts.append({"name": label, "lat": p["lat"], "lon": p["lon"],
                           "ele_ft": p["elevation_ft"], "sym": "peak"})
 
+    # extra summits not in peak_db — LiDAR-dropped soft-ranks still listed on
+    # 14ers/LoJ (e.g. "Unnamed 13003"). Given as {name, lat, lon[, ele_ft]}.
+    for ex in (cfg.get("extra_summits") or []):
+        objs.append({"lat": ex["lat"], "lon": ex["lon"]})
+        peak_wpts.append({"name": f'{ex["name"]} (UNCLIMBED)', "lat": ex["lat"],
+                          "lon": ex["lon"], "ele_ft": ex.get("ele_ft"), "sym": "peak"})
+
     # nearby unclimbed ranked neighbors
     nb = cfg.get("nearby") or {}
     if nb.get("include"):

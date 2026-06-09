@@ -78,12 +78,14 @@ def main():
     if not map_id:
         sys.exit("need --map-id or --slug with a caltopo_id in its report")
 
+    extra = []
     if args.objective_ids:
         ids = [int(x) for x in args.objective_ids.split(",") if x.strip()]
     else:
         cfg = yaml.safe_load((ROOT / "gpx" / args.slug / "peaks.yml").read_text())
         ids = cfg.get("objective_ids", [])
-    obj = objective_summits(ids)
+        extra = [(e["lat"], e["lon"]) for e in (cfg.get("extra_summits") or [])]
+    obj = objective_summits(ids) + extra
     if not obj:
         sys.exit(f"no objective summits resolved for ids {ids}")
 

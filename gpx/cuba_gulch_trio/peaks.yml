@@ -1,0 +1,13 @@
+# Waypoint config — Cuba Gulch trio (PT 13,076 + Unnamed 13,003 + PT 13,179).
+objective_ids: [752, 639]        # PT 13,076 (752), PT 13,179 (639) — in peak_db
+
+# 13,003 is a LiDAR-dropped soft-rank: still on 14ers ("Unnamed 13003", 581/583)
+# and LoJ (peak 822), but not in peak_db. Carried as an extra (non-peak_db) summit.
+extra_summits:
+  - {name: "Unnamed 13,003", lat: 37.84968, lon: -107.49465, ele_ft: 13003}
+
+nearby:
+  include: false
+
+landmarks:
+  - {name: "Cuba Gulch TH (Lake Fork side)", lat: 37.8993, lon: -107.4332, ele_ft: 9538, kind: trailhead}

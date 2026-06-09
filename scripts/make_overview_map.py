@@ -62,13 +62,16 @@ def objective_summits(slug):
     try:
         cfg = yaml.safe_load((Path(__file__).parent.parent / "gpx" / slug / "peaks.yml").read_text())
         ids = cfg.get("objective_ids") or []
-        if not ids:
+        extra = cfg.get("extra_summits") or []
+        if not ids and not extra:
             return None
-        if PEAKDB_PATH not in sys.path:
-            sys.path.insert(0, PEAKDB_PATH)
-        from peak_db_client import peaks as _peaks
-        by = {p["id"]: p for p in _peaks()}
-        out = [(by[i]["lon"], by[i]["lat"]) for i in ids if i in by]
+        out = [(e["lon"], e["lat"]) for e in extra]   # non-peak_db summits
+        if ids:
+            if PEAKDB_PATH not in sys.path:
+                sys.path.insert(0, PEAKDB_PATH)
+            from peak_db_client import peaks as _peaks
+            by = {p["id"]: p for p in _peaks()}
+            out += [(by[i]["lon"], by[i]["lat"]) for i in ids if i in by]
         return out or None
     except Exception:
         return None

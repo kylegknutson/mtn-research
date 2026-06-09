@@ -23,6 +23,7 @@ auto-generated from each report's frontmatter (`scripts/gen_index.py`).*
 | [Pearl Mountain + Oyster Peak](peaks/pearl_oyster.md) | Elk | 4h 22m | 2+ | ~4,300 ft | unclimbed |
 | [PT 13,557](peaks/pt_13557.md) | Sangre de Cristo | 4h 41m | 2 | ~3,540 ft | unclimbed |
 | [PT 13,155 Group](peaks/pt_13155_group.md) | San Juan | 5h 34m | 2 | 3,000–4,000 ft | unclimbed |
+| [Cuba Gulch Trio](peaks/cuba_gulch_trio.md) | San Juan | 5h 52m | 2 | ~3,900 ft (clean trio) | unclimbed |
 | [Telluride Peak Group](peaks/telluride_t7_t8.md) | San Juan | 6h 19m | 2–3 | ~4,000 ft | unclimbed |
 | [Brown Mountain](peaks/brown_mountain.md) | San Juan | 6h 21m | 2 | 1,600–4,380 ft | unclimbed |
 | [Dolores Peak + Middle Peak](peaks/dolores_middle_peak.md) | San Juan | 7h 30m | 2 | ~4,000 ft | unclimbed |

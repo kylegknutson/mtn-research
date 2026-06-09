@@ -31,10 +31,14 @@ import yaml
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, "/Users/kyleknutson/Library/Mobile Documents/com~apple~CloudDocs/shared/peak_db")
 
+# RELIABLE per-site login signals (Kyle, 2026-06-09). Check a PERSONALIZED
+# element via same-origin fetch — NOT visible "log in/out" text, which renders
+# differently per page and false-negatives. Always fetch the page below (from
+# that site's own origin — cross-origin fetch fails) and test for the signal.
 LOGIN_INDICATORS = {
-    "14ers.com":        'a "Log Out" link present (and your username, e.g. "Basin", top-right)',
-    "listsofjohn.com":  'NO "log in to view ascents" text on a peak page (logged-in shows your ascents)',
-    "peakbagger.com":   'on the HOME page (Default.aspx): "Logged in: <name>" and/or a personalized "My Home Page" → climber.aspx?cid=<id> link. The cid link is the reliable signal (the "Logged in:" string and the always-present "Log In" anchor are both unreliable via fetch / on peak pages).',
+    "14ers.com":        'fetch https://www.14ers.com/ → an <a href> matching "ucp.php?mode=logout" exists (logged-in only). Secondary: username "Basin" in the HTML.',
+    "listsofjohn.com":  'fetch any peak page (e.g. /peak/468) → the text "log in to view ascents" is ABSENT (it only renders when logged OUT).',
+    "peakbagger.com":   'fetch https://peakbagger.com/Default.aspx → an <a href> matching "climber.aspx?cid=<digits>" exists (your personalized My-Home link; logged-in only). Do NOT rely on the "Logged in:" string or the always-present "Log In" anchor.',
 }
 
 

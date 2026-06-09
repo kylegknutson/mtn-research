@@ -47,3 +47,17 @@ If any source isn't confirmed logged-in, the footer must say so, and the researc
 - Don't conclude "no 14ers route description = no data" — TRs and GPX are still data.
 - Don't substitute web search snippets or general knowledge for the three sources.
 - Don't pause to ask for direction every time a route description is missing — that's expected; dig into TRs instead.
+
+## Checking login reliably (Kyle, 2026-06-09)
+
+Visible "log in / log out" **text** is unreliable — it renders differently per page and false-negatives (this cost a wasted hard-stop). Check a **personalized element via same-origin fetch** instead (cross-origin fetch fails, so be on that site's origin):
+
+- **14ers.com** — fetch `https://www.14ers.com/`; logged in iff an `<a href>` matches `ucp.php?mode=logout` (secondary: username, e.g. "Basin", in the HTML).
+- **listsofjohn.com** — fetch any peak page (e.g. `/peak/468`); logged in iff the text **"log in to view ascents" is ABSENT** (it only renders when logged out).
+- **peakbagger.com** — fetch `https://peakbagger.com/Default.aspx`; logged in iff an `<a href>` matches `climber.aspx?cid=<digits>` (your personalized My-Home link). Do **not** trust the "Logged in:" string or the always-present "Log In" anchor.
+
+These signals are encoded in `scripts/preflight.py` (`LOGIN_INDICATORS`).
+
+## Non-peak_db (LiDAR-dropped) objectives
+
+A peak can be a valid objective but **not in peak_db** — a LiDAR re-rank can drop a soft-rank below the ranked-prominence threshold while 14ers/LoJ still list it (e.g. "Unnamed 13003", LoJ 822). Carry these in `gpx/<slug>/peaks.yml` as `extra_summits: [{name, lat, lon[, ele_ft]}]`. `build_peak_gpx` adds them to `peaks_only`, and the summit-only-tracks filter (`make_overview_map` / `caltopo_mytracks` / `prune_caltopo_tracks`) counts them, so their tracks aren't dropped.

@@ -118,6 +118,7 @@ def main():
         from peak_db_client import peaks as _pks
         _by = {p["id"]: p for p in _pks()}
         obj_summits = [(_by[i]["lat"], _by[i]["lon"]) for i in cfg2.get("objective_ids", []) if i in _by]
+        obj_summits += [(e["lat"], e["lon"]) for e in (cfg2.get("extra_summits") or [])]
     except Exception as e:
         print(f"⚠ could not load objective summits ({e}); summit filter off")
     STOL_LAT, STOL_LON = 0.5 / 69.0, 0.5 / 53.0   # ½ mi keeper threshold
