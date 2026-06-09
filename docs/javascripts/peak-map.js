@@ -88,10 +88,14 @@
       climbed.addTo(map); todo.addTo(map); reported.addTo(map);
 
       var c = d.counts || {};
+      function tri(fill, stroke) {
+        return '<span style="color:' + fill + ';-webkit-text-stroke:0.6px ' + stroke +
+               ';text-shadow:0 0 1px ' + stroke + '">▲</span>';
+      }
       var overlays = {};
-      overlays["▲ Reported (" + (c.with_report || 0) + ")"] = reported;
-      overlays["▲ To do (" + (c.todo || 0) + ")"] = todo;
-      overlays["▲ Climbed (" + (c.climbed || 0) + ")"] = climbed;
+      overlays[tri("#39FF14", "#0b3d0b") + " Reported (" + (c.with_report || 0) + ")"] = reported;
+      overlays[tri("#e53935", "#7a1414") + " To do (" + (c.todo || 0) + ")"] = todo;
+      overlays[tri("#b8b8b8", "#5b5b5b") + " Climbed (" + (c.climbed || 0) + ")"] = climbed;
       L.control.layers({ "Topo": topo, "Light": light }, overlays,
         { position: "topright", collapsed: false }).addTo(map);
 
