@@ -109,14 +109,14 @@ exclude_docs: |
 
 extra_css:
   - https://unpkg.com/leaflet@1.9.4/dist/leaflet.css
-  - stylesheets/peak-map.css
+  - stylesheets/peak-map.css?v=3
 
 extra_javascript:
   - javascripts/external-links-new-tab.js
   - https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js
   - javascripts/tablesort.js
   - https://unpkg.com/leaflet@1.9.4/dist/leaflet.js
-  - javascripts/peak-map.js
+  - javascripts/peak-map.js?v=3
 
 # Don't fail builds on minor link issues — research notes have lots of external refs
 strict: false
