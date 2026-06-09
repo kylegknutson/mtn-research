@@ -76,6 +76,34 @@ def objective_summits(slug):
     except Exception:
         return None
 
+
+def ranked_summits_in_view(lon_min, lon_max, lat_min, lat_max, exclude_coords):
+    """Every RANKED peak_db summit whose coords fall inside the view bbox, minus
+    the objective summits (already drawn gold). Returns [(lon, lat, name), …].
+
+    Used to label *context* summits — the other ranked 13ers/14ers visible in the
+    frame — so the PNG matches the CalTopo regional maps (which carry every ranked
+    summit). Queried AFTER the bbox is fixed, so these never expand the frame."""
+    try:
+        if PEAKDB_PATH not in sys.path:
+            sys.path.insert(0, PEAKDB_PATH)
+        from peak_db_client import peaks as _peaks
+    except Exception:
+        return []
+    out = []
+    for p in _peaks():
+        if not p.get("ranked"):
+            continue
+        lat, lon = p.get("lat"), p.get("lon")
+        if lat is None or lon is None:
+            continue
+        if not (lon_min <= lon <= lon_max and lat_min <= lat <= lat_max):
+            continue
+        if any(abs(lon - ol) < 1e-3 and abs(lat - ola) < 1e-3 for ol, ola in exclude_coords):
+            continue   # this is an objective — already drawn gold
+        out.append((lon, lat, p.get("display_name") or ""))
+    return out
+
 COLOR_PUBLIC   = (204, 51,  51,  220)   # red (fallback / unclassified public)
 COLOR_KYLE     = (0,   102, 255, 180)   # blue
 
@@ -105,7 +133,8 @@ def track_source(path) -> str:
     if "loj" in n:
         return "loj"
     return "public"
-COLOR_PEAK     = (255, 204, 0,   255)   # gold
+COLOR_PEAK     = (255, 204, 0,   255)   # gold — objective summit(s)
+COLOR_PEAK_CTX = (190, 190, 190, 255)   # silver-gray — other ranked summits in view
 COLOR_DRIVE_IN = (153, 51,  204, 220)   # purple
 COLOR_TH       = (255, 102, 0,   220)   # orange
 COLOR_DRIVE    = (0,   0,   0,   235)   # black — the driving route between camps
@@ -324,13 +353,14 @@ def draw_label(draw: ImageDraw.ImageDraw, ix: int, iy: int, text: str, font):
 
 # ── legend ────────────────────────────────────────────────────────────────────
 
-def draw_legend(img: Image.Image, public_sources, has_kyle, has_peak, has_drive_in, has_th, font, has_drive_route=False):
+def draw_legend(img: Image.Image, public_sources, has_kyle, has_peak, has_drive_in, has_th, font, has_drive_route=False, has_context_peak=False):
     items = []
     for src in (public_sources or []):
         items.append((f"{SOURCE_LABELS.get(src, src)} routes", SOURCE_COLORS.get(src, COLOR_PUBLIC)[:3]))
     if has_kyle:    items.append(("Imported tracks (Kyle)", COLOR_KYLE[:3]))
     if has_drive_route: items.append(("Driving route (road)",  COLOR_DRIVE[:3]))
-    if has_peak:    items.append(("Summit ★",               COLOR_PEAK[:3]))
+    if has_peak:    items.append(("Objective summit ★",      COLOR_PEAK[:3]))
+    if has_context_peak: items.append(("Other ranked summit ★", COLOR_PEAK_CTX[:3]))
     if has_drive_in:items.append(("Drive-in / landmark ▲", COLOR_DRIVE_IN[:3]))
     if has_th:      items.append(("Trailhead ■",            COLOR_TH[:3]))
     if not items:   return
@@ -352,7 +382,8 @@ def draw_legend(img: Image.Image, public_sources, has_kyle, has_peak, has_drive_
 
 # ── main ──────────────────────────────────────────────────────────────────────
 
-def build_map(slug: str, out_path: Path, zoom: int | None = None, title: str = ""):
+def build_map(slug: str, out_path: Path, zoom: int | None = None, title: str = "",
+              context_summits: bool = True):
     gpx_dir  = GPX_ROOT / slug
     kyle_dir = gpx_dir / "_kyle_existing"
 
@@ -363,7 +394,7 @@ def build_map(slug: str, out_path: Path, zoom: int | None = None, title: str = "
     public_files = list(gpx_dir.glob("*.gpx"))
     kyle_files   = list(kyle_dir.glob("*.gpx")) if kyle_dir.exists() else []
 
-    buckets = {"track_public": [], "track_kyle": [], "peak": [], "drive_in": [], "th": [], "drive_route": []}
+    buckets = {"track_public": [], "track_kyle": [], "peak": [], "context_peak": [], "drive_in": [], "th": [], "drive_route": []}
     all_lons, all_lats = [], []
     track_lons, track_lats = [], []   # tracks only — preferred bbox driver when present
     peak_lons, peak_lats = [], []     # peak markers — fallback bbox driver when no tracks
@@ -497,6 +528,21 @@ def build_map(slug: str, out_path: Path, zoom: int | None = None, title: str = "
     lat_min = min(_by) - lat_span * pad
     lat_max = max(_by) + lat_span * pad
 
+    # Context summits: every OTHER ranked 13er/14er inside the (now-fixed) frame,
+    # so the PNG matches the CalTopo regional maps. Queried after the bbox so they
+    # never expand it — only what's already "in view" gets a marker.
+    if context_summits:
+        obj_coords = objective_summits(slug) or []
+        ctx = ranked_summits_in_view(lon_min, lon_max, lat_min, lat_max, obj_coords)
+        # don't double-mark a summit already drawn from peaks_only.gpx (gold)
+        obj_pts = {(round(l, 4), round(a, 4)) for l, a, _ in buckets["peak"]}
+        for lon, lat, name in ctx:
+            if (round(lon, 4), round(lat, 4)) in obj_pts:
+                continue
+            buckets["context_peak"].append((lon, lat, name))
+        if buckets["context_peak"]:
+            print(f"Context summits in view: {len(buckets['context_peak'])} ranked")
+
     # Auto zoom: target ~400 px across the span in the output image
     if zoom is None:
         lon_span_padded = lon_max - lon_min
@@ -557,17 +603,37 @@ def build_map(slug: str, out_path: Path, zoom: int | None = None, title: str = "
 
     # ── draw markers ─────────────────────────────────────────────────────────
     marker_cfg = {
-        "drive_in": (COLOR_DRIVE_IN, draw_triangle, 7),
-        "th":       (COLOR_TH,       draw_square,   6),
-        "peak":     (COLOR_PEAK,     draw_star,     10),
+        "drive_in":     (COLOR_DRIVE_IN, draw_triangle, 7),
+        "th":           (COLOR_TH,       draw_square,   6),
+        "context_peak": (COLOR_PEAK_CTX, draw_star,     7),
+        "peak":         (COLOR_PEAK,     draw_star,     10),
     }
-    for kind in ("drive_in", "th", "peak"):
+    # In a dense/large frame, labelling every ranked summit makes label soup.
+    # Mark them all, but only LABEL the nearest N to the objective; the rest get
+    # just a star (Kyle, 2026-06-09).
+    MAX_CONTEXT_LABELS = 12
+    label_context = set()   # ids (lon,lat) of context summits that get a text label
+    if buckets["context_peak"]:
+        if buckets["peak"]:
+            oc_lon = sum(l for l, _, _ in buckets["peak"]) / len(buckets["peak"])
+            oc_lat = sum(a for _, a, _ in buckets["peak"]) / len(buckets["peak"])
+        else:
+            oc_lon = (lon_min + lon_max) / 2
+            oc_lat = (lat_min + lat_max) / 2
+        ranked_by_dist = sorted(
+            buckets["context_peak"],
+            key=lambda t: (t[0] - oc_lon) ** 2 + (t[1] - oc_lat) ** 2)
+        for lon, lat, _ in ranked_by_dist[:MAX_CONTEXT_LABELS]:
+            label_context.add((lon, lat))
+
+    # context summits first, objective(s) last so the gold star/label sits on top
+    for kind in ("drive_in", "th", "context_peak", "peak"):
         color, draw_fn, size = marker_cfg[kind]
         for lon, lat, name in buckets[kind]:
             px, py = lonlat_to_px(lon, lat, zoom)
             ix, iy = px_to_img(px, py, origin_px, origin_py, scale_x, scale_y, IMG_H_PX)
             draw_fn(draw, ix, iy, size, color)
-            if name:
+            if name and (kind != "context_peak" or (lon, lat) in label_context):
                 font = font_lg if kind == "peak" else font_sm
                 draw_label(draw, ix, iy, name, font)
 
@@ -590,7 +656,8 @@ def build_map(slug: str, out_path: Path, zoom: int | None = None, title: str = "
             present_sources.append(src)
     draw_legend(img, present_sources, bool(buckets["track_kyle"]),
                 bool(buckets["peak"]), bool(buckets["drive_in"]), bool(buckets["th"]), font_sm,
-                has_drive_route=bool(buckets["drive_route"]))
+                has_drive_route=bool(buckets["drive_route"]),
+                has_context_peak=bool(buckets["context_peak"]))
 
     # ── attribution ──────────────────────────────────────────────────────────
     attr = "Map tiles © OpenTopoMap (CC-BY-SA) | SRTM"
@@ -610,10 +677,13 @@ def main():
     parser.add_argument("--out",   help="Output path (default: maps/{slug}.png)")
     parser.add_argument("--zoom",  type=int, default=None, help="Override zoom level (default: auto)")
     parser.add_argument("--title", default="", help="Map title")
+    parser.add_argument("--no-context-summits", action="store_true",
+                        help="don't mark other ranked 13ers/14ers visible in the frame")
     args = parser.parse_args()
 
     out = Path(args.out) if args.out else MAPS_DIR / f"{args.slug}.png"
-    build_map(slug=args.slug, out_path=out, zoom=args.zoom, title=args.title)
+    build_map(slug=args.slug, out_path=out, zoom=args.zoom, title=args.title,
+              context_summits=not args.no_context_summits)
 
 
 if __name__ == "__main__":

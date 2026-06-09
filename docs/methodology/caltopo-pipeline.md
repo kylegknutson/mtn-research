@@ -195,4 +195,22 @@ The recurring failure mode: distant tracks (a TR where the peak was a minor add 
 
 If a PNG comes out distorted or over-zoomed, the fix is in `make_overview_map.py`'s bbox logic, **not** the GPX inputs.
 
+## PNG context summits — every ranked peak in view gets a marker
+
+The PNG marks **every ranked 13er/14er that falls inside the frame**, not just the
+report's objectives (Kyle, 2026-06-09) — matching the CalTopo regional maps, which
+carry all ranked summits.
+
+- **Objective summits** (from `peaks_only.gpx`): **gold** star, always labeled.
+- **Other ranked summits in view** (queried from peak_db *after* the bbox is fixed, so
+  they never expand the frame): **silver-gray** star. To avoid label soup in dense or
+  oversized frames, only the **nearest ~12 to the objective** are labeled; the rest get
+  just a star (`MAX_CONTEXT_LABELS` in `make_overview_map.py`).
+- Disable with `--no-context-summits` if a particular map needs to stay minimal.
+
+> Note: a frame that pulls in *dozens* of ranked summits (e.g. crestolita_broken_hand
+> caught 62) is usually a symptom of an **oversized bbox** — a long in-scope track
+> dragging the extent — not a context-summit problem. Tighten the bbox, don't disable
+> context summits.
+
 > **Pending feature:** PNG track lines are currently all rendered red. Target is to color them by source (LoJ/14ers/peakbagger) like the CalTopo map, and to add automated map-QA tests (distortion / missing-track / blank-tile / aspect-ratio checks) that gate deploys.
