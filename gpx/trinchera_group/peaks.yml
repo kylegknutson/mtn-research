@@ -1,0 +1,14 @@
+# Waypoint config — trinchera_group (scaffold_report.py)
+objective_ids:
+- 302
+- 610
+- 329
+- 454
+nearby:
+  include: false
+landmarks:
+- name: Blue Lakes TH (Cuchara side)
+  lat: 37.31247
+  lon: -105.13871
+  kind: trailhead
+  ele_ft: 10500

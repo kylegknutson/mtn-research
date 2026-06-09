@@ -20,6 +20,7 @@ auto-generated from each report's frontmatter (`scripts/gen_index.py`).*
 | [Star Peak Group](peaks/star_peak_group.md) | Elk | 3h 40m | 2 | 4,300 ft (Star+Taylor) — up to ~8,000 ft (all three) | unclimbed |
 | [Crestolita + Broken Hand Peak](peaks/crestolita_broken_hand.md) | Sangre de Cristo | 3h 58m | 3 | 6,400–7,100 ft | unclimbed |
 | [Chipeta Mountain](peaks/chipeta_mtn.md) | Sawatch | 4h 13m | 2 | 1,100–3,000 ft | unclimbed |
+| [Trinchera Group](peaks/trinchera_group.md) | Sangre de Cristo | 4h 14m | 2 | ~4,900–7,100 ft (full traverse) | unclimbed |
 | [Pearl Mountain + Oyster Peak](peaks/pearl_oyster.md) | Elk | 4h 22m | 2+ | ~4,300 ft | unclimbed |
 | [PT 13,557](peaks/pt_13557.md) | Sangre de Cristo | 4h 41m | 2 | ~3,540 ft | unclimbed |
 | [PT 13,155 Group](peaks/pt_13155_group.md) | San Juan | 5h 34m | 2 | 3,000–4,000 ft | unclimbed |
