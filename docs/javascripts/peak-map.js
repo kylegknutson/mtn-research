@@ -1,7 +1,8 @@
-/* Interactive peak map — every ranked CO 13er/14er, by status:
-     green CalTopo peak icon = has a report (click -> report)
-     grey dot              = already climbed
-     red dot               = unclimbed, no report yet
+/* Interactive peak map — every ranked CO 13er/14er as a CalTopo-style peak icon,
+   colored by status:
+     green (#39FF14) = has a report   (hover = peak + report name; click -> report)
+     red   (#e53935) = unclimbed, no report yet
+     grey  (#b8b8b8) = already climbed
    Data: scripts/gen_peak_map.py -> docs/data/peaks.json
    Paths resolve from this script's own URL, so they work on any page and survive
    Material instant nav. */
@@ -12,19 +13,21 @@
     return s ? s.src.replace(/javascripts\/peak-map\.js(\?.*)?$/, "") : "";
   })();
 
-  // CalTopo-style green peak marker (neon green #39FF14 fill, dark outline).
-  var PEAK_ICON = null;
-  function peakIcon() {
-    if (!PEAK_ICON && typeof L !== "undefined") {
-      PEAK_ICON = L.divIcon({
+  // Cache one divIcon per (color,size) — reused across all markers of a status.
+  var ICONS = {};
+  function peakIcon(key, fill, stroke, w) {
+    if (!ICONS[key] && typeof L !== "undefined") {
+      var h = Math.round(w * 0.92);
+      ICONS[key] = L.divIcon({
         className: "peak-marker",
-        html: '<svg width="24" height="22" viewBox="0 0 24 22" aria-hidden="true">' +
-              '<path d="M12 2 L22.5 20.5 L1.5 20.5 Z" fill="#39FF14" stroke="#0b3d0b" ' +
-              'stroke-width="2.5" stroke-linejoin="round"/></svg>',
-        iconSize: [24, 22], iconAnchor: [12, 20], popupAnchor: [0, -18]
+        html: '<svg width="' + w + '" height="' + h + '" viewBox="0 0 24 22" aria-hidden="true">' +
+              '<path d="M12 2 L22.5 20.5 L1.5 20.5 Z" fill="' + fill + '" stroke="' + stroke +
+              '" stroke-width="2.5" stroke-linejoin="round"/></svg>',
+        iconSize: [w, h], iconAnchor: [w / 2, h - 1],
+        popupAnchor: [0, -h + 2], tooltipAnchor: [0, -h + 4]
       });
     }
-    return PEAK_ICON;
+    return ICONS[key];
   }
 
   function init() {
@@ -43,39 +46,42 @@
     topo.addTo(map);
     map.setView([39.0, -106.3], 7);
 
-    var canvas = L.canvas({ padding: 0.5 });   // fast rendering for the dot layers
-
     fetch(BASE + "data/peaks.json").then(function (r) { return r.json(); }).then(function (d) {
       var reported = L.layerGroup();
       var climbed = L.layerGroup();
       var todo = L.layerGroup();
       var allBounds = [];
 
-      function meta(p) {
+      function info(p) {
         return "<b>" + p.n + "</b> " + (p.ft ? p.ft.toLocaleString() + "'" : "") +
           "<br>" + (p.f ? "14er" : "13er") + (p.r ? " · CO rank " + p.r : "") +
           "<br><span style='color:#666'>" + p.rng + "</span>";
       }
+      function esc(s) { return (s || "").replace(/</g, "&lt;"); }
 
       d.peaks.forEach(function (p) {
         allBounds.push([p.lat, p.lon]);
+        var icon, layer, tip, popupExtra;
         if (p.s === "rep") {
-          var url = BASE + p.u;
-          var m = L.marker([p.lat, p.lon], { icon: peakIcon(), title: p.n + " — report" });
-          m.bindPopup(meta(p) + "<br><a href='" + url + "'><b>Open report →</b></a>");
-          m.on("click", function () { /* popup opens; link inside navigates */ });
-          m.addTo(reported);
+          icon = peakIcon("rep", "#39FF14", "#0b3d0b", 24);
+          layer = reported;
+          tip = "<b>" + esc(p.n) + "</b><br><span style='color:#2a7d2a'>▸ " + esc(p.t) + "</span>";
+          popupExtra = "<br><a href='" + BASE + p.u + "'><b>Open report →</b></a>";
         } else if (p.s === "done") {
-          L.circleMarker([p.lat, p.lon], {
-            renderer: canvas, radius: p.f ? 4.5 : 3.5,
-            color: "#5b5b5b", weight: 1, fillColor: "#9e9e9e", fillOpacity: 0.75
-          }).bindPopup(meta(p) + "<br><i style='color:#777'>climbed ✓</i>").addTo(climbed);
+          icon = peakIcon("done", "#b8b8b8", "#5b5b5b", 15);
+          layer = climbed;
+          tip = "<b>" + esc(p.n) + "</b> · climbed ✓";
+          popupExtra = "<br><i style='color:#777'>climbed ✓</i>";
         } else {
-          L.circleMarker([p.lat, p.lon], {
-            renderer: canvas, radius: p.f ? 5 : 4,
-            color: "#8e1b1b", weight: 1, fillColor: "#e53935", fillOpacity: 0.85
-          }).bindPopup(meta(p) + "<br><i style='color:#b00'>no report yet</i>").addTo(todo);
+          icon = peakIcon("todo", "#e53935", "#7a1414", 19);
+          layer = todo;
+          tip = "<b>" + esc(p.n) + "</b> · no report yet";
+          popupExtra = "<br><i style='color:#b00'>no report yet</i>";
         }
+        var m = L.marker([p.lat, p.lon], { icon: icon, riseOnHover: true });
+        m.bindTooltip(tip, { direction: "top", opacity: 0.95 });
+        m.bindPopup(info(p) + popupExtra);
+        m.addTo(layer);
       });
 
       // draw order: climbed (bottom) -> todo -> reported (top)
@@ -84,8 +90,8 @@
       var c = d.counts || {};
       var overlays = {};
       overlays["▲ Reported (" + (c.with_report || 0) + ")"] = reported;
-      overlays["● To do (" + (c.todo || 0) + ")"] = todo;
-      overlays["● Climbed (" + (c.climbed || 0) + ")"] = climbed;
+      overlays["▲ To do (" + (c.todo || 0) + ")"] = todo;
+      overlays["▲ Climbed (" + (c.climbed || 0) + ")"] = climbed;
       L.control.layers({ "Topo": topo, "Light": light }, overlays,
         { position: "topright", collapsed: false }).addTo(map);
 
@@ -95,9 +101,9 @@
       lg.onAdd = function () {
         var div = L.DomUtil.create("div", "peakmap-legend");
         div.innerHTML =
-          "<span class='pk'></span> Has report &nbsp; " +
-          "<span class='dot todo'></span> To do &nbsp; " +
-          "<span class='dot done'></span> Climbed";
+          "<span class='pk rep'></span> Has report &nbsp; " +
+          "<span class='pk todo'></span> To do &nbsp; " +
+          "<span class='pk done'></span> Climbed";
         return div;
       };
       lg.addTo(map);

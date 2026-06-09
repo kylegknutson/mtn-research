@@ -2,11 +2,11 @@
 
 Every **ranked Colorado 13er and 14er**, by status:
 
-- **Green peak icon** — has a research report; click it to open the report.
-- **Grey dot** — already climbed.
-- **Red dot** — unclimbed and not yet researched (the to-do list).
+- **Green peak** — has a research report; **hover** for the peak + report name, **click** to open the report.
+- **Red peak** — unclimbed and not yet researched (the to-do list).
+- **Grey peak** — already climbed.
 
-Use the layer toggles (top-right) to isolate a status — e.g. show only the red "to do" peaks.
+Hover any peak for its name; use the layer toggles (top-right) to isolate a status — e.g. show only the red "to do" peaks.
 
 <div id="peak-map" class="fullpage" data-root="../"></div>
 
