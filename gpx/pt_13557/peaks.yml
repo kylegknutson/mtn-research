@@ -1,0 +1,11 @@
+# Waypoint config — pt_13557 (scaffold_report.py)
+objective_ids:
+- 268
+nearby:
+  include: false
+landmarks:
+- name: Lily Lake / Huerfano TH (end of CO 580)
+  lat: 37.628
+  lon: -105.473
+  kind: trailhead
+  ele_ft: 10350
