@@ -35,10 +35,12 @@ Runs waypoints → your CalTopo cross-ref (tight 1 mi margin) → combo stats �
 
 **4. Finalize + publish.**
 ```
-scripts/build_report.py --slug <slug> --finalize     # climber-status + index + all QA gates
+scripts/build_report.py --slug <slug> --finalize     # climber-status + index + HOME PEAK MAP + all QA gates
 git add -A && git commit -m "..."                    # allowlisted
 git push                                              # the ONE deliberate gate — review, then publish
 ```
+
+> **Finalize always refreshes the home peak map.** `--finalize` runs `gen_peak_map.py`, which re-reads peak_db + the climb log and rewrites `docs/data/peaks.json` so the new (or edited) report's objective peaks turn **green** on the home/`/peak-map/` map. **This is not optional** — any time a report is added *or its `objective_ids` / `peak_ids` change* (e.g. adding a peak to an existing report), run `--finalize` (or `scripts/gen_peak_map.py` directly) and commit the updated `docs/data/peaks.json`, or the map will be stale. A peak only counts as "reported" via a report's `gpx/<slug>/peaks.yml` `objective_ids` (or the frontmatter `peak_ids:` fallback).
 
 The detailed per-step reference is below; the fast path just chains it.
 
