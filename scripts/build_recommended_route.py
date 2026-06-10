@@ -114,6 +114,35 @@ def best_segment(tracks, A, B):
     return best
 
 
+def complete_tour(pts, obj_coords, start_coord, want_return):
+    """If a single recorded track already makes a clean tour of ALL objectives
+    (and, in loop mode, begins and ends near the start), return (length_m,
+    trimmed_pts). Such a track is a real loop someone walked — it won't re-climb a
+    peak the way independent shortest-legs can. Returns None if not a complete tour.
+    """
+    for la, lo in obj_coords:
+        if closest_idx(pts, la, lo)[1] > SNAP_MAX_M:
+            return None
+    trimmed = pts
+    if start_coord is not None:
+        sla, slo = start_coord
+        near = [i for i, p in enumerate(pts) if hav(p[0], p[1], sla, slo) <= SNAP_MAX_M]
+        if not near:
+            return None
+        if want_return:
+            if near[0] == near[-1]:
+                return None              # only touches the start once → not a loop
+            trimmed = pts[near[0]:near[-1] + 1]
+        else:
+            trimmed = pts[near[0]:]      # point-to-point: from the start onward
+        for la, lo in obj_coords:        # objectives must survive the trim
+            if closest_idx(trimmed, la, lo)[1] > SNAP_MAX_M:
+                return None
+    length = sum(hav(trimmed[i][0], trimmed[i][1], trimmed[i + 1][0], trimmed[i + 1][1])
+                 for i in range(len(trimmed) - 1))
+    return length, trimmed
+
+
 def accumulated_gain(eles, threshold_m):
     """Sum positive elevation deltas, ignoring runs of net climb below threshold."""
     if not eles:
@@ -283,6 +312,31 @@ def main():
 
     dist = sum(hav(route[i][0], route[i][1], route[i + 1][0], route[i + 1][1])
                for i in range(len(route) - 1))
+
+    # Prefer a whole recorded track that already makes a clean tour of every
+    # objective when one is competitive: per-leg stitching minimizes each leg
+    # independently, which can re-climb a peak (e.g. descending the ascent ridge
+    # because that half is marginally shorter). A single real loop avoids that.
+    obj_coords = [(la, lo) for la, lo, _, _ in objs]
+    start_coord = (start[1], start[2]) if start else None
+    completes = []
+    for ti, pts in enumerate(tracks):
+        c = complete_tour(pts, obj_coords, start_coord, not args.no_return)
+        if c:
+            completes.append((c[0], c[1], ti))
+    completes.sort(key=lambda x: x[0])
+    if completes and completes[0][0] <= dist * 1.05:
+        cl, cpts, cti = completes[0]
+        print(f"\nUsing whole track {track_files[cti].name} — a clean "
+              f"{cl/1609.34:.2f} mi loop through all objectives "
+              f"(stitched legs were {dist/1609.34:.2f} mi but re-climbed a peak).")
+        route, dist = cpts, cl
+    elif completes:
+        print(f"\n(Shortest complete single track is {completes[0][0]/1609.34:.2f} mi "
+              f"via {track_files[completes[0][2]].name}; keeping the stitched "
+              f"{dist/1609.34:.2f} mi route.)")
+    else:
+        print("\n(No single track tours all objectives; using the stitched route.)")
 
     if args.no_dem:
         gain, gain_src = gps_gain(route), "GPS <ele> (noisy)"
