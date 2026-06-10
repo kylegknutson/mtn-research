@@ -70,8 +70,13 @@
         } else if (p.s === "done") {
           icon = peakIcon("done", "#b8b8b8", "#5b5b5b", 15);
           layer = climbed;
-          tip = "<b>" + esc(p.n) + "</b> · climbed ✓";
-          popupExtra = "<br><i style='color:#777'>climbed ✓</i>";
+          if (p.u) {   // climbed AND has a report → grey, but keep the report link
+            tip = "<b>" + esc(p.n) + "</b> · climbed ✓<br><span style='color:#2a7d2a'>▸ " + esc(p.t) + "</span>";
+            popupExtra = "<br><i style='color:#777'>climbed ✓</i><br><a href='" + BASE + p.u + "'><b>Open report →</b></a>";
+          } else {
+            tip = "<b>" + esc(p.n) + "</b> · climbed ✓";
+            popupExtra = "<br><i style='color:#777'>climbed ✓</i>";
+          }
         } else {
           icon = peakIcon("todo", "#e53935", "#7a1414", 19);
           layer = todo;
@@ -93,7 +98,7 @@
                ';text-shadow:0 0 1px ' + stroke + '">▲</span>';
       }
       var overlays = {};
-      overlays[tri("#39FF14", "#0b3d0b") + " Reported (" + (c.with_report || 0) + ")"] = reported;
+      overlays[tri("#39FF14", "#0b3d0b") + " Reported (" + (c.green || 0) + ")"] = reported;
       overlays[tri("#e53935", "#7a1414") + " To do (" + (c.todo || 0) + ")"] = todo;
       overlays[tri("#b8b8b8", "#5b5b5b") + " Climbed (" + (c.climbed || 0) + ")"] = climbed;
       L.control.layers({ "Topo": topo, "Light": light }, overlays,

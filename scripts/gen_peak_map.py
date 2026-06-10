@@ -85,7 +85,7 @@ def main():
     reports = id_to_report()
     climbed = {a["peak_id"] for a in _ascents() if a.get("peak_id") is not None}
     feats = []
-    n_rep = n_14 = n_climbed = n_todo = 0
+    n_rep = n_14 = n_climbed = n_todo = n_with_report = 0
     for p in _peaks():
         if not p.get("ranked"):
             continue
@@ -107,16 +107,19 @@ def main():
             "r": p.get("co_rank"),
             "f": 1 if is14 else 0,
         }
-        # status precedence: report (green) > climbed (grey) > todo (red)
+        # Always attach the report link if one exists — a climbed peak keeps its
+        # old report (just shown grey). Color precedence: climbed (grey) wins over
+        # reported (green); todo (red) is the rest. So a researched peak turns grey
+        # the moment it's in the climb log, but stays clickable to the report.
         if rep:
             rec["u"], rec["t"] = rep
+            n_with_report += 1
+        if is_climbed:
+            rec["s"] = "done"; rec["c"] = 1; n_climbed += 1
+        elif rep:
             rec["s"] = "rep"; n_rep += 1
-        elif is_climbed:
-            rec["s"] = "done"; n_climbed += 1
         else:
             rec["s"] = "todo"; n_todo += 1
-        if is_climbed:
-            rec["c"] = 1
         if is14:
             n_14 += 1
         feats.append(rec)
@@ -125,7 +128,8 @@ def main():
     payload = {
         "generated": date.today().isoformat(),
         "counts": {"total": len(feats), "fourteeners": n_14,
-                   "with_report": n_rep, "climbed": n_climbed, "todo": n_todo,
+                   "green": n_rep, "climbed": n_climbed, "todo": n_todo,
+                   "with_report": n_with_report,
                    "reports": len(set(id(r) for r in reports.values()))},
         "peaks": feats,
     }
