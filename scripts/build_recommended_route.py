@@ -32,7 +32,7 @@ Usage:
   scripts/build_recommended_route.py foo --start 37.95,-106.96 --no-return
 """
 from __future__ import annotations
-import argparse, json, math, sys, time, urllib.parse, urllib.request, xml.etree.ElementTree as ET
+import argparse, heapq, json, math, sys, time, urllib.parse, urllib.request, xml.etree.ElementTree as ET
 from itertools import permutations
 from pathlib import Path
 
@@ -214,6 +214,163 @@ def dem_gain(route, dataset):
     return accumulated_gain(eles, DEM_GAIN_THRESHOLD_M), used
 
 
+# ── graph router (--graph) ────────────────────────────────────────────────────
+# Pool every trackpoint into one graph, link points of any tracks that pass close
+# together (either direction), and run shortest-path between objectives. This can
+# splice part of one party's line onto another's where they cross mid-route — e.g.
+# descend a peak down someone's *ascent* line, then rejoin a different approach —
+# which the per-leg/whole-track method can't. Gain still comes from the DEM, so the
+# graph's corner-cutting can't corrupt it; a light RDP pass removes weave jitter.
+
+def thin_track(pts, min_m):
+    if not pts:
+        return pts
+    out = [pts[0]]
+    for p in pts[1:]:
+        if hav(out[-1][0], out[-1][1], p[0], p[1]) >= min_m:
+            out.append(p)
+    if out[-1] is not pts[-1]:
+        out.append(pts[-1])
+    return out
+
+
+def build_graph(tracks, transfer_eps):
+    """nodes = all (thinned) points; edges = within-track neighbors + short
+    transfer edges between points of any tracks within transfer_eps (bidirectional)."""
+    nodes, adj, track_of = [], [], []
+    for ti, pts in enumerate(tracks):
+        i0 = len(nodes)
+        for p in pts:
+            nodes.append(p); adj.append([]); track_of.append(ti)
+        for k in range(len(pts) - 1):
+            i, j = i0 + k, i0 + k + 1
+            w = hav(pts[k][0], pts[k][1], pts[k + 1][0], pts[k + 1][1])
+            adj[i].append((j, w)); adj[j].append((i, w))
+    if not nodes:
+        return nodes, adj
+    mean_lat = sum(n[0] for n in nodes) / len(nodes)
+    dlat = transfer_eps / 111000.0
+    dlon = transfer_eps / (111000.0 * max(0.2, math.cos(math.radians(mean_lat))))
+    grid = {}
+    for i, n in enumerate(nodes):
+        grid.setdefault((int(n[0] / dlat), int(n[1] / dlon)), []).append(i)
+    for i, n in enumerate(nodes):
+        ci, cj = int(n[0] / dlat), int(n[1] / dlon)
+        for a in (ci - 1, ci, ci + 1):
+            for b in (cj - 1, cj, cj + 1):
+                for j in grid.get((a, b), ()):
+                    if j <= i or track_of[j] == track_of[i]:
+                        continue
+                    dd = hav(n[0], n[1], nodes[j][0], nodes[j][1])
+                    if dd <= transfer_eps:
+                        adj[i].append((j, dd)); adj[j].append((i, dd))
+    return nodes, adj
+
+
+def dijkstra(adj, src):
+    INF = float("inf")
+    dist = [INF] * len(adj)
+    prev = [-1] * len(adj)
+    dist[src] = 0.0
+    pq = [(0.0, src)]
+    while pq:
+        d, u = heapq.heappop(pq)
+        if d > dist[u]:
+            continue
+        for v, w in adj[u]:
+            nd = d + w
+            if nd < dist[v]:
+                dist[v] = nd; prev[v] = u
+                heapq.heappush(pq, (nd, v))
+    return dist, prev
+
+
+def path_nodes(prev, src, dst):
+    out, u = [], dst
+    while u != -1:
+        out.append(u)
+        if u == src:
+            break
+        u = prev[u]
+    out.reverse()
+    return out if out and out[0] == src else []
+
+
+def rdp(pts, eps_m):
+    """Ramer–Douglas–Peucker simplification (keeps (lat,lon,ele) tuples)."""
+    if len(pts) < 3:
+        return pts
+    lat0 = pts[0][0]
+    kx = math.cos(math.radians(lat0)) * 111320.0
+    ky = 111320.0
+    keep = [False] * len(pts)
+    keep[0] = keep[-1] = True
+    stack = [(0, len(pts) - 1)]
+    while stack:
+        a, b = stack.pop()
+        if b <= a + 1:
+            continue
+        xa, ya = pts[a][1] * kx, pts[a][0] * ky
+        xb, yb = pts[b][1] * kx, pts[b][0] * ky
+        dx, dy = xb - xa, yb - ya
+        L = math.hypot(dx, dy)
+        maxd, idx = -1.0, -1
+        for i in range(a + 1, b):
+            xi, yi = pts[i][1] * kx, pts[i][0] * ky
+            if L < 1e-6:                          # degenerate base (closed loop)
+                dperp = math.hypot(xi - xa, yi - ya)   # → keep the farthest point
+            else:
+                dperp = abs((xi - xa) * dy - (yi - ya) * dx) / L
+            if dperp > maxd:
+                maxd, idx = dperp, i
+        if maxd > eps_m:
+            keep[idx] = True
+            stack.append((a, idx)); stack.append((idx, b))
+    return [p for i, p in enumerate(pts) if keep[i]]
+
+
+def graph_route(tracks, terms, has_start, want_return, thin_m, transfer_eps, rdp_eps):
+    """Shortest real-path route through the terminals via the pooled-track graph.
+    Returns (route_pts, dist_m, order_indices)."""
+    nodes, adj = build_graph([thin_track(t, thin_m) for t in tracks], transfer_eps)
+    print(f"Graph: {len(nodes)} nodes (thin {thin_m:.0f} m, transfer {transfer_eps:.0f} m)")
+    snapped = []
+    for label, la, lo in terms:
+        bi, bd = closest_idx(nodes, la, lo)
+        if bd > SNAP_MAX_M:
+            print(f"  WARN: {label} snaps {bd:.0f} m from nearest track point")
+        snapped.append(bi)
+    srcs = {idx: dijkstra(adj, idx) for idx in set(snapped)}
+
+    def pd(i, j):
+        return srcs[snapped[i]][0][snapped[j]]
+
+    n = len(terms)
+    obj_ids = list(range(1, n)) if has_start else list(range(n))
+    best = None
+    for perm in permutations(obj_ids):
+        order = ([0, *perm] + ([0] if want_return else [])) if has_start else list(perm)
+        tot = sum(pd(order[k], order[k + 1]) for k in range(len(order) - 1))
+        if best is None or tot < best[0]:
+            best = (tot, order)
+    total, order = best
+    if math.isinf(total):
+        sys.exit("ERROR (--graph): terminals not all connected; tracks may not "
+                 "overlap. Try a larger --transfer-eps.")
+    # reconstruct node path
+    seq = []
+    for k in range(len(order) - 1):
+        a, b = order[k], order[k + 1]
+        p = path_nodes(srcs[snapped[a]][1], snapped[a], snapped[b])
+        if k:
+            p = p[1:]
+        seq.extend(p)
+    route = rdp([nodes[i] for i in seq], rdp_eps)
+    dist = sum(hav(route[i][0], route[i][1], route[i + 1][0], route[i + 1][1])
+               for i in range(len(route) - 1))
+    return route, dist, order
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("slug")
@@ -221,6 +378,10 @@ def main():
     ap.add_argument("--no-return", action="store_true", help="point-to-point (don't return to start)")
     ap.add_argument("--no-dem", action="store_true", help="use noisy GPX elevation instead of resampling a DEM")
     ap.add_argument("--dem-dataset", default="ned10m", help="opentopodata dataset (default ned10m = USGS 10m, US)")
+    ap.add_argument("--graph", action="store_true", help="pooled-track graph router: splice any lines, either direction, at crossings")
+    ap.add_argument("--thin", type=float, default=12.0, help="[--graph] thin tracks to this spacing (m)")
+    ap.add_argument("--transfer-eps", type=float, default=18.0, help="[--graph] max gap to hop between tracks (m)")
+    ap.add_argument("--rdp-eps", type=float, default=8.0, help="[--graph] simplification tolerance to remove weave jitter (m)")
     ap.add_argument("--out", default=None)
     args = ap.parse_args()
 
@@ -262,81 +423,87 @@ def main():
     obj_terms = [(nm.split(" (")[0], la, lo) for la, lo, nm, _ in objs]
     terms += obj_terms
 
-    n = len(terms)
-    # pairwise shortest single-track segments
-    seg = {}
-    for i in range(n):
-        for j in range(i + 1, n):
-            s = best_segment(tracks, terms[i][1:], terms[j][1:])
-            if s:
-                L, ti, ia, ib = s
-                seg[(i, j)] = (L, ti, ia, ib)   # idx_A near i, idx_B near j
-                seg[(j, i)] = (L, ti, ib, ia)   # reversed: idx_A near j, idx_B near i
-
-    def pdist(i, j):
-        return seg[(i, j)][0] if (i, j) in seg else float("inf")
-
-    # order via brute-force TSP
-    obj_ids = list(range(1, n)) if start else list(range(n))
-    best = None
-    for perm in permutations(obj_ids):
-        if start:
-            order = [0, *perm] + ([] if args.no_return else [0])
-        else:
-            order = list(perm)
-        tot = sum(pdist(order[k], order[k + 1]) for k in range(len(order) - 1))
-        if best is None or tot < best[0]:
-            best = (tot, order)
-    total, order = best
-    if math.isinf(total):
-        sys.exit("ERROR: some legs have no single track connecting them "
-                 "(no party walked directly between two objectives). "
-                 "Add a bridging track or visit objectives separately.")
-
-    print("Order: " + " -> ".join(terms[k][0] for k in order))
-
-    # emit segments
-    route = []
-    for k in range(len(order) - 1):
-        a, b = order[k], order[k + 1]
-        L, ti, ia, ib = seg[(a, b)]   # ia near a, ib near b
-        pts = tracks[ti]
-        lo_i, hi_i = (ia, ib) if ia <= ib else (ib, ia)
-        chunk = pts[lo_i:hi_i + 1]
-        if ia > ib:
-            chunk = chunk[::-1]   # orient so chunk starts at a, ends at b
-        if route:
-            chunk = chunk[1:]
-        route.extend(chunk)
-        print(f"  {terms[a][0]:>22s} -> {terms[b][0]:<22s} {L/1609.34:5.2f} mi  via {track_files[ti].name}")
-
-    dist = sum(hav(route[i][0], route[i][1], route[i + 1][0], route[i + 1][1])
-               for i in range(len(route) - 1))
-
-    # Prefer a whole recorded track that already makes a clean tour of every
-    # objective when one is competitive: per-leg stitching minimizes each leg
-    # independently, which can re-climb a peak (e.g. descending the ascent ridge
-    # because that half is marginally shorter). A single real loop avoids that.
-    obj_coords = [(la, lo) for la, lo, _, _ in objs]
-    start_coord = (start[1], start[2]) if start else None
-    completes = []
-    for ti, pts in enumerate(tracks):
-        c = complete_tour(pts, obj_coords, start_coord, not args.no_return)
-        if c:
-            completes.append((c[0], c[1], ti))
-    completes.sort(key=lambda x: x[0])
-    if completes and completes[0][0] <= dist * 1.05:
-        cl, cpts, cti = completes[0]
-        print(f"\nUsing whole track {track_files[cti].name} — a clean "
-              f"{cl/1609.34:.2f} mi loop through all objectives "
-              f"(stitched legs were {dist/1609.34:.2f} mi but re-climbed a peak).")
-        route, dist = cpts, cl
-    elif completes:
-        print(f"\n(Shortest complete single track is {completes[0][0]/1609.34:.2f} mi "
-              f"via {track_files[completes[0][2]].name}; keeping the stitched "
-              f"{dist/1609.34:.2f} mi route.)")
+    if args.graph:
+        route, dist, order = graph_route(
+            tracks, terms, bool(start), not args.no_return,
+            args.thin, args.transfer_eps, args.rdp_eps)
+        print("Order: " + " -> ".join(terms[k][0] for k in order))
     else:
-        print("\n(No single track tours all objectives; using the stitched route.)")
+        n = len(terms)
+        # pairwise shortest single-track segments
+        seg = {}
+        for i in range(n):
+            for j in range(i + 1, n):
+                s = best_segment(tracks, terms[i][1:], terms[j][1:])
+                if s:
+                    L, ti, ia, ib = s
+                    seg[(i, j)] = (L, ti, ia, ib)   # idx_A near i, idx_B near j
+                    seg[(j, i)] = (L, ti, ib, ia)   # reversed: idx_A near j, idx_B near i
+
+        def pdist(i, j):
+            return seg[(i, j)][0] if (i, j) in seg else float("inf")
+
+        # order via brute-force TSP
+        obj_ids = list(range(1, n)) if start else list(range(n))
+        best = None
+        for perm in permutations(obj_ids):
+            if start:
+                order = [0, *perm] + ([] if args.no_return else [0])
+            else:
+                order = list(perm)
+            tot = sum(pdist(order[k], order[k + 1]) for k in range(len(order) - 1))
+            if best is None or tot < best[0]:
+                best = (tot, order)
+        total, order = best
+        if math.isinf(total):
+            sys.exit("ERROR: some legs have no single track connecting them "
+                     "(no party walked directly between two objectives). "
+                     "Add a bridging track or visit objectives separately, or try --graph.")
+
+        print("Order: " + " -> ".join(terms[k][0] for k in order))
+
+        # emit segments
+        route = []
+        for k in range(len(order) - 1):
+            a, b = order[k], order[k + 1]
+            L, ti, ia, ib = seg[(a, b)]   # ia near a, ib near b
+            pts = tracks[ti]
+            lo_i, hi_i = (ia, ib) if ia <= ib else (ib, ia)
+            chunk = pts[lo_i:hi_i + 1]
+            if ia > ib:
+                chunk = chunk[::-1]   # orient so chunk starts at a, ends at b
+            if route:
+                chunk = chunk[1:]
+            route.extend(chunk)
+            print(f"  {terms[a][0]:>22s} -> {terms[b][0]:<22s} {L/1609.34:5.2f} mi  via {track_files[ti].name}")
+
+        dist = sum(hav(route[i][0], route[i][1], route[i + 1][0], route[i + 1][1])
+                   for i in range(len(route) - 1))
+
+        # Prefer a whole recorded track that already makes a clean tour of every
+        # objective when one is competitive: per-leg stitching minimizes each leg
+        # independently, which can re-climb a peak (e.g. descending the ascent ridge
+        # because that half is marginally shorter). A single real loop avoids that.
+        obj_coords = [(la, lo) for la, lo, _, _ in objs]
+        start_coord = (start[1], start[2]) if start else None
+        completes = []
+        for ti, pts in enumerate(tracks):
+            c = complete_tour(pts, obj_coords, start_coord, not args.no_return)
+            if c:
+                completes.append((c[0], c[1], ti))
+        completes.sort(key=lambda x: x[0])
+        if completes and completes[0][0] <= dist * 1.05:
+            cl, cpts, cti = completes[0]
+            print(f"\nUsing whole track {track_files[cti].name} — a clean "
+                  f"{cl/1609.34:.2f} mi loop through all objectives "
+                  f"(stitched legs were {dist/1609.34:.2f} mi but re-climbed a peak).")
+            route, dist = cpts, cl
+        elif completes:
+            print(f"\n(Shortest complete single track is {completes[0][0]/1609.34:.2f} mi "
+                  f"via {track_files[completes[0][2]].name}; keeping the stitched "
+                  f"{dist/1609.34:.2f} mi route.)")
+        else:
+            print("\n(No single track tours all objectives; using the stitched route.)")
 
     if args.no_dem:
         gain, gain_src = gps_gain(route), "GPS <ele> (noisy)"
