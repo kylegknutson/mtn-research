@@ -16,7 +16,7 @@ regional_map_id: 06AR6BF
 **CalTopo research map:** https://caltopo.com/m/4278RCG
 **Status in DB:** all three unclimbed.
 
-> Western half of the seven-peak La Garita narrow-down. The **eastern four (13,408 / 13,308 / 13,166 / 13,026)** are a separate report ([Phoenix Park group](phoenix_park_group.md)) — a different Creede trailhead.
+> Western part of the seven-peak La Garita narrow-down. The eastern peaks are now two separate reports: the **[13,308 + 13,166 bridge pair](pt_13308_13166.md)** (same West Willow TH as this trio) and the **[13,026 + 13,408 pair](pt_13026_13408.md)** (Cochetopa / Eddiesville side).
 
 ![Overview map](../maps/baldy_lejos_trio.png)
 *[Interactive CalTopo map](https://caltopo.com/m/4278RCG)* — 6 source GPX tracks (14ers library), layered by source; 3 summit markers + the West Willow upper TH.
@@ -123,5 +123,5 @@ Pages verified for all three; **ownership = La Garita Wilderness** (GMUG / Rio G
 - **Trailhead:** West Willow Creek upper TH (~11,500'), up the rough road from Creede (¾ mi above town the road forks E/W Willow — take West Willow).
 - **La Garita Wilderness** — no permits, foot-only, dispersed camping OK.
 - **Drive:** ~5 h Boulder→Creede, then the 4WD road. Cell dead — InReach.
-- **Pairs with the [Phoenix Park four](phoenix_park_group.md) on a Creede-based trip** (separate trailhead, ~2–3 h of rough driving apart).
+- **Pairs naturally with the [13,308 + 13,166 bridge pair](pt_13308_13166.md)** from this same West Willow TH (a strong party can link all five); the [13,026 + 13,408 pair](pt_13026_13408.md) is a separate Cochetopa-side trip.
 - **Research map:** https://caltopo.com/m/4278RCG

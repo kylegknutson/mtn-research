@@ -1,0 +1,12 @@
+# PT 13,308 + PT 13,166 — La Garita Wilderness (West Willow / Creede), the "bridge" pair.
+objective_ids:
+- 510   # PT 13,308
+- 648   # PT 13,166
+nearby:
+  include: false
+landmarks:
+- name: West Willow Creek upper TH (San Luis Pass)
+  lat: 37.9556
+  lon: -106.9666
+  kind: trailhead
+  ele_ft: 11500

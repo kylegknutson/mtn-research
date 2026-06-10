@@ -1,0 +1,12 @@
+# PT 13,408 + PT 13,026 — La Garita Wilderness (Cochetopa Creek / Eddiesville), eastern pair.
+objective_ids:
+- 397   # PT 13,408
+- 806   # PT 13,026
+nearby:
+  include: false
+landmarks:
+- name: Eddiesville / Cochetopa Creek TH (north)
+  lat: 38.025
+  lon: -106.836
+  kind: trailhead
+  ele_ft: 10312

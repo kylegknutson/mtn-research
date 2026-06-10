@@ -88,6 +88,7 @@ Make the reports richer and the multi-day flavor real.
 | E1 | First multi-day trip report | M | Exercise the `docs/trips/` flavor (basecamp, day-by-day, pack in/out, gear). Only the day-trip flavor has a real example so far. |
 | E2 | Elevation-profile charts | M | Per-route elevation profile from the GPX, embedded in the report. |
 | E3 | "Trip packet" export | L | Bundle a report into an offline packet (PDF + GPX + static map) for a planned outing. |
+| E4 | Post-climb "what I actually did" pass | M | After Kyle climbs a researched peak, update its report with the real outing (route taken, actual stats, conditions, photos) and flag it as done. Pairs with the home-map behavior where a climbed-but-reported peak goes grey while keeping its report link — the grey link should eventually point at a *trip report*, not just the pre-trip research. (Kyle, 2026-06-09) |
 
 ### Theme F — Maintenance / hygiene → goal 6
 Keep the foundation honest.
