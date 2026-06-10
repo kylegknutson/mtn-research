@@ -1,6 +1,6 @@
 # Architecture & deployment
 
-**Last updated:** 2026-06-09
+**Last updated:** 2026-06-10
 
 ## What it is
 
@@ -138,12 +138,13 @@ It is **not** an app. It is **a static site fed by an iCloud-synced repo, with s
 3. **Login check** — confirm all 3 sources logged in via Playwright (per source-requirements). No 14ers → halt.
 4. **DB query** via `peak_db_client.peaks(...)` + `ascents()` → candidates; cluster analysis (nearby unclimbed ranked, same-drainage flag).
 5. **TR + GPX sweep across all 3 sources** (14ers + LoJ + peakbagger) via Playwright → route stats, combo signal, every GPX track.
-6. **Stats / cell / drive** → `combo_stats.py` (distance/gain), 14ers cell DB, `drive_time.py` (Maps link from the climber's home).
+6. **Stats / cell / drive** → `combo_stats.py` (distance/gain), 14ers cell DB, `drive_time.py` (Maps link from the climber's home). **Headline distance/gain comes from the measured GPX, never climb13ers prose** (see `source-requirements.md`); `check_route_stats.py` audits this.
 7. **Authoring** → `docs/peaks/<slug>.md` (or `docs/trips/` for multi-day) per the report template, ending with the "Sources checked" footer.
 8. **Maps (required, ship with the report):**
    - `gpx_to_caltopo.py --gpx-dir gpx/<slug> --new-map "Research: …" --no-dedupe` → research map (summit=blue `peak`, others=gray `point`, tracks source-colored).
    - `sync_to_regional.py --slug <slug> --map-id <regional>` → also push tracks into the range's regional "GPS Tracks" map.
-   - `make_overview_map.py <slug>` → `docs/maps/<slug>.png` (source-colored, objective-framed).
+   - `build_recommended_route.py <slug>` (optional, multi-track peaks) → `gpx/<slug>/<slug>_recommended.gpx`: shortest route through only the ranked objectives, stitched from real tracks (add-on peaks trimmed); **distance from the stitched GPX, gain resampled from a DEM** (matches CalTopo — GPX `<ele>` is too noisy). Renders as the bold-magenta "recommended route (composed)" line.
+   - `make_overview_map.py <slug>` → `docs/maps/<slug>.png` (source-colored, objective-framed; magenta recommended route on top if present).
 9. **Wire up** → map IDs + PNG into the markdown; `image:` frontmatter for the link preview; mkdocs nav + index.
 10. **Commit + push** → Actions runs **lint (source gate) → build → deploy**; Pages updates in ~1 min. Don't mark "researched" until the deploy is green.
 11. **Result:** a public URL with a link-preview card, openable from the phone at the trailhead, plus interactive CalTopo research + regional maps.

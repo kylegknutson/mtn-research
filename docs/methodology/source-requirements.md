@@ -42,6 +42,18 @@ The three logged-in core sources, checked **every time**:
 
 Cross-reference gain/distance across multiple TRs. A peak's "standard route gain" should be consistent across several reports. Don't quote one TR's number as gospel.
 
+## Distance/gain headlines come from MEASURED GPX, never climb13ers prose (Kyle, 2026-06-10)
+
+climb13ers mileage/gain is an **author's estimate drawn on a map** — their own pages say *"Route shown is an approximation. Not intended for use as a GPX track."* Treat it like any single estimate:
+
+- **Headline distance/gain must be derived from recorded GPX** (14ers / LoJ / peakbagger tracks) or the composed recommended route — *not* lifted from climb13ers. climb13ers is for class, conditions, trailhead/access, and route narrative.
+- When you do cite a climb13ers number, **label it "(climb13ers estimate)"** and sanity-check it against the recorded tracks. If it's well below the shortest recorded line, say so.
+- **GPS *elevation* is garbage; gain must come from a DEM, not the GPX `<ele>`.** Barometric drift makes these 14ers-library tracks log 37,000' of "gain" and 14,000' summits on 13ers. **Distance from GPX is reliable; gain from GPX is not.** Resample a terrain model (DEM) along the route instead — `build_recommended_route.py` does this automatically (USGS 10 m via opentopodata, ~6 m/20 ft accumulation threshold) and lands within ~1% of CalTopo's gain. Don't quote GPS-`<ele>` gain, and don't trust climb13ers' gain either. (The Baldy Lejos saga: climb13ers' "2,630'" became the headline, then a raw-GPS number said "4,500'", then a smoothed-GPS number said "2,600'" — all wrong; the **DEM truth, confirmed on CalTopo, is ~3,600'.**)
+
+**Tools that enforce/serve this:**
+- `scripts/build_recommended_route.py <slug>` — composes the **shortest route through only the ranked objectives** from the real source tracks (add-on peaks trimmed automatically), reports distance, and **measures gain from a DEM** (matches CalTopo; `--no-dem` falls back to noisy GPS). Output `gpx/<slug>/<slug>_recommended.gpx` renders in the standardized **bold-magenta "recommended route (composed)"** style on the overview map.
+- `scripts/check_route_stats.py [--strict]` — audits every report's `gain:` headline against its recorded-track range; flags climb13ers-sourced headlines and any mileage shorter than the shortest recorded track. Run it before finalizing.
+
 ## The "Sources checked" footer
 
 **Every report must end with a line naming all sites checked + the confirmed logged-in username** (and **climb13ers.com for any CO peak**), e.g.:

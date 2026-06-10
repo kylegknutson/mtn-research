@@ -33,6 +33,9 @@ Color scheme matches CalTopo research maps:
   Gold   (#FFCC00) : peak summit waypoints (*peaks_only*, *summit*)
   Orange (#FF6600) : trailheads
   Purple (#9933CC) : drive-in / approach waypoints (*landmarks*, *drive_in*)
+  Magenta(#E6008C) : composed "recommended" route (*recommended*) — bold cased
+                     line on top, the shortest path through the ranked objectives
+                     pieced from real source tracks (build_recommended_route.py)
 """
 
 import argparse
@@ -140,6 +143,12 @@ COLOR_TH       = (255, 102, 0,   220)   # orange
 COLOR_DRIVE    = (0,   0,   0,   235)   # black — the driving route between camps
                                         # (reserved: not used on the CalTopo map, so
                                         #  it reads as "road", not a GPS track)
+# Composed "recommended" route — pieced together from real source tracks but
+# narrowed to the report's ranked objectives (build_recommended_route.py). Drawn
+# on top of everything as a bold cased magenta line so it's unmistakable as the
+# synthesized recommendation, distinct from any single raw source track.
+COLOR_RECOMMENDED      = (230, 0,   140, 255)   # bold magenta core
+COLOR_RECOMMENDED_CASE = (25,  0,   15,  255)   # near-black casing for contrast
 COLOR_BG       = (232, 224, 213)        # warm beige fallback
 
 TILE_SIZE   = 256    # px per OSM tile
@@ -199,6 +208,8 @@ def classify_file(path: Path, is_kyle: bool) -> str:
     stem = path.stem.lower()
     if stem.endswith("_drive") or "_drive_" in stem:
         return "drive_route"      # the road connecting camps (multi-day) — PNG only
+    if "recommended" in stem:
+        return "recommended"      # composed shortest route through the objectives
     if "peaks_only" in stem or "summit" in stem:
         return "peak"
     if any(k in stem for k in TH_KEYWORDS):
@@ -353,8 +364,9 @@ def draw_label(draw: ImageDraw.ImageDraw, ix: int, iy: int, text: str, font):
 
 # ── legend ────────────────────────────────────────────────────────────────────
 
-def draw_legend(img: Image.Image, public_sources, has_kyle, has_peak, has_drive_in, has_th, font, has_drive_route=False, has_context_peak=False):
+def draw_legend(img: Image.Image, public_sources, has_kyle, has_peak, has_drive_in, has_th, font, has_drive_route=False, has_context_peak=False, has_recommended=False):
     items = []
+    if has_recommended: items.append(("Recommended route (composed)", COLOR_RECOMMENDED[:3]))
     for src in (public_sources or []):
         items.append((f"{SOURCE_LABELS.get(src, src)} routes", SOURCE_COLORS.get(src, COLOR_PUBLIC)[:3]))
     if has_kyle:    items.append(("Imported tracks (Kyle)", COLOR_KYLE[:3]))
@@ -367,7 +379,7 @@ def draw_legend(img: Image.Image, public_sources, has_kyle, has_peak, has_drive_
 
     pad = 8
     lh = 18
-    box_w = 190
+    box_w = 220
     box_h = pad * 2 + len(items) * lh
     legend = Image.new("RGBA", (box_w, box_h), (255, 255, 255, 210))
     d = ImageDraw.Draw(legend)
@@ -394,7 +406,7 @@ def build_map(slug: str, out_path: Path, zoom: int | None = None, title: str = "
     public_files = list(gpx_dir.glob("*.gpx"))
     kyle_files   = list(kyle_dir.glob("*.gpx")) if kyle_dir.exists() else []
 
-    buckets = {"track_public": [], "track_kyle": [], "peak": [], "context_peak": [], "drive_in": [], "th": [], "drive_route": []}
+    buckets = {"track_public": [], "track_kyle": [], "peak": [], "context_peak": [], "drive_in": [], "th": [], "drive_route": [], "recommended": []}
     all_lons, all_lats = [], []
     track_lons, track_lats = [], []   # tracks only — preferred bbox driver when present
     peak_lons, peak_lats = [], []     # peak markers — fallback bbox driver when no tracks
@@ -406,6 +418,14 @@ def build_map(slug: str, out_path: Path, zoom: int | None = None, title: str = "
             # loops far through valleys; letting it set the extent would blow the
             # frame. The peak markers define the extent; this just overlays on it.
             buckets["drive_route"].extend(parse_tracks(path))
+            return
+        if kind == "recommended":
+            segs = parse_tracks(path)
+            buckets["recommended"].extend(segs)
+            for seg in segs:
+                for lon, lat in seg:
+                    all_lons.append(lon); all_lats.append(lat)
+                    track_lons.append(lon); track_lats.append(lat)
             return
         if kind.startswith("track"):
             segs = parse_tracks(path)
@@ -495,6 +515,7 @@ def build_map(slug: str, out_path: Path, zoom: int | None = None, title: str = "
         # and only their points contribute to the bbox.
         buckets["track_public"] = [(s, src) for s, src in buckets["track_public"] if _seg_in_scope(s)]
         buckets["track_kyle"]   = [s        for s        in buckets["track_kyle"]   if _seg_in_scope(s)]
+        buckets["recommended"]  = [s        for s        in buckets["recommended"]  if _seg_in_scope(s)]
 
         bbox_lons = (list(peak_lons)
                      + [pk_lon_c - MIN_DISPLAY_LON, pk_lon_c + MIN_DISPLAY_LON])
@@ -504,6 +525,9 @@ def build_map(slug: str, out_path: Path, zoom: int | None = None, title: str = "
             bbox_lons.extend(lon for lon, _ in s)
             bbox_lats.extend(lat for _, lat in s)
         for s in buckets["track_kyle"]:
+            bbox_lons.extend(lon for lon, _ in s)
+            bbox_lats.extend(lat for _, lat in s)
+        for s in buckets["recommended"]:
             bbox_lons.extend(lon for lon, _ in s)
             bbox_lats.extend(lat for _, lat in s)
         _bx, _by = bbox_lons, bbox_lats
@@ -593,6 +617,11 @@ def build_map(slug: str, out_path: Path, zoom: int | None = None, title: str = "
     # driving route between camps — drawn last/on top, black dashed (multi-day)
     for seg in buckets["drive_route"]:
         draw_track(draw, seg, COLOR_DRIVE, 3, origin_px, origin_py, scale_x, scale_y, IMG_H_PX, zoom, dashed=True)
+    # composed "recommended" route — bold cased magenta, on top of all source tracks
+    for seg in buckets["recommended"]:
+        draw_track(draw, seg, COLOR_RECOMMENDED_CASE, 7, origin_px, origin_py, scale_x, scale_y, IMG_H_PX, zoom)
+    for seg in buckets["recommended"]:
+        draw_track(draw, seg, COLOR_RECOMMENDED, 4, origin_px, origin_py, scale_x, scale_y, IMG_H_PX, zoom)
 
     # ── load font ────────────────────────────────────────────────────────────
     try:
@@ -657,7 +686,8 @@ def build_map(slug: str, out_path: Path, zoom: int | None = None, title: str = "
     draw_legend(img, present_sources, bool(buckets["track_kyle"]),
                 bool(buckets["peak"]), bool(buckets["drive_in"]), bool(buckets["th"]), font_sm,
                 has_drive_route=bool(buckets["drive_route"]),
-                has_context_peak=bool(buckets["context_peak"]))
+                has_context_peak=bool(buckets["context_peak"]),
+                has_recommended=bool(buckets["recommended"]))
 
     # ── attribution ──────────────────────────────────────────────────────────
     attr = "Map tiles © OpenTopoMap (CC-BY-SA) | SRTM"

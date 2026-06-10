@@ -1,0 +1,16 @@
+# Waypoint config — grizzly_jenkins_group
+# Grizzly Pk E (515) + PT 13,145 (666) + Jenkins Mtn (370) core trio,
+# + optional "Lake Fork Pk" (466) north extension. All Sawatch, from Pieplant.
+objective_ids:
+- 370   # Jenkins Mountain 13,440
+- 666   # PT 13,145 (UN 13145 / formerly UN 13140 B)
+- 515   # Grizzly Peak E 13,309
+- 466   # "Lake Fork Peak" 13,333 (optional north extension)
+nearby:
+  include: false
+landmarks:
+- name: Pieplant Mill TH
+  lat: 38.9398
+  lon: -106.5600
+  kind: trailhead
+  ele_ft: 10200

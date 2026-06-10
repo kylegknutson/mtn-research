@@ -1,0 +1,14 @@
+# Waypoint config — baldy_lejos_trio (La Garita Wilderness, West Willow/San Luis Pass, Creede)
+# Baldy Lejos + PT 13,115 + PT 13,030 — western tundra trio.
+objective_ids:
+- 714   # "Baldy Lejos" 13,118
+- 701   # PT 13,115
+- 788   # PT 13,030
+nearby:
+  include: false
+landmarks:
+- name: West Willow Creek upper TH (San Luis Pass)
+  lat: 37.9553
+  lon: -106.9665
+  kind: trailhead
+  ele_ft: 11500
