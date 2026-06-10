@@ -21,7 +21,7 @@ auto-generated from each report's frontmatter (`scripts/gen_index.py`).*
 | [Mount Powell + Eagles Nest](peaks/powell_eagles_nest.md) | Gore | 3h 5m | 3 | 5,500–7,000 ft | unclimbed |
 | [Homestake Peak](peaks/homestake_peak.md) | Sawatch | 3h 14m | 2 | 2,500–3,551 ft | unclimbed |
 | [Hunts Peak](peaks/hunts_peak.md) | Sangre de Cristo | 3h 37m | 2 | 3,450–3,528 ft | unclimbed |
-| [Savage Peak](peaks/savage_peak.md) | Sawatch | 3h 39m | 2 | 3,200 ft | unclimbed |
+| [Savage Peak + PT 13,002](peaks/savage_peak.md) | Sawatch | 3h 39m | 2 (Savage) · 3 (PT 13,002) | 3,200 ft (Savage) · ~6,000+ (Savage + 13,002) | unclimbed |
 | [Star Peak A](peaks/star_peak_a.md) | Elk | 3h 39m | 2+ | 2,766 ft (Star+Taylor) | unclimbed |
 | [Star Peak Group](peaks/star_peak_group.md) | Elk | 3h 40m | 2 | 4,300 ft (Star+Taylor) — up to ~8,000 ft (all three) | unclimbed |
 | [Crestolita + Broken Hand Peak](peaks/crestolita_broken_hand.md) | Sangre de Cristo | 3h 58m | 3 | 6,400–7,100 ft | unclimbed |

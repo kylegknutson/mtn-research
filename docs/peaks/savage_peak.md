@@ -2,26 +2,28 @@
 image: maps/savage_peak.png
 range: Sawatch
 drive_time: "3h 39m"
-yds_class: "2"
-gain: "3,200 ft"
+yds_class: "2 (Savage) · 3 (PT 13,002)"
+gain: "3,200 ft (Savage) · ~6,000+ (Savage + 13,002)"
 status: unclimbed
 caltopo_id: QL51DBE
 regional_map_id: L5VH4BU
+peak_ids: [674, 839]
 ---
 
-# Savage Peak (Sawatch Range / Holy Cross Wilderness)
+# Savage Peak + PT 13,002 (Sawatch Range / Holy Cross Wilderness)
 
-**Researched:** 2026-05-28
+**Researched:** 2026-05-28 · **PT 13,002 combo added:** 2026-06-09
 **CalTopo research map:** https://caltopo.com/m/QL51DBE
-**Status in DB:** 0 ascents (unclimbed). **Cluster status:**
-- ✗ **PT 13,089 (4.25 mi) — unclimbed ranked** ← potential same-TH combo
-- ✗ **PT 13,100 A (5.17 mi) — unclimbed ranked** ← potential same-TH combo
+**Status in DB:** both 0 ascents (unclimbed). **Cluster status:**
+- ✗ **PT 13,002 (1.92 mi) — unclimbed ranked, Class 3** ← **closest neighbor; see "Adding PT 13,002" below**
+- ✗ **PT 13,089 "Ribbed Peak" (4.25 mi) — unclimbed ranked** ← 13,002's natural ridge partner
+- ✗ **PT 13,100 A (5.17 mi) — unclimbed ranked**
 - ✗ **Homestake Peak (5.72 mi) — unclimbed ranked, also on Kyle's list** — different drainage, see Homestake report's combo analysis
 - ✗ Pika Pk (7.15 mi) — unclimbed ranked, different drainage
 - ✗ Gold Dust Pk (7.88 mi) — unclimbed ranked, different drainage
 - ✓ Done nearby: Fancy Pk (2.76 mi), Whitney Pk (4.56), PT 13,786 (4.97), Holly Cross Ridge (5.73), Mt of the Holy Cross 14er (6.32), PT 13,253 (6.57), PT 13,443 (6.71), Mt Jackson (7.31)
 
-**The Fancy + Savage combo (the standard "Holy Cross 13er day" in TRs) doesn't apply for Kyle** since Fancy is already done. But **PT 13,089 and PT 13,100 A may add value** if they share the Missouri Lakes approach — see Multi-peak section.
+**The Fancy + Savage combo (the standard "Holy Cross 13er day" in TRs) doesn't apply for Kyle** since Fancy is already done. **The best ranked pairing is PT 13,002** — the closest unclimbed neighbor (1.92 mi), which is reachable from Savage's own Missouri Lakes TH. **See [Adding PT 13,002](#adding-pt-13002-ways-to-combine) below.**
 
 ---
 
@@ -103,16 +105,38 @@ The 14ers.com official route (BillMiddlebrook, May 2023). Solid Class 2 ridge cl
 
 **Fancy Peak (climbed, 2.76 mi)** — the natural same-day combo per the John Kirk 2016 + josephnephi 2024 + whileyh 2020 TRs (all combine Savage + Fancy). Not relevant for Kyle since Fancy is done.
 
-### Same-TH unclimbed-ranked options to evaluate:
+**PT 13,089 ("Ribbed Peak", 4.25 mi) + PT 13,100 A (5.17 mi)** — these two are 13,002's *natural ridge partners* (see below), not Savage's. They're a long day / overnight from the Fancy Pass / Fairview Lake side, away from Savage's NE ridge.
 
-**PT 13,089 (4.25 mi from Savage, unclimbed ranked)**
-- Same range (Sawatch/Holy Cross). Need to verify if it's reachable from Missouri Lakes TH on the same outing
-- **TODO research:** check PT 13,089's LoJ + 14ers pages for standard approach. If same drainage → strong combo candidate
+---
 
-**PT 13,100 A (5.17 mi from Savage, unclimbed ranked)**
-- **TODO research:** same as above. Worth checking LoJ peak ID for standard approach
+## Adding PT 13,002 — ways to combine
 
-**These would lift Savage from a true standalone day into a multi-peak ranked combo.** Worth a dedicated research pass before committing to the trip.
+**PT 13,002 (LiDAR 13,002', formerly UN 12,977) is the closest unclimbed ranked 13er to Savage — just 1.92 mi NW** — and climb13ers lists Savage as its neighboring peak. It was missed in the original cluster scan because it had no coordinates in the DB at the time (one of six coord-null ranked peaks, since backfilled).
+
+| | PT 13,002 |
+|---|---|
+| Elevation | 13,002' (LiDAR; USGS map 12,977') |
+| Lat / Lon | 39.39940, −106.54680 |
+| **Class** | **3** (climb13ers: "exposed Class 2+, some consider Class 3"; moderate exposure in short sections near the summit — **ice axe recommended**) |
+| Range / Wilderness | Sawatch / **Holy Cross Wilderness** (White River NF — same as Savage) |
+| Weather | [NOAA](https://forecast.weather.gov/MapClick.php?lat=39.39940&lon=-106.54680) |
+| 14ers.com | [10872](https://www.14ers.com/php14ers/peak.php?peakid=10872) · climb13ers [UN 13002](https://www.climb13ers.com/colorado-13ers/un13002--carter-creek) |
+| LoJ / peakbagger | [839](https://listsofjohn.com/peak/839) · [113688](https://peakbagger.com/peak.aspx?pid=113688) |
+| Peak DB id | 839 |
+| Std route (climb13ers) | **Savage Lakes / Carter Creek TH — 11.6 mi / 4,380' RT, Class 3** (long day; non-maintained trail into upper Carter Creek lakes) |
+
+> **No trip report combines Savage + 13,002** — it isn't a documented standard. But they're close, share the Holy Cross Wilderness, and **13,002 has been climbed from Savage's own Missouri Lakes TH** (14ers TR [22657](https://www.14ers.com/php14ers/tripreport.php?trip=22657), 7/30/2024), so a combined day is feasible — just big and a grade harder than Savage.
+
+### Option A — Savage + 13,002 in one day from **Missouri Lakes TH** ⭐ (the Kyle combo)
+Climb **Savage** by its standard NE ridge (Class 2), then reach **13,002** via the **Missouri Lakes trail toward Treasure Vault / Blodgett Lake** and up its E/SE slopes (climb13ers lists Missouri Lakes as an alternate access). The two sit on **opposite sides of the Missouri Lakes basin (~1.9 mi apart)** and don't ridge-connect cleanly, so plan on **two ascents from the shared trail** — a long day, roughly **~13–16 mi with ~6,000'+ gain**, and **13,002 adds Class 3 + exposure + an ice axe.** Same Homestake Rd gate constraint applies (below).
+
+### Option B — 13,002 standalone from **Savage Lakes / Carter Creek TH**
+13,002's *standard* route: **11.6 mi / 4,380', Class 3** from a graded-gravel TH on the SW side (different drainage, ~9,255'). Cleaner single objective but doesn't combine with Savage — a separate trip.
+
+### Option C — 13,002 + the Ribbed Peak ridge (the "knock out the cluster" backpack)
+13,002 is most often climbed *with* **PT 13,089 ("Ribbed Peak"), PT 13,100 A (13,071'), and PT 13,034** plus sub-13k bumps (LoJ TR [26630](https://listsofjohn.com/tr?Id=26630)) — a long day or overnight from the Fancy Pass / Fairview Lake side. If you'd rather bag the whole Missouri/Holy Cross unclimbed cluster, a **backpack linking Savage + 13,002 + 13,089 + 13,100 A** is the big-ticket option.
+
+**Recommendation:** if you only want to pair two, do **Option A (Savage + 13,002 from Missouri Lakes)** as a long day — but respect the Class 3 / exposure on 13,002. For maximum efficiency on the drive, Option C as a backpack clears four ranked 13ers at once.
 
 ### Sawatch main ridge mega-day (reference only)
 
@@ -234,7 +258,8 @@ jacolc 8/16/2024 (LoJ TR 27181): **15.5 mi / 6,300' / 11h35** — Sawatch main r
 - **Recommended trip:** **Missouri Lakes TH → NE Ridge → summit**. **8 mi RT / 3,200' gain / Class 2 / ~5 hr.** 14ers.com has a clean route description (BillMiddlebrook). The route leaves the Missouri Lakes trail near a small clearing at PT 12,898', turns south through ponds + talus to gain the NE ridge near 11,700', then climbs the obvious ridge to summit (stay LEFT of rocks on the steep grassy point).
 - ⚠️ **CRITICAL: Homestake Rd (FS 703) is gated and closed at US24 from Nov 22 to May 21.** Late-May through November is the vehicle access window. Earlier-season skiing requires a long road approach. (Per Brian Kalet 5/4/2018)
 - **Mostly SOLO under Kyle's combo rule** — the standard Savage + Fancy combo doesn't apply (Fancy is climbed). One TR (dillonsarnelli 6/29/2016) does Jacque + Music + Savage but that's a logistics-heavy combo.
-- **Worth researching: PT 13,089 (4.25 mi) and PT 13,100 A (5.17 mi)** — both unclimbed ranked 13ers nearby. May share the Missouri Lakes approach. Could lift Savage day into a multi-peak combo.
+- **PT 13,002 (1.92 mi) is the closest unclimbed ranked neighbor and the best pairing** — **Class 3** (ice axe), reachable from Savage's own Missouri Lakes TH. **Best combo: Savage + 13,002 from Missouri Lakes as one long day (~13–16 mi / ~6,000'+)**, two ascents from the shared trail. Standalone, 13,002 is 11.6 mi / 4,380' Class 3 from the Carter Creek TH. See "Adding PT 13,002."
+- **Go-big option:** a backpack linking **Savage + 13,002 + PT 13,089 ("Ribbed Peak") + PT 13,100 A** clears the whole Missouri/Holy Cross unclimbed cluster in one trip.
 - **Homestake + Savage combo:** geographically tempting (5.72 mi apart, both on Kyle's list) but different drainages, no TR validates it — see Homestake report
 - **Trail traffic:** popular Missouri Lakes / Fancy Pass loop crowds the first 2.5 mi in summer. Plan for early start
 - **Cell:** dead in the drainage, returns on the upper NE ridge. Carry InReach
@@ -242,4 +267,4 @@ jacolc 8/16/2024 (LoJ TR 27181): **15.5 mi / 6,300' / 11h35** — Sawatch main r
 
 ---
 
-**Sources checked:** 14ers.com · listsofjohn.com · peakbagger.com
+**Sources checked:** 14ers.com ✓ (logged in, "letsgocu") · listsofjohn.com ✓ (logged in) · peakbagger.com ✓ (logged in — 13,002 = Holy Cross Wilderness) · climb13ers.com ✓ ([Savage](https://www.climb13ers.com/colorado-13ers/savage-peak) · [UN 13002](https://www.climb13ers.com/colorado-13ers/un13002--carter-creek))
