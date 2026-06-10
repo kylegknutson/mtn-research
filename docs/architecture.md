@@ -143,7 +143,7 @@ It is **not** an app. It is **a static site fed by an iCloud-synced repo, with s
 8. **Maps (required, ship with the report):**
    - `gpx_to_caltopo.py --gpx-dir gpx/<slug> --new-map "Research: …" --no-dedupe` → research map (summit=blue `peak`, others=gray `point`, tracks source-colored).
    - `sync_to_regional.py --slug <slug> --map-id <regional>` → also push tracks into the range's regional "GPS Tracks" map.
-   - `build_recommended_route.py <slug>` (optional, multi-track peaks) → `gpx/<slug>/<slug>_recommended.gpx`: shortest route through only the ranked objectives, stitched from real tracks (add-on peaks trimmed); **distance from the stitched GPX, gain resampled from a DEM** (matches CalTopo — GPX `<ele>` is too noisy). Renders as the bold-magenta "recommended route (composed)" line.
+   - `build_recommended_route.py <slug>` (optional, multi-track peaks) → `gpx/<slug>/<slug>_recommended.gpx`: shortest route through only the ranked objectives (add-on peaks trimmed), via a **pooled-track graph router** that splices real segments across parties' tracks at crossings, either direction (`--legs` for the older per-leg method); **distance from the route GPX, gain resampled from a DEM** (matches CalTopo — GPX `<ele>` is too noisy). Renders as the bold-magenta "recommended route (composed)" line.
    - `make_overview_map.py <slug>` → `docs/maps/<slug>.png` (source-colored, objective-framed; magenta recommended route on top if present).
 9. **Wire up** → map IDs + PNG into the markdown; `image:` frontmatter for the link preview; mkdocs nav + index.
 10. **Commit + push** → Actions runs **lint (source gate) → build → deploy**; Pages updates in ~1 min. Don't mark "researched" until the deploy is green.

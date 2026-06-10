@@ -30,11 +30,11 @@ auto-generated from each report's frontmatter (`scripts/gen_index.py`).*
 | [Grizzly Pk E + PT 13,145 + Jenkins Mtn](peaks/grizzly_jenkins_group.md) | Sawatch | ~4h 15m | 2+ | ~4,800 ft (trio loop) · ~5,300–6,800 ft (GPX range) | unclimbed |
 | [Pearl Mountain + Oyster Peak](peaks/pearl_oyster.md) | Elk | 4h 22m | 2+ | ~4,300 ft | unclimbed |
 | [PT 13,557](peaks/pt_13557.md) | Sangre de Cristo | 4h 41m | 2 | ~3,540 ft | unclimbed |
-| ["Baldy Lejos" + PT 13,115 + PT 13,030](peaks/baldy_lejos_trio.md) | San Juan | ~5 h to Creede + rough 4WD | 2 | ~12 mi / ~3,600 ft (recommended loop, DEM) · 16–20 mi recorded | unclimbed |
-| [PT 13,308 + PT 13,166](peaks/pt_13308_13166.md) | San Juan | ~5 h to Creede + rough 4WD | 2 | ~11.8 mi / ~4,200 ft (recommended loop, DEM) · Class 3 on 13,166 | unclimbed |
+| ["Baldy Lejos" + PT 13,115 + PT 13,030](peaks/baldy_lejos_trio.md) | San Juan | ~5 h to Creede + rough 4WD | 2 | ~11 mi / ~3,750 ft (recommended loop, DEM) · 16–20 mi recorded | unclimbed |
+| [PT 13,308 + PT 13,166](peaks/pt_13308_13166.md) | San Juan | ~5 h to Creede + rough 4WD | 2 | ~8.2 mi / ~3,050 ft (recommended loop, DEM) · Class 3 on 13,166 | unclimbed |
 | [PT 13,155 Group](peaks/pt_13155_group.md) | San Juan | 5h 34m | 2 | 3,000–4,000 ft | unclimbed |
 | [Cuba Gulch Trio](peaks/cuba_gulch_trio.md) | San Juan | 5h 52m | 2 | ~3,900 ft (clean trio) | unclimbed |
-| [PT 13,408 + PT 13,026](peaks/pt_13026_13408.md) | San Juan | ~5–6 h (Cochetopa / Gunnison side) | 2 | ~16 mi / ~5,000 ft (recommended loop, Eddiesville TH, DEM) | unclimbed |
+| [PT 13,408 + PT 13,026](peaks/pt_13026_13408.md) | San Juan | ~5–6 h (Cochetopa / Gunnison side) | 2 | ~13.5 mi / ~5,000 ft (recommended loop, Eddiesville TH, DEM) | unclimbed |
 | [Telluride Peak Group](peaks/telluride_t7_t8.md) | San Juan | 6h 19m | 2–3 | ~4,000 ft | unclimbed |
 | [Brown Mountain](peaks/brown_mountain.md) | San Juan | 6h 21m | 2 | 1,600–4,380 ft | unclimbed |
 | [Dolores Peak + Middle Peak](peaks/dolores_middle_peak.md) | San Juan | 7h 30m | 2 | ~4,000 ft | unclimbed |

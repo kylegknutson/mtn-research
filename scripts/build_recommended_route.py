@@ -11,17 +11,20 @@ extra unranked bumps, started low, or wandered), this builds the SHORTEST route
 that follows the actual ground others walked but visits ONLY the report's ranked
 objectives — the add-on peaks are trimmed out automatically.
 
-Method (faithful to "follow the path others took"):
+Default method — pooled-track GRAPH router ("the shortest path others took"):
   1. Objectives = summits from *_peaks_only.gpx; start = highest trailhead in
      *_landmarks.gpx (or --start lat,lon).
-  2. For every pair of objectives (incl. the start), find the SHORTEST contiguous
-     segment of a SINGLE recorded track that connects them (its closest approach
-     to A → closest approach to B). One leg = one real party's footsteps, so the
-     elevation profile stays clean and nothing teleports across switchbacks.
-  3. Order the objectives by solving the small open/closed TSP over those segment
-     distances (start → all summits → back to start by default).
-  4. Emit the chosen real segments end to end. Add-on peaks are never visited
-     because we only route between the ranked objectives.
+  2. Pool every trackpoint into one graph; connect consecutive points within a
+     track AND any points of different tracks that pass within --transfer-eps of
+     each other (either direction). This lets the route splice part of one party's
+     line onto another's where they cross — e.g. descend a peak down someone's
+     *ascent* line, then rejoin a different approach.
+  3. Dijkstra all-pairs shortest real-path distances among objectives; small
+     open/closed TSP for the order (start → all summits → back to start by default).
+  4. Stitch the real node-paths; a light RDP pass removes weave jitter. Add-on
+     peaks are never visited (we only route between the ranked objectives).
+Distance comes from the stitched geometry; GAIN is resampled from a DEM (GPX
+<ele> is too noisy). Pass --legs for the older per-leg / whole-track router.
 
 Output: gpx/<slug>/<slug>_recommended.gpx  (renders in the standardized
 "recommended route (composed)" style on overview maps — see make_overview_map.py).
@@ -29,7 +32,7 @@ Output: gpx/<slug>/<slug>_recommended.gpx  (renders in the standardized
 Usage:
   scripts/build_recommended_route.py baldy_lejos_trio
   scripts/build_recommended_route.py pt_13026_13408 --start auto
-  scripts/build_recommended_route.py foo --start 37.95,-106.96 --no-return
+  scripts/build_recommended_route.py foo --legs           # older router
 """
 from __future__ import annotations
 import argparse, heapq, json, math, sys, time, urllib.parse, urllib.request, xml.etree.ElementTree as ET
@@ -378,10 +381,10 @@ def main():
     ap.add_argument("--no-return", action="store_true", help="point-to-point (don't return to start)")
     ap.add_argument("--no-dem", action="store_true", help="use noisy GPX elevation instead of resampling a DEM")
     ap.add_argument("--dem-dataset", default="ned10m", help="opentopodata dataset (default ned10m = USGS 10m, US)")
-    ap.add_argument("--graph", action="store_true", help="pooled-track graph router: splice any lines, either direction, at crossings")
-    ap.add_argument("--thin", type=float, default=12.0, help="[--graph] thin tracks to this spacing (m)")
-    ap.add_argument("--transfer-eps", type=float, default=18.0, help="[--graph] max gap to hop between tracks (m)")
-    ap.add_argument("--rdp-eps", type=float, default=8.0, help="[--graph] simplification tolerance to remove weave jitter (m)")
+    ap.add_argument("--legs", action="store_true", help="use the older per-leg stitched / whole-track router instead of the default graph router")
+    ap.add_argument("--thin", type=float, default=12.0, help="[graph] thin tracks to this spacing (m)")
+    ap.add_argument("--transfer-eps", type=float, default=18.0, help="[graph] max gap to hop between tracks (m)")
+    ap.add_argument("--rdp-eps", type=float, default=8.0, help="[graph] simplification tolerance to remove weave jitter (m)")
     ap.add_argument("--out", default=None)
     args = ap.parse_args()
 
@@ -423,7 +426,7 @@ def main():
     obj_terms = [(nm.split(" (")[0], la, lo) for la, lo, nm, _ in objs]
     terms += obj_terms
 
-    if args.graph:
+    if not args.legs:
         route, dist, order = graph_route(
             tracks, terms, bool(start), not args.no_return,
             args.thin, args.transfer_eps, args.rdp_eps)

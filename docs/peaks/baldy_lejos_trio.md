@@ -3,7 +3,7 @@ image: maps/baldy_lejos_trio.png
 range: San Juan
 drive_time: "~5 h to Creede + rough 4WD"
 yds_class: "2"
-gain: "~12 mi / ~3,600 ft (recommended loop, DEM) · 16–20 mi recorded"
+gain: "~11 mi / ~3,750 ft (recommended loop, DEM) · 16–20 mi recorded"
 status: unclimbed
 caltopo_id: 4278RCG
 regional_map_id: 06AR6BF
@@ -53,9 +53,9 @@ An **easy, mostly Class 2 tundra walk** — climb13ers calls Baldy Lejos a "Clas
 | | |
 |---|---|
 | Peaks | Baldy Lejos + PT 13,115 + PT 13,030 |
-| **Recommended loop (composed)** | **~12 mi / ~3,600'** — the shortest route through the three ranked peaks, pieced from real recorded tracks (`build_recommended_route.py`); gain from a DEM, matches CalTopo |
+| **Recommended loop (composed)** | **~11 mi / ~3,750'** — the shortest route through the three ranked peaks, composed from real recorded GPS via the graph router (`build_recommended_route.py`); gain from a DEM, matches CalTopo |
 | Recorded GPX range | **16–20 mi** — what parties actually log, because they start low, wander, and bag unranked bumps |
-| climb13ers' estimate | **~10.2 mi / ~2,630'** — an *approximation* ("Not intended for use as a GPX track"); **both numbers run low** — the real loop is ~12 mi and ~3,600' of DEM-measured gain |
+| climb13ers' estimate | **~10.2 mi / ~2,630'** — an *approximation* ("Not intended for use as a GPX track"); **both numbers run low** — the real loop is ~11 mi and ~3,750' of DEM-measured gain |
 | Class | 2 (1+ tundra on Baldy Lejos) |
 | Trailhead | **West Willow Creek upper TH (~11,500', 4WD — road status not guaranteed; see below)** |
 
@@ -66,9 +66,9 @@ The shortest real route is a **loop** (the 11,500' TH sits between the south and
 3. Continue **south to PT 13,030**, then back **east/SE to the TH** to close the loop.
 
 ![Recommended composed route](../maps/baldy_lejos_trio.png)
-*The **recommended route (bold magenta)** — the shortest loop through only the three ranked summits, **~12 mi / ~3,600'** from the 11,500' upper TH, stitched from real recorded GPS (gain DEM-measured, matches CalTopo). It's drawn over all six recorded tracks (green): it rides the same ground others walked but trims the sprawl to lower trailheads, the western spur, and the unranked add-on bumps.*
+*The **recommended route (bold magenta)** — the shortest loop through only the three ranked summits, **~11 mi / ~3,750'** from the 11,500' upper TH, stitched from real recorded GPS (gain DEM-measured, matches CalTopo). It's drawn over all six recorded tracks (green): it rides the same ground others walked but trims the sprawl to lower trailheads, the western spur, and the unranked add-on bumps.*
 
-> **The crux is the road, not the difficulty.** The upper TH is 4WD-only and climb13ers found the Forest Service had it **gated ~1.25 mi below in 2019 for "serious road degradation."** Even starting *at* the 11,500' TH, recorded parties log **16–20 mi** because they wander and add unranked peaks — the **~12 mi loop above is the disciplined version**. (Gain is **~3,600'**, measured from a DEM and confirmed on CalTopo — *not* the GPS `<ele>` in the tracks, which is too noisy to trust, nor climb13ers' 2,630', which runs low.)
+> **The crux is the road, not the difficulty.** The upper TH is 4WD-only and climb13ers found the Forest Service had it **gated ~1.25 mi below in 2019 for "serious road degradation."** Even starting *at* the 11,500' TH, recorded parties log **16–20 mi** because they wander and add unranked peaks — the **~11 mi loop above is the disciplined version**. (Gain is **~3,750'**, measured from a DEM and confirmed on CalTopo — *not* the GPS `<ele>` in the tracks, which is too noisy to trust, nor climb13ers' 2,630', which runs low.)
 
 ---
 
@@ -124,7 +124,7 @@ Pages verified for all three; **ownership = La Garita Wilderness** (GMUG / Rio G
 ## TL;DR
 
 - **Three ranked La Garita 13ers in one easy Class 2 tundra day** north of San Luis Pass: Baldy Lejos (13,118') + PT 13,115 + PT 13,030.
-- **Recommended ~12 mi / ~3,600' loop** (composed from real tracks; gain DEM-measured, matches CalTopo); recorded parties log **16–20 mi** because they wander and add unranked bumps. climb13ers' **10.2 mi / 2,630'** runs low on both. **Vehicle clearance + whether the 4WD road is open are the crux.**
+- **Recommended ~11 mi / ~3,750' loop** (composed from real tracks; gain DEM-measured, matches CalTopo); recorded parties log **16–20 mi** because they wander and add unranked bumps. climb13ers' **10.2 mi / 2,630'** runs low on both. **Vehicle clearance + whether the 4WD road is open are the crux.**
 - **Trailhead:** West Willow Creek upper TH (~11,500'), up the rough road from Creede (¾ mi above town the road forks E/W Willow — take West Willow).
 - **La Garita Wilderness** — no permits, foot-only, dispersed camping OK.
 - **Drive:** ~5 h Boulder→Creede, then the 4WD road. Cell dead — InReach.
