@@ -65,6 +65,9 @@ The 11,500' TH sits **between** the middle and south peaks, so the day is a lops
 2. Turn **north** to **"Baldy Lejos" (13,118')** (the north end) and return back over/past PT 13,115 — *"most will go over 13,115 to reach Baldy Lejos"* (climb13ers).
 3. Continue **south** to **PT 13,030**, then back to the TH. (This out-and-back-both-directions geometry is why even an efficient trio from the high TH runs ~14–16 mi, not ~10.)
 
+![Shortest ranked-peaks-only route](../maps/baldy_lejos_trio_recommended.png)
+*The **shortest real-GPS line hitting only the three ranked summits** — **~12.1 mi / ~4,500'** from the 11,500' upper TH (the lopsided "Y": north to Baldy Lejos, back through PT 13,115, south to PT 13,030). Even this optimized line is above climb13ers' 10.2 mi floor — and recorded outings (which wander and add unranked bumps) run 16–20 mi.*
+
 > **Two variables, not one:** (1) **how high you can drive** — the upper TH is 4WD-only and climb13ers found the Forest Service had it **gated ~1.25 mi below in 2019 for "serious road degradation"**; and (2) **the route geometry** above. Even starting *at* the 11,500' TH, the two recorded tracks that tag all three peaks are **17.2 and 19.5 mi**. Treat ~16 mi / ~4,500' as the planning number; climb13ers' 10.2 is a best-case floor, not a realistic estimate.
 
 ---
