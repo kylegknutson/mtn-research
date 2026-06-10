@@ -1,0 +1,17 @@
+# West Willow Creek La Garita — 5 ranked 13ers from the San Luis Pass / West Willow
+# upper TH, as a 2-day trip. Trio (714/701/788) + bridge pair (510/648).
+# See docs/trips/west_willow_la_garita.md.
+objective_ids:
+- 714   # Baldy Lejos 13,118
+- 701   # PT 13,115
+- 788   # PT 13,030
+- 510   # PT 13,308
+- 648   # PT 13,166
+nearby:
+  include: false
+landmarks:
+- name: West Willow Creek upper TH (San Luis Pass)
+  lat: 37.9556
+  lon: -106.9666
+  kind: trailhead
+  ele_ft: 11500

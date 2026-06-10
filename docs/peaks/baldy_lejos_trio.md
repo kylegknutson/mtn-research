@@ -128,5 +128,5 @@ Pages verified for all three; **ownership = La Garita Wilderness** (GMUG / Rio G
 - **Trailhead:** West Willow Creek upper TH (~11,500'), up the rough road from Creede (¾ mi above town the road forks E/W Willow — take West Willow).
 - **La Garita Wilderness** — no permits, foot-only, dispersed camping OK.
 - **Drive:** ~5 h Boulder→Creede, then the 4WD road. Cell dead — InReach.
-- **Pairs naturally with the [13,308 + 13,166 bridge pair](pt_13308_13166.md)** from this same West Willow TH (a strong party can link all five); the [13,026 + 13,408 pair](pt_13026_13408.md) is a separate Cochetopa-side trip.
+- **Pairs naturally with the [13,308 + 13,166 bridge pair](pt_13308_13166.md)** from this same West Willow TH — together they're the **[West Willow La Garita 2-day trip](../trips/west_willow_la_garita.md)** (a strong party can link all five in one ~25 mi day); the [13,026 + 13,408 pair](pt_13026_13408.md) is a separate Cochetopa-side trip.
 - **Research map:** https://caltopo.com/m/4278RCG
