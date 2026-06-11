@@ -8,9 +8,21 @@ status: unclimbed
 caltopo_id: QL51DBE
 regional_map_id: L5VH4BU
 peak_ids: [674, 839]
+gain_ft: 3200
+class: 2-3
+peaks: 2
+days: 1
+drive_h: 3.6
 ---
 
 # Savage Peak + PT 13,002 (Sawatch Range / Holy Cross Wilderness)
+
+<!-- QUICKSTATS_START -->
+
+!!! tip "At a glance — recommended day"
+    **3,200 ft** gain · **Class 2-3** · 2 peaks · ~3.6 h drive
+
+<!-- QUICKSTATS_END -->
 
 **Researched:** 2026-05-28 · **PT 13,002 combo added:** 2026-06-09
 **CalTopo research map:** https://caltopo.com/m/QL51DBE

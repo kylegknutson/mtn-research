@@ -7,9 +7,21 @@ gain: "1,500 ft"
 status: unclimbed
 caltopo_id: P2V1QG5
 regional_map_id: LECF68J
+gain_ft: 1500
+class: 1
+peaks: 1
+days: 1
+drive_h: 2.1
 ---
 
 # Pennsylvania Mountain (Mosquito Range)
+
+<!-- QUICKSTATS_START -->
+
+!!! tip "At a glance — recommended day"
+    **1,500 ft** gain · **Class 1** · 1 peak · ~2.1 h drive
+
+<!-- QUICKSTATS_END -->
 
 **Researched:** 2026-05-28
 **CalTopo research map:** https://caltopo.com/m/P2V1QG5

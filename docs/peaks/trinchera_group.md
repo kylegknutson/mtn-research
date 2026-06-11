@@ -7,9 +7,21 @@ gain: "~4,900–7,100 ft (full traverse)"
 status: unclimbed
 caltopo_id: K7F110T
 regional_map_id: VKGB00L
+gain_ft: 6000
+class: 2
+peaks: 4
+days: 1
+drive_h: 4.2
 ---
 
 # Trinchera Group — Trinchera + Leaning South + Cuatro + Maxwell (Culebra Range)
+
+<!-- QUICKSTATS_START -->
+
+!!! tip "At a glance — recommended day"
+    **6,000 ft** gain · **Class 2** · 4 peaks · ~4.2 h drive
+
+<!-- QUICKSTATS_END -->
 
 **Researched:** 2026-06-09
 **Report type:** Day trip (4 ranked 13ers, one crest traverse)

@@ -7,9 +7,21 @@ gain: "~4,000 ft"
 status: unclimbed
 caltopo_id: 6FM1FEK
 regional_map_id: 06AR6BF
+gain_ft: 4000
+class: 2-3
+peaks: 3
+days: 1
+drive_h: 6.3
 ---
 
 # Telluride Peak Group (San Juan Mountains, Imogene Pass area)
+
+<!-- QUICKSTATS_START -->
+
+!!! tip "At a glance — recommended day"
+    **4,000 ft** gain · **Class 2-3** · 3 peaks · ~6.3 h drive
+
+<!-- QUICKSTATS_END -->
 
 **Researched:** 2026-05-14
 **CalTopo research map:** https://caltopo.com/m/6FM1FEK

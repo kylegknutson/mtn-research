@@ -1,6 +1,6 @@
 # Architecture & deployment
 
-**Last updated:** 2026-06-10
+**Last updated:** 2026-06-11
 
 ## What it is
 
@@ -145,7 +145,8 @@ It is **not** an app. It is **a static site fed by an iCloud-synced repo, with s
    - `sync_to_regional.py --slug <slug> --map-id <regional>` → also push tracks into the range's regional "GPS Tracks" map.
    - `build_recommended_route.py <slug>` (optional, multi-track peaks) → `gpx/<slug>/<slug>_recommended.gpx`: shortest route through only the ranked objectives (add-on peaks trimmed), via a **pooled-track graph router** that splices real segments across parties' tracks at crossings, either direction (`--legs` for the older per-leg method); **distance from the route GPX, gain resampled from a DEM** (matches CalTopo — GPX `<ele>` is too noisy). Renders as the bold-magenta "recommended route (composed)" line.
    - `make_overview_map.py <slug>` → `docs/maps/<slug>.png` (source-colored, objective-framed; magenta recommended route on top if present).
-9. **Wire up** → map IDs + PNG into the markdown; `image:` frontmatter for the link preview; mkdocs nav + index.
+9. **Wire up** → map IDs + PNG into the markdown; `image:` frontmatter for the link preview; mkdocs nav.
+   - **Structured stat frontmatter** (`dist_mi`, `gain_ft`, `class`, `peaks`, `days`, `drive_h`, and `days_detail` for trips) is the single source of truth for the stat surfaces. `gen_quickstats.py` renders the top **"At a glance"** callout; `gen_index.py` emits the **sortable** index table (numeric columns + tablesort) **and** `docs/data/report_stats.json`, which `nav-stats.js` reads to append a compact badge under each report's left-nav link. All three have `--check` lints.
 10. **Commit + push** → Actions runs **lint (source gate) → build → deploy**; Pages updates in ~1 min. Don't mark "researched" until the deploy is green.
 11. **Result:** a public URL with a link-preview card, openable from the phone at the trailhead, plus interactive CalTopo research + regional maps.
 

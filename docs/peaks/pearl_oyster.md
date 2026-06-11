@@ -7,9 +7,21 @@ gain: "~4,300 ft"
 status: unclimbed
 caltopo_id: 852FBC0
 regional_map_id: 1G2G7DM
+gain_ft: 4300
+class: 2+
+peaks: 2
+days: 1
+drive_h: 4.4
 ---
 
 # Pearl Mountain + Oyster Peak — combination day (Elk Mountains)
+
+<!-- QUICKSTATS_START -->
+
+!!! tip "At a glance — recommended day"
+    **4,300 ft** gain · **Class 2+** · 2 peaks · ~4.4 h drive
+
+<!-- QUICKSTATS_END -->
 
 **Researched:** 2026-06-07
 **Report type:** Day trip (2 ranked 13ers, one outing)

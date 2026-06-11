@@ -7,9 +7,21 @@ gain: "6,400–7,100 ft"
 status: unclimbed
 caltopo_id: 6TKA0RH
 regional_map_id: VKGB00L
+gain_ft: 6750
+class: 3
+peaks: 2
+days: 1
+drive_h: 4.0
 ---
 
 # Crestolita + Broken Hand Peak — combination day (Sangre de Cristo)
+
+<!-- QUICKSTATS_START -->
+
+!!! tip "At a glance — recommended day"
+    **6,750 ft** gain · **Class 3** · 2 peaks · ~4 h drive
+
+<!-- QUICKSTATS_END -->
 
 **Researched:** 2026-05-31
 **Report type:** Day trip (2 ranked 13ers, one outing)

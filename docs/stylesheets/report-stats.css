@@ -1,0 +1,24 @@
+/* Compact stat badge under each report's left-nav link (nav-stats.js). */
+.nav-stat {
+  display: block;
+  margin-top: 0.1em;
+  font-size: 0.62rem;
+  line-height: 1.15;
+  color: var(--md-default-fg-color--light);
+  opacity: 0.85;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+/* The nav link holds title + badge stacked. */
+.md-nav__link:has(.nav-stat) {
+  flex-wrap: wrap;
+}
+
+/* Right-align the numeric columns in the sortable index table. */
+.md-typeset table:not([class]) td:nth-child(n+4):nth-child(-n+9),
+.md-typeset table:not([class]) th:nth-child(n+4):nth-child(-n+9) {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}

@@ -7,9 +7,21 @@ gain: "2,500–3,551 ft"
 status: unclimbed
 caltopo_id: V4D61FV
 regional_map_id: L5VH4BU
+gain_ft: 3026
+class: 2
+peaks: 1
+days: 1
+drive_h: 3.2
 ---
 
 # Homestake Peak (Sawatch Range / Holy Cross Wilderness)
+
+<!-- QUICKSTATS_START -->
+
+!!! tip "At a glance — recommended day"
+    **3,026 ft** gain · **Class 2** · 1 peak · ~3.2 h drive
+
+<!-- QUICKSTATS_END -->
 
 **Researched:** 2026-05-28
 **CalTopo research map:** https://caltopo.com/m/V4D61FV

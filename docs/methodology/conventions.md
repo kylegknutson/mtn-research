@@ -68,12 +68,27 @@ gain: "6,400–7,100 ft"        # standard-route gain (range if multiple TRs)
 status: unclimbed             # unclimbed | climbed (for the default climber)
 caltopo_id: 6TKA0RH           # research map ID (omit if none yet)
 regional_map_id: VKGB00L      # the range's regional "GPS Tracks" map
+# Structured stat fields — single source of truth for the "At a glance" callout,
+# the sortable index table, and the nav badges. Numeric so they sort correctly.
+dist_mi: 12.3                 # recommended-route distance (omit until a route is computed)
+gain_ft: 6750                 # recommended/representative gain as a plain number
+class: "3"                    # clean sortable class ("2", "2+", "2-3", "3")
+peaks: 2                      # ranked peaks
+days: 1                       # >1 for trips (then add days_detail)
+drive_h: 4.0                  # drive hours as a number (for sorting)
+# Trips only — per-day breakdown for the callout:
+# days_detail:
+#   - {label: "Trio", peaks: 3, dist_mi: 11, gain_ft: 3750, class: "2"}
 ---
 ```
 
 `check_reports.py` warns on any report missing the recommended fields (range,
-drive_time, yds_class, gain, status, regional_map_id). It's a warning, not a hard
-fail — but new reports should always include them.
+drive_time, yds_class, gain, status, regional_map_id). The **structured stat fields**
+(`dist_mi`, `gain_ft`, `class`, `peaks`, `days`, `drive_h`) drive the at-a-glance
+callout / sortable table / nav badges — `gen_quickstats.py` and `gen_index.py` read
+them and have `--check` lints. After editing them, run both (or `build_report
+--finalize`). `dist_mi` comes from `build_recommended_route.py`; leave it off until
+a route exists (`—` in the table).
 
 ## Landing-page peak table (auto-generated)
 

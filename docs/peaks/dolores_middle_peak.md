@@ -8,9 +8,21 @@ gain: "~4,000 ft"
 status: unclimbed
 caltopo_id: 1R09CLT
 regional_map_id: 06AR6BF
+gain_ft: 4000
+class: 2
+peaks: 2
+days: 1
+drive_h: 7.5
 ---
 
 # Dolores Peak + Middle Peak (San Miguel Mountains, CO)
+
+<!-- QUICKSTATS_START -->
+
+!!! tip "At a glance — recommended day"
+    **4,000 ft** gain · **Class 2** · 2 peaks · ~7.5 h drive
+
+<!-- QUICKSTATS_END -->
 
 **Researched:** 2026-05-13
 **CalTopo research map (with all GPX layered):** https://caltopo.com/m/1R09CLT

@@ -7,9 +7,21 @@ gain: "3,000–4,000 ft"
 status: unclimbed
 caltopo_id: 07PMBS1
 regional_map_id: 06AR6BF
+gain_ft: 3500
+class: 2
+peaks: 3
+days: 1
+drive_h: 5.6
 ---
 
 # PT 13,155 Group — Uncompahgre's Three Children (San Juan)
+
+<!-- QUICKSTATS_START -->
+
+!!! tip "At a glance — recommended day"
+    **3,500 ft** gain · **Class 2** · 3 peaks · ~5.6 h drive
+
+<!-- QUICKSTATS_END -->
 
 **Researched:** 2026-06-03
 **Report type:** Day trip (3 ranked 13ers, one outing)

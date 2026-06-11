@@ -7,9 +7,21 @@ gain: "1,100–3,000 ft"
 status: unclimbed
 caltopo_id: CDMT01G
 regional_map_id: L5VH4BU
+gain_ft: 2050
+class: 2
+peaks: 1
+days: 1
+drive_h: 4.2
 ---
 
 # Chipeta Mountain (southern Sawatch, Marshall Pass)
+
+<!-- QUICKSTATS_START -->
+
+!!! tip "At a glance — recommended day"
+    **2,050 ft** gain · **Class 2** · 1 peak · ~4.2 h drive
+
+<!-- QUICKSTATS_END -->
 
 **Researched:** 2026-06-02
 **CalTopo research map:** https://caltopo.com/m/CDMT01G

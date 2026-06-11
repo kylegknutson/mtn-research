@@ -7,9 +7,22 @@ gain: "~11 mi / ~3,750 ft (recommended loop, DEM) · 16–20 mi recorded"
 status: unclimbed
 caltopo_id: 4278RCG
 regional_map_id: 06AR6BF
+dist_mi: 11.0
+gain_ft: 3750
+class: 2
+peaks: 3
+days: 1
+drive_h: 5.0
 ---
 
 # "Baldy Lejos" + PT 13,115 + PT 13,030 — La Garita Wilderness (West Willow / Creede)
+
+<!-- QUICKSTATS_START -->
+
+!!! tip "At a glance — recommended day"
+    **11 mi** · **3,750 ft** gain · **Class 2** · 3 peaks · ~5 h drive
+
+<!-- QUICKSTATS_END -->
 
 **Researched:** 2026-06-09
 **Report type:** Day trip — a Class 2 tundra trio north of San Luis Pass

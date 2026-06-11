@@ -16,7 +16,7 @@ Run after adding/editing a report (or in CI to check it's current):
     scripts/gen_index.py --check     # exit 1 if index.md is stale
 """
 from __future__ import annotations
-import argparse, re, sys
+import argparse, json, re, sys
 from pathlib import Path
 import yaml
 
@@ -38,33 +38,77 @@ def drive_minutes(s) -> int:
     return (int(h.group(1)) if h else 0) * 60 + (int(m.group(1)) if m else 0)
 
 
+def _num(v):
+    """Render a number for a sortable cell ('11', '3,750'); '—' if missing."""
+    if v is None:
+        return "—"
+    if isinstance(v, float) and v.is_integer():
+        v = int(v)
+    return f"{v:,}" if isinstance(v, int) else f"{v:g}"
+
+
 def build_table() -> str:
     rows = []
-    for p in sorted(PEAKS.glob("*.md")):
-        # Kyle's index lists only his unsuffixed reports. Skip skeletons and any
-        # climber-suffixed report (e.g. <slug>.emily.md) — those belong to a
-        # friend's own site. Peak slugs never contain a dot, so a second dot ⇒ suffix.
-        if p.name.count(".") > 1:
-            continue
-        fm = frontmatter(p)
-        title = re.search(r"^#\s+(.+)$", p.read_text(), re.M)
-        name = title.group(1).strip() if title else p.stem
-        # Trim the H1's trailing "(range/context)" or " — subtitle" for the table cell.
-        name = re.split(r"\s+[—(]", name, 1)[0].strip()
-        rows.append({
-            "name": name, "slug": p.stem,
-            "range": fm.get("range", ""), "drive": fm.get("drive_time", "—"),
-            "klass": fm.get("yds_class", ""), "gain": fm.get("gain", ""),
-            "status": fm.get("status", ""),
-            "_min": drive_minutes(fm.get("drive_time")),
-        })
-    rows.sort(key=lambda r: r["_min"])
-    out = ["| Peak | Range | Drive | Class | Gain | Status |",
-           "|---|---|---|---|---|---|"]
+    for sub, folder in (("peaks", PEAKS), ("trips", ROOT / "docs" / "trips")):
+        for p in sorted(folder.glob("*.md")):
+            # Skip skeletons / climber-suffixed reports (a second dot ⇒ suffix).
+            if p.name.count(".") > 1 or p.stem == "index":
+                continue
+            fm = frontmatter(p)
+            title = re.search(r"^#\s+(.+)$", p.read_text(), re.M)
+            name = title.group(1).strip() if title else p.stem
+            name = re.split(r"\s+[—(]", name, 1)[0].strip()
+            peaks = fm.get("peaks")
+            days = fm.get("days") or 1
+            rows.append({
+                "name": name, "url": f"{sub}/{p.stem}.md",
+                "range": fm.get("range", ""),
+                "klass": fm.get("class") or fm.get("yds_class", ""),
+                "dist": fm.get("dist_mi"), "gain": fm.get("gain_ft"),
+                "peaks": peaks, "days": days,
+                "pk_day": round(peaks / days, 1) if peaks else None,
+                "drive": fm.get("drive_h"), "status": fm.get("status", ""),
+                "_sort": fm.get("drive_h") if fm.get("drive_h") is not None else 10**6,
+            })
+    rows.sort(key=lambda r: r["_sort"])
+    out = ["| Peak / Trip | Range | Class | Dist (mi) | Gain (ft) | Peaks | Days | Pk/day | Drive (h) | Status |",
+           "|---|---|---|--:|--:|--:|--:|--:|--:|---|"]
     for r in rows:
-        out.append(f"| [{r['name']}](peaks/{r['slug']}.md) | {r['range']} | "
-                   f"{r['drive']} | {r['klass']} | {r['gain']} | {r['status']} |")
+        out.append(
+            f"| [{r['name']}]({r['url']}) | {r['range']} | {r['klass'] or '—'} | "
+            f"{_num(r['dist'])} | {_num(r['gain'])} | {_num(r['peaks'])} | "
+            f"{_num(r['days'])} | {_num(r['pk_day'])} | {_num(r['drive'])} | {r['status']} |")
     return "\n".join(out)
+
+
+STATS_JSON = ROOT / "docs" / "data" / "report_stats.json"
+
+
+def badge_for(fm) -> str:
+    """Compact nav badge like '11 mi · 3,750′ · C2 · 2d'."""
+    bits = []
+    if fm.get("dist_mi") is not None:
+        bits.append(f"{_num(fm['dist_mi'])} mi")
+    if fm.get("gain_ft") is not None:
+        bits.append(f"{_num(fm['gain_ft'])}′")
+    klass = fm.get("class") or fm.get("yds_class")
+    if klass:
+        bits.append(f"C{klass}")
+    if (fm.get("days") or 1) > 1:
+        bits.append(f"{fm['days']}d")
+    return " · ".join(bits)
+
+
+def collect_badges() -> dict:
+    out = {}
+    for sub, folder in (("peaks", PEAKS), ("trips", ROOT / "docs" / "trips")):
+        for p in sorted(folder.glob("*.md")):
+            if p.name.count(".") > 1 or p.stem == "index":
+                continue
+            b = badge_for(frontmatter(p))
+            if b:
+                out[f"{sub}/{p.stem}/"] = b   # mkdocs directory-URL key
+    return out
 
 
 def render(index_text: str, table: str) -> str:
@@ -84,16 +128,20 @@ def main():
 
     cur = INDEX.read_text()
     new = render(cur, build_table())
+    badges = json.dumps(collect_badges(), ensure_ascii=False, indent=0, sort_keys=True)
+    cur_badges = STATS_JSON.read_text() if STATS_JSON.exists() else ""
     if args.check:
-        if cur != new:
-            print("docs/index.md peak table is STALE — run scripts/gen_index.py")
+        if cur != new or cur_badges != badges:
+            print("docs/index.md or report_stats.json is STALE — run scripts/gen_index.py")
             sys.exit(1)
-        print("index table current ✓"); return
+        print("index table + nav badges current ✓"); return
     if cur != new:
         INDEX.write_text(new)
         print("✓ regenerated peak table in docs/index.md")
-    else:
-        print("index table already current")
+    if cur_badges != badges:
+        STATS_JSON.parent.mkdir(parents=True, exist_ok=True)
+        STATS_JSON.write_text(badges)
+        print(f"✓ regenerated docs/data/report_stats.json ({badges.count(chr(10))} entries)")
 
 
 if __name__ == "__main__":

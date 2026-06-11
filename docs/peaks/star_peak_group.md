@@ -7,9 +7,21 @@ gain: "4,300 ft (Star+Taylor) — up to ~8,000 ft (all three)"
 status: unclimbed
 caltopo_id: J6HBR6S
 regional_map_id: 1G2G7DM
+gain_ft: 4300
+class: 2
+peaks: 3
+days: 1
+drive_h: 3.7
 ---
 
 # Star Peak Group — Star + Taylor + Italian (Elk Mountains)
+
+<!-- QUICKSTATS_START -->
+
+!!! tip "At a glance — recommended day"
+    **4,300 ft** gain · **Class 2** · 3 peaks · ~3.7 h drive
+
+<!-- QUICKSTATS_END -->
 
 **Researched:** 2026-06-07
 **Report type:** Day trip (3 ranked 13ers) — one long day *or* a weekend from one basecamp

@@ -6,6 +6,11 @@ yds_class: "1"
 gain: "~7,400–7,650 ft"
 status: unclimbed
 regional_map_id: UDK6ETR
+gain_ft: 7525
+class: 1
+peaks: 6
+days: 1
+drive_h: 32.0
 ---
 
 <!-- CLIMBERS_START -->
@@ -13,6 +18,13 @@ regional_map_id: UDK6ETR
 <!-- CLIMBERS_END -->
 
 # Carter Dome Group — day traverse (Carter-Moriah Range)
+
+<!-- QUICKSTATS_START -->
+
+!!! tip "At a glance — recommended day"
+    **7,525 ft** gain · **Class 1** · 6 peaks · ~32 h drive
+
+<!-- QUICKSTATS_END -->
 
 **Researched:** 2026-06-04
 **Report type:** Day trip (6 peaks)

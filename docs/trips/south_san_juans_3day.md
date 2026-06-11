@@ -7,9 +7,28 @@ gain: "~9,000–10,000 ft (3 days)"
 status: unclimbed
 caltopo_id: AS71AEC
 regional_map_id: 06AR6BF
+gain_ft: 9500
+class: 2
+peaks: 5
+days: 3
+drive_h: 5.2
+days_detail:
+  - {label: "Bennett", peaks: 1, dist_mi: 7, gain_ft: 2900, class: "1"}
+  - {label: "Summit trio", peaks: 3, dist_mi: 10.2, gain_ft: 4449, class: "2"}
+  - {label: "Conejos", peaks: 1, dist_mi: 6.2, gain_ft: 2500, class: "1"}
 ---
 
 # South San Juans 3-Day Weekend — Bennett, Conejos & the Summit Peak Group
+
+<!-- QUICKSTATS_START -->
+
+!!! tip "At a glance — 3-day trip"
+    **Day 1 (Bennett):** **7 mi** · **2,900 ft** gain · **Class 1** · 1 peak
+    **Day 2 (Summit trio):** **10.2 mi** · **4,449 ft** gain · **Class 2** · 3 peaks
+    **Day 3 (Conejos):** **6.2 mi** · **2,500 ft** gain · **Class 1** · 1 peak
+    **Total:** **9,500 ft** gain · **Class 2** · 5 peaks · ~5.2 h drive
+
+<!-- QUICKSTATS_END -->
 
 **Researched:** 2026-06-07
 **Report type:** Multi-day trip (5 ranked 13ers over 3 climbing days, moving camp by vehicle each night)

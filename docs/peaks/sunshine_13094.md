@@ -7,9 +7,21 @@ gain: "~3,300–5,400 ft"
 status: unclimbed
 caltopo_id: 11EMC0L
 regional_map_id: 06AR6BF
+gain_ft: 4350
+class: 2
+peaks: 2
+days: 1
+drive_h: 7.5
 ---
 
 # Sunshine Mountain A + PT 13,094 — combination day (San Juan Mountains)
+
+<!-- QUICKSTATS_START -->
+
+!!! tip "At a glance — recommended day"
+    **4,350 ft** gain · **Class 2** · 2 peaks · ~7.5 h drive
+
+<!-- QUICKSTATS_END -->
 
 **Researched:** 2026-06-08
 **Report type:** Day trip (2 ranked 13ers, one outing)

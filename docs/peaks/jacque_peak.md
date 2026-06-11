@@ -7,9 +7,21 @@ gain: "3,500 ft"
 status: unclimbed
 caltopo_id: R2NF0S2
 regional_map_id: 6E4GJV2
+gain_ft: 3500
+class: 2
+peaks: 1
+days: 1
+drive_h: 1.7
 ---
 
 # Jacque Peak (Gore Range)
+
+<!-- QUICKSTATS_START -->
+
+!!! tip "At a glance — recommended day"
+    **3,500 ft** gain · **Class 2** · 1 peak · ~1.7 h drive
+
+<!-- QUICKSTATS_END -->
 
 **Researched:** 2026-05-28
 **CalTopo research map:** https://caltopo.com/m/R2NF0S2

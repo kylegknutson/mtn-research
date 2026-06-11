@@ -8,9 +8,21 @@ gain: "3,450–3,528 ft"
 status: unclimbed
 caltopo_id: 2SCT1B6
 regional_map_id: VKGB00L
+gain_ft: 3489
+class: 2
+peaks: 1
+days: 1
+drive_h: 3.6
 ---
 
 # Hunts Peak (Northern Sangre de Cristo)
+
+<!-- QUICKSTATS_START -->
+
+!!! tip "At a glance — recommended day"
+    **3,489 ft** gain · **Class 2** · 1 peak · ~3.6 h drive
+
+<!-- QUICKSTATS_END -->
 
 **Researched:** 2026-05-21
 **Freshness pass:** 2026-05-29 (added LoJ + peakbagger sources per 3-source methodology; reconfirmed cluster status)

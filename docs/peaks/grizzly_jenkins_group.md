@@ -7,9 +7,21 @@ gain: "~4,800 ft (trio loop) · ~5,300–6,800 ft (GPX range)"
 status: unclimbed
 caltopo_id: 38DBF6E
 regional_map_id: L5VH4BU
+gain_ft: 6050
+class: 2+
+peaks: 4
+days: 1
+drive_h: 4.2
 ---
 
 # Grizzly Pk E + PT 13,145 + Jenkins Mtn (+ optional "Lake Fork Pk") — Sawatch
+
+<!-- QUICKSTATS_START -->
+
+!!! tip "At a glance — recommended day"
+    **6,050 ft** gain · **Class 2+** · 4 peaks · ~4.2 h drive
+
+<!-- QUICKSTATS_END -->
 
 **Researched:** 2026-06-09
 **Report type:** Day trip — a 3-peak Class 2+ ridge loop, with an optional 4th-peak north extension

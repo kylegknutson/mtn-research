@@ -29,8 +29,10 @@ jobs:
         run: pip install Pillow && python scripts/check_maps.py
       - name: Map extent check (no in-scope tracks cut off at canvas edge)
         run: python scripts/check_map_extents.py
-      - name: Index freshness (peak table matches report frontmatter)
+      - name: Index freshness (peak table + nav badges match frontmatter)
         run: pip install PyYAML && python scripts/gen_index.py --check
+      - name: Quick-stats callouts current
+        run: pip install PyYAML && python scripts/gen_quickstats.py --check
       - name: Climber-status freshness (other-climber lines current)
         run: pip install PyYAML requests && python scripts/climber_status.py --check
 

@@ -6,9 +6,27 @@ yds_class: "3"
 gain: "~19 mi / ~6,800 ft over 2 days · ~18 mi / ~6,000 ft if linked in one push"
 status: unclimbed
 regional_map_id: 06AR6BF
+dist_mi: 19.0
+gain_ft: 6800
+class: 3
+peaks: 5
+days: 2
+drive_h: 5.0
+days_detail:
+  - {label: "Trio", peaks: 3, dist_mi: 11, gain_ft: 3750, class: "2"}
+  - {label: "Bridge pair", peaks: 2, dist_mi: 8.2, gain_ft: 3050, class: "3"}
 ---
 
 # West Willow Creek — 5 La Garita 13ers from San Luis Pass (2-Day)
+
+<!-- QUICKSTATS_START -->
+
+!!! tip "At a glance — 2-day trip"
+    **Day 1 (Trio):** **11 mi** · **3,750 ft** gain · **Class 2** · 3 peaks
+    **Day 2 (Bridge pair):** **8.2 mi** · **3,050 ft** gain · **Class 3** · 2 peaks
+    **Total:** **19 mi** · **6,800 ft** gain · **Class 3** · 5 peaks · ~5 h drive
+
+<!-- QUICKSTATS_END -->
 
 **Researched:** 2026-06-10
 **Report type:** Multi-day trip / backpack — 5 ranked 13ers over 2 days from one trailhead

@@ -7,9 +7,21 @@ gain: "~3,900 ft (clean trio)"
 status: unclimbed
 caltopo_id: DCQ8UKS
 regional_map_id: 06AR6BF
+gain_ft: 3900
+class: 2
+peaks: 3
+days: 1
+drive_h: 5.9
 ---
 
 # Cuba Gulch Trio — PT 13,076 + Unnamed 13,003 + PT 13,179 (San Juan Mountains)
+
+<!-- QUICKSTATS_START -->
+
+!!! tip "At a glance — recommended day"
+    **3,900 ft** gain · **Class 2** · 3 peaks · ~5.9 h drive
+
+<!-- QUICKSTATS_END -->
 
 **Researched:** 2026-06-08
 **Report type:** Day trip (3 peaks, one outing)

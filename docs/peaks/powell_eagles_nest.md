@@ -7,9 +7,21 @@ gain: "5,500–7,000 ft"
 status: unclimbed
 caltopo_id: GG1BKFL
 regional_map_id: 6E4GJV2
+gain_ft: 6250
+class: 3
+peaks: 2
+days: 1
+drive_h: 3.1
 ---
 
 # Mount Powell + Eagles Nest — combination day (Gore Range)
+
+<!-- QUICKSTATS_START -->
+
+!!! tip "At a glance — recommended day"
+    **6,250 ft** gain · **Class 3** · 2 peaks · ~3.1 h drive
+
+<!-- QUICKSTATS_END -->
 
 **Researched:** 2026-06-02
 **Report type:** Day trip (2 ranked 13ers, one outing)

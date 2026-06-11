@@ -7,9 +7,21 @@ gain: "2,766 ft (Star+Taylor)"
 status: unclimbed
 caltopo_id: 607Q6C8
 regional_map_id: 1G2G7DM
+gain_ft: 2766
+class: 2+
+peaks: 1
+days: 1
+drive_h: 3.6
 ---
 
 # Star Peak A (Elk Mountains / Taylor Park cluster)
+
+<!-- QUICKSTATS_START -->
+
+!!! tip "At a glance — recommended day"
+    **2,766 ft** gain · **Class 2+** · 1 peak · ~3.6 h drive
+
+<!-- QUICKSTATS_END -->
 
 > 📋 **See also: [Star Peak Group (Star + Taylor + Italian)](star_peak_group.md)** — the day-trip/weekend combo report that plans these three together. This page is the single-peak deep dive on Star itself.
 

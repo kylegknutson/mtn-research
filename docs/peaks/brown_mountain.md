@@ -8,9 +8,21 @@ gain: "1,600–4,380 ft"
 status: unclimbed
 caltopo_id: Q2C5650
 regional_map_id: 06AR6BF
+gain_ft: 2990
+class: 2
+peaks: 1
+days: 1
+drive_h: 6.3
 ---
 
 # Brown Mountain (San Juan Mountains, between Ouray & Silverton)
+
+<!-- QUICKSTATS_START -->
+
+!!! tip "At a glance — recommended day"
+    **2,990 ft** gain · **Class 2** · 1 peak · ~6.3 h drive
+
+<!-- QUICKSTATS_END -->
 
 **Researched:** 2026-05-14 (rev 4 — cluster status confirmed 5/15)
 **CalTopo research map:** https://caltopo.com/m/Q2C5650
