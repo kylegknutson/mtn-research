@@ -3,15 +3,16 @@ image: maps/pennsylvania_mountain.png
 range: Mosquito
 drive_time: "2h 5m"
 yds_class: "1"
-gain: "1,500 ft"
+gain: "~3.9 mi / ~1,040 ft (recommended loop, DEM)"
 status: unclimbed
 caltopo_id: P2V1QG5
 regional_map_id: LECF68J
-gain_ft: 1500
+gain_ft: 1039
 class: 1
 peaks: 1
 days: 1
 drive_h: 2.1
+dist_mi: 3.9
 ---
 
 # Pennsylvania Mountain (Mosquito Range)
@@ -19,7 +20,7 @@ drive_h: 2.1
 <!-- QUICKSTATS_START -->
 
 !!! tip "At a glance — recommended day"
-    **1,500 ft** gain · **Class 1** · 1 peak · ~2.1 h drive
+    **3.9 mi** · **1,039 ft** gain · **Class 1** · 1 peak · ~2.1 h drive
 
 <!-- QUICKSTATS_END -->
 

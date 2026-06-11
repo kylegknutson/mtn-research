@@ -1,7 +1,7 @@
 #!/usr/bin/env -S uv run --script
 # /// script
 # requires-python = ">=3.11"
-# dependencies = []
+# dependencies = ["PyYAML"]
 # ///
 """
 build_recommended_route.py — compose a "recommended" route from real recorded tracks.
@@ -255,8 +255,12 @@ def build_graph(tracks, transfer_eps):
     dlat = transfer_eps / 111000.0
     dlon = transfer_eps / (111000.0 * max(0.2, math.cos(math.radians(mean_lat))))
     grid = {}
+    CELL_CAP = 64   # cap transfer-grid occupancy so dense clusters (many tracks
+                    # converging at a summit/TH) can't make this O(n²) and hang
     for i, n in enumerate(nodes):
-        grid.setdefault((int(n[0] / dlat), int(n[1] / dlon)), []).append(i)
+        lst = grid.setdefault((int(n[0] / dlat), int(n[1] / dlon)), [])
+        if len(lst) < CELL_CAP:
+            lst.append(i)
     for i, n in enumerate(nodes):
         ci, cj = int(n[0] / dlat), int(n[1] / dlon)
         for a in (ci - 1, ci, ci + 1):
@@ -332,11 +336,44 @@ def rdp(pts, eps_m):
     return [p for i, p in enumerate(pts) if keep[i]]
 
 
+def tsp_order(pd, n, has_start, want_return):
+    """Order terminals (index 0 = start if has_start). Brute-force for small N;
+    nearest-neighbor for large N so a bloated objective set can't blow up (N!)."""
+    obj_ids = list(range(1, n)) if has_start else list(range(n))
+    if len(obj_ids) <= 8:
+        best = None
+        for perm in permutations(obj_ids):
+            order = ([0, *perm] + ([0] if want_return else [])) if has_start else list(perm)
+            tot = sum(pd(order[k], order[k + 1]) for k in range(len(order) - 1))
+            if best is None or tot < best[0]:
+                best = (tot, order)
+        return best[1]
+    # nearest-neighbor
+    start = 0 if has_start else obj_ids[0]
+    unvisited = set(obj_ids); unvisited.discard(start)
+    order = [start]; cur = start
+    while unvisited:
+        nxt = min(unvisited, key=lambda j: pd(cur, j))
+        order.append(nxt); unvisited.discard(nxt); cur = nxt
+    if has_start and want_return:
+        order.append(0)
+    return order
+
+
 def graph_route(tracks, terms, has_start, want_return, thin_m, transfer_eps, rdp_eps):
     """Shortest real-path route through the terminals via the pooled-track graph.
     Returns (route_pts, dist_m, order_indices)."""
-    nodes, adj = build_graph([thin_track(t, thin_m) for t in tracks], transfer_eps)
-    print(f"Graph: {len(nodes)} nodes (thin {thin_m:.0f} m, transfer {transfer_eps:.0f} m)")
+    # Adaptive thinning: keep the node count bounded so dense/huge track sets
+    # (e.g. 120k+ points across many long tracks) don't make the graph build crawl.
+    NODE_CAP = 30000
+    tm, te = thin_m, transfer_eps
+    total = sum(len(thin_track(t, tm)) for t in tracks)
+    if total > NODE_CAP:
+        k = total / NODE_CAP
+        tm, te = thin_m * k, transfer_eps * k
+        print(f"Large track set ({total} pts) → thinning to {tm:.0f} m (transfer {te:.0f} m)")
+    nodes, adj = build_graph([thin_track(t, tm) for t in tracks], te)
+    print(f"Graph: {len(nodes)} nodes (thin {tm:.0f} m, transfer {te:.0f} m)")
     snapped = []
     for label, la, lo in terms:
         bi, bd = closest_idx(nodes, la, lo)
@@ -348,16 +385,8 @@ def graph_route(tracks, terms, has_start, want_return, thin_m, transfer_eps, rdp
     def pd(i, j):
         return srcs[snapped[i]][0][snapped[j]]
 
-    n = len(terms)
-    obj_ids = list(range(1, n)) if has_start else list(range(n))
-    best = None
-    for perm in permutations(obj_ids):
-        order = ([0, *perm] + ([0] if want_return else [])) if has_start else list(perm)
-        tot = sum(pd(order[k], order[k + 1]) for k in range(len(order) - 1))
-        if best is None or tot < best[0]:
-            best = (tot, order)
-    total, order = best
-    if math.isinf(total):
+    order = tsp_order(pd, len(terms), has_start, want_return)
+    if any(math.isinf(pd(order[k], order[k + 1])) for k in range(len(order) - 1)):
         sys.exit("ERROR (--graph): terminals not all connected; tracks may not "
                  "overlap. Try a larger --transfer-eps.")
     # reconstruct node path
@@ -411,13 +440,25 @@ def main():
     terms = []
     start = None
     if args.start == "auto":
-        lm = next(d.glob("*landmark*.gpx"), None)
-        ths = [(ele or 0, la, lo, nm) for la, lo, nm, ele in (parse_waypoints(lm) if lm else [])]
+        # Prefer peaks.yml landmarks marked kind: trailhead (the generated
+        # *_landmarks.gpx flattens kind, so the highest *point* could be a pass).
+        # Among trailheads pick the highest-elevation (best drivable) start.
+        ths = []
+        yml = d / "peaks.yml"
+        if yml.exists():
+            import yaml
+            cfg = yaml.safe_load(yml.read_text()) or {}
+            for l in (cfg.get("landmarks") or []):
+                if l.get("kind") == "trailhead" and l.get("lat") is not None:
+                    ths.append((l.get("ele_ft") or 0, l["lat"], l["lon"], l["name"]))
+        if not ths:  # fallback: highest waypoint in the landmarks gpx
+            lm = next(d.glob("*landmark*.gpx"), None)
+            ths = [(ele or 0, la, lo, nm) for la, lo, nm, ele in (parse_waypoints(lm) if lm else [])]
         if ths:
             ths.sort(reverse=True)
             _, la, lo, nm = ths[0]
             start = (nm, la, lo)
-            print(f"Start: {nm} ({ths[0][0] * 3.281:.0f} ft)")
+            print(f"Start: {nm} ({ths[0][0]:.0f} ft)")
     elif args.start != "none":
         la, lo = (float(x) for x in args.start.split(","))
         start = ("start", la, lo)
@@ -446,18 +487,9 @@ def main():
         def pdist(i, j):
             return seg[(i, j)][0] if (i, j) in seg else float("inf")
 
-        # order via brute-force TSP
-        obj_ids = list(range(1, n)) if start else list(range(n))
-        best = None
-        for perm in permutations(obj_ids):
-            if start:
-                order = [0, *perm] + ([] if args.no_return else [0])
-            else:
-                order = list(perm)
-            tot = sum(pdist(order[k], order[k + 1]) for k in range(len(order) - 1))
-            if best is None or tot < best[0]:
-                best = (tot, order)
-        total, order = best
+        # order via TSP (brute force small N, nearest-neighbor large N)
+        order = tsp_order(pdist, n, bool(start), not args.no_return)
+        total = sum(pdist(order[k], order[k + 1]) for k in range(len(order) - 1))
         if math.isinf(total):
             sys.exit("ERROR: some legs have no single track connecting them "
                      "(no party walked directly between two objectives). "

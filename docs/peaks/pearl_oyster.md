@@ -3,15 +3,16 @@ image: maps/pearl_oyster.png
 range: Elk
 drive_time: "4h 22m"
 yds_class: "2+"
-gain: "~4,300 ft"
+gain: "~7.5 mi / ~4,110 ft (recommended loop, DEM)"
 status: unclimbed
 caltopo_id: 852FBC0
 regional_map_id: 1G2G7DM
-gain_ft: 4300
+gain_ft: 4110
 class: 2+
 peaks: 2
 days: 1
 drive_h: 4.4
+dist_mi: 7.5
 ---
 
 # Pearl Mountain + Oyster Peak — combination day (Elk Mountains)
@@ -19,7 +20,7 @@ drive_h: 4.4
 <!-- QUICKSTATS_START -->
 
 !!! tip "At a glance — recommended day"
-    **4,300 ft** gain · **Class 2+** · 2 peaks · ~4.4 h drive
+    **7.5 mi** · **4,110 ft** gain · **Class 2+** · 2 peaks · ~4.4 h drive
 
 <!-- QUICKSTATS_END -->
 

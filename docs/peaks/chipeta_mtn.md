@@ -3,15 +3,16 @@ image: maps/chipeta_mtn.png
 range: Sawatch
 drive_time: "4h 13m"
 yds_class: "2"
-gain: "1,100–3,000 ft"
+gain: "~7.7 mi / ~3,450 ft (recommended loop, DEM)"
 status: unclimbed
 caltopo_id: CDMT01G
 regional_map_id: L5VH4BU
-gain_ft: 2050
+gain_ft: 3446
 class: 2
 peaks: 1
 days: 1
 drive_h: 4.2
+dist_mi: 7.7
 ---
 
 # Chipeta Mountain (southern Sawatch, Marshall Pass)
@@ -19,7 +20,7 @@ drive_h: 4.2
 <!-- QUICKSTATS_START -->
 
 !!! tip "At a glance — recommended day"
-    **2,050 ft** gain · **Class 2** · 1 peak · ~4.2 h drive
+    **7.7 mi** · **3,446 ft** gain · **Class 2** · 1 peak · ~4.2 h drive
 
 <!-- QUICKSTATS_END -->
 
