@@ -12,7 +12,7 @@ Everything in the [single-peak checklist](single-peak-report.md), applied to eac
 
 - [ ] **Confirm it's a real pairing** — check TRs for how often these peaks are actually done together (combo evidence), not just geographic proximity
 - [ ] **Connector beta** — the ridge/traverse between peaks: class, distance, exposure
-- [ ] **Combo stats from GPX** — compute total distance + gain from the exact-combo TR tracks (not the sum of two standalone climbs)
+- [ ] **Combo stats from GPX** — `build_recommended_route.py <slug>` for the composed loop through all the day's objectives (DEM `dist_mi`/`gain_ft`); **verify no snap WARNs** and that the loop is sane vs. the recorded range. ([Build the recommended route right](../source-requirements.md)) — *not* the sum of two standalone climbs
 - [ ] **Single CalTopo map + PNG** covering all peaks in the trip (objective box spans the peaks)
 
 ## Body sections (day-trip flavor)

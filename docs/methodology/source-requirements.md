@@ -54,6 +54,40 @@ climb13ers mileage/gain is an **author's estimate drawn on a map** — their own
 - `scripts/build_recommended_route.py <slug>` — composes the **shortest route through only the ranked objectives** from the real source tracks (add-on peaks trimmed automatically), reports distance, and **measures gain from a DEM** (matches CalTopo; `--no-dem` falls back to noisy GPS). By default it uses a **pooled-track graph router** that can splice part of one party's line onto another's where they cross (either direction — a recorded *ascent* line is a valid *descent*), finding the true shortest real-ground loop; `--legs` selects the older per-leg/whole-track method. Output `gpx/<slug>/<slug>_recommended.gpx` renders in the standardized **bold-magenta "recommended route (composed)"** style on the overview map.
 - `scripts/check_route_stats.py [--strict]` — audits every report's `gain:` headline against its recorded-track range; flags climb13ers-sourced headlines and any mileage shorter than the shortest recorded track. Run it before finalizing.
 
+### Build the recommended route right (do this WHILE building the report) — Kyle, 2026-06-11
+
+A batch run across existing reports showed that `build_recommended_route.py` only
+produces trustworthy numbers when three inputs are clean. **Set these up as you
+build each report, not after** — retrofitting is the painful path:
+
+1. **`peaks.yml` `objective_ids` = ONLY the report's actual ranked objectives.**
+   Don't let it carry the whole range. Failures we hit: `powell_eagles_nest`'s
+   `peaks_only` held the entire 13-peak Gore traverse; `homestake` carried a stray
+   "Savage Pk" 8 km away. Keep `nearby.include: false` unless the report really is
+   that group, and don't pad `extra_summits`. (A bloated set also explodes the
+   route: >8 objectives falls back to a nearest-neighbor tour, not the optimum.)
+2. **Mark the real start `kind: trailhead`; passes/saddles are `kind: landmark`.**
+   `--start auto` picks the highest-elevation `kind: trailhead`. If a pass is
+   mistakenly a trailhead (or the only "trailhead" is a high saddle), the route
+   starts mid-mountain and undercounts (e.g. it grabbed *Broken Hand Pass* as the
+   start for crestolita). The generated `*_landmarks.gpx` flattens `kind`, so the
+   peaks.yml is the source of truth here.
+3. **The swept tracks must match that trailhead's approach.** If the GPX library
+   tracks come from a different drainage, every objective/start "snaps" far from
+   the nearest track and the loop is fiction (jacque snapped 5 km, crestolita
+   0.9 km). 
+
+**Verification (must pass before trusting the numbers):** run
+`build_recommended_route.py <slug>` and check the output has **no `WARN: … snaps
+… m`** lines (start + every objective within ~250 m of a real track) and that the
+distance/gain are **sane vs. the recorded-track range**. If it warns or the loop
+is wildly off (e.g. 22 mi for a peak documented as a ~4-mile day), the inputs are
+wrong — fix the objective set / trailhead, don't publish the number. Then copy
+the DEM distance/gain into the structured stat frontmatter (`dist_mi`, `gain_ft`)
+and push the magenta route to the CalTopo map. For multi-trailhead trips (peaks
+at *different* THs, like a car-camp weekend) **don't** auto-route one loop — set
+`days_detail` and let `dist_mi`/`gain_ft` be the per-day sum.
+
 ## The "Sources checked" footer
 
 **Every report must end with a line naming all sites checked + the confirmed logged-in username** (and **climb13ers.com for any CO peak**), e.g.:

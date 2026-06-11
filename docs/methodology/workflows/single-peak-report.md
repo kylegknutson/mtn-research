@@ -12,10 +12,12 @@
 - [ ] **TR sweep** across 14ers + LoJ + peakbagger; capture route narrative, gain/distance, season, hazards
 - [ ] **GPX sweep** across all three sources → `gpx/<slug>/` ([pipeline](../caltopo-pipeline.md))
 - [ ] **Drive time** from climber's home → primary trailhead (Maps, clickable link)
-- [ ] **Build waypoint GPX** (summit + same-drainage neighbors + trailheads/landmarks)
+- [ ] **Build waypoint GPX** — `peaks.yml` `objective_ids` = ONLY the report's ranked objectives; mark the real start `kind: trailhead` (passes/saddles = `kind: landmark`). ([Build the recommended route right](../source-requirements.md))
 - [ ] **Upload to CalTopo** (`--no-dedupe`, source colors), capture map ID
+- [ ] **Recommended route + stats** — `build_recommended_route.py <slug>`; **verify no `snaps … m` WARNs** and sane distance/gain, then copy DEM `dist_mi`/`gain_ft` into frontmatter and push the magenta route to CalTopo
 - [ ] **Render PNG** (`make_overview_map.py <slug>`), verify framing (objective centered)
 - [ ] **Write report** per [report template](../report-template.md)
+- [ ] **Structured stat frontmatter** (`dist_mi`, `gain_ft`, `class`, `peaks`, `days`, `drive_h`) → drives the "At a glance" callout / sortable index / nav badges; run `gen_quickstats.py` + `gen_index.py`
 - [ ] **Weather link + clickable drive link** in Quick Stats ([conventions](../conventions.md))
 - [ ] **"Sources checked" footer**
 - [ ] **Wire nav** (`mkdocs.yml`) + **Home index** (`docs/index.md`)

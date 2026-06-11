@@ -14,7 +14,7 @@ Source rigor (all three sources, confirmed logged-in) on **every peak** in the i
 - [ ] **Basecamp selection** — location(s), elevation, water access, legality (wilderness camping rules, permit zones)
 - [ ] **Pack-in / pack-out** routes + distance/gain with a full pack
 - [ ] **Water sources** along approach and near camp (mark on map)
-- [ ] **Per-day peak stats** from GPX (each day's loop from camp)
+- [ ] **Per-day peak stats** from GPX (each day's loop from camp). Peaks at *different* trailheads → **don't auto-route one loop**; run `build_recommended_route.py` per day-area and set `days_detail` + a per-day-sum `dist_mi`/`gain_ft`. ([Build the recommended route right](../source-requirements.md))
 - [ ] **Gear notes** — group + personal + technical (rope/axe/crampons if any day needs it)
 - [ ] **Weather-window strategy** — which day for the hardest/most-exposed peaks
 - [ ] **Bailout/escape routes** from camp
