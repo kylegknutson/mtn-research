@@ -1,0 +1,21 @@
+# Waypoint config — williams_mountains (Sawatch / Hunter-Fryingpan Wilderness)
+# The full Williams Mountains ridge, N→S, from the Lost Man TH (Hwy 82).
+objective_ids:
+- 411   # Williams Mtn (HP) 13,390
+- 705   # Williams Mtn North 13,139
+- 474   # Williams Mtn South A / "Williams Benchmark" 13,321
+- 609   # Williams Mtn South B 13,204
+- 789   # Williams Mtn South C 13,039
+nearby:
+  include: false
+landmarks:
+- name: Lost Man TH (Hwy 82, W of Independence Pass)
+  lat: 39.1219
+  lon: -106.6242
+  kind: trailhead
+  ele_ft: 10500
+- name: South Fork Pass (11,840')
+  lat: 39.1577
+  lon: -106.6
+  kind: landmark
+  ele_ft: 11840
