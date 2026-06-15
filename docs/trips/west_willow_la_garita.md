@@ -12,6 +12,7 @@ class: 3
 peaks: 5
 days: 2
 drive_h: 5.0
+weather: "https://forecast.weather.gov/MapClick.php?lat=37.9694&lon=-106.9872"  # central (PT 13,115); all 5 peaks within ~5 mi
 days_detail:
   - {label: "Trio", peaks: 3, dist_mi: 11, gain_ft: 3750, class: "2"}
   - {label: "Bridge pair", peaks: 2, dist_mi: 8.2, gain_ft: 3050, class: "3"}
@@ -22,9 +23,10 @@ days_detail:
 <!-- QUICKSTATS_START -->
 
 !!! tip "At a glance — 2-day trip"
-    **Day 1 (Trio):** **11 mi** · **3,750 ft** gain · **Class 2** · 3 peaks
-    **Day 2 (Bridge pair):** **8.2 mi** · **3,050 ft** gain · **Class 3** · 2 peaks
-    **Total:** **19 mi** · **6,800 ft** gain · **Class 3** · 5 peaks · ~5 h drive
+    **5 peaks** · **~5 h drive** · [weather](https://forecast.weather.gov/MapClick.php?lat=37.9694&lon=-106.9872)
+
+    - **Day 1 (Trio):** **11 mi** · **3,750 ft** gain · **Class 2** · 3 peaks
+    - **Day 2 (Bridge pair):** **8.2 mi** · **3,050 ft** gain · **Class 3** · 2 peaks
 
 <!-- QUICKSTATS_END -->
 

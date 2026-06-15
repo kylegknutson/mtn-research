@@ -12,10 +12,10 @@ class: 2
 peaks: 5
 days: 3
 drive_h: 5.2
-days_detail:
-  - {label: "Bennett", peaks: 1, dist_mi: 7, gain_ft: 2900, class: "1"}
-  - {label: "Summit trio", peaks: 3, dist_mi: 10.2, gain_ft: 4449, class: "2"}
-  - {label: "Conejos", peaks: 1, dist_mi: 6.2, gain_ft: 2500, class: "1"}
+days_detail:  # peaks ~17 mi apart → one NOAA link per day
+  - {label: "Bennett", peaks: 1, dist_mi: 7, gain_ft: 2900, class: "1", wx: "https://forecast.weather.gov/MapClick.php?lat=37.4834&lon=-106.4339"}
+  - {label: "Summit trio", peaks: 3, dist_mi: 10.2, gain_ft: 4449, class: "2", wx: "https://forecast.weather.gov/MapClick.php?lat=37.3505&lon=-106.6969"}
+  - {label: "Conejos", peaks: 1, dist_mi: 6.2, gain_ft: 2500, class: "1", wx: "https://forecast.weather.gov/MapClick.php?lat=37.2886&lon=-106.5710"}
 dist_mi: 23.4
 ---
 
@@ -24,10 +24,11 @@ dist_mi: 23.4
 <!-- QUICKSTATS_START -->
 
 !!! tip "At a glance — 3-day trip"
-    **Day 1 (Bennett):** **7 mi** · **2,900 ft** gain · **Class 1** · 1 peak
-    **Day 2 (Summit trio):** **10.2 mi** · **4,449 ft** gain · **Class 2** · 3 peaks
-    **Day 3 (Conejos):** **6.2 mi** · **2,500 ft** gain · **Class 1** · 1 peak
-    **Total:** **23.4 mi** · **9,500 ft** gain · **Class 2** · 5 peaks · ~5.2 h drive
+    **5 peaks** · **~5.2 h drive**
+
+    - **Day 1 (Bennett):** **7 mi** · **2,900 ft** gain · **Class 1** · 1 peak · [weather](https://forecast.weather.gov/MapClick.php?lat=37.4834&lon=-106.4339)
+    - **Day 2 (Summit trio):** **10.2 mi** · **4,449 ft** gain · **Class 2** · 3 peaks · [weather](https://forecast.weather.gov/MapClick.php?lat=37.3505&lon=-106.6969)
+    - **Day 3 (Conejos):** **6.2 mi** · **2,500 ft** gain · **Class 1** · 1 peak · [weather](https://forecast.weather.gov/MapClick.php?lat=37.2886&lon=-106.5710)
 
 <!-- QUICKSTATS_END -->
 

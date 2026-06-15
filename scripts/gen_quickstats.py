@@ -57,20 +57,32 @@ def render(meta):
     detail = meta.get("days_detail")
     drive = meta.get("drive_h")
     drive_s = f"~{drive:g} h drive" if drive is not None else None
+    wx = meta.get("weather")            # one central NOAA link (peaks ≤6 mi apart)
     lines = []
     if detail:
+        # Trip: a summary line (peaks · drive · central weather), then one list
+        # item per day. The list (and the blank line) force each day onto its own
+        # line — plain newlines inside an admonition collapse into one paragraph.
         lines.append(f'!!! tip "At a glance — {days}-day trip"')
+        summ = f"**{meta['peaks']} peaks**" if meta.get("peaks") else ""
+        if drive_s:
+            summ += (" · " if summ else "") + f"**{drive_s}**"
+        if wx:
+            summ += (" · " if summ else "") + f"[weather]({wx})"
+        lines.append(f"    {summ}")
+        lines.append("")
         for i, dd in enumerate(detail, 1):
             label = dd.get("label", f"Day {i}")
-            lines.append(f"    **Day {i} ({label}):** {stat_line(dd)}")
-        total = stat_line(meta)
-        if drive_s:
-            total += f" · {drive_s}"
-        lines.append(f"    **Total:** {total}")
+            item = f"    - **Day {i} ({label}):** {stat_line(dd)}"
+            if dd.get("wx"):           # per-day link when peaks are >6 mi apart
+                item += f" · [weather]({dd['wx']})"
+            lines.append(item)
     else:
         head = stat_line(meta)
         if drive_s:
             head += f" · {drive_s}"
+        if wx:
+            head += f" · [weather]({wx})"
         lines.append('!!! tip "At a glance — recommended day"')
         lines.append(f"    {head}")
     return "\n".join(lines)

@@ -15,6 +15,7 @@ Source rigor (all three sources, confirmed logged-in) on **every peak** in the i
 - [ ] **Pack-in / pack-out** routes + distance/gain with a full pack
 - [ ] **Water sources** along approach and near camp (mark on map)
 - [ ] **Per-day peak stats** from GPX (each day's loop from camp). Peaks at *different* trailheads → **don't auto-route one loop**; run `build_recommended_route.py` per day-area and set `days_detail` + a per-day-sum `dist_mi`/`gain_ft`. ([Build the recommended route right](../source-requirements.md))
+- [ ] **Weather** — peaks ≤6 mi apart: one `weather:` NOAA link for the central peak. Peaks >6 mi apart: a `wx:` NOAA link per `days_detail` day (forecast.weather.gov/MapClick.php?lat=&lon= for the day's central peak).
 - [ ] **Gear notes** — group + personal + technical (rope/axe/crampons if any day needs it)
 - [ ] **Weather-window strategy** — which day for the hardest/most-exposed peaks
 - [ ] **Bailout/escape routes** from camp
