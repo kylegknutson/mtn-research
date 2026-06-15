@@ -15,7 +15,7 @@ Every ranked Colorado 13er/14er — **green peak = has a report** (click it to o
 <!-- PEAKS_TABLE_START -->
 | Peak / Trip | Range | Class | Dist (mi) | Gain (ft) | Peaks | Days | Pk/day | Drive (h) | Status |
 |---|---|---|--:|--:|--:|--:|--:|--:|---|
-| [Jacque Peak](peaks/jacque_peak.md) | Gore | 2 | — | 3,500 | 1 | 1 | 1 | 1.7 | unclimbed |
+| [Jacque Peak](peaks/jacque_peak.md) | Gore | 2 | — | 3,500 | 1 | 1 | 1 | 1.7 | climbed |
 | [Pennsylvania Mountain](peaks/pennsylvania_mountain.md) | Mosquito | 1 | 3.9 | 1,039 | 1 | 1 | 1 | 2.1 | unclimbed |
 | [Mount Powell + Eagles Nest](peaks/powell_eagles_nest.md) | Gore | 3 | — | 6,250 | 2 | 1 | 2 | 3.1 | unclimbed |
 | [Homestake Peak](peaks/homestake_peak.md) | Sawatch | 2 | — | 3,026 | 1 | 1 | 1 | 3.2 | unclimbed |
@@ -29,9 +29,9 @@ Every ranked Colorado 13er/14er — **green peak = has a report** (click it to o
 | [Trinchera Group](peaks/trinchera_group.md) | Sangre de Cristo | 2 | — | 6,000 | 4 | 1 | 4 | 4.2 | unclimbed |
 | [Pearl Mountain + Oyster Peak](peaks/pearl_oyster.md) | Elk | 2+ | 7.5 | 4,110 | 2 | 1 | 2 | 4.4 | unclimbed |
 | [PT 13,557](peaks/pt_13557.md) | Sangre de Cristo | 2 | — | 3,540 | 1 | 1 | 1 | 4.7 | unclimbed |
-| ["Baldy Lejos" + PT 13,115 + PT 13,030](peaks/baldy_lejos_trio.md) | San Juan | 2 | 11 | 3,750 | 3 | 1 | 3 | 5 | unclimbed |
-| [PT 13,308 + PT 13,166](peaks/pt_13308_13166.md) | San Juan | 2 | 8.2 | 3,050 | 2 | 1 | 2 | 5 | unclimbed |
-| [West Willow Creek](trips/west_willow_la_garita.md) | San Juan | 3 | 19 | 6,800 | 5 | 2 | 2.5 | 5 | unclimbed |
+| ["Baldy Lejos" + PT 13,115 + PT 13,030](peaks/baldy_lejos_trio.md) | San Juan | 2 | 11 | 3,750 | 3 | 1 | 3 | 5 | climbed |
+| [PT 13,308 + PT 13,166](peaks/pt_13308_13166.md) | San Juan | 2 | 8.2 | 3,050 | 2 | 1 | 2 | 5 | climbed |
+| [West Willow Creek](trips/west_willow_la_garita.md) | San Juan | 3 | 19 | 6,800 | 5 | 2 | 2.5 | 5 | climbed |
 | [South San Juans 3-Day Weekend](trips/south_san_juans_3day.md) | San Juan | 2 | 23.4 | 9,500 | 5 | 3 | 1.7 | 5.2 | unclimbed |
 | [PT 13,408 + PT 13,026](peaks/pt_13026_13408.md) | San Juan | 2 | 13.5 | 5,000 | 2 | 1 | 2 | 5.5 | unclimbed |
 | [PT 13,155 Group](peaks/pt_13155_group.md) | San Juan | 2 | — | 3,500 | 3 | 1 | 3 | 5.6 | unclimbed |

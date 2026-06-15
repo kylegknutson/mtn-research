@@ -4,7 +4,7 @@ range: San Juan
 drive_time: "~5 h to Creede + rough 4WD"
 yds_class: "2"
 gain: "~11 mi / ~3,750 ft (recommended loop, DEM) · 16–20 mi recorded"
-status: unclimbed
+status: climbed
 caltopo_id: 4278RCG
 regional_map_id: 06AR6BF
 dist_mi: 11.0
@@ -27,7 +27,7 @@ drive_h: 5.0
 **Researched:** 2026-06-09
 **Report type:** Day trip — a Class 2 tundra trio north of San Luis Pass
 **CalTopo research map:** https://caltopo.com/m/4278RCG
-**Status in DB:** all three unclimbed.
+**Status in DB:** all three **climbed** (2026-06-13).
 
 > Western part of the seven-peak La Garita narrow-down. The eastern peaks are now two separate reports: the **[13,308 + 13,166 bridge pair](pt_13308_13166.md)** (same West Willow TH as this trio) and the **[13,026 + 13,408 pair](pt_13026_13408.md)** (Cochetopa / Eddiesville side).
 

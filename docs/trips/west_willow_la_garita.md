@@ -4,7 +4,7 @@ range: San Juan
 drive_time: "~5 h to Creede + rough 4WD"
 yds_class: "3"
 gain: "~19 mi / ~6,800 ft over 2 days · ~18 mi / ~6,000 ft if linked in one push"
-status: unclimbed
+status: climbed
 regional_map_id: 06AR6BF
 dist_mi: 19.0
 gain_ft: 6800
@@ -32,7 +32,7 @@ days_detail:
 
 **Researched:** 2026-06-10
 **Report type:** Multi-day trip / backpack — 5 ranked 13ers over 2 days from one trailhead
-**Status in DB:** all five unclimbed.
+**Status in DB:** all five **climbed** (2026-06-13/14).
 
 > Consolidates two day-reports that **launch from the same West Willow Creek upper TH** above Creede: the **[Baldy Lejos trio](../peaks/baldy_lejos_trio.md)** (Baldy Lejos + PT 13,115 + PT 13,030) and the **[PT 13,308 + PT 13,166 bridge pair](../peaks/pt_13308_13166.md)**. One trailhead, one camp — two day-loops (~11 and ~8 mi), or one big push. (The eastern [PT 13,408 + 13,026 pair](../peaks/pt_13026_13408.md) is *not* part of this — it's a separate Cochetopa/Eddiesville trailhead, a different drive.)
 

@@ -4,7 +4,7 @@ range: Gore
 drive_time: "1h 42m"
 yds_class: "2"
 gain: "3,500 ft"
-status: unclimbed
+status: climbed
 caltopo_id: R2NF0S2
 regional_map_id: 6E4GJV2
 gain_ft: 3500
@@ -25,7 +25,7 @@ drive_h: 1.7
 
 **Researched:** 2026-05-28
 **CalTopo research map:** https://caltopo.com/m/R2NF0S2
-**Status in DB:** 0 ascents (unclimbed). **Cluster status:**
+**Status in DB:** **climbed** (2026-06-06). **Cluster status:**
 - ✗ **No same-drainage unclimbed ranked 13ers** — Bartlett Mtn (5.74 mi) is the only nearby unclimbed ranked peak, but it sits on the opposite side of Fremont Pass / Climax Mine and is a different drive entirely
 - ✓ Done nearby (Tenmile/Mosquito group): Pacific (4.49 mi), Crystal A (4.62), Atlantic (4.74), PT 13,207 (4.89), Fletcher (5.08), Peak 10 (5.08), Wheeler (6.08), Quandary (6.25), Clinton (6.51), N Star (6.74)
 - **Effectively a standalone day** — combinations with Tucker/Union/Copper Mtn (12,xxx's) are common but those are all sub-13k and don't count as ranked combos
