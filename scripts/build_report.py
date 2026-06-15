@@ -141,10 +141,21 @@ def finalize_phase(args):
     run([SCRIPTS / "gen_index.py"])
     run([SCRIPTS / "gen_peak_map.py"])
     fails = []
-    for chk in ("check_reports.py", "check_maps.py", "check_map_extents.py"):
-        r = run([SCRIPTS / chk])
+    # Pixel gates (track present / basemap / clipping) + report source-check +
+    # ROUTE-GEOMETRY gates: check_route_geometry catches recommended-route
+    # teleports (a straight-line jump the pixel gates can't see — Kyle caught one
+    # by eye 2026-06-15), check_route_stats catches optimistic headline mileage.
+    gates = [
+        ["check_reports.py"],
+        ["check_maps.py"],
+        ["check_map_extents.py"],
+        ["check_route_geometry.py"],
+        ["check_route_stats.py", "--strict"],
+    ]
+    for chk in gates:
+        r = run([SCRIPTS / chk[0], *chk[1:]])
         if r.returncode != 0:
-            fails.append(chk)
+            fails.append(chk[0])
     print("\n" + "=" * 60)
     print("FINALIZE: " + ("ALL GATES PASS ✓" if not fails else "FAILED: " + ", ".join(fails)))
     print("Next: review the report + PNG, then `git add` / commit / push.")
