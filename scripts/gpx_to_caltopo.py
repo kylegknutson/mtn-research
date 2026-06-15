@@ -94,7 +94,8 @@ def parse_gpx(path: Path):
         desc = (w.findtext(f"{GPX_NS}desc") or "").strip()
         ele_t = w.findtext(f"{GPX_NS}ele")
         ele = float(ele_t) if ele_t else None
-        yield ("wpt", name, desc, float(w.get("lat")), float(w.get("lon")), ele)
+        sym = (w.findtext(f"{GPX_NS}sym") or "").strip()
+        yield ("wpt", name, desc, float(w.get("lat")), float(w.get("lon")), ele, sym)
 
 
 # --- Dedupe helpers ----------------------------------------------------------
@@ -399,7 +400,11 @@ def main() -> None:
                     except Exception as e:
                         print(f"    ERROR addLine {name!r}: {e}")
                 elif kind == "wpt":
-                    _, name, desc, lat, lon, ele = entry
+                    _, name, desc, lat, lon, ele, wsym = entry
+                    # Per-waypoint <sym> wins over the run default; trailheads
+                    # (sym=hiking) get CalTopo's blue hiker icon.
+                    msym = wsym if wsym and wsym != "point" else args.marker_symbol
+                    mcolor = "#0066FF" if wsym == "hiking" else color
                     if not args.no_dedupe and existing_markers:
                         m = marker_matches_existing(lat, lon, existing_markers,
                                                     tol_m=args.dedupe_marker_tol_m)
@@ -416,8 +421,8 @@ def main() -> None:
                             lon=lon,
                             title=name,
                             description=desc or f"From {f.name}",
-                            color=color,
-                            symbol=args.marker_symbol,
+                            color=mcolor,
+                            symbol=msym,
                             folderId=folder_id,
                         )
                         wpt_count += 1

@@ -99,18 +99,16 @@ def main():
         if not p:
             print(f"  WARN objective id {pid} not in peak_db"); continue
         objs.append(p)
-        cls = p.get("yds_class")
-        label = f'{p["display_name"].strip(chr(34))} ({p["elevation_ft"]}\''
-        label += f", Class {cls}" if cls else ""
-        label += ", UNCLIMBED)" if p["id"] not in climbed else ")"
-        peak_wpts.append({"name": label, "lat": p["lat"], "lon": p["lon"],
+        # Marker name = just the peak name (elev/class/status live in the report).
+        peak_wpts.append({"name": p["display_name"].strip(chr(34)),
+                          "lat": p["lat"], "lon": p["lon"],
                           "ele_ft": p["elevation_ft"], "sym": "peak"})
 
     # extra summits not in peak_db — LiDAR-dropped soft-ranks still listed on
     # 14ers/LoJ (e.g. "Unnamed 13003"). Given as {name, lat, lon[, ele_ft]}.
     for ex in (cfg.get("extra_summits") or []):
         objs.append({"lat": ex["lat"], "lon": ex["lon"]})
-        peak_wpts.append({"name": f'{ex["name"]} (UNCLIMBED)', "lat": ex["lat"],
+        peak_wpts.append({"name": ex["name"], "lat": ex["lat"],
                           "lon": ex["lon"], "ele_ft": ex.get("ele_ft"), "sym": "peak"})
 
     # nearby unclimbed ranked neighbors
@@ -130,7 +128,7 @@ def main():
                 cands.append((d, p))
         for d, p in sorted(cands):
             peak_wpts.append({
-                "name": f'{p["display_name"].strip(chr(34))} ({p["elevation_ft"]}\', UNCLIMBED, {d:.1f}mi)',
+                "name": p["display_name"].strip(chr(34)),
                 "lat": p["lat"], "lon": p["lon"], "ele_ft": p["elevation_ft"], "sym": "peak"})
         print(f"  nearby unclimbed ranked within {radius:.0f}mi: {len(cands)} "
               f"(excluded {len(set(nb.get('exclude') or []))})")
@@ -138,8 +136,10 @@ def main():
     # landmarks
     lm_wpts = []
     for lm in (cfg.get("landmarks") or []):
+        # Trailheads get CalTopo's blue hiker symbol; other landmarks a point.
+        sym = "hiking" if lm.get("kind") == "trailhead" else "point"
         lm_wpts.append({"name": lm["name"], "lat": lm["lat"], "lon": lm["lon"],
-                        "ele_ft": lm.get("ele_ft"), "sym": "point"})
+                        "ele_ft": lm.get("ele_ft"), "sym": sym})
 
     gdir.mkdir(parents=True, exist_ok=True)
     write_gpx(gdir / f"{args.slug}_peaks_only.gpx", peak_wpts, args.dry_run)

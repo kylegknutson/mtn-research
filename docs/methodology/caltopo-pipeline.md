@@ -144,7 +144,10 @@ Net effect: one clean set of **neon-green summit pins** + a quiet **gray** wash 
 | Marker kind | `symbol` | `color` |
 |---|---|---|
 | Objective summit | `peak` | `#39FF14` (neon green) |
+| **Trailhead** (peaks.yml `kind: trailhead`) | **`hiking`** (CalTopo blue hiker w/ pack) | **`#0066FF`** (blue) |
 | Any other imported waypoint | `point` | `#9E9E9E` (gray) |
+
+> **Marker names + trailhead symbol (Kyle, 2026-06-15).** Summit marker titles are **just the peak name** — no `(13,118', Class 2, UNCLIMBED)` suffix (that lives in the report). `build_peak_gpx.py` writes name-only summits and tags `kind: trailhead` landmarks with `<sym>hiking</sym>`; `gpx_to_caltopo.py` honors each waypoint's `<sym>` (trailheads → the blue `hiking` icon). To restyle maps built before this: **`scripts/retro_restyle_markers.py`** (dry-run) then `--apply` — strips verbose summit titles and switches coord-matched trailheads to `hiking`/`#0066FF`. (Unknown CalTopo symbol codes fall back to an empty circle — `hiking` is the verified hiker-with-backpack code, not `trailhead`/`hiker`.)
 
 **Track color convention:**
 
