@@ -1,0 +1,13 @@
+# Fortress Pk + Precipice Pk — the two northern Cimarron peaks just N of Coxcomb.
+# Covered with solo options for each + the Fortress+Precipice combination.
+objective_ids:
+- 552   # "Fortress Pk" 13,246
+- 662   # Precipice Pk 13,141
+nearby:
+  include: false
+landmarks:
+- name: West Fork Cimarron TH
+  lat: 38.127
+  lon: -107.5598
+  kind: trailhead
+  ele_ft: 10433

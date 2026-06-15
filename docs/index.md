@@ -34,6 +34,8 @@ Every ranked Colorado 13er/14er — **green peak = has a report** (click it to o
 | [PT 13,308 + PT 13,166](peaks/pt_13308_13166.md) | San Juan | 2 | 8.2 | 3,050 | 2 | 1 | 2 | 5 | climbed |
 | [West Willow Creek](trips/west_willow_la_garita.md) | San Juan | 3 | 19 | 6,800 | 5 | 2 | 2.5 | 5 | climbed |
 | [South San Juans 3-Day Weekend](trips/south_san_juans_3day.md) | San Juan | 2 | 23.4 | 9,500 | 5 | 3 | 1.7 | 5.2 | unclimbed |
+| [Cimarron "Remaining Six"](peaks/cimarron_six.md) | San Juan | 3 | 13.3 | 5,785 | 6 | 1 | 6 | 5.5 | unclimbed |
+| [Fortress Pk + Precipice Pk](peaks/fortress_precipice.md) | San Juan | 3 | 8.7 | 5,202 | 2 | 1 | 2 | 5.5 | unclimbed |
 | [PT 13,408 + PT 13,026](peaks/pt_13026_13408.md) | San Juan | 2 | 13.5 | 5,000 | 2 | 1 | 2 | 5.5 | unclimbed |
 | [PT 13,155 Group](peaks/pt_13155_group.md) | San Juan | 2 | — | 3,500 | 3 | 1 | 3 | 5.6 | unclimbed |
 | [Cuba Gulch Trio](peaks/cuba_gulch_trio.md) | San Juan | 2 | — | 3,900 | 3 | 1 | 3 | 5.9 | unclimbed |

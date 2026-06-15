@@ -1,0 +1,17 @@
+# Cimarron "remaining six" — the unclimbed ranked 13ers around Coxcomb, minus
+# Fortress + Precipice (their own report). All from the West Fork Cimarron side.
+objective_ids:
+- 388   # "Heisshorn" 13,418
+- 421   # PT 13,382
+- 602   # PT 13,215
+- 498   # "El Punto" 13,319
+- 445   # PT 13,340 A
+- 571   # PT 13,222 B
+nearby:
+  include: false
+landmarks:
+- name: Middle Fork Cimarron (Trail #227, upper)
+  lat: 38.143
+  lon: -107.525
+  kind: trailhead
+  ele_ft: 10000
