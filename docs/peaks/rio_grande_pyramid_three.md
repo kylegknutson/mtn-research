@@ -3,13 +3,13 @@ image: maps/rio_grande_pyramid_three.png
 range: San Juan
 drive_time: "~5h 45m"
 yds_class: "2 (Class 3–4 crux on PT 13,022)"
-gain: "~21.6 mi / ~5,760 ft (3-peak loop, DEM)"
+gain: "~24.8 mi / ~6,400 ft (3-peak loop, DEM)"
 status: unclimbed
 caltopo_id: TMVGNRR
 regional_map_id: 06AR6BF
 peak_ids: [517, 532, 804]
-dist_mi: 21.6
-gain_ft: 5762
+dist_mi: 24.8
+gain_ft: 6396
 class: "2–4"
 peaks: 3
 days: 1
@@ -21,7 +21,7 @@ drive_h: 5.75
 <!-- QUICKSTATS_START -->
 
 !!! tip "At a glance — recommended day"
-    **21.6 mi** · **5,762 ft** gain · **Class 2–4** · 3 peaks · ~5.75 h drive
+    **24.8 mi** · **6,396 ft** gain · **Class 2–4** · 3 peaks · ~5.75 h drive
 
 <!-- QUICKSTATS_END -->
 
@@ -62,12 +62,12 @@ drive_h: 5.75
 
 ## The single push — Weminuche Trail TH loop ⭐
 
-A **composed loop** through all three (gain DEM-measured): **~21.6 mi / ~5,760′**. This is a **monster day** — the Weminuche approach is long and deep. A party did the *whole* RGP group (these three + Rio Grande Pyramid) in one ~30 mi / ~9,800′ day (LoJ [TR 1934](https://listsofjohn.com/tr?Id=1934)), noting "some might say stupid" to do it as a day trip. **Most people backpack** (see below).
+A **composed loop** through all three (gain DEM-measured): **~24.8 mi / ~6,400′**. This is a **monster day** — the Weminuche approach is long and deep. A party did the *whole* RGP group (these three + Rio Grande Pyramid) in one ~30 mi / ~9,800′ day (LoJ [TR 1934](https://listsofjohn.com/tr?Id=1934)), noting "some might say stupid" to do it as a day trip. **Most people backpack** (see below).
 
 | | |
 |---|---|
 | Peaks | PT 13,290 + PT 13,274 + PT 13,022 |
-| **Recommended loop** | **~21.6 mi / ~5,760′ (DEM)** |
+| **Recommended loop** | **~24.8 mi / ~6,400′ (DEM)** |
 | Class | **2**, but **PT 13,022 is the crux: "a fairly complicated and exposed 3rd–4th class scramble on teetering blocks" on the final ~200′.** Helmet; the other two are straightforward Class 2. |
 | Trailhead | **Weminuche Trail TH (Thirtymile, Rio Grande Reservoir), ~9,300'** — 2WD |
 
@@ -81,7 +81,7 @@ A **composed loop** through all three (gain DEM-measured): **~21.6 mi / ~5,760�
 
 ## Strongly consider a backpack ⛺
 
-This is **classic backpack country.** A short, easy pack-in — **~5 mi / ~1,325′** to a base camp near Weminuche Pass / the meadows — sets you up for **all the Rio Grande Pyramid 13ers** (these three + RGP + Window) on short summit days, instead of a 21-mile push. Given the distance, a **2-night backpack is the sane way to clean up these three.**
+This is **classic backpack country.** A short, easy pack-in — **~5 mi / ~1,325′** to a base camp near Weminuche Pass / the meadows — sets you up for **all the Rio Grande Pyramid 13ers** (these three + RGP + Window) on short summit days, instead of a 25-mile push. Given the distance, a **2-night backpack is the sane way to clean up these three.**
 
 ---
 
@@ -126,8 +126,8 @@ Pages verified for all three; **ownership = Weminuche Wilderness** (Rio Grande N
 
 ## TL;DR
 
-- **Your three remaining Rio Grande Pyramid 13ers in one push** — **~21.6 mi / ~5,760′** loop from the **Weminuche Trail TH** (2WD, Rio Grande Reservoir): PT 13,022 (SW) + the ridge-connected NE pair PT 13,290 ("Fools Pyramid") + PT 13,274.
+- **Your three remaining Rio Grande Pyramid 13ers in one push** — **~24.8 mi / ~6,400′** loop from the **Weminuche Trail TH** (2WD, Rio Grande Reservoir): PT 13,022 (SW) + the ridge-connected NE pair PT 13,290 ("Fools Pyramid") + PT 13,274.
 - **Class 2 except PT 13,022**, whose final ~200′ is an **exposed Class 3–4 scramble on teetering blocks** — the crux. Helmet.
-- **A 21-mile day is a beast — backpack instead:** ~5 mi / 1,325′ to a base camp gets you all the RGP-area peaks on short days. Strongly recommended.
+- **A 25-mile day is a beast — backpack instead:** ~5 mi / 1,325′ to a base camp gets you all the RGP-area peaks on short days. Strongly recommended.
 - **Weminuche Wilderness**, ~5h45 drive (Creede → Rio Grande Reservoir). Cell dead — InReach essential.
 - **Research map:** https://caltopo.com/m/TMVGNRR
