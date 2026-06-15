@@ -1,0 +1,14 @@
+# PT 13,290 + PT 13,274 + PT 13,022 — the three unclimbed ranked 13ers around
+# Rio Grande Pyramid (Weminuche Wilderness), in one push from the Weminuche Trail TH.
+objective_ids:
+- 517   # PT 13,290 ("Fools Pyramid")
+- 532   # PT 13,274
+- 804   # PT 13,022
+nearby:
+  include: false
+landmarks:
+- name: Weminuche Trail TH (Thirtymile, Rio Grande Reservoir)
+  lat: 37.7233
+  lon: -107.259
+  kind: trailhead
+  ele_ft: 9300
