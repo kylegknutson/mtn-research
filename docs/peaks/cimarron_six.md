@@ -116,4 +116,5 @@ A **composed loop** (shortest line through all six, stitched from recorded GPS; 
 - **Loose, exposed Cimarron rock** — Heisshorn + El Punto are the Class 3 cruxes (rotten rock, a rope "feels nice"); the four PTs are Class 2/2+. Helmet + early start.
 - **GMUG NF / Uncompahgre Wilderness**; ~5h30 drive (US-50 → Cimarron). Cell dead — InReach.
 - **Fortress + Precipice are a [separate report](fortress_precipice.md)** (West Fork side).
+- **Part of the [Cimarron / Coxcomb 2-day trip](../trips/cimarron_coxcomb.md)** — pairs this loop with the West Fork pair to finish all 8 remaining Coxcomb 13ers.
 - **Research map:** https://caltopo.com/m/55M4430

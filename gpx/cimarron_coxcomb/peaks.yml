@@ -1,0 +1,27 @@
+# Cimarron / Coxcomb area — Kyle's 8 remaining unclimbed ranked 13ers, as one
+# multi-day trip. Consolidates two day-reports off the Cimarron forks:
+#   - the "remaining six" off the Middle Fork Cimarron TH (#227)
+#   - Fortress + Precipice off the West Fork Cimarron TH
+# See docs/trips/cimarron_coxcomb.md.
+objective_ids:
+- 388   # "Heisshorn" 13,418   (Middle Fork six)
+- 421   # PT 13,382           (Middle Fork six)
+- 602   # PT 13,215           (Middle Fork six)
+- 498   # "El Punto" 13,319   (Middle Fork six)
+- 445   # PT 13,340 A         (Middle Fork six)
+- 571   # PT 13,222 B         (Middle Fork six)
+- 552   # "Fortress Pk" 13,246 (West Fork pair)
+- 662   # Precipice Pk 13,141  (West Fork pair)
+nearby:
+  include: false
+landmarks:
+- name: Middle Fork Cimarron TH (#227)
+  lat: 38.143
+  lon: -107.525
+  kind: trailhead
+  ele_ft: 10000
+- name: West Fork Cimarron TH
+  lat: 38.127
+  lon: -107.5598
+  kind: trailhead
+  ele_ft: 10433

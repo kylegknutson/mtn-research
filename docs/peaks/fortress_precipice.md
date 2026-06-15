@@ -117,4 +117,5 @@ A bit longer (Fortress sits further S toward Coxcomb), **Class 3 on loose Cimarr
 - **Solo:** Precipice is short but **ultra-steep + faint trail** (~4–6 mi RT); Fortress ~5–7 mi RT.
 - **GMUG NF / Uncompahgre Wilderness**; ~5h30 drive (US-50 → Cimarron). Cell dead — InReach.
 - Pairs with the [Cimarron six](cimarron_six.md) report (Middle Fork side) to finish your remaining Coxcomb-area peaks.
+- **Part of the [Cimarron / Coxcomb 2-day trip](../trips/cimarron_coxcomb.md)** — both fork loops combined into one 8-peak weekend.
 - **Research map:** https://caltopo.com/m/KTTS4F0
