@@ -1,6 +1,6 @@
 # Architecture & deployment
 
-**Last updated:** 2026-06-11
+**Last updated:** 2026-06-15
 
 ## What it is
 
@@ -161,6 +161,7 @@ It is **not** an app. It is **a static site fed by an iCloud-synced repo, with s
 - **Narrow-downs as artifacts.** Saved to `docs/lists/` (snapshot + re-runnable criteria) rather than chat-only. *(Planned — see improvement-plan.)*
 - **Site polish.** Flatirons favicon + home logo; per-report Open Graph link previews (own overview map as the card) via `overrides/main.html`; external links open in a new tab.
 - **Interactive peak map (home + `/peak-map/`).** `scripts/gen_peak_map.py` reads every ranked **Colorado** peak from peak_db, plus the climb log (`ascents()`), and assigns each a status: **report** (via `gpx/<slug>/peaks.yml` `objective_ids` or a `peak_ids:` frontmatter fallback) → **climbed** → **to-do**. Writes `docs/data/peaks.json` (committed — the static deploy serves it; CI never touches peak_db). A Leaflet map (`docs/javascripts/peak-map.js`, CDN lib in `mkdocs.yml`; paths resolved from the script URL so it survives Material instant-nav) draws reported peaks as a green CalTopo-style `peak` icon (`#39FF14`, click → report), climbed as grey dots, to-do as red dots, on toggleable layers (canvas-rendered for speed). Regenerated in `build_report --finalize`.
+- **Climbed-status refresh (peak_db → site).** Climbed status is a **build-time snapshot**, not live — peak_db powers it but the site only changes when the derived outputs are regenerated and pushed. `scripts/refresh_from_peakdb.py` is the one-command pipeline for this: `gen_peak_map.py` (map data) → `sync_status.py` (report frontmatter `status:` ← whether all its `objective_ids` are climbed; drives the index Status column) → `gen_index.py` (table + nav badges), then commits + pushes the changed outputs (→ Pages redeploys). It's **idempotent** and meant to run **on a Mac as the post-processing step after the peak-checklist app updates peak_db** (the Mac already has the client + key; no GitHub secret or cloud trigger needed). `--dry-run` / `--no-push` available. *(The report body's prose "Status in DB:" line is editorial and stays manual.)*
 
 ## What's reproducible vs. authoritative
 
