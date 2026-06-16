@@ -414,12 +414,57 @@ def main():
     ap.add_argument("--thin", type=float, default=12.0, help="[graph] thin tracks to this spacing (m)")
     ap.add_argument("--transfer-eps", type=float, default=18.0, help="[graph] max gap to hop between tracks (m)")
     ap.add_argument("--rdp-eps", type=float, default=8.0, help="[graph] simplification tolerance to remove weave jitter (m)")
+    ap.add_argument("--from-track", help="use a recorded track (filename substring) VERBATIM as the route, "
+                    "instead of composing — for when the router routes long but one real party track already "
+                    "makes the efficient tour (use scripts/analyze_tracks.py to find it). DEM-measures + writes it.")
     ap.add_argument("--out", default=None)
     args = ap.parse_args()
 
     d = GPX_ROOT / args.slug
     if not d.exists():
         sys.exit(f"ERROR: {d} not found")
+
+    # Escape hatch: designate a single recorded track as the route. The graph/legs
+    # routers minimize distance through pooled points and can stitch a long path
+    # (cuba_gulch_trio: 22 mi composed vs a real 15.8 mi party track that tours all
+    # three). When analyze_tracks.py shows a clean single track, use it verbatim.
+    if args.from_track:
+        matches = sorted(f for f in d.glob("*.gpx")
+                         if args.from_track.lower() in f.name.lower()
+                         and not any(s in f.name.lower() for s in SKIP))
+        if len(matches) != 1:
+            sys.exit(f"--from-track {args.from_track!r}: matched {[m.name for m in matches]} — be specific.")
+        src_f = matches[0]
+        route = parse_track_points(src_f)
+        if len(route) < 2:
+            sys.exit(f"--from-track: {src_f.name} has no usable points")
+        dist = sum(hav(route[i][0], route[i][1], route[i+1][0], route[i+1][1])
+                   for i in range(len(route)-1))
+        print(f"Using recorded track verbatim: {src_f.name} — {dist/1609.34:.2f} mi")
+        if args.no_dem:
+            gain, gain_src = gps_gain(route), "GPS <ele> (noisy)"
+        else:
+            print(f"Sampling DEM ({args.dem_dataset}) for elevation gain…")
+            try:
+                gain, used = dem_gain(route, args.dem_dataset); gain_src = f"DEM {used}"
+            except Exception as ex:
+                gain, gain_src = gps_gain(route), "GPS <ele> (DEM failed — noisy!)"
+                print(f"  WARN: {ex}; fell back to GPS elevation", file=sys.stderr)
+        print(f"\nRecommended route: {dist/1609.34:.2f} mi · ~{gain*3.281:.0f} ft gain "
+              f"[{gain_src}] · {len(route)} pts")
+        out = Path(args.out) if args.out else d / f"{args.slug}_recommended.gpx"
+        with open(out, "w") as f:
+            f.write('<?xml version="1.0" encoding="UTF-8"?>\n')
+            f.write('<gpx version="1.1" creator="build_recommended_route.py" '
+                    'xmlns="http://www.topografix.com/GPX/1/1">\n')
+            f.write(f'<trk><name>Recommended route (composed): {args.slug} '
+                    f'— {dist/1609.34:.1f} mi / {gain*3.281:.0f} ft</name><trkseg>\n')
+            for la, lo, ele in route:
+                es = f"<ele>{ele:.1f}</ele>" if ele is not None else ""
+                f.write(f'<trkpt lat="{la:.6f}" lon="{lo:.6f}">{es}</trkpt>\n')
+            f.write("</trkseg></trk>\n</gpx>\n")
+        print(f"Wrote {out}")
+        return
 
     track_files = [f for f in sorted(d.glob("*.gpx"))
                    if not any(s in f.name.lower() for s in SKIP)]

@@ -3,11 +3,12 @@ image: maps/cuba_gulch_trio.png
 range: San Juan
 drive_time: "5h 52m"
 yds_class: "2"
-gain: "~3,900 ft (clean trio)"
+gain: "~15.8 mi / ~4,900 ft (full trio, DEM)"
 status: unclimbed
 caltopo_id: DCQ8UKS
 regional_map_id: 06AR6BF
-gain_ft: 3900
+dist_mi: 15.8
+gain_ft: 4900
 class: 2
 peaks: 3
 days: 1
@@ -19,7 +20,7 @@ drive_h: 5.9
 <!-- QUICKSTATS_START -->
 
 !!! tip "At a glance — recommended day"
-    **3,900 ft** gain · **Class 2** · 3 peaks · ~5.9 h drive
+    **15.8 mi** · **4,900 ft** gain · **Class 2** · 3 peaks · ~5.9 h drive
 
 <!-- QUICKSTATS_END -->
 
@@ -82,10 +83,10 @@ The standard line, from the trip reports and Kyle's combining track.
 
 | Source | Peaks | Distance | Gain |
 |---|---|---|---|
-| Clean trio (best LoJ/CalTopo track) | 13,076 + 13,003 + 13,179 | **~11 mi** | **~3,900 ft** |
+| Clean trio (best LoJ/CalTopo track) | 13,076 + 13,003 + 13,179 | **~15.8 mi** | **~4,900 ft** |
 | Bigger traverses (LoJ 8472, etc.) | + Half Peak / Cataract neighbors | up to 21.9 mi | up to ~12,500 ft |
 
-Expect roughly **~11 mi and ~3,900 ft** for the clean three-peak day, Class 2 throughout (gain grows fast if you add the ranked neighbors — those are already done for Kyle).
+Expect roughly **~15.8 mi and ~4,900 ft** for the clean three-peak day, Class 2 throughout (gain grows fast if you add the ranked neighbors — those are already done for Kyle).
 
 ### Route sequence
 1. From the **Cuba Gulch TH (~9,540')**, head up Cuba Gulch toward the basin below the three peaks.
@@ -149,7 +150,7 @@ Ascent GPX pulled for all three — PT 13,076 (pid 15336), Unnamed 13,003 (pid 3
 ## TL;DR
 
 - **Three ranked San Juan 13ers in Cuba Gulch** — PT 13,076 + PT 13,003 + PT 13,179, in a ~2.3 mi arc off the **Lake Fork (Lake City)** side.
-- **The plan:** Cuba Gulch TH (~9,540') → 13,076 → 13,003 → 13,179 ridge → out. **~11 mi, ~3,900 ft, Class 2** (13,003 itself is Class 1). A moderate day.
+- **The plan:** Cuba Gulch TH (~9,540') → 13,076 → 13,003 → 13,179 ridge → out. **~15.8 mi, ~4,900 ft, Class 2** (13,003 itself is Class 1). A moderate day.
 - **All three are ranked San Juan 13ers** — PT 13,003 (id 822) is the gentle Class 1 middle peak.
 - **Confirmed combo** — done together in TRs across all three sources, and on Kyle's own "Cuba Gulch – 13076, 13003, 13179" track.
 - **Drive:** [5h 52m](https://www.google.com/maps/dir/?api=1&origin=1162+Peakview+Circle,+Boulder,+CO+80302&destination=37.8993,-107.4332) to the Cuba Gulch TH via Lake City — a long day or an overnight.
