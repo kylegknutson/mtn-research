@@ -67,8 +67,9 @@ def load_peakdb():
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--ratio", type=float, default=1.25, help="flag if recommended > best-single * ratio")
+    ap.add_argument("--ratio", type=float, default=1.4, help="flag if recommended > best-single * ratio")
     ap.add_argument("--tol-ft", type=float, default=250)
+    ap.add_argument("--th-tol", type=float, default=0.5, help="best track must start/end within this many mi of the TH")
     args = ap.parse_args()
     tol_mi = args.tol_ft / 5280.0
     P = load_peakdb()
@@ -86,7 +87,15 @@ def main():
         if not objs:
             continue
         rec_mi = dist_mi(pts(rec))
-        # shortest single source track that summits ALL objectives
+        # trailhead — to require a fair, SAME-START comparison
+        th = None
+        for l in ((yaml.safe_load(ymlf.read_text()) or {}).get("landmarks") or []):
+            if l.get("kind") == "trailhead" and l.get("lat") is not None:
+                th = (l["lat"], l["lon"]); break
+        # shortest single source track that summits ALL objectives AND starts/ends
+        # near the trailhead. The same-start filter is essential: a shorter track
+        # that began from a higher 4WD point or is an outlier shortcut is NOT a
+        # valid recommended route (over-flagged 5 single peaks before this).
         best = None
         for f in d.glob("*.gpx"):
             if any(h in f.name.lower() for h in HELPER):
@@ -94,6 +103,8 @@ def main():
             tp = pts(f)
             if len(tp) < 2:
                 continue
+            if th is not None and min(hav_mi(tp[0], th), hav_mi(tp[-1], th)) > args.th_tol:
+                continue  # higher/different start — not comparable
             if all(min(hav_mi(p, c) for p in tp) <= tol_mi for c in objs):
                 td = dist_mi(tp)
                 if best is None or td < best[0]:

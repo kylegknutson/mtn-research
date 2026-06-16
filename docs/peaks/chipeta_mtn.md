@@ -72,7 +72,7 @@ dist_mi: 7.7
 
 A high, mellow tundra walk — one of the easier southern-Sawatch 13ers once you're at the pass.
 
-**Stats (from TR GPX):** roughly **~5–7 mi RT and ~1,100–2,200 ft** from Marshall Pass (longer/​more gain if you chain Chipeta South or start lower). Class 2 throughout.
+**Stats (DEM-measured from the recorded tracks):** **~7.7 mi RT / ~3,450 ft** from Marshall Pass (more if you chain Chipeta South). Class 2 throughout. *(The 2,630′ net climb from the 10,842′ pass to the 13,472′ summit rules out the lower estimates some TRs cite.)*
 
 1. From Marshall Pass, head **north/NW along the Continental Divide** (Colorado Trail / Monarch Crest corridor) on tundra.
 2. Follow the broad ridge over (or around) **Chipeta Mtn South** (12,874') toward Chipeta's south slopes.
@@ -131,7 +131,7 @@ A high, mellow tundra walk — one of the easier southern-Sawatch 13ers once you
 
 ## TL;DR
 
-- **Short, easy standalone day** from **Marshall Pass**: ~5–7 mi RT, ~1,100–2,200 ft, **Class 2** tundra walk along the Continental Divide. One of the gentler southern-Sawatch 13ers.
+- **Standalone day** from **Marshall Pass**: **~7.7 mi RT / ~3,450 ft (DEM)**, **Class 2** tundra walk along the Continental Divide. Gentle grade, but a real 2,630′ net climb to the summit — not the short outing some TRs suggest.
 - **Drive:** [4h 13m / 181 mi](https://www.google.com/maps/dir/?api=1&origin=1162+Peakview+Circle,+Boulder,+CO+80302&destination=38.3942,-106.2472) from home — the long pole here is the drive, not the climb.
 - **No ranked-13er neighbor within 8 mi** — effectively solo. For two ranked summits per the drive, pair with **Mt Ouray** (13,979', big-day add).
 - **Good early/late-season pick** — high, dry, wind-exposed Divide; 2WD to the pass in summer.

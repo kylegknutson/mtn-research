@@ -66,8 +66,15 @@ def main():
     d = GPX_ROOT / args.slug
     files = [f for f in sorted(d.glob("*.gpx")) if not any(h in f.name.lower() for h in HELPER)]
 
-    print(f"objectives: " + ", ".join(n for _, n, _ in objs))
-    print(f"{'track':52} {'mi':>6}  hits")
+    # trailhead (first landmark marked kind: trailhead) — to flag higher-start tracks
+    th = None
+    cfg = yaml.safe_load((d / "peaks.yml").read_text()) or {}
+    for l in (cfg.get("landmarks") or []):
+        if l.get("kind") == "trailhead" and l.get("lat") is not None:
+            th = (l["lat"], l["lon"]); break
+
+    print(f"objectives: " + ", ".join(n for _, n, _ in objs) + (f"  | TH @ {th}" if th else ""))
+    print(f"{'track':48} {'mi':>6} {'st→TH':>6}  hits")
     rows = []
     for f in files:
         pts = track_pts(f)
@@ -75,12 +82,14 @@ def main():
             continue
         dist = sum(hav_mi(pts[i], pts[i+1]) for i in range(len(pts)-1))
         hits = [n for _, n, c in objs if min(hav_mi(p, c) for p in pts) <= tol_mi]
-        rows.append((len(hits), dist, f.name, hits))
-    for nhits, dist, name, hits in sorted(rows, key=lambda r: (-r[0], r[1])):
+        st_th = min(hav_mi(pts[0], th), hav_mi(pts[-1], th)) if th else None
+        rows.append((len(hits), dist, f.name, hits, st_th))
+    for nhits, dist, name, hits, st_th in sorted(rows, key=lambda r: (-r[0], r[1])):
         if args.all_only and nhits < len(objs):
             continue
         mark = "  ALL" if nhits == len(objs) else ""
-        print(f"{name[:52]:52} {dist:6.1f}  {nhits}/{len(objs)}{mark}  {', '.join(hits)}")
+        sth = f"{st_th:5.1f}" if st_th is not None else "    —"
+        print(f"{name[:48]:48} {dist:6.1f} {sth}  {nhits}/{len(objs)}{mark}  {', '.join(hits)}")
 
 
 if __name__ == "__main__":
