@@ -26,12 +26,16 @@ single-peak/group report is essentially:
 1. `scripts/preflight.py --slug <slug> --ids <peak_db ids>` — resolve peaks, creds,
    climber profile → GO/NO-GO. Surfaces ambiguity NOW, not mid-build.
 2. **Sweep GPX from all 3 sources in the Playwright-MCP browser** (already logged in
-   — it's the login source of truth) and save tracks into `gpx/<slug>/`.
+   — it's the login source of truth, and it clears peakbagger's Cloudflare check).
+   Save tracks into `gpx/<slug>/`. **This is THE sweep path — use it for all three.**
    - **Never prompt Kyle to log in based on `check_sources_login.py`** — it checks a
      separate standalone profile that routinely diverges. Verify in the MCP browser,
      or just sweep and let a failed fetch (login page, not GPX) be the signal.
-   - `scripts/sweep_gpx.py --slug <slug>` is the allow-listed headless alternative,
-     once its standalone profile is logged in (`check_sources_login.py --login`).
+   - **Do NOT send Kyle to `check_sources_login.py --login` / `sweep_gpx.py` for
+     peakbagger.** That standalone profile gets stuck forever on peakbagger's
+     Cloudflare "Verifying you are human…" wall (it's an automated profile Cloudflare
+     won't clear — we hit this 2026-06-16). The MCP browser is the only reliable
+     peakbagger path; `sweep_gpx.py` is at best a 14ers+LoJ headless convenience.
 3. Write `gpx/<slug>/peaks.yml` (`objective_ids`, `nearby.include`, trailhead landmark).
 4. `scripts/build_report.py --slug <slug>` — chains the whole data phase
    (build_peak_gpx → caltopo_mytracks → combo_stats → drive_time → make_overview_map
