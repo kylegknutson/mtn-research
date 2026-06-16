@@ -24,6 +24,9 @@ drive_h: 5.0
 
 <!-- QUICKSTATS_END -->
 
+!!! success "✅ Climbed 2026-06-13 — actual: 12.4 mi / 3,558 ft (loop)"
+    Kyle's recorded outing: **12.4 mi · 3,558 ft** as a **loop** from the West Willow upper TH — vs the ~11 mi / ~3,750 ft estimate below. Right trailhead, right loop; ~13% longer. GPS track on file.
+
 **Researched:** 2026-06-09
 **Report type:** Day trip — a Class 2 tundra trio north of San Luis Pass
 **CalTopo research map:** https://caltopo.com/m/4278RCG

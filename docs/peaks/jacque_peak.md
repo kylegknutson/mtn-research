@@ -23,6 +23,9 @@ drive_h: 1.7
 
 <!-- QUICKSTATS_END -->
 
+!!! success "✅ Climbed 2026-06-06 — actual: 10.8 mi / 3,674 ft (loop)"
+    Kyle's recorded outing (fast-hike up, jog down): **10.8 mi · 3,674 ft**, done as a **loop** — vs the ~6.3 mi / ~3,500 ft minimal estimate below. Gain was on target; he took a bigger loop than the minimal line (and started ~0.7 mi from the assumed Woodward-base TH). GPS track on file (`GPS Tracks/20260606_Summit_County…_actual.gpx`).
+
 **Researched:** 2026-05-28
 **CalTopo research map:** https://caltopo.com/m/R2NF0S2
 **Status in DB:** **climbed** (2026-06-06). **Cluster status:**

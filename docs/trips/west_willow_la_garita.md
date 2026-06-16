@@ -30,6 +30,9 @@ days_detail:
 
 <!-- QUICKSTATS_END -->
 
+!!! success "✅ Climbed 2026-06-13 & 14 — actual: ~22.6 mi / ~7,150 ft over 2 days (all loops)"
+    Kyle did it as **two day-loops from the upper TH** (not a backpack): **Day 1 (Baldy Lejos trio) 12.4 mi · 3,558 ft**, **Day 2 (PT 13,308 + 13,166) 10.2 mi · 3,594 ft** — vs the ~19 mi / ~6,800 ft estimate. Right trailhead both days; ~15–25% longer per day. GPS tracks on file.
+
 **Researched:** 2026-06-10
 **Report type:** Multi-day trip / backpack — 5 ranked 13ers over 2 days from one trailhead
 **Status in DB:** all five **climbed** (2026-06-13/14).
