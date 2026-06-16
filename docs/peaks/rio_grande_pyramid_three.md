@@ -3,13 +3,13 @@ image: maps/rio_grande_pyramid_three.png
 range: San Juan
 drive_time: "~5h 45m"
 yds_class: "2 (Class 3–4 crux on PT 13,022)"
-gain: "~24.8 mi / ~6,400 ft (3-peak loop, DEM)"
+gain: "~19.5 mi / ~5,200 ft (3-peak loop, DEM)"
 status: unclimbed
 caltopo_id: TMVGNRR
 regional_map_id: 06AR6BF
 peak_ids: [517, 532, 804]
-dist_mi: 24.8
-gain_ft: 6396
+dist_mi: 19.5
+gain_ft: 5207
 class: "2–4"
 peaks: 3
 days: 1
@@ -21,19 +21,19 @@ drive_h: 5.75
 <!-- QUICKSTATS_START -->
 
 !!! tip "At a glance — recommended day"
-    **24.8 mi** · **6,396 ft** gain · **Class 2–4** · 3 peaks · ~5.75 h drive
+    **19.5 mi** · **5,207 ft** gain · **Class 2–4** · 3 peaks · ~5.75 h drive
 
 <!-- QUICKSTATS_END -->
 
 **Researched:** 2026-06-15
-**Report type:** Single push (huge day) *or* backpack — Kyle's three remaining unclimbed ranked 13ers around Rio Grande Pyramid.
+**Report type:** Single push (big day) *or* backpack — Kyle's three remaining unclimbed ranked 13ers around Rio Grande Pyramid.
 **CalTopo research map:** https://caltopo.com/m/TMVGNRR
 **Status in DB:** all three unclimbed. (Rio Grande Pyramid, Window Pk + Ute Ridge already done.)
 
 > The three red peaks around **Rio Grande Pyramid** in the **Weminuche Wilderness** — deep, remote, and a long way in. Two are easy Class 2; **PT 13,022 has a Class 3–4 exposed crux.**
 
 ![Overview map](../maps/rio_grande_pyramid_three.png)
-*[Interactive CalTopo map](https://caltopo.com/m/TMVGNRR)* — 14ers-library tracks + Kyle's CalTopo in green; **recommended composed loop in bold magenta**; 3 summit markers + the Weminuche Trail TH.
+*[Interactive CalTopo map](https://caltopo.com/m/TMVGNRR)* — 14ers-library tracks + Kyle's CalTopo in green; **recommended route (a real recorded loop) in bold magenta**; 3 summit markers + the Weminuche Trail TH.
 
 ---
 
@@ -62,16 +62,16 @@ drive_h: 5.75
 
 ## The single push — Weminuche Trail TH loop ⭐
 
-A **composed loop** through all three (gain DEM-measured): **~24.8 mi / ~6,400′**. This is a **monster day** — the Weminuche approach is long and deep. A party did the *whole* RGP group (these three + Rio Grande Pyramid) in one ~30 mi / ~9,800′ day (LoJ [TR 1934](https://listsofjohn.com/tr?Id=1934)), noting "some might say stupid" to do it as a day trip. **Most people backpack** (see below).
+A **real recorded loop** through all three (DEM-measured): **~19.5 mi / ~5,200′**. This is a **big day** — the Weminuche approach is long and deep — but not the monster the composed estimate first suggested. A party did the *whole* RGP group (these three + Rio Grande Pyramid) in one ~30 mi / ~9,800′ day (LoJ [TR 1934](https://listsofjohn.com/tr?Id=1934)), noting "some might say stupid" to do it as a day trip. **Most people backpack** (see below).
 
 | | |
 |---|---|
 | Peaks | PT 13,290 + PT 13,274 + PT 13,022 |
-| **Recommended loop** | **~24.8 mi / ~6,400′ (DEM)** |
+| **Recommended loop** | **~19.5 mi / ~5,200′ (DEM)** |
 | Class | **2**, but **PT 13,022 is the crux: "a fairly complicated and exposed 3rd–4th class scramble on teetering blocks" on the final ~200′.** Helmet; the other two are straightforward Class 2. |
 | Trailhead | **Weminuche Trail TH (Thirtymile, Rio Grande Reservoir), ~9,300'** — 2WD |
 
-### Route sequence (composed loop)
+### Route sequence
 1. From the **Weminuche Trail TH** at Rio Grande Reservoir, hike the long Weminuche Creek trail in toward Weminuche Pass / the Rio Grande Pyramid basin.
 2. **PT 13,022** first (SW side) — easy until the **exposed Class 3–4 summit block** (teetering blocks, ~200′).
 3. Cross to the NE pair: **PT 13,290 ("Fools Pyramid") → PT 13,274** — ridge-connected Class 2.
@@ -81,7 +81,7 @@ A **composed loop** through all three (gain DEM-measured): **~24.8 mi / ~6,400�
 
 ## Strongly consider a backpack ⛺
 
-This is **classic backpack country.** A short, easy pack-in — **~5 mi / ~1,325′** to a base camp near Weminuche Pass / the meadows — sets you up for **all the Rio Grande Pyramid 13ers** (these three + RGP + Window) on short summit days, instead of a 25-mile push. Given the distance, a **2-night backpack is the sane way to clean up these three.**
+This is **classic backpack country.** A short, easy pack-in — **~5 mi / ~1,325′** to a base camp near Weminuche Pass / the meadows — sets you up for **all the Rio Grande Pyramid 13ers** (these three + RGP + Window) on short summit days, instead of a ~20-mile push. Given the distance, a **2-night backpack is still a great way to clean up these three.**
 
 ---
 
@@ -126,8 +126,8 @@ Pages verified for all three; **ownership = Weminuche Wilderness** (Rio Grande N
 
 ## TL;DR
 
-- **Your three remaining Rio Grande Pyramid 13ers in one push** — **~24.8 mi / ~6,400′** loop from the **Weminuche Trail TH** (2WD, Rio Grande Reservoir): PT 13,022 (SW) + the ridge-connected NE pair PT 13,290 ("Fools Pyramid") + PT 13,274.
+- **Your three remaining Rio Grande Pyramid 13ers in one push** — **~19.5 mi / ~5,200′** loop from the **Weminuche Trail TH** (2WD, Rio Grande Reservoir): PT 13,022 (SW) + the ridge-connected NE pair PT 13,290 ("Fools Pyramid") + PT 13,274.
 - **Class 2 except PT 13,022**, whose final ~200′ is an **exposed Class 3–4 scramble on teetering blocks** — the crux. Helmet.
-- **A 25-mile day is a beast — backpack instead:** ~5 mi / 1,325′ to a base camp gets you all the RGP-area peaks on short days. Strongly recommended.
+- **A ~20-mile day is big but doable — or backpack:** ~5 mi / 1,325′ to a base camp gets you all the RGP-area peaks on short days. Still a great option given the depth.
 - **Weminuche Wilderness**, ~5h45 drive (Creede → Rio Grande Reservoir). Cell dead — InReach essential.
 - **Research map:** https://caltopo.com/m/TMVGNRR
