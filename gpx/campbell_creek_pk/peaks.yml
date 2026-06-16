@@ -1,0 +1,16 @@
+# Campbell Creek Pk (13,461', San Juan / Hinsdale) — lone unclimbed ranked 13er
+# in the Handies cluster; every ranked neighbor within 4 mi is already done, so
+# this is a STANDALONE objective (no add-on peaks). Recorded tracks all approach
+# from the Grizzly Gulch / Silver Creek TH on the Lake Fork (Cinnamon Pass) road
+# and tag Handies/13801/Whitecross too — the recommended route trims to Campbell
+# Creek only.
+objective_ids:
+- 357   # "Campbell Creek Pk" 13,461
+nearby:
+  include: false
+landmarks:
+- name: Grizzly Gulch / Silver Creek TH
+  lat: 37.93684
+  lon: -107.46068
+  kind: trailhead
+  ele_ft: 10400

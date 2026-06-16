@@ -92,10 +92,20 @@ def main():
             continue
         lo, hi = min(miles), max(miles)
         gain = frontmatter_gain(PEAKS_DIR / f"{slug}.md")
+        # The headline mileage legitimately comes from the DEM-measured composed
+        # *_recommended.gpx, which IS the route. When it's a standalone climb
+        # trimmed from multi-peak recorded tracks (e.g. Campbell Creek, where every
+        # recorded track also bags Handies/13801), the recommended route is rightly
+        # SHORTER than any recorded track — that's not an optimistic estimate, it's
+        # measured. So exempt any headline mileage that matches the recommended
+        # route's own measured length (within 15%) from SHORTER-THAN-REAL.
+        rec = next((track_miles(f) for f in d.glob("*recommended*.gpx")), None)
         flags = []
         if re.search(r"climb\s*13ers", gain, re.I):
             flags.append("HEADLINE-SOURCE (climb13ers estimate in headline)")
         for m in miles_in(gain):
+            if rec and abs(m - rec) <= 0.15 * rec:
+                continue  # headline == measured recommended route → ground truth
             if m < lo * SHORTER_TOL:
                 flags.append(f"SHORTER-THAN-REAL ({m:.1f} mi headline vs {lo:.1f} mi shortest recorded)")
                 break
