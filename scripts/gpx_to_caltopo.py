@@ -343,6 +343,19 @@ def main() -> None:
         map_id = args.map_id
         print(f"\nAppending to existing map: {map_id}")
 
+    # Scope dedupe to the TARGET map only. A research map must carry ALL of this
+    # report's source tracks even if near-identical tracks live on OTHER maps in
+    # the account — account-wide dedupe silently dropped the recorded tracks from
+    # cimarron_six's map, leaving only the recommended route (Kyle, 2026-06-16).
+    # For a --new-map the target isn't in the dumps yet → nothing to dedupe (right,
+    # the map is empty); for an append it stays idempotent against its own contents.
+    if not args.no_dedupe and (existing_tracks or existing_markers):
+        bt, bm = len(existing_tracks), len(existing_markers)
+        existing_tracks = [t for t in existing_tracks if t["map_id"] == map_id]
+        existing_markers = [m for m in existing_markers if m["map_id"] == map_id]
+        print(f"Dedupe scoped to target map {map_id}: {len(existing_tracks)} track(s), "
+              f"{len(existing_markers)} marker(s) (was {bt}/{bm} account-wide).")
+
     # Add a folder per source group, then features inside
     track_count = wpt_count = skipped_tracks = skipped_markers = 0
     track_color_idx = 0  # for --vary-colors
