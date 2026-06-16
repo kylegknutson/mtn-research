@@ -1,0 +1,8 @@
+# Mount Adams trio — 3 unclimbed ranked 13ers ringing Mount Adams A (13,937'),
+# northern Sangre de Cristo (Willow Lake / Adams basin, Crestone side). Every
+# ranked neighbor (Kit Carson, Challenger, Crestones, Humboldt, Adams) is done.
+objective_ids: [277, 248, 280]   # PT 13,552 (W), Pt 13,580A (S), PT 13,543 (SE of Adams)
+nearby:
+  include: false
+landmarks:
+  - {name: "Willow Creek / Willow Lake TH (Crestone)", lat: 37.9889, lon: -105.6626, ele_ft: 8900, kind: trailhead}
