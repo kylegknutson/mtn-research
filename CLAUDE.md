@@ -15,6 +15,12 @@ scripts, and raw `grep`/`sed` instead of using the scripts. Don't repeat that.)
 - **Assume, don't ask:** individual-vs-combo and trip grouping — pick the sensible
   default; Kyle redoes if he wants it the other way. When ≥2 reports share a
   drainage/area/drive, proactively build the Trip.
+- **Default to single-push combos; don't over-hedge.** Kyle's actual log (601
+  ascents) shows a high multi-peak-day tolerance — **4+ peaks on ~24% of his days,
+  up to 12 in a day**; 3–6 peaks in one push is routine. So when clustered peaks
+  can be linked, **combine them and frame the big day as achievable** — don't lead
+  with "backpack instead" or call a 3-peak / ~20-mi day a "monster." Offer the
+  backpack as an option, not the headline. (See [[feedback-climbing-patterns]].)
 - **Never invent a straight-line combo connector.** If no recorded track links two
   peaks, make them individual climbs (each its own `<trkseg>`). The teleport gate
   enforces this.
