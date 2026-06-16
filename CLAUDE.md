@@ -21,6 +21,11 @@ scripts, and raw `grep`/`sed` instead of using the scripts. Don't repeat that.)
   can be linked, **combine them and frame the big day as achievable** — don't lead
   with "backpack instead" or call a 3-peak / ~20-mi day a "monster." Offer the
   backpack as an option, not the headline. (See [[feedback-climbing-patterns]].)
+- **Prefer LOOPS; treat recommended mileage as a floor.** Calibrated against Kyle's
+  actual tracks: he always loops (never out-and-backs) and does ~15–25% more distance
+  than my route (much more on single-peak loops); **gain estimates are reliable**.
+  So recommend loop options (esp. single peaks), and don't call these outings "runs"
+  — he fast-hikes up and jogs down. (See [[feedback-climbing-patterns]].)
 - **Never invent a straight-line combo connector.** If no recorded track links two
   peaks, make them individual climbs (each its own `<trkseg>`). The teleport gate
   enforces this.
