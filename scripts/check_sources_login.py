@@ -121,9 +121,16 @@ def main():
         print(f"{key:14} {status:12} {str(user or '—'):20} {exp}{flag}")
 
     if not all_ok:
-        print("\nOne or more sources are logged out. Run with --login to fix.")
+        print("\nOne or more sources are logged out IN THIS SCRIPT'S SEPARATE PROFILE.")
+        print("⚠ NOT AUTHORITATIVE for GPX sweeps. Sweeps run through the Playwright-MCP")
+        print("  browser, which has its own login state and is frequently logged in when")
+        print("  this profile is not (false-flagged peakbagger 2026-06-16, prompting Kyle")
+        print("  for no reason). DO NOT ask the user to log in based on this output.")
+        print("  Verify in the MCP browser (navigate to the site, look for the logged-in")
+        print("  marker) — only that reflects what sweeps will see. Run --login to sync")
+        print("  THIS profile if you actually intend to sweep with the standalone tooling.")
         sys.exit(1)
-    print("\nAll three sources logged in.")
+    print("\nAll three sources logged in (this script's profile).")
 
 
 if __name__ == "__main__":

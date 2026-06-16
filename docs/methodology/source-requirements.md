@@ -26,7 +26,9 @@ The three logged-in core sources, checked **every time**:
 
 ## Login verification — do this FIRST, every session
 
-1. Navigate to each site and confirm the logged-in username appears.
+> **The MCP browser is the only authoritative login check (Kyle, 2026-06-16).** GPX sweeps run through the **Playwright-MCP browser**, so its login state is the only one that matters. `scripts/check_sources_login.py` checks a **separate, standalone Playwright profile** that routinely diverges — it false-flagged peakbagger as "logged out" while the MCP browser was logged in as Kyle, triggering a pointless "please log in" prompt. **Never prompt Kyle to log in based on `check_sources_login.py`.** Verify in the MCP browser itself (or just let the first sweep prove it). Equivalently: **don't pre-gate on a separate login check — start the sweep; if a fetch returns a login page instead of data, *then* the MCP session is logged out and you prompt.** The hard-stop below applies only to a genuinely logged-out **MCP** session / sweep.
+
+1. In the **MCP browser**, navigate to each site and confirm the logged-in username appears (or skip ahead and let the first GPX fetch confirm it — logged-out returns an HTML login page, not GPX).
 2. **peakbagger especially:** it sits behind Cloudflare. A pull run before the "Just a moment" challenge clears (~4s) — or on an expired session — silently returns **logged-out** data, which exposes **fewer ascents and fewer GPX tracks**.
    - Real example (Crestolita + Broken Hand, 2026-05-31): a logged-out PB pull got 3 GPX tracks; re-running confirmed-logged-in surfaced **5 more** Broken Hand ascent tracks.
    - Always confirm `Logged in: Kyle Knutson` on the peakbagger page before scraping. Re-pull if the first check shows logged-out.
