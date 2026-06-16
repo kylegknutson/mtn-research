@@ -3,12 +3,13 @@ image: maps/savage_peak.png
 range: Sawatch
 drive_time: "3h 39m"
 yds_class: "2 (Savage) · 3 (PT 13,002)"
-gain: "3,200 ft (Savage) · ~6,000+ (Savage + 13,002)"
+gain: "~14.3 mi / ~5,820 ft (Savage + PT 13,002 combo, DEM)"
 status: unclimbed
 caltopo_id: QL51DBE
 regional_map_id: L5VH4BU
 peak_ids: [674, 839]
-gain_ft: 3200
+dist_mi: 14.3
+gain_ft: 5817
 class: 2-3
 peaks: 2
 days: 1
@@ -20,7 +21,7 @@ drive_h: 3.6
 <!-- QUICKSTATS_START -->
 
 !!! tip "At a glance — recommended day"
-    **3,200 ft** gain · **Class 2-3** · 2 peaks · ~3.6 h drive
+    **14.3 mi** · **5,817 ft** gain · **Class 2-3** · 2 peaks · ~3.6 h drive
 
 <!-- QUICKSTATS_END -->
 
@@ -73,7 +74,7 @@ drive_h: 3.6
 
 ## Recommended route — Northeast Ridge from Missouri Lakes TH ⭐
 
-The 14ers.com official route (BillMiddlebrook, May 2023). Solid Class 2 ridge climb with a documented line. **8 mi RT / 3,200' gain** from the 2WD TH at 10,000'.
+The 14ers.com official route (BillMiddlebrook, May 2023). Solid Class 2 ridge climb with a documented line. **8 mi RT / 3,200' gain** from the 2WD TH at 10,000' for **Savage on its own** — the "at a glance" headline above is the **full Savage + PT 13,002 combo** (~14.3 mi / ~5,800 ft, DEM, from the recorded TR-22657 track; see [Adding PT 13,002](#adding-pt-13002-ways-to-combine)).
 
 | Route | Stats (14ers official) |
 |---|---|

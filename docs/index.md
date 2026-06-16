@@ -20,7 +20,7 @@ Every ranked Colorado 13er/14er — **green peak = has a report** (click it to o
 | [Mount Powell + Eagles Nest](peaks/powell_eagles_nest.md) | Gore | 3 | — | 6,250 | 2 | 1 | 2 | 3.1 | unclimbed |
 | [Homestake Peak](peaks/homestake_peak.md) | Sawatch | 2 | — | 3,026 | 1 | 1 | 1 | 3.2 | unclimbed |
 | [Hunts Peak](peaks/hunts_peak.md) | Sangre de Cristo | 2 | — | 3,489 | 1 | 1 | 1 | 3.6 | unclimbed |
-| [Savage Peak + PT 13,002](peaks/savage_peak.md) | Sawatch | 2-3 | — | 3,200 | 2 | 1 | 2 | 3.6 | unclimbed |
+| [Savage Peak + PT 13,002](peaks/savage_peak.md) | Sawatch | 2-3 | 14.3 | 5,817 | 2 | 1 | 2 | 3.6 | unclimbed |
 | [Star Peak A](peaks/star_peak_a.md) | Elk | 2+ | — | 2,766 | 1 | 1 | 1 | 3.6 | unclimbed |
 | [Star Peak Group](peaks/star_peak_group.md) | Elk | 2 | — | 4,300 | 3 | 1 | 3 | 3.7 | unclimbed |
 | [Williams Mountains Traverse](peaks/williams_mountains.md) | Sawatch | 3 | 12.9 | 5,811 | 5 | 1 | 5 | 3.8 | unclimbed |
