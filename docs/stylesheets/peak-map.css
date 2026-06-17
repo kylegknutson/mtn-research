@@ -20,6 +20,14 @@
   border-right: none;
 }
 
+/* full-screen control button (⛶) */
+a.peakmap-fs {
+  font-size: 18px; line-height: 26px; text-align: center; font-weight: bold;
+  color: #333; text-decoration: none;
+}
+#peak-map:fullscreen { width: 100vw; height: 100vh; border: none; border-radius: 0; }
+#peak-map:-webkit-full-screen { width: 100vw; height: 100vh; }
+
 /* green CalTopo-style peak marker: clear the default divIcon white box */
 .peak-marker { background: none; border: none; }
 .peak-marker svg { display: block; filter: drop-shadow(0 1px 1px rgba(0,0,0,0.4)); }

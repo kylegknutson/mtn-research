@@ -98,23 +98,31 @@ def recommended_route(slug: str):
 
 def build_routes() -> list:
     """One magenta recommended route per report, tagged with its objective peak
-    ids so the map can hide it once every objective is climbed."""
+    ids so the map can hide it once every objective is climbed. Iterates REPORTS
+    (not gpx dirs) and takes objective ids from gpx/<slug>/peaks.yml `objective_ids`
+    OR — when a report has no peaks.yml — its frontmatter `peak_ids` (some reports
+    define peaks that way; reading only peaks.yml silently dropped their routes)."""
     routes = []
-    for yml in sorted(GPX.glob("*/peaks.yml")):
-        slug = yml.parent.name
-        if not report_for(slug):
-            continue
-        coords = recommended_route(slug)
-        if not coords:
-            continue
-        try:
-            cfg = yaml.safe_load(yml.read_text()) or {}
-        except Exception:
-            continue
-        objs = [int(o) for o in (cfg.get("objective_ids") or []) if str(o).lstrip("-").isdigit()]
-        if not objs:
-            continue
-        routes.append({"o": objs, "c": coords})
+    for sub in ("peaks", "trips"):
+        for md in sorted((DOCS / sub).glob("*.md")):
+            if md.stem.count(".") or md.stem == "index":
+                continue
+            slug = md.stem
+            coords = recommended_route(slug)
+            if not coords:
+                continue
+            objs = []
+            yml = GPX / slug / "peaks.yml"
+            if yml.exists():
+                try:
+                    objs = (yaml.safe_load(yml.read_text()) or {}).get("objective_ids") or []
+                except Exception:
+                    objs = []
+            if not objs:
+                objs = frontmatter(md).get("peak_ids") or []
+            objs = [int(o) for o in objs if str(o).lstrip("-").isdigit()]
+            if objs:
+                routes.append({"o": objs, "c": coords})
     return routes
 
 

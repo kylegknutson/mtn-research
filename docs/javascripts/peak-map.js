@@ -131,6 +131,37 @@
         return div;
       };
       lg.addTo(map);
+
+      // True full-screen via the browser Fullscreen API on the map container —
+      // robust regardless of the MkDocs content-column layout (a CSS width
+      // break-out gets clipped by Material's wrappers). Exposed as a map control
+      // (⛶) and wired to any #peakmap-fullscreen link (the home-page "full-screen"
+      // link triggers it instead of navigating).
+      function toggleFs() {
+        var fsEl = document.fullscreenElement || document.webkitFullscreenElement;
+        if (fsEl) {
+          (document.exitFullscreen || document.webkitExitFullscreen).call(document);
+        } else {
+          (el.requestFullscreen || el.webkitRequestFullscreen || function () {}).call(el);
+        }
+      }
+      var FsCtl = L.Control.extend({
+        options: { position: "topleft" },
+        onAdd: function () {
+          var d = L.DomUtil.create("div", "leaflet-bar leaflet-control");
+          var a = L.DomUtil.create("a", "peakmap-fs", d);
+          a.href = "#"; a.title = "Full screen"; a.innerHTML = "⛶"; a.setAttribute("role", "button");
+          L.DomEvent.on(a, "click", function (e) { L.DomEvent.stop(e); toggleFs(); });
+          return d;
+        }
+      });
+      map.addControl(new FsCtl());
+      ["fullscreenchange", "webkitfullscreenchange"].forEach(function (ev) {
+        document.addEventListener(ev, function () { setTimeout(function () { map.invalidateSize(); }, 120); });
+      });
+      var extFs = document.getElementById("peakmap-fullscreen");
+      if (extFs) L.DomEvent.on(extFs, "click", function (e) { L.DomEvent.stop(e); toggleFs(); });
+
       setTimeout(function () { map.invalidateSize(); }, 150);
     }).catch(function (e) {
       el.innerHTML = "<p style='padding:1em;color:#a00'>Couldn't load peak data (" + e + ").</p>";
