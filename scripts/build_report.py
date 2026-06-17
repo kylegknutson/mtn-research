@@ -152,6 +152,11 @@ def finalize_phase(args):
         ["check_route_geometry.py"],
         ["check_route_stats.py", "--strict"],
         ["check_class.py", "--strict"],   # SAFETY: class >= hardest objective's summit class
+        # DATA-INTEGRITY: this report must have GPX from all 3 sources (or an
+        # explicit verified-empty record in gpx/<slug>/sources.json). Scoped to
+        # THIS slug so the backlog of older single-source reports doesn't block a
+        # new build; run `check_source_coverage.py --strict` (no slug) to sweep all.
+        ["check_source_coverage.py", args.slug, "--strict"],
     ]
     for chk in gates:
         r = run([SCRIPTS / chk[0], *chk[1:]])
