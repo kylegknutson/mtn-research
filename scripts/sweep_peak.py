@@ -427,7 +427,14 @@ def ingest_batch(which, blob_path):
                 fn = f"trk_{'14ers' if which=='14ers' else 'pb'}_{n}.gpx"
                 (GPX / slug / fn).write_text(gpx)
                 written += 1
-        print(f"  {slug}: {which} now {_disk_counts(slug)['14ers' if which=='14ers' else 'peakbagger']}")
+        # mark THIS report's source as actually swept, so per-report finalize can
+        # honestly record verified-empty (found 0) vs unchecked — even when the
+        # fetch returned 0 tracks (the pids/peakids were really queried).
+        src = "14ers" if which == "14ers" else "peakbagger"
+        st = load_state(slug)
+        st["swept"] = sorted(set(st.get("swept", []) + [src]))
+        save_state(slug, st)
+        print(f"  {slug}: {which} now {_disk_counts(slug)[src]}")
     (ROOT / f"tmp_swept_{which}.flag").write_text("1")   # integrity: this source WAS fetched
     print(f"\n  wrote {written} {which} track(s) across reports")
 

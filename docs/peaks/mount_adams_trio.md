@@ -5,6 +5,9 @@ drive_time: "~4h"
 yds_class: "2+ (easy Class 3 on the connecting ridges)"
 gain: "~11.7 mi / ~6,400 ft (3-peak loop, DEM)"
 status: unclimbed
+th_source: "recorded GPS-track starts at Willow Creek / Willow Lake TH (37.9889,-105.6626) — swept tracks begin there; OSM/14ers TH"
+class_source: "Roach + 14ers trip reports — summits Class 2 but the 13,543<->13,580A connecting ridge is Class 2+/easy Class 3 (researched this session)"
+status_source: "peak_db ascents (unclimbed)"
 caltopo_id: VES1N54
 regional_map_id: VKGB00L
 peak_ids: [277, 248, 280]
