@@ -1,5 +1,17 @@
 {
-  "14ers": {"checked": true, "found": 8, "note": "14ers.com GPX library (peakid 10278)"},
-  "peakbagger": {"checked": true, "found": 3, "note": "peakbagger pid 5817 — ascents with GPS tracks (aids 2995426, 2928433, 1453958)"},
-  "listsofjohn": {"checked": true, "found": 0, "note": "LoJ peak/84 hosts text trip reports only — no downloadable GPX tracks for this peak"}
+  "14ers": {
+    "checked": true,
+    "found": 6,
+    "note": "gpxlib_locator.php"
+  },
+  "peakbagger": {
+    "checked": true,
+    "found": 3,
+    "note": "verified pids {'84': '5817'}"
+  },
+  "listsofjohn": {
+    "checked": true,
+    "found": 0,
+    "note": "no downloadable GPX (text TRs)"
+  }
 }
