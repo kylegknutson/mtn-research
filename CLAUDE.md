@@ -68,6 +68,15 @@ single-peak/group report is essentially:
   (the `scripts/*.py *` allow rule covers it automatically).
 - **Headline distance from measured GPX; gain from a DEM** — never climb13ers prose,
   never GPS `<ele>` (it logs 30,000′ on a 13er).
+- **Class is SAFETY-CRITICAL — research the actual route, not the summit.** peak_db
+  `yds_class` is the **per-summit STANDARD-route** grade ONLY. For any traverse, ridge
+  link-up, loop, or non-standard line the connecting terrain is often **1–2 classes
+  harder** (Mount Adams trio: Class 2 summits, Class 3–4 ridges; Cimarron PT 13,222 B
+  is Class 4). Research the real grade from route beta (14ers route desc + trip reports
+  + Roach + climb13ers) and set the headline to the **hardest move on the recommended
+  route**. **When unsure, take the harder estimate** — under-stating class drives wrong
+  gear/rope/helmet decisions. `scripts/check_class.py --strict` (in `--finalize`) FAILs
+  any report whose class is below its hardest objective's peak_db class.
 - **All 3 sources (14ers + LoJ + peakbagger) every time, + climb13ers for CO peaks**,
   named in the report's "Sources checked" footer (CI lint enforces it).
 - Don't mark a report "researched" until the Pages deploy is green.

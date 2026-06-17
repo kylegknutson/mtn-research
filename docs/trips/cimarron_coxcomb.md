@@ -2,19 +2,19 @@
 image: maps/cimarron_coxcomb.png
 range: San Juan
 drive_time: "~5h 30m"
-yds_class: "3"
+yds_class: "4 (PT 13,222 B on the Middle Fork six; rest Class 3)"
 gain: "~24 mi / ~11,100 ft (8 peaks: a 6-peak loop + 2 individual climbs)"
 status: unclimbed
 regional_map_id: 06AR6BF
 dist_mi: 23.9
 gain_ft: 11114
-class: 3
+class: 4
 peaks: 8
 days: 3
 drive_h: 5.5
 weather: "https://forecast.weather.gov/MapClick.php?lat=38.098&lon=-107.530"  # central Coxcomb; all 8 within ~4 mi
 days_detail:
-  - {label: "Middle Fork six", peaks: 6, dist_mi: 13.3, gain_ft: 5785, class: "3"}
+  - {label: "Middle Fork six", peaks: 6, dist_mi: 13.3, gain_ft: 5785, class: "4"}
   - {label: "Fortress", peaks: 1, dist_mi: 6.0, gain_ft: 2518, class: "3"}
   - {label: "Precipice", peaks: 1, dist_mi: 4.6, gain_ft: 2811, class: "3"}
 ---
@@ -26,7 +26,7 @@ days_detail:
 !!! tip "At a glance — 3-day trip"
     **8 peaks** · **~5.5 h drive** · [weather](https://forecast.weather.gov/MapClick.php?lat=38.098&lon=-107.530)
 
-    - **Day 1 (Middle Fork six):** **13.3 mi** · **5,785 ft** gain · **Class 3** · 6 peaks
+    - **Day 1 (Middle Fork six):** **13.3 mi** · **5,785 ft** gain · **Class 4** · 6 peaks
     - **Day 2 (Fortress):** **6 mi** · **2,518 ft** gain · **Class 3** · 1 peak
     - **Day 3 (Precipice):** **4.6 mi** · **2,811 ft** gain · **Class 3** · 1 peak
 
@@ -53,7 +53,7 @@ days_detail:
 |---|---|
 | Climbs | **3** — one six-peak loop + two individual peaks (relocate camp between the Middle & West Fork roads) |
 | Peaks | **8 ranked 13ers** — all unclimbed |
-| Class | **3** throughout — loose, rotten Cimarron rock (helmet) |
+| Class | **Up to 4** — **PT 13,222 B (Middle Fork six) is rated Class 4** in peak_db (verify on-site, the crux); otherwise loose, rotten Cimarron Class 3. Helmet; consider a rope. |
 | **Middle Fork six** | Heisshorn + PT 13,382 + PT 13,215 + El Punto + PT 13,340 A + PT 13,222 B — **~13.3 mi / ~5,785'** (DEM) |
 | **Fortress (solo)** | West Fork out-and-back — **~6.0 mi / ~2,518'** (DEM) |
 | **Precipice (solo)** | West Fork out-and-back — **~4.6 mi / ~2,811'** (DEM) |
@@ -79,8 +79,8 @@ Both forks branch off the same Cimarron road, so the **camp move between days is
 
 ## Day plan
 
-### Middle Fork six · ~13.3 mi / ~5,785' · Class 3
-The NE trio first (PT 13,222 B → PT 13,340 A → El Punto), then traverse to **Heisshorn** (the loose Class 3 high point), and finish the south pair (PT 13,382 → PT 13,215). **El Punto and Heisshorn are the cruxes** — rotten, exposed rock; the four PTs are Class 2/2+. **Full route, trip reports, and GPX: [Cimarron Remaining Six report](../peaks/cimarron_six.md).**
+### Middle Fork six · ~13.3 mi / ~5,785' · Class 4 (PT 13,222 B)
+The NE trio first (PT 13,222 B → PT 13,340 A → El Punto), then traverse to **Heisshorn** (the loose Class 3 high point), and finish the south pair (PT 13,382 → PT 13,215). **PT 13,222 B is rated Class 4** (peak_db — the crux, verify on-site); El Punto + Heisshorn are loose **Class 3**; the other three PTs are Class 2/2+. **Full route, trip reports, and GPX: [Cimarron Remaining Six report](../peaks/cimarron_six.md).**
 
 ### Precipice (solo) · ~4.6 mi / ~2,810' · Class 3
 A short, steep out-and-back from the **West Fork Cimarron TH** — faint social trail and an ultra-steep footpath up through forest to a loose Class 3 finish.
@@ -125,7 +125,7 @@ A slightly longer out-and-back from the same **West Fork TH**, further S toward 
 
 ## TL;DR
 
-- **Kyle's 8 remaining Coxcomb-area 13ers as a trip** (~24 mi / ~11,100', all **loose Class 3**): a six-peak Middle Fork loop **plus Fortress and Precipice as two individual West Fork climbs**.
+- **Kyle's 8 remaining Coxcomb-area 13ers as a trip** (~24 mi / ~11,100', loose Cimarron rock — **PT 13,222 B rated Class 4**, the rest Class 2–3): a six-peak Middle Fork loop **plus Fortress and Precipice as two individual West Fork climbs**.
 - **Two trailheads on two forks of the Cimarron road** — relocate camp between days (a short drive); the six-loop is the big day, Fortress + Precipice are shorter steep half-days (do them separately — deep notches break the connecting ridge).
 - **GMUG NF / Uncompahgre Wilderness**; ~5h30 drive (US-50 → Cimarron). Cell dead — InReach.
 - Detail + GPX: **[Middle Fork six](../peaks/cimarron_six.md)** · **[Fortress + Precipice](../peaks/fortress_precipice.md)**.

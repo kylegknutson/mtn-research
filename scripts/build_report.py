@@ -151,6 +151,7 @@ def finalize_phase(args):
         ["check_map_extents.py"],
         ["check_route_geometry.py"],
         ["check_route_stats.py", "--strict"],
+        ["check_class.py", "--strict"],   # SAFETY: class >= hardest objective's summit class
     ]
     for chk in gates:
         r = run([SCRIPTS / chk[0], *chk[1:]])

@@ -2,7 +2,7 @@
 image: maps/cimarron_six.png
 range: San Juan
 drive_time: "~5h 30m"
-yds_class: "3"
+yds_class: "4 (PT 13,222 B rated Class 4; Heisshorn + El Punto loose Class 3; other PTs Class 2)"
 gain: "~13.3 mi / ~5,785 ft (recommended loop, DEM)"
 status: unclimbed
 caltopo_id: 55M4430
@@ -10,7 +10,7 @@ regional_map_id: 06AR6BF
 peak_ids: [388, 421, 602, 498, 445, 571]
 dist_mi: 13.3
 gain_ft: 5785
-class: 3
+class: 4
 peaks: 6
 days: 1
 drive_h: 5.5
@@ -21,7 +21,7 @@ drive_h: 5.5
 <!-- QUICKSTATS_START -->
 
 !!! tip "At a glance — recommended day"
-    **13.3 mi** · **5,785 ft** gain · **Class 3** · 6 peaks · ~5.5 h drive
+    **13.3 mi** · **5,785 ft** gain · **Class 4** · 6 peaks · ~5.5 h drive
 
 <!-- QUICKSTATS_END -->
 
@@ -47,7 +47,7 @@ drive_h: 5.5
 |---|---|---|---|---|---|---|
 | Elevation | 13,418' | 13,382' | 13,215' | 13,319' | 13,350' | 13,220' |
 | Lat / Lon | 38.0779, −107.5117 | 38.0717, −107.5148 | 38.0741, −107.5249 | 38.0898, −107.4996 | 38.0984, −107.4958 | 38.1057, −107.4902 |
-| Class | 3 (loose) | 2+ | 2 | 3 (loose summit) | 2+ | 2 |
+| Class | 3 (loose) | 2+ | 2 | 3 (loose summit) | 2+ | **4** (peak_db — verify) |
 | CO Rank | 312 | 334 | 476 | 379 | 357 | 470 |
 | 14ers.com | [10417](https://www.14ers.com/php14ers/peak.php?peakid=10417) | [10430](https://www.14ers.com/php14ers/peak.php?peakid=10430) | [10507](https://www.14ers.com/php14ers/peak.php?peakid=10507) | [10465](https://www.14ers.com/php14ers/peak.php?peakid=10465) | [10437](https://www.14ers.com/php14ers/peak.php?peakid=10437) | [10493](https://www.14ers.com/php14ers/peak.php?peakid=10493) |
 | LoJ | [388](https://listsofjohn.com/peak/388) | [421](https://listsofjohn.com/peak/421) | [602](https://listsofjohn.com/peak/602) | [498](https://listsofjohn.com/peak/498) | [445](https://listsofjohn.com/peak/445) | [571](https://listsofjohn.com/peak/571) |
@@ -60,13 +60,16 @@ Two sub-groups: a **south-of-Coxcomb trio** (Heisshorn / 13,382 / 13,215) and an
 
 ## Recommended day — Middle Fork Cimarron loop over all six ⭐
 
-A **composed loop** (shortest line through all six, stitched from recorded GPS; gain DEM-measured): **~13.3 mi / ~5,785′**, **Class 3**. Multiple parties do exactly this set in a day (4 recorded full-six tracks on 14ers).
+A **composed loop** (shortest line through all six, stitched from recorded GPS; gain DEM-measured): **~13.3 mi / ~5,785′**. Multiple parties do exactly this set in a day (4 recorded full-six tracks on 14ers).
+
+!!! danger "Class — verify before you go"
+    **PT 13,222 B is rated Class 4** in peak_db (the hardest point of the loop) — that conflicts with the "easy PT" impression, so **treat it as the crux: verify the grade on-site and carry a helmet (consider a rope).** Heisshorn + El Punto are loose **Class 3**; the other three PTs are Class 2/2+. Don't gear up for this as a Class 2/3 day.
 
 | | |
 |---|---|
 | Peaks | all six |
 | **Recommended loop** | **~13.3 mi / ~5,785′ (DEM)** |
-| Class | **3** — and **loose**: Heisshorn is "a substantial scramble on loose, fragmented rock" (some want a rope); El Punto's final ~100′ is "Class 3, loose, exposed." The four PTs are easier (2/2+) but it's all rotten Cimarron rock. |
+| Class | **4** — **PT 13,222 B is rated Class 4** (peak_db; the crux — verify on-site). Heisshorn is "a substantial scramble on loose, fragmented rock" (some want a rope); El Punto's final ~100′ is "Class 3, loose, exposed." The other three PTs are 2/2+ — but it's all rotten Cimarron rock. |
 | Trailhead | **Middle Fork Cimarron (Trail #227), ~10,000'** — passenger car (with care over a few dips) |
 
 ### Route sequence (composed loop)
@@ -74,7 +77,7 @@ A **composed loop** (shortest line through all six, stitched from recorded GPS; 
 2. Traverse SW/S along the divide to **"Heisshorn" (13,418')** — the high point and **loose Class 3 crux**.
 3. Finish the south trio: **PT 13,382 → PT 13,215**, then descend back to the Middle Fork trail and out.
 
-> **It's a loose-rock scramble day.** The two named peaks (Heisshorn, El Punto) carry Class 3 with notably rotten/exposed rock; the four PTs are Class 2/2+. Helmet advised; a rope is "mighty nice" for the exposed bits per recorded TRs. Long day at altitude — early start.
+> **It's a loose-rock scramble day.** The two named peaks (Heisshorn, El Punto) carry Class 3 with notably rotten/exposed rock; **PT 13,222 B is rated Class 4** (the crux — verify on-site). The other three PTs are Class 2/2+. Helmet advised; a rope is "mighty nice" for the exposed bits per recorded TRs. Long day at altitude — early start.
 
 ---
 
@@ -112,8 +115,8 @@ A **composed loop** (shortest line through all six, stitched from recorded GPS; 
 
 ## TL;DR
 
-- **Your six remaining Coxcomb-area 13ers (minus Fortress/Precipice) in one loop** — **~13.3 mi / ~5,785′, Class 3**, from the **Middle Fork Cimarron TH (#227)**: NE trio (13,222 B / 13,340 A / El Punto) → Heisshorn → south pair (13,382 / 13,215).
-- **Loose, exposed Cimarron rock** — Heisshorn + El Punto are the Class 3 cruxes (rotten rock, a rope "feels nice"); the four PTs are Class 2/2+. Helmet + early start.
+- **Your six remaining Coxcomb-area 13ers (minus Fortress/Precipice) in one loop** — **~13.3 mi / ~5,785′**, from the **Middle Fork Cimarron TH (#227)**: NE trio (13,222 B / 13,340 A / El Punto) → Heisshorn → south pair (13,382 / 13,215).
+- **Loose, exposed Cimarron rock** — **PT 13,222 B is rated Class 4** (peak_db; the crux — verify on-site, gear accordingly); Heisshorn + El Punto are Class 3 (rotten rock, a rope "feels nice"); the other three PTs are Class 2/2+. Helmet + early start.
 - **GMUG NF / Uncompahgre Wilderness**; ~5h30 drive (US-50 → Cimarron). Cell dead — InReach.
 - **Fortress + Precipice are a [separate report](fortress_precipice.md)** (West Fork side).
 - **Part of the [Cimarron / Coxcomb trip](../trips/cimarron_coxcomb.md)** — pairs this loop with Fortress + Precipice (two individual West Fork climbs) to finish all 8 remaining Coxcomb 13ers.
