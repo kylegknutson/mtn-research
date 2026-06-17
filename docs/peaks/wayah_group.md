@@ -1,43 +1,43 @@
 ---
 image: maps/wayah_group.png
 range: Sawatch
-drive_time: "~3h (Hwy 82 side)"
+drive_time: "~3h 30m"
 yds_class: "3–4 (Class 2 summits except PT 13,291; Class 3–4 linking them on the ridge)"
-gain: "~16 mi / ~6,500 ft (one-day ridge traverse, est.) — or 3 short loops (real GPX)"
+gain: "~15 mi / ~6,800 ft (one-day loop from Wildcat Rd, DEM) — or split into 3 short loops"
 status: unclimbed
 caltopo_id: 6SVRT30
 regional_map_id: L5VH4BU
 peak_ids: [611, 491, 792, 814, 511, 595]
-dist_mi: 16
-gain_ft: 6500
+dist_mi: 15
+gain_ft: 6813
 class: "3–4"
 peaks: 6
 days: 1
-drive_h: 3.0
+drive_h: 3.5
 weather: "https://forecast.weather.gov/MapClick.php?lat=39.190&lon=-106.540"
 ---
 
-# Wayah Group — 6 unclimbed ranked 13ers (Sawatch ridge traverse)
+# Wayah Group — 6 unclimbed ranked 13ers (Sawatch ridge loop)
 
 <!-- QUICKSTATS_START -->
 
 !!! tip "At a glance — recommended day"
-    **16 mi** · **6,500 ft** gain · **Class 3–4** · 6 peaks · ~3 h drive · [weather](https://forecast.weather.gov/MapClick.php?lat=39.190&lon=-106.540)
+    **15 mi** · **6,813 ft** gain · **Class 3–4** · 6 peaks · ~3.5 h drive · [weather](https://forecast.weather.gov/MapClick.php?lat=39.190&lon=-106.540)
 
 <!-- QUICKSTATS_END -->
 
 **Researched:** 2026-06-16
-**Report type:** Single-push ridge traverse (huge day) **or** 3 short day-loops — Kyle's six unclimbed ranked 13ers on the **Wayah Group** ridge.
+**Report type:** Single-push ridge **loop** (big day) **or** 3 short day-loops — Kyle's six unclimbed ranked 13ers on the **Wayah Group** ridge.
 **CalTopo research map:** https://caltopo.com/m/6SVRT30
 **Status in DB:** all six unclimbed. These are Kyle's share of the **8-peak "Wayah Group"** — the long ridge NW of **Mount Massive / Mount Oklahoma** (both already done), between the **Hunter-Fryingpan Wilderness** and **Hwy 82 (Independence Pass)**.
 
 !!! danger "Class — this is a Class 3–4 ridge, not a walk-up"
     The *summits* are Class 2 except **PT 13,291 (Class 3)** and **PT 13,220** (Class 2 via a game trail, **5th-class if taken direct**). **Linking the peaks along the crest is Class 3–4 scrambling** with real exposure on loose rock, and there are **Class 5 towers on the unranked points that must be bypassed** (per [Chipmunk's "A Tale of Two Ridges" TR](https://www.14ers.com/php14ers/tripreport.php?trip=22858)). Helmet; a rope is reasonable for the harder bits.
 
-> Six ranked 13ers strung along one long, committing ridge. Do them **all in one point-to-point push** (a car-shuttle traverse) — or break them into **3 clean ~8–11 mi day-loops** off three different trailheads.
+> Six ranked 13ers strung along one long, committing ridge. Do them **all in one ~15 mi loop** from the end of Wildcat Road — or break them into **3 clean ~8–11 mi day-loops** off three different trailheads.
 
 ![Overview map](../maps/wayah_group.png)
-*Recorded 14ers-library tracks (green) over the ridge + the three access loops; 6 summit markers + the three trailheads. (A single composed route isn't drawn — the one-day line is a point-to-point traverse, not a loop.)*
+*[Interactive CalTopo map](https://caltopo.com/m/6SVRT30)* — the **recommended ~15 mi loop in bold magenta** (all six from the Wildcat Rd / Fryingpan Lakes TH), over recorded 14ers-library tracks (green); 6 summit markers + trailheads.
 
 ---
 
@@ -62,15 +62,13 @@ All six are **ranked Sawatch 13ers** in the **Hunter-Fryingpan Wilderness**. The
 
 ---
 
-## Option A — all six in one push (the ridge traverse) ⭐ big day
+## Option A — all six in one loop ⭐ big day
 
-The classic way to take the whole group is a **long point-to-point ridge traverse**, ridden as much on the crest as you like. Recorded parties do the *full* 8-peak group as a **~2-day** outing; **Kyle's six in one day is ~16 mi / ~6,500′ of committing Class 3–4** with a **car shuttle** between trailheads (the ridge doesn't loop back to one TH).
+A **~15 mi / ~6,800′ loop** (DEM-measured, stitched from recorded GPX) over all six from the **end of Wildcat Road** (the north Fryingpan-Lakes-area trailhead, ~11,400') — **no car shuttle needed.** Up onto the ridge, around the horseshoe over all six, and back down to the same TH.
 
-- **Order (S→N):** PT 13,220 → PT 13,291 → PT 13,033 → PT 13,014 → Wayah Pk → PT 13,221.
-- **Difficulty:** stay on the crest for Class 3–4 scrambling; **the few Class 5 towers (on the unranked bumps) get bypassed** on the west or east side. Loose rock and exposure — helmet, and a rope is reasonable.
-- **Shuttle:** start at the **North Fork Lake Creek TH** (south, Hwy 82) and exit at **Independence Pass / Lost Man** or the **Fryingpan** side — or reverse. A stable-weather window is essential; you're exposed and committed for hours.
-
-*(Distance/gain here are estimated from the ridge geometry — the recorded full-group track is a multi-day, multi-trailhead point-to-point, so there's no single measured one-day number.)*
+- **Loop order:** PT 13,014 → PT 13,033 → PT 13,220 → PT 13,291 → Wayah Pk → PT 13,221 → back (reverse works too).
+- **Difficulty:** stay on the crest for **Class 3–4** scrambling; **the few Class 5 towers (on the unranked bumps) get bypassed** west or east. Loose rock and exposure — helmet, and a rope is reasonable.
+- **The day is the scrambling + ~6,800′ of gain at 13k', not the mileage** — you're on an exposed crest for hours, so a stable-weather window is essential. Recorded parties do the *full* 8-peak group as a longer outing; Kyle's six is the loop above.
 
 ---
 
@@ -93,8 +91,8 @@ Each pair sits above its own trailhead, so the relaxed way is **three ~8–11 mi
 
 | | |
 |---|---|
-| **Drive from Boulder** | **[~3 h via Google Maps](https://www.google.com/maps/dir/?api=1&origin=1162+Peakview+Circle,+Boulder,+CO+80302&destination=39.1152,-106.5386)** — to the **North Fork Lake Creek TH** on **Hwy 82** (Independence Pass road, E side via Leadville / Twin Lakes). The **Fryingpan-side trailheads add ~1 h** (via Basalt / Frying Pan Rd) or come over Independence Pass. |
-| Trailheads | **North Fork Lake Creek TH** (~39.115, −106.539, ~10,600', Hwy 82) · **Independence Pass / Lost Man** (Hwy 82) · **South Fork Pass / Fryingpan** (~39.240, −106.593, Frying Pan Rd — 2WD dirt). |
+| **Drive from Boulder** | **[~3h 30m via Google Maps](https://www.google.com/maps/dir/?api=1&origin=1162+Peakview+Circle,+Boulder,+CO+80302&destination=39.2453,-106.5300)** — to the **end of Wildcat Road** (the north Fryingpan-Lakes-area TH, ~11,400') for the full loop. The split-loop trailheads are off **Hwy 82 (Independence Pass)** and the **Fryingpan / South Fork Pass** side. *(Confirm the Wildcat Rd surface/closure before you go.)* |
+| Trailheads | **Wildcat Rd / Fryingpan Lakes TH** (~39.245, −106.530, ~11,400') — the **loop** start · **North Fork Lake Creek TH** (~39.115, −106.539, Hwy 82) — south pair · **South Fork Pass / Fryingpan** (~39.240, −106.593) — middle pair. |
 | Land | **Hunter-Fryingpan Wilderness** (White River NF) — no permits/fees, foot travel only; PT 13,220 also borders the Mount Massive Wilderness. |
 
 ---
@@ -124,6 +122,6 @@ Each pair sits above its own trailhead, so the relaxed way is **three ~8–11 mi
 ## TL;DR
 
 - **Six unclimbed ranked 13ers on the Wayah Group ridge** (NW of Massive/Oklahoma, Hunter-Fryingpan Wilderness): PT 13,220 + PT 13,291 + PT 13,033 + PT 13,014 + Wayah + PT 13,221.
-- **All six in one day = a committing point-to-point Class 3–4 ridge traverse** (~16 mi / ~6,500′ est., car shuttle, stable weather only). The full 8-peak group is normally a 2-day outing.
+- **All six in one day = a committing Class 3–4 ridge loop** (~15 mi / ~6,800′ DEM) from the **end of Wildcat Road** — no shuttle. Stable weather only; the full 8-peak group is a separate, longer outing.
 - **Or split into 3 short loops** (real GPX): **south pair** ~10.5 mi / 3,580′ (N Fork Lake Creek), **north pair** ~7.9 mi (Independence Pass/Lost Man), **middle pair** ~10.8 mi (Fryingpan).
 - **Class 2 summits except PT 13,291 (3); the crest links at Class 3–4** with Class 5 towers bypassed — helmet + rope-reasonable. ~3 h drive (Hwy 82). Cell dead — InReach.

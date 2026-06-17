@@ -6,6 +6,6 @@ objective_ids: [491, 511, 611, 595, 792, 814]   # +PT 13,014 (mid-ridge, Class 3
 nearby:
   include: false
 landmarks:
-  - {name: "North Fork Lake Creek TH (Hwy 82)", lat: 39.1152, lon: -106.5386, ele_ft: 10600, kind: trailhead}
+  - {name: "Wildcat Rd end / Fryingpan Lakes TH (N)", lat: 39.2453, lon: -106.5300, ele_ft: 11400, kind: trailhead}
   - {name: "Independence Pass / Lost Man (Hwy 82)", lat: 39.2450, lon: -106.5300, ele_ft: 11500, kind: trailhead}
   - {name: "South Fork Pass / Fryingpan (Frying Pan Rd)", lat: 39.2398, lon: -106.5930, ele_ft: 10700, kind: trailhead}

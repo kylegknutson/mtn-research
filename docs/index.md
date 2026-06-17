@@ -17,9 +17,9 @@ Every ranked Colorado 13er/14er — **green peak = has a report** (click it to o
 |---|---|---|--:|--:|--:|--:|--:|--:|---|
 | [Jacque Peak](peaks/jacque_peak.md) | Gore | 2 | — | 3,500 | 1 | 1 | 1 | 1.7 | climbed |
 | [Pennsylvania Mountain](peaks/pennsylvania_mountain.md) | Mosquito | 2 | 3.9 | 1,039 | 1 | 1 | 1 | 2.1 | unclimbed |
-| [Wayah Group](peaks/wayah_group.md) | Sawatch | 3–4 | 16 | 6,500 | 6 | 1 | 6 | 3 | unclimbed |
 | [Mount Powell + Eagles Nest](peaks/powell_eagles_nest.md) | Gore | 3 | — | 6,250 | 2 | 1 | 2 | 3.1 | unclimbed |
 | [Homestake Peak](peaks/homestake_peak.md) | Sawatch | 2 | — | 3,026 | 1 | 1 | 1 | 3.2 | unclimbed |
+| [Wayah Group](peaks/wayah_group.md) | Sawatch | 3–4 | 15 | 6,813 | 6 | 1 | 6 | 3.5 | unclimbed |
 | [Hunts Peak](peaks/hunts_peak.md) | Sangre de Cristo | 2 | — | 3,489 | 1 | 1 | 1 | 3.6 | unclimbed |
 | [Savage Peak + PT 13,002](peaks/savage_peak.md) | Sawatch | 2-3 | 14.3 | 5,817 | 2 | 1 | 2 | 3.6 | unclimbed |
 | [Star Peak A](peaks/star_peak_a.md) | Elk | 2+ | — | 2,766 | 1 | 1 | 1 | 3.6 | unclimbed |
