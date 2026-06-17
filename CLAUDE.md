@@ -82,6 +82,23 @@ single-peak/group report is essentially:
   (the `scripts/*.py *` allow rule covers it automatically).
 - **Headline distance from measured GPX; gain from a DEM** — never climb13ers prose,
   never GPS `<ele>` (it logs 30,000′ on a 13er).
+- **The 3-source sweep must PROVE itself — claims aren't checking (Kyle, 2026-06-16).**
+  The Gladstone report shipped a footer saying "all sources swept" when only 14ers
+  was pulled; the old `check_reports` lint only matched the footer *text*. So:
+  **actually sweep 14ers + LoJ + peakbagger in the MCP browser** (peakbagger GPX =
+  `climber/GPXFile.aspx?aid=<aid>&sep=1` on ascents that have a track; LoJ often has
+  no downloadable GPX — that's fine), name files `trk_14ers_*` / `trk_loj_*` /
+  `trk_pb_*`, and when a source truly has none, record it in `gpx/<slug>/sources.json`
+  (`{"listsofjohn":{"checked":true,"found":0,"note":"…"}}`). `check_source_coverage.py`
+  (in `--finalize`, scoped to the slug) FAILs unless every source has tracks or a
+  verified-empty record — and FAILs a footer that claims a source with no data.
+- **Verify IDs and trailheads from the source — peak_db can be wrong (Kyle, 2026-06-16).**
+  peak_db's `peakbagger_id` for Gladstone pointed at *Mount Wilcox* (pid 5667 vs the
+  real 5817). Before using a cross-site id, confirm the page is the right peak (LoJ's
+  peak page cross-links the correct peakbagger id). Confirm trailhead identity from
+  **OSM** (Overpass: `node[highway=trailhead]` near the recorded track start), not from
+  memory. Recorded-track *starts* are real data; the TH **name/elevation** must be
+  verified, not inferred. Only connectors may be inferred — label them as such.
 - **Class is SAFETY-CRITICAL — research the actual route, not the summit.** peak_db
   `yds_class` is the **per-summit STANDARD-route** grade ONLY. For any traverse, ridge
   link-up, loop, or non-standard line the connecting terrain is often **1–2 classes
