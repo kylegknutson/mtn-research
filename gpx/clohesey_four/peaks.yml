@@ -1,0 +1,9 @@
+# Emily report — 4 ranked Sawatch 13ers near Clohesey Lake (Collegiate Peaks):
+# Magdalene Mtn (145), "Pear Pk" (347), PT 13,517 A / "UN 13,513" (303),
+# PT 13,486 / "UN 13,486" (339). Link-up of all four; alt to the rough
+# Clohesey Lake 4WD road wanted.
+objective_ids: [145, 347, 303, 339]
+nearby:
+  include: false
+landmarks:
+  - {name: "Clohesey Lake TH (4WD)", lat: 38.9510, lon: -106.4075, ele_ft: 11000, kind: trailhead}
