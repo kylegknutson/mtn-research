@@ -202,12 +202,19 @@ def _count_on_disk(slug):
     """Actual track files present, by source — so finalize is accurate even when
     only some source steps were re-run (e.g. add pb/loj to a report that already
     has 14ers tracks, without re-fetching/renumbering 14ers)."""
-    c = {"14ers": 0, "peakbagger": 0}
-    for f in (GPX / slug).glob("trk_*.gpx"):
-        if "14ers" in f.name:
+    c = {"14ers": 0, "peakbagger": 0, "listsofjohn": 0}
+    skip = ("peaks_only", "landmark", "trailhead", "recommended", "_drive",
+            "drive_in", "waypoints", "summit", "actual", "kyle")
+    for f in (GPX / slug).glob("*.gpx"):
+        n = f.name.lower()
+        if any(x in n for x in skip):
+            continue
+        if "14ers" in n:
             c["14ers"] += 1
-        elif "_pb_" in f.name:
+        elif "_pb_" in n or "peakbagger" in n:
             c["peakbagger"] += 1
+        elif "_loj_" in n or "listsofjohn" in n:
+            c["listsofjohn"] += 1
     return c
 
 
@@ -215,16 +222,17 @@ def finalize(slug):
     st = load_state(slug)
     c = _count_on_disk(slug)
     sources = {
-        "14ers": {"checked": True, "found": c.get("14ers", 0), "note": "gpxlib_locator.php"},
-        "peakbagger": {"checked": True, "found": c.get("peakbagger", 0),
-                       "note": f"verified pids {st.get('pids', {})}"},
-        "listsofjohn": {"checked": True, "found": 0 if not st.get("loj_gpx") else -1,
-                        "note": "no downloadable GPX (text TRs)" if not st.get("loj_gpx")
-                                else "LoJ GPX present — fetch manually"},
+        "14ers": {"checked": True, "found": c["14ers"], "note": "gpxlib_locator.php"
+                  if c["14ers"] else "no 14ers library / not a 14ers.com peak"},
+        "peakbagger": {"checked": True, "found": c["peakbagger"],
+                       "note": f"verified pids {st.get('pids', {})}" if c["peakbagger"]
+                               else "no ascents with downloadable GPS tracks"},
+        "listsofjohn": {"checked": True, "found": c["listsofjohn"],
+                        "note": "LoJ member GPX tracks" if c["listsofjohn"]
+                                else "no downloadable GPX (text TRs only)"},
     }
     (GPX / slug / "sources.json").write_text(json.dumps(sources, indent=2) + "\n")
-    print(f"  sources.json: 14ers={c.get('14ers',0)} peakbagger={c.get('peakbagger',0)} "
-          f"listsofjohn={'0 (none)' if not st.get('loj_gpx') else 'present'}\n")
+    print(f"  sources.json: 14ers={c['14ers']} peakbagger={c['peakbagger']} listsofjohn={c['listsofjohn']}\n")
     subprocess.run([str(ROOT / "scripts" / "check_source_coverage.py"), slug])
 
 
@@ -258,12 +266,7 @@ def _objs(slug):
 
 
 def _disk_counts(slug):
-    c = {"14ers": 0, "peakbagger": 0, "listsofjohn": 0}
-    for f in (GPX / slug).glob("trk_*.gpx"):
-        if "14ers" in f.name: c["14ers"] += 1
-        elif "_pb_" in f.name: c["peakbagger"] += 1
-        elif "_loj_" in f.name: c["listsofjohn"] += 1
-    return c
+    return _count_on_disk(slug)   # single source of truth (globs *.gpx + tokens)
 
 
 def _peakdb_by_id():
@@ -404,9 +407,12 @@ def finalize_batch():
         sources = {
             "14ers": {"checked": True, "found": c["14ers"], "note": "gpxlib_locator.php"
                       if c["14ers"] else "not a 14ers.com peak / no library"},
-            "peakbagger": {"checked": True, "found": c["peakbagger"], "note": f"verified pids {pids}"},
-            "listsofjohn": {"checked": True, "found": 0 if not loj_any else -1,
-                            "note": "no downloadable GPX (text TRs)" if not loj_any else "LoJ GPX present"},
+            "peakbagger": {"checked": True, "found": c["peakbagger"],
+                           "note": f"verified pids {pids}" if c["peakbagger"]
+                                   else "no ascents with downloadable GPS tracks"},
+            "listsofjohn": {"checked": True, "found": c["listsofjohn"],
+                            "note": "LoJ member GPX tracks" if c["listsofjohn"]
+                                    else "no downloadable GPX (text TRs only)"},
         }
         (GPX / slug / "sources.json").write_text(json.dumps(sources, indent=2) + "\n")
         wrote += 1
