@@ -160,6 +160,8 @@ def finalize_phase(args):
         # NO-SKIP: the human-judgment steps must leave provenance, not be skipped.
         # th_source / class_source / status_source must name how each was verified.
         ["check_report_ready.py", args.slug, "--strict"],
+        # the overview PNG must reflect the current route + tracks (no stale map)
+        ["check_map_fresh.py", args.slug, "--strict"],
     ]
     for chk in gates:
         r = run([SCRIPTS / chk[0], *chk[1:]])
