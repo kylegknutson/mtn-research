@@ -70,14 +70,27 @@ def objective_peaks(slug):
 
 # --- fetch JS per origin (each returns a JSON string) ---------------------------
 JS_LOJ = r"""async () => {
-  const PEAKS = __PEAKS__; const meta = {pb_pids:{}, loj_gpx:false, errors:[]};
+  // LoJ GPX is NOT on the peak page — it's attached to individual trip reports.
+  // Per peak: read the peak page (→ peakbagger pid cross-link + its TR ids), then
+  // open each TR (tr?Id=<id>&pkid=<pkid>), pull its gpx id, and download
+  // listsofjohn.com/gpx/<gpxid>.gpx. Not every TR has a track; that's fine.
+  const PEAKS = __PEAKS__; const out = {}; const meta = {pb_pids:{}, tr_seen:0, errors:[]};
   for (const p of PEAKS) { try {
     const h = await (await fetch('https://listsofjohn.com/peak/'+p.loj, {credentials:'include'})).text();
     const pid = (h.match(/peakbagger\.com\/peak\.aspx\?pid=(\d+)/i)||[])[1];
     if (pid) meta.pb_pids[p.loj] = pid;
-    if (/href=["'][^"']*\.gpx/i.test(h)) meta.loj_gpx = true;
+    const trs = [...new Set([...h.matchAll(/tr\?Id=(\d+)/gi)].map(m=>m[1]))];
+    for (const tr of trs) { try {
+      meta.tr_seen++;
+      const t = await (await fetch('https://listsofjohn.com/tr?Id='+tr+'&pkid='+p.loj, {credentials:'include'})).text();
+      const gid = (t.match(/\/gpx\/gpx_download\.php\?id=(\d+)/i) || t.match(/\/gpx\/(\d+)\.gpx/i) || [])[1];
+      if (!gid) continue;
+      const g = await (await fetch('https://listsofjohn.com/gpx/'+gid+'.gpx', {credentials:'include'})).text();
+      if (g.includes('<trkpt')) out['trk_loj_'+gid] = g;
+    } catch(e) { meta.errors.push('loj tr '+tr+': '+e.message); } }
   } catch(e) { meta.errors.push('loj '+p.loj+': '+e.message); } }
-  return JSON.stringify({_meta: JSON.stringify(meta)});
+  out['_meta'] = JSON.stringify(meta);
+  return JSON.stringify(out);
 }"""
 
 JS_14ERS = r"""async () => {
@@ -155,7 +168,11 @@ def _sig(gpx):
 
 def _existing_sigs(slug):
     sigs = set()
-    for f in (GPX / slug).glob("trk_*.gpx"):
+    for f in (GPX / slug).glob("*.gpx"):
+        n = f.name.lower()
+        if any(x in n for x in ("peaks_only", "landmark", "trailhead", "recommended",
+                                "_drive", "drive_in", "waypoints", "summit", "actual", "kyle")):
+            continue
         s = _sig(f.read_text())
         if s:
             sigs.add(s)
@@ -168,12 +185,28 @@ def ingest(slug, which, blob_path):
     st = load_state(slug)
     if which == "loj":
         st["pids"].update(meta.get("pb_pids", {}))
-        st["loj_gpx"] = bool(meta.get("loj_gpx"))
         st["swept"] = sorted(set(st.get("swept", []) + ["listsofjohn"]))
+        # write harvested LoJ TR tracks (dedup against disk), keep the gpx id in
+        # the filename so it's traceable back to the LoJ trip report
+        seen = _existing_sigs(slug)
+        written = 0
+        for name, gpx in sorted(data.items()):
+            if not isinstance(gpx, str) or "<trkpt" not in gpx:
+                continue
+            sig = _sig(gpx)
+            if sig and sig in seen:
+                print(f"  dedup {name}"); continue
+            if sig:
+                seen.add(sig)
+            (GPX / slug / f"{name}.gpx").write_text(gpx)
+            written += 1
+            print(f"  wrote {name}.gpx ({len(gpx)//1024} KB)")
+        st["loj_gpx"] = _count_on_disk(slug)["listsofjohn"] > 0
         save_state(slug, st)
-        print(f"  LoJ: verified pids {meta.get('pb_pids', {})}; loj_gpx={st['loj_gpx']}")
+        print(f"  LoJ: {written} new track(s); TRs seen {meta.get('tr_seen', '?')}; "
+              f"verified pids {meta.get('pb_pids', {})}")
         if meta.get("errors"):
-            print("  errors:", *meta["errors"], sep="\n    ")
+            print("  errors:", *meta["errors"][:5], sep="\n    ")
         return
     # 14ers / pb: write track files, dedup against what's on disk
     seen = _existing_sigs(slug)
@@ -224,6 +257,15 @@ def finalize(slug):
     st = load_state(slug)
     c = _count_on_disk(slug)
     swept = set(st.get("swept", []))
+    # LoJ was checked globally by the batch loj step (tmp_lojgpx.json). If that
+    # evidence covers ALL this report's objectives, LoJ counts as honestly swept
+    # (so a 0-file LoJ is a real verified-empty, not an unchecked claim).
+    lg = ROOT / "tmp_lojgpx.json"
+    if lg.exists():
+        ev = json.loads(lg.read_text())
+        objs = [str(i) for i in _objs(slug)]
+        if objs and all(o in ev for o in objs):
+            swept.add("listsofjohn")
 
     def rec(src, found, note_found, note_empty):
         # files present → covered. 0 files but this source was ACTUALLY swept this

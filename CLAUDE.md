@@ -53,6 +53,13 @@ single-peak/group report is essentially:
      shuttle. The same track also appears in several peaks' libraries, so after
      scraping all of them, **dedup** (by file/track) before building the collection.
      This is non-negotiable — never sweep just one or two of the objective peaks.
+   - **LoJ GPX is on TRIP REPORTS, not peak pages (Kyle, 2026-06-17).** A LoJ peak
+     page (`/peak/<pkid>`) has NO `.gpx` link — checking it says "empty" and is a FALSE
+     negative (it falsely flagged Gladstone, which has 4 TR tracks). The real path:
+     peak page → trip-report ids (`tr?Id=<id>&pkid=<pkid>`) → each TR page exposes a gpx
+     id → download `listsofjohn.com/gpx/<gpxid>.gpx`. `sweep_peak.py --emit loj` now does
+     this harvest. LoJ tracks are ~60% UNIQUE vs 14ers/peakbagger (measured,
+     `source_overlap.py`) — worth harvesting, not duplicates.
    - **Never prompt Kyle to log in based on `check_sources_login.py`** — it checks a
      separate standalone profile that routinely diverges. Verify in the MCP browser,
      or just sweep and let a failed fetch (login page, not GPX) be the signal.
