@@ -400,6 +400,11 @@ def main() -> None:
                     folder_id = get_folder_id(label)
                     line_color = PALETTE[track_color_idx % len(PALETTE)] if args.vary_colors else color
                     track_color_idx += 1
+                    # Convention: the composed recommended route is ALWAYS magenta
+                    # (matches the PNG legend), on every map incl. climber maps —
+                    # never a palette color that collides with a source track.
+                    if "recommended route" in (name or "").lower():
+                        line_color = "#E6008C"
                     try:
                         session.addLine(
                             points=coords,
