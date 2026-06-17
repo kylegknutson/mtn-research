@@ -39,6 +39,10 @@ single-peak/group report is essentially:
 2. **Sweep GPX from all 3 sources in the Playwright-MCP browser** (already logged in
    — it's the login source of truth, and it clears peakbagger's Cloudflare check).
    Save tracks into `gpx/<slug>/`. **This is THE sweep path — use it for all three.**
+   - **Sweep EVERY objective peak's GPX library, not just one** (Kyle, 2026-06-16):
+     a single peak's library misses combo/loop tracks that start from a different
+     peak. The Wayah Group "all-6 loop" tracks lived on the *other* peaks' libraries,
+     so a one-peak sweep made me wrongly call it a point-to-point shuttle.
    - **Never prompt Kyle to log in based on `check_sources_login.py`** — it checks a
      separate standalone profile that routinely diverges. Verify in the MCP browser,
      or just sweep and let a failed fetch (login page, not GPX) be the signal.
