@@ -2,7 +2,7 @@
 image: maps/cimarron_coxcomb.png
 range: San Juan
 drive_time: "~5h 30m"
-yds_class: "4 (PT 13,222 B on the Middle Fork six; rest Class 3)"
+yds_class: "4 (PT 13,222 B + El Punto are Class 3–4 on the Middle Fork six; rest Class 2–3)"
 gain: "~24 mi / ~11,100 ft (8 peaks: a 6-peak loop + 2 individual climbs)"
 status: unclimbed
 regional_map_id: 06AR6BF
@@ -53,7 +53,7 @@ days_detail:
 |---|---|
 | Climbs | **3** — one six-peak loop + two individual peaks (relocate camp between the Middle & West Fork roads) |
 | Peaks | **8 ranked 13ers** — all unclimbed |
-| Class | **Up to 4** — **PT 13,222 B (Middle Fork six) is rated Class 4** in peak_db (verify on-site, the crux); otherwise loose, rotten Cimarron Class 3. Helmet; consider a rope. |
+| Class | **Up to 3–4** — on the Middle Fork six, **PT 13,222 B (NW ridge) and El Punto are Class 3–4** (per a recorded full-six TR); otherwise loose, rotten Cimarron Class 3 (incl. Fortress + Precipice). Helmet; a rope is reasonable. |
 | **Middle Fork six** | Heisshorn + PT 13,382 + PT 13,215 + El Punto + PT 13,340 A + PT 13,222 B — **~13.3 mi / ~5,785'** (DEM) |
 | **Fortress (solo)** | West Fork out-and-back — **~6.0 mi / ~2,518'** (DEM) |
 | **Precipice (solo)** | West Fork out-and-back — **~4.6 mi / ~2,811'** (DEM) |
@@ -79,8 +79,8 @@ Both forks branch off the same Cimarron road, so the **camp move between days is
 
 ## Day plan
 
-### Middle Fork six · ~13.3 mi / ~5,785' · Class 4 (PT 13,222 B)
-The NE trio first (PT 13,222 B → PT 13,340 A → El Punto), then traverse to **Heisshorn** (the loose Class 3 high point), and finish the south pair (PT 13,382 → PT 13,215). **PT 13,222 B is rated Class 4** (peak_db — the crux, verify on-site); El Punto + Heisshorn are loose **Class 3**; the other three PTs are Class 2/2+. **Full route, trip reports, and GPX: [Cimarron Remaining Six report](../peaks/cimarron_six.md).**
+### Middle Fork six · ~13.3 mi / ~5,785' · Class 3–4
+The NE trio first (PT 13,222 B → PT 13,340 A → El Punto), then traverse to **Heisshorn**, and finish the south pair (PT 13,382 → PT 13,215). **PT 13,222 B (NW ridge) and El Punto are Class 3–4** (per the [Boggy B full-six TR](https://www.14ers.com/php14ers/tripreport.php?trip=22747)) — the cruxes; Heisshorn is loose **Class 3**; the other three PTs are Class 2/2+. **Full route, trip reports, and GPX: [Cimarron Remaining Six report](../peaks/cimarron_six.md).**
 
 ### Precipice (solo) · ~4.6 mi / ~2,810' · Class 3
 A short, steep out-and-back from the **West Fork Cimarron TH** — faint social trail and an ultra-steep footpath up through forest to a loose Class 3 finish.
