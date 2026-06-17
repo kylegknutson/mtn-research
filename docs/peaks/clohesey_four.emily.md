@@ -34,7 +34,7 @@ weather: "https://forecast.weather.gov/MapClick.php?lat=38.920&lon=-106.410"
 ---
 
 <!-- CLIMBERS_START -->
-**Other climbers:** Kyle Knutson — not yet · Shawn D Keil — not yet
+**Other climbers:** Kyle Knutson — ✓ all · Shawn D Keil — not yet
 <!-- CLIMBERS_END -->
 
 ## Quick stats

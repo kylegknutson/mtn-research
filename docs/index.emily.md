@@ -13,6 +13,7 @@ Same research engine as the [main site](https://kylegknutson.github.io/mtn-resea
 | Peak / Trip | Range | Class | Dist (mi) | Gain (ft) | Peaks | Days | Pk/day | Drive (h) | Status |
 |---|---|---|--:|--:|--:|--:|--:|--:|---|
 | [Clohesey Four](peaks/clohesey_four.emily.md) | Sawatch | 2+ | 12.2 | 5,714 | 4 | 1 | 4 | 2.75 | unclimbed |
+| [Gladstone Peak](peaks/gladstone_peak.emily.md) | San Juan | 4 | 11.5 | 6,300 | 1 | 1 | 1 | 7.9 | unclimbed |
 | [Crestolita + Broken Hand Peak](peaks/crestolita_broken_hand.emily.md) | Sangre de Cristo | 3 | — | — | — | 1 | — | — | unclimbed |
 | [Lakes of the Clouds](peaks/lakes_of_clouds_loop.emily.md) | Sangre de Cristo | 2 | — | — | — | 1 | — | — | unclimbed |
 <!-- PEAKS_TABLE_END -->
