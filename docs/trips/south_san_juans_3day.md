@@ -11,6 +11,7 @@ gain_ft: 9500
 class: 2
 peaks: 5
 days: 3
+no_single_route: "3-day trip — the day clusters are in separate areas ~17 mi apart that no party walks between; each day is its own route, so there is no single composed line"
 drive_h: 5.2
 days_detail:  # peaks ~17 mi apart → one NOAA link per day
   - {label: "Bennett", peaks: 1, dist_mi: 7, gain_ft: 2900, class: "1", wx: "https://forecast.weather.gov/MapClick.php?lat=37.4834&lon=-106.4339"}

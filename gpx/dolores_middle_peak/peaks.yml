@@ -1,0 +1,6 @@
+# Dolores Peak + Middle Peak (San Miguel / Dolores divide). Fish Creek TH.
+objective_ids: [508, 489]
+nearby:
+  include: false
+landmarks:
+  - {name: "Fish Creek TH", lat: 37.82419, lon: -108.11985, kind: trailhead}

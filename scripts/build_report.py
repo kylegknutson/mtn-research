@@ -162,6 +162,9 @@ def finalize_phase(args):
         ["check_report_ready.py", args.slug, "--strict"],
         # the overview PNG must reflect the current route + tracks (no stale map)
         ["check_map_fresh.py", args.slug, "--strict"],
+        # every report must have a composed recommended route (or be a declared
+        # no_single_route multi-day trip)
+        ["check_route_exists.py", args.slug, "--strict"],
     ]
     for chk in gates:
         r = run([SCRIPTS / chk[0], *chk[1:]])
