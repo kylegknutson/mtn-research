@@ -13,6 +13,9 @@ class: 2
 peaks: 3
 days: 1
 drive_h: 5.9
+th_source: "recorded GPS-track starts at Cuba Gulch TH (Lake Fork side) (37.8993,-107.4332) — swept tracks begin 0.1 mi away"
+class_source: "route beta — 14ers.com route beta / trip reports, listsofjohn, peakbagger (see route options)"
+status_source: "peak_db ascents"
 ---
 
 # Cuba Gulch Trio — PT 13,076 + Unnamed 13,003 + PT 13,179 (San Juan Mountains)

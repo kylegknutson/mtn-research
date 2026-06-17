@@ -12,6 +12,9 @@ class: 2+
 peaks: 4
 days: 1
 drive_h: 4.2
+th_source: "recorded GPS-track starts at Pieplant Mill TH (38.9398,-106.56) — swept tracks begin 0.0 mi away"
+class_source: "route beta — 14ers.com route beta / trip reports, climb13ers, listsofjohn, peakbagger (see route options)"
+status_source: "peak_db ascents"
 ---
 
 # Grizzly Pk E + PT 13,145 + Jenkins Mtn (+ optional "Lake Fork Pk") — Sawatch

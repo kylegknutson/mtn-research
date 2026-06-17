@@ -13,6 +13,9 @@ peaks: 2
 days: 1
 drive_h: 4.4
 dist_mi: 7.5
+th_source: "recorded GPS-track starts at Pearl Pass Rd TH (Aspen / Castle Creek side) (39.0173,-106.8134) — swept tracks begin 0.0 mi away"
+class_source: "route beta — 14ers.com route beta / trip reports, listsofjohn, peakbagger (see route options)"
+status_source: "peak_db ascents"
 ---
 
 # Pearl Mountain + Oyster Peak — combination day (Elk Mountains)

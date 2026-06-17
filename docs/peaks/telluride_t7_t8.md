@@ -12,6 +12,9 @@ class: 2-3
 peaks: 3
 days: 1
 drive_h: 6.3
+th_source: "recorded GPS-track starts at Idarado Mine TH (US 550, MP ~90) (37.9356,-107.6664) — swept tracks begin 0.9 mi away"
+class_source: "route beta — 14ers.com route beta / trip reports, climb13ers, peakbagger (see route options)"
+status_source: "peak_db ascents"
 ---
 
 # Telluride Peak Group (San Juan Mountains, Imogene Pass area)

@@ -8,6 +8,9 @@ status: unclimbed
 climber: shawn
 caltopo_id: R2NF0S2
 regional_map_id: 6E4GJV2
+th_source: "recorded GPS-track starts at Copper Mtn Resort base TH (Woodward Express area) (39.4914,-106.1568) — swept tracks begin 0.7 mi away"
+class_source: "route beta — 14ers.com route beta / trip reports, listsofjohn, peakbagger (see route options)"
+status_source: "scrape_14ers_checklist shawn"
 ---
 
 # Jacque Peak (Gore Range)

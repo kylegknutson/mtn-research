@@ -13,6 +13,9 @@ class: 2
 peaks: 1
 days: 1
 drive_h: 3.6
+th_source: "recorded GPS-track starts at Rock Creek Trailhead (38.3818,-105.9837) — the report's mapped TH + the swept track starts confirm it"
+class_source: "route beta — 14ers.com route beta / trip reports, listsofjohn, peakbagger (see route options)"
+status_source: "peak_db ascents"
 ---
 
 # Hunts Peak (Northern Sangre de Cristo)

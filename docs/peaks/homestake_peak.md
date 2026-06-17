@@ -12,6 +12,9 @@ class: 2
 peaks: 1
 days: 1
 drive_h: 3.2
+th_source: "recorded GPS-track starts at Wurts Ditch Rd parking (before gate) (39.35,-106.37) — swept tracks begin 0.5 mi away"
+class_source: "route beta — 14ers.com route beta / trip reports, listsofjohn, peakbagger (see route options)"
+status_source: "peak_db ascents"
 ---
 
 # Homestake Peak (Sawatch Range / Holy Cross Wilderness)

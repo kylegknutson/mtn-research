@@ -15,6 +15,9 @@ peaks: 1
 days: 1
 drive_h: 5.75
 weather: "https://forecast.weather.gov/MapClick.php?lat=37.9067&lon=-107.4629"
+th_source: "recorded GPS-track starts at Grizzly Gulch / Silver Creek TH (37.93684,-107.46068) — swept tracks begin 0.0 mi away"
+class_source: "route beta — 14ers.com route beta / trip reports, climb13ers, listsofjohn, peakbagger (see route options)"
+status_source: "peak_db ascents"
 ---
 
 # Campbell Creek Pk (13,461') — standalone from Grizzly Gulch

@@ -12,6 +12,9 @@ class: 2
 peaks: 1
 days: 1
 drive_h: 1.7
+th_source: "recorded GPS-track starts at Copper Mtn Resort base TH (Woodward Express area) (39.4914,-106.1568) — swept tracks begin 0.7 mi away"
+class_source: "route beta — 14ers.com route beta / trip reports, listsofjohn, peakbagger (see route options)"
+status_source: "peak_db ascents"
 ---
 
 # Jacque Peak (Gore Range)

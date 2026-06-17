@@ -16,6 +16,9 @@ days_detail:
   - {label: "Star + Taylor", dist_mi: 8.6, gain_ft: 4300, class: "2", peaks: 2}
   - {label: "Italian (+ American Flag opt.)", class: "2", peaks: 1}
 drive_h: 3.7
+th_source: "recorded GPS-track starts at Mt Tilton Trail TH (end of CO 742) (38.9872,-106.7573) — swept tracks begin 0.0 mi away"
+class_source: "route beta — 14ers.com route beta / trip reports, listsofjohn, peakbagger (see route options)"
+status_source: "peak_db ascents"
 ---
 
 # Star Peak Group — Star + Taylor + Italian (Elk Mountains)

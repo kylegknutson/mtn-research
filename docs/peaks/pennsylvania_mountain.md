@@ -13,6 +13,9 @@ peaks: 1
 days: 1
 drive_h: 2.1
 dist_mi: 3.9
+th_source: "recorded GPS-track starts at Pika Trailhead (standard, off Hwy 9) (39.2658,-106.1638) — swept tracks begin 0.7 mi away"
+class_source: "route beta — 14ers.com route beta / trip reports, listsofjohn, peakbagger (see route options)"
+status_source: "peak_db ascents"
 ---
 
 # Pennsylvania Mountain (Mosquito Range)

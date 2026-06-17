@@ -12,6 +12,9 @@ class: 2
 peaks: 2
 days: 1
 drive_h: 7.5
+th_source: "recorded GPS-track starts at Sunshine/13,094 combo TH (~11,000') (37.978,-107.541) — swept tracks begin 0.0 mi away"
+class_source: "route beta — 14ers.com route beta / trip reports, listsofjohn, peakbagger (see route options)"
+status_source: "peak_db ascents"
 ---
 
 # Sunshine Mountain A + PT 13,094 — combination day (San Juan Mountains)

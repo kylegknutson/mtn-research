@@ -12,6 +12,9 @@ class: 3
 peaks: 2
 days: 1
 drive_h: 3.1
+th_source: "recorded GPS-track starts at Piney Lake / Piney River Ranch TH (N of Vail) (39.7203,-106.4051) — swept tracks begin 0.0 mi away"
+class_source: "route beta — 14ers.com route beta / trip reports, listsofjohn, peakbagger (see route options)"
+status_source: "peak_db ascents"
 ---
 
 # Mount Powell + Eagles Nest — combination day (Gore Range)

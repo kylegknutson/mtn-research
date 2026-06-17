@@ -12,6 +12,9 @@ class: 2
 peaks: 4
 days: 1
 drive_h: 4.2
+th_source: "recorded GPS-track starts at Blue Lakes TH (Cuchara side) (37.31247,-105.13871) — swept tracks begin 0.0 mi away"
+class_source: "route beta — 14ers.com route beta / trip reports, listsofjohn, peakbagger (see route options)"
+status_source: "peak_db ascents"
 ---
 
 # Trinchera Group — Trinchera + Leaning South + Cuatro + Maxwell (Culebra Range)

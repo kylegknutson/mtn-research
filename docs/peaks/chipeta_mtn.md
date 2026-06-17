@@ -13,6 +13,9 @@ peaks: 1
 days: 1
 drive_h: 4.2
 dist_mi: 7.7
+th_source: "recorded GPS-track starts at Marshall Pass TH (CR 200 / Colorado Trail) (38.3942,-106.2472) — swept tracks begin 0.1 mi away"
+class_source: "route beta — 14ers.com route beta / trip reports, listsofjohn, peakbagger (see route options)"
+status_source: "peak_db ascents"
 ---
 
 # Chipeta Mountain (southern Sawatch, Marshall Pass)

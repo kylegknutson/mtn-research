@@ -12,6 +12,9 @@ class: 2
 peaks: 3
 days: 1
 drive_h: 5.6
+th_source: "recorded GPS-track starts at Nellie Creek 2WD TH (lower, Uncompahgre road) (38.0204,-107.4007) — swept tracks begin 0.0 mi away"
+class_source: "route beta — 14ers.com route beta / trip reports, listsofjohn, peakbagger (see route options)"
+status_source: "peak_db ascents"
 ---
 
 # PT 13,155 Group — Uncompahgre's Three Children (San Juan)

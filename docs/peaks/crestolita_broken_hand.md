@@ -12,6 +12,9 @@ class: 3
 peaks: 2
 days: 1
 drive_h: 4.0
+th_source: "recorded GPS-track starts at South Colony Lakes 2WD TH (lower lot) (37.97592,-105.50657) — swept tracks begin 0.0 mi away"
+class_source: "route beta — 14ers.com route beta / trip reports, listsofjohn, peakbagger (see route options)"
+status_source: "peak_db ascents"
 ---
 
 # Crestolita + Broken Hand Peak — combination day (Sangre de Cristo)

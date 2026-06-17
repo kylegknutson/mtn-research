@@ -14,6 +14,9 @@ class: 2-3
 peaks: 2
 days: 1
 drive_h: 3.6
+th_source: "recorded GPS-track starts at Missouri Lakes TH (2WD, 10,000') (39.3858,-106.4717) — swept tracks begin 0.3 mi away"
+class_source: "route beta — 14ers.com route beta / trip reports, climb13ers, listsofjohn, peakbagger (see route options)"
+status_source: "peak_db ascents"
 ---
 
 # Savage Peak + PT 13,002 (Sawatch Range / Holy Cross Wilderness)
