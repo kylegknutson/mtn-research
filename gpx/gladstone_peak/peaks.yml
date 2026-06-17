@@ -4,4 +4,4 @@ objective_ids: [84]
 nearby:
   include: false
 landmarks:
-  - {name: "Navajo Lake TH (Woods Lake)", lat: 37.8833, lon: -108.0184, ele_ft: 9380, kind: trailhead}
+  - {name: "Cross Mountain TH (CO-145, Lizard Head Pass)", lat: 37.7964, lon: -107.9377, ele_ft: 10000, kind: trailhead}

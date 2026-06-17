@@ -1,34 +1,34 @@
 ---
 image: maps/gladstone_peak.png
 range: San Juan
-drive_time: "~7h 55m (from Highland, Denver)"
-yds_class: "4 (standard summit move; an easier Class 3 line is just left of it)"
-gain: "~11.5 mi / ~6,300 ft round trip from Navajo Lake TH (DEM-measured; guidebooks cite ~5,000–5,400 ft)"
+drive_time: "~8h (from Highland, Denver)"
+yds_class: "4 (summit block move; an easier Class 3 line is just left of it)"
+gain: "~11.3 mi / ~5,000 ft round trip from Cross Mountain TH (DEM-measured off recorded GPX)"
 status: unclimbed
 climber: emily
-caltopo_id: 30G1DS1
+caltopo_id: 1PV10HH
 peak_ids: [84]
-dist_mi: 11.5
-gain_ft: 6300
+dist_mi: 11.3
+gain_ft: 4976
 class: "4"
 peaks: 1
 days: 1
-drive_h: 7.9
+drive_h: 8.0
 weather: "https://forecast.weather.gov/MapClick.php?lat=37.845&lon=-107.984"
 ---
 
 # Gladstone Peak — 13,923' Centennial (San Juan, Wilson group)
 
-*Written for **Emily** — the standalone Centennial between Mount Wilson and El Diente, by its standard Navajo Basin route.*
+*Written for **Emily** — the standalone Centennial between Mount Wilson and El Diente, by the shortest recorded day route (Cross Mountain TH / Bilk Basin).*
 
 **Report type:** Day climb (1 ranked Centennial 13er)
-**CalTopo research map:** https://caltopo.com/m/30G1DS1
+**CalTopo research map:** https://caltopo.com/m/1PV10HH
 **Status for Emily:** **unclimbed** (on her 14ers checklist). CO rank **67**, a **Centennial** (highest 100 in Colorado) — the high prize of this trip.
 
-> **Gladstone Peak (13,923')** is the pyramid wedged between **Mount Wilson** and **El Diente** in the Wilson group. It's climbed on its own from **Navajo Basin** — a **~11.5 mi round trip** up to a **short Class 4 move right below the summit** (with an easier **Class 3** line just left of it). The mountain is **notoriously loose**; the difficulty is the rock quality and that final headwall, not the mileage.
+> **Gladstone Peak (13,923')** is the pyramid wedged between **Mount Wilson** and **El Diente** in the Wilson group. Climbed on its own, the **shortest recorded line is from the Cross Mountain TH up Bilk Basin** — a **~11.3 mi / ~5,000 ft round trip** to a **short Class 4 move right below the summit** (with an easier **Class 3** line just left of it). The mountain is **notoriously loose**; the difficulty is the rock quality and that final summit block, not the mileage.
 
 ![Overview map](../maps/gladstone_peak.png)
-*[Interactive CalTopo map](https://caltopo.com/m/30G1DS1)* — the **recommended Navajo Basin route in bold magenta**, over recorded 14ers-library tracks (green); summit marker + the Navajo Lake (Woods Lake) TH.
+*[Interactive CalTopo map](https://caltopo.com/m/1PV10HH)* — the **recommended Cross Mountain / Bilk Basin route in bold magenta** (DEM-measured off a recorded 14ers track), over the other library tracks (green); summit marker + the Cross Mountain TH.
 
 ---
 
@@ -53,16 +53,16 @@ weather: "https://forecast.weather.gov/MapClick.php?lat=37.845&lon=-107.984"
 ---
 
 !!! danger "Class 4 summit move + very loose rock — this is the hard part"
-    Gladstone's **standard route ends with a short Class 4 move pulling onto the summit block.** A recorded TR ([14ers #20763](https://www.14ers.com/php14ers/tripreport.php?trip=20763)) describes "**the true 'Class 4' move to pull to the top**," with "**a nice Class 3 alternative to the left of it**" — so the very top can be done at **stiff Class 3** if you pick the line carefully, but expect at least one committing move.
+    However you approach it, **Gladstone ends with a short Class 4 move pulling onto the summit block.** A recorded TR ([14ers #20763](https://www.14ers.com/php14ers/tripreport.php?trip=20763)) describes "**the true 'Class 4' move to pull to the top**," with "**a nice Class 3 alternative to the left of it**" — so the very top can be done at **stiff Class 3** if you pick the line carefully, but expect at least one committing move.
     The bigger theme is **rock quality:** the same party wrote "**I hardly trusted a rock all day.**" The upper mountain is **steep, loose talus and shifting blocks** — helmet on, test every hold, and don't climb it with people directly below you. Save it for **dry, stable conditions**; wet or snowy rock here is serious.
 
-## The route — Navajo Basin standard ⭐
+## The route — Cross Mountain TH / Bilk Basin ⭐
 
-A **~11.5 mi / ~6,300′ round trip** (DEM-measured off recorded GPX; guidebooks list it closer to **~5,000–5,400′** — the extra is the rolling basin approach measured along a real track). Class 4 at the summit, Class 2 talus below it.
+A **~11.3 mi / ~5,000′ round trip** (DEM-measured off a recorded 14ers track — the shortest clean **Gladstone-only day** in the library; the Navajo Basin/Rock-of-Ages side from the west is a longer day, usually done when combining the Wilsons). Class 4 at the summit, Class 2 talus and tundra below it.
 
-- **Line:** **Navajo Lake TH (Woods Lake)** → up the Navajo Lake trail into **Navajo Basin** → traverse east under El Diente toward the **Gladstone–El Diente saddle area** → up Gladstone's **west/northwest slopes** (steepening, loose talus) → the **short Class 4 crux just below the summit** (Class 3 line just left).
-- **Why this side:** Navajo Basin is the standard staging point for the whole Wilson group; Gladstone is the cleanest **standalone** objective from it (Mount Wilson and El Diente are much harder days).
-- **Effort, not just grade:** the day is **long and high** — a full basin approach, ~4,500′+ of net gain, then a steep loose finish.
+- **Line:** **Cross Mountain TH** (CO-145 near Lizard Head Pass, ~10,000′) → **Lizard Head / Cross Mountain trail** into **Bilk Basin** (the SE cirque under the Wilson group) → up Gladstone's **southeast slopes** (steepening, loose talus) → the **short Class 4 crux just below the summit** (Class 3 line just left).
+- **Why this side:** it's the **shortest standalone** approach to Gladstone — a roadside CO-145 trailhead, no long basin backpack and less gain than the western (Navajo Basin) approaches.
+- **Effort, not just grade:** still a **long, high day** — ~5,000′ of gain and a steep, loose finish.
 
 ---
 
@@ -70,8 +70,8 @@ A **~11.5 mi / ~6,300′ round trip** (DEM-measured off recorded GPX; guidebooks
 
 | | |
 |---|---|
-| **Drive from Denver** | **[~7h 55m via Google Maps](https://www.google.com/maps/dir/?api=1&origin=Highland,+Denver,+CO&destination=37.8833,-108.0184)** — a far-SW-Colorado drive (US-285 / US-50 / US-550 corridor toward Telluride/Dolores), then the **Woods Lake / Navajo Lake** approach roads. This is a **multi-hour drive — plan to camp.** |
-| Trailhead | **Navajo Lake TH (Woods Lake side)** — ~37.8833, −108.0184, ~9,380'. (The basin is also reached from the Dolores/Kilpacker side; Woods Lake is the Navajo Lake approach used here.) |
+| **Drive from Denver** | **[~8h via Google Maps](https://www.google.com/maps/dir/?api=1&origin=Highland,+Denver,+CO&destination=37.7964,-107.9377)** — a far-SW-Colorado drive (US-285 / US-50 / US-550 corridor toward Telluride), then **CO-145 over Lizard Head Pass**. This is a **multi-hour drive — plan to camp.** (Verify the exact time in Maps.) |
+| Trailhead | **Cross Mountain TH** — ~37.7964, −107.9377, ~10,000', a roadside pullout on **CO-145** just SW of **Lizard Head Pass**. The Cross Mountain / Lizard Head trail leads into Bilk Basin. |
 | Land | **San Juan NF / Lizard Head Wilderness** — foot travel only beyond the TH; no permits/fees. |
 
 ---
@@ -81,13 +81,13 @@ A **~11.5 mi / ~6,300′ round trip** (DEM-measured off recorded GPX; guidebooks
 - **Best window:** **mid-July through September**, once the upper basin and the loose summit slopes are dry and snow-free. The Class 4 crux is **much more dangerous with snow/ice or wet rock.**
 - **Terrain:** trail + basin to talus; the **upper mountain is steep and notoriously loose** to a **Class 4** finish. Helmet strongly recommended.
 - **Storms:** long exposed day at altitude — **very early start**, summit early, and be off the loose upper slopes before afternoon weather.
-- **Cell:** unreliable to dead in Navajo Basin — carry an **InReach/satellite messenger.**
+- **Cell:** unreliable to dead in Bilk Basin — carry an **InReach/satellite messenger.**
 
 ---
 
 ## Trip reports & GPX (all sources)
 
-**Sources confirmed logged in:** 14ers.com, listsofjohn.com, peakbagger.com. **Gladstone's GPX library swept and deduped** — the recorded tracks all summit Gladstone via Navajo Basin (the route's headline distance is DEM-measured off those tracks).
+**Sources confirmed logged in:** 14ers.com, listsofjohn.com, peakbagger.com. **Gladstone's GPX library swept and deduped** — recorded tracks summit Gladstone from both the **Cross Mountain / Bilk Basin** side (east) and **Navajo Basin** (west); the recommended route is the **shortest clean Gladstone-only day** (Cross Mountain, DEM-measured off that track).
 
 - **14ers.com:** route beta + the [#20763 trip report](https://www.14ers.com/php14ers/tripreport.php?trip=20763) documenting the **Class 4 summit move / Class 3 alternative** and the **loose rock** ("I hardly trusted a rock all day").
 - **listsofjohn.com:** [peak 84](https://listsofjohn.com/peak/84) — Gladstone Peak, CO rank 67, Centennial.
@@ -100,7 +100,7 @@ A **~11.5 mi / ~6,300′ round trip** (DEM-measured off recorded GPX; guidebooks
 
 ## TL;DR
 
-- **Gladstone Peak (13,923', CO rank 67, Centennial)** — the standalone prize of the Wilson group, climbed on its own from **Navajo Basin**.
-- **~11.5 mi / ~6,300′ round trip** from the **Navajo Lake (Woods Lake) TH**; Class 2 basin → steep **loose** upper slopes → a **short Class 4 move below the summit** (Class 3 line just left).
+- **Gladstone Peak (13,923', CO rank 67, Centennial)** — the standalone prize of the Wilson group.
+- **~11.3 mi / ~5,000′ round trip** from the **Cross Mountain TH** (CO-145 near Lizard Head Pass) up **Bilk Basin** — the shortest clean Gladstone-only day; Class 2 tundra/talus → steep **loose** upper slopes → a **short Class 4 move below the summit** (Class 3 line just left).
 - **The hazard is loose rock + that summit move**, not the distance — **helmet, dry stable conditions, test every hold.**
-- **Far SW Colorado — long drive, plan to camp.** Cell dead — InReach.
+- **Far SW Colorado — long drive (~8h), plan to camp.** Cell dead — InReach.
