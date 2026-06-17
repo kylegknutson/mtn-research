@@ -19,6 +19,13 @@ weather: "https://forecast.weather.gov/MapClick.php?lat=37.845&lon=-107.984"
 
 # Gladstone Peak — 13,923' Centennial (San Juan, Wilson group)
 
+<!-- QUICKSTATS_START -->
+
+!!! tip "At a glance — recommended day"
+    **11.3 mi** · **4,976 ft** gain · **Class 4** · 1 peak · ~8 h drive · [weather](https://forecast.weather.gov/MapClick.php?lat=37.845&lon=-107.984)
+
+<!-- QUICKSTATS_END -->
+
 *Written for **Emily** — the standalone Centennial between Mount Wilson and El Diente, by the shortest recorded day route (Cross Mountain TH / Bilk Basin).*
 
 **Report type:** Day climb (1 ranked Centennial 13er)

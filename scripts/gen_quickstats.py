@@ -118,7 +118,11 @@ def main():
     changed = []
     for d in DIRS:
         for md in sorted(d.glob("*.md")):
-            if md.stem.count(".") or md.stem == "index":
+            # Skip index pages only (index.md, index.<climber>.md). EVERY real
+            # report gets the callout — Kyle's AND climber reports (<slug>.<climber>.md);
+            # the old `stem.count(".")` skip silently excluded climber reports, so
+            # their format quietly drifted from Kyle's (Gladstone had no "At a glance").
+            if md.stem == "index" or md.stem.startswith("index."):
                 continue
             r = apply(md, args.check)
             if r:

@@ -20,6 +20,13 @@ weather: "https://forecast.weather.gov/MapClick.php?lat=38.920&lon=-106.410"
 
 # Clohesey Four — Magdalene + Pear + 13,513 + 13,486 (Sawatch)
 
+<!-- QUICKSTATS_START -->
+
+!!! tip "At a glance — recommended day"
+    **12.2 mi** · **5,714 ft** gain · **Class 2+** · 4 peaks · ~2.75 h drive · [weather](https://forecast.weather.gov/MapClick.php?lat=38.920&lon=-106.410)
+
+<!-- QUICKSTATS_END -->
+
 *Written for **Emily** — four ranked Sawatch 13ers above Clohesey Lake, linked in one day.*
 
 **Report type:** Day trip (4 ranked 13ers, one link-up loop)
