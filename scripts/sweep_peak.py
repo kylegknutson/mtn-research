@@ -169,6 +169,7 @@ def ingest(slug, which, blob_path):
     if which == "loj":
         st["pids"].update(meta.get("pb_pids", {}))
         st["loj_gpx"] = bool(meta.get("loj_gpx"))
+        st["swept"] = sorted(set(st.get("swept", []) + ["listsofjohn"]))
         save_state(slug, st)
         print(f"  LoJ: verified pids {meta.get('pb_pids', {})}; loj_gpx={st['loj_gpx']}")
         if meta.get("errors"):
@@ -192,6 +193,7 @@ def ingest(slug, which, blob_path):
         written += 1
         print(f"  wrote {fn} ({len(gpx)//1024} KB)")
     st["counts"][src] = n
+    st["swept"] = sorted(set(st.get("swept", []) + [src]))
     save_state(slug, st)
     print(f"  {src}: {written} new track(s) (total {n})")
     if meta.get("errors"):
@@ -221,18 +223,29 @@ def _count_on_disk(slug):
 def finalize(slug):
     st = load_state(slug)
     c = _count_on_disk(slug)
+    swept = set(st.get("swept", []))
+
+    def rec(src, found, note_found, note_empty):
+        # files present → covered. 0 files but this source was ACTUALLY swept this
+        # session → honest verified-empty. 0 files and NOT swept → checked:false, so
+        # check_source_coverage keeps FAILing (no authority to claim empty unchecked).
+        if found:
+            return {"checked": True, "found": found, "note": note_found}
+        if src in swept:
+            return {"checked": True, "found": 0, "note": note_empty}
+        return {"checked": False, "found": 0, "note": "NOT SWEPT — re-run this source's sweep"}
+
     sources = {
-        "14ers": {"checked": True, "found": c["14ers"], "note": "gpxlib_locator.php"
-                  if c["14ers"] else "no 14ers library / not a 14ers.com peak"},
-        "peakbagger": {"checked": True, "found": c["peakbagger"],
-                       "note": f"verified pids {st.get('pids', {})}" if c["peakbagger"]
-                               else "no ascents with downloadable GPS tracks"},
-        "listsofjohn": {"checked": True, "found": c["listsofjohn"],
-                        "note": "LoJ member GPX tracks" if c["listsofjohn"]
-                                else "no downloadable GPX (text TRs only)"},
+        "14ers": rec("14ers", c["14ers"], "gpxlib_locator.php", "no 14ers library / not a 14ers.com peak"),
+        "peakbagger": rec("peakbagger", c["peakbagger"],
+                          f"verified pids {st.get('pids', {})}", "no ascents with downloadable GPS tracks"),
+        "listsofjohn": rec("listsofjohn", c["listsofjohn"],
+                           "LoJ member GPX tracks", "no downloadable GPX (text TRs only)"),
     }
     (GPX / slug / "sources.json").write_text(json.dumps(sources, indent=2) + "\n")
-    print(f"  sources.json: 14ers={c['14ers']} peakbagger={c['peakbagger']} listsofjohn={c['listsofjohn']}\n")
+    unchecked = [s for s, v in sources.items() if not v["checked"]]
+    print(f"  sources.json: 14ers={c['14ers']} peakbagger={c['peakbagger']} listsofjohn={c['listsofjohn']}"
+          + (f"  ⚠ NOT SWEPT: {', '.join(unchecked)}" if unchecked else "") + "\n")
     subprocess.run([str(ROOT / "scripts" / "check_source_coverage.py"), slug])
 
 

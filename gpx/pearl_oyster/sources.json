@@ -1,0 +1,17 @@
+{
+  "14ers": {
+    "checked": true,
+    "found": 2,
+    "note": "gpxlib_locator.php"
+  },
+  "peakbagger": {
+    "checked": true,
+    "found": 5,
+    "note": "verified pids {}"
+  },
+  "listsofjohn": {
+    "checked": false,
+    "found": 0,
+    "note": "NOT SWEPT \u2014 re-run this source's sweep"
+  }
+}
