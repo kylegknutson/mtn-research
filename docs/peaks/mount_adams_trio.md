@@ -64,7 +64,7 @@ All three are **ranked Sangre de Cristo 13ers** in the **Sangre de Cristo Wilder
 
 ## The single push — Willow Creek / Willow Lake TH loop ⭐
 
-A loop over all three (DEM-measured): **~11.7 mi / ~6,400′, Class 2**, from the **Willow Creek / Willow Lake TH** in Crestone. Modest mileage but **big gain** — you climb ~4,600′ just to reach the Adams ridgeline, then traverse the three ridge points.
+A loop over all three (DEM-measured): **~11.7 mi / ~6,400′**, **Class 2 summits linked by Class 2+/easy Class 3 ridges**, from the **Willow Creek / Willow Lake TH** in Crestone. Modest mileage but **big gain** — you climb ~4,600′ just to reach the Adams ridgeline, then traverse the three ridge points.
 
 | | |
 |---|---|
