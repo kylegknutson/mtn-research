@@ -42,3 +42,7 @@ docs/peaks/*.skeleton.md
 
 # tr manifests from sweep_gpx (intermediate)
 gpx/*/tr_manifest.md
+
+# transient sweep_peak batch state
+tmp_*.json
+tmp_*.flag

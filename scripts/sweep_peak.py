@@ -198,9 +198,22 @@ def ingest(slug, which, blob_path):
         print("  errors:", *meta["errors"], sep="\n    ")
 
 
+def _count_on_disk(slug):
+    """Actual track files present, by source — so finalize is accurate even when
+    only some source steps were re-run (e.g. add pb/loj to a report that already
+    has 14ers tracks, without re-fetching/renumbering 14ers)."""
+    c = {"14ers": 0, "peakbagger": 0}
+    for f in (GPX / slug).glob("trk_*.gpx"):
+        if "14ers" in f.name:
+            c["14ers"] += 1
+        elif "_pb_" in f.name:
+            c["peakbagger"] += 1
+    return c
+
+
 def finalize(slug):
     st = load_state(slug)
-    c = st["counts"]
+    c = _count_on_disk(slug)
     sources = {
         "14ers": {"checked": True, "found": c.get("14ers", 0), "note": "gpxlib_locator.php"},
         "peakbagger": {"checked": True, "found": c.get("peakbagger", 0),
@@ -215,14 +228,213 @@ def finalize(slug):
     subprocess.run([str(ROOT / "scripts" / "check_source_coverage.py"), slug])
 
 
+# ============================ BATCH (whole backlog) ============================
+# One consolidated fetch per source-origin covering every peak that NEEDS that
+# source, tracks keyed by peak id, then distributed to each report by objective.
+# 14ers is only fetched for reports that lack it (never renumber existing routes).
+
+SLUG_FILTER = None   # set by --slugs to scope the batch to a few reports (chunking)
+
+
+def _all_reports():
+    out = []
+    for d in (ROOT / "docs" / "peaks", ROOT / "docs" / "trips"):
+        for p in sorted(d.glob("*.md")):
+            if p.stem == "index" or p.stem.startswith("index."):
+                continue
+            slug = p.stem.split(".")[0]
+            yml = GPX / slug / "peaks.yml"
+            if yml.exists():
+                out.append(slug)
+    out = sorted(set(out))
+    if SLUG_FILTER:
+        out = [s for s in out if s in SLUG_FILTER]
+    return out
+
+
+def _objs(slug):
+    cfg = yaml.safe_load((GPX / slug / "peaks.yml").read_text()) or {}
+    return cfg.get("objective_ids") or []
+
+
+def _disk_counts(slug):
+    c = {"14ers": 0, "peakbagger": 0, "listsofjohn": 0}
+    for f in (GPX / slug).glob("trk_*.gpx"):
+        if "14ers" in f.name: c["14ers"] += 1
+        elif "_pb_" in f.name: c["peakbagger"] += 1
+        elif "_loj_" in f.name: c["listsofjohn"] += 1
+    return c
+
+
+def _peakdb_by_id():
+    sys.path.insert(0, PEAKDB)
+    from peak_db_client import peaks
+    return {p["id"]: p for p in peaks()}
+
+
+def batch_plan():
+    """{slug: {'need14','needpb', objs:[ids]}} + peak metadata."""
+    by = _peakdb_by_id()
+    plan = {}
+    for slug in _all_reports():
+        objs = _objs(slug)
+        c = _disk_counts(slug)
+        plan[slug] = {"objs": objs,
+                      "need14": c["14ers"] == 0 and any(by.get(i, {}).get("fourteeners_id") for i in objs),
+                      "needpb": c["peakbagger"] == 0,
+                      "needloj_check": True}
+    return plan, by
+
+
+def emit_batch(which):
+    plan, by = batch_plan()
+    if which == "loj":
+        ids = sorted({i for s in plan.values() for i in s["objs"]})
+        peaks = [{"loj": i} for i in ids]
+        url = "https://listsofjohn.com/peak/" + str(ids[0]) if ids else "https://listsofjohn.com/"
+        js = (r"""async () => { const PEAKS = __P__; const meta = {pid:{}, loj_gpx:{}, errors:[]};
+for (const p of PEAKS){ try { const h = await (await fetch('https://listsofjohn.com/peak/'+p.loj,{credentials:'include'})).text();
+  const pid=(h.match(/peakbagger\.com\/peak\.aspx\?pid=(\d+)/i)||[])[1]; if(pid) meta.pid[p.loj]=pid;
+  meta.loj_gpx[p.loj]=/href=["'][^"']*\.gpx/i.test(h);
+} catch(e){ meta.errors.push('loj '+p.loj+': '+e.message);} }
+return JSON.stringify({_meta:JSON.stringify(meta)}); }""").replace("__P__", json.dumps(peaks))
+    elif which == "14ers":
+        f14 = sorted({by[i]["fourteeners_id"] for s in plan.values() if s["need14"]
+                      for i in s["objs"] if by.get(i, {}).get("fourteeners_id")})
+        peaks = [{"f14": x} for x in f14]
+        url = f"https://www.14ers.com/php14ers/peak.php?peakid={f14[0]}" if f14 else "https://www.14ers.com/"
+        js = (r"""async () => { const PEAKS = __P__; const out = {}; const errs=[];
+for (const p of PEAKS){ try { const loc = await (await fetch('https://www.14ers.com/php14ers/gpxlib_locator.php?peakid='+p.f14,{credentials:'include'})).text();
+  const urls=[...new Set([...loc.matchAll(/\/usercontent\/trips\/[^"'\s]*\.gpx/gi)].map(m=>m[0]))]; let n=0;
+  for(const u of urls){ const g=await (await fetch('https://www.14ers.com'+u,{credentials:'include'})).text();
+    if(g.includes('<trkpt')) out['f14_'+p.f14+'_'+(++n)]=g; }
+} catch(e){ errs.push('14ers '+p.f14+': '+e.message);} }
+out['_meta']=JSON.stringify({errors:errs}); return JSON.stringify(out); }""").replace("__P__", json.dumps(peaks))
+    else:  # pb — needs pid map from loj step
+        pidmap = json.loads((ROOT / "tmp_pidmap.json").read_text()) if (ROOT / "tmp_pidmap.json").exists() else {}
+        # pids for peaks belonging to reports that need pb
+        want = {str(i) for s in plan.values() if s["needpb"] for i in s["objs"]}
+        pids = sorted({pidmap[k] for k in want if k in pidmap})
+        peaks = [{"pid": x} for x in pids]
+        url = f"https://peakbagger.com/peak.aspx?pid={pids[0]}" if pids else "https://peakbagger.com/"
+        js = (r"""async () => { const PEAKS = __P__; const out={}; const errs=[];
+for (const p of PEAKS){ try { const pk=await (await fetch('https://peakbagger.com/peak.aspx?pid='+p.pid,{credentials:'include'})).text();
+  const aids=[...new Set([...pk.matchAll(/ascent\.aspx\?aid=(\d+)/g)].map(m=>m[1]))]; let n=0;
+  for(const aid of aids){ const asc=await (await fetch('https://peakbagger.com/climber/ascent.aspx?aid='+aid,{credentials:'include'})).text();
+    if(/GPXFile\.aspx/i.test(asc)){ const g=await (await fetch('https://peakbagger.com/climber/GPXFile.aspx?aid='+aid+'&sep=1',{credentials:'include'})).text();
+      if(g.includes('<trkpt')) out['pb_'+p.pid+'_'+(++n)]=g; } }
+} catch(e){ errs.push('pb '+p.pid+': '+e.message);} }
+out['_meta']=JSON.stringify({errors:errs}); return JSON.stringify(out); }""").replace("__P__", json.dumps(peaks))
+    print(f"# navigate to: {url}\n# then browser_evaluate(<JS below>); persist; sweep_peak.py --ingest-batch {which} <file>", file=sys.stderr)
+    print(js)
+
+
+def ingest_batch(which, blob_path):
+    data = _unwrap(Path(blob_path).read_text())
+    meta = json.loads(data.pop("_meta", "{}")) if isinstance(data.get("_meta"), str) else {}
+    plan, by = batch_plan()
+    if which == "loj":
+        pidmap = meta.get("pid", {})
+        (ROOT / "tmp_pidmap.json").write_text(json.dumps(pidmap))
+        (ROOT / "tmp_lojgpx.json").write_text(json.dumps(meta.get("loj_gpx", {})))
+        print(f"  resolved {len(pidmap)} peakbagger pids; saved to tmp_pidmap.json")
+        if meta.get("errors"): print("  errors:", *meta["errors"][:5], sep="\n    ")
+        return
+    # group fetched tracks by source-key id
+    bykey = {}
+    for name, gpx in data.items():
+        if not isinstance(gpx, str) or "<trkpt" not in gpx:
+            continue
+        m = re.match(r"(f14|pb)_(\d+)_\d+", name)
+        if m:
+            bykey.setdefault(m.group(2), []).append(gpx)
+    pidmap = json.loads((ROOT / "tmp_pidmap.json").read_text()) if (ROOT / "tmp_pidmap.json").exists() else {}
+    pid_for = {str(loj): pid for loj, pid in pidmap.items()}
+    written = 0
+    for slug, s in plan.items():
+        if which == "14ers" and not s["need14"]:
+            continue
+        if which == "pb" and not s["needpb"]:
+            continue
+        seen = _existing_sigs(slug)
+        n = _disk_counts(slug)["14ers" if which == "14ers" else "peakbagger"]
+        for i in s["objs"]:
+            key = str(by[i]["fourteeners_id"]) if which == "14ers" and by.get(i, {}).get("fourteeners_id") else pid_for.get(str(i))
+            for gpx in bykey.get(str(key), []) if key else []:
+                sig = _sig(gpx)
+                if sig and sig in seen:
+                    continue
+                seen.add(sig)
+                n += 1
+                fn = f"trk_{'14ers' if which=='14ers' else 'pb'}_{n}.gpx"
+                (GPX / slug / fn).write_text(gpx)
+                written += 1
+        print(f"  {slug}: {which} now {_disk_counts(slug)['14ers' if which=='14ers' else 'peakbagger']}")
+    (ROOT / f"tmp_swept_{which}.flag").write_text("1")   # integrity: this source WAS fetched
+    print(f"\n  wrote {written} {which} track(s) across reports")
+
+
+def finalize_batch():
+    # Integrity: the LoJ pid/gpx step must have run (it's how we know LoJ-empty +
+    # which pids exist). peakbagger verified-empty (found=0) is only honest if the
+    # pb batch ran — so per report we SKIP finalizing any report still missing pb
+    # unless the pb sweep flag is present (leave it failing for a later pass).
+    if not (ROOT / "tmp_pidmap.json").exists():
+        sys.exit("refusing finalize: LoJ step hasn't run (no tmp_pidmap.json)")
+    pb_swept = (ROOT / "tmp_swept_pb.flag").exists()
+    lojgpx = json.loads((ROOT / "tmp_lojgpx.json").read_text()) if (ROOT / "tmp_lojgpx.json").exists() else {}
+    pidmap = json.loads((ROOT / "tmp_pidmap.json").read_text()) if (ROOT / "tmp_pidmap.json").exists() else {}
+    plan, by = batch_plan()
+    # integrity: every report that still NEEDS 14ers must have gotten it (else the
+    # 14ers batch wasn't run / failed) — don't finalize over a half-done sweep.
+    still14 = [s for s in plan if plan[s]["need14"] and _disk_counts(s)["14ers"] == 0]
+    if still14 and not (ROOT / "tmp_swept_14ers.flag").exists():
+        sys.exit(f"refusing finalize: {len(still14)} report(s) still need 14ers "
+                 f"(run the 14ers batch): {', '.join(still14[:6])}")
+    wrote = 0
+    for slug in plan:
+        if (GPX / slug / "sources.json").exists():
+            continue   # already verified (e.g. Gladstone) — leave it alone
+        c = _disk_counts(slug)
+        if c["peakbagger"] == 0 and not pb_swept:
+            continue   # can't honestly claim pb verified-empty yet — later pass
+        objs = [str(i) for i in plan[slug]["objs"]]
+        loj_any = any(lojgpx.get(o) for o in objs)
+        pids = {o: pidmap[o] for o in objs if o in pidmap}
+        sources = {
+            "14ers": {"checked": True, "found": c["14ers"], "note": "gpxlib_locator.php"
+                      if c["14ers"] else "not a 14ers.com peak / no library"},
+            "peakbagger": {"checked": True, "found": c["peakbagger"], "note": f"verified pids {pids}"},
+            "listsofjohn": {"checked": True, "found": 0 if not loj_any else -1,
+                            "note": "no downloadable GPX (text TRs)" if not loj_any else "LoJ GPX present"},
+        }
+        (GPX / slug / "sources.json").write_text(json.dumps(sources, indent=2) + "\n")
+        wrote += 1
+    print(f"  wrote sources.json for {wrote} report(s) (skipped already-verified + pb-incomplete)")
+    subprocess.run([str(ROOT / "scripts" / "check_source_coverage.py")])
+
+
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--slug", required=True)
+    ap.add_argument("--slug")
     ap.add_argument("--emit", choices=["loj", "14ers", "pb"])
     ap.add_argument("--ingest", nargs=2, metavar=("WHICH", "FILE"))
     ap.add_argument("--finalize", action="store_true")
+    ap.add_argument("--emit-batch", choices=["loj", "14ers", "pb"], dest="emit_batch")
+    ap.add_argument("--ingest-batch", nargs=2, metavar=("WHICH", "FILE"), dest="ingest_batch")
+    ap.add_argument("--finalize-batch", action="store_true", dest="finalize_batch")
+    ap.add_argument("--slugs", help="comma-separated report slugs to scope a batch (chunking)")
     args = ap.parse_args()
-    if args.emit:
+    if args.slugs:
+        global SLUG_FILTER
+        SLUG_FILTER = set(args.slugs.split(","))
+    if args.emit_batch:
+        emit_batch(args.emit_batch)
+    elif args.ingest_batch:
+        ingest_batch(args.ingest_batch[0], args.ingest_batch[1])
+    elif args.finalize_batch:
+        finalize_batch()
+    elif args.emit:
         emit(args.slug, args.emit)
     elif args.ingest:
         ingest(args.slug, args.ingest[0], args.ingest[1])
