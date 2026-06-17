@@ -1,0 +1,11 @@
+#!/bin/sh
+# Pre-push gate — blocks a push that would ship a rule violation in any report
+# it touches (3-source coverage, provenance, class, route summits/stats/exists,
+# fresh map) plus repo-wide artifact freshness. The lock lives here, outside the
+# model's discretion — CLAUDE.md/skills only describe the rules.
+#
+# Deliberate override (use sparingly, on purpose):  git push --no-verify
+#
+# Enabled via:  git config core.hooksPath .githooks   (run once; see scripts/setup_hooks.sh)
+root="$(git rev-parse --show-toplevel)"
+exec "$root/scripts/run_gates.py" --changed
