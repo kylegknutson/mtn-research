@@ -89,6 +89,20 @@
         m.addTo(layer);
       });
 
+      // Recommended routes (magenta) — one per report, shown only while at least
+      // one of its objective peaks is still unclimbed (a climbed peak's route
+      // disappears unless the route also serves an unclimbed objective). Polylines
+      // live in the overlay pane, below the marker pane, so peaks stay clickable.
+      var climbedSet = {};
+      d.peaks.forEach(function (p) { if (p.s === "done") climbedSet[p.id] = 1; });
+      var routes = L.layerGroup();
+      (d.routes || []).forEach(function (rt) {
+        var live = (rt.o || []).some(function (id) { return !climbedSet[id]; });
+        if (!live) return;
+        L.polyline(rt.c, { color: "#E6008C", weight: 3, opacity: 0.9 }).addTo(routes);
+      });
+      routes.addTo(map);
+
       // draw order: climbed (bottom) -> todo -> reported (top)
       climbed.addTo(map); todo.addTo(map); reported.addTo(map);
 
@@ -101,6 +115,7 @@
       overlays[tri("#39FF14", "#0b3d0b") + " Reported (" + (c.green || 0) + ")"] = reported;
       overlays[tri("#e53935", "#7a1414") + " To do (" + (c.todo || 0) + ")"] = todo;
       overlays[tri("#b8b8b8", "#5b5b5b") + " Climbed (" + (c.climbed || 0) + ")"] = climbed;
+      overlays["<span style='color:#E6008C'>━</span> Recommended routes"] = routes;
       L.control.layers({ "Topo": topo, "Light": light }, overlays,
         { position: "topright", collapsed: false }).addTo(map);
 

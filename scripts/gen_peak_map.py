@@ -74,6 +74,50 @@ def id_to_report() -> dict[int, tuple[str, str]]:
     return out
 
 
+def recommended_route(slug: str):
+    """Thinned [[lat,lon],...] of a report's composed recommended route, or None."""
+    import xml.etree.ElementTree as ET
+    f = next(iter((GPX / slug).glob("*recommended*.gpx")), None)
+    if not f:
+        return None
+    NS = "{http://www.topografix.com/GPX/1/1}"
+    try:
+        root = ET.parse(f).getroot()
+    except Exception:
+        return None
+    pts = [(round(float(p.get("lat")), 5), round(float(p.get("lon")), 5))
+           for p in root.iter(NS + "trkpt")]
+    if len(pts) < 2:
+        return None
+    step = max(1, len(pts) // 120)          # ~120 points is plenty at overview zoom
+    thin = pts[::step]
+    if thin[-1] != pts[-1]:
+        thin.append(pts[-1])
+    return thin
+
+
+def build_routes() -> list:
+    """One magenta recommended route per report, tagged with its objective peak
+    ids so the map can hide it once every objective is climbed."""
+    routes = []
+    for yml in sorted(GPX.glob("*/peaks.yml")):
+        slug = yml.parent.name
+        if not report_for(slug):
+            continue
+        coords = recommended_route(slug)
+        if not coords:
+            continue
+        try:
+            cfg = yaml.safe_load(yml.read_text()) or {}
+        except Exception:
+            continue
+        objs = [int(o) for o in (cfg.get("objective_ids") or []) if str(o).lstrip("-").isdigit()]
+        if not objs:
+            continue
+        routes.append({"o": objs, "c": coords})
+    return routes
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--check", action="store_true")
@@ -132,6 +176,7 @@ def main():
                    "with_report": n_with_report,
                    "reports": len(set(id(r) for r in reports.values()))},
         "peaks": feats,
+        "routes": build_routes(),
     }
     text = json.dumps(payload, separators=(",", ":"), ensure_ascii=False)
 
