@@ -1,18 +1,22 @@
 ---
-image: maps/dolores_peak.png
+image: maps/dolores_middle_peak.png
 peak_ids: [508, 489]
 range: San Juan
 drive_time: "7h 30m"
 yds_class: "2"
-gain: "~4,000 ft"
+gain: "~5.8 mi / ~3,800 ft round trip from Fish Creek TH, Class 2 (composed off recorded GPX; trip reports run 6.4–8.5 mi)"
 status: unclimbed
-caltopo_id: 1R09CLT
+caltopo_id: R1KSN0U
 regional_map_id: 06AR6BF
-gain_ft: 4000
+dist_mi: 5.8
+gain_ft: 3800
 class: 2
 peaks: 2
 days: 1
 drive_h: 7.5
+th_source: "recorded GPS-track starts — 6 of 7 swept tracks begin within 0.6 mi of 37.82419,-108.11985; OSM Middle Peak Road (FR 616) / Black Mesa Rd access"
+class_source: "14ers.com TR 22348 + Wild Wanderer 2023 (Class 2; Middle has a false summit + crumbly exposure); listsofjohn peak/508 + 489 list Class 2"
+status_source: "peak_db ascents (both 0 ascents — unclimbed)"
 ---
 
 # Dolores Peak + Middle Peak (San Miguel Mountains, CO)
@@ -20,12 +24,12 @@ drive_h: 7.5
 <!-- QUICKSTATS_START -->
 
 !!! tip "At a glance — recommended day"
-    **4,000 ft** gain · **Class 2** · 2 peaks · ~7.5 h drive
+    **5.8 mi** · **3,800 ft** gain · **Class 2** · 2 peaks · ~7.5 h drive
 
 <!-- QUICKSTATS_END -->
 
 **Researched:** 2026-05-13
-**CalTopo research map (with all GPX layered):** https://caltopo.com/m/1R09CLT
+**CalTopo research map (with all GPX layered):** https://caltopo.com/m/R1KSN0U
 **Status in your sheet:** Both 0 ascents (unclimbed). Same drainage divide as Mt. Wilson group, but a separate cluster.
 
 ---
@@ -46,8 +50,8 @@ drive_h: 7.5
 
 Coordinates above are LiDAR-authoritative from the public CalTopo map "Fish Creek - Dolores & Middle Peaks" (CVV0). Wikipedia lists Dolores at 13,296 ft; the LiDAR value 13,289 is more current. Note Middle is ~16 ft higher and far more prominent (1,960' vs 730').
 
-![Overview map](../maps/dolores_peak.png)
-*[Interactive CalTopo map](https://caltopo.com/m/1R09CLT)*
+![Overview map](../maps/dolores_middle_peak.png)
+*[Interactive CalTopo map](https://caltopo.com/m/R1KSN0U)*
 
 ---
 
@@ -179,24 +183,16 @@ TMC describes a Middle Peak loop from the same parking spot with **Class 4 scram
 
 ---
 
-## .gpx files (in `gpx/dolores_peak/`)
+## GPX & sources (all 3 swept + deduped)
 
-**From the public CalTopo map "Fish Creek - Dolores & Middle Peaks" (`caltopo.com/m/CVV0`):**
-- `dolores_middle_peak_route_caltopo_CVV0.gpx` (636 pts) — main ascent
-- `dolores_traverse_to_dolores_peak_caltopo_CVV0.gpx` (517 pts) — Middle ↔ Dolores ridge
-- `dolores_descent_route_caltopo_CVV0.gpx` (542 pts) — descent
-- `dolores_dunn_peak_route_caltopo_CVV0.gpx` (174 pts) — Dunn add-on ascent
-- `dolores_dunn_peak_descent_route_caltopo_CVV0.gpx` (524 pts) — Dunn descent
-- `dolores_untitled_caltopo_CVV0.gpx` (553 pts) — untitled connector / loop variant
-- `dolores_waypoints_caltopo_CVV0.gpx` (5 wpts) — TH, 3 LiDAR'd summits, road turnoff
+The CalTopo research map now layers **real recorded GPX from all three sources**
+(the old hand-drawn CalTopo lines were replaced):
 
-**Your existing planning (from School Bus map, in `gpx/dolores_peak/_kyle_existing/`):**
-- `kyle_boskoff_peak_schoolbus.gpx` (3,312 pts) — your "Boskoff Peak" track that crosses Dolores summit; likely a multi-peak link-up sketch
-- `kyle_san_miguels_..._schoolbus.gpx` (19,238 pts) — region outline note ("the premier chossineering destination"); not a route, can be ignored for planning
+- **14ers.com** — recorded ascent tracks (Dolores peakid 10470 / Middle 10460); the cleanest is a **6.4-mi Dolores + Middle out-and-back** from Fish Creek TH (green).
+- **listsofjohn.com** — 4 member trip-report tracks (peak [508](https://listsofjohn.com/peak/508) + [489](https://listsofjohn.com/peak/489)) (red).
+- **peakbagger.com** — 2 ascent GPS tracks ([Dolores pid 5818](https://peakbagger.com/peak.aspx?pid=5818) / [Middle pid 14675](https://peakbagger.com/peak.aspx?pid=14675)) (blue).
 
-**All layered on the CalTopo research map:** https://caltopo.com/m/1R09CLT
-
-**Sources I checked but couldn't pull GPX from:** Wikiloc and Peakbagger (both block automated fetches with 403); 14ers.com TR 22348 has no GPX; TR 19949 GPX explicitly disabled by author. Wild Wanderer offers GPX by email request (their site says contact them directly).
+**All 7 swept tracks summit *both* peaks** and start within ~0.6 mi of the Fish Creek TH — the **bold magenta recommended route** (~5.8 mi, composed off these tracks; trip reports run 6.4–8.5 mi) is DEM-measured. **Avoid** the Dolores SW slopes (14ers TR 19949 author disabled the GPX as a warning — "incredibly dangerous").
 
 ---
 
@@ -206,11 +202,11 @@ TMC describes a Middle Peak loop from the same parking spot with **Class 4 scram
 - **If you want more scrambling:** Route B (loop with Middle's west ridge Class 3+ — fin / razor section).
 - **For 3 ranked 13ers in this cluster (D+M+Boskoff):** Two-day, two-TH plan is cleanest — Day 1 Fish Creek for D+M (8.49 mi, 3.9K'), Day 2 Woods Lake for Boskoff (9.4 mi, 3.8K'). Single-push 19-mi loop has been done by others (per imported tracks in your School Bus map) but has unconfirmed traverse class and TH road.
 - **Avoid:** Dolores SW slopes (TR 19949 warning).
-- **Layered tracks:** https://caltopo.com/m/1R09CLT
+- **Layered tracks:** https://caltopo.com/m/R1KSN0U
 - **Drive in:** Dunton, CO → Fish Creek TH (5 mi 2WD dirt). High-clearance overkill.
 - **Best season:** July–early October.
 - **Skip:** Dunn Peak (12,612', unranked) — available essentially for free on the loop variant but doesn't move the needle on any list.
 
 ---
 
-**Sources checked:** 14ers.com · listsofjohn.com · peakbagger.com
+**Sources checked:** 14ers.com ✓ (logged in) · listsofjohn.com ✓ · peakbagger.com ✓ — all 3 swept for GPX (replacing the old hand-drawn CalTopo lines).

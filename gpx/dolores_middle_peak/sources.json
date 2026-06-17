@@ -1,0 +1,17 @@
+{
+  "14ers": {
+    "checked": true,
+    "found": 1,
+    "note": "gpxlib_locator.php"
+  },
+  "peakbagger": {
+    "checked": true,
+    "found": 2,
+    "note": "verified pids {'489': '14675', '508': '5818'}"
+  },
+  "listsofjohn": {
+    "checked": true,
+    "found": 4,
+    "note": "LoJ member GPX tracks"
+  }
+}
