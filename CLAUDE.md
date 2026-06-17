@@ -92,6 +92,14 @@ single-peak/group report is essentially:
   (`{"listsofjohn":{"checked":true,"found":0,"note":"…"}}`). `check_source_coverage.py`
   (in `--finalize`, scoped to the slug) FAILs unless every source has tracks or a
   verified-empty record — and FAILs a footer that claims a source with no data.
+- **No authority to SKIP a research step (Kyle, 2026-06-17).** Doing the research
+  is fine; skipping it silently is not — every mandatory step must leave a checkable
+  artifact or the build fails. Beyond the sweep (sources.json) and route/class gates,
+  `check_report_ready.py` (in `--finalize`) FAILs unless the frontmatter names HOW the
+  judgment steps were verified: **`th_source`** (OSM / 14ers TH / recorded-track start —
+  never memory), **`class_source`** (a beta URL: 14ers TR / Roach / climb13ers — not the
+  peak_db summit grade), **`status_source`** (scrape_14ers_checklist / peak_db ascents —
+  never assumed). A junk placeholder won't pass (the gate requires a recognized source token).
 - **Verify IDs and trailheads from the source — peak_db can be wrong (Kyle, 2026-06-16).**
   peak_db's `peakbagger_id` for Gladstone pointed at *Mount Wilcox* (pid 5667 vs the
   real 5817). Before using a cross-site id, confirm the page is the right peak (LoJ's

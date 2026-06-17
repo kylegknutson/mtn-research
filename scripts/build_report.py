@@ -157,6 +157,9 @@ def finalize_phase(args):
         # THIS slug so the backlog of older single-source reports doesn't block a
         # new build; run `check_source_coverage.py --strict` (no slug) to sweep all.
         ["check_source_coverage.py", args.slug, "--strict"],
+        # NO-SKIP: the human-judgment steps must leave provenance, not be skipped.
+        # th_source / class_source / status_source must name how each was verified.
+        ["check_report_ready.py", args.slug, "--strict"],
     ]
     for chk in gates:
         r = run([SCRIPTS / chk[0], *chk[1:]])

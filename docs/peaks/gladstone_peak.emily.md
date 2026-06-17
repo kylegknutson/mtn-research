@@ -15,6 +15,9 @@ peaks: 1
 days: 1
 drive_h: 8.0
 weather: "https://forecast.weather.gov/MapClick.php?lat=37.845&lon=-107.984"
+th_source: "OSM highway=trailhead 'Cross Mountain' + Cross Mountain Trail (FR 637); confirmed by recorded GPS-track starts at 37.7964,-107.9377"
+class_source: "14ers TR #20763 (Class 4 summit move; Class 3 alt left of it); listsofjohn peak/84 lists Class 3 summit"
+status_source: "scrape_14ers_checklist emily (usernum 45697) 2026-06-17; peak_db ascents (Kyle ✓ climbed)"
 ---
 
 # Gladstone Peak — 13,923' Centennial (San Juan, Wilson group)
