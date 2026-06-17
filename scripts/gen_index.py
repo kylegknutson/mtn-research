@@ -47,13 +47,19 @@ def _num(v):
     return f"{v:,}" if isinstance(v, int) else f"{v:g}"
 
 
-def build_table() -> str:
+def build_table(climber: str | None = None) -> str:
     rows = []
     for sub, folder in (("peaks", PEAKS), ("trips", ROOT / "docs" / "trips")):
-        for p in sorted(folder.glob("*.md")):
-            # Skip skeletons / climber-suffixed reports (a second dot ⇒ suffix).
-            if p.name.count(".") > 1 or p.stem == "index":
-                continue
+        pattern = f"*.{climber}.md" if climber else "*.md"
+        for p in sorted(folder.glob(pattern)):
+            if climber:
+                # this climber's reports only (e.g. <slug>.emily.md); skip an index.<climber>.md
+                if p.stem == f"index.{climber}":
+                    continue
+            else:
+                # Kyle's main index: skip skeletons / climber-suffixed reports (2nd dot ⇒ suffix).
+                if p.name.count(".") > 1 or p.stem == "index":
+                    continue
             fm = frontmatter(p)
             title = re.search(r"^#\s+(.+)$", p.read_text(), re.M)
             name = title.group(1).strip() if title else p.stem
@@ -124,10 +130,26 @@ def render(index_text: str, table: str) -> str:
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--check", action="store_true", help="exit 1 if index.md is stale")
+    ap.add_argument("--climber", help="regenerate index.<climber>.md from <slug>.<climber>.md reports")
     args = ap.parse_args()
 
-    cur = INDEX.read_text()
-    new = render(cur, build_table())
+    index_path = (ROOT / "docs" / f"index.{args.climber}.md") if args.climber else INDEX
+    cur = index_path.read_text()
+    new = render(cur, build_table(args.climber))
+    if args.climber:
+        # climber index = table only (no account-wide nav badges)
+        if args.check:
+            if cur != new:
+                print(f"docs/index.{args.climber}.md is STALE — run scripts/gen_index.py --climber {args.climber}")
+                sys.exit(1)
+            print(f"index.{args.climber}.md current ✓"); return
+        if cur != new:
+            index_path.write_text(new)
+            print(f"✓ regenerated peak table in docs/index.{args.climber}.md")
+        else:
+            print(f"index.{args.climber}.md already current")
+        return
+
     badges = json.dumps(collect_badges(), ensure_ascii=False, indent=0, sort_keys=True)
     cur_badges = STATS_JSON.read_text() if STATS_JSON.exists() else ""
     if args.check:

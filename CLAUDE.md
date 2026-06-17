@@ -12,6 +12,13 @@ scripts, and raw `grep`/`sed` instead of using the scripts. Don't repeat that.)
   ask "should I push?" — publishing to his own Pages site is pre-authorized.
 - **Stop ONLY for:** a gate failure, or a genuine judgment call (ambiguous/conflicting
   scope, something destructive/irreversible, or a fork that's expensive if wrong).
+- **Don't prompt Kyle for auth pre-emptively.** Only ask him to log in if the **MCP
+  browser itself** shows logged-out (or a sweep returns a login page). Never prompt off
+  `check_sources_login.py`'s standalone profile — it diverges and false-flagged a login.
+- **Retro after every report (Kyle, 2026-06-16).** End each build with a 2–3 line
+  self-retro: what did Kyle have to catch or correct, what was prompted that shouldn't
+  have been, what got hand-written that should be a `scripts/*.py`. Fold the fix into the
+  rails (gate / CLAUDE.md / memory / script) immediately — relentless improvement.
 - **Assume, don't ask:** individual-vs-combo and trip grouping — pick the sensible
   default; Kyle redoes if he wants it the other way. When ≥2 reports share a
   drainage/area/drive, proactively build the Trip.
@@ -84,6 +91,24 @@ single-peak/group report is essentially:
   route**. **When unsure, take the harder estimate** — under-stating class drives wrong
   gear/rope/helmet decisions. `scripts/check_class.py --strict` (in `--finalize`) FAILs
   any report whose class is below its hardest objective's peak_db class.
+- **Verify inputs are COMPLETE before asserting any conclusion (Kyle, 2026-06-16).**
+  Almost every miss this session came from concluding on partial data — swept ONE peak's
+  GPX library and called Wayah a shuttle (it's a loop); used summit class and called Adams
+  "Class 2" (ridges are 3–4); one radius scan → "5 peaks" (6); read a logged-OUT 14ers
+  page. Before stating a route shape, class, peak count, or status **as fact**, confirm:
+  **all objective peaks' GPX libraries swept + deduped · logged in (MCP browser) · whole
+  cluster scanned (`find_peaks_near.py`) · route class from beta, not peak_db summit.**
+  Concluding from one source → label it provisional, not fact.
+- **Scrape the report-climber's climbed status EVERY time — never assume (Kyle, 2026-06).**
+  Kyle: peak_db ascents (or `find_peaks_near.py`). Other climbers:
+  `scripts/scrape_14ers_checklist.py --climber <slug>`. Set the report status from the
+  scrape. (Regenerate a climber's home page with `gen_index.py --climber <slug>`.)
+- **Identify peak clusters with `scripts/find_peaks_near.py`** (`--near "<peak>"` or
+  `--center lat,lon`) — lists ranked neighbors + climbed status + every source id. Not
+  inline peak_db python.
+- **Red `!!! danger` box only for Class 4/5 or a genuinely sketchy section** (serious
+  exposure, a notorious obstacle like the Clohesey 4x4 road). Ordinary Class 2/2+/3 days:
+  just write the summary normally — no alarm box.
 - **All 3 sources (14ers + LoJ + peakbagger) every time, + climb13ers for CO peaks**,
   named in the report's "Sources checked" footer (CI lint enforces it).
 - Don't mark a report "researched" until the Pages deploy is green.
