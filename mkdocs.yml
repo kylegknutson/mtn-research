@@ -55,8 +55,6 @@ nav:
     - Pennsylvania Mountain: peaks/pennsylvania_mountain.md
     - Homestake Peak: peaks/homestake_peak.md
     - Savage Peak: peaks/savage_peak.md
-    - Star Peak A: peaks/star_peak_a.md
-    - Star Peak Group (Star+Taylor+Italian): peaks/star_peak_group.md
     - Pearl + Oyster: peaks/pearl_oyster.md
     - Sunshine Mtn + PT 13,094: peaks/sunshine_13094.md
     - Cuba Gulch Trio (13,076/13,003/13,179): peaks/cuba_gulch_trio.md
@@ -77,6 +75,7 @@ nav:
     - PT 13,408 + 13,026 (La Garita / Cochetopa): peaks/pt_13026_13408.md
     - Carter Dome Group (NH): peaks/carter_dome_group.md
   - Trips:
+    - Star Peak Group 2-Day (Star+Taylor+Italian): trips/star_peak_group.md
     - Cimarron / Coxcomb (8 peaks): trips/cimarron_coxcomb.md
     - West Willow La Garita 2-Day (5 peaks / San Luis Pass): trips/west_willow_la_garita.md
     - South San Juans 3-Day (Bennett/Conejos/Summit Group): trips/south_san_juans_3day.md

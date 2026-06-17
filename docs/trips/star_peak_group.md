@@ -3,14 +3,18 @@ image: maps/star_peak_group.png
 range: Elk
 drive_time: "3h 40m"
 yds_class: "2"
-gain: "4,300 ft (Star+Taylor) — up to ~8,000 ft (all three)"
+gain: "2-day basecamp: Day 1 Star+Taylor ~8.6 mi / ~4,300 ft · Day 2 Italian (half-day) — or all three in one ~14–17 mi / ~6,500–8,000 ft day"
 status: unclimbed
 caltopo_id: J6HBR6S
 regional_map_id: 1G2G7DM
-gain_ft: 4300
+dist_mi: 14.6
+gain_ft: 6800
 class: 2
 peaks: 3
-days: 1
+days: 2
+days_detail:
+  - {label: "Star + Taylor", dist_mi: 8.6, gain_ft: 4300, class: "2", peaks: 2}
+  - {label: "Italian (+ American Flag opt.)", class: "2", peaks: 1}
 drive_h: 3.7
 ---
 
@@ -18,13 +22,16 @@ drive_h: 3.7
 
 <!-- QUICKSTATS_START -->
 
-!!! tip "At a glance — recommended day"
-    **4,300 ft** gain · **Class 2** · 3 peaks · ~3.7 h drive
+!!! tip "At a glance — 2-day trip"
+    **3 peaks** · **~3.7 h drive**
+
+    - **Day 1 (Star + Taylor):** **8.6 mi** · **4,300 ft** gain · **Class 2** · 2 peaks
+    - **Day 2 (Italian (+ American Flag opt.)):** **Class 2** · 1 peak
 
 <!-- QUICKSTATS_END -->
 
 **Researched:** 2026-06-07
-**Report type:** Day trip (3 ranked 13ers) — one long day *or* a weekend from one basecamp
+**Report type:** **2-day basecamp Trip** (3 ranked 13ers) — **Day 1 Star + Taylor**, **Day 2 Italian** from one camp near the end of CO 742; *or* link all three in one long day.
 **CalTopo research map:** https://caltopo.com/m/J6HBR6S
 **Status in DB:** All three 0 ascents (unclimbed). These are the core unclimbed ranked 13ers of the **East Taylor Park / Star Pass cluster** — the densest pocket of unclimbed ranked 13ers on Kyle's near-term list.
 
