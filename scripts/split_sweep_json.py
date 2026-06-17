@@ -27,7 +27,23 @@ def main():
     slug = sys.argv[2]
     out_dir = ROOT / "gpx" / slug
     out_dir.mkdir(parents=True, exist_ok=True)
-    data = json.loads(blob.read_text())
+    raw = blob.read_text()
+    # The MCP browser_evaluate result may be persisted with a wrapper when it's
+    # too large to return inline:  "### Result\n<value>\n### Ran code ...".
+    # Pull out the value between the markers if present.
+    if raw.lstrip().startswith("### Result"):
+        body = raw.split("### Result", 1)[1]
+        for end in ("\n### Ran", "\n### Open tabs", "\n### Page"):
+            if end in body:
+                body = body.split(end, 1)[0]
+        raw = body.strip()
+    # The value is often a JSON-encoded *string* of the object (double-encoded):
+    # parse repeatedly until we land on a dict.
+    data = raw
+    for _ in range(3):
+        if isinstance(data, dict):
+            break
+        data = json.loads(data)
     n = 0
     for name, gpx in data.items():
         if not isinstance(gpx, str) or gpx.startswith("ERR") or "<gpx" not in gpx:

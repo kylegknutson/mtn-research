@@ -21,6 +21,7 @@ gpx/*
 !gpx/*/
 gpx/*/*
 !gpx/*/peaks.yml
+!gpx/*/sources.json
 
 # Local Claude Code project state
 .claude/

@@ -54,7 +54,7 @@ weather: "https://forecast.weather.gov/MapClick.php?lat=37.845&lon=-107.984"
 | Range | San Juan (Wilson group, Lizard Head Wilderness) |
 | 14ers.com | [peak 10278](https://www.14ers.com/php14ers/peak.php?peakid=10278) |
 | LoJ | [84](https://listsofjohn.com/peak/84) |
-| peakbagger | [Gladstone Peak](https://peakbagger.com/peak.aspx?pid=5667) |
+| peakbagger | [Gladstone Peak](https://peakbagger.com/peak.aspx?pid=5817) |
 | Peak DB id | 84 |
 
 ---
@@ -94,14 +94,14 @@ A **~11.3 mi / ~5,000′ round trip** (DEM-measured off a recorded 14ers track �
 
 ## Trip reports & GPX (all sources)
 
-**Sources confirmed logged in:** 14ers.com, listsofjohn.com, peakbagger.com. **Gladstone's GPX library swept and deduped** — recorded tracks summit Gladstone from both the **Cross Mountain / Bilk Basin** side (east) and **Navajo Basin** (west); the recommended route is the **shortest clean Gladstone-only day** (Cross Mountain, DEM-measured off that track).
+**All three sources swept** (counts verified, not assumed): **11 recorded GPX tracks** all summit Gladstone — from both the **Cross Mountain / Bilk Basin** side (east) and **Navajo Basin** (west). The recommended route is the **shortest clean Gladstone-only day** (Cross Mountain, DEM-measured off that track).
 
-- **14ers.com:** route beta + the [#20763 trip report](https://www.14ers.com/php14ers/tripreport.php?trip=20763) documenting the **Class 4 summit move / Class 3 alternative** and the **loose rock** ("I hardly trusted a rock all day").
-- **listsofjohn.com:** [peak 84](https://listsofjohn.com/peak/84) — Gladstone Peak, CO rank 67, Centennial.
-- **peakbagger.com:** Gladstone Peak page (San Juan NF, Lizard Head Wilderness).
-- **climb13ers.com:** Gladstone Peak route notes (Wilson group, Navajo Basin).
+- **14ers.com — 8 GPX tracks.** Route beta + the [#20763 trip report](https://www.14ers.com/php14ers/tripreport.php?trip=20763) documenting the **Class 4 summit move / Class 3 alternative** and the **loose rock** ("I hardly trusted a rock all day"). ([peak 10278](https://www.14ers.com/php14ers/peak.php?peakid=10278))
+- **peakbagger.com — 3 GPX tracks** (ascents with uploaded GPS; [pid 5817](https://peakbagger.com/peak.aspx?pid=5817)). One independently starts at the Cross Mountain TH — corroborating the trailhead.
+- **listsofjohn.com — no downloadable GPX** ([peak 84](https://listsofjohn.com/peak/84) hosts text trip reports only); used for class/rank confirmation (Class 3, CO rank 67).
+- **climb13ers.com:** Gladstone Peak route notes (Wilson group).
 
-**Sources checked:** 14ers.com ✓ (logged in) · listsofjohn.com ✓ · peakbagger.com ✓ · climb13ers.com ✓
+**Sources checked:** 14ers.com ✓ (8 tracks) · peakbagger.com ✓ (3 tracks) · listsofjohn.com ✓ (no GPX, text TRs) · climb13ers.com ✓
 
 ---
 
