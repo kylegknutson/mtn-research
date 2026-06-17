@@ -127,13 +127,14 @@ SOURCE_LABELS = {
 def track_source(path) -> str:
     """Classify a GPX file by source from its filename suffix."""
     n = path.name.lower()
-    if "pbascent" in n:
+    # peakbagger: old name *_pbAscent*, new sweep names trk_pb_N / <slug>_..._pb_aid...
+    if "pbascent" in n or "_pb_" in n or "peakbagger" in n:
         return "pb"
     if "_caltopo_" in n:
         return "caltopo"
     if "14ers" in n or "_unknown_" in n:
         return "14ers"
-    if "loj" in n:
+    if "loj" in n or "listsofjohn" in n:
         return "loj"
     return "public"
 COLOR_PEAK     = (255, 204, 0,   255)   # gold — objective summit(s)
