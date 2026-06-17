@@ -1,0 +1,11 @@
+# Wayah Group — Kyle's 5 unclimbed ranked 13ers on the long ridge between the
+# Hunter-Fryingpan Wilderness and the Lake Creek / Independence Pass side
+# (NW of Mount Massive / Mount Oklahoma, both already done). The full "Wayah
+# group" is 8 ranked 13ers; Kyle needs these 5. A long Class 3-4 ridge traverse.
+objective_ids: [491, 511, 611, 595, 792, 814]   # +PT 13,014 (mid-ridge, Class 3-4 section)
+nearby:
+  include: false
+landmarks:
+  - {name: "North Fork Lake Creek TH (Hwy 82)", lat: 39.1152, lon: -106.5386, ele_ft: 10600, kind: trailhead}
+  - {name: "Independence Pass / Lost Man (Hwy 82)", lat: 39.2450, lon: -106.5300, ele_ft: 11500, kind: trailhead}
+  - {name: "South Fork Pass / Fryingpan (Frying Pan Rd)", lat: 39.2398, lon: -106.5930, ele_ft: 10700, kind: trailhead}

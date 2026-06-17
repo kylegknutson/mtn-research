@@ -16,7 +16,8 @@ Every ranked Colorado 13er/14er — **green peak = has a report** (click it to o
 | Peak / Trip | Range | Class | Dist (mi) | Gain (ft) | Peaks | Days | Pk/day | Drive (h) | Status |
 |---|---|---|--:|--:|--:|--:|--:|--:|---|
 | [Jacque Peak](peaks/jacque_peak.md) | Gore | 2 | — | 3,500 | 1 | 1 | 1 | 1.7 | climbed |
-| [Pennsylvania Mountain](peaks/pennsylvania_mountain.md) | Mosquito | 1 | 3.9 | 1,039 | 1 | 1 | 1 | 2.1 | unclimbed |
+| [Pennsylvania Mountain](peaks/pennsylvania_mountain.md) | Mosquito | 2 | 3.9 | 1,039 | 1 | 1 | 1 | 2.1 | unclimbed |
+| [Wayah Group](peaks/wayah_group.md) | Sawatch | 3–4 | 16 | 6,500 | 6 | 1 | 6 | 3 | unclimbed |
 | [Mount Powell + Eagles Nest](peaks/powell_eagles_nest.md) | Gore | 3 | — | 6,250 | 2 | 1 | 2 | 3.1 | unclimbed |
 | [Homestake Peak](peaks/homestake_peak.md) | Sawatch | 2 | — | 3,026 | 1 | 1 | 1 | 3.2 | unclimbed |
 | [Hunts Peak](peaks/hunts_peak.md) | Sangre de Cristo | 2 | — | 3,489 | 1 | 1 | 1 | 3.6 | unclimbed |
@@ -25,20 +26,20 @@ Every ranked Colorado 13er/14er — **green peak = has a report** (click it to o
 | [Star Peak Group](peaks/star_peak_group.md) | Elk | 2 | — | 4,300 | 3 | 1 | 3 | 3.7 | unclimbed |
 | [Williams Mountains Traverse](peaks/williams_mountains.md) | Sawatch | 3 | 12.9 | 5,811 | 5 | 1 | 5 | 3.8 | unclimbed |
 | [Crestolita + Broken Hand Peak](peaks/crestolita_broken_hand.md) | Sangre de Cristo | 3 | — | 6,750 | 2 | 1 | 2 | 4 | unclimbed |
-| [Mount Adams Trio](peaks/mount_adams_trio.md) | Sangre de Cristo | 2 | 11.7 | 6,434 | 3 | 1 | 3 | 4 | unclimbed |
+| [Mount Adams Trio](peaks/mount_adams_trio.md) | Sangre de Cristo | 2–3 | 11.7 | 6,434 | 3 | 1 | 3 | 4 | unclimbed |
 | [Chipeta Mountain](peaks/chipeta_mtn.md) | Sawatch | 2 | 7.7 | 3,446 | 1 | 1 | 1 | 4.2 | unclimbed |
 | [Grizzly Pk E + PT 13,145 + Jenkins Mtn](peaks/grizzly_jenkins_group.md) | Sawatch | 2+ | — | 6,050 | 4 | 1 | 4 | 4.2 | unclimbed |
 | [Trinchera Group](peaks/trinchera_group.md) | Sangre de Cristo | 2 | — | 6,000 | 4 | 1 | 4 | 4.2 | unclimbed |
 | [Pearl Mountain + Oyster Peak](peaks/pearl_oyster.md) | Elk | 2+ | 7.5 | 4,110 | 2 | 1 | 2 | 4.4 | unclimbed |
 | [PT 13,557](peaks/pt_13557.md) | Sangre de Cristo | 2 | — | 3,540 | 1 | 1 | 1 | 4.7 | unclimbed |
 | ["Baldy Lejos" + PT 13,115 + PT 13,030](peaks/baldy_lejos_trio.md) | San Juan | 2 | 11 | 3,750 | 3 | 1 | 3 | 5 | climbed |
-| [PT 13,308 + PT 13,166](peaks/pt_13308_13166.md) | San Juan | 2 | 8.2 | 3,050 | 2 | 1 | 2 | 5 | climbed |
+| [PT 13,308 + PT 13,166](peaks/pt_13308_13166.md) | San Juan | 3 | 8.2 | 3,050 | 2 | 1 | 2 | 5 | climbed |
 | [West Willow Creek](trips/west_willow_la_garita.md) | San Juan | 3 | 19 | 6,800 | 5 | 2 | 2.5 | 5 | climbed |
 | [South San Juans 3-Day Weekend](trips/south_san_juans_3day.md) | San Juan | 2 | 23.4 | 9,500 | 5 | 3 | 1.7 | 5.2 | unclimbed |
-| [Cimarron "Remaining Six"](peaks/cimarron_six.md) | San Juan | 3 | 13.3 | 5,785 | 6 | 1 | 6 | 5.5 | unclimbed |
+| [Cimarron "Remaining Six"](peaks/cimarron_six.md) | San Juan | 4 | 13.3 | 5,785 | 6 | 1 | 6 | 5.5 | unclimbed |
 | [Fortress Pk + Precipice Pk](peaks/fortress_precipice.md) | San Juan | 3 | 10.5 | 5,330 | 2 | 2 | 1 | 5.5 | unclimbed |
 | [PT 13,408 + PT 13,026](peaks/pt_13026_13408.md) | San Juan | 2 | 13.5 | 5,000 | 2 | 1 | 2 | 5.5 | unclimbed |
-| [Cimarron / Coxcomb](trips/cimarron_coxcomb.md) | San Juan | 3 | 23.9 | 11,114 | 8 | 3 | 2.7 | 5.5 | unclimbed |
+| [Cimarron / Coxcomb](trips/cimarron_coxcomb.md) | San Juan | 4 | 23.9 | 11,114 | 8 | 3 | 2.7 | 5.5 | unclimbed |
 | [PT 13,155 Group](peaks/pt_13155_group.md) | San Juan | 2 | — | 3,500 | 3 | 1 | 3 | 5.6 | unclimbed |
 | [Campbell Creek Pk](peaks/campbell_creek_pk.md) | San Juan | 2 | 5.7 | 3,443 | 1 | 1 | 1 | 5.75 | unclimbed |
 | [Rio Grande Pyramid Three](peaks/rio_grande_pyramid_three.md) | San Juan | 2–4 | 19.5 | 5,207 | 3 | 1 | 3 | 5.75 | unclimbed |
