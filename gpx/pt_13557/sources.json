@@ -5,9 +5,9 @@
     "note": "gpxlib_locator.php"
   },
   "peakbagger": {
-    "checked": false,
-    "found": 0,
-    "note": "NOT SWEPT \u2014 re-run this source's sweep"
+    "checked": true,
+    "found": 1,
+    "note": "verified pids {'268': '14638'}"
   },
   "listsofjohn": {
     "checked": true,
