@@ -41,6 +41,19 @@ from pathlib import Path
 
 GPX_ROOT = Path(__file__).resolve().parent.parent / "gpx"
 NS = "{http://www.topografix.com/GPX/1/1}"
+
+
+def export_to_gps_tracks(slug):
+    """Mirror the just-built route (+ summit/trailhead markers) into the iCloud
+    'GPS Tracks' folder. Best-effort: never fails the route build."""
+    try:
+        sys.path.insert(0, str(Path(__file__).resolve().parent))
+        from export_to_gps_tracks import export, DEFAULT_DEST
+        export(slug, DEFAULT_DEST)
+    except SystemExit as ex:
+        print(f"  WARN: GPS Tracks export skipped: {ex}", file=sys.stderr)
+    except Exception as ex:
+        print(f"  WARN: GPS Tracks export skipped: {ex}", file=sys.stderr)
 SKIP = ("peaks_only", "landmark", "trailhead", "recommended", "_drive", "drive_in", "waypoints", "summit")
 SNAP_MAX_M = 250.0   # a track must pass this close to "reach" an objective
 
@@ -464,6 +477,7 @@ def main():
                 f.write(f'<trkpt lat="{la:.6f}" lon="{lo:.6f}">{es}</trkpt>\n')
             f.write("</trkseg></trk>\n</gpx>\n")
         print(f"Wrote {out}")
+        export_to_gps_tracks(args.slug)
         return
 
     track_files = [f for f in sorted(d.glob("*.gpx"))
@@ -611,6 +625,7 @@ def main():
             f.write(f'<trkpt lat="{la:.6f}" lon="{lo:.6f}">{es}</trkpt>\n')
         f.write("</trkseg></trk>\n</gpx>\n")
     print(f"Wrote {out}")
+    export_to_gps_tracks(args.slug)
 
 
 if __name__ == "__main__":

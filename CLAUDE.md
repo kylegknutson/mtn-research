@@ -73,7 +73,11 @@ single-peak/group report is essentially:
    (build_peak_gpx → caltopo_mytracks → combo_stats → drive_time → make_overview_map
    → gpx_to_caltopo --new-map → summit markers → sync_to_regional).
 5. `scripts/build_recommended_route.py <slug>` — composed route; **gain from DEM,
-   distance from GPX**. If the teleport gate flags it, re-run with `--legs`.
+   distance from GPX**. If the teleport gate flags it, re-run with `--legs`. On
+   success it auto-mirrors the route + summit + trailhead markers into the iCloud
+   **`Documents/GPS Tracks/<slug>_recommended.gpx`** (one combined GPX, phone-loadable)
+   via `scripts/export_to_gps_tracks.py`. Backfill old reports with
+   `scripts/export_to_gps_tracks.py --all` (or a single `<slug>`).
 6. Write `docs/peaks/<slug>.md` (prose + structured frontmatter) and add it to
    `mkdocs.yml` nav.
 7. `scripts/gen_quickstats.py`
