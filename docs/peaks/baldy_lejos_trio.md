@@ -13,6 +13,9 @@ class: 2
 peaks: 3
 days: 1
 drive_h: 5.0
+th_source: "recorded GPS-track start at West Willow Creek upper TH (San Luis Pass) (37.9553,-106.9665) — swept tracks begin at the TH"
+class_source: "route beta — listsofjohn + peakbagger trip-report tracks (Class 2 tundra/talus; matches peak_db summit grade)"
+status_source: "peak_db ascents (Kyle — climbed)"
 ---
 
 # "Baldy Lejos" + PT 13,115 + PT 13,030 — La Garita Wilderness (West Willow / Creede)
