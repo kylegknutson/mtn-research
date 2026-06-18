@@ -48,8 +48,8 @@ def export_to_gps_tracks(slug):
     'GPS Tracks' folder. Best-effort: never fails the route build."""
     try:
         sys.path.insert(0, str(Path(__file__).resolve().parent))
-        from export_to_gps_tracks import export, DEFAULT_DEST
-        export(slug, DEFAULT_DEST)
+        from export_to_gps_tracks import export_dir, DEFAULT_DEST
+        export_dir(slug, DEFAULT_DEST)
     except SystemExit as ex:
         print(f"  WARN: GPS Tracks export skipped: {ex}", file=sys.stderr)
     except Exception as ex:
