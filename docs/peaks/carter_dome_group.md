@@ -11,6 +11,9 @@ class: 1
 peaks: 6
 days: 1
 drive_h: 32.0
+th_source: "recorded GPS-track start at Pinkham Notch Visitor Center (South TH) (44.2574,-71.253) — swept tracks begin at the TH"
+class_source: "route beta — peakbagger trip reports + AMC White Mountain Guide (Class 1 maintained trails / AT traverse; ≥ peak_db summit grade)"
+status_source: "peak_db ascents (Kyle — unclimbed)"
 ---
 
 <!-- CLIMBERS_START -->

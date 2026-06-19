@@ -240,16 +240,20 @@ def _count_on_disk(slug):
     c = {"14ers": 0, "peakbagger": 0, "listsofjohn": 0}
     skip = ("peaks_only", "landmark", "trailhead", "recommended", "_drive",
             "drive_in", "waypoints", "summit", "actual", "kyle")
+    # MUST match check_source_coverage.SOURCE_TOKENS (order matters: "pb" is broad,
+    # so test 14ers/loj first) — else finalize's committed sources.json disagrees with
+    # the coverage gate. Older sweeps name pb tracks "*_pbAscent*" (no "_pb_"), so the
+    # narrow tokens undercounted them to 0 (caught on carter_dome_group, 2026-06-18).
+    toks = (("14ers", ("14ers",)), ("listsofjohn", ("loj", "listsofjohn")),
+            ("peakbagger", ("pb", "peakbagger")))
     for f in (GPX / slug).glob("*.gpx"):
         n = f.name.lower()
         if any(x in n for x in skip):
             continue
-        if "14ers" in n:
-            c["14ers"] += 1
-        elif "_pb_" in n or "peakbagger" in n:
-            c["peakbagger"] += 1
-        elif "_loj_" in n or "listsofjohn" in n:
-            c["listsofjohn"] += 1
+        for src, tks in toks:
+            if any(t in n for t in tks):
+                c[src] += 1
+                break
     return c
 
 
