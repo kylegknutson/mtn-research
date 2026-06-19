@@ -81,11 +81,20 @@ def summits(d: Path):
 
 
 def route_pts(d: Path):
-    f = next(iter(d.glob("*recommended*.gpx")), None)
-    if not f:
+    # Union the points of EVERY recommended route in the dir. A multi-day trip has
+    # one route PER DAY (day_six_recommended, day_fortress_precipice_recommended, …);
+    # each objective is reached by its own day's route, so a summit counts as reached
+    # if ANY day's route passes it. Reading just the first file falsely failed the
+    # other days' peaks (caught on cimarron_coxcomb, 2026-06-18). iter() also spans
+    # multiple <trk> within a file (individual out-and-back climbs).
+    files = sorted(d.glob("*recommended*.gpx"))
+    if not files:
         return None
-    root = ET.parse(f).getroot()
-    return [(float(p.get("lat")), float(p.get("lon"))) for p in root.iter(NS + "trkpt")]
+    pts = []
+    for f in files:
+        root = ET.parse(f).getroot()
+        pts += [(float(p.get("lat")), float(p.get("lon"))) for p in root.iter(NS + "trkpt")]
+    return pts or None
 
 
 def main():
