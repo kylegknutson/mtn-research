@@ -15,6 +15,9 @@ peaks: 6
 days: 1
 drive_h: 3.5
 weather: "https://forecast.weather.gov/MapClick.php?lat=39.190&lon=-106.540"
+th_source: "recorded GPS-track start at Wildcat Rd end / Fryingpan Lakes TH (N) (39.2453,-106.53) — swept tracks begin at the TH"
+class_source: "route beta — listsofjohn + peakbagger trip-report tracks (Class 3–4 ridge link-up incl. PT 13,291; ≥ peak_db summit grade)"
+status_source: "peak_db ascents (Kyle — unclimbed)"
 ---
 
 # Wayah Group — 6 unclimbed ranked 13ers (Sawatch ridge loop)

@@ -17,6 +17,9 @@ days_detail:
   - {label: "Middle Fork six", peaks: 6, dist_mi: 13.3, gain_ft: 5785, class: "4"}
   - {label: "Fortress", peaks: 1, dist_mi: 6.0, gain_ft: 2518, class: "3"}
   - {label: "Precipice", peaks: 1, dist_mi: 4.6, gain_ft: 2811, class: "3"}
+th_source: "recorded GPS-track start at Middle Fork Cimarron TH #227 (38.143,-107.525; day_six begins here) + West Fork Cimarron TH (38.127,-107.5598; Fortress/Precipice approach) — peaks.yml trailheads"
+class_source: "route beta — listsofjohn + peakbagger trip-report tracks (Class 3–4 on PT 13,222 B / El Punto; ≥ peak_db summit grade)"
+status_source: "peak_db ascents (Kyle — unclimbed)"
 ---
 
 # Cimarron / Coxcomb — 8 Remaining 13ers (Trip)
