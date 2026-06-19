@@ -86,6 +86,20 @@ single-peak/group report is essentially:
 9. `git add … && git commit … && git push` (all allow-listed).
 
 ## Hard rules
+- **Change the report format → refresh EVERY report in the same change (Kyle, 2026-06-18).**
+  Any change to the report "format" — a new/renamed frontmatter field, a new gate or
+  required provenance token, a map style/legend, the report template, quickstats, the
+  index/nav schema — is INCOMPLETE until **all existing reports are brought up to the new
+  format and `scripts/run_gates.py --all` passes clean.** Never ship a format change that
+  only the new report satisfies (that's exactly how 14 reports silently lost source-coverage
+  + provenance). The pre-push hook only gates `--changed`, so it will NOT catch this for you —
+  after any format change you MUST run `run_gates.py --all` yourself and fix every report it
+  flags before committing. If refreshing all of them in one pass is too big, it's still not
+  "done": track the remainder as an explicit backlog ([[project-reverify-reports]]) and keep
+  `run_gates.py --all` as the definition of done. (Note: CI can't run coverage `--all` — GPX
+  tracks are gitignored, so they're absent there; the real lock is local, via the pre-push
+  hook. Planned: escalate the hook to `--all` when format-defining files change — wire it once
+  the coverage backlog is green so it doesn't block on in-progress work.)
 - **Use the allow-listed `scripts/*.py` + the Grep / Read / Glob / Edit / Write
   tools.** NEVER run inline `python3 <<'PY'` heredocs, `uv run /tmp/*.py`, or
   `grep`/`sed`/`head`/`cat`/`find`/`awk` in Bash — none are allow-listed and each
