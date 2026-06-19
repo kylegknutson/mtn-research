@@ -16,6 +16,9 @@ weather: "https://forecast.weather.gov/MapClick.php?lat=37.9694&lon=-106.9872"  
 days_detail:
   - {label: "Trio", peaks: 3, dist_mi: 11, gain_ft: 3750, class: "2"}
   - {label: "Bridge pair", peaks: 2, dist_mi: 8.2, gain_ft: 3050, class: "3"}
+th_source: "recorded GPS-track start at West Willow Creek upper TH (San Luis Pass) (37.9556,-106.9666) — both day routes begin at the TH"
+class_source: "route beta — listsofjohn + peakbagger trip-report tracks (Class 3 bridge pair; Class 2 trio; ≥ peak_db summit grade)"
+status_source: "peak_db ascents (Kyle — climbed)"
 ---
 
 # West Willow Creek — 5 La Garita 13ers from San Luis Pass (2-Day)

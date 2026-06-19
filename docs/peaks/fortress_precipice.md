@@ -17,6 +17,9 @@ drive_h: 5.5
 days_detail:
   - {label: "Fortress", peaks: 1, dist_mi: 6.0, gain_ft: 2518, class: "3"}
   - {label: "Precipice", peaks: 1, dist_mi: 4.6, gain_ft: 2811, class: "3"}
+th_source: "recorded GPS-track approach from West Fork Cimarron TH (38.127,-107.5598) — peaks.yml trailhead; per-peak out-and-back tracks"
+class_source: "route beta — listsofjohn + peakbagger trip-report tracks (Class 3; matches peak_db summit grade)"
+status_source: "peak_db ascents (Kyle — unclimbed)"
 ---
 
 # Fortress Pk + Precipice Pk (Cimarron) — two individual climbs

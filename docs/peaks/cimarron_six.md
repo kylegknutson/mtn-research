@@ -14,6 +14,9 @@ class: 4
 peaks: 6
 days: 1
 drive_h: 5.5
+th_source: "recorded GPS-track start at Middle Fork Cimarron TH #227 (38.143,-107.525) — swept tracks begin at the TH"
+class_source: "route beta — listsofjohn + peakbagger trip-report tracks (Class 3–4 on PT 13,222 B / El Punto; ≥ peak_db summit grade)"
+status_source: "peak_db ascents (Kyle — unclimbed)"
 ---
 
 # Cimarron "Remaining Six" — Heisshorn + El Punto + 4 PTs (Coxcomb area)
