@@ -49,16 +49,32 @@ REPO_WIDE = [
 ]
 
 
-def changed_slugs() -> set[str]:
-    """Base slugs touched by the commits being pushed (vs origin/main)."""
+# A change to any of these redefines the report FORMAT (a gate, a generated/committed
+# artifact's schema, the report template/runbook, the route/map builders). Per Kyle's
+# rule (2026-06-18, CLAUDE.md Hard rule #1): a format change must leave EVERY report
+# still conforming — so when one of these is in the push, we escalate from --changed to
+# gating ALL reports, the lock that stops old reports silently drifting out of format.
+def is_format_file(f: str) -> bool:
+    if f == "CLAUDE.md" or f.startswith("scripts/check_") or f.startswith("scripts/gen_"):
+        return True
+    return f in {
+        "scripts/run_gates.py", "scripts/build_report.py", "scripts/scaffold_report.py",
+        "scripts/build_recommended_route.py", "scripts/make_overview_map.py",
+    }
+
+
+def changed_files() -> list[str]:
+    """Files touched by the commits being pushed (vs origin/main)."""
     for base in ("origin/main...HEAD", "HEAD~1...HEAD"):
         r = subprocess.run(["git", "diff", "--name-only", base], cwd=ROOT,
                             capture_output=True, text=True)
         if r.returncode == 0:
-            files = r.stdout.split()
-            break
-    else:
-        files = []
+            return r.stdout.split()
+    return []
+
+
+def slugs_from_files(files) -> set[str]:
+    """Base slugs touched by the given changed files."""
     slugs = set()
     for f in files:
         parts = f.split("/")
@@ -82,12 +98,21 @@ def main():
     g.add_argument("--slug")
     args = ap.parse_args()
 
+    all_slugs = lambda: sorted(d.name for d in (ROOT / "gpx").iterdir() if d.is_dir())
     if args.slug:
         slugs = [args.slug]
     elif args.all:
-        slugs = sorted(d.name for d in (ROOT / "gpx").iterdir() if d.is_dir())
+        slugs = all_slugs()
     else:
-        slugs = sorted(changed_slugs())
+        files = changed_files()
+        fmt = sorted(f for f in files if is_format_file(f))
+        if fmt:
+            # Format change → the whole repo must still conform (Kyle's rule).
+            print(f"▶ format-defining file(s) changed ({', '.join(fmt)})")
+            print("▶ escalating to --all: every report must still match the new format")
+            slugs = all_slugs()
+        else:
+            slugs = sorted(slugs_from_files(files))
 
     fails = []
     if slugs:

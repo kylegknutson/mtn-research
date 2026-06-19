@@ -96,10 +96,12 @@ single-peak/group report is essentially:
   after any format change you MUST run `run_gates.py --all` yourself and fix every report it
   flags before committing. If refreshing all of them in one pass is too big, it's still not
   "done": track the remainder as an explicit backlog ([[project-reverify-reports]]) and keep
-  `run_gates.py --all` as the definition of done. (Note: CI can't run coverage `--all` — GPX
-  tracks are gitignored, so they're absent there; the real lock is local, via the pre-push
-  hook. Planned: escalate the hook to `--all` when format-defining files change — wire it once
-  the coverage backlog is green so it doesn't block on in-progress work.)
+  `run_gates.py --all` as the definition of done. **The lock is wired:** `run_gates.py` (pre-push
+  hook) auto-escalates from `--changed` to `--all` whenever the push touches a format-defining
+  file (`CLAUDE.md`, `scripts/check_*`, `scripts/gen_*`, `run_gates.py`, `build_report.py`,
+  `scaffold_report.py`, `build_recommended_route.py`, `make_overview_map.py`) — so a format
+  change can't land unless every existing report still passes. (CI can't do this — GPX tracks
+  are gitignored, absent there; the lock is local in the hook, which has the working-tree tracks.)
 - **Use the allow-listed `scripts/*.py` + the Grep / Read / Glob / Edit / Write
   tools.** NEVER run inline `python3 <<'PY'` heredocs, `uv run /tmp/*.py`, or
   `grep`/`sed`/`head`/`cat`/`find`/`awk` in Bash — none are allow-listed and each
