@@ -46,14 +46,27 @@ def hav(a, b, c, d):
     return 2 * R * math.asin(math.sqrt(x))
 
 
+# Fast path: scan trackpoint coords with a regex instead of building a full DOM.
+# After the 3-source grind each report dir holds a dozen+ large source tracks, and
+# ET.parse of all of them dominated run_gates (~4 s/report). A text scan is ~10x
+# faster; fall back to a real parse only if the standard "lat=…" lon=…"" order misses.
+_TRKPT = re.compile(r'<trkpt\s+lat="([-\d.]+)"\s+lon="([-\d.]+)"')
+
+
 def track_miles(path: Path):
     try:
-        root = ET.parse(path).getroot()
-    except ET.ParseError:
+        text = path.read_text()
+    except OSError:
         return None
-    pts = [(float(p.get("lat")), float(p.get("lon"))) for p in root.iter(NS + "trkpt")]
+    pts = [(float(a), float(b)) for a, b in _TRKPT.findall(text)]
     if len(pts) < 2:
-        return None
+        try:                       # non-standard attribute order → real parse
+            root = ET.parse(path).getroot()
+        except ET.ParseError:
+            return None
+        pts = [(float(p.get("lat")), float(p.get("lon"))) for p in root.iter(NS + "trkpt")]
+        if len(pts) < 2:
+            return None
     return sum(hav(pts[i][0], pts[i][1], pts[i + 1][0], pts[i + 1][1])
                for i in range(len(pts) - 1)) / 1609.34
 

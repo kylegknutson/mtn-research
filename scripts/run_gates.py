@@ -22,7 +22,8 @@ maps) always run, since those committed artifacts must never drift.
     scripts/run_gates.py --slug gladstone_peak
 """
 from __future__ import annotations
-import argparse, subprocess, sys
+import argparse, os, subprocess, sys
+from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -98,11 +99,15 @@ def main():
     g.add_argument("--slug")
     args = ap.parse_args()
 
-    all_slugs = lambda: sorted(d.name for d in (ROOT / "gpx").iterdir() if d.is_dir())
+    # real report dirs only — skip helpers like gpx/_exports/, gpx/_kyle_existing/
+    all_slugs = lambda: sorted(d.name for d in (ROOT / "gpx").iterdir()
+                               if d.is_dir() and not d.name.startswith("_"))
+    every = all_slugs()
+    gate_all = False
     if args.slug:
         slugs = [args.slug]
     elif args.all:
-        slugs = all_slugs()
+        slugs, gate_all = every, True
     else:
         files = changed_files()
         fmt = sorted(f for f in files if is_format_file(f))
@@ -110,31 +115,49 @@ def main():
             # Format change → the whole repo must still conform (Kyle's rule).
             print(f"▶ format-defining file(s) changed ({', '.join(fmt)})")
             print("▶ escalating to --all: every report must still match the new format")
-            slugs = all_slugs()
+            slugs, gate_all = every, True
         else:
             slugs = sorted(slugs_from_files(files))
+            gate_all = set(slugs) == set(every) and bool(slugs)
 
-    fails = []
-    if slugs:
+    # Speed: each gate is a separate `uv run` process, and concurrent uv invocations
+    # contend on uv's cache lock — so spawning 7×N (slug,gate) procs in parallel is
+    # SLOWER than fewer procs. Two modes:
+    #   • gating ALL reports → run each gate ONCE in its own all-reports mode (7 procs,
+    #     not 7×N); the gates' inner loops are cheap now (check_route_stats scans coords
+    #     by regex, not DOM). + 6 repo-wide = 13 procs.
+    #   • gating a subset → one proc per (slug,gate); few slugs, so the count stays low.
+    # All procs run in a thread pool (subprocess releases the GIL), wall ≈ slowest proc.
+    workers = min(16, (os.cpu_count() or 4))
+    fail_keys = ("FAIL", "MISSING", "STALE", "missing", "✗")
+
+    def show_fail(label, out):
+        print(f"  ✗ {label}")
+        for line in out.splitlines():
+            if any(k in line for k in fail_keys):
+                print(f"      {line.strip()}")
+
+    if slugs and gate_all:
+        print(f"▶ gating all {len(slugs)} reports (batched: one process per gate)")
+        jobs = [(f"{desc} ({gate})", [gate, "--strict"]) for gate, desc in PER_SLUG]
+    elif slugs:
         print(f"▶ gating {len(slugs)} report(s): {', '.join(slugs)}")
-        for slug in slugs:
-            for gate, desc in PER_SLUG:
-                ok, out = run([gate, slug, "--strict"])
-                if not ok:
-                    fails.append(f"{slug}: {desc} ({gate})")
-                    print(f"  ✗ {slug:24s} {desc}")
-                    for line in out.splitlines():
-                        if "FAIL" in line or "MISSING" in line or "STALE" in line or "missing" in line:
-                            print(f"      {line.strip()}")
+        jobs = [(f"{slug}: {desc} ({gate})", [gate, slug, "--strict"])
+                for slug in slugs for gate, desc in PER_SLUG]
     else:
         print("▶ no report files changed vs origin/main — running repo-wide freshness only")
+        jobs = []
 
     print("▶ repo-wide freshness checks")
-    for cmd, desc in REPO_WIDE:
-        ok, out = run(cmd)
-        if not ok:
-            fails.append(f"repo: {desc} ({cmd[0]})")
-            print(f"  ✗ {desc} ({cmd[0]})")
+    jobs += [(f"repo: {desc} ({cmd[0]})", cmd) for cmd, desc in REPO_WIDE]
+    fails = []
+    with ThreadPoolExecutor(max_workers=workers) as ex:
+        futs = {ex.submit(run, cmd): label for label, cmd in jobs}
+        for fut in futs:
+            ok, out = fut.result()
+            if not ok:
+                fails.append(futs[fut])
+                show_fail(futs[fut], out)
 
     if fails:
         print(f"\n✗ {len(fails)} gate failure(s) — push blocked. Fix, or `git push --no-verify` to override deliberately.")
