@@ -1,0 +1,13 @@
+# Brown Mountain (Brown Mtn A) — single ranked 13er between Ouray & Silverton.
+# Hurricane Pk + California Mtn A appear in older peaks_only markers as link-up
+# CANDIDATES only; the report objective (peaks: 1) is Brown Mtn A itself.
+objective_ids:
+- 451   # Brown Mtn A 13,347 (14ers 10441 / pb 60362)
+nearby:
+  include: false
+landmarks:
+- name: Ironton (W approach TH)
+  lat: 37.94
+  lon: -107.6688
+  kind: trailhead
+  ele_ft: 9700

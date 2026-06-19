@@ -13,6 +13,9 @@ class: 2
 peaks: 1
 days: 1
 drive_h: 6.3
+th_source: "recorded GPS-track start near Ironton (W approach TH) (37.94,-107.6688) — swept tracks begin at the TH"
+class_source: "route beta — listsofjohn + peakbagger trip-report tracks (Class 2 standard route; matches peak_db summit grade)"
+status_source: "peak_db ascents (Kyle — unclimbed)"
 ---
 
 # Brown Mountain (San Juan Mountains, between Ouray & Silverton)
