@@ -14,6 +14,9 @@ class: 3
 peaks: 5
 days: 1
 drive_h: 3.8
+th_source: "recorded GPS-track start at Lost Man TH (Hwy 82, W of Independence Pass) (39.1219,-106.6242) — swept tracks begin at the TH"
+class_source: "route beta — listsofjohn + peakbagger trip-report tracks (Class 3 ridge link-up; matches peak_db summit grade)"
+status_source: "peak_db ascents (Kyle — unclimbed)"
 ---
 
 # Williams Mountains Traverse — 5 ranked 13ers (Sawatch / Hunter-Fryingpan Wilderness)

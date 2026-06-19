@@ -14,6 +14,9 @@ class: "2–4"
 peaks: 3
 days: 1
 drive_h: 5.75
+th_source: "recorded GPS-track terminus at Weminuche Trail TH (Thirtymile, Rio Grande Reservoir) (37.7233,-107.259) — route begins/ends at the TH"
+class_source: "route beta — listsofjohn + peakbagger trip-report tracks (Class 3–4 crux on PT 13,022; ≥ peak_db summit grade)"
+status_source: "peak_db ascents (Kyle — unclimbed)"
 ---
 
 # Rio Grande Pyramid Three — PT 13,290 + PT 13,274 + PT 13,022 (Weminuche)

@@ -16,6 +16,9 @@ peaks: 4
 days: 1
 drive_h: 2.75
 weather: "https://forecast.weather.gov/MapClick.php?lat=38.920&lon=-106.410"
+th_source: "recorded GPS-track start at Clohesey Lake TH (4WD) (38.951,-106.4075) — swept tracks begin at the TH"
+class_source: "route beta — listsofjohn + peakbagger trip-report tracks (Class 2 summits, 2+ link-up; ≥ peak_db summit grade)"
+status_source: "scrape_14ers_checklist emily"
 ---
 
 # Clohesey Four — Magdalene + Pear + 13,513 + 13,486 (Sawatch)
