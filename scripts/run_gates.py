@@ -39,11 +39,21 @@ PER_SLUG = [
     ("check_route_exists.py", "has a recommended route"),
     ("check_map_fresh.py", "PNG not stale vs route/tracks"),
 ]
-# repo-wide artifact-freshness gates (committed files must match frontmatter)
+# Map-QA gates are SLOW (pure-Python per-pixel PNG loops + full-track parsing, ~5 s
+# each per report). They take a scope arg, so on a normal push we run them only on the
+# CHANGED reports; they cover ALL reports only when gating all (a format change). A
+# map-STYLE change goes through make_overview_map.py — a format-defining file — so it
+# escalates to --all and re-QAs every map anyway.
+#   check_maps.py <png…>    (default: all docs/maps/*.png)
+#   check_map_extents.py <slug>   (default: all slugs)
+MAP_GATES = [
+    ("map QA", "check_maps.py", lambda s: f"docs/maps/{s}.png"),
+    ("map extents", "check_map_extents.py", lambda s: s),
+]
+# Always-full aggregate validators — cross-report committed artifacts that one report's
+# edit can desync (and all are fast: ≤2 s).
 REPO_WIDE = [
     (["check_reports.py"], "source-rigor footer"),
-    (["check_maps.py"], "map QA"),
-    (["check_map_extents.py"], "map extents"),
     (["gen_index.py", "--check"], "index table current"),
     (["gen_quickstats.py", "--check"], "quick-stats current"),
     (["gen_peak_map.py", "--check"], "home-map data current"),
@@ -140,10 +150,17 @@ def main():
     if slugs and gate_all:
         print(f"▶ gating all {len(slugs)} reports (batched: one process per gate)")
         jobs = [(f"{desc} ({gate})", [gate, "--strict"]) for gate, desc in PER_SLUG]
+        jobs += [(f"{desc} ({g})", [g]) for desc, g, _ in MAP_GATES]   # full sweep
     elif slugs:
         print(f"▶ gating {len(slugs)} report(s): {', '.join(slugs)}")
         jobs = [(f"{slug}: {desc} ({gate})", [gate, slug, "--strict"])
                 for slug in slugs for gate, desc in PER_SLUG]
+        for s in slugs:                                                # scoped map QA
+            for desc, g, arg in MAP_GATES:
+                a = arg(s)
+                if g == "check_maps.py" and not (ROOT / a).exists():
+                    continue
+                jobs.append((f"{s}: {desc} ({g})", [g, a]))
     else:
         print("▶ no report files changed vs origin/main — running repo-wide freshness only")
         jobs = []
