@@ -86,6 +86,19 @@ single-peak/group report is essentially:
 9. `git add … && git commit … && git push` (all allow-listed).
 
 ## Hard rules
+- **One recommended route per DAY for multi-day trips (Kyle, 2026-06-21).**
+  A single-day report has exactly one recommended route; a multi-day **Trip** (frontmatter
+  `days: N`, N>1) has **N routes — one composed line per day** (the day clusters can be miles
+  apart with no recorded track between them, so there is no single line). Build them with
+  **`scripts/build_trip_day_routes.py <slug>`**, which reads a `days:` block in
+  `gpx/<slug>/peaks.yml` (each day = `{label, objective_ids}` — a subset of the trip's
+  `objective_ids`), composes each day's route from its objective subset + nearest trailhead
+  (via `build_recommended_route.py --peaks-only`), and writes `day_<label>_recommended.gpx`.
+  `gen_peak_map`/`make_overview_map` draw EVERY `*recommended*.gpx`, so all day routes show
+  on the home + overview maps. **No `no_single_route` exemption** — it's gone (it left South
+  San Juans with no route at all); `check_route_exists.py` now FAILs a trip with fewer routes
+  than days. (Don't leave a stale combined `<slug>_recommended.gpx` next to the day files —
+  delete it so it isn't double-drawn.)
 - **Rebuild a research map → leave NO duplicate/orphaned CalTopo map (Kyle, 2026-06-21).**
   Each `build_report` rebuild WITHOUT `--caltopo-id` mints a NEW CalTopo map and repoints
   the report's frontmatter to it — orphaning the OLD map on the account. A lingering orphan

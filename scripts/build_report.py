@@ -186,8 +186,8 @@ def finalize_phase(args):
         ["check_report_ready.py", args.slug, "--strict"],
         # the overview PNG must reflect the current route + tracks (no stale map)
         ["check_map_fresh.py", args.slug, "--strict"],
-        # every report must have a composed recommended route (or be a declared
-        # no_single_route multi-day trip)
+        # every report needs a composed recommended route — one per DAY for a
+        # multi-day trip (build_trip_day_routes.py); no exemptions
         ["check_route_exists.py", args.slug, "--strict"],
     ]
     for chk in gates:

@@ -10,11 +10,15 @@ Kyle (2026-06-17): "all reports should always have a recommended route." A repor
 without a `gpx/<slug>/*_recommended.gpx` shows no magenta route on its PNG, its
 CalTopo map, or the home-page map. This gate makes that a hard requirement.
 
-Climber reports (<slug>.<climber>.md) share the base report's gpx dir, so the
-route is looked up under the base slug. The only allowed exception is a genuinely
-non-contiguous multi-day trip (peaks in separate areas that no party walks
-between) — declare it in frontmatter with `no_single_route: true` plus a reason,
-and it's exempted (and reported, never silent).
+Kyle (2026-06-21): one route per DAY — a single-day report needs ≥1 recommended
+route; a multi-day Trip (frontmatter `days: N`, N>1) needs ≥N route files (one
+composed line per day; the day clusters can be miles apart with no track between,
+so there is no single line). NO exemption — the old `no_single_route` escape hatch
+is gone (it left South San Juans with no route at all). Build per-day routes with
+scripts/build_trip_day_routes.py (reads peaks.yml `days:`).
+
+Climber reports (<slug>.<climber>.md) share the base report's gpx dir, so routes
+are looked up under the base slug.
 
     scripts/check_route_exists.py
     scripts/check_route_exists.py gladstone_peak
@@ -49,23 +53,28 @@ def main():
                 continue
             reports.append(p)
 
-    missing = exempt = 0
+    missing = short = 0
     for p in reports:
         base = p.stem.split(".")[0]
-        has = any((GPX / base).glob("*recommended*.gpx"))
-        if has:
-            continue
+        routes = list((GPX / base).glob("*recommended*.gpx"))
         meta = fm(p)
-        if meta.get("no_single_route"):
-            exempt += 1
-            print(f"exempt {p.name:34s} (no_single_route: {str(meta.get('no_single_route'))[:40]})")
-            continue
-        missing += 1
-        print(f"MISSING {p.name:34s} no gpx/{base}/*_recommended.gpx — build it "
-              f"(scripts/build_recommended_route.py {base})")
+        try:
+            days = int(meta.get("days") or 1)
+        except (TypeError, ValueError):
+            days = 1
+        need = days if days > 1 else 1   # multi-day Trip → one route PER DAY
+        if not routes:
+            missing += 1
+            tool = "build_trip_day_routes.py" if need > 1 else "build_recommended_route.py"
+            print(f"MISSING {p.name:34s} no gpx/{base}/*_recommended.gpx — build it "
+                  f"(scripts/{tool} {base})")
+        elif len(routes) < need:
+            short += 1
+            print(f"SHORT   {p.name:34s} {len(routes)} route(s) but days: {days} — a multi-day "
+                  f"trip needs one route PER DAY (scripts/build_trip_day_routes.py {base})")
 
-    print(f"\n{len(reports)} report(s) — {missing} missing a recommended route, {exempt} exempt.")
-    if args.strict and missing:
+    print(f"\n{len(reports)} report(s) — {missing} missing a route, {short} short of one-route-per-day.")
+    if args.strict and (missing or short):
         sys.exit(1)
 
 
