@@ -111,6 +111,16 @@ single-peak/group report is essentially:
   **0 orphaned**; prune leftovers with `audit_caltopo_maps.py --prune` (or
   `delete_caltopo_map.py <id> --yes`). Personal maps ("GPS Tracks — …", named hikes) are
   never touched. CalTopo is local-only (cts.ini gitignored) — these checks no-op in CI.
+- **Kyle's recorded climbs sync onto the research maps (Kyle, 2026-06-22).** peak_checklist
+  drops Garmin climbs as `gpx/<slug>/_kyle_existing/<peaks> YYYY-MM-DD_actual.gpx`;
+  **`scripts/sync_kyle_recordings.py`** puts them on the slug's CalTopo map + PNG (ledger-gated
+  no-op, `--dry-run`, soft-fail, auto commit+push). Map resolution is **duplicate-safe**:
+  peaks.yml `caltopo_map_id` → else report frontmatter `caltopo_id` (backfilled into peaks.yml)
+  → else create new — so it reuses the existing research map instead of orphaning a duplicate.
+  Conventions: Kyle's recordings render **blue `#0066FF`** (gpx_to_caltopo forces `KYLE_COLOR`;
+  `recolor_kyle_tracks.py --all --apply` fixes old ones); objective summits **green `#39FF14`
+  `peak`, ALL objectives** (not climbed-only); recommended routes magenta. `restyle_markers.py`
+  is regional-only. Detail: `docs/methodology/caltopo-pipeline.md`.
 - **Change the report format → refresh EVERY report in the same change (Kyle, 2026-06-18).**
   Any change to the report "format" — a new/renamed frontmatter field, a new gate or
   required provenance token, a map style/legend, the report template, quickstats, the

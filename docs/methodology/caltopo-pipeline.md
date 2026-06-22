@@ -219,3 +219,36 @@ carry all ranked summits.
 > context summits.
 
 > **Pending feature:** PNG track lines are currently all rendered red. Target is to color them by source (LoJ/14ers/peakbagger) like the CalTopo map, and to add automated map-QA tests (distortion / missing-track / blank-tile / aspect-ratio checks) that gate deploys.
+
+## Syncing Kyle's recorded climbs onto the research maps
+
+The separate **peak_checklist** project auto-syncs Kyle's Garmin climbs and drops each
+as `gpx/<slug>/_kyle_existing/<peaks> YYYY-MM-DD_actual.gpx`. mtn_research owns getting
+those onto the slug's CalTopo research map + report PNG via
+**`scripts/sync_kyle_recordings.py`** (peak_checklist's `phase12_pipeline.sh` calls it
+as its last step). It is ledger-gated (`.caltopo_sync_ledger.json`, gitignored — a clean
+no-op when nothing is new), `--dry-run`-able, soft-fails per slug, and auto commits+pushes
+the tracked artifacts (peaks.yml + PNGs; the GPX ride iCloud, gitignored).
+
+**Map resolution is duplicate-safe** — a rebuild must never orphan a duplicate (see the
+no-duplicate-maps hard rule). For each slug with new `*_actual*.gpx`:
+1. `gpx/<slug>/peaks.yml` `caltopo_map_id` → append the recording to it;
+2. else the report's frontmatter `caltopo_id` (the existing research map) → append to it,
+   and **backfill** `caltopo_map_id` into peaks.yml;
+3. else → create a new map over `--gpx-dir gpx/<slug>`, capture the id, write it to peaks.yml.
+
+`caltopo_map_id` (peaks.yml) is the **same** map as the report's `caltopo_id` — it lives in
+peaks.yml so the sync (which reads peaks.yml, not the `.md`) can find it. `delete_caltopo_map.py`
+and `audit_caltopo_maps.py` scan it too, so a sync-managed map isn't flagged orphaned.
+
+**Color / marker conventions on research maps:**
+- **Kyle's recordings (`_kyle_existing/`): blue `#0066FF`** — `gpx_to_caltopo.py` forces
+  `KYLE_COLOR` for these files (matches the PNG `COLOR_KYLE`). Fix any pre-convention
+  recordings in place with `scripts/recolor_kyle_tracks.py --all --apply` (matches a recording
+  by the filename date in its on-map title, or its `<trk><name>`). NOTE: gpx_to_caltopo titles
+  these tracks from the **filename** (`<peaks> (<date>)`), not the GPX `<trk><name>`.
+- **Objective summits: green `#39FF14` `peak` symbol, ALL objectives** (not climbed-only —
+  climbed reads from the blue recorded track passing through). build_report sets this; sync's
+  create-path re-applies it. `restyle_markers.py` is **regional-only** (its default is also
+  `#39FF14`).
+- **Recommended routes: magenta `#E6008C`**; fix stragglers with `scripts/recolor_recommended.py`.
