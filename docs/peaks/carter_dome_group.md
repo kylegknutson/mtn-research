@@ -5,6 +5,7 @@ drive_time: "~32h drive (fly: MHT or BOS + ~2h)"
 yds_class: "1"
 gain: "~7,400–7,650 ft"
 status: unclimbed
+caltopo_id: AAFUQQ1
 regional_map_id: UDK6ETR
 gain_ft: 7525
 class: 1
