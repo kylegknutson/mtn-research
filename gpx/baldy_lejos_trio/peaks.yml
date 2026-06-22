@@ -4,6 +4,7 @@ objective_ids:
 - 714   # "Baldy Lejos" 13,118
 - 701   # PT 13,115
 - 788   # PT 13,030
+caltopo_map_id: 4278RCG   # https://caltopo.com/m/4278RCG
 nearby:
   include: false
 landmarks:

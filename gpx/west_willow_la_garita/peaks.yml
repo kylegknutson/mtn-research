@@ -7,6 +7,7 @@ objective_ids:
 - 788   # PT 13,030
 - 510   # PT 13,308
 - 648   # PT 13,166
+caltopo_map_id: 9PQM9TT   # https://caltopo.com/m/9PQM9TT
 nearby:
   include: false
 landmarks:

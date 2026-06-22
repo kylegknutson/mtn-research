@@ -2,6 +2,7 @@
 objective_ids:
 - 510   # PT 13,308
 - 648   # PT 13,166
+caltopo_map_id: 9VGDUR3   # https://caltopo.com/m/9VGDUR3
 nearby:
   include: false
 landmarks:
