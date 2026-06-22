@@ -497,6 +497,20 @@ def main():
     if not pk or not pk.exists():
         sys.exit("ERROR: no *_peaks_only.gpx (need objective summits)")
     objs = parse_waypoints(pk)
+    # peaks_only can carry NEARBY context peaks (nearby.include) after the real
+    # objectives — build_peak_gpx writes the objectives FIRST, then context. Routing
+    # ALL of them links peaks that aren't objectives (homestake routed through Savage
+    # + PT 13,002; hunts through its already-climbed neighbors). Trim to the declared
+    # objective count so the route only visits the report's actual objectives.
+    if not args.peaks_only:   # an explicit --peaks-only subset is already exactly the objectives
+        yml0 = d / "peaks.yml"
+        if yml0.exists():
+            import yaml
+            oid = (yaml.safe_load(yml0.read_text()) or {}).get("objective_ids") or []
+            if oid and len(oid) < len(objs):
+                print(f"  (trimming {len(objs)} peaks_only markers to {len(oid)} objective(s); "
+                      f"rest are nearby context)")
+                objs = objs[:len(oid)]
     print(f"Objectives ({len(objs)}): " + ", ".join(o[2].split(" (")[0] for o in objs))
 
     # terminals: list of (label, lat, lon); start (if any) first
