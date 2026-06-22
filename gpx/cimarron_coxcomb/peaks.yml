@@ -14,6 +14,12 @@ objective_ids:
 - 662   # Precipice Pk 13,141  (West Fork pair)
 nearby:
   include: false
+# Per-day objective assignments → one recommended route per day (build_trip_day_routes.py).
+# 3 days: the Middle Fork six, then Fortress and Precipice as separate climbs off West Fork TH.
+days:
+- {label: "Middle Fork six", objective_ids: [388, 421, 602, 498, 445, 571]}
+- {label: "Fortress", objective_ids: [552]}
+- {label: "Precipice", objective_ids: [662]}
 landmarks:
 - name: Middle Fork Cimarron TH (#227)
   lat: 38.143

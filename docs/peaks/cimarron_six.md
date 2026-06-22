@@ -29,7 +29,7 @@ status_source: "peak_db ascents (Kyle — unclimbed)"
 <!-- QUICKSTATS_END -->
 
 **Researched:** 2026-06-15
-**Report type:** Day trip (long) — a 6-peak loop of Kyle's remaining unclimbed ranked 13ers around Coxcomb, **minus Fortress + Precipice** (their [own report](fortress_precipice.md)).
+**Report type:** Day trip (long) — a 6-peak loop of Kyle's remaining unclimbed ranked 13ers around Coxcomb, **minus Fortress + Precipice** (days 2–3 of the [Cimarron / Coxcomb trip](../trips/cimarron_coxcomb.md)).
 **CalTopo research map:** https://caltopo.com/m/55M4430
 **Status in DB:** all six unclimbed. (Coxcomb + Redcliff already done.)
 
@@ -121,6 +121,6 @@ A **composed loop** (shortest line through all six, stitched from recorded GPS; 
 - **Your six remaining Coxcomb-area 13ers (minus Fortress/Precipice) in one loop** — **~13.3 mi / ~5,785′**, from the **Middle Fork Cimarron TH (#227)**: NE trio (13,222 B / 13,340 A / El Punto) → Heisshorn → south pair (13,382 / 13,215).
 - **Loose, exposed Class 3–4 day** — **PT 13,222 B (NW ridge) and El Punto are Class 3–4** (per a recorded full-six TR), the cruxes; Heisshorn is Class 3 (rotten rock, a rope "feels nice"); the other three PTs are Class 2/2+. Helmet + rope-reasonable + early start.
 - **GMUG NF / Uncompahgre Wilderness**; ~5h30 drive (US-50 → Cimarron). Cell dead — InReach.
-- **Fortress + Precipice are a [separate report](fortress_precipice.md)** (West Fork side).
+- **Fortress + Precipice are days 2–3 of the [Cimarron / Coxcomb trip](../trips/cimarron_coxcomb.md)** (West Fork side).
 - **Part of the [Cimarron / Coxcomb trip](../trips/cimarron_coxcomb.md)** — pairs this loop with Fortress + Precipice (two individual West Fork climbs) to finish all 8 remaining Coxcomb 13ers.
 - **Research map:** https://caltopo.com/m/55M4430

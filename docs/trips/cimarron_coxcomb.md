@@ -39,10 +39,10 @@ status_source: "peak_db ascents (Kyle — unclimbed)"
 **Report type:** Multi-day trip — Kyle's **8 remaining unclimbed ranked 13ers** around Coxcomb: the **six** as one Middle Fork loop, plus **Fortress** and **Precipice** as two individual West Fork climbs.
 **Status in DB:** all eight **unclimbed**. (Coxcomb + Redcliff already done.)
 
-> Consolidates the **Cimarron** group near **Coxcomb**: the **[remaining six](../peaks/cimarron_six.md)** off the **Middle Fork** (Heisshorn + El Punto + four PTs) in one big loop, plus **[Fortress and Precipice](../peaks/fortress_precipice.md)** climbed **individually** off the **West Fork**. Two forks of the same road — a weekend to finish the area. **Loose, exposed San Juan Class 3**, not a tundra walk.
+> Consolidates the **Cimarron** group near **Coxcomb**: the **[remaining six](../peaks/cimarron_six.md)** off the **Middle Fork** (Heisshorn + El Punto + four PTs) in one big loop, plus **Fortress and Precipice** (days 2–3 below) climbed **individually** off the **West Fork**. Two forks of the same road — a weekend to finish the area. **Loose, exposed San Juan Class 3**, not a tundra walk.
 
 ![Overview map](../maps/cimarron_coxcomb.png)
-*All eight ranked 13ers around Coxcomb. **Magenta routes:** the six-peak Middle Fork loop (E/SE) and the two individual West Fork out-and-backs to Fortress and Precipice (NW). Per-area route detail + interactive maps: [Middle Fork six (55M4430)](https://caltopo.com/m/55M4430) · [Fortress + Precipice (KTTS4F0)](https://caltopo.com/m/KTTS4F0).*
+*All eight ranked 13ers around Coxcomb. **Magenta routes:** the six-peak Middle Fork loop (E/SE) and the two individual West Fork out-and-backs to Fortress and Precipice (NW). Per-area route detail + interactive map: [Middle Fork six (55M4430)](https://caltopo.com/m/55M4430); Fortress + Precipice are the two West Fork day routes above.*
 
 ---
 
@@ -91,7 +91,7 @@ A short, steep out-and-back from the **West Fork Cimarron TH** — faint social 
 ### Fortress (solo) · ~6.0 mi / ~2,520' · Class 3
 A slightly longer out-and-back from the same **West Fork TH**, further S toward Coxcomb — loose Cimarron rock, Class 3.
 
-> Fortress and Precipice both start at the West Fork TH, so a fit party can do **both as separate out-and-backs in one long day** — but they are **not linked** on the ridge. **Full routes + GPX: [Fortress + Precipice report](../peaks/fortress_precipice.md).**
+> Fortress and Precipice both start at the West Fork TH, so a fit party can do **both as separate out-and-backs in one long day** — but they are **not linked** on the ridge. Each is its own day route on the maps above.
 
 ---
 
@@ -131,6 +131,6 @@ A slightly longer out-and-back from the same **West Fork TH**, further S toward 
 - **Kyle's 8 remaining Coxcomb-area 13ers as a trip** (~24 mi / ~11,100', loose Cimarron rock — **PT 13,222 B rated Class 4**, the rest Class 2–3): a six-peak Middle Fork loop **plus Fortress and Precipice as two individual West Fork climbs**.
 - **Two trailheads on two forks of the Cimarron road** — relocate camp between days (a short drive); the six-loop is the big day, Fortress + Precipice are shorter steep half-days (do them separately — deep notches break the connecting ridge).
 - **GMUG NF / Uncompahgre Wilderness**; ~5h30 drive (US-50 → Cimarron). Cell dead — InReach.
-- Detail + GPX: **[Middle Fork six](../peaks/cimarron_six.md)** · **[Fortress + Precipice](../peaks/fortress_precipice.md)**.
+- Detail + GPX: **[Middle Fork six](../peaks/cimarron_six.md)** · **Fortress + Precipice** (days 2–3 above).
 
 **Sources checked:** 14ers.com ✓ (logged in, "letsgocu") · listsofjohn.com ✓ (logged in) · peakbagger.com ✓ (logged in) · climb13ers.com ✓ — synthesized from the two underlying reports.
