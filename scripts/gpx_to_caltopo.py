@@ -284,6 +284,14 @@ def main() -> None:
     files: list[Path] = []
     if args.gpx_dir:
         files.extend(sorted(args.gpx_dir.glob("*.gpx")))
+        # Also include any user-recorded tracks routed here by the
+        # peak_checklist phase12 pipeline (and any manually-curated older
+        # ones). Same treatment as the public-source tracks; classifier
+        # picks them up by filename / _kyle_existing convention.
+        kyle_dir = args.gpx_dir / "_kyle_existing"
+        if kyle_dir.is_dir():
+            files.extend(sorted(kyle_dir.glob("*.gpx")))
+            files.extend(sorted(kyle_dir.glob("*.GPX")))
     files.extend(args.gpx)
     # *_drive*.gpx is a PNG-only annotation (the road between camps, drawn black
     # on the overview) — never upload it to CalTopo.
