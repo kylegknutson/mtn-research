@@ -78,7 +78,7 @@ def recording_signatures(slug: str) -> tuple[set[str], set[str]]:
 
 
 def slugs_with_recordings():
-    return sorted(p.parent.parent.name for p in GPX.glob("*/_kyle_existing"))
+    return sorted(p.parent.name for p in GPX.glob("*/_kyle_existing"))
 
 
 def main():
