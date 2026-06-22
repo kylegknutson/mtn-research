@@ -74,26 +74,28 @@ def id_to_report() -> dict[int, tuple[str, str]]:
     return out
 
 
-def recommended_route(slug: str):
-    """Thinned [[lat,lon],...] of a report's composed recommended route, or None."""
+def recommended_routes(slug: str) -> list:
+    """Thinned [[lat,lon],...] for EVERY composed recommended route of a report —
+    one for a single-day report, one PER DAY for a multi-day trip (day_*_recommended
+    .gpx). Returns a list (possibly empty)."""
     import xml.etree.ElementTree as ET
-    f = next(iter((GPX / slug).glob("*recommended*.gpx")), None)
-    if not f:
-        return None
     NS = "{http://www.topografix.com/GPX/1/1}"
-    try:
-        root = ET.parse(f).getroot()
-    except Exception:
-        return None
-    pts = [(round(float(p.get("lat")), 5), round(float(p.get("lon")), 5))
-           for p in root.iter(NS + "trkpt")]
-    if len(pts) < 2:
-        return None
-    step = max(1, len(pts) // 120)          # ~120 points is plenty at overview zoom
-    thin = pts[::step]
-    if thin[-1] != pts[-1]:
-        thin.append(pts[-1])
-    return thin
+    out = []
+    for f in sorted((GPX / slug).glob("*recommended*.gpx")):
+        try:
+            root = ET.parse(f).getroot()
+        except Exception:
+            continue
+        pts = [(round(float(p.get("lat")), 5), round(float(p.get("lon")), 5))
+               for p in root.iter(NS + "trkpt")]
+        if len(pts) < 2:
+            continue
+        step = max(1, len(pts) // 120)      # ~120 points is plenty at overview zoom
+        thin = pts[::step]
+        if thin[-1] != pts[-1]:
+            thin.append(pts[-1])
+        out.append(thin)
+    return out
 
 
 def build_routes() -> list:
@@ -108,8 +110,8 @@ def build_routes() -> list:
             if md.stem.count(".") or md.stem == "index":
                 continue
             slug = md.stem
-            coords = recommended_route(slug)
-            if not coords:
+            coords_list = recommended_routes(slug)
+            if not coords_list:
                 continue
             objs = []
             yml = GPX / slug / "peaks.yml"
@@ -122,7 +124,8 @@ def build_routes() -> list:
                 objs = frontmatter(md).get("peak_ids") or []
             objs = [int(o) for o in objs if str(o).lstrip("-").isdigit()]
             if objs:
-                routes.append({"o": objs, "c": coords})
+                for coords in coords_list:   # one entry per day route (multi-day trips)
+                    routes.append({"o": objs, "c": coords})
     return routes
 
 

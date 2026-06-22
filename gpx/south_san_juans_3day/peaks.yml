@@ -7,6 +7,11 @@ objective_ids:
 - 654
 nearby:
   include: false
+# Per-day objective assignments → one recommended route per day (build_trip_day_routes.py).
+days:
+- {label: "Bennett", objective_ids: [607]}
+- {label: "Summit trio", objective_ids: [488, 796, 654]}
+- {label: "Conejos", objective_ids: [633]}
 landmarks:
 - name: Bennett Pk TH (FS 265, Del Norte side)
   lat: 37.46

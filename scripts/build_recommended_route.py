@@ -431,6 +431,10 @@ def main():
                     "instead of composing — for when the router routes long but one real party track already "
                     "makes the efficient tour (use scripts/analyze_tracks.py to find it). DEM-measures + writes it.")
     ap.add_argument("--out", default=None)
+    ap.add_argument("--peaks-only", default=None,
+                    help="objectives GPX to use instead of the slug's *_peaks_only.gpx — "
+                         "pass a per-DAY subset to compose a single day's route on a multi-day "
+                         "trip (combine with --start <day TH lat,lon> and --out day_<label>_recommended.gpx)")
     args = ap.parse_args()
 
     d = GPX_ROOT / args.slug
@@ -489,8 +493,8 @@ def main():
         sys.exit("ERROR: no usable source tracks")
     print(f"Source tracks: {len(tracks)}")
 
-    pk = next(d.glob("*peaks_only*.gpx"), None)
-    if not pk:
+    pk = Path(args.peaks_only) if args.peaks_only else next(d.glob("*peaks_only*.gpx"), None)
+    if not pk or not pk.exists():
         sys.exit("ERROR: no *_peaks_only.gpx (need objective summits)")
     objs = parse_waypoints(pk)
     print(f"Objectives ({len(objs)}): " + ", ".join(o[2].split(" (")[0] for o in objs))
