@@ -1,5 +1,6 @@
 # Dolores Peak + Middle Peak (San Miguel / Dolores divide). Fish Creek TH.
 objective_ids: [508, 489]
+caltopo_map_id: R1KSN0U   # https://caltopo.com/m/R1KSN0U
 nearby:
   include: false
 landmarks:
