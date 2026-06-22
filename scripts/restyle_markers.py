@@ -6,8 +6,10 @@
 """
 Restyle summit markers in the regional CalTopo maps: any marker sitting on a
 known 14ers/13ers summit (within SNAP_M of the authoritative 14ers export) is
-changed from the default red dot to the CalTopo `peak` mountain symbol in a
-muted blue. Trailhead / camp / note markers (not on a summit) are left as-is.
+changed from the default red dot to the CalTopo `peak` mountain symbol in neon
+green (#39FF14, the project summit convention; --color to override). Trailhead /
+camp / note markers (not on a summit) are left as-is. REGIONAL maps only —
+research maps get their summit markers from build_report / sync_kyle_recordings.
 
 When a canonical peak name is known (CO snap → GPX wpt name; NE_PEAKS →
 dict value) and the current marker title differs, the title is also updated.
@@ -174,19 +176,10 @@ REGION_MAPS = {
     "arizona": "EL7D3N3", "maine": "751MCA1", "washington": "U247A11",
 }
 
-# mtn-research project maps + other drawn maps (so summit markers match everywhere)
-RESEARCH_MAPS = {
-    "research_crestolita": "6TKA0RH", "gibbs_loop": "MM66DN4", "research_hunts": "2SCT1B6",
-    "research_star": "607Q6C8", "research_savage": "QL51DBE", "research_homestake": "V4D61FV",
-    "research_pennsylvania": "P2V1QG5", "research_jacque": "R2NF0S2", "research_brown": "Q2C5650",
-    "research_telluride": "6FM1FEK", "research_dolores": "1R09CLT", "school_bus": "0J9LBCS",
-    "lost_horse_loop": "DQC173P", "all_map": "C105AEV", "middle_cimarrons": "LRHNVUK",
-    "hanson_group": "R7AHHPK", "nja_from_west": "VM98Q5D", "west_cuba_gulch": "8P140C2",
-    "jacque": "2V59P1V", "snoden_n2": "C77EC4B", "sultan_grand_turk": "V0DJ6R0",
-    "h548": "R3B1J97", "first": "8G650AG",
-    "lakes_of_clouds_emily": "J9G39T0", "chipeta_mtn": "CDMT01G",
-    "powell_eagles_nest": "GG1BKFL",
-}
+# restyle_markers is a REGIONAL-map tool. Research maps get their summit markers from
+# build_report (green #39FF14 `peak` symbol) and, for Kyle's recorded tracks, from
+# sync_kyle_recordings.py — restyle no longer targets them (the old hardcoded
+# RESEARCH_MAPS list went stale, referencing maps that were since deleted/rebuilt).
 
 SNAP_M = 40.0
 
@@ -257,7 +250,6 @@ def main():
     ap.add_argument("--export", required=True, type=Path, help="14ers peak-export GPX")
     ap.add_argument("--map", help="Single map ID")
     ap.add_argument("--all", action="store_true", help="All region maps")
-    ap.add_argument("--research", action="store_true", help="Also include the mtn-research / drawn maps")
     ap.add_argument("--symbol", default="peak", help="CalTopo marker-symbol (default 'peak' = mountain)")
     ap.add_argument("--color", default="#39FF14", help="summit marker-color hex (default neon green)")
     ap.add_argument("--poi-color", default="#888888", help="non-summit POI marker-color hex (default grey)")
@@ -268,10 +260,6 @@ def main():
     print(f"Loaded {len(summits)} authoritative summits from {args.export.name}")
     if args.all:
         targets = list(REGION_MAPS.items())
-        if args.research:
-            targets += list(RESEARCH_MAPS.items())
-    elif args.research:
-        targets = list(RESEARCH_MAPS.items())
     else:
         targets = [("(single)", args.map)]
     mode = "APPLYING" if args.apply else "DRY RUN"

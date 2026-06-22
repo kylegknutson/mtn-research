@@ -54,6 +54,10 @@ GPX_NS = "{http://www.topografix.com/GPX/1/1}"
 # Track color palette — 16 visually distinct colors for per-track variety.
 # Source convention (used by sync_to_regional.py): red=LoJ, green=14ers, blue=PB,
 # purple=personal recordings. #39FF14 is reserved for summit markers — not here.
+# Kyle's own recordings (files under a `_kyle_existing/` dir) are forced to KYLE_COLOR
+# so they read consistently on web maps the way they already do blue in the report
+# PNGs (make_overview_map.COLOR_KYLE). Explicit --color still overrides.
+KYLE_COLOR = "#0066FF"   # blue — matches make_overview_map COLOR_KYLE (0,102,255)
 PALETTE = [
     "#FF0000",  # red       (LoJ)
     "#0066FF",  # blue      (peakbagger)
@@ -407,6 +411,8 @@ def main() -> None:
                             continue
                     folder_id = get_folder_id(label)
                     line_color = PALETTE[track_color_idx % len(PALETTE)] if args.vary_colors else color
+                    if not args.color and "_kyle_existing" in f.parts:
+                        line_color = KYLE_COLOR   # Kyle's own recordings always blue on web maps
                     track_color_idx += 1
                     # Convention: the composed recommended route is ALWAYS magenta
                     # (matches the PNG legend), on every map incl. climber maps —

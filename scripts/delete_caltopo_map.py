@@ -33,14 +33,21 @@ PROJECT_DIR = SCRIPT_DIR.parent
 CONFIG_PATH = SCRIPT_DIR / "cts.ini"
 DEFAULT_ACCOUNT = "kyleg.knutson@gmail.com"
 DOCS = PROJECT_DIR / "docs"
+GPX = PROJECT_DIR / "gpx"
 
 
 def referenced_ids() -> set[str]:
-    """Map ids any report points at via caltopo_id / regional_map_id frontmatter."""
+    """Map ids any report points at: report frontmatter caltopo_id / regional_map_id,
+    AND gpx/<slug>/peaks.yml `caltopo_map_id` (the map sync_kyle_recordings.py manages
+    — it lives in peaks.yml, so it must count as referenced or the audit would flag it)."""
     ids = set()
     pat = re.compile(r"(?:caltopo_id|regional_map_id):\s*([A-Z0-9]+)")
     for md in DOCS.rglob("*.md"):
         for m in pat.finditer(md.read_text(errors="ignore")):
+            ids.add(m.group(1))
+    ypat = re.compile(r"^caltopo_map_id:\s*([A-Z0-9]+)", re.MULTILINE)
+    for yml in GPX.glob("*/peaks.yml"):
+        for m in ypat.finditer(yml.read_text(errors="ignore")):
             ids.add(m.group(1))
     return ids
 
