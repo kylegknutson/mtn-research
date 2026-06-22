@@ -1,0 +1,8 @@
+# Hunts Peak (Northern Sangre de Cristo) — a SINGLE ranked 13er.
+# (Bushnell Pk + Twin Sisters North are already-climbed neighbors, NOT objectives —
+# they were wrongly baked into the old peaks_only.gpx, which produced a tangled route.)
+objective_ids: [748]
+nearby:
+  include: false
+landmarks:
+  - {name: "Hunts Pk TH (recorded GPS start, Rainbow Trail side)", lat: 38.3821, lon: -105.9833, kind: trailhead}
