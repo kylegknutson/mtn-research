@@ -1,6 +1,11 @@
 # Waypoint config — Star Peak Group day trip (Star + Taylor + Italian).
 objective_ids: [301, 365, 420]   # Star Pk A (301), Taylor Pk A (365), Italian Mtn (420)
 
+# Per-day objective assignments → one recommended route per day (build_trip_day_routes.py).
+days:
+  - {label: "Star + Taylor", objective_ids: [301, 365]}
+  - {label: "Italian", objective_ids: [420]}
+
 nearby:
   include: false
 
