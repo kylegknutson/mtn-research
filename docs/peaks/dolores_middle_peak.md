@@ -5,7 +5,7 @@ range: San Juan
 drive_time: "7h 30m"
 yds_class: "2"
 gain: "~5.8 mi / ~3,800 ft round trip from Fish Creek TH, Class 2 (composed off recorded GPX; trip reports run 6.4–8.5 mi)"
-status: unclimbed
+status: climbed
 caltopo_id: R1KSN0U
 regional_map_id: 06AR6BF
 dist_mi: 5.8
