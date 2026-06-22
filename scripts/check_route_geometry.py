@@ -44,6 +44,11 @@ NS = "{http://www.topografix.com/GPX/1/1}"
 # A real leg's consecutive points are < ~0.1 mi apart. Composed routes can show
 # ~0.4-0.5 mi gaps where two source tracks are stitched at a shared waypoint; those
 # are acceptable. A multi-mile hop is always a router teleport.
+# TODO (Kyle, 2026-06-22): FAIL_MI=1.0 only catches multi-mile teleports — it let a
+# 0.77 mi corner-cut ship on cimarron's Fortress day as a mere warn. Lower to ~0.7 to
+# catch sub-mile corner-cuts, but that also flags hunts_peak (whose only clean recorded
+# route is a 12.6 mi point-to-point shuttle, not a loop) — needs a hunts route decision
+# first. build_trip_day_routes.py now defaults to --legs so trip day routes don't cut.
 WARN_MI = 0.5
 FAIL_MI = 1.0
 

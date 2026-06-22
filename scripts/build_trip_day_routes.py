@@ -98,6 +98,9 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("slug")
     ap.add_argument("--no-dem", action="store_true", help="pass through (noisy gain; faster)")
+    ap.add_argument("--graph", action="store_true",
+                    help="use the shortest-path graph router instead of the default trail-"
+                         "following --legs router (the graph router can cut corners)")
     ap.add_argument("--keep-subsets", action="store_true", help="don't delete the per-day objective files")
     args = ap.parse_args()
 
@@ -139,6 +142,12 @@ def main():
         cmd = [str(SCRIPTS / "build_recommended_route.py"), args.slug,
                "--peaks-only", str(subset_f), "--start", f"{th[0]},{th[1]}",
                "--out", str(out_f)]
+        if not args.graph:
+            # Default to the per-leg/whole-track router: it stitches the REAL recorded
+            # tracks (follows the walked trail), whereas the graph router minimizes
+            # distance and cuts corners — which shipped a 0.77 mi straight jump on
+            # cimarron's Fortress day. Pass --graph to force the shortest-path router.
+            cmd.append("--legs")
         if args.no_dem:
             cmd.append("--no-dem")
         print(f"\n=== day: {label} → {', '.join(w['name'].split(' (')[0] for w in sub)} "
