@@ -61,6 +61,9 @@ def main():
     ap.add_argument("--yes", action="store_true", help="actually delete (required)")
     ap.add_argument("--dry-run", action="store_true", help="show what would be deleted")
     ap.add_argument("--list-refs", action="store_true", help="print ids referenced by reports and exit")
+    ap.add_argument("--force", action="store_true",
+                    help="skip the referenced-by-a-report guard — ONLY for a deliberate "
+                         "in-place replace (build_report deleting the map it's superseding)")
     args = ap.parse_args()
 
     protected = referenced_ids() | body_linked_ids()
@@ -71,10 +74,13 @@ def main():
     if not args.map_ids:
         ap.error("provide at least one map id (or --list-refs)")
 
-    # Guard: never delete a map a report still points at.
-    blocked = [m for m in args.map_ids if m in protected]
-    if blocked:
-        sys.exit(f"REFUSING: these ids are still referenced by a report: {', '.join(blocked)}")
+    # Guard: never delete a map a report still points at (unless --force, for a
+    # deliberate replace where the frontmatter is about to be repointed).
+    if not args.force:
+        blocked = [m for m in args.map_ids if m in protected]
+        if blocked:
+            sys.exit(f"REFUSING: these ids are still referenced by a report: {', '.join(blocked)} "
+                     f"(use --force only for a deliberate in-place replace)")
 
     s = CaltopoSession(domainAndPort="caltopo.com", mapID=None,
                        configpath=str(CONFIG_PATH), account=DEFAULT_ACCOUNT)

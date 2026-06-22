@@ -56,6 +56,18 @@ def run(cmd, **kw):
     return r
 
 
+def existing_caltopo_id(slug: str) -> str | None:
+    """The caltopo_id a report currently points at (frontmatter), so a rebuild can
+    delete the map it supersedes instead of orphaning it. Checks the base report
+    under docs/peaks/ then docs/trips/."""
+    for md in [ROOT / "docs" / "peaks" / f"{slug}.md", ROOT / "docs" / "trips" / f"{slug}.md"]:
+        if md.exists():
+            m = re.search(r"^caltopo_id:\s*([A-Z0-9]+)", md.read_text(), re.MULTILINE)
+            if m:
+                return m.group(1)
+    return None
+
+
 def regional_for(slug: str) -> tuple[str | None, str | None]:
     from peak_db_client import peaks
     cfg = yaml.safe_load((ROOT / "gpx" / slug / "peaks.yml").read_text())
@@ -107,10 +119,17 @@ def data_phase(args):
                   "--map-id", args.caltopo_id, "--sharing", "URL"])
         caltopo_id = args.caltopo_id
     else:
+        old_id = existing_caltopo_id(slug)   # the map this rebuild supersedes (if any)
         ct = run([SCRIPTS / "gpx_to_caltopo.py", "--gpx-dir", str(gdir),
                   "--new-map", f"Research: {title}", "--sharing", "URL"])
         m = re.search(r"caltopo\.com/m/(\w+)", ct.stdout or "")
         caltopo_id = m.group(1) if m else None
+        # No orphans: delete the old map this rebuild replaced (targeted — only the
+        # one id this report pointed at; --force because frontmatter still references
+        # it until the .md is rewritten with the new id).
+        if caltopo_id and old_id and old_id != caltopo_id:
+            run([SCRIPTS / "delete_caltopo_map.py", old_id, "--yes", "--force"])
+            print(f"  (deleted superseded map {old_id} → replaced by {caltopo_id})")
 
     # Summit markers: gpx_to_caltopo dedupes markers account-wide, so the per-
     # report map's summit markers get SKIPPED when they already exist in the
@@ -140,6 +159,11 @@ def finalize_phase(args):
     run([SCRIPTS / "climber_status.py"])
     run([SCRIPTS / "gen_index.py"])
     run([SCRIPTS / "gen_peak_map.py"])
+    # Safety net: surface any orphaned/duplicate "Research:" CalTopo map (e.g. from a
+    # past rebuild or a manual frontmatter id change) so a stale "wrong version" map
+    # can't linger. Non-fatal (CalTopo is local-only; CI has no creds). Prune with
+    # `scripts/audit_caltopo_maps.py --prune`.
+    run([SCRIPTS / "audit_caltopo_maps.py"])
     fails = []
     # Pixel gates (track present / basemap / clipping) + report source-check +
     # ROUTE-GEOMETRY gates: check_route_geometry catches recommended-route

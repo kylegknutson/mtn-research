@@ -86,6 +86,18 @@ single-peak/group report is essentially:
 9. `git add … && git commit … && git push` (all allow-listed).
 
 ## Hard rules
+- **Rebuild a research map → leave NO duplicate/orphaned CalTopo map (Kyle, 2026-06-21).**
+  Each `build_report` rebuild WITHOUT `--caltopo-id` mints a NEW CalTopo map and repoints
+  the report's frontmatter to it — orphaning the OLD map on the account. A lingering orphan
+  is the "wrong version" Kyle opened by mistake. This is now closed on both ends: (a)
+  `build_report.py`'s `--new-map` branch reads the report's current `caltopo_id` and
+  **deletes that superseded map** after the new one is created (targeted — only the id this
+  report pointed at; via `delete_caltopo_map.py … --force`); (b) `--finalize` runs
+  `scripts/audit_caltopo_maps.py` (non-fatal) to surface any other orphaned "Research:" map.
+  After any research change, the account is clean only when `audit_caltopo_maps.py` reports
+  **0 orphaned**; prune leftovers with `audit_caltopo_maps.py --prune` (or
+  `delete_caltopo_map.py <id> --yes`). Personal maps ("GPS Tracks — …", named hikes) are
+  never touched. CalTopo is local-only (cts.ini gitignored) — these checks no-op in CI.
 - **Change the report format → refresh EVERY report in the same change (Kyle, 2026-06-18).**
   Any change to the report "format" — a new/renamed frontmatter field, a new gate or
   required provenance token, a map style/legend, the report template, quickstats, the
