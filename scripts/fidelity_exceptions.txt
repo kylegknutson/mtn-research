@@ -1,0 +1,32 @@
+# Route-fidelity INSPECTION BACKLOG — routes that do not follow a real recorded track
+# within the 3 ft bar (measured by the corrected check_route_fidelity.py, segment-indexed).
+#
+# These are NOT auto-fixable safely: the available third-party tracks either don't connect
+# the objectives, or only a long/loose stitch follows them. Each needs Kyle's eyes — the
+# inspect-then-accept workflow: show the problem area + a proposed line, he accepts or
+# redirects, then it's locked. Remove a slug here the moment its route is accepted on-track.
+#
+# The gate is NOT wired as blocking yet (a blocking gate that merely WARNS for this list is
+# the "warn and continue" Kyle rejected — warnings are never seen on the mountain). Until the
+# inspection workflow exists, this file is the tracked backlog, and check_route_fidelity.py
+# reads it only to tag these as "needs review" rather than hard-FAIL when run ad hoc.
+#
+# Status as of 2026-06-23 (3 ft bar; faithful routes read 0.0–0.2 ft; nothing sits between
+# 2 ft and 20 ft — the split is clean).
+
+# --- A. No recorded track connects the objectives → any connector is invented.
+#        --legs errors ("no single track links them"); needs --from-track or an approved connector.
+jacque_peak              # 24 ft — objectives have no recorded track between them
+crestolita_broken_hand   # 30 ft — no connecting track
+telluride_t7_t8          # 25 ft — no connecting track
+
+# --- B. A faithful --legs stitch exists but is suspect (too long / re-climbing) OR strays.
+#        Reverted to the default route pending inspection; do not auto-trust the --legs line.
+carter_dome_group        # default ~30 ft off-track; --legs is on-track (1.5 ft) but 27 mi vs ~20 mi report (re-climbs)
+wayah_group              # default ~28 ft off-track; --legs is on-track (2.7 ft, 16.7 mi) — likely the real fix, but unreviewed
+grizzly_jenkins_group    # 32 ft — --legs errors (no connecting track)
+mount_adams_trio         # 21 ft — loose track overlap on the ridge links
+
+# --- C. Trips — stray at a day-join (day clusters with no track between them).
+south_san_juans_3day     # 124 ft at a day join
+west_willow_la_garita    # 68 ft at a day join

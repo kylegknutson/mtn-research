@@ -41,7 +41,7 @@ SCRIPTS = ROOT / "scripts"
 CONFIG = SCRIPTS / "cts.ini"
 ACCOUNT = "kyleg.knutson@gmail.com"
 MAGENTA = "#E6008C"
-FIDELITY_FT = 5.0
+FIDELITY_FT = 3.0
 
 
 def run(cmd):
@@ -70,12 +70,15 @@ def caltopo_id(slug):
     return m.group(1) if m else None
 
 
-def rebuild(slug, from_track):
+def rebuild(slug, from_track, graph=False):
     if is_trip(slug):
         r = run([SCRIPTS / "build_trip_day_routes.py", slug])
         return r, None
     cmd = [SCRIPTS / "build_recommended_route.py", slug]
-    cmd += ["--from-track", from_track] if from_track else ["--legs"]
+    if from_track:
+        cmd += ["--from-track", from_track]
+    elif not graph:        # --graph: default shortest-path router (no verbatim stitch)
+        cmd += ["--legs"]
     r = run(cmd)
     m = re.search(r"Recommended route:\s*([\d.]+)\s*mi\s*·\s*~?([\d,]+)\s*ft", r.stdout or "")
     stats = (float(m.group(1)), int(m.group(2).replace(",", ""))) if m else None
@@ -119,12 +122,15 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("slug")
     ap.add_argument("--from-track")
+    ap.add_argument("--graph", action="store_true",
+                    help="use the default shortest-path router (not --legs) — e.g. to "
+                         "restore a report's original route")
     ap.add_argument("--no-caltopo", action="store_true")
     ap.add_argument("--max-ft", type=float, default=FIDELITY_FT)
     args = ap.parse_args()
 
     print(f"== propagate {args.slug} ==")
-    r, stats = rebuild(args.slug, args.from_track)
+    r, stats = rebuild(args.slug, args.from_track, args.graph)
     if r.returncode != 0:
         print(r.stdout[-500:], r.stderr[-500:]); sys.exit(f"rebuild failed for {args.slug}")
     if stats:
