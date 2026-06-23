@@ -24,18 +24,22 @@ take the min distance to any SEGMENT of any SOURCE track in gpx/<slug>/ (excludi
 peaks_only / landmarks / the route itself / drive-ins). The max is the worst off-trail
 excursion. FAIL if it exceeds --max-ft (default 3).
 
-Routes that genuinely can't reach the threshold from available third-party tracks need a
-human look (and ultimately Kyle's own recording) — run with --list-fail to get that set;
-they're tracked in scripts/fidelity_exceptions.txt as the inspection backlog.
+A route PASSES when every over-bar excursion is inside a human-accepted problem area
+(gpx/<slug>/route_accepted.yml, written by accept_route.py after Kyle reviews the inspect
+map). So an off-track route fails ONLY until Kyle accepts it; once accepted, that specific
+area stops failing but a NEW deviation elsewhere still does. This acceptance model is what
+lets the gate be blocking without a "warn and continue" — every FAIL is a genuinely
+un-reviewed problem. Un-accepted failures: run inspect_route.py <slug> for the map.
 
     scripts/check_route_fidelity.py                 # all reports, 3 ft
-    scripts/check_route_fidelity.py cuba_gulch_trio
+    scripts/check_route_fidelity.py jacque_peak
     scripts/check_route_fidelity.py --max-ft 3 --strict
 """
 from __future__ import annotations
 import argparse, math, sys
 import xml.etree.ElementTree as ET
 from pathlib import Path
+import yaml
 
 ROOT = Path(__file__).resolve().parent.parent
 GPX = ROOT / "gpx"
@@ -146,7 +150,27 @@ class SegGrid:
         return best
 
 
-def worst_deviation_ft(slug: str, cell_m: float):
+def acceptances(slug: str):
+    f = GPX / slug / "route_accepted.yml"
+    if not f.exists():
+        return []
+    return (yaml.safe_load(f.read_text()) or {}).get("accepted", []) or []
+
+
+def covered(p, dev, acc):
+    """Is this over-bar sample inside a human-accepted problem area?"""
+    for a in acc:
+        c = a.get("center") or []
+        if len(c) == 2 and hav(p[0], p[1], c[0], c[1]) <= a.get("radius_m", 150) \
+                and dev <= a.get("max_ft", 1e18) + 10:
+            return True
+    return False
+
+
+def worst_deviation_ft(slug: str, cell_m: float, max_ft: float, acc):
+    """Return (worst_uncovered_ft, n_accepted_excursions). worst_uncovered is the worst
+    sample whose deviation exceeds max_ft and is NOT inside an accepted area — that's the
+    one that needs Kyle's eyes. Samples covered by an acceptance don't count against it."""
     route = []
     rf = next((GPX / slug).glob("*recommended*.gpx"), None)
     if rf:
@@ -155,30 +179,23 @@ def worst_deviation_ft(slug: str, cell_m: float):
     if len(route) < 2:
         return None
     grid = SegGrid(source_tracks(slug), cell_m)
-    worst = 0.0
+    worst_uncov = 0.0
+    accepted_hits = 0
     for i in range(len(route) - 1):
         a, b = route[i], route[i + 1]
         seg = hav(a[0], a[1], b[0], b[1])
         n = max(1, int(seg / SAMPLE_M))
         for k in range(n + 1):
             t = k / n
-            worst = max(worst, grid.dev_ft((a[0] + (b[0] - a[0]) * t, a[1] + (b[1] - a[1]) * t)))
-    return worst
-
-
-def exceptions():
-    """Slugs known to be off-track (no recorded track follows the trail there) — tracked
-    in scripts/fidelity_exceptions.txt so the gate warns instead of failing until each is
-    resolved (a Kyle recording / a human-approved connector). New reports aren't listed,
-    so they MUST pass."""
-    f = ROOT / "scripts" / "fidelity_exceptions.txt"
-    out = set()
-    if f.exists():
-        for ln in f.read_text().splitlines():
-            ln = ln.split("#")[0].strip()
-            if ln:
-                out.add(ln)
-    return out
+            p = (a[0] + (b[0] - a[0]) * t, a[1] + (b[1] - a[1]) * t)
+            dev = grid.dev_ft(p)
+            if dev <= max_ft:
+                continue
+            if covered(p, dev, acc):
+                accepted_hits += 1
+            else:
+                worst_uncov = max(worst_uncov, dev)
+    return worst_uncov, accepted_hits
 
 
 def main():
@@ -189,7 +206,6 @@ def main():
     ap.add_argument("--list-fail", action="store_true", help="print only the failing slugs")
     args = ap.parse_args()
     cell_m = 40.0   # search neighborhood ~120 m; enough to find the nearest real segment
-    exempt = exceptions()
 
     slugs = []
     for sub in ("peaks", "trips"):
@@ -200,27 +216,29 @@ def main():
                 continue
             slugs.append(p.stem)
 
-    bad = warned = checked = 0
+    bad = accepted_ok = checked = 0
     for slug in slugs:
-        dev = worst_deviation_ft(slug, cell_m)
-        if dev is None:
+        acc = acceptances(slug)
+        res = worst_deviation_ft(slug, cell_m, args.max_ft, acc)
+        if res is None:
             continue
+        uncov, hits = res
         checked += 1
-        tag = ">120" if math.isinf(dev) else f"{dev:6.0f}"
-        if dev > args.max_ft:
-            if slug in exempt:
-                warned += 1
-                if not args.list_fail:
-                    print(f"warn  {slug:28s} {tag} ft off-track (tracked exception — needs review)")
-            elif args.list_fail:
+        if uncov > args.max_ft:
+            if args.list_fail:
                 print(slug)
             else:
-                bad += 1
-                print(f"FAIL  {slug:28s} strays {tag} ft from any recorded track")
+                tag = ">120" if math.isinf(uncov) else f"{uncov:6.0f}"
+                print(f"FAIL  {slug:28s} strays {tag} ft (un-accepted) — run inspect_route.py {slug}")
+            bad += 1
         elif not args.list_fail:
-            print(f"ok    {slug:28s} max {dev:4.1f} ft off-track")
+            if hits:
+                accepted_ok += 1
+                print(f"ok*   {slug:28s} on-track except {len(acc)} accepted area(s)")
+            else:
+                print(f"ok    {slug:28s} ≤ {args.max_ft:.0f} ft off-track")
     if not args.list_fail:
-        print(f"\n{checked} route(s) — {bad} FAIL, {warned} tracked-exception, "
+        print(f"\n{checked} route(s) — {bad} need inspection, {accepted_ok} ok via acceptance, "
               f"vs {args.max_ft} ft bar.")
     if args.strict and bad:
         sys.exit(1)

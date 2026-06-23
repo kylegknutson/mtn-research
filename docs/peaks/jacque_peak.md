@@ -7,7 +7,7 @@ gain: "3,500 ft"
 status: climbed
 caltopo_id: R2NF0S2
 regional_map_id: 6E4GJV2
-gain_ft: 3500
+gain_ft: 3131
 class: 2
 peaks: 1
 days: 1
@@ -22,7 +22,7 @@ status_source: "peak_db ascents"
 <!-- QUICKSTATS_START -->
 
 !!! tip "At a glance — recommended day"
-    **3,500 ft** gain · **Class 2** · 1 peak · ~1.7 h drive
+    **3,131 ft** gain · **Class 2** · 1 peak · ~1.7 h drive
 
 <!-- QUICKSTATS_END -->
 

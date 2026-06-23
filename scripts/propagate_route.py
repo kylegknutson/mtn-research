@@ -106,7 +106,10 @@ def replace_caltopo_route(slug, mid):
     s = CaltopoSession(domainAndPort="caltopo.com", mapID=mid, configpath=str(CONFIG), account=ACCOUNT)
     deleted = 0
     for f in s.getFeatures(featureClass="Shape"):
-        if "recommended route" in (f.get("properties") or {}).get("title", "").lower():
+        # match "recommended" broadly — the line is titled "<slug>_recommended" on some maps
+        # and "… recommended route" on others; Kyle's recordings / objective tracks never
+        # contain "recommended", so this won't touch them.
+        if "recommended" in (f.get("properties") or {}).get("title", "").lower():
             try:
                 s.delFeature(f.get("id"), "Shape"); deleted += 1
             except TypeError:

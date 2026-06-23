@@ -15,7 +15,7 @@ Every ranked Colorado 13er/14er — **green peak = has a report** (click it to o
 <!-- PEAKS_TABLE_START -->
 | Peak / Trip | Range | Class | Dist (mi) | Gain (ft) | Peaks | Days | Pk/day | Drive (h) | Status |
 |---|---|---|--:|--:|--:|--:|--:|--:|---|
-| [Jacque Peak](peaks/jacque_peak.md) | Gore | 2 | — | 3,500 | 1 | 1 | 1 | 1.7 | climbed |
+| [Jacque Peak](peaks/jacque_peak.md) | Gore | 2 | — | 3,131 | 1 | 1 | 1 | 1.7 | climbed |
 | [Pennsylvania Mountain](peaks/pennsylvania_mountain.md) | Mosquito | 2 | 4.7 | 1,248 | 1 | 1 | 1 | 2.1 | unclimbed |
 | [Mount Powell + Eagles Nest](peaks/powell_eagles_nest.md) | Gore | 3 | — | 6,024 | 2 | 1 | 2 | 3.1 | unclimbed |
 | [Homestake Peak](peaks/homestake_peak.md) | Sawatch | 2 | — | 3,026 | 1 | 1 | 1 | 3.2 | unclimbed |
