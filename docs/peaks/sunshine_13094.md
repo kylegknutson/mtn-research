@@ -7,7 +7,7 @@ gain: "~3,300–5,400 ft"
 status: unclimbed
 caltopo_id: 11EMC0L
 regional_map_id: 06AR6BF
-gain_ft: 4350
+gain_ft: 3619
 class: 2
 peaks: 2
 days: 1
@@ -22,7 +22,7 @@ status_source: "peak_db ascents"
 <!-- QUICKSTATS_START -->
 
 !!! tip "At a glance — recommended day"
-    **4,350 ft** gain · **Class 2** · 2 peaks · ~7.5 h drive
+    **3,619 ft** gain · **Class 2** · 2 peaks · ~7.5 h drive
 
 <!-- QUICKSTATS_END -->
 

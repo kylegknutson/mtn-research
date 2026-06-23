@@ -4,12 +4,12 @@ peak_ids: [508, 489]
 range: San Juan
 drive_time: "7h 30m"
 yds_class: "2"
-gain: "~5.8 mi / ~3,800 ft round trip from Fish Creek TH, Class 2 (composed off recorded GPX; trip reports run 6.4–8.5 mi)"
+gain: "~6.4 mi / ~3,921 ft round trip from Fish Creek TH, Class 2 (composed off recorded GPX; trip reports run 6.4–8.5 mi)"
 status: climbed
 caltopo_id: R1KSN0U
 regional_map_id: 06AR6BF
-dist_mi: 5.8
-gain_ft: 3800
+dist_mi: 6.4
+gain_ft: 3921
 class: 2
 peaks: 2
 days: 1
@@ -24,7 +24,7 @@ status_source: "peak_db ascents (both 0 ascents — unclimbed)"
 <!-- QUICKSTATS_START -->
 
 !!! tip "At a glance — recommended day"
-    **5.8 mi** · **3,800 ft** gain · **Class 2** · 2 peaks · ~7.5 h drive
+    **6.4 mi** · **3,921 ft** gain · **Class 2** · 2 peaks · ~7.5 h drive
 
 <!-- QUICKSTATS_END -->
 

@@ -7,7 +7,7 @@ gain: "5,500–7,000 ft"
 status: unclimbed
 caltopo_id: GG1BKFL
 regional_map_id: 6E4GJV2
-gain_ft: 6250
+gain_ft: 6024
 class: 3
 peaks: 2
 days: 1
@@ -22,7 +22,7 @@ status_source: "peak_db ascents"
 <!-- QUICKSTATS_START -->
 
 !!! tip "At a glance — recommended day"
-    **6,250 ft** gain · **Class 3** · 2 peaks · ~3.1 h drive
+    **6,024 ft** gain · **Class 3** · 2 peaks · ~3.1 h drive
 
 <!-- QUICKSTATS_END -->
 

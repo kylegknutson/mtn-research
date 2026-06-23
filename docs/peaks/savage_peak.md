@@ -3,13 +3,13 @@ image: maps/savage_peak.png
 range: Sawatch
 drive_time: "3h 39m"
 yds_class: "2 (Savage) · 3 (PT 13,002)"
-gain: "~14.3 mi / ~5,820 ft (Savage + PT 13,002 combo, DEM)"
+gain: "~13.4 mi / ~5,721 ft (Savage + PT 13,002 combo, DEM)"
 status: unclimbed
 caltopo_id: QL51DBE
 regional_map_id: L5VH4BU
 peak_ids: [674, 839]
-dist_mi: 14.3
-gain_ft: 5817
+dist_mi: 13.4
+gain_ft: 5721
 class: 2-3
 peaks: 2
 days: 1
@@ -24,7 +24,7 @@ status_source: "peak_db ascents"
 <!-- QUICKSTATS_START -->
 
 !!! tip "At a glance — recommended day"
-    **14.3 mi** · **5,817 ft** gain · **Class 2-3** · 2 peaks · ~3.6 h drive
+    **13.4 mi** · **5,721 ft** gain · **Class 2-3** · 2 peaks · ~3.6 h drive
 
 <!-- QUICKSTATS_END -->
 

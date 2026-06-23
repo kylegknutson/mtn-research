@@ -3,16 +3,16 @@ image: maps/pennsylvania_mountain.png
 range: Mosquito
 drive_time: "2h 5m"
 yds_class: "2 (gentle tundra/talus walk-up)"
-gain: "~3.9 mi / ~1,040 ft (recommended loop, DEM)"
+gain: "~4.7 mi / ~1,248 ft (recommended loop, DEM)"
 status: unclimbed
 caltopo_id: P2V1QG5
 regional_map_id: LECF68J
-gain_ft: 1039
+gain_ft: 1248
 class: 2
 peaks: 1
 days: 1
 drive_h: 2.1
-dist_mi: 3.9
+dist_mi: 4.7
 th_source: "recorded GPS-track starts at Pika Trailhead (standard, off Hwy 9) (39.2658,-106.1638) — swept tracks begin 0.7 mi away"
 class_source: "route beta — 14ers.com route beta / trip reports, listsofjohn, peakbagger (see route options)"
 status_source: "peak_db ascents"
@@ -23,7 +23,7 @@ status_source: "peak_db ascents"
 <!-- QUICKSTATS_START -->
 
 !!! tip "At a glance — recommended day"
-    **3.9 mi** · **1,039 ft** gain · **Class 2** · 1 peak · ~2.1 h drive
+    **4.7 mi** · **1,248 ft** gain · **Class 2** · 1 peak · ~2.1 h drive
 
 <!-- QUICKSTATS_END -->
 

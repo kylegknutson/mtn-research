@@ -3,13 +3,13 @@ image: maps/campbell_creek_pk.png
 range: San Juan
 drive_time: "~5h 45m"
 yds_class: "2"
-gain: "~5.7 mi / ~3,443 ft (standalone out-and-back, DEM)"
+gain: "~6.5 mi / ~3,573 ft (standalone out-and-back, DEM)"
 status: unclimbed
 caltopo_id: 4CBBN9L
 regional_map_id: 06AR6BF
 peak_ids: [357]
-dist_mi: 5.7
-gain_ft: 3443
+dist_mi: 6.5
+gain_ft: 3573
 class: 2
 peaks: 1
 days: 1
@@ -25,7 +25,7 @@ status_source: "peak_db ascents"
 <!-- QUICKSTATS_START -->
 
 !!! tip "At a glance — recommended day"
-    **5.7 mi** · **3,443 ft** gain · **Class 2** · 1 peak · ~5.75 h drive · [weather](https://forecast.weather.gov/MapClick.php?lat=37.9067&lon=-107.4629)
+    **6.5 mi** · **3,573 ft** gain · **Class 2** · 1 peak · ~5.75 h drive · [weather](https://forecast.weather.gov/MapClick.php?lat=37.9067&lon=-107.4629)
 
 <!-- QUICKSTATS_END -->
 

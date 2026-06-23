@@ -3,13 +3,13 @@ image: maps/williams_mountains.png
 range: Sawatch
 drive_time: "~3h 45m (seasonal — Independence Pass)"
 yds_class: "3"
-gain: "~12.9 mi / ~5,810 ft (recommended loop, DEM)"
+gain: "~13.6 mi / ~6,170 ft (recommended loop, DEM)"
 status: unclimbed
 caltopo_id: 310E34A
 regional_map_id: L5VH4BU
 peak_ids: [411, 705, 474, 609, 789]
-dist_mi: 12.9
-gain_ft: 5811
+dist_mi: 13.6
+gain_ft: 6170
 class: 3
 peaks: 5
 days: 1
@@ -24,7 +24,7 @@ status_source: "peak_db ascents (Kyle — unclimbed)"
 <!-- QUICKSTATS_START -->
 
 !!! tip "At a glance — recommended day"
-    **12.9 mi** · **5,811 ft** gain · **Class 3** · 5 peaks · ~3.8 h drive
+    **13.6 mi** · **6,170 ft** gain · **Class 3** · 5 peaks · ~3.8 h drive
 
 <!-- QUICKSTATS_END -->
 

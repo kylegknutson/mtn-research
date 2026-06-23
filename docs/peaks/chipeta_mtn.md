@@ -3,16 +3,16 @@ image: maps/chipeta_mtn.png
 range: Sawatch
 drive_time: "4h 13m"
 yds_class: "2"
-gain: "~7.7 mi / ~3,450 ft (recommended loop, DEM)"
+gain: "~8.3 mi / ~3,362 ft (recommended loop, DEM)"
 status: unclimbed
 caltopo_id: CDMT01G
 regional_map_id: L5VH4BU
-gain_ft: 3446
+gain_ft: 3362
 class: 2
 peaks: 1
 days: 1
 drive_h: 4.2
-dist_mi: 7.7
+dist_mi: 8.3
 th_source: "recorded GPS-track starts at Marshall Pass TH (CR 200 / Colorado Trail) (38.3942,-106.2472) — swept tracks begin 0.1 mi away"
 class_source: "route beta — 14ers.com route beta / trip reports, listsofjohn, peakbagger (see route options)"
 status_source: "peak_db ascents"
@@ -23,7 +23,7 @@ status_source: "peak_db ascents"
 <!-- QUICKSTATS_START -->
 
 !!! tip "At a glance — recommended day"
-    **7.7 mi** · **3,446 ft** gain · **Class 2** · 1 peak · ~4.2 h drive
+    **8.3 mi** · **3,362 ft** gain · **Class 2** · 1 peak · ~4.2 h drive
 
 <!-- QUICKSTATS_END -->
 

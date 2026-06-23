@@ -7,7 +7,7 @@ gain: "~4,900–7,100 ft (full traverse)"
 status: unclimbed
 caltopo_id: K7F110T
 regional_map_id: VKGB00L
-gain_ft: 6000
+gain_ft: 6756
 class: 2
 peaks: 4
 days: 1
@@ -22,7 +22,7 @@ status_source: "peak_db ascents"
 <!-- QUICKSTATS_START -->
 
 !!! tip "At a glance — recommended day"
-    **6,000 ft** gain · **Class 2** · 4 peaks · ~4.2 h drive
+    **6,756 ft** gain · **Class 2** · 4 peaks · ~4.2 h drive
 
 <!-- QUICKSTATS_END -->
 

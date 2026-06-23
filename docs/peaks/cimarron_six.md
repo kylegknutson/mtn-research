@@ -3,13 +3,13 @@ image: maps/cimarron_six.png
 range: San Juan
 drive_time: "~5h 30m"
 yds_class: "4 (PT 13,222 B NW ridge + El Punto are Class 3–4 per TR; Heisshorn Class 3; other PTs 2–2+)"
-gain: "~13.3 mi / ~5,785 ft (recommended loop, DEM)"
+gain: "~15.3 mi / ~6,393 ft (recommended loop, DEM)"
 status: unclimbed
 caltopo_id: 55M4430
 regional_map_id: 06AR6BF
 peak_ids: [388, 421, 602, 498, 445, 571]
-dist_mi: 13.3
-gain_ft: 5785
+dist_mi: 15.3
+gain_ft: 6393
 class: 4
 peaks: 6
 days: 1
@@ -24,7 +24,7 @@ status_source: "peak_db ascents (Kyle — unclimbed)"
 <!-- QUICKSTATS_START -->
 
 !!! tip "At a glance — recommended day"
-    **13.3 mi** · **5,785 ft** gain · **Class 4** · 6 peaks · ~5.5 h drive
+    **15.3 mi** · **6,393 ft** gain · **Class 4** · 6 peaks · ~5.5 h drive
 
 <!-- QUICKSTATS_END -->
 

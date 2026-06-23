@@ -3,12 +3,12 @@ image: maps/west_willow_la_garita.png
 range: San Juan
 drive_time: "~5 h to Creede + rough 4WD"
 yds_class: "3"
-gain: "~19 mi / ~6,800 ft over 2 days · ~18 mi / ~6,000 ft if linked in one push"
+gain: "~23.9 mi / ~7,816 ft over 2 days · ~18 mi / ~6,000 ft if linked in one push"
 status: climbed
 caltopo_id: 9PQM9TT
 regional_map_id: 06AR6BF
-dist_mi: 19.0
-gain_ft: 6800
+dist_mi: 23.9
+gain_ft: 7816
 class: 3
 peaks: 5
 days: 2

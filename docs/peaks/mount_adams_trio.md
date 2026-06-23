@@ -3,7 +3,7 @@ image: maps/mount_adams_trio.png
 range: Sangre de Cristo
 drive_time: "~4h"
 yds_class: "2+ (easy Class 3 on the connecting ridges)"
-gain: "~11.7 mi / ~6,400 ft (3-peak loop, DEM)"
+gain: "~13.5 mi / ~6,897 ft (3-peak loop, DEM)"
 status: unclimbed
 th_source: "recorded GPS-track starts at Willow Creek / Willow Lake TH (37.9889,-105.6626) — swept tracks begin there; OSM/14ers TH"
 class_source: "Roach + 14ers trip reports — summits Class 2 but the 13,543<->13,580A connecting ridge is Class 2+/easy Class 3 (researched this session)"
@@ -11,8 +11,8 @@ status_source: "peak_db ascents (unclimbed)"
 caltopo_id: VES1N54
 regional_map_id: VKGB00L
 peak_ids: [277, 248, 280]
-dist_mi: 11.7
-gain_ft: 6434
+dist_mi: 13.5
+gain_ft: 6897
 class: "2–3"
 peaks: 3
 days: 1
@@ -25,7 +25,7 @@ weather: "https://forecast.weather.gov/MapClick.php?lat=38.0007&lon=-105.6004"
 <!-- QUICKSTATS_START -->
 
 !!! tip "At a glance — recommended day"
-    **11.7 mi** · **6,434 ft** gain · **Class 2–3** · 3 peaks · ~4 h drive · [weather](https://forecast.weather.gov/MapClick.php?lat=38.0007&lon=-105.6004)
+    **13.5 mi** · **6,897 ft** gain · **Class 2–3** · 3 peaks · ~4 h drive · [weather](https://forecast.weather.gov/MapClick.php?lat=38.0007&lon=-105.6004)
 
 <!-- QUICKSTATS_END -->
 

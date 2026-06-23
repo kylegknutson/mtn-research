@@ -3,12 +3,12 @@ image: maps/baldy_lejos_trio.png
 range: San Juan
 drive_time: "~5 h to Creede + rough 4WD"
 yds_class: "2"
-gain: "~11 mi / ~3,750 ft (recommended loop, DEM) · 16–20 mi recorded"
+gain: "~11.9 mi / ~3,707 ft (recommended loop, DEM) · 16–20 mi recorded"
 status: climbed
 caltopo_id: 4278RCG
 regional_map_id: 06AR6BF
-dist_mi: 11.0
-gain_ft: 3750
+dist_mi: 11.9
+gain_ft: 3707
 class: 2
 peaks: 3
 days: 1
@@ -23,7 +23,7 @@ status_source: "peak_db ascents (Kyle — climbed)"
 <!-- QUICKSTATS_START -->
 
 !!! tip "At a glance — recommended day"
-    **11 mi** · **3,750 ft** gain · **Class 2** · 3 peaks · ~5 h drive
+    **11.9 mi** · **3,707 ft** gain · **Class 2** · 3 peaks · ~5 h drive
 
 <!-- QUICKSTATS_END -->
 
