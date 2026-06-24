@@ -1,0 +1,11 @@
+# Human-reviewed acceptances of route deviations from recorded tracks.
+# Each entry = a problem area Kyle saw (inspect_route) and approved.
+accepted:
+- center:
+  - 38.003515
+  - -105.61897
+  radius_m: 180
+  max_ft: 22
+  reason: braided use-trail on the ridge link; route is on the braid, ~20 ft is the
+    natural spread between recorded strands
+  date: '2026-06-24'
