@@ -23,6 +23,10 @@ gpx/*/*
 !gpx/*/peaks.yml
 !gpx/*/sources.json
 !gpx/*/route_accepted.yml
+# Frozen recommended routes — these few can't be regenerated from a simple recipe
+# (route_build: {method: frozen}), so the committed GPX IS the source of truth.
+!gpx/clohesey_four/clohesey_four_recommended.gpx
+!gpx/star_peak_a/star_peak_a_recommended.gpx
 
 # Local Claude Code project state
 .claude/

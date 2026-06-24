@@ -1,5 +1,6 @@
 # Waypoint config for build_peak_gpx.py — Homestake Peak.
 objective_ids: [596]
+route_build: {method: legs}
 
 nearby:
   include: true

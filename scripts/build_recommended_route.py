@@ -423,7 +423,8 @@ def main():
     ap.add_argument("--no-return", action="store_true", help="point-to-point (don't return to start)")
     ap.add_argument("--no-dem", action="store_true", help="use noisy GPX elevation instead of resampling a DEM")
     ap.add_argument("--dem-dataset", default="ned10m", help="opentopodata dataset (default ned10m = USGS 10m, US)")
-    ap.add_argument("--legs", action="store_true", help="use the older per-leg stitched / whole-track router instead of the default graph router")
+    ap.add_argument("--legs", action="store_true", help="use the per-leg stitched / whole-track router instead of the default graph router")
+    ap.add_argument("--graph", action="store_true", help="explicitly select the graph router (it is also the default; this makes a route_build recipe robust if the default ever changes)")
     ap.add_argument("--thin", type=float, default=12.0, help="[graph] thin tracks to this spacing (m)")
     ap.add_argument("--transfer-eps", type=float, default=18.0, help="[graph] max gap to hop between tracks (m)")
     ap.add_argument("--rdp-eps", type=float, default=8.0, help="[graph] simplification tolerance to remove weave jitter (m)")
@@ -431,6 +432,7 @@ def main():
                     "instead of composing — for when the router routes long but one real party track already "
                     "makes the efficient tour (use scripts/analyze_tracks.py to find it). DEM-measures + writes it.")
     ap.add_argument("--out", default=None)
+    ap.add_argument("--no-export", action="store_true", help="skip the iCloud GPS Tracks mirror (for scratch / verification builds)")
     ap.add_argument("--peaks-only", default=None,
                     help="objectives GPX to use instead of the slug's *_peaks_only.gpx — "
                          "pass a per-DAY subset to compose a single day's route on a multi-day "
@@ -544,7 +546,7 @@ def main():
     obj_terms = [(nm.split(" (")[0], la, lo) for la, lo, nm, _ in objs]
     terms += obj_terms
 
-    if not args.legs:
+    if args.graph or not args.legs:
         route, dist, order = graph_route(
             tracks, terms, bool(start), not args.no_return,
             args.thin, args.transfer_eps, args.rdp_eps)
@@ -643,7 +645,8 @@ def main():
             f.write(f'<trkpt lat="{la:.6f}" lon="{lo:.6f}">{es}</trkpt>\n')
         f.write("</trkseg></trk>\n</gpx>\n")
     print(f"Wrote {out}")
-    export_to_gps_tracks(args.slug)
+    if not args.no_export:    # scratch builds (recipe inference / verification) skip the
+        export_to_gps_tracks(args.slug)   # iCloud GPS Tracks mirror
 
 
 if __name__ == "__main__":

@@ -4,6 +4,7 @@ objective_ids:
 - 610
 - 329
 - 454
+route_build: {method: legs}
 nearby:
   include: false
 landmarks:

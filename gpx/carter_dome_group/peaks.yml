@@ -1,6 +1,7 @@
 # Carter Dome Group — Wildcat–Carter–Moriah traverse (Carter-Moriah Range, NH)
 # 6 NH 48 peaks: Wildcat D, Wildcat A, Carter Dome, South Carter, Middle Carter, Mount Moriah
 objective_ids: [-38, -50, -60, -66, -113, -118]
+route_build: {method: graph}
   # -38  Carter Dome          4,839 ft  (high point)
   # -50  Middle Carter Mtn    4,623 ft
   # -60  South Carter Mtn     4,445 ft

@@ -1,5 +1,6 @@
 # Chipeta Mtn (southern Sawatch, near Marshall Pass).
 objective_ids: [337]
+route_build: {method: legs}
 nearby:
   include: true
   radius_mi: 8

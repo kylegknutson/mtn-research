@@ -1,5 +1,6 @@
 # Waypoint config for build_peak_gpx.py — Jacque Peak.
 objective_ids: [603]
+route_build: {method: from_track, track: "pbAscent2784737"}
 
 nearby:
   include: false

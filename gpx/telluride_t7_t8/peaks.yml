@@ -3,6 +3,7 @@ objective_ids:
 - 311
 - 434
 - 472
+route_build: {method: graph}
 caltopo_map_id: 6FM1FEK   # https://caltopo.com/m/6FM1FEK
 nearby:
   include: false

@@ -1,5 +1,6 @@
 # Waypoint config for build_peak_gpx.py — Star Peak A.
 objective_ids: [301]
+route_build: {method: frozen}
 
 nearby:
   include: true

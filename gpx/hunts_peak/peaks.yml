@@ -2,6 +2,7 @@
 # (Bushnell Pk + Twin Sisters North are already-climbed neighbors, NOT objectives —
 # they were wrongly baked into the old peaks_only.gpx, which produced a tangled route.)
 objective_ids: [748]
+route_build: {method: from_track, track: "hunts_recorded_loop"}
 nearby:
   include: false
 landmarks:

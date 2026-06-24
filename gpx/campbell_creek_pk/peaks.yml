@@ -6,6 +6,7 @@
 # Creek only.
 objective_ids:
 - 357   # "Campbell Creek Pk" 13,461
+route_build: {method: legs}
 nearby:
   include: false
 landmarks:

@@ -1,5 +1,6 @@
 # Lakes of the Clouds 7-peak loop (northern Sangre de Cristo) — for Emily.
 objective_ids: [431, 272, 327, 307, 326, 694, 446]
+route_build: {method: legs}
 # De Anza A, Gibbs A, Marcy, Silver Pk, PT 13,494 ("Cotton King"), PT 13,130, Owen A
 nearby:
   include: false

@@ -37,6 +37,7 @@ PER_SLUG = [
     ("check_route_stats.py", "headline mileage matches GPX"),
     ("check_route_summits.py", "route reaches each summit"),
     ("check_route_exists.py", "has a recommended route"),
+    ("check_route_recipe.py", "route reproducible from peaks.yml recipe"),
     ("check_map_fresh.py", "PNG not stale vs route/tracks"),
 ]
 # Map-QA gates are SLOW (pure-Python per-pixel PNG loops + full-track parsing, ~5 s

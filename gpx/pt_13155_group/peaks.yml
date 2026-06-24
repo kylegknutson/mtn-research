@@ -1,5 +1,6 @@
 # Uncompahgre's "Three Children" — PT 13,155 / 13,110 / 13,108, off Nellie Creek (San Juan).
 objective_ids: [645, 707, 726]   # PT 13,155 / PT 13,110 / PT 13,108
+route_build: {method: legs}
 nearby:
   include: true
   radius_mi: 6

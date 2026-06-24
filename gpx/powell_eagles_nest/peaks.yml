@@ -1,5 +1,6 @@
 # Mount Powell + Eagles Nest combo (Gore Range, Eagles Nest Wilderness).
 objective_ids: [245, 380]   # Mount Powell A (245), Eagles Nest A (380)
+route_build: {method: legs}
 nearby:
   include: true
   radius_mi: 8

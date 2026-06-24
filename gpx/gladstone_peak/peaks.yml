@@ -1,6 +1,7 @@
 # Emily report — Gladstone Peak (13,923', Centennial / CO rank 67, San Juan,
 # Wilson group, Lizard Head Wilderness). Class 3 with a Class 4 summit move.
 objective_ids: [84]
+route_build: {method: legs}
 nearby:
   include: false
 landmarks:

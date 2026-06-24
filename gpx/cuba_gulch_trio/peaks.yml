@@ -3,6 +3,7 @@
 # coordinates were backfilled in peak_db on 2026-06-09, so it's a normal
 # objective now — no extra_summits workaround needed.)
 objective_ids: [752, 822, 639]   # PT 13,076 (752), PT 13,003 (822), PT 13,179 (639)
+route_build: {method: from_track, track: "cuba-gultch-13076-13003-13179"}
 
 nearby:
   include: false

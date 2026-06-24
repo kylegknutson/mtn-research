@@ -6,6 +6,7 @@ objective_ids:
 - 474   # Williams Mtn South A / "Williams Benchmark" 13,321
 - 609   # Williams Mtn South B 13,204
 - 789   # Williams Mtn South C 13,039
+route_build: {method: legs}
 nearby:
   include: false
 landmarks:

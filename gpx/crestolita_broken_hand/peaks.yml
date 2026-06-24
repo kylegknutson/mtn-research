@@ -1,5 +1,6 @@
 # Waypoint config for build_peak_gpx.py — Crestolita + Broken Hand day trip.
 objective_ids: [258, 524]      # Broken Hand Peak (258), "Crestolita" (524)
+route_build: {method: graph}
 
 nearby:
   include: false               # the rest of the Crestone cirque (Peak/Needle/Humboldt) is climbed

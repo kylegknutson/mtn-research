@@ -3,6 +3,7 @@
 # CANDIDATES only; the report objective (peaks: 1) is Brown Mtn A itself.
 objective_ids:
 - 451   # Brown Mtn A 13,347 (14ers 10441 / pb 60362)
+route_build: {method: legs}
 nearby:
   include: false
 landmarks:

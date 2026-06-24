@@ -72,12 +72,23 @@ single-peak/group report is essentially:
 4. `scripts/build_report.py --slug <slug>` — chains the whole data phase
    (build_peak_gpx → caltopo_mytracks → combo_stats → drive_time → make_overview_map
    → gpx_to_caltopo --new-map → summit markers → sync_to_regional).
-5. `scripts/build_recommended_route.py <slug>` — composed route; **gain from DEM,
-   distance from GPX**. If the teleport gate flags it, re-run with `--legs`. On
-   success it auto-mirrors the route + summit + trailhead markers into the iCloud
-   **`Documents/GPS Tracks/<slug>_recommended.gpx`** (one combined GPX, phone-loadable)
-   via `scripts/export_to_gps_tracks.py`. Backfill old reports with
-   `scripts/export_to_gps_tracks.py --all` (or a single `<slug>`).
+5. **Build the route via its RECIPE: `scripts/build_route.py <slug>`** — reads
+   `gpx/<slug>/peaks.yml` `route_build:` and dispatches to the right builder; **gain from
+   DEM, distance from GPX**. The recipe records HOW the route is built so it's reproducible
+   (routes are gitignored — a plain `build_recommended_route.py` rebuild can silently
+   replace a good route with a wrong one; cuba did exactly that). Recipe forms:
+   `{method: from_track, track: "<substr>"}` (one recorded track verbatim — best, follows
+   every switchback), `{method: graph}` (shortest-path; RDP-simplified, can cut corners —
+   the fidelity gate flags those), `{method: legs}` (per-leg/whole-track stitch),
+   `{method: multi_segment, tracks:[a,b]}` (disconnected objectives → separate `<trk>`s via
+   `build_multi_segment_route.py`; never invent a straight connector), `{method: frozen}`
+   (route can't be regenerated — the committed `*_recommended.gpx` IS the source, allow-listed
+   in `.gitignore`). For a new report, pick a track-following recipe; if unsure run
+   `scripts/infer_route_recipe.py <slug>` to find what reproduces a built route. **A trip
+   (days: block) builds per-day via `build_trip_day_routes.py`.** `build_route` auto-mirrors
+   the route + summit + trailhead markers into the iCloud **`Documents/GPS Tracks/`** (phone-
+   loadable) via `export_to_gps_tracks.py` (backfill: `--all`). `check_route_recipe.py` (a
+   gate) FAILs unless the recipe reproduces the committed route.
 6. Write `docs/peaks/<slug>.md` (prose + structured frontmatter) and add it to
    `mkdocs.yml` nav.
 7. `scripts/gen_quickstats.py`

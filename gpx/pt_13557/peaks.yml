@@ -1,6 +1,7 @@
 # Waypoint config — pt_13557 (scaffold_report.py)
 objective_ids:
 - 268
+route_build: {method: legs}
 nearby:
   include: false
 landmarks:

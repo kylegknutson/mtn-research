@@ -1,5 +1,6 @@
 # Waypoint config for build_peak_gpx.py — Savage Peak (+ PT 13,002 combo, id 839).
 objective_ids: [674, 839]
+route_build: {method: legs}
 
 nearby:
   include: true

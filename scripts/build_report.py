@@ -189,6 +189,10 @@ def finalize_phase(args):
         # every report needs a composed recommended route — one per DAY for a
         # multi-day trip (build_trip_day_routes.py); no exemptions
         ["check_route_exists.py", args.slug, "--strict"],
+        # the route must be reproducible from a recorded peaks.yml recipe (route_build:)
+        # — routes are gitignored, so without a verified recipe a rebuild can silently
+        # replace a good route with a wrong one (build_route.py builds from the recipe)
+        ["check_route_recipe.py", args.slug, "--strict"],
     ]
     for chk in gates:
         r = run([SCRIPTS / chk[0], *chk[1:]])

@@ -3,6 +3,7 @@
 # (NW of Mount Massive / Mount Oklahoma, both already done). The full "Wayah
 # group" is 8 ranked 13ers; Kyle needs these 5. A long Class 3-4 ridge traverse.
 objective_ids: [491, 511, 611, 595, 792, 814]   # +PT 13,014 (mid-ridge, Class 3-4 section)
+route_build: {method: legs}
 nearby:
   include: false
 landmarks:

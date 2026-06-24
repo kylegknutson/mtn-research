@@ -1,5 +1,6 @@
 # Waypoint config — Pearl + Oyster day trip.
 objective_ids: [432, 477]        # Pearl Mtn (432), "Oyster Pk" (477)
+route_build: {method: legs}
 
 nearby:
   include: false

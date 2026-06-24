@@ -3,6 +3,7 @@
 # PT 13,486 / "UN 13,486" (339). Link-up of all four; alt to the rough
 # Clohesey Lake 4WD road wanted.
 objective_ids: [145, 347, 303, 339]
+route_build: {method: frozen}
 nearby:
   include: false
 landmarks:

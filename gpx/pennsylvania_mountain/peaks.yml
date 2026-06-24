@@ -1,5 +1,6 @@
 # Waypoint config for build_peak_gpx.py — Pennsylvania Mountain.
 objective_ids: [812]
+route_build: {method: legs}
 
 nearby:
   include: false

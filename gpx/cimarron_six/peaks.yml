@@ -7,6 +7,7 @@ objective_ids:
 - 498   # "El Punto" 13,319
 - 445   # PT 13,340 A
 - 571   # PT 13,222 B
+route_build: {method: legs}
 nearby:
   include: false
 landmarks:

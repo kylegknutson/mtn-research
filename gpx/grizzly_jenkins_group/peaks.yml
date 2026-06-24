@@ -7,9 +7,9 @@ objective_ids:
 - 515   # Grizzly Peak E 13,309
 - 466   # "Lake Fork Peak" 13,333 (optional north extension)
 # Recommended route = two disconnected segments (Lake Fork is 2.4 mi N of the trio with no
-# recorded connecting track). Built verbatim from these recorded tracks, in order, via
-# build_multi_segment_route.py — each becomes its own <trkseg> (no invented connector).
-route_segments: [trio_14ers_1, lakefork_14ers_6]
+# recorded connecting track). Built verbatim from these recorded tracks, in order — each
+# becomes its own <trkseg> (no invented connector).
+route_build: {method: multi_segment, tracks: [trio_14ers_1, lakefork_14ers_6]}
 nearby:
   include: false
 landmarks:
