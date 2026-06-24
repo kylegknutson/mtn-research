@@ -96,8 +96,12 @@ def covered(p, dev, acc):
 
 def load(slug):
     d = GPX / slug
-    rf = next(d.glob("*recommended*.gpx"), None)
-    route = [p for t in (tracks_in(rf) if rf else []) for p in t]
+    # All route segments, NEVER concatenated across joins: a trip has one file per day,
+    # and a single report's route can have multiple <trk> segments (individual climbs with
+    # no connector). Prefer day_*.gpx when present (the combined file is stale for trips).
+    rfiles = sorted(d.glob("*recommended*.gpx"))
+    others = [f for f in rfiles if f.name != f"{slug}_recommended.gpx"]   # drop stale combined
+    route_segs = [seg for rf in (others or rfiles) for seg in tracks_in(rf)]
     named = []  # (filename, track)
     for f in d.glob("*.gpx"):
         if not any(s in f.name.lower() for s in SKIP):
@@ -110,29 +114,31 @@ def load(slug):
             nm = w.find(NS + "name")
             objs.append({"lat": float(w.get("lat")), "lon": float(w.get("lon")),
                          "name": (nm.text if nm is not None else "") or ""})
-    return route, named, objs
+    return route_segs, named, objs
 
 
-def worst_uncovered(route, named, acc):
+def worst_uncovered(route_segs, named, acc):
     """Return (dev_ft, point, nearest_track_index) for the worst route sample whose
-    deviation exceeds the bar and is not covered by an acceptance. None if all-clear."""
+    deviation exceeds the bar and is not covered by an acceptance. Samples WITHIN each route
+    segment only (never across a join). None if all-clear."""
     worst = (0.0, None, None)
-    for i in range(len(route) - 1):
-        a, b = route[i], route[i + 1]
-        seg = hav(*a, *b); n = max(1, int(seg / SAMPLE_M))
-        for k in range(n + 1):
-            t = k / n
-            p = (a[0] + (b[0] - a[0]) * t, a[1] + (b[1] - a[1]) * t)
-            best, bti = 1e18, None
-            for ti, (_, tk) in enumerate(named):
-                for j in range(len(tk) - 1):
-                    if abs(tk[j][0] - p[0]) > 0.01 or abs(tk[j][1] - p[1]) > 0.01:
-                        continue
-                    dd = pt_seg_ft(p, tk[j], tk[j + 1])
-                    if dd < best:
-                        best, bti = dd, ti
-            if best > worst[0] and best > BAR_FT and not covered(p, best, acc):
-                worst = (best, p, bti)
+    for seg in route_segs:
+        for i in range(len(seg) - 1):
+            a, b = seg[i], seg[i + 1]
+            n = max(1, int(hav(*a, *b) / SAMPLE_M))
+            for k in range(n + 1):
+                t = k / n
+                p = (a[0] + (b[0] - a[0]) * t, a[1] + (b[1] - a[1]) * t)
+                best, bti = 1e18, None
+                for ti, (_, tk) in enumerate(named):
+                    for j in range(len(tk) - 1):
+                        if abs(tk[j][0] - p[0]) > 0.01 or abs(tk[j][1] - p[1]) > 0.01:
+                            continue
+                        dd = pt_seg_ft(p, tk[j], tk[j + 1])
+                        if dd < best:
+                            best, bti = dd, ti
+                if best > worst[0] and best > BAR_FT and not covered(p, best, acc):
+                    worst = (best, p, bti)
     return worst if worst[1] else None
 
 
@@ -143,11 +149,11 @@ def main():
     ap.add_argument("--svg", action="store_true")
     args = ap.parse_args()
 
-    route, named, objs = load(args.slug)
-    if len(route) < 2:
+    route_segs, named, objs = load(args.slug)
+    if sum(len(s) for s in route_segs) < 2:
         sys.exit(f"no route for {args.slug}")
     acc = acceptances(args.slug)
-    w = worst_uncovered(route, named, acc)
+    w = worst_uncovered(route_segs, named, acc)
     if not w:
         print(f"OK  {args.slug}: every over-{BAR_FT:.0f}-ft deviation is accepted "
               f"({len(acc)} acceptance(s)) — no un-reviewed problem.")
@@ -168,13 +174,13 @@ def main():
         print(json.dumps({
             "slug": args.slug, "worst_ft": round(dev, 1), "worst": [round(wlat, 6), round(wlon, 6)],
             "bbox": [round(x, 6) for x in bb],
-            "route": clip(route),
+            "route": [clip(s) for s in route_segs if any(inbox(p) for p in s)],
             "tracks": [clip(t) for _, t in named if any(inbox(p) for p in t)],
             "fix_track": fix_file, "fix_poly": [[round(x, 6) for x in p] for p in fix_poly],
             "objectives": objs, "acceptances": acc,
         }))
     elif args.svg:
-        print(render_svg(args.slug, dev, (wlat, wlon), bb, route, named, fix_poly, objs, inbox))
+        print(render_svg(args.slug, dev, (wlat, wlon), bb, route_segs, named, fix_poly, objs, inbox))
     else:
         toks = (fix_file or "").replace(".gpx", "").split("_")
         tok = next((t for t in toks if any(ch.isdigit() for ch in t)), fix_file)
@@ -186,7 +192,7 @@ def main():
               f"--max-ft {math.ceil(dev)} --reason '...'")
 
 
-def render_svg(slug, dev, worst, bb, route, named, fix_poly, objs, inbox):
+def render_svg(slug, dev, worst, bb, route_segs, named, fix_poly, objs, inbox):
     W = H = 600; PAD = 8
     s0, w0, s1, w1 = bb
     mlat, mlon = (s0 + s1) / 2, (w0 + w1) / 2
@@ -226,7 +232,7 @@ def render_svg(slug, dev, worst, bb, route, named, fix_poly, objs, inbox):
         return out
     refs = "".join(poly(t, stroke="#2f9e44", stroke_width=2, opacity=0.55) for _, t in named)
     fix = poly(fix_poly, stroke="#f08c00", stroke_width=5, opacity=0.95, stroke_linecap="round")
-    rt = poly(route, stroke="#E6008C", stroke_width=3)
+    rt = "".join(poly(seg, stroke="#E6008C", stroke_width=3) for seg in route_segs)
     wx = xy(worst)
     # scale bar: pick a round footage that renders ~120 px
     view_ft = (w1 - w0) * 111320.0 * math.cos(math.radians((s0 + s1) / 2)) * 3.28084

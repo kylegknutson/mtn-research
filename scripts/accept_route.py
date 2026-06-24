@@ -45,8 +45,8 @@ def main():
     ap.add_argument("--date", default=str(datetime.date.today()))
     args = ap.parse_args()
 
-    route, named, _ = ir.load(args.slug)
-    if len(route) < 2:
+    route_segs, named, _ = ir.load(args.slug)
+    if sum(len(s) for s in route_segs) < 2:
         sys.exit(f"no route for {args.slug}")
 
     if args.at:
@@ -58,7 +58,7 @@ def main():
                 best = min(best, ir.pt_seg_ft((lat, lon), tk[j], tk[j + 1]))
         dev = best
     else:
-        w = ir.worst_uncovered(route, named, ir.acceptances(args.slug))
+        w = ir.worst_uncovered(route_segs, named, ir.acceptances(args.slug))
         if not w:
             sys.exit(f"{args.slug}: nothing un-accepted to accept — route is already clean.")
         dev, (lat, lon), _ = w

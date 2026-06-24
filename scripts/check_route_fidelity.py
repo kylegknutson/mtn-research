@@ -167,34 +167,44 @@ def covered(p, dev, acc):
     return False
 
 
+def route_segments(slug: str):
+    """All recommended-route segments, NEVER concatenated across joins. A trip has one
+    file per day (day_*.gpx); a single report's route can also have several <trk> segments
+    (individual climbs with no connector). Sampling across a join would invent a phantom
+    straight connector that reads as a huge false deviation — so each <trk> stays separate.
+    For a trip, use the per-day files and IGNORE the combined <slug>_recommended.gpx (it's
+    stale — day names vary: day_bennett, day1_bridge, …). Rule: everything except the
+    combined; fall back to the combined only when it's the sole route file (single report)."""
+    rfiles = sorted((GPX / slug).glob("*recommended*.gpx"))
+    others = [f for f in rfiles if f.name != f"{slug}_recommended.gpx"]
+    return [seg for rf in (others or rfiles) for seg in trkpts(rf)]
+
+
 def worst_deviation_ft(slug: str, cell_m: float, max_ft: float, acc):
     """Return (worst_uncovered_ft, n_accepted_excursions). worst_uncovered is the worst
     sample whose deviation exceeds max_ft and is NOT inside an accepted area — that's the
-    one that needs Kyle's eyes. Samples covered by an acceptance don't count against it."""
-    route = []
-    rf = next((GPX / slug).glob("*recommended*.gpx"), None)
-    if rf:
-        for t in trkpts(rf):
-            route.extend(t)
-    if len(route) < 2:
+    one that needs Kyle's eyes. Samples covered by an acceptance don't count against it.
+    Measured WITHIN each route segment only (never across a join)."""
+    segs = route_segments(slug)
+    if sum(len(s) for s in segs) < 2:
         return None
     grid = SegGrid(source_tracks(slug), cell_m)
     worst_uncov = 0.0
     accepted_hits = 0
-    for i in range(len(route) - 1):
-        a, b = route[i], route[i + 1]
-        seg = hav(a[0], a[1], b[0], b[1])
-        n = max(1, int(seg / SAMPLE_M))
-        for k in range(n + 1):
-            t = k / n
-            p = (a[0] + (b[0] - a[0]) * t, a[1] + (b[1] - a[1]) * t)
-            dev = grid.dev_ft(p)
-            if dev <= max_ft:
-                continue
-            if covered(p, dev, acc):
-                accepted_hits += 1
-            else:
-                worst_uncov = max(worst_uncov, dev)
+    for seg in segs:
+        for i in range(len(seg) - 1):
+            a, b = seg[i], seg[i + 1]
+            n = max(1, int(hav(a[0], a[1], b[0], b[1]) / SAMPLE_M))
+            for k in range(n + 1):
+                t = k / n
+                p = (a[0] + (b[0] - a[0]) * t, a[1] + (b[1] - a[1]) * t)
+                dev = grid.dev_ft(p)
+                if dev <= max_ft:
+                    continue
+                if covered(p, dev, acc):
+                    accepted_hits += 1
+                else:
+                    worst_uncov = max(worst_uncov, dev)
     return worst_uncov, accepted_hits
 
 
