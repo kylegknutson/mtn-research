@@ -3,11 +3,11 @@ image: maps/grizzly_jenkins_group.png
 range: Sawatch
 drive_time: "~4h 15m"
 yds_class: "2+"
-gain: "~4,800 ft (trio loop) · ~5,300–6,800 ft (GPX range)"
+gain: "~12.6 mi / ~7,062 ft (trio + Lake Fork, both on recorded tracks) · trio-only loop ~9 mi / ~4,800 ft"
 status: unclimbed
 caltopo_id: 38DBF6E
 regional_map_id: L5VH4BU
-gain_ft: 6050
+gain_ft: 7062
 class: 2+
 peaks: 4
 days: 1
@@ -22,7 +22,7 @@ status_source: "peak_db ascents"
 <!-- QUICKSTATS_START -->
 
 !!! tip "At a glance — recommended day"
-    **6,050 ft** gain · **Class 2+** · 4 peaks · ~4.2 h drive
+    **7,062 ft** gain · **Class 2+** · 4 peaks · ~4.2 h drive
 
 <!-- QUICKSTATS_END -->
 

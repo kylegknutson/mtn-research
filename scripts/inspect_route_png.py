@@ -63,16 +63,26 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("slug")
     ap.add_argument("-o", "--out")
+    ap.add_argument("--at", help="lat,lon to center on (default: worst un-accepted deviation) — "
+                                 "use to show a specific (e.g. now-fixed) spot")
     args = ap.parse_args()
 
     route_segs, named, objs = ir.load(args.slug)
     if sum(len(s) for s in route_segs) < 2:
         sys.exit(f"no route for {args.slug}")
-    acc = ir.acceptances(args.slug)
-    w = ir.worst_uncovered(route_segs, named, acc)
-    if not w:
-        sys.exit(f"OK {args.slug}: no un-accepted deviation.")
-    dev, (wlat, wlon), bti = w
+    if args.at:
+        wlat, wlon = (float(x) for x in args.at.split(","))
+        dev, bti = 1e18, None
+        for ti, (_, tk) in enumerate(named):
+            for j in range(len(tk) - 1):
+                d = ir.pt_seg_ft((wlat, wlon), tk[j], tk[j + 1])
+                if d < dev:
+                    dev, bti = d, ti
+    else:
+        w = ir.worst_uncovered(route_segs, named, ir.acceptances(args.slug))
+        if not w:
+            sys.exit(f"OK {args.slug}: no un-accepted deviation.")
+        dev, (wlat, wlon), bti = w
 
     # frame: wide enough for topo context, deviation still visible (~3% of view)
     half_m = min(420.0, max(140.0, dev / 3.28084 * 16.0))
@@ -134,9 +144,10 @@ def main():
     f1, f2 = font(20), font(15)
     draw.rectangle([8, 8, 8 + 430, 8 + 64], fill=(255, 255, 255, 210))
     draw.text((16, 14), args.slug, fill=(17, 17, 17, 255), font=f1)
-    draw.text((16, 40), f"worst un-accepted deviation: {dev:.0f} ft  "
-                        f"(magenta=route  orange=fix  green=tracks)",
-              fill=(193, 30, 30, 255), font=f2)
+    sub = (f"route vs nearest recorded track here  (magenta=route  orange=track  green=tracks)"
+           if args.at else
+           f"worst un-accepted deviation: {dev:.0f} ft  (magenta=route  orange=fix  green=tracks)")
+    draw.text((16, 40), sub, fill=(193, 30, 30, 255), font=f2)
     view_ft = (lon_max - lon_min) * 111320.0 * math.cos(math.radians(wlat)) * 3.28084
     nice = min([50, 100, 200, 300, 500], key=lambda v: abs(v / view_ft * W - 150))
     barpx = nice / view_ft * W
