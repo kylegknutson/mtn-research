@@ -56,6 +56,12 @@ def export_to_gps_tracks(slug):
         print(f"  WARN: GPS Tracks export skipped: {ex}", file=sys.stderr)
 SKIP = ("peaks_only", "landmark", "trailhead", "recommended", "_drive", "drive_in", "waypoints", "summit")
 SNAP_MAX_M = 250.0   # a track must pass this close to "reach" an objective
+# Stitcher (--legs): ride recorded tracks verbatim; where two objectives have no connecting
+# track, straight-line a transition only if they come within TRANSITION_MAX_M (tracks nearly
+# touch — Kyle is fine with a short straight there), else BREAK into a separate <trk> (a real
+# gap — no invented long connector). GAP_PENALTY_M makes the TSP order prefer real-track legs.
+TRANSITION_MAX_M = 80.0
+GAP_PENALTY_M = 10000.0
 
 # Elevation gain: GPS <ele> in the source tracks is unreliable (barometric drift —
 # these tracks log 14,000' summits on 13ers), so by default we resample a real DEM
@@ -551,6 +557,7 @@ def main():
             tracks, terms, bool(start), not args.no_return,
             args.thin, args.transfer_eps, args.rdp_eps)
         print("Order: " + " -> ".join(terms[k][0] for k in order))
+        segments = [route]
     else:
         n = len(terms)
         # pairwise shortest single-track segments
@@ -563,36 +570,56 @@ def main():
                     seg[(i, j)] = (L, ti, ia, ib)   # idx_A near i, idx_B near j
                     seg[(j, i)] = (L, ti, ib, ia)   # reversed: idx_A near j, idx_B near i
 
+        def gap_m(i, j):
+            return hav(terms[i][1], terms[i][2], terms[j][1], terms[j][2])
+
         def pdist(i, j):
-            return seg[(i, j)][0] if (i, j) in seg else float("inf")
+            # connected → real single-track segment length; else → straight gap, penalized so
+            # the TSP order prefers real-track legs and only gaps where nothing connects.
+            return seg[(i, j)][0] if (i, j) in seg else gap_m(i, j) + GAP_PENALTY_M
 
-        # order via TSP (brute force small N, nearest-neighbor large N)
         order = tsp_order(pdist, n, bool(start), not args.no_return)
-        total = sum(pdist(order[k], order[k + 1]) for k in range(len(order) - 1))
-        if math.isinf(total):
-            sys.exit("ERROR: some legs have no single track connecting them "
-                     "(no party walked directly between two objectives). "
-                     "Add a bridging track or visit objectives separately, or try --graph.")
-
         print("Order: " + " -> ".join(terms[k][0] for k in order))
 
-        # emit segments
-        route = []
+        # Stitch: ride each recorded track VERBATIM (keeps every bend). Where two adjacent
+        # objectives have no connecting track, straight-line a SHORT transition (tracks come
+        # within TRANSITION_MAX_M), else BREAK into a separate <trk> — never invent a long
+        # straight connector; the climber navigates a real gap (people took their own way).
+        segments = []
+        cur = []
         for k in range(len(order) - 1):
             a, b = order[k], order[k + 1]
-            L, ti, ia, ib = seg[(a, b)]   # ia near a, ib near b
-            pts = tracks[ti]
-            lo_i, hi_i = (ia, ib) if ia <= ib else (ib, ia)
-            chunk = pts[lo_i:hi_i + 1]
-            if ia > ib:
-                chunk = chunk[::-1]   # orient so chunk starts at a, ends at b
-            if route:
-                chunk = chunk[1:]
-            route.extend(chunk)
-            print(f"  {terms[a][0]:>22s} -> {terms[b][0]:<22s} {L/1609.34:5.2f} mi  via {track_files[ti].name}")
+            if (a, b) in seg:
+                L, ti, ia, ib = seg[(a, b)]
+                pts = tracks[ti]
+                lo_i, hi_i = (ia, ib) if ia <= ib else (ib, ia)
+                chunk = pts[lo_i:hi_i + 1]
+                if ia > ib:
+                    chunk = chunk[::-1]
+                if cur:
+                    chunk = chunk[1:]
+                cur.extend(chunk)
+                print(f"  {terms[a][0]:>22s} -> {terms[b][0]:<22s} {L/1609.34:5.2f} mi  via {track_files[ti].name}")
+            else:
+                g = gap_m(a, b)
+                pa = (terms[a][1], terms[a][2], None)
+                pb = (terms[b][1], terms[b][2], None)
+                if g <= TRANSITION_MAX_M:
+                    if not cur:
+                        cur.append(pa)
+                    cur.append(pb)
+                    print(f"  {terms[a][0]:>22s} -> {terms[b][0]:<22s} {g/1609.34:5.2f} mi  (straight transition, no track ≤{TRANSITION_MAX_M:.0f} m)")
+                else:
+                    if not cur:
+                        cur.append(pa)
+                    segments.append(cur)
+                    cur = [pb]
+                    print(f"  {terms[a][0]:>22s} -> {terms[b][0]:<22s} {g/1609.34:5.2f} mi  (SEPARATE segment — real gap, no connecting track)")
+        if cur:
+            segments.append(cur)
 
-        dist = sum(hav(route[i][0], route[i][1], route[i + 1][0], route[i + 1][1])
-                   for i in range(len(route) - 1))
+        dist = sum(hav(s[i][0], s[i][1], s[i + 1][0], s[i + 1][1])
+                   for s in segments for i in range(len(s) - 1))
 
         # Prefer a whole recorded track that already makes a clean tour of every
         # objective when one is competitive: per-leg stitching minimizes each leg
@@ -611,39 +638,48 @@ def main():
             print(f"\nUsing whole track {track_files[cti].name} — a clean "
                   f"{cl/1609.34:.2f} mi loop through all objectives "
                   f"(stitched legs were {dist/1609.34:.2f} mi but re-climbed a peak).")
-            route, dist = cpts, cl
+            segments, dist = [cpts], cl
         elif completes:
             print(f"\n(Shortest complete single track is {completes[0][0]/1609.34:.2f} mi "
                   f"via {track_files[completes[0][2]].name}; keeping the stitched "
                   f"{dist/1609.34:.2f} mi route.)")
         else:
-            print("\n(No single track tours all objectives; using the stitched route.)")
+            print(f"\n(No single track tours all objectives; stitched into {len(segments)} segment(s).)")
 
+    # gain summed PER SEGMENT — never across a break (that jump isn't climbed)
     if args.no_dem:
-        gain, gain_src = gps_gain(route), "GPS <ele> (noisy)"
+        gain, gain_src = sum(gps_gain(s) for s in segments), "GPS <ele> (noisy)"
     else:
         print(f"Sampling DEM ({args.dem_dataset}) for elevation gain…")
         try:
-            gain, used = dem_gain(route, args.dem_dataset)
+            gain, used = 0.0, None
+            for s in segments:
+                gseg, used = dem_gain(s, args.dem_dataset)
+                gain += gseg
             gain_src = f"DEM {used}"
         except Exception as ex:
-            gain, gain_src = gps_gain(route), "GPS <ele> (DEM failed — noisy!)"
+            gain, gain_src = sum(gps_gain(s) for s in segments), "GPS <ele> (DEM failed — noisy!)"
             print(f"  WARN: {ex}; fell back to GPS elevation", file=sys.stderr)
 
+    npts = sum(len(s) for s in segments)
     print(f"\nRecommended route: {dist / 1609.34:.2f} mi · ~{gain * 3.281:.0f} ft gain "
-          f"[{gain_src}] · {len(route)} pts")
+          f"[{gain_src}] · {npts} pts · {len(segments)} segment(s)")
 
     out = Path(args.out) if args.out else d / f"{args.slug}_recommended.gpx"
     with open(out, "w") as f:
         f.write('<?xml version="1.0" encoding="UTF-8"?>\n')
         f.write('<gpx version="1.1" creator="build_recommended_route.py" '
                 'xmlns="http://www.topografix.com/GPX/1/1">\n')
-        f.write(f'<trk><name>Recommended route (composed): {args.slug} '
-                f'— {dist / 1609.34:.1f} mi / {gain * 3.281:.0f} ft</name><trkseg>\n')
-        for la, lo, ele in route:
-            es = f"<ele>{ele:.1f}</ele>" if ele is not None else ""
-            f.write(f'<trkpt lat="{la:.6f}" lon="{lo:.6f}">{es}</trkpt>\n')
-        f.write("</trkseg></trk>\n</gpx>\n")
+        for si, seg in enumerate(segments):
+            tag = f" [seg {si + 1}/{len(segments)}]" if len(segments) > 1 else ""
+            f.write(f'<trk><name>Recommended route (composed): {args.slug} '
+                    f'— {dist / 1609.34:.1f} mi / {gain * 3.281:.0f} ft{tag}</name><trkseg>\n')
+            for p in seg:
+                la, lo, ele = p[0], p[1], (p[2] if len(p) > 2 else None)
+                es = f"<ele>{ele:.1f}</ele>" if ele is not None else ""
+                f.write(f'<trkpt lat="{la:.6f}" lon="{lo:.6f}">{es}</trkpt>\n')
+            f.write("</trkseg></trk>\n")
+        f.write("</gpx>\n")
     print(f"Wrote {out}")
     if not args.no_export:    # scratch builds (recipe inference / verification) skip the
         export_to_gps_tracks(args.slug)   # iCloud GPS Tracks mirror
