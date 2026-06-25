@@ -7,7 +7,7 @@ gain: "~4,000 ft"
 status: unclimbed
 caltopo_id: 6FM1FEK
 regional_map_id: 06AR6BF
-gain_ft: 4000
+gain_ft: 6057
 class: 2-3
 peaks: 3
 days: 1
@@ -22,7 +22,7 @@ status_source: "peak_db ascents"
 <!-- QUICKSTATS_START -->
 
 !!! tip "At a glance — recommended day"
-    **4,000 ft** gain · **Class 2-3** · 3 peaks · ~6.3 h drive
+    **6,057 ft** gain · **Class 2-3** · 3 peaks · ~6.3 h drive
 
 <!-- QUICKSTATS_END -->
 

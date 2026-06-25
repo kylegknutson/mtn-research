@@ -147,6 +147,7 @@ def main():
     ap.add_argument("slug")
     ap.add_argument("--json", action="store_true")
     ap.add_argument("--svg", action="store_true")
+    ap.add_argument("--full", action="store_true", help="frame the WHOLE route + objectives (not zoomed to the worst point)")
     args = ap.parse_args()
 
     route_segs, named, objs = load(args.slug)
@@ -160,11 +161,19 @@ def main():
         return
     dev, (wlat, wlon), bti = w
 
-    # frame so the deviation is ~10% of the view (always clearly visible), min ~165 ft wide
-    half_m = min(400.0, max(25.0, dev / 3.28084 * 5.0))
-    dlat = half_m / 111000.0
-    dlon = half_m / (111000.0 * max(0.3, math.cos(math.radians(wlat))))
-    bb = (wlat - dlat, wlon - dlon, wlat + dlat, wlon + dlon)
+    if args.full:                       # whole route + objectives extent (judge the whole line)
+        allpts = [p for s in route_segs for p in s] + [(o["lat"], o["lon"]) for o in objs]
+        las = [p[0] for p in allpts]; los = [p[1] for p in allpts]
+        mlat, mlon = (min(las) + max(las)) / 2, (min(los) + max(los)) / 2
+        ph = (max(las) - min(las)) * 0.06 + 1e-4
+        pw = (max(los) - min(los)) * 0.06 + 1e-4
+        bb = (min(las) - ph, min(los) - pw, max(las) + ph, max(los) + pw)
+    else:
+        # frame so the deviation is ~10% of the view (always clearly visible), min ~165 ft wide
+        half_m = min(400.0, max(25.0, dev / 3.28084 * 5.0))
+        dlat = half_m / 111000.0
+        dlon = half_m / (111000.0 * max(0.3, math.cos(math.radians(wlat))))
+        bb = (wlat - dlat, wlon - dlon, wlat + dlat, wlon + dlon)
     inbox = lambda p: bb[0] <= p[0] <= bb[2] and bb[1] <= p[1] <= bb[3]
     fix_file = named[bti][0] if bti is not None else None
     fix_poly = named[bti][1] if bti is not None else []   # full track; render clips it

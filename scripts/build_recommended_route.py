@@ -165,6 +165,56 @@ def complete_tour(pts, obj_coords, start_coord, want_return):
     return length, trimmed
 
 
+def snap_route_to_tracks(route, tracks, snap_m=12.0):
+    """Snap a graph route onto the VERBATIM recorded tracks it rides — restores the bends the
+    thinning/RDP rounded off. Hysteresis keeps it on ONE strand through a braid; where two
+    consecutive points sit on the same track it fills that track's points, else keeps the short
+    hop. Returns one segment (point list)."""
+    if len(route) < 2:
+        return route
+
+    def nearest_on(ti, p):
+        t = tracks[ti]
+        bi = min(range(len(t)), key=lambda i: hav(p[0], p[1], t[i][0], t[i][1]))
+        return bi, hav(p[0], p[1], t[bi][0], t[bi][1])
+
+    mapped, prev_ti = [], None
+    for p in route:
+        choice = None
+        if prev_ti is not None:
+            bi, bd = nearest_on(prev_ti, p)
+            if bd <= snap_m:
+                choice = (prev_ti, bi)
+        if choice is None:
+            best = (1e18, None, None)
+            for ti in range(len(tracks)):
+                bi, bd = nearest_on(ti, p)
+                if bd < best[0]:
+                    best = (bd, ti, bi)
+            if best[0] <= snap_m:
+                choice = (best[1], best[2])
+        mapped.append(choice)
+        prev_ti = choice[0] if choice else None
+
+    out = []
+    for k in range(len(route) - 1):
+        m0, m1 = mapped[k], mapped[k + 1]
+        straight = hav(route[k][0], route[k][1], route[k + 1][0], route[k + 1][1])
+        if m0 and m1 and m0[0] == m1[0]:
+            ti, i0, i1 = m0[0], m0[1], m1[1]
+            chunk = tracks[ti][i0:i1 + 1] if i0 <= i1 else tracks[ti][i1:i0 + 1][::-1]
+            clen = sum(hav(chunk[j][0], chunk[j][1], chunk[j + 1][0], chunk[j + 1][1])
+                       for j in range(len(chunk) - 1))
+            if len(chunk) >= 2 and clen <= max(straight * 5.0, straight + 150.0):
+                pts = [(q[0], q[1], q[2] if len(q) > 2 else None) for q in chunk]
+                out.extend(pts[1:] if out else pts)
+                continue
+        if not out:
+            out.append(route[k])
+        out.append(route[k + 1])
+    return out
+
+
 def accumulated_gain(eles, threshold_m):
     """Sum positive elevation deltas, ignoring runs of net climb below threshold."""
     if not eles:
@@ -256,9 +306,12 @@ def thin_track(pts, min_m):
     return out
 
 
-def build_graph(tracks, transfer_eps):
-    """nodes = all (thinned) points; edges = within-track neighbors + short
-    transfer edges between points of any tracks within transfer_eps (bidirectional)."""
+def build_graph(tracks, transfer_eps, switch_penalty=0.0):
+    """nodes = all (thinned) points; edges = within-track neighbors + short transfer edges
+    between points of any tracks within transfer_eps. A switch_penalty on transfer edges makes
+    the shortest path pick ONE strand through a braid (instead of weaving for tiny shortcuts)
+    and switch tracks only where it saves more than the penalty (the approach splice). In a
+    braid the strands are the same trail, so one strand IS the consensus line."""
     nodes, adj, track_of = [], [], []
     for ti, pts in enumerate(tracks):
         i0 = len(nodes)
@@ -289,7 +342,8 @@ def build_graph(tracks, transfer_eps):
                         continue
                     dd = hav(n[0], n[1], nodes[j][0], nodes[j][1])
                     if dd <= transfer_eps:
-                        adj[i].append((j, dd)); adj[j].append((i, dd))
+                        w = dd + switch_penalty
+                        adj[i].append((j, w)); adj[j].append((i, w))
     return nodes, adj
 
 
@@ -379,7 +433,7 @@ def tsp_order(pd, n, has_start, want_return):
     return order
 
 
-def graph_route(tracks, terms, has_start, want_return, thin_m, transfer_eps, rdp_eps):
+def graph_route(tracks, terms, has_start, want_return, thin_m, transfer_eps, rdp_eps, switch_penalty=0.0):
     """Shortest real-path route through the terminals via the pooled-track graph.
     Returns (route_pts, dist_m, order_indices)."""
     # Adaptive thinning: keep the node count bounded so dense/huge track sets
@@ -391,7 +445,7 @@ def graph_route(tracks, terms, has_start, want_return, thin_m, transfer_eps, rdp
         k = total / NODE_CAP
         tm, te = thin_m * k, transfer_eps * k
         print(f"Large track set ({total} pts) → thinning to {tm:.0f} m (transfer {te:.0f} m)")
-    nodes, adj = build_graph([thin_track(t, tm) for t in tracks], te)
+    nodes, adj = build_graph([thin_track(t, tm) for t in tracks], te, switch_penalty)
     print(f"Graph: {len(nodes)} nodes (thin {tm:.0f} m, transfer {te:.0f} m)")
     snapped = []
     for label, la, lo in terms:
@@ -434,6 +488,8 @@ def main():
     ap.add_argument("--thin", type=float, default=12.0, help="[graph] thin tracks to this spacing (m)")
     ap.add_argument("--transfer-eps", type=float, default=18.0, help="[graph] max gap to hop between tracks (m)")
     ap.add_argument("--rdp-eps", type=float, default=8.0, help="[graph] simplification tolerance to remove weave jitter (m)")
+    ap.add_argument("--switch-penalty", type=float, default=0.0, help="[graph] penalty (m) added to each track-to-track transfer, so the route picks one strand through a braid instead of weaving")
+    ap.add_argument("--no-snap", action="store_true", help="[graph] don't snap the route onto verbatim tracks (keep the thinned/smoothed line)")
     ap.add_argument("--from-track", help="use a recorded track (filename substring) VERBATIM as the route, "
                     "instead of composing — for when the router routes long but one real party track already "
                     "makes the efficient tour (use scripts/analyze_tracks.py to find it). DEM-measures + writes it.")
@@ -555,9 +611,16 @@ def main():
     if args.graph or not args.legs:
         route, dist, order = graph_route(
             tracks, terms, bool(start), not args.no_return,
-            args.thin, args.transfer_eps, args.rdp_eps)
+            args.thin, args.transfer_eps, args.rdp_eps, args.switch_penalty)
         print("Order: " + " -> ".join(terms[k][0] for k in order))
-        segments = [route]
+        if args.no_snap:
+            segments = [route]
+        else:
+            snapped = snap_route_to_tracks(route, tracks)
+            dist = sum(hav(snapped[i][0], snapped[i][1], snapped[i + 1][0], snapped[i + 1][1])
+                       for i in range(len(snapped) - 1))
+            segments = [snapped]
+            print(f"  snapped to verbatim tracks → {len(snapped)} pts")
     else:
         n = len(terms)
         # pairwise shortest single-track segments

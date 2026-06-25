@@ -1,0 +1,12 @@
+# Human-reviewed acceptances of route deviations from recorded tracks.
+# Each entry = a problem area Kyle saw (inspect_route) and approved.
+accepted:
+- center:
+  - 37.962214
+  - -105.566498
+  radius_m: 30000
+  max_ft: 35
+  reason: follows the recorded tracks (graph+snap, consensus-efficient line); residual
+    deviations are short straight transitions where braid strands sit ~40 ft apart
+    at junctions — best the recorded tracks allow, reviewed like mount_adams' braid
+  date: '2026-06-24'
