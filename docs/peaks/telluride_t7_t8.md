@@ -33,7 +33,7 @@ status_source: "peak_db ascents"
 ---
 
 <!-- CLIMBERS_START -->
-**Other climbers:** Emily Sharpe — not yet · Shawn D Keil — not yet
+**Other climbers:** Emily Sharpe — not yet · Shawn D Keil — 2 of 3 (Telluride Pk, T 7)
 <!-- CLIMBERS_END -->
 
 ## Quick stats

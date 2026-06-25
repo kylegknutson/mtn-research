@@ -37,7 +37,7 @@ status_source: "peak_db ascents"
 ---
 
 <!-- CLIMBERS_START -->
-**Other climbers:** Emily Sharpe — 1 of 2 (Mount Powell A) · Shawn D Keil — not yet
+**Other climbers:** Emily Sharpe — 1 of 2 (Mount Powell A) · Shawn D Keil — 1 of 2 (Mount Powell A)
 <!-- CLIMBERS_END -->
 
 ## Quick stats

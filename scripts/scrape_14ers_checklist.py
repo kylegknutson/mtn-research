@@ -33,8 +33,29 @@ UA = {"User-Agent": "Mozilla/5.0 (mtn-research checklist sync)"}
 ROW = re.compile(r"""stats\(["']?(?:13ers|14ers)["']?,\s*["']?(\d+)["']?,\s*["']([^"']+)["']""", re.I)
 
 
+def canonical_checklist_url(url: str) -> str:
+    """Force the canonical checklist URL (usernum + checklist only).
+
+    Extra params (rk/nm/climbstatus=all/listd=range/hidesummary) change the page
+    layout so the onclick="stats(...)" rows the scraper keys on aren't emitted —
+    the scrape then sees a tiny fraction of the climbs and mis-flags the climber
+    as "not yet" everywhere (caught on Shawn, 2026-06-25). The plain URL already
+    returns ranked+unranked climbed peaks, which is exactly what we want.
+    """
+    from urllib.parse import urlsplit, urlunsplit, parse_qs, urlencode
+    u = urlsplit(url)
+    q = parse_qs(u.query)
+    keep = {}
+    for k in ("usernum", "checklist"):
+        if k in q:
+            keep[k] = q[k][0]
+    keep.setdefault("checklist", "13ers")
+    return urlunsplit((u.scheme, u.netloc, u.path, urlencode(keep), ""))
+
+
 def climbed_14ers_ids(url: str) -> dict[str, str]:
     """Return {14ers_id: name} for the climber's climbed peaks on the checklist."""
+    url = canonical_checklist_url(url)
     r = requests.get(url, headers=UA, timeout=30)
     r.raise_for_status()
     out = {}

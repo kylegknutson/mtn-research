@@ -46,7 +46,7 @@ status_source: "peak_db ascents (Kyle — unclimbed)"
 ---
 
 <!-- CLIMBERS_START -->
-**Other climbers:** Emily Sharpe — not yet · Shawn D Keil — not yet
+**Other climbers:** Emily Sharpe — not yet · Shawn D Keil — 3 of 5 (Summit Pk, Unicorn, The, Montezuma Pk)
 <!-- CLIMBERS_END -->
 
 ## Trip stats

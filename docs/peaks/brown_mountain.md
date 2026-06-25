@@ -36,6 +36,10 @@ status_source: "peak_db ascents (Kyle — unclimbed)"
 
 ---
 
+<!-- CLIMBERS_START -->
+**Other climbers:** Emily Sharpe — not yet · Shawn D Keil — ✓ climbed
+<!-- CLIMBERS_END -->
+
 ## Quick stats
 
 | | Brown Mountain (DUCO BM) |

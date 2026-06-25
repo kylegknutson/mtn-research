@@ -34,6 +34,10 @@ status_source: "peak_db ascents (both 0 ascents — unclimbed)"
 
 ---
 
+<!-- CLIMBERS_START -->
+**Other climbers:** Emily Sharpe — not yet · Shawn D Keil — ✓ all
+<!-- CLIMBERS_END -->
+
 ## Quick stats
 
 | | Dolores Peak | Middle Peak | Dunn Peak (bonus) |

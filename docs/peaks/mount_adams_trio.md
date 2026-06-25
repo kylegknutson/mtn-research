@@ -42,7 +42,7 @@ weather: "https://forecast.weather.gov/MapClick.php?lat=38.0007&lon=-105.6004"
 ---
 
 <!-- CLIMBERS_START -->
-**Other climbers:** Emily Sharpe — 1 of 3 (PT 13,552) · Shawn D Keil — not yet
+**Other climbers:** Emily Sharpe — 1 of 3 (PT 13,552) · Shawn D Keil — 2 of 3 (PT 13,552, Pt 13,580A)
 <!-- CLIMBERS_END -->
 
 ## Quick stats

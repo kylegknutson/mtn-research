@@ -45,7 +45,7 @@ status_source: "peak_db ascents (Kyle — unclimbed)"
 ---
 
 <!-- CLIMBERS_START -->
-**Other climbers:** Emily Sharpe — not yet · Shawn D Keil — not yet
+**Other climbers:** Emily Sharpe — 2 of 6 (PT 13,291, PT 13,220) · Shawn D Keil — not yet
 <!-- CLIMBERS_END -->
 
 ## Quick stats

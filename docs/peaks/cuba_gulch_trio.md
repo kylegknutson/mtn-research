@@ -38,7 +38,7 @@ status_source: "peak_db ascents"
 ---
 
 <!-- CLIMBERS_START -->
-**Other climbers:** Emily Sharpe — not yet · Shawn D Keil — not yet
+**Other climbers:** Emily Sharpe — not yet · Shawn D Keil — 1 of 3 (PT 13,076)
 <!-- CLIMBERS_END -->
 
 ## Quick stats

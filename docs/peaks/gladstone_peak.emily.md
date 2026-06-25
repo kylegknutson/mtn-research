@@ -43,7 +43,7 @@ status_source: "scrape_14ers_checklist emily (usernum 45697) 2026-06-17; peak_db
 ---
 
 <!-- CLIMBERS_START -->
-**Other climbers:** Kyle Knutson — ✓ climbed · Shawn D Keil — not yet
+**Other climbers:** Kyle Knutson — ✓ climbed · Shawn D Keil — ✓ climbed
 <!-- CLIMBERS_END -->
 
 ## Quick stats

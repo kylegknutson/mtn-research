@@ -49,7 +49,7 @@ status_source: "peak_db ascents (Kyle — climbed)"
 ---
 
 <!-- CLIMBERS_START -->
-**Other climbers:** Emily Sharpe — not yet · Shawn D Keil — not yet
+**Other climbers:** Emily Sharpe — not yet · Shawn D Keil — 3 of 5 (Baldy Lejos, PT 13,115, PT 13,030)
 <!-- CLIMBERS_END -->
 
 ## Trip stats

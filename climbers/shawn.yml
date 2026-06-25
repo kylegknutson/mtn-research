@@ -15,7 +15,12 @@ home_latlon: [39.7442, -105.0614]
 # 13ers: 352/583 ranked, 408/788 ranked+unranked, 438 total summits
 climbed_list:
   source: 14ers_checklist
-  checklist_url: "https://www.14ers.com/php14ers/checklist.php?usernum=872&checklist=13ers&rk=unranked&nm=both&climbstatus=all&listd=range&hidesummary=no"
+  # NOTE: use the PLAIN checklist URL. The extra params (rk/nm/climbstatus=all/
+  # listd=range/hidesummary) change the page layout so the onclick="stats(...)"
+  # rows the scraper keys on aren't emitted — it then sees only 8 climbed instead
+  # of 360, mis-flagging Shawn as "not yet" on every report (caught 2026-06-25).
+  # The plain URL already returns ranked+unranked climbed (408 peaks).
+  checklist_url: "https://www.14ers.com/php14ers/checklist.php?usernum=872&checklist=13ers"
 
 # Site this climber's reports publish to (a subpath of the main repo's Pages site).
 site:

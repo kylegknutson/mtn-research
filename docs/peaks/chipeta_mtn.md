@@ -40,7 +40,7 @@ status_source: "peak_db ascents"
 ---
 
 <!-- CLIMBERS_START -->
-**Other climbers:** Emily Sharpe — ✓ climbed · Shawn D Keil — not yet
+**Other climbers:** Emily Sharpe — ✓ climbed · Shawn D Keil — ✓ climbed
 <!-- CLIMBERS_END -->
 
 ## Quick stats

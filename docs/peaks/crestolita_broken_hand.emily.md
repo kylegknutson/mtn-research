@@ -27,7 +27,7 @@ status_source: "scrape_14ers_checklist emily"
 ---
 
 <!-- CLIMBERS_START -->
-**Other climbers:** Kyle Knutson — not yet · Shawn D Keil — not yet
+**Other climbers:** Kyle Knutson — not yet · Shawn D Keil — 1 of 2 (Broken Hand Pk)
 <!-- CLIMBERS_END -->
 
 ## Quick stats
