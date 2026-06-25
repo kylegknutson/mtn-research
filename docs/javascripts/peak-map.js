@@ -116,21 +116,12 @@
       overlays[tri("#e53935", "#7a1414") + " To do (" + (c.todo || 0) + ")"] = todo;
       overlays[tri("#b8b8b8", "#5b5b5b") + " Climbed (" + (c.climbed || 0) + ")"] = climbed;
       overlays["<span style='color:#E6008C'>━</span> Recommended routes"] = routes;
+      // Collapsible (shows a layers icon; expands on hover/click) — the status
+      // colors + counts live here, so the old bottom-left color key was redundant.
       L.control.layers({ "Topo": topo, "Light": light }, overlays,
-        { position: "topright", collapsed: false }).addTo(map);
+        { position: "topright", collapsed: true }).addTo(map);
 
       if (allBounds.length) map.fitBounds(allBounds, { padding: [30, 30] });
-
-      var lg = L.control({ position: "bottomleft" });
-      lg.onAdd = function () {
-        var div = L.DomUtil.create("div", "peakmap-legend");
-        div.innerHTML =
-          "<span class='pk rep'></span> Has report &nbsp; " +
-          "<span class='pk todo'></span> To do &nbsp; " +
-          "<span class='pk done'></span> Climbed";
-        return div;
-      };
-      lg.addTo(map);
 
       // True full-screen via the browser Fullscreen API on the map container —
       // robust regardless of the MkDocs content-column layout (a CSS width
