@@ -3,13 +3,13 @@ image: maps/williams_mountains.png
 range: Sawatch
 drive_time: "~3h 45m (seasonal — Independence Pass)"
 yds_class: "3"
-gain: "~13.6 mi / ~6,170 ft (recommended loop, DEM)"
+gain: "~14.7 mi / ~6,084 ft (recommended loop — Heather Ryan's recorded full traverse, DEM)"
 status: unclimbed
 caltopo_id: 310E34A
 regional_map_id: L5VH4BU
 peak_ids: [411, 705, 474, 609, 789]
-dist_mi: 13.6
-gain_ft: 6170
+dist_mi: 14.7
+gain_ft: 6084
 class: 3
 peaks: 5
 days: 1
@@ -24,7 +24,7 @@ status_source: "peak_db ascents (Kyle — unclimbed)"
 <!-- QUICKSTATS_START -->
 
 !!! tip "At a glance — recommended day"
-    **13.6 mi** · **6,170 ft** gain · **Class 3** · 5 peaks · ~3.8 h drive
+    **14.7 mi** · **6,084 ft** gain · **Class 3** · 5 peaks · ~3.8 h drive
 
 <!-- QUICKSTATS_END -->
 
@@ -36,7 +36,7 @@ status_source: "peak_db ascents (Kyle — unclimbed)"
 > The full **Williams Mountains** sub-range ridge, W of Independence Pass — *not* to be confused with Williams Peak. All five ranked summits in one outing.
 
 ![Overview map](../maps/williams_mountains.png)
-*[Interactive CalTopo map](https://caltopo.com/m/310E34A)* — source GPX (14ers library + Kyle's CalTopo) in green, with the **recommended composed loop in bold magenta**; 5 summit markers + Lost Man TH.
+*[Interactive CalTopo map](https://caltopo.com/m/310E34A)* — source GPX (14ers library + Kyle's CalTopo) in green, with the **recommended full-traverse loop in bold magenta**; 5 summit markers + Lost Man TH.
 
 ---
 
@@ -65,12 +65,12 @@ The five form a **~3.5 mi N→S ridge**: North (13,139) → Williams Mtn (13,390
 
 ## Recommended day — Lost Man TH loop over all five ⭐
 
-A **composed loop** (shortest line through all five summits, stitched from the recorded GPS via the graph router; gain DEM-measured): **~12.9 mi / ~5,810′**, **Class 3**. Matches the recorded full-traverse TR (LoJ [TR 2019](https://listsofjohn.com/tr?Id=2019): ~13.9 mi / ~5,700′).
+A **full-traverse loop** that follows **Heather Ryan's recorded all-five line verbatim** (her real GPS track from the Lost Man TH over every summit and back; distance from that track, gain DEM-measured): **~14.7 mi / ~6,084′**, **Class 3**. Consistent with the recorded full-traverse TR (LoJ [TR 2019](https://listsofjohn.com/tr?Id=2019): ~13.9 mi / ~5,700′).
 
 | | |
 |---|---|
 | Peaks | all five Williams summits |
-| **Recommended loop** | **~12.9 mi / ~5,810′ (DEM)** |
+| **Recommended loop** | **~14.7 mi / ~6,084′ (DEM)** |
 | Class | **3** — mostly Class 2/2+ tundra & talus, with **brief Class 3 scrambles** and **short knife-edge ridge sections** on the connecting ridges (TR 2019). Ice axe recommended. |
 | Trailhead | **Lost Man TH (~10,500')**, Hwy 82 W of Independence Pass — **passenger car** |
 | Style | a **long single day** *or* a **2–3 day backpack** (camp at South Fork Pass) — both are standard |
@@ -116,7 +116,7 @@ A **composed loop** (shortest line through all five summits, stitched from the r
 
 ## Trip reports & GPX (all sources)
 
-**Sources confirmed logged in:** 14ers.com ("letsgocu"), listsofjohn.com, peakbagger.com (Kyle Knutson). **2 full-traverse 14ers-library tracks** + **Kyle's CalTopo** track are layered on the CalTopo map; the recommended composed loop is drawn over them in magenta.
+**Sources confirmed logged in:** 14ers.com ("letsgocu"), listsofjohn.com, peakbagger.com (Kyle Knutson). **2 full-traverse 14ers-library tracks** + **Kyle's CalTopo** track are layered on the CalTopo map; the recommended loop — **Heather Ryan's recorded full traverse** — is drawn over them in magenta.
 
 ### listsofjohn.com (logged in)
 | GPX | Note |
@@ -133,7 +133,7 @@ Pages verified for all five; **ownership = Hunter-Fryingpan Wilderness** (White 
 ### climb13ers.com
 Per-summit route pages: [Williams Mountain](https://www.climb13ers.com/colorado-13ers/williams-mountain) (North Ridge, Class 3) · [Williams Benchmark / South A](https://www.climb13ers.com/colorado-13ers/william-benchmark--william-mtn-south-a) · [South B](https://www.climb13ers.com/colorado-13ers/un13203--williams-mtn-south--b) · [North](https://www.climb13ers.com/colorado-13ers/un13108--williams-mtn-north). climb13ers: *"possible to clean all summits in a long day, but many prefer a 2–3 day backpack."*
 
-> **Numbers note:** the **~12.9 mi / ~5,810′ headline is the DEM-measured recommended loop**, cross-checked against the recorded full-traverse TR (13.9 mi / 5,700′). GPS-`<ele>` gain in these tracks is noise (one logs 37,000′); climb13ers' "17.5 mi / 4,660′" is an out-and-back to just the two north peaks, not the loop.
+> **Numbers note:** the **~14.7 mi / ~6,084′ headline is Heather Ryan's recorded full-traverse loop** (distance straight from her GPS track, gain DEM-measured), cross-checked against the recorded full-traverse TR (13.9 mi / 5,700′). GPS-`<ele>` gain in these tracks is noise (one logs 37,000′); climb13ers' "17.5 mi / 4,660′" is an out-and-back to just the two north peaks, not the loop.
 
 **Sources checked:** 14ers.com ✓ (logged in, "letsgocu") · listsofjohn.com ✓ (logged in) · peakbagger.com ✓ (logged in, "Kyle Knutson") · climb13ers.com ✓ · Kyle's CalTopo ✓
 
@@ -141,7 +141,7 @@ Per-summit route pages: [Williams Mountain](https://www.climb13ers.com/colorado-
 
 ## TL;DR
 
-- **All five ranked Williams Mountains 13ers in one outing** — a **~12.9 mi / ~5,810′ Class 3 ridge loop** from the **Lost Man TH** (passenger car, Hwy 82 W of Independence Pass): North (13,139) → Williams Mtn (13,390, HP) → South B (13,204) → South A (13,321) → South C (13,039).
+- **All five ranked Williams Mountains 13ers in one outing** — a **~14.7 mi / ~6,084′ Class 3 ridge loop** from the **Lost Man TH** (passenger car, Hwy 82 W of Independence Pass): North (13,139) → Williams Mtn (13,390, HP) → South B (13,204) → South A (13,321) → South C (13,039).
 - **It's a scramble, not a walk:** Class 2/2+ with **brief Class 3 + short knife-edge sections**; Williams Mtn's north ridge is the crux. Ice axe recommended.
 - **Long single day or 2–3 day backpack** (camp at South Fork Pass, 11,840′) — both standard.
 - ⚠️ **Independence Pass (CO-82) closes in winter** — June–October access. **Hunter-Fryingpan Wilderness**, no permits, foot-only. Cell dead — InReach.

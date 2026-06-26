@@ -62,6 +62,13 @@ def is_trip(slug):
     return False
 
 
+def has_recipe(slug):
+    yml = GPX / slug / "peaks.yml"
+    if yml.exists():
+        return bool((yaml.safe_load(yml.read_text()) or {}).get("route_build"))
+    return False
+
+
 def caltopo_id(slug):
     p = report_path(slug)
     if not p:
@@ -70,19 +77,31 @@ def caltopo_id(slug):
     return m.group(1) if m else None
 
 
+def _stats(stdout):
+    m = re.search(r"Recommended route:\s*([\d.]+)\s*mi\s*·\s*~?([\d,]+)\s*ft", stdout or "")
+    return (float(m.group(1)), int(m.group(2).replace(",", ""))) if m else None
+
+
 def rebuild(slug, from_track, graph=False):
     if is_trip(slug):
         r = run([SCRIPTS / "build_trip_day_routes.py", slug])
         return r, None
+    # Respect the recipe (peaks.yml `route_build:`) — it is the source of truth for HOW
+    # the route is built (CLAUDE.md step 5: from_track / multi_segment / frozen / legs /
+    # graph). Without this, propagate rebuilt EVERY route via --legs and silently clobbered
+    # a from_track/multi_segment/frozen route — exactly the "gitignored route silently
+    # replaced by a wrong one" failure the recipe system exists to prevent (caught on
+    # williams_mountains, 2026-06-25). An explicit --from-track/--graph still overrides.
+    if not from_track and not graph and has_recipe(slug):
+        r = run([SCRIPTS / "build_route.py", slug])
+        return r, _stats(r.stdout)
     cmd = [SCRIPTS / "build_recommended_route.py", slug]
     if from_track:
         cmd += ["--from-track", from_track]
     elif not graph:        # --graph: default shortest-path router (no verbatim stitch)
         cmd += ["--legs"]
     r = run(cmd)
-    m = re.search(r"Recommended route:\s*([\d.]+)\s*mi\s*·\s*~?([\d,]+)\s*ft", r.stdout or "")
-    stats = (float(m.group(1)), int(m.group(2).replace(",", ""))) if m else None
-    return r, stats
+    return r, _stats(r.stdout)
 
 
 def update_frontmatter(slug, dist_mi, gain_ft):
