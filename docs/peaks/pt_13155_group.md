@@ -7,6 +7,7 @@ gain: "3,000–4,000 ft"
 status: unclimbed
 caltopo_id: 07PMBS1
 regional_map_id: 06AR6BF
+dist_mi: 11.4
 gain_ft: 4463
 class: 2
 peaks: 3
@@ -22,7 +23,7 @@ status_source: "peak_db ascents"
 <!-- QUICKSTATS_START -->
 
 !!! tip "At a glance — recommended day"
-    **4,463 ft** gain · **Class 2** · 3 peaks · ~5.6 h drive
+    **11.4 mi** · **4,463 ft** gain · **Class 2** · 3 peaks · ~5.6 h drive
 
 <!-- QUICKSTATS_END -->
 

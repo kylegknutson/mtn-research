@@ -7,6 +7,7 @@ gain: "~7,400–7,650 ft"
 status: unclimbed
 caltopo_id: AAFUQQ1
 regional_map_id: UDK6ETR
+dist_mi: 24.7
 gain_ft: 9088
 class: 1
 peaks: 6
@@ -26,7 +27,7 @@ status_source: "peak_db ascents (Kyle — unclimbed)"
 <!-- QUICKSTATS_START -->
 
 !!! tip "At a glance — recommended day"
-    **9,088 ft** gain · **Class 1** · 6 peaks · ~32 h drive
+    **24.7 mi** · **9,088 ft** gain · **Class 1** · 6 peaks · ~32 h drive
 
 <!-- QUICKSTATS_END -->
 

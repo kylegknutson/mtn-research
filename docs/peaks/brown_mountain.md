@@ -8,6 +8,7 @@ gain: "1,600–4,380 ft"
 status: unclimbed
 caltopo_id: Q2C5650
 regional_map_id: 06AR6BF
+dist_mi: 8.9
 gain_ft: 3739
 class: 2
 peaks: 1
@@ -23,7 +24,7 @@ status_source: "peak_db ascents (Kyle — unclimbed)"
 <!-- QUICKSTATS_START -->
 
 !!! tip "At a glance — recommended day"
-    **3,739 ft** gain · **Class 2** · 1 peak · ~6.3 h drive
+    **8.9 mi** · **3,739 ft** gain · **Class 2** · 1 peak · ~6.3 h drive
 
 <!-- QUICKSTATS_END -->
 

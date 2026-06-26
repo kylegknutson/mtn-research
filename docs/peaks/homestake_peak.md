@@ -7,7 +7,8 @@ gain: "2,500–3,551 ft"
 status: unclimbed
 caltopo_id: V4D61FV
 regional_map_id: L5VH4BU
-gain_ft: 3026
+dist_mi: 10.7
+gain_ft: 3217
 class: 2
 peaks: 1
 days: 1
@@ -22,7 +23,7 @@ status_source: "peak_db ascents"
 <!-- QUICKSTATS_START -->
 
 !!! tip "At a glance — recommended day"
-    **3,026 ft** gain · **Class 2** · 1 peak · ~3.2 h drive
+    **10.7 mi** · **3,217 ft** gain · **Class 2** · 1 peak · ~3.2 h drive
 
 <!-- QUICKSTATS_END -->
 
@@ -69,15 +70,15 @@ status_source: "peak_db ascents"
 
 ## Recommended route — High TH from Wurts Ditch / 10th Mountain Hut ⭐
 
-Drive as far up Wurts Ditch Road as conditions allow. From the 10th Mountain Memorial Hut area, cross the meadow to Slide Lake, gain the west ridge, summit. The classic short approach.
+Park at the Wurts Ditch parking (before the gate), hike the road to the 10th Mountain Memorial Hut area, cross the meadow to Slide Lake, gain the west ridge, summit, and loop back. The mapped recommended line follows **guttervan's 2024 recorded loop verbatim** (a real GPS track from the parking over the summit and back). Driving 0.8 mi up past the gate (when open) shortens it toward avalletta's ~7.8 mi.
 
 | Route | Stats |
 |---|---|
 | Difficulty | Class 2 (some snow/cornice navigation in winter per Burks 5/2025) |
-| Distance | **7.8 mi RT** (avalletta 11/16/2012 — drove 0.8 mi up from gate) |
-| Gain | **~2,500'** (avalletta) |
-| Time | ~5 hours |
-| Start elev | ~10,400–10,800' (depends on how far you drive Wurts Ditch Road) |
+| Distance | **~10.7 mi RT** (guttervan 2024 recorded loop from the Wurts Ditch parking) — **~7.8 mi** if you drive 0.8 mi up past the gate (avalletta 11/16/2012) |
+| Gain | **~3,217'** (DEM, full loop) — ~2,500' on the shorter drive-up |
+| Time | ~5–6 hours |
+| Start elev | ~10,400' at the parking (higher if you drive Wurts Ditch Road up) |
 | Summit | 13,217' |
 | Aspect | West to summit via Slide Lake basin |
 
@@ -233,7 +234,7 @@ If you want the combo: design a 2-3 day Holy Cross-area backpacking trip (baseca
 
 ## TL;DR
 
-- **Recommended trip:** **Wurts Ditch Rd → 10th Mtn Hut → Slide Lake → W ridge → summit**. **~8 mi RT, ~2,500' gain, Class 2** when you can drive the 4WD road through. Extends to **13.6 mi / 3,551'** if gate is closed (winter / pre-season)
+- **Recommended trip:** **Wurts Ditch parking → 10th Mtn Hut → Slide Lake → W ridge → summit → loop back**. Mapped line follows **guttervan's recorded loop: ~10.7 mi RT, ~3,217' gain, Class 2**; shortens toward **~7.8 mi / ~2,500'** if you drive 0.8 mi up past the gate, or extends to **13.6 mi / 3,551'** from the Crane Park / Hwy 24 gate (winter / pre-season)
 - **TRULY standalone day** under Kyle's "ranked 13er+ only" combo rule — Galena Mtn (12,900') is the natural ridge neighbor but sub-13k, so it doesn't count
 - **Homestake + Savage combo (both unclimbed, 5.72 mi apart):** geographically tempting but **no TR validates it as a same-day combo**. Different drainages. Treat as separate drives unless you want to design a 2-3 day Holy Cross basecamp trip
 - **Best season:** June–October for the easy 4WD-in version; **heavy ski touring use** Jan–April with 10th Mtn Hut reservations. Slide Lake basin = avalanche-named terrain

@@ -8,6 +8,7 @@ gain: "3,450–3,528 ft"
 status: unclimbed
 caltopo_id: 2SCT1B6
 regional_map_id: VKGB00L
+dist_mi: 6.8
 gain_ft: 3489
 class: 2
 peaks: 1
@@ -23,7 +24,7 @@ status_source: "peak_db ascents"
 <!-- QUICKSTATS_START -->
 
 !!! tip "At a glance — recommended day"
-    **3,489 ft** gain · **Class 2** · 1 peak · ~3.6 h drive
+    **6.8 mi** · **3,489 ft** gain · **Class 2** · 1 peak · ~3.6 h drive
 
 <!-- QUICKSTATS_END -->
 

@@ -7,6 +7,7 @@ gain: "6,400–7,100 ft"
 status: unclimbed
 caltopo_id: 6TKA0RH
 regional_map_id: VKGB00L
+dist_mi: 3.9
 gain_ft: 3015
 class: 3
 peaks: 2
@@ -22,7 +23,7 @@ status_source: "peak_db ascents"
 <!-- QUICKSTATS_START -->
 
 !!! tip "At a glance — recommended day"
-    **3,015 ft** gain · **Class 3** · 2 peaks · ~4 h drive
+    **3.9 mi** · **3,015 ft** gain · **Class 3** · 2 peaks · ~4 h drive
 
 <!-- QUICKSTATS_END -->
 

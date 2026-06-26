@@ -7,6 +7,7 @@ gain: "~12.6 mi / ~7,062 ft (trio + Lake Fork, both on recorded tracks) · trio-
 status: unclimbed
 caltopo_id: 38DBF6E
 regional_map_id: L5VH4BU
+dist_mi: 12.6
 gain_ft: 7062
 class: 2+
 peaks: 4
@@ -22,7 +23,7 @@ status_source: "peak_db ascents"
 <!-- QUICKSTATS_START -->
 
 !!! tip "At a glance — recommended day"
-    **7,062 ft** gain · **Class 2+** · 4 peaks · ~4.2 h drive
+    **12.6 mi** · **7,062 ft** gain · **Class 2+** · 4 peaks · ~4.2 h drive
 
 <!-- QUICKSTATS_END -->
 

@@ -11,6 +11,7 @@ regional_map_id: VKGB00L
 th_source: "recorded GPS-track starts at Wild Cherry Creek TH (San Luis Valley / west, near Moffat) (38.1006,-105.7707) — swept tracks begin 0.0 mi away"
 class_source: "route beta — 14ers.com route beta / trip reports, listsofjohn, peakbagger (see route options)"
 status_source: "scrape_14ers_checklist emily"
+dist_mi: 20.8
 ---
 
 <!-- CLIMBERS_START -->
@@ -18,6 +19,13 @@ status_source: "scrape_14ers_checklist emily"
 <!-- CLIMBERS_END -->
 
 # Lakes of the Clouds — 7-peak loop (northern Sangre de Cristo)
+
+<!-- QUICKSTATS_START -->
+
+!!! tip "At a glance — recommended day"
+    **20.8 mi**
+
+<!-- QUICKSTATS_END -->
 
 *Written for **Emily** — all seven unclimbed on her 14ers checklist.*
 
