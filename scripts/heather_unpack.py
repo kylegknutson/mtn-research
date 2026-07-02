@@ -21,6 +21,20 @@ def find_map(obj):
             if m: return m
     return None
 
+def find_skip(obj):
+    """Return the first list of numeric-string ids (the batch's 'skip' list)."""
+    if isinstance(obj, dict):
+        for k, v in obj.items():
+            if k == "skip" and isinstance(v, list) and all(isinstance(x, str) for x in v):
+                return v
+            r = find_skip(v)
+            if r is not None: return r
+    elif isinstance(obj, list):
+        for v in obj:
+            r = find_skip(v)
+            if r is not None: return r
+    return None
+
 def main():
     p = pathlib.Path(sys.argv[1])
     raw = p.read_text()
@@ -36,8 +50,21 @@ def main():
         fn = "".join(c for c in fn if c.isalnum() or c in "._-") or f"act_{n}.gpx"
         (ROOT / fn).write_text(gpx)
         n += 1
+    # record ids fetched OK but skipped (rides/no-gps) so they don't recur
+    skip = find_skip(data) or []
+    ns = 0
+    if skip:
+        sf = ROOT / "_skipped_ids.txt"
+        existing = {l.strip() for l in sf.read_text().splitlines() if l.strip()} if sf.exists() else set()
+        new = [i for i in skip if i not in existing]
+        if new:
+            with sf.open("a") as fh:
+                fh.write("\n".join(new) + "\n")
+            ns = len(new)
     total = len(list(ROOT.glob("*.gpx")))
-    print(f"wrote {n} from {p.name}; gpx/heather now has {total} gpx files")
+    print(f"wrote {n} from {p.name}"
+          + (f", recorded {ns} skipped (rides/no-gps)" if ns else "")
+          + f"; gpx/heather now has {total} gpx files")
 
 if __name__ == "__main__":
     main()
