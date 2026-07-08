@@ -27,6 +27,7 @@ gpx/*/*
 # (route_build: {method: frozen}), so the committed GPX IS the source of truth.
 !gpx/clohesey_four/clohesey_four_recommended.gpx
 !gpx/star_peak_a/star_peak_a_recommended.gpx
+!gpx/telluride_t7_t8/telluride_t7_t8_recommended.gpx
 
 # Local Claude Code project state
 .claude/

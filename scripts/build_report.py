@@ -111,6 +111,19 @@ def data_phase(args):
         run([SCRIPTS / "drive_time.py", "--to", f'{th["lat"]},{th["lon"]}',
              "--climber", args.climber, "--label", th.get("name", "")])
 
+    # Recommended route — BEFORE the overview PNG + CalTopo upload so both include it.
+    # Needs a recorded recipe (peaks.yml route_build: / days:); without one this stays
+    # manual: pick a recipe (infer_route_recipe.py can propose one), then re-run.
+    if cfg.get("route_build") or cfg.get("days"):
+        r = run([SCRIPTS / "build_route.py", slug])
+        if r.returncode != 0:
+            sys.exit(f"build_route.py failed for {slug} — fix the recipe, then re-run")
+    else:
+        print(f"\n!! no route_build:/days: recipe in {gdir}/peaks.yml — recommended route "
+              f"NOT built. Add a recipe (see infer_route_recipe.py), then run "
+              f"scripts/build_route.py {slug} and scripts/make_overview_map.py {slug} "
+              f"before --finalize (check_route_exists/check_map_fresh will fail otherwise).")
+
     run([SCRIPTS / "make_overview_map.py", slug, "--title", title])
 
     # CalTopo research map: new, or append to an existing one
@@ -155,9 +168,10 @@ def data_phase(args):
 
 
 def finalize_phase(args):
-    print("== finalize: inject climber status, regen index + peak map, run QA gates ==")
+    print("== finalize: inject climber status, regen index + quickstats + peak map, run QA gates ==")
     run([SCRIPTS / "climber_status.py"])
     run([SCRIPTS / "gen_index.py"])
+    run([SCRIPTS / "gen_quickstats.py"])
     run([SCRIPTS / "gen_peak_map.py"])
     # Safety net: surface any orphaned/duplicate "Research:" CalTopo map (e.g. from a
     # past rebuild or a manual frontmatter id change) so a stale "wrong version" map
@@ -171,6 +185,7 @@ def finalize_phase(args):
     # by eye 2026-06-15), check_route_stats catches optimistic headline mileage.
     gates = [
         ["check_reports.py"],
+        ["check_nav.py"],   # the new report must be reachable from its site's nav
         ["check_maps.py"],
         ["check_map_extents.py"],
         ["check_route_geometry.py"],

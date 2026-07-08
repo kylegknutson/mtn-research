@@ -32,7 +32,6 @@ from __future__ import annotations
 import argparse
 import json
 import logging
-import math
 import re
 import sys
 import xml.etree.ElementTree as ET
@@ -41,15 +40,9 @@ from pathlib import Path
 logging.basicConfig(level=logging.WARNING)
 logging.getLogger("caltopo_python").setLevel(logging.WARNING)
 
-from caltopo_python import CaltopoSession  # noqa: E402
+from lib import CONFIG_PATH, GPX_NS, ROOT, caltopo_session, haversine_m  # noqa: E402
 
-SCRIPT_DIR = Path(__file__).resolve().parent
-PROJECT_DIR = SCRIPT_DIR.parent
-CALTOPO_DIR = PROJECT_DIR / "caltopo"
-CONFIG_PATH = SCRIPT_DIR / "cts.ini"
-DEFAULT_ACCOUNT = "kyleg.knutson@gmail.com"
-
-GPX_NS = "{http://www.topografix.com/GPX/1/1}"
+CALTOPO_DIR = ROOT / "caltopo"
 
 # Track color palette — 16 visually distinct colors for per-track variety.
 # Source convention (used by sync_to_regional.py): red=LoJ, green=14ers, blue=PB,
@@ -103,15 +96,6 @@ def parse_gpx(path: Path):
 
 
 # --- Dedupe helpers ----------------------------------------------------------
-
-def haversine_m(lat1: float, lon1: float, lat2: float, lon2: float) -> float:
-    R = 6371000.0
-    lat1r, lat2r = math.radians(lat1), math.radians(lat2)
-    dlat = math.radians(lat2 - lat1)
-    dlon = math.radians(lon2 - lon1)
-    a = math.sin(dlat / 2) ** 2 + math.cos(lat1r) * math.cos(lat2r) * math.sin(dlon / 2) ** 2
-    return 2 * R * math.asin(math.sqrt(a))
-
 
 def bbox_of_latlon(points):
     lats = [p[0] for p in points]
@@ -334,24 +318,14 @@ def main() -> None:
     # Open or create the target map
     if args.new_map:
         # Mapless session, then openMap('[NEW]') with title.
-        session = CaltopoSession(
-            domainAndPort="caltopo.com",
-            mapID=None,
-            configpath=str(CONFIG_PATH),
-            account=DEFAULT_ACCOUNT,
-        )
+        session = caltopo_session(None)
         ok = session.openMap("[NEW]", newTitle=args.new_map, newSharing=args.sharing)
         if not ok:
             sys.exit("openMap('[NEW]') failed")
         map_id = session.mapID
         print(f"\nCreated new map: {map_id}  ({args.new_map}, sharing={args.sharing})")
     else:
-        session = CaltopoSession(
-            domainAndPort="caltopo.com",
-            mapID=args.map_id,
-            configpath=str(CONFIG_PATH),
-            account=DEFAULT_ACCOUNT,
-        )
+        session = caltopo_session(args.map_id)
         map_id = args.map_id
         print(f"\nAppending to existing map: {map_id}")
 

@@ -3,7 +3,9 @@ objective_ids:
 - 311
 - 434
 - 472
-route_build: {method: graph}
+# graph no longer reproduces the committed line (10.0 vs 10.1 mi; verified by
+# infer_route_recipe.py 2026-07-07) — the committed GPX is the source of truth.
+route_build: {method: frozen}
 caltopo_map_id: 6FM1FEK   # https://caltopo.com/m/6FM1FEK
 nearby:
   include: false

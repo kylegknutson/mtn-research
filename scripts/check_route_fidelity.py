@@ -37,42 +37,14 @@ un-reviewed problem. Un-accepted failures: run inspect_route.py <slug> for the m
 """
 from __future__ import annotations
 import argparse, math, sys
-import xml.etree.ElementTree as ET
 from pathlib import Path
 import yaml
 
-ROOT = Path(__file__).resolve().parent.parent
-GPX = ROOT / "gpx"
-DOCS = ROOT / "docs"
-NS = "{http://www.topografix.com/GPX/1/1}"
+from lib import DOCS_DIR as DOCS, GPX_DIR as GPX, haversine_m as hav, trkpt_segs as trkpts
+
 SKIP = ("peaks_only", "landmark", "trailhead", "recommended", "_drive", "drive_in",
         "waypoints", "summit")
 SAMPLE_M = 6.0
-
-
-def hav(a, b, c, d):
-    R = 6371000.0
-    p1, p2 = math.radians(a), math.radians(c)
-    dp, dl = math.radians(c - a), math.radians(d - b)
-    x = math.sin(dp / 2) ** 2 + math.cos(p1) * math.cos(p2) * math.sin(dl / 2) ** 2
-    return 2 * R * math.asin(math.sqrt(x))
-
-
-def trkpts(path: Path):
-    try:
-        root = ET.parse(path).getroot()
-    except ET.ParseError:
-        return []
-    out = []
-    for trk in root.iter(NS + "trk"):
-        seg = [(float(p.get("lat")), float(p.get("lon"))) for p in trk.iter(NS + "trkpt")]
-        if len(seg) >= 2:
-            out.append(seg)
-    if not out:   # no <trk> structure — treat all points as one track
-        pts = [(float(p.get("lat")), float(p.get("lon"))) for p in root.iter(NS + "trkpt")]
-        if len(pts) >= 2:
-            out.append(pts)
-    return out
 
 
 def source_tracks(slug: str):

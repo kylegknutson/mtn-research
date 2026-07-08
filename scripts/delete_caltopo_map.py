@@ -22,18 +22,10 @@ Credentials live in ./cts.ini (gitignored), same as fetch_caltopo.py.
 """
 from __future__ import annotations
 import argparse, logging, re, sys
-from pathlib import Path
 
 logging.basicConfig(level=logging.WARNING)
 logging.getLogger("caltopo_python").setLevel(logging.WARNING)
-from caltopo_python import CaltopoSession  # noqa: E402
-
-SCRIPT_DIR = Path(__file__).resolve().parent
-PROJECT_DIR = SCRIPT_DIR.parent
-CONFIG_PATH = SCRIPT_DIR / "cts.ini"
-DEFAULT_ACCOUNT = "kyleg.knutson@gmail.com"
-DOCS = PROJECT_DIR / "docs"
-GPX = PROJECT_DIR / "gpx"
+from lib import DOCS_DIR as DOCS, GPX_DIR as GPX, caltopo_session  # noqa: E402
 
 
 def referenced_ids() -> set[str]:
@@ -89,8 +81,7 @@ def main():
             sys.exit(f"REFUSING: these ids are still referenced by a report: {', '.join(blocked)} "
                      f"(use --force only for a deliberate in-place replace)")
 
-    s = CaltopoSession(domainAndPort="caltopo.com", mapID=None,
-                       configpath=str(CONFIG_PATH), account=DEFAULT_ACCOUNT)
+    s = caltopo_session(None)
     acct = getattr(s, "accountIdInternet", None) or getattr(s, "accountId", None)
     if not acct:
         sys.exit("ERROR: could not resolve CalTopo account id from session")

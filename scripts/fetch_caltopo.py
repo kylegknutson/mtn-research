@@ -27,36 +27,19 @@ from __future__ import annotations
 import argparse
 import json
 import logging
-import sys
 from pathlib import Path
 
 # Quiet caltopo_python's verbose default logging. Run with --verbose to restore.
 logging.basicConfig(level=logging.WARNING)
 logging.getLogger("caltopo_python").setLevel(logging.WARNING)
 
-from caltopo_python import CaltopoSession  # noqa: E402
+from lib import ROOT, caltopo_session  # noqa: E402
 
-SCRIPT_DIR = Path(__file__).resolve().parent
-PROJECT_DIR = SCRIPT_DIR.parent
-CALTOPO_OUT = PROJECT_DIR / "caltopo"
-CONFIG_PATH = SCRIPT_DIR / "cts.ini"
-DEFAULT_ACCOUNT = "kyleg.knutson@gmail.com"
+CALTOPO_OUT = ROOT / "caltopo"
 
-
-def make_session(map_id: str | None = None) -> CaltopoSession:
-    """Create a CaltopoSession. map_id can be None for a "mapless" session
-    (used when listing maps or browsing accounts/folders)."""
-    if not CONFIG_PATH.exists():
-        sys.exit(
-            f"ERROR: {CONFIG_PATH} not found.\n"
-            f"Copy cts.ini.template to cts.ini and fill in your credentials."
-        )
-    return CaltopoSession(
-        domainAndPort="caltopo.com",
-        mapID=map_id,  # None == mapless session, allowed
-        configpath=str(CONFIG_PATH),
-        account=DEFAULT_ACCOUNT,
-    )
+# Session construction lives in lib.caltopo_session; keep the old name as a thin
+# alias for any callers that still import make_session from this module.
+make_session = caltopo_session
 
 
 def list_maps() -> None:

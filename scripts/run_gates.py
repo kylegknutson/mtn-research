@@ -59,6 +59,7 @@ REPO_WIDE = [
     (["gen_quickstats.py", "--check"], "quick-stats current"),
     (["gen_peak_map.py", "--check"], "home-map data current"),
     (["backfill_dist_mi.py", "--check"], "single-day reports have a distance"),
+    (["check_nav.py"], "every report reachable from its site's nav"),
 ]
 
 

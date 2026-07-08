@@ -35,9 +35,8 @@ logging.getLogger("caltopo_python").setLevel(logging.WARNING)
 SCRIPT_DIR = Path(__file__).resolve().parent
 sys.path.insert(0, str(SCRIPT_DIR))
 from delete_caltopo_map import referenced_ids, body_linked_ids  # noqa: E402
+from lib import CONFIG_PATH, caltopo_session  # noqa: E402
 
-CONFIG_PATH = SCRIPT_DIR / "cts.ini"
-DEFAULT_ACCOUNT = "kyleg.knutson@gmail.com"
 RESEARCH_PREFIX = "Research:"
 
 
@@ -50,9 +49,7 @@ def main():
         print(f"audit_caltopo_maps: {CONFIG_PATH.name} absent — skipping CalTopo audit (ok).")
         return  # exit 0: no creds (CI) → can't audit, don't fail the build
 
-    from caltopo_python import CaltopoSession
-    s = CaltopoSession(domainAndPort="caltopo.com", mapID=None,
-                       configpath=str(CONFIG_PATH), account=DEFAULT_ACCOUNT)
+    s = caltopo_session(None)
     try:
         maps = s.getMapList(includeBookmarks=False) or []
     except Exception as e:

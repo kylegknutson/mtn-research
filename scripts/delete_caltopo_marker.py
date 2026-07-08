@@ -12,20 +12,15 @@ Usage:
 Matches markers whose title contains the substring (case-insensitive).
 """
 import sys, logging
-from pathlib import Path
 logging.basicConfig(level=logging.WARNING)
 logging.getLogger("caltopo_python").setLevel(logging.WARNING)
-from caltopo_python import CaltopoSession
-
-SCRIPT_DIR = Path(__file__).resolve().parent
-CONFIG_PATH = SCRIPT_DIR / "cts.ini"
-DEFAULT_ACCOUNT = "kyleg.knutson@gmail.com"
+from lib import caltopo_session
 
 def main():
     if len(sys.argv) < 3:
         sys.exit(__doc__)
     map_id, needle = sys.argv[1], sys.argv[2].lower()
-    s = CaltopoSession(domainAndPort="caltopo.com", mapID=map_id, configpath=str(CONFIG_PATH), account=DEFAULT_ACCOUNT)
+    s = caltopo_session(map_id)
     feats = s.getFeatures(featureClass="Marker")
     matched = [f for f in feats if needle in (f.get("properties", {}).get("title") or "").lower()]
     if not matched:

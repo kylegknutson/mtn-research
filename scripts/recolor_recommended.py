@@ -22,9 +22,8 @@ from pathlib import Path
 logging.basicConfig(level=logging.ERROR)
 logging.getLogger("caltopo_python").setLevel(logging.ERROR)
 
-ROOT = Path(__file__).resolve().parent.parent
-CONFIG = ROOT / "scripts" / "cts.ini"
-ACCOUNT = "kyleg.knutson@gmail.com"
+from lib import ROOT, caltopo_session  # noqa: E402
+
 MAGENTA = "#E6008C"
 
 
@@ -58,12 +57,10 @@ def main():
     if not targets:
         print("no matching report with a caltopo_id"); return
 
-    from caltopo_python import CaltopoSession
     changed = total = 0
     for stem, mid in targets:
         try:
-            s = CaltopoSession(domainAndPort="caltopo.com", mapID=mid,
-                               configpath=str(CONFIG), account=ACCOUNT)
+            s = caltopo_session(mid)
             shapes = s.getFeatures(featureClass="Shape")
         except Exception as e:
             print(f"  {stem} ({mid}): skip ({e})"); continue

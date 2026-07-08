@@ -16,15 +16,11 @@ Usage:
     scripts/delete_caltopo_feature.py --map-id 55M4430 --id <uuid> --class Marker
 """
 from __future__ import annotations
-import argparse, logging, sys
-from pathlib import Path
+import argparse, logging
 
 logging.basicConfig(level=logging.WARNING)
 logging.getLogger("caltopo_python").setLevel(logging.WARNING)
-from caltopo_python import CaltopoSession  # noqa: E402
-
-CONFIG_PATH = Path(__file__).resolve().parent / "cts.ini"
-DEFAULT_ACCOUNT = "kyleg.knutson@gmail.com"
+from lib import caltopo_session  # noqa: E402
 
 
 def main():
@@ -35,8 +31,7 @@ def main():
                     help="feature class: Shape (line/polygon, default) or Marker")
     args = ap.parse_args()
 
-    s = CaltopoSession(domainAndPort="caltopo.com", mapID=args.map_id,
-                       configpath=str(CONFIG_PATH), account=DEFAULT_ACCOUNT)
+    s = caltopo_session(args.map_id)
     try:
         r = s.delFeature(args.id, args.cls)
     except TypeError:

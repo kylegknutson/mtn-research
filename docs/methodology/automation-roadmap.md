@@ -1,8 +1,10 @@
 # Automation roadmap
 
-**Goal:** make report production more systematic — push the mechanical work into scripts so the LLM is used only for judgment, and approval/tool-call churn drops. Target outcome: one command does the data-gathering 80%, the LLM writes the narrative 20% and reviews.
+> **Superseded (2026-07-07):** this 2026-05-31 spec was implemented and then replaced by
+> the living [improvement plan](improvement-plan.md) — see its wave history for what
+> actually shipped. Kept for context; don't work from it.
 
-This is a **spec, not yet built.** Capture of the plan so it's ready to implement.
+**Goal:** make report production more systematic — push the mechanical work into scripts so the LLM is used only for judgment, and approval/tool-call churn drops. Target outcome: one command does the data-gathering 80%, the LLM writes the narrative 20% and reviews.
 
 ---
 

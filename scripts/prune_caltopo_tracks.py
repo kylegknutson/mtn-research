@@ -24,17 +24,15 @@ Always dry-run first and eyeball the kill list.
 """
 from __future__ import annotations
 import argparse, logging, re, sys
-from pathlib import Path
 import yaml
 
 logging.basicConfig(level=logging.ERROR)
 for n in ("caltopo_python",):
     logging.getLogger(n).setLevel(logging.ERROR)
 
-ROOT = Path(__file__).resolve().parent.parent
+from lib import ROOT, caltopo_session  # noqa: E402
+
 PEAKDB_PATH = "/Users/kyleknutson/Library/Mobile Documents/com~apple~CloudDocs/shared/peak_db"
-CONFIG = ROOT / "scripts" / "cts.ini"
-ACCOUNT = "kyleg.knutson@gmail.com"
 STOL_LAT, STOL_LON = 0.5 / 69.0, 0.5 / 53.0   # ½ mi keeper threshold
 
 
@@ -89,8 +87,7 @@ def main():
     if not obj:
         sys.exit(f"no objective summits resolved for ids {ids}")
 
-    from caltopo_python import CaltopoSession
-    s = CaltopoSession(domainAndPort="caltopo.com", mapID=map_id, configpath=str(CONFIG), account=ACCOUNT)
+    s = caltopo_session(map_id)
     shapes = s.getFeatures(featureClass="Shape")
     lines = [f for f in shapes if (f.get("geometry") or {}).get("type") == "LineString"]
 

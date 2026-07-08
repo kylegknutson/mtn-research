@@ -158,12 +158,7 @@ def name_canonical(title: str) -> tuple[bool, str | None]:
 logging.getLogger("caltopo_python").setLevel(logging.ERROR)
 logging.basicConfig(level=logging.ERROR)
 
-from caltopo_python import CaltopoSession  # noqa: E402
-
-SCRIPT_DIR = Path(__file__).resolve().parent
-CONFIG_PATH = SCRIPT_DIR / "cts.ini"
-ACCOUNT = "kyleg.knutson@gmail.com"
-NS = "{http://www.topografix.com/GPX/1/1}"
+from lib import GPX_NS as NS, caltopo_session  # noqa: E402
 
 # v2 regional map IDs (see gpx_consolidation/region_caltopo_maps.md)
 REGION_MAPS = {
@@ -212,8 +207,7 @@ def snap_canonical(lat: float, lon: float, summits: list[tuple[float, float, str
 
 
 def restyle_map(map_id, summits, symbol, color, poi_color, apply):
-    s = CaltopoSession(domainAndPort="caltopo.com", mapID=map_id,
-                       configpath=str(CONFIG_PATH), account=ACCOUNT)
+    s = caltopo_session(map_id)
     feats = s.getFeatures(featureClass="Marker") or []
     changed = poi = renamed = 0
     for f in feats:

@@ -54,7 +54,15 @@ The detailed per-step reference is below; the fast path just chains it.
 `scripts/build_peak_gpx.py --slug <slug>` reads `gpx/<slug>/peaks.yml` and writes `<slug>_peaks_only.gpx` (objective summit(s) `sym=peak` + optionally nearby unclimbed ranked 13er+ neighbors, with an `exclude` list for different-drive peaks — the Bartlett rule) and `<slug>_landmarks.gpx` (trailheads + key drive-in landmarks: gates, closed roads, seasonal closures). Summit/neighbor coords come from peak_db; TH/landmark coords are hand-researched in the config. **`peaks.yml` is the one tracked-in-git file under `gpx/`** (everything else there is gitignored derived/bulk data).
 
 ### 2. Download GPX tracks from ALL THREE sources
-**Preferred: `scripts/sweep_gpx.py --slug <slug>`** — one command sweeps all three sources (resolves cross-site IDs from peak_db, pulls every GPX, dedupes by content hash) and writes a **`tr_manifest.md`** listing the *named* trip reports per source (so 14ers TRs are always enumerated, not just the GPX library). Needs the one-time automation-profile login (`check_sources_login.py --login`); falls back to a `--headed` run if peakbagger's Cloudflare blocks the headless pull. If the profile isn't set up, do the sweep in-chat via the MCP browser using the same endpoints below. **Reality (2026-06-03):** LoJ + 14ers sweep cleanly headless; peakbagger's Cloudflare blocks the automation profile (it detects the webdriver/CDP connection regardless of Chrome binary), so `sweep_gpx.py` does LoJ + 14ers autonomously and warns that **peakbagger is pulled in-chat** via the MCP browser. PB is consistently the smallest / most-duplicate GPX source, so this hybrid keeps ~all the value.
+**Primary path: sweep all three sources in-chat via the MCP browser** (it's the login
+source of truth and the only thing that clears peakbagger's Cloudflare check — see
+CLAUDE.md). **Optional headless convenience: `scripts/sweep_gpx.py --slug <slug>`** for
+the LoJ + 14ers portion only — it resolves cross-site IDs from peak_db, pulls every GPX,
+dedupes by content hash, and writes a **`tr_manifest.md`** listing the *named* trip
+reports per source. Do **not** rely on it (or `check_sources_login.py --login`) for
+peakbagger: Cloudflare permanently blocks the automation profile (it detects the
+webdriver/CDP connection regardless of Chrome binary — re-confirmed 2026-06-16), so
+peakbagger is always pulled in-chat via the MCP browser.
 
 Not just LoJ. *"Always download the tracks from all sites not just LoJ. That's an important part of the research, finding all GPX files out there and pulling them together into one map."* (Kyle, 2026-05-29)
 

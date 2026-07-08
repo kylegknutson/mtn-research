@@ -68,12 +68,20 @@ single-peak/group report is essentially:
      Cloudflare "Verifying you are human…" wall (it's an automated profile Cloudflare
      won't clear — we hit this 2026-06-16). The MCP browser is the only reliable
      peakbagger path; `sweep_gpx.py` is at best a 14ers+LoJ headless convenience.
-3. Write `gpx/<slug>/peaks.yml` (`objective_ids`, `nearby.include`, trailhead landmark).
-4. `scripts/build_report.py --slug <slug>` — chains the whole data phase
-   (build_peak_gpx → caltopo_mytracks → combo_stats → drive_time → make_overview_map
-   → gpx_to_caltopo --new-map → summit markers → sync_to_regional).
-5. **Build the route via its RECIPE: `scripts/build_route.py <slug>`** — reads
-   `gpx/<slug>/peaks.yml` `route_build:` and dispatches to the right builder; **gain from
+3. File the swept tracks into `gpx/<slug>/` with `scripts/ingest_gpx.py --slug <slug>
+   --json <blob.json>` (for browser_evaluate blobs; direct downloads just get named +
+   moved there).
+4. `scripts/scaffold_report.py --slug <slug> --objective-ids …` writes
+   `gpx/<slug>/peaks.yml`; then fill in `nearby.include`, the trailhead landmark, and the
+   `route_build:` recipe (see step 6).
+5. `scripts/build_report.py --slug <slug>` — chains the whole data phase
+   (build_peak_gpx → caltopo_mytracks → combo_stats → drive_time → **build_route from
+   the peaks.yml recipe** → make_overview_map → gpx_to_caltopo --new-map → summit
+   markers → sync_to_regional). If peaks.yml has no `route_build:`/`days:` yet it warns
+   and skips the route — add the recipe and re-run (or run `build_route.py` +
+   `make_overview_map.py` yourself) before --finalize.
+6. **The route RECIPE (`route_build:` in peaks.yml) — `scripts/build_route.py <slug>`
+   re-runs it standalone when iterating.** It dispatches to the right builder; **gain from
    DEM, distance from GPX**. The recipe records HOW the route is built so it's reproducible
    (routes are gitignored — a plain `build_recommended_route.py` rebuild can silently
    replace a good route with a wrong one; cuba did exactly that). Recipe forms:
@@ -89,11 +97,12 @@ single-peak/group report is essentially:
    the route + summit + trailhead markers into the iCloud **`Documents/GPS Tracks/`** (phone-
    loadable) via `export_to_gps_tracks.py` (backfill: `--all`). `check_route_recipe.py` (a
    gate) FAILs unless the recipe reproduces the committed route.
-6. Write `docs/peaks/<slug>.md` (prose + structured frontmatter) and add it to
-   `mkdocs.yml` nav.
-7. `scripts/gen_quickstats.py`
+7. Write `docs/peaks/<slug>.md` (prose + structured frontmatter) and add it to
+   `mkdocs.yml` nav (`check_nav.py`, a gate, FAILs any report unreachable from its
+   site's nav).
 8. `scripts/build_report.py --slug <slug> --finalize` — climber-status + index +
-   peak-map + **all gates** (teleport/geometry, route-stats, maps, extents, reports).
+   quickstats + peak-map + **all gates** (nav, teleport/geometry, route-stats, maps,
+   extents, reports).
 9. `git add … && git commit … && git push` (all allow-listed).
 
 ## Hard rules
@@ -151,8 +160,10 @@ single-peak/group report is essentially:
 - **Use the allow-listed `scripts/*.py` + the Grep / Read / Glob / Edit / Write
   tools.** NEVER run inline `python3 <<'PY'` heredocs, `uv run /tmp/*.py`, or
   `grep`/`sed`/`head`/`cat`/`find`/`awk` in Bash — none are allow-listed and each
-  prompts Kyle. **If you need a reusable check, commit it as `scripts/<name>.py`**
-  (the `scripts/*.py *` allow rule covers it automatically).
+  prompts Kyle. **If you need a reusable check, commit it as `scripts/<name>.py` AND add
+  a `"Bash(scripts/<name>.py *)"` entry to `.claude/settings.json` `permissions.allow`**
+  — there is no glob rule; every script has its own entry, and a missing one is how 700+
+  one-off approvals piled up in settings.local.json by 2026-07.
 - **Headline distance from measured GPX; gain from a DEM** — never climb13ers prose,
   never GPS `<ele>` (it logs 30,000′ on a 13er).
 - **The 3-source sweep must PROVE itself — claims aren't checking (Kyle, 2026-06-16).**

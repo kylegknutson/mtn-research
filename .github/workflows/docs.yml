@@ -35,6 +35,8 @@ jobs:
         run: pip install PyYAML && python scripts/gen_quickstats.py --check
       - name: Climber-status freshness (other-climber lines current)
         run: pip install PyYAML requests && python scripts/climber_status.py --check
+      - name: Nav completeness (every report reachable from its site's nav)
+        run: pip install PyYAML && python scripts/check_nav.py
 
   build:
     needs: lint

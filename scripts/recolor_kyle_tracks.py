@@ -23,19 +23,14 @@ differs, so source tracks (different titles) are never touched.
 from __future__ import annotations
 import argparse, logging, re
 import xml.etree.ElementTree as ET
-from pathlib import Path
 import yaml
 
 logging.basicConfig(level=logging.ERROR)
 logging.getLogger("caltopo_python").setLevel(logging.ERROR)
 
-ROOT = Path(__file__).resolve().parent.parent
-GPX = ROOT / "gpx"
-DOCS = ROOT / "docs"
-CONFIG = ROOT / "scripts" / "cts.ini"
-ACCOUNT = "kyleg.knutson@gmail.com"
+from lib import DOCS_DIR as DOCS, GPX_DIR as GPX, GPX_NS as NS, caltopo_session  # noqa: E402
+
 KYLE_COLOR = "#0066FF"
-NS = "{http://www.topografix.com/GPX/1/1}"
 
 
 def map_id_for(slug: str) -> str | None:
@@ -90,7 +85,6 @@ def main():
     if not args.slug and not args.all:
         ap.error("pass --slug <slug> or --all")
 
-    from caltopo_python import CaltopoSession
     targets = slugs_with_recordings() if args.all else [args.slug]
     total = changed = 0
     for slug in targets:
@@ -99,8 +93,7 @@ def main():
         if (not titles and not dates) or not mid:
             continue
         try:
-            s = CaltopoSession(domainAndPort="caltopo.com", mapID=mid,
-                               configpath=str(CONFIG), account=ACCOUNT)
+            s = caltopo_session(mid)
             shapes = s.getFeatures(featureClass="Shape")
         except Exception as e:
             print(f"  {slug} ({mid}): skip ({e})")
