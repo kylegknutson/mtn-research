@@ -25,6 +25,18 @@ of the trip's objective_ids), e.g.:
       - {label: "Summit trio", objective_ids: [488, 796, 654]}
       - {label: "Conejos",     objective_ids: [633]}
 
+Backpack trips also define `legs:` (Kyle, 2026-07-10 — EVERY leg gets a recommended
+line: pack-in, camp moves, pack-out; one line suffices when pack-in/out share the
+corridor). Each leg is a verbatim recorded track:
+
+    legs:
+      - {label: "Pack-in",   track: "Needleton approach"}
+      - {label: "Camp move", track: "Chicago - Ruby basin"}
+      - {label: "Pack-out",  track: "Ruby Basin hike out"}
+
+→ leg_<label>_recommended.gpx via build_recommended_route --from-track (drawn on all
+maps; summit gate unions day+leg files, so non-summiting legs are fine).
+
 The day's <slug>_peaks_only.gpx waypoints are aligned to objective_ids by ORDER
 (build_peak_gpx emits them in objective_ids order), so a day's objective_ids select
 its waypoints by index.
@@ -114,9 +126,11 @@ def main():
         sys.exit(f"ERROR: {yml} has no `days:` block — add per-day objective_ids "
                  f"(see this script's docstring). Single-day reports use build_recommended_route.py.")
     full_ids = cfg.get("objective_ids") or []
-    pk = next(d.glob("*peaks_only*.gpx"), None)
-    if not pk:
-        sys.exit("ERROR: no *_peaks_only.gpx")
+    # The slug's own objectives file EXACTLY — a wildcard glob here once matched a
+    # leg-target file (corridor_target_peaks_only.gpx) and failed index alignment.
+    pk = d / f"{args.slug}_peaks_only.gpx"
+    if not pk.exists():
+        sys.exit(f"ERROR: no {pk.name}")
     wpts = parse_waypoints(pk)
     if len(wpts) != len(full_ids):
         sys.exit(f"ERROR: {pk.name} has {len(wpts)} waypoints but peaks.yml has "
@@ -127,6 +141,23 @@ def main():
     built = []
     for day in days:
         label = day["label"]; ids = day["objective_ids"]
+        slug_label = slugify(label)
+        out_f = d / f"day_{slug_label}_recommended.gpx"
+        # Per-day from-track recipe: `track:` names a recorded track (filename
+        # substring) to use VERBATIM — for from-camp climbing days on backpack
+        # trips, where the TH-composed line wrongly re-draws the approach
+        # (jupiter_pigeon_turret, 2026-07-10).
+        if day.get("track"):
+            print(f"\n=== day: {label} → from-track {day['track']!r} ===")
+            cmd = [str(SCRIPTS / "build_recommended_route.py"), args.slug,
+                   "--from-track", day["track"], "--out", str(out_f)]
+            if args.no_dem:
+                cmd.append("--no-dem")
+            r = subprocess.run(cmd)
+            if r.returncode != 0:
+                sys.exit(f"build_recommended_route failed for day {label!r}")
+            built.append(out_f.name)
+            continue
         sub = [id_to_wpt[i] for i in ids if i in id_to_wpt]
         if not sub:
             print(f"  WARN: day {label!r} — no matching objectives, skipped"); continue
@@ -135,9 +166,7 @@ def main():
         if not ths:
             sys.exit(f"ERROR: no trailheads to start day {label!r} from")
         th = min(ths, key=lambda t: hav(clat, clon, t[0], t[1]))
-        slug_label = slugify(label)
         subset_f = d / f"day_{slug_label}_peaks_only.gpx"   # 'peaks_only' → excluded as a source track
-        out_f = d / f"day_{slug_label}_recommended.gpx"
         write_peaks_only(subset_f, sub)
         cmd = [str(SCRIPTS / "build_recommended_route.py"), args.slug,
                "--peaks-only", str(subset_f), "--start", f"{th[0]},{th[1]}",
@@ -159,7 +188,32 @@ def main():
             sys.exit(f"build_recommended_route failed for day {label!r}")
         built.append(out_f.name)
 
-    print(f"\nBuilt {len(built)} day route(s): " + ", ".join(built))
+    # Non-climbing legs (pack-in / camp moves / pack-out). Two recipe forms:
+    #   {label, track: <substr>}                 — a verbatim recorded track
+    #   {label, target: <peaks_only-style gpx with one camp wpt>, start: "lat,lon"}
+    #                                            — composed point-to-point corridor
+    #     (for when no single recording covers the full leg — e.g. a GPS started
+    #     partway down; jupiter_pigeon_turret pack-out, 2026-07-10)
+    for leg in (cfg.get("legs") or []):
+        label = leg["label"]
+        out_f = d / f"leg_{slugify(label)}_recommended.gpx"
+        if leg.get("track"):
+            print(f"\n=== leg: {label} → from-track {leg['track']!r} ===")
+            cmd = [str(SCRIPTS / "build_recommended_route.py"), args.slug,
+                   "--from-track", leg["track"], "--out", str(out_f)]
+        else:
+            print(f"\n=== leg: {label} → composed {leg['target']} from {leg['start']} ===")
+            cmd = [str(SCRIPTS / "build_recommended_route.py"), args.slug,
+                   "--peaks-only", str(d / leg["target"]), "--start", leg["start"],
+                   "--no-return", "--legs", "--out", str(out_f)]
+        if args.no_dem:
+            cmd.append("--no-dem")
+        r = subprocess.run(cmd)
+        if r.returncode != 0:
+            sys.exit(f"build_recommended_route failed for leg {label!r}")
+        built.append(out_f.name)
+
+    print(f"\nBuilt {len(built)} route(s): " + ", ".join(built))
 
 
 if __name__ == "__main__":

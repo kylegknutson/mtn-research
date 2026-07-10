@@ -8,21 +8,22 @@ objective_ids:
 nearby:
   include: false
 # Train-served backpack: D&SNG to Needleton, Chicago Basin + Ruby Basin camps,
-# camp move over Twin Thumbs Pass. One route per climbing day; day 3 is the
-# optional Monitor-group add-on (Peak Thirteen is unranked — prose only).
-# Day-route recipes (2026-07-10): days 2+3 are FROM-CAMP verbatim recorded tracks
-# (the TH-composed lines wrongly ran from Needleton via N Pigeon Creek — Kyle:
-# camp is the upper Ruby meadow ~11,640 where the tracks converge, between the
-# Monitor/Animas cirque and the Pigeon–Turret saddle):
-#   day 1: build_trip_day_routes.py line (Needleton→Jupiter verbatim trk_loj_17869;
-#          doubles as the pack-in corridor illustration)
-#   day 2: build_recommended_route.py jupiter_pigeon_turret
-#          --from-track caltopo_06AR6BF_pigeon-turret (Kyle's 2013 from-camp loop)
-#   day 3: build_recommended_route.py jupiter_pigeon_turret --from-track trk_loj_16157
+# camp move over Twin Thumbs Pass. One recommended route per LEG (Kyle, 2026-07-10):
+# pack-in + each climbing day FROM CAMP + camp move + pack-out (pack-in and pack-out
+# use different drainages here, so both get lines). Climbing days + move are verbatim
+# recorded tracks — days 2/3 from-camp (upper Ruby meadow ~11,640, where the tracks
+# converge between the Monitor/Animas cirque and the Pigeon–Turret saddle); legs are
+# Kyle's 2013 recordings of this exact itinerary (kyle13_*.gpx, exported from CalTopo).
 days:
-- {label: "Jupiter", objective_ids: [115]}
-- {label: "Pigeon + Turret", objective_ids: [73, 111]}
-- {label: "Monitor group (optional)", objective_ids: [181, 135]}
+- {label: "Jupiter", objective_ids: [115], track: "trk_pb_2"}
+- {label: "Pigeon + Turret", objective_ids: [73, 111], track: "06AR6BF_pigeon-turret"}
+- {label: "Monitor group (optional)", objective_ids: [181, 135], track: "trk_loj_16157"}
+legs:
+- {label: "Pack-in", track: "kyle13_needleton_approach"}
+- {label: "Camp move", track: "kyle13_chicago_ruby_move"}
+# Pack-out is COMPOSED (Kyle's 2013 hike-out GPS started ~1.5 mi below camp):
+# point-to-point Needleton → camp waypoint via recorded tracks.
+- {label: "Pack-out", target: "packout_target_peaks_only.gpx", start: "37.6335,-107.6928"}
 landmarks:
 - name: Needleton (D&SNG train stop / Animas footbridge)
   lat: 37.6335

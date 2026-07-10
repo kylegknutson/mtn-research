@@ -20,7 +20,17 @@ Source rigor (all three sources, confirmed logged-in) on **every peak** in the i
   gen_quickstats renders them as their own lines around the per-day list, plus a
   **trip total (mi · ft) in the summary line, auto-summed from pack-in + days +
   pack-out** so it can't drift from the components. Stats measured to the RECOMMENDED
-  camp; body text covers the alternatives. Keep frontmatter `dist_mi`/`gain_ft` equal
+  camp; body text covers the alternatives.
+- [ ] **One recommended route per LEG (Kyle, 2026-07-10 — the map must show the whole
+  trip)** — a magenta line for the pack-in, each climbing day **from camp** (not
+  TH-composed — that redraws the approach and misplaces the day), every camp move, and
+  the pack-out. **Exception:** when pack-in and pack-out share a corridor (Vestal/Molas),
+  ONE corridor line suffices. Recipes live in peaks.yml: `days:` entries take an optional
+  `track:` (verbatim recorded from-camp track) and a `legs:` block defines non-climbing
+  legs (`{label, track}` verbatim, or `{label, target: <camp-wpt gpx>, start: "lat,lon"}`
+  composed point-to-point when no recording covers the full leg). All built by
+  `build_trip_day_routes.py`; every leg's stats come from its measured line + DEM.
+  Sanity-check leg ENDPOINTS connect (GPS recordings often start late — compose those). Keep frontmatter `dist_mi`/`gain_ft` equal
   to the component sum (they feed the index table).
 - [ ] **Water sources** along approach and near camp (mark on map)
 - [ ] **Per-day peak stats** from GPX (each day's loop from camp). Peaks at *different* trailheads → **don't auto-route one loop**; run `build_recommended_route.py` per day-area and set `days_detail` + a per-day-sum `dist_mi`/`gain_ft`. ([Build the recommended route right](../source-requirements.md))

@@ -4,24 +4,24 @@ range: San Juan
 drive_time: "7h 22m"
 yds_class: "4"
 class: "4"
-gain: "~19,500 ft trip total (pack-in + 3 climbing days + camp move + pack-out, DEM)"
+gain: "~21,900 ft trip total (pack-in + 3 climbing days + camp move + pack-out, DEM)"
 status: unclimbed
 climber: emily
 caltopo_id: MU0K4JT
 regional_map_id: 06AR6BF
 peaks: 5
 days: 3
-gain_ft: 19515
+gain_ft: 21905
 drive_h: 7.4
-dist_mi: 35.6
+dist_mi: 42.7
 weather: "https://forecast.weather.gov/MapClick.php?lat=37.66&lon=-107.63"
 days_detail:
-  - {label: "Jupiter", peaks: 1, dist_mi: 5, gain_ft: 2830, class: "2+"}
-  - {label: "Camp move — Twin Thumbs Pass + Ruby Pass", dist_mi: 5, gain_ft: 2900, loss_ft: 2250, move: true}
+  - {label: "Jupiter", peaks: 1, dist_mi: 7, gain_ft: 4613, class: "2+"}
+  - {label: "Camp move — Twin Thumbs Pass + Ruby Pass", dist_mi: 5.7, gain_ft: 3071, loss_ft: 2250, move: true}
   - {label: "Pigeon + Turret", peaks: 2, dist_mi: 8.1, gain_ft: 4995, class: "4"}
   - {label: "Monitor group — optional", peaks: 2, dist_mi: 7, gain_ft: 5990, class: "4"}
-approach: {label: "Pack-in (Needleton → Chicago Basin camp)", dist_mi: 6, gain_ft: 2800}
-packout: {label: "Pack-out (Ruby camp → Needleton)", dist_mi: 4.5, loss_ft: 3400}
+approach: {label: "Pack-in (Needleton → Chicago Basin high camp)", dist_mi: 9.7, gain_ft: 3236}
+packout: {label: "Pack-out (Ruby camp → Needleton)", dist_mi: 5.2, loss_ft: 3900}
 th_source: "recorded GPS-track starts at the Needleton D&SNG halt / Animas footbridge (37.6335,-107.6928, ~8,270') — 4 swept tracks begin 0.0 mi from it; OSM railway=halt 'Needleton'"
 class_source: "route beta — climb13ers.com per-route pages (Jupiter SW Slopes 2+, Pigeon NW Couloir 3 with Roach's 15-ft Class 4 slot crux, Turret NW Slope 2, Monitor W Basin–N Ridge 4, Animas E Ridge 3–4) + Roach + 14ers.com trip reports"
 status_source: "scrape_14ers_checklist emily"
@@ -36,14 +36,14 @@ status_source: "scrape_14ers_checklist emily"
 <!-- QUICKSTATS_START -->
 
 !!! tip "At a glance — 3-day trip"
-    **5 peaks** · **trip total ~35.6 mi · ~19,515 ft** · **~7.4 h drive** · [weather](https://forecast.weather.gov/MapClick.php?lat=37.66&lon=-107.63)
+    **5 peaks** · **trip total ~42.7 mi · ~21,905 ft** · **~7.4 h drive** · [weather](https://forecast.weather.gov/MapClick.php?lat=37.66&lon=-107.63)
 
-    - **Pack-in (Needleton → Chicago Basin camp):** **6 mi** · **2,800 ft** gain
-    - **Day 1 (Jupiter):** **5 mi** · **2,830 ft** gain · **Class 2+** · 1 peak
-    - **Camp move — Twin Thumbs Pass + Ruby Pass:** **5 mi** · **2,900 ft** gain · 2,250 ft descent
+    - **Pack-in (Needleton → Chicago Basin high camp):** **9.7 mi** · **3,236 ft** gain
+    - **Day 1 (Jupiter):** **7 mi** · **4,613 ft** gain · **Class 2+** · 1 peak
+    - **Camp move — Twin Thumbs Pass + Ruby Pass:** **5.7 mi** · **3,071 ft** gain · 2,250 ft descent
     - **Day 2 (Pigeon + Turret):** **8.1 mi** · **4,995 ft** gain · **Class 4** · 2 peaks
     - **Day 3 (Monitor group — optional):** **7 mi** · **5,990 ft** gain · **Class 4** · 2 peaks
-    - **Pack-out (Ruby camp → Needleton):** **4.5 mi** · 3,400 ft descent
+    - **Pack-out (Ruby camp → Needleton):** **5.2 mi** · 3,900 ft descent
 
 <!-- QUICKSTATS_END -->
 
@@ -75,7 +75,7 @@ status_source: "scrape_14ers_checklist emily"
 |---|---|
 | Days | **6 days / 5 nights** with the optional day (5/4 without) — train in, pack in, climb, move camp, climb, pack out, train out |
 | Peaks | 5 ranked 13ers: Pigeon 13,977' · Jupiter 13,838' · Turret 13,837' · Animas 13,789' · Monitor 13,707' (+ unranked **Peak Thirteen 13,705'** free en route) |
-| Trip total | **~35.5 mi · ~19,500 ft** with the optional day (~28.5 mi / ~13,500 ft without) — measured from recorded tracks + DEM |
+| Trip total | **~42.5 mi · ~21,900 ft** with the optional day (~35.5 mi / ~15,900 ft without) — every leg measured from a recorded line + DEM (lean single-party trips log 26–32 mi; treat these sums as honest, not padded) |
 | Style | Train-served backpack: **Chicago Basin camp → over Twin Thumbs + Ruby passes → Ruby Basin camp** |
 | Hardest move | **Class 4** — Pigeon's summit slot & Monitor's saddle ribs |
 | Access | **D&SNG railroad** Durango → Needleton flag stop ([schedule/backpacker tickets](https://www.durangotrain.com)) — no road anywhere near |
@@ -138,13 +138,17 @@ Needleton camp.
 
 ### Pack-in (Day 0) — Needleton → Chicago Basin
 
-**~6 mi · ~2,800 ft** on the maintained **Needle Creek Trail** — cross the footbridge,
-turn south, and climb steadily through aspen then spruce into the basin. Camp around
-**11,000'** (see Basecamp options). Afternoon arrival off the morning train is normal.
+**9.7 mi · ~3,240 ft measured** (Kyle's 2013 recording — the drawn line) on the
+maintained **Needle Creek Trail**: cross the footbridge, turn south, and climb steadily
+through aspen then spruce into the basin. The line runs to a **high camp (~11,600')
+near the Columbine trail fork** — ideal for Jupiter and the Twin Lakes start; camping
+lower (~11,000') trims a mile or so (see Basecamp options). Afternoon arrival off the
+morning train is normal.
 
 ### Camp move (mid-trip) — Chicago Basin → Ruby Basin
 
-**~5 mi · ~2,900 ft up · ~2,250 ft down**, all above treeline after the first mile:
+**5.7 mi · ~3,070 ft up · ~2,250 ft down (measured — Kyle's 2013 line)**, all above
+treeline after the first mile:
 
 1. Ascend the Twin Lakes trail from the basin floor (~11,000') to **Twin Lakes (12,500')**
    — the same trail the 14er crowds use.
@@ -157,9 +161,10 @@ turn south, and climb steadily through aspen then spruce into the basin. Camp ar
 
 ### Pack-out (final day) — Ruby Basin → Needleton
 
-**~4.5 mi · ~3,400 ft down** the unmaintained **Ruby Creek climber's trail** — steep,
-loose, and slow (this is why you descend it). Camp at Needleton by the river and flag
-the train the next morning.
+**5.2 mi · ~3,900 ft down (measured)** the unmaintained **Ruby Creek climber's trail** —
+steep, loose, and slow (this is why you descend it). The drawn line is composed from
+recorded descents, camp to footbridge. Camp at Needleton by the river and flag the
+train the next morning.
 
 ### Basecamp — options & considerations
 
@@ -187,7 +192,7 @@ Considerations:
 
 ---
 
-## Day 1 — Jupiter Mountain, SW slopes (Class 2+ · ~5 mi · ~2,830 ft from camp)
+## Day 1 — Jupiter Mountain, SW slopes (Class 2+ · ~7 mi · ~4,600 ft from camp, measured)
 
 The warm-up and acclimatizer, away from the 14er conga lines:
 
@@ -312,8 +317,9 @@ system this report's numbers cross-check against).
 - **Take the optional Monitor-group day** — Monitor (Cl 4) + Peak Thirteen (free) +
   Animas (Cl 3–4) from a cirque directly above the Ruby camp: ~3 mi round trip for two
   more bicentennials.
-- **~35.5 mi / ~19,500 ft over 6 train-bound days** (~28.5 / ~13,500 without the option) —
-  and the "optional" Monitor day is the biggest single day, not a rest-day add-on.
+- **~42.5 mi / ~21,900 ft over 6 train-bound days** (~35.5 / ~15,900 without the option) —
+  every leg on the map is a measured recorded line, and the "optional" Monitor day is a
+  full climbing day, not a rest-day add-on.
 - **The camp move is a real mountain day:** two ~13,000' passes with full packs, all
   above treeline — weather rules it.
 - **Book the train early** ([durangotrain.com](https://www.durangotrain.com)), helmets +

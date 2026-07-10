@@ -7,17 +7,18 @@ objective_ids:
 - 153
 nearby:
   include: false
-# Per-day objective assignments → one recommended route per day (build_trip_day_routes.py).
-# Backpack trip: pack in from Molas Pass (CT/Elk Creek) to Vestal Basin camp; both
-# climbing days loop from camp. Day 1 = Vestal (Wham Ridge) + Arrow; Day 2 = Trinities.
-# Day-route recipes (2026-07-10): the stitched day-1 route teleported 5.8 mi at its
-# return leg, so day 1 is a verbatim recorded track instead:
-#   day 1: build_recommended_route.py vestal_arrow_trinities --from-track vat_trk_14ers_5
-#          --out gpx/vestal_arrow_trinities/day_vestal_arrow_recommended.gpx
-#   day 2: build_trip_day_routes.py (picks whole track trk_pb_1 — a clean Trinity loop)
+# One recommended route per LEG (Kyle, 2026-07-10): pack-in/out corridor + each
+# climbing day FROM the Vestal Basin camp. Pack-in and pack-out share the Molas/Elk
+# Creek corridor → ONE leg line. All lines are verbatim recorded tracks — Kyle's 2013
+# trip (kyle13_*.gpx, exported from CalTopo; his order was Trinities then V+A, the
+# lines serve either order).
 days:
-- {label: "Vestal + Arrow", objective_ids: [96, 127]}
-- {label: "Trinities", objective_ids: [126, 144, 153]}
+- {label: "Vestal + Arrow", objective_ids: [96, 127], track: "kyle13_vestal_arrow_day"}
+- {label: "Trinities", objective_ids: [126, 144, 153], track: "kyle13_trinities_day"}
+# Corridor is COMPOSED (Kyle's 2013 approach GPS started ~1.7 mi below the Molas
+# lot): point-to-point Molas TH → basin-camp waypoint via recorded tracks.
+legs:
+- {label: "Pack-in-out corridor", target: "corridor_target_peaks_only.gpx", start: "37.7476,-107.6885"}
 landmarks:
 - name: Molas Pass TH (Colorado Trail / Molas Trail, US 550)
   lat: 37.7476

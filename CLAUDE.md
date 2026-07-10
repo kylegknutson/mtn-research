@@ -106,7 +106,8 @@ single-peak/group report is essentially:
 9. `git add … && git commit … && git push` (all allow-listed).
 
 ## Hard rules
-- **One recommended route per DAY for multi-day trips (Kyle, 2026-06-21).**
+- **One recommended route per DAY for multi-day trips — and per LEG for backpacks
+  (Kyle, 2026-06-21 / 2026-07-10).**
   A single-day report has exactly one recommended route; a multi-day **Trip** (frontmatter
   `days: N`, N>1) has **N routes — one composed line per day** (the day clusters can be miles
   apart with no recorded track between them, so there is no single line). Build them with
@@ -114,6 +115,13 @@ single-peak/group report is essentially:
   `gpx/<slug>/peaks.yml` (each day = `{label, objective_ids}` — a subset of the trip's
   `objective_ids`), composes each day's route from its objective subset + nearest trailhead
   (via `build_recommended_route.py --peaks-only`), and writes `day_<label>_recommended.gpx`.
+  **Backpack trips additionally draw EVERY non-climbing leg** (pack-in, camp moves,
+  pack-out; one corridor line when pack-in/out coincide): peaks.yml `legs:` entries
+  (`{label, track}` verbatim recording, or `{label, target: <camp-wpt gpx>, start: "lat,lon"}`
+  composed point-to-point) → `leg_*_recommended.gpx`, and backpack climbing days use the
+  `days:` entries' optional `track:` (verbatim FROM-CAMP recording — TH-composing a
+  from-camp day redraws the approach and misplaces the day). Verify leg endpoints CONNECT
+  (TH→camp→camp→TH); GPS recordings often start late — compose those legs instead.
   `gen_peak_map`/`make_overview_map` draw EVERY `*recommended*.gpx`, so all day routes show
   on the home + overview maps. **No `no_single_route` exemption** — it's gone (it left South
   San Juans with no route at all); `check_route_exists.py` now FAILs a trip with fewer routes
