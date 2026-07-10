@@ -22,6 +22,7 @@ hooks:
 nav:
   - Home: index.emily.md
   - Peaks:
+    - Jupiter, Pigeon & Turret (train backpack): peaks/jupiter_pigeon_turret.emily.md
     - Vestal, Arrow & the Trinities (backpack): peaks/vestal_arrow_trinities.emily.md
     - Crestolita + Broken Hand: peaks/crestolita_broken_hand.emily.md
     - Lakes of the Clouds (7-peak loop): peaks/lakes_of_clouds_loop.emily.md

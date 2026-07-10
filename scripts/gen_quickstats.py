@@ -90,9 +90,17 @@ def render(meta):
         appr = meta.get("approach")
         if appr:
             lines.append(f"    - **{appr.get('label', 'Pack-in')}:** {stat_line(appr)}")
-        for i, dd in enumerate(detail, 1):
-            label = dd.get("label", f"Day {i}")
-            item = f"    - **Day {i} ({label}):** {stat_line(dd)}"
+        # `move: true` entries are non-climbing legs (mid-trip camp moves) — rendered
+        # in chronological position but not numbered as climbing days (and not counted
+        # against frontmatter `days:`, which stays = climbing days with routes).
+        day_n = 0
+        for dd in detail:
+            if dd.get("move"):
+                lines.append(f"    - **{dd.get('label', 'Camp move')}:** {stat_line(dd)}")
+                continue
+            day_n += 1
+            label = dd.get("label", f"Day {day_n}")
+            item = f"    - **Day {day_n} ({label}):** {stat_line(dd)}"
             if dd.get("wx"):           # per-day link when peaks are >6 mi apart
                 item += f" · [weather]({dd['wx']})"
             lines.append(item)

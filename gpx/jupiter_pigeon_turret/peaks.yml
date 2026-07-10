@@ -1,0 +1,22 @@
+# Waypoint config — jupiter_pigeon_turret (scaffold_report.py)
+objective_ids:
+- 115
+- 73
+- 111
+- 181
+- 135
+nearby:
+  include: false
+# Train-served backpack: D&SNG to Needleton, Chicago Basin + Ruby Basin camps,
+# camp move over Twin Thumbs Pass. One route per climbing day; day 3 is the
+# optional Monitor-group add-on (Peak Thirteen is unranked — prose only).
+days:
+- {label: "Jupiter", objective_ids: [115]}
+- {label: "Pigeon + Turret", objective_ids: [73, 111]}
+- {label: "Monitor group (optional)", objective_ids: [181, 135]}
+landmarks:
+- name: Needleton (D&SNG train stop / Animas footbridge)
+  lat: 37.6335
+  lon: -107.6928
+  kind: trailhead
+  ele_ft: 8270
