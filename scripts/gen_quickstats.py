@@ -44,6 +44,8 @@ def stat_line(d):
         bits.append(f"**{n_mi(d['dist_mi'])} mi**")
     if d.get("gain_ft") is not None:
         bits.append(f"**{n_ft(d['gain_ft'])} ft** gain")
+    if d.get("loss_ft") is not None:
+        bits.append(f"{n_ft(d['loss_ft'])} ft descent")
     if d.get("class"):
         bits.append(f"**Class {d['class']}**")
     pk = d.get("peaks")
@@ -71,12 +73,21 @@ def render(meta):
             summ += (" · " if summ else "") + f"[weather]({wx})"
         lines.append(f"    {summ}")
         lines.append("")
+        # Backpack trips: pack-in/pack-out are first-class "At a glance" lines
+        # (Kyle, 2026-07-10 — ALWAYS for multi-day backpacks). Frontmatter:
+        #   approach: {label, dist_mi, gain_ft, loss_ft}   packout: {…}
+        appr = meta.get("approach")
+        if appr:
+            lines.append(f"    - **{appr.get('label', 'Pack-in')}:** {stat_line(appr)}")
         for i, dd in enumerate(detail, 1):
             label = dd.get("label", f"Day {i}")
             item = f"    - **Day {i} ({label}):** {stat_line(dd)}"
             if dd.get("wx"):           # per-day link when peaks are >6 mi apart
                 item += f" · [weather]({dd['wx']})"
             lines.append(item)
+        po = meta.get("packout")
+        if po:
+            lines.append(f"    - **{po.get('label', 'Pack-out')}:** {stat_line(po)}")
     else:
         head = stat_line(meta)
         if drive_s:

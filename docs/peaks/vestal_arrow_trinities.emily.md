@@ -17,6 +17,8 @@ dist_mi: 30
 days_detail:
   - {label: "Vestal (Wham Ridge) + Arrow", peaks: 2, dist_mi: 7, gain_ft: 4400, class: "5.4"}
   - {label: "Trinity traverse (W→E)", peaks: 3, dist_mi: 5, gain_ft: 4650, class: "4"}
+approach: {label: "Pack-in (Molas Pass → Vestal Basin camp)", dist_mi: 9, gain_ft: 2900, loss_ft: 1750}
+packout: {label: "Pack-out (camp → Molas Pass)", dist_mi: 9, gain_ft: 1800, loss_ft: 2900}
 th_source: "recorded GPS-track starts at Molas Pass TH — CT/Molas Trail lot N of the pass (37.7476,-107.6885, ~10,610') — 12 swept tracks begin <0.05 mi away; OSM parking + Molas Trailhead Rd FR 680"
 class_source: "route beta — climb13ers.com per-route pages (Vestal S Face 2+, Arrow E Ramp 3, Trinity W Ridge 4, E Trinity W Ridge 3) + Wham Ridge III 5.4 (MountainProject/SummitPost) + 14ers.com trip reports"
 status_source: "scrape_14ers_checklist emily"
@@ -33,8 +35,10 @@ status_source: "scrape_14ers_checklist emily"
 !!! tip "At a glance — 2-day trip"
     **5 peaks** · **~7.6 h drive**
 
+    - **Pack-in (Molas Pass → Vestal Basin camp):** **9 mi** · **2,900 ft** gain · 1,750 ft descent
     - **Day 1 (Vestal (Wham Ridge) + Arrow):** **7 mi** · **4,400 ft** gain · **Class 5.4** · 2 peaks
     - **Day 2 (Trinity traverse (W→E)):** **5 mi** · **4,650 ft** gain · **Class 4** · 3 peaks
+    - **Pack-out (camp → Molas Pass):** **9 mi** · **1,800 ft** gain · 2,900 ft descent
 
 <!-- QUICKSTATS_END -->
 
@@ -105,7 +109,7 @@ GPX tracks start. US 550 is paved all the way; no 4WD needed.
 
 ### Pack-in (Day 0) — Molas Pass → Vestal Basin
 
-**~9 mi · ~2,600 ft up (plus a 1,700 ft descent you repay on the way out)**
+**~9 mi · ~2,900 ft up · ~1,750 ft down (a descent you repay on the way out)**
 
 1. Colorado Trail from Molas Pass — ~4 mi of switchbacks **down** to the Animas River
    bridge (8,900').
@@ -115,12 +119,32 @@ GPX tracks start. US 550 is paved all the way; no 4WD needed.
 3. Just past the beaver ponds, drop right onto the **unmaintained Vestal Creek trail**
    (cairned climber's path): steep, braided in places, with deadfall. It climbs ~700' into
    **Vestal Basin**.
-4. Camp in the **lower meadow (~11,300')** below Arrow/Vestal, or push to the **upper
-   bench (~11,760')** toward the Trinities. The lower meadow is the better Day-1 base;
-   the upper camp shortens Day 2.
+4. Camp in the basin — see **Basecamp options** below (the pack-in stats above assume
+   the recommended lower-meadow/upper-bench camp at 11,300–11,760').
 
-**Guard your gear — the Vestal Basin marmots are notorious.** They chew packs, straps,
-trekking-pole grips, anything salty. Hang or tent-stash everything.
+### Basecamp — options & considerations
+
+**Recommended: the lower meadow (~11,300')** below Arrow and Vestal's north faces —
+the best mix of sites, water, and position for the harder day (Wham starts right above it).
+
+| Camp | Elev | Pros | Cons |
+|---|---|---|---|
+| **Lower meadow** ⭐ | ~11,300' | Most/best sites; Vestal Creek water; shortest start for **Day 1** (Wham + Arrow right overhead) | Adds ~0.5 mi / ~450' to Day 2; marmot central |
+| **Upper bench** | ~11,760' | Cuts ~1 mi / ~450' off **Day 2** (Trinities); climb13ers measures its routes from here | Fewer, smaller, more exposed sites; Day 1 starts with a contour back west |
+| **Beaver ponds (Elk Creek)** | ~11,200' | On the maintained CT — big sites, easy water; good late-arrival fallback | Adds the steep ~700' unmaintained Vestal Creek climb to **both** climbing days |
+
+Considerations for all three:
+
+- **Water:** Vestal Creek runs by both basin camps; the ponds have Elk Creek. All reliable
+  season-long (treat).
+- **Marmots (serious):** the basin camps are notorious — marmots here chew packs, straps,
+  pole grips, boots, anything salty. Everything inside the tent or hung, always.
+- **Weather exposure:** the higher you camp, the more wind/lightning exposure — the lower
+  meadow has tree shelter, the upper bench little.
+- **LNT:** durable surfaces, established sites, 100'+ from water — this basin sees heavy
+  summer use.
+- **Split-camp variant:** some parties move camp mid-trip (lower meadow for Day 1, upper
+  bench before Day 2) — rarely worth the packing time for the ~1 mi it saves.
 
 ### Pack-out (final day)
 

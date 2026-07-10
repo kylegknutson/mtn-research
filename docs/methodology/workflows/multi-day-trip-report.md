@@ -11,8 +11,14 @@ This is the most complex flavor: it's a day-trip report per day, wrapped in trip
 Source rigor (all three sources, confirmed logged-in) on **every peak** in the itinerary, plus:
 
 - [ ] **Itinerary design** — group peaks by day from the basecamp(s); balance daily gain/distance/class
-- [ ] **Basecamp selection** — location(s), elevation, water access, legality (wilderness camping rules, permit zones)
-- [ ] **Pack-in / pack-out** routes + distance/gain with a full pack
+- [ ] **Basecamp selection — its own report section (Kyle, 2026-07-10)** — a "Basecamp —
+  options & considerations" section listing every viable camp (elevation, pros/cons table)
+  plus water/marmots/exposure/LNT notes. The recommended camp is what the pack-in stats
+  and day stats assume; the options are there for parties who choose differently.
+- [ ] **Pack-in / pack-out in "At a glance" (Kyle, 2026-07-10 — ALWAYS for backpacks)** —
+  frontmatter `approach: {label, dist_mi, gain_ft, loss_ft}` and `packout: {…}`;
+  gen_quickstats renders them as their own lines around the per-day list. Stats measured
+  to the RECOMMENDED camp; body text covers the alternatives.
 - [ ] **Water sources** along approach and near camp (mark on map)
 - [ ] **Per-day peak stats** from GPX (each day's loop from camp). Peaks at *different* trailheads → **don't auto-route one loop**; run `build_recommended_route.py` per day-area and set `days_detail` + a per-day-sum `dist_mi`/`gain_ft`. ([Build the recommended route right](../source-requirements.md))
 - [ ] **Weather** — peaks ≤6 mi apart: one `weather:` NOAA link for the central peak. Peaks >6 mi apart: a `wx:` NOAA link per `days_detail` day (forecast.weather.gov/MapClick.php?lat=&lon= for the day's central peak).
