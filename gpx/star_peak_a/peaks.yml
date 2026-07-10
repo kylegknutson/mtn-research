@@ -1,5 +1,7 @@
 # Waypoint config for build_peak_gpx.py — Star Peak A.
 objective_ids: [301]
+# The frozen route deliberately crosses Taylor Pk A + Italian Mtn en route to Star.
+extra_summits: [365, 420]
 route_build: {method: frozen}
 
 nearby:

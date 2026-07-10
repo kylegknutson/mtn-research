@@ -161,15 +161,23 @@ def main():
         sub = [id_to_wpt[i] for i in ids if i in id_to_wpt]
         if not sub:
             print(f"  WARN: day {label!r} — no matching objectives, skipped"); continue
-        clat = sum(w["lat"] for w in sub) / len(sub)
-        clon = sum(w["lon"] for w in sub) / len(sub)
-        if not ths:
-            sys.exit(f"ERROR: no trailheads to start day {label!r} from")
-        th = min(ths, key=lambda t: hav(clat, clon, t[0], t[1]))
+        # Per-day `start:` — a CAMP anchor ("lat,lon") for backpack trips, so the
+        # composed loop starts/ends at the camp instead of the nearest trailhead
+        # (which redraws the approach; Kyle, 2026-07-10). Composition also can't
+        # visit unrequested summits the way a verbatim party track can.
+        if day.get("start"):
+            start = day["start"]; start_name = f"camp {start}"
+        else:
+            clat = sum(w["lat"] for w in sub) / len(sub)
+            clon = sum(w["lon"] for w in sub) / len(sub)
+            if not ths:
+                sys.exit(f"ERROR: no trailheads to start day {label!r} from")
+            th = min(ths, key=lambda t: hav(clat, clon, t[0], t[1]))
+            start = f"{th[0]},{th[1]}"; start_name = th[2]
         subset_f = d / f"day_{slug_label}_peaks_only.gpx"   # 'peaks_only' → excluded as a source track
         write_peaks_only(subset_f, sub)
         cmd = [str(SCRIPTS / "build_recommended_route.py"), args.slug,
-               "--peaks-only", str(subset_f), "--start", f"{th[0]},{th[1]}",
+               "--peaks-only", str(subset_f), "--start", start,
                "--out", str(out_f)]
         if not args.graph:
             # Default to the per-leg/whole-track router: it stitches the REAL recorded
@@ -180,7 +188,7 @@ def main():
         if args.no_dem:
             cmd.append("--no-dem")
         print(f"\n=== day: {label} → {', '.join(w['name'].split(' (')[0] for w in sub)} "
-              f"| start {th[2]} ===")
+              f"| start {start_name} ===")
         r = subprocess.run(cmd)
         if not args.keep_subsets:
             subset_f.unlink(missing_ok=True)
@@ -205,7 +213,12 @@ def main():
             print(f"\n=== leg: {label} → composed {leg['target']} from {leg['start']} ===")
             cmd = [str(SCRIPTS / "build_recommended_route.py"), args.slug,
                    "--peaks-only", str(d / leg["target"]), "--start", leg["start"],
-                   "--no-return", "--legs", "--out", str(out_f)]
+                   "--no-return", "--out", str(out_f)]
+            # Default: single-corridor stitcher. `graph: true` → multi-track graph
+            # router, needed when the leg chains SEVERAL parties' tracks (the
+            # stitcher straight-jumped 2.2 mi on the Chicago→Ruby camp move).
+            if not leg.get("graph"):
+                cmd.append("--legs")
         if args.no_dem:
             cmd.append("--no-dem")
         r = subprocess.run(cmd)

@@ -4,21 +4,21 @@ range: San Juan
 drive_time: "7h 35m"
 yds_class: "5.4"
 class: "5.4"
-gain: "~14,600 ft trip total (pack-in + 2 climbing days + pack-out, DEM)"
+gain: "~13,300 ft trip total (pack-in + 2 climbing days + pack-out, smoothed DEM)"
 status: unclimbed
 climber: emily
 caltopo_id: 4MR73J3
 regional_map_id: 06AR6BF
 peaks: 5
 days: 2
-gain_ft: 14613
+gain_ft: 13318
 drive_h: 7.6
 dist_mi: 32.7
 days_detail:
-  - {label: "Vestal (Wham Ridge) + Arrow", peaks: 2, dist_mi: 6.4, gain_ft: 4721, class: "5.4"}
-  - {label: "Trinity traverse (W→E)", peaks: 3, dist_mi: 6.3, gain_ft: 4142, class: "4"}
-approach: {label: "Pack-in (Molas Pass → Vestal Basin camp)", dist_mi: 10, gain_ft: 3290, loss_ft: 2460}
-packout: {label: "Pack-out (camp → Molas Pass)", dist_mi: 10, gain_ft: 2460, loss_ft: 3290}
+  - {label: "Vestal (Wham Ridge) + Arrow", peaks: 2, dist_mi: 6.4, gain_ft: 4282, class: "5.4"}
+  - {label: "Trinity traverse (W→E)", peaks: 3, dist_mi: 6.3, gain_ft: 3709, class: "4"}
+approach: {label: "Pack-in (Molas Pass → Vestal Basin camp)", dist_mi: 10, gain_ft: 3077, loss_ft: 2250}
+packout: {label: "Pack-out (camp → Molas Pass)", dist_mi: 10, gain_ft: 2250, loss_ft: 3077}
 th_source: "recorded GPS-track starts at Molas Pass TH — CT/Molas Trail lot N of the pass (37.7476,-107.6885, ~10,610') — 12 swept tracks begin <0.05 mi away; OSM parking + Molas Trailhead Rd FR 680"
 class_source: "route beta — climb13ers.com per-route pages (Vestal S Face 2+, Arrow E Ramp 3, Trinity W Ridge 4, E Trinity W Ridge 3) + Wham Ridge III 5.4 (MountainProject/SummitPost) + 14ers.com trip reports"
 status_source: "scrape_14ers_checklist emily"
@@ -33,12 +33,12 @@ status_source: "scrape_14ers_checklist emily"
 <!-- QUICKSTATS_START -->
 
 !!! tip "At a glance — 2-day trip"
-    **5 peaks** · **trip total ~32.7 mi · ~14,613 ft** · **~7.6 h drive**
+    **5 peaks** · **trip total ~32.7 mi · ~13,318 ft** · **~7.6 h drive**
 
-    - **Pack-in (Molas Pass → Vestal Basin camp):** **10 mi** · **3,290 ft** gain · 2,460 ft descent
-    - **Day 1 (Vestal (Wham Ridge) + Arrow):** **6.4 mi** · **4,721 ft** gain · **Class 5.4** · 2 peaks
-    - **Day 2 (Trinity traverse (W→E)):** **6.3 mi** · **4,142 ft** gain · **Class 4** · 3 peaks
-    - **Pack-out (camp → Molas Pass):** **10 mi** · **2,460 ft** gain · 3,290 ft descent
+    - **Pack-in (Molas Pass → Vestal Basin camp):** **10 mi** · **3,077 ft** gain · 2,250 ft descent
+    - **Day 1 (Vestal (Wham Ridge) + Arrow):** **6.4 mi** · **4,282 ft** gain · **Class 5.4** · 2 peaks
+    - **Day 2 (Trinity traverse (W→E)):** **6.3 mi** · **3,709 ft** gain · **Class 4** · 3 peaks
+    - **Pack-out (camp → Molas Pass):** **10 mi** · **2,250 ft** gain · 3,077 ft descent
 
 <!-- QUICKSTATS_END -->
 
@@ -72,7 +72,7 @@ status_source: "scrape_14ers_checklist emily"
 |---|---|
 | Days | **4 days / 3 nights** — pack in, 2 climbing days, pack out (strong parties compress to 3 days) |
 | Peaks | 5 ranked 13ers: Vestal 13,867' · Arrow 13,817' · Trinity 13,816' · W Trinity 13,765' · E Trinity 13,752' |
-| Trip total | **~32.5 mi · ~14,600 ft** — every leg a measured recorded line (Kyle's 2013 trip) + DEM |
+| Trip total | **~32.5 mi · ~13,300 ft** — every leg a measured recorded line (Kyle's 2013 trip), gain from smoothed DEM, cross-checked against terrain arithmetic |
 | Style | Backpack via Elk Creek (Colorado Trail) to a **Vestal Basin camp (11,300–11,760')** |
 | Hardest move | **5.4** (Wham Ridge crux) · Day 2 is Class 4 (Trinity chimney) |
 | Drive from Highland | **[~7h 35m / 361 mi via Google Maps](https://www.google.com/maps/dir/?api=1&origin=Highland,+Denver,+CO&destination=37.7476,-107.6885)** to Molas Pass |
@@ -109,7 +109,7 @@ GPX tracks start. US 550 is paved all the way; no 4WD needed.
 
 ### Pack-in (Day 0) — Molas Pass → Vestal Basin
 
-**10 mi · ~3,290 ft up · ~2,460 ft down, measured** (the drawn corridor line — composed
+**10 mi · ~3,080 ft up · ~2,250 ft down, measured** (the drawn corridor line — composed
 from recorded tracks, Molas lot to the basin camp; you repay the descent on the way out)
 
 1. Colorado Trail from Molas Pass — ~4 mi of switchbacks **down** to the Animas River
@@ -155,7 +155,7 @@ corridor as the pack-in, so the map shows one line for both.)
 
 ---
 
-## Day 1 — Vestal via Wham Ridge, then Arrow (Class 5.4 · 6.4 mi · ~4,700 ft from camp, measured)
+## Day 1 — Vestal via Wham Ridge, then Arrow (Class 5.4 · 6.4 mi · ~4,280 ft from camp, measured)
 
 The Grenadiers' marquee day, and one of Colorado's classic alpine rock routes.
 
@@ -174,14 +174,14 @@ The Grenadiers' marquee day, and one of Colorado's classic alpine rock routes.
 5. Retrace the ramp and drop back to camp.
 
 **Measured stats:** the Day-1 line on the maps is **Kyle's 2013 from-camp loop, followed
-verbatim — 6.4 mi / ~4,721 ft (DEM)**. Parties commonly log 8–14 hours for the pair.
+verbatim — 6.4 mi / ~4,282 ft (smoothed DEM)**. Parties commonly log 8–14 hours for the pair.
 
 > **Order matters:** do **Wham first** (N face needs dry rock and you want the crux behind
 > you before weather), then Arrow — its ramp descends fast if storms build.
 
 ---
 
-## Day 2 — The Trinity traverse, W→E (Class 4 · 6.3 mi · ~4,150 ft from camp, measured)
+## Day 2 — The Trinity traverse, W→E (Class 4 · 6.3 mi · ~3,700 ft from camp, measured)
 
 Three summits by the classic west-to-east line — climb high, traverse, descend easy.
 
@@ -201,7 +201,7 @@ Three summits by the classic west-to-east line — climb high, traverse, descend
    a gorgeous finish.
 
 **Measured stats:** the Day-2 line is **Kyle's 2013 from-camp traverse loop, verbatim —
-6.3 mi / ~4,142 ft (DEM)**.
+6.3 mi / ~3,709 ft (smoothed DEM)**.
 
 ---
 
@@ -275,7 +275,7 @@ Trinity W Ridge 4, E Trinity W Ridge 3, camp-based mileages).
 - **This is a climbing trip, not a hike** — hardest move 5.4 on Wham (rope optional but
   reasonable), exposed Class 4 on Trinity, and Vestal's descent has a notorious
   wrong-gully trap. Helmets on everything.
-- **~32.5 mi / ~14,600 ft over 4 days** (10 mi pack-in each way with a ~1,750' Animas
+- **~32.5 mi / ~13,300 ft over 4 days** (10 mi pack-in each way with a ~1,750' Animas
   climb on exit; climbing days ~6.5 mi each from camp — all measured recorded lines).
 - **Drive: [~7h 35m from Highland](https://www.google.com/maps/dir/?api=1&origin=Highland,+Denver,+CO&destination=37.7476,-107.6885)** to the Molas Pass CT lot (paved, any car).
 - **Mid-July–September, dry rock only** for Wham; storms build fast — summit early.

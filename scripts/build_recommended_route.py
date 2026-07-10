@@ -269,6 +269,20 @@ def sample_dem(latlons, dataset):
     return out
 
 
+def smooth_eles(eles, window=5):
+    """Centered moving average (~window×DEM_THIN_M ≈ 100 m). A verbatim GPS track
+    keeps its lateral scatter, and on steep slopes a ±10 m position wobble reads as
+    a ±5–10 m DEM wobble — hundreds of phantom climb-runs that clear the hysteresis
+    and inflated from-track day gains 25–60% (Kyle caught it on jupiter_pigeon_turret,
+    2026-07-10: Jupiter-from-camp read 4,613' vs ~2,600' of terrain arithmetic).
+    Smoothing before accumulating keeps real grade changes (>~100 m scale) intact."""
+    if len(eles) <= window:
+        return eles
+    half = window // 2
+    return [sum(eles[max(0, i - half):i + half + 1]) / len(eles[max(0, i - half):i + half + 1])
+            for i in range(len(eles))]
+
+
 def dem_gain(route, dataset):
     """Resample a DEM along the route and return (gain_m, dataset_used).
     Thins to ~DEM_THIN_M spacing first; fills ned10m gaps from srtm30m."""
@@ -283,7 +297,7 @@ def dem_gain(route, dataset):
         eles = [e if e is not None else f for e, f in zip(eles, fill)]
         used = f"{dataset}+srtm30m"
     eles = [e for e in eles if e is not None]
-    return accumulated_gain(eles, DEM_GAIN_THRESHOLD_M), used
+    return accumulated_gain(smooth_eles(eles), DEM_GAIN_THRESHOLD_M), used
 
 
 # ── graph router (--graph) ────────────────────────────────────────────────────
@@ -550,12 +564,28 @@ def main():
 
     track_files = [f for f in sorted(d.glob("*.gpx"))
                    if not any(s in f.name.lower() for s in SKIP)]
-    tracks = [parse_track_points(f) for f in track_files]
-    keep = [(f, t) for f, t in zip(track_files, tracks) if len(t) >= 2]
-    track_files, tracks = [f for f, _ in keep], [t for _, t in keep]
+    # Split each file at big inter-point gaps (>SPLIT_GAP_M). A multi-day recording
+    # flattens its trkseg boundaries into one point list, so the overnight jump
+    # (GPS off at camp, on next morning miles away) reads as a walkable edge — the
+    # routers happily "walked" a 2.2 mi camp-to-camp teleport through one on
+    # jupiter_pigeon_turret (2026-07-10). Splitting also handles GPS dropouts.
+    SPLIT_GAP_M = 300.0
+    track_files_out, tracks = [], []
+    for f in track_files:
+        pts = parse_track_points(f)
+        piece = []
+        for p in pts:
+            if piece and hav(piece[-1][0], piece[-1][1], p[0], p[1]) > SPLIT_GAP_M:
+                if len(piece) >= 2:
+                    track_files_out.append(f); tracks.append(piece)
+                piece = []
+            piece.append(p)
+        if len(piece) >= 2:
+            track_files_out.append(f); tracks.append(piece)
+    track_files = track_files_out
     if not tracks:
         sys.exit("ERROR: no usable source tracks")
-    print(f"Source tracks: {len(tracks)}")
+    print(f"Source tracks: {len(tracks)} (gap-split from {len(set(track_files))} file(s))")
 
     pk = Path(args.peaks_only) if args.peaks_only else next(d.glob("*peaks_only*.gpx"), None)
     if not pk or not pk.exists():

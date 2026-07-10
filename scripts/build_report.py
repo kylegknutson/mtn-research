@@ -213,6 +213,10 @@ def finalize_phase(args):
         # — routes are gitignored, so without a verified recipe a rebuild can silently
         # replace a good route with a wrong one (build_route.py builds from the recipe)
         ["check_route_recipe.py", args.slug, "--strict"],
+        # recommended lines may not cross NON-objective ranked summits (a leaked
+        # bigger party day), and a backpack trip's day/leg lines must chain
+        # TH→camp→…→TH (each starts where the previous ended — they're navigation)
+        ["check_trip_continuity.py", args.slug, "--strict"],
     ]
     for chk in gates:
         r = run([SCRIPTS / chk[0], *chk[1:]])

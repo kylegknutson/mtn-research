@@ -15,15 +15,21 @@ nearby:
 # converge between the Monitor/Animas cirque and the Pigeon–Turret saddle); legs are
 # Kyle's 2013 recordings of this exact itinerary (kyle13_*.gpx, exported from CalTopo).
 days:
-- {label: "Jupiter", objective_ids: [115], track: "trk_pb_2"}
-- {label: "Pigeon + Turret", objective_ids: [73, 111], track: "06AR6BF_pigeon-turret"}
-- {label: "Monitor group (optional)", objective_ids: [181, 135], track: "trk_loj_16157"}
+# FULLY COMPOSED camp-anchored chain (Kyle, 2026-07-10: verbatim party tracks
+# carried foreign summits — Sunlight/Windom on day 1, another basin's approach on
+# day 3 — and didn't start at the planned camps; composition stitches efficient
+# recorded segments through ONLY the requested points, and every line starts where
+# the previous one ends). Anchors: camp_chicago 37.6013,-107.6260 (~11,000', the
+# realistic wooded camp cluster — upper basin is not summer-campable);
+# camp_ruby 37.6353,-107.6364 (the meadow between the Monitor/Animas cirque and
+# the Pigeon–Turret slope, where the recorded tracks converge).
+- {label: "Jupiter", objective_ids: [115], start: "37.6013,-107.6260"}
+- {label: "Pigeon + Turret", objective_ids: [73, 111], start: "37.6353,-107.6364"}
+- {label: "Monitor group (optional)", objective_ids: [181, 135], start: "37.6353,-107.6364"}
 legs:
-- {label: "Pack-in", track: "kyle13_needleton_approach"}
-- {label: "Camp move", track: "kyle13_chicago_ruby_move"}
-# Pack-out is COMPOSED (Kyle's 2013 hike-out GPS started ~1.5 mi below camp):
-# point-to-point Needleton → camp waypoint via recorded tracks.
-- {label: "Pack-out", target: "packout_target_peaks_only.gpx", start: "37.6335,-107.6928"}
+- {label: "Pack-in", target: "camp_chicago_target_peaks_only.gpx", start: "37.6335,-107.6928"}
+- {label: "Camp move", target: "camp_ruby_target_peaks_only.gpx", start: "37.6013,-107.6260", graph: true}
+- {label: "Pack-out", target: "camp_ruby_target_peaks_only.gpx", start: "37.6335,-107.6928"}
 landmarks:
 - name: Needleton (D&SNG train stop / Animas footbridge)
   lat: 37.6335
