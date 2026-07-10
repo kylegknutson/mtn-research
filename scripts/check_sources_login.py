@@ -59,8 +59,18 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--login", action="store_true",
                     help="Open a headed window to log in interactively, then verify.")
+    ap.add_argument("--wait", action="store_true",
+                    help="Like --login but stdin-free (background-safe): open one tab per "
+                         "site, keep the window open, and poll until the --required sites "
+                         "are logged in (or --timeout-min). Polling uses a separate tab so "
+                         "it never reloads a page mid-typing.")
+    ap.add_argument("--required", default="14ers,listsofjohn,peakbagger",
+                    help="Comma list of sites that must be logged in (--wait gate + exit code).")
+    ap.add_argument("--timeout-min", type=float, default=20.0,
+                    help="--wait: give up after this many minutes (exit 1).")
     ap.add_argument("--climber", default="kyle", help="Climber slug for expected usernames.")
     args = ap.parse_args()
+    required = {s.strip() for s in args.required.split(",") if s.strip()}
 
     try:
         from playwright.sync_api import sync_playwright
@@ -77,14 +87,15 @@ def main():
         # blocks at the bot check. Fall back to bundled Chromium if Chrome isn't found.
         ua = ("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 "
               "(KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36")
+        headed = args.login or args.wait
         try:
             ctx = p.chromium.launch_persistent_context(
-                str(PROFILE_DIR), headless=not args.login, channel="chrome",
+                str(PROFILE_DIR), headless=not headed, channel="chrome",
                 user_agent=ua, chromium_sandbox=True)
         except Exception:
             try:
                 ctx = p.chromium.launch_persistent_context(
-                    str(PROFILE_DIR), headless=not args.login, user_agent=ua,
+                    str(PROFILE_DIR), headless=not headed, user_agent=ua,
                     chromium_sandbox=True)
             except Exception as e:
                 sys.exit(f"Could not launch a browser ({e}).\n"
@@ -97,6 +108,45 @@ def main():
                 page.goto(url, wait_until="domcontentloaded")
                 print(f"  → {key}: {url}")
             input("Press Enter when all three are logged in… ")
+
+        if args.wait:
+            # One tab per site so the user can log into each; a separate checker
+            # tab polls so the user's tabs are never reloaded under their hands.
+            print(f"Window open — log into: {', '.join(sorted(required))}. "
+                  f"Auto-verifying every ~10s (up to {args.timeout_min:g} min).", flush=True)
+            tabs = {}
+            for key, url, _ in SITES:
+                t = page if not tabs else ctx.new_page()
+                try:
+                    t.goto(url, wait_until="domcontentloaded", timeout=20000)
+                except Exception as e:
+                    print(f"  ⚠ {key} tab failed to load ({str(e)[:60]}) — reload it by hand",
+                          flush=True)
+                tabs[key] = t
+            checker = ctx.new_page()
+            confirmed: set[str] = set()
+            deadline = args.timeout_min * 60
+            waited = 0.0
+            while confirmed < required and waited < deadline:
+                for key, url, rx in SITES:
+                    if key not in required or key in confirmed:
+                        continue
+                    try:
+                        checker.goto(url, wait_until="domcontentloaded", timeout=20000)
+                        checker.wait_for_timeout(2500)
+                        if rx.search(checker.content()):
+                            confirmed.add(key)
+                            print(f"  ✓ {key} logged in", flush=True)
+                    except Exception:
+                        pass
+                if confirmed < required:
+                    checker.wait_for_timeout(8000)
+                    waited += 8 + 5 * len(required - confirmed)
+            checker.close()
+            if confirmed < required:
+                ctx.close()
+                sys.exit(f"✗ timed out after {args.timeout_min:g} min still waiting on: "
+                         f"{', '.join(sorted(required - confirmed))}")
 
         for key, url, rx in SITES:
             try:
@@ -115,7 +165,7 @@ def main():
     for key, _u, _ in SITES:
         status, user = results.get(key, ("?", None))
         exp = expected.get(key, "—")
-        ok = status == "LOGGED IN"
+        ok = status == "LOGGED IN" or key not in required
         all_ok &= ok
         flag = "" if (not user or not exp or exp == "—" or user.lower().startswith(str(exp).lower()[:5])) else "  ⚠ mismatch"
         print(f"{key:14} {status:12} {str(user or '—'):20} {exp}{flag}")

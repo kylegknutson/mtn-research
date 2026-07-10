@@ -1,0 +1,26 @@
+# Waypoint config — vestal_arrow_trinities (scaffold_report.py)
+objective_ids:
+- 96
+- 127
+- 126
+- 144
+- 153
+nearby:
+  include: false
+# Per-day objective assignments → one recommended route per day (build_trip_day_routes.py).
+# Backpack trip: pack in from Molas Pass (CT/Elk Creek) to Vestal Basin camp; both
+# climbing days loop from camp. Day 1 = Vestal (Wham Ridge) + Arrow; Day 2 = Trinities.
+# Day-route recipes (2026-07-10): the stitched day-1 route teleported 5.8 mi at its
+# return leg, so day 1 is a verbatim recorded track instead:
+#   day 1: build_recommended_route.py vestal_arrow_trinities --from-track vat_trk_14ers_5
+#          --out gpx/vestal_arrow_trinities/day_vestal_arrow_recommended.gpx
+#   day 2: build_trip_day_routes.py (picks whole track trk_pb_1 — a clean Trinity loop)
+days:
+- {label: "Vestal + Arrow", objective_ids: [96, 127]}
+- {label: "Trinities", objective_ids: [126, 144, 153]}
+landmarks:
+- name: Molas Pass TH (Colorado Trail / Molas Trail, US 550)
+  lat: 37.7476
+  lon: -107.6885
+  kind: trailhead
+  ele_ft: 10610
