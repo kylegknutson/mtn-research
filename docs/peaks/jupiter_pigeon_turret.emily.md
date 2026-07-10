@@ -4,22 +4,22 @@ range: San Juan
 drive_time: "7h 22m"
 yds_class: "4"
 class: "4"
-gain: "~15,400 ft trip total (pack-in + 3 climbing days + camp move + pack-out)"
+gain: "~19,500 ft trip total (pack-in + 3 climbing days + camp move + pack-out, DEM)"
 status: unclimbed
 climber: emily
 caltopo_id: MU0K4JT
 regional_map_id: 06AR6BF
 peaks: 5
 days: 3
-gain_ft: 15430
+gain_ft: 19515
 drive_h: 7.4
-dist_mi: 31.5
+dist_mi: 35.6
 weather: "https://forecast.weather.gov/MapClick.php?lat=37.66&lon=-107.63"
 days_detail:
   - {label: "Jupiter", peaks: 1, dist_mi: 5, gain_ft: 2830, class: "2+"}
   - {label: "Camp move — Twin Thumbs Pass + Ruby Pass", dist_mi: 5, gain_ft: 2900, loss_ft: 2250, move: true}
-  - {label: "Pigeon + Turret", peaks: 2, dist_mi: 8, gain_ft: 4100, class: "4"}
-  - {label: "Monitor group — optional", peaks: 2, dist_mi: 3, gain_ft: 2800, class: "4"}
+  - {label: "Pigeon + Turret", peaks: 2, dist_mi: 8.1, gain_ft: 4995, class: "4"}
+  - {label: "Monitor group — optional", peaks: 2, dist_mi: 7, gain_ft: 5990, class: "4"}
 approach: {label: "Pack-in (Needleton → Chicago Basin camp)", dist_mi: 6, gain_ft: 2800}
 packout: {label: "Pack-out (Ruby camp → Needleton)", dist_mi: 4.5, loss_ft: 3400}
 th_source: "recorded GPS-track starts at the Needleton D&SNG halt / Animas footbridge (37.6335,-107.6928, ~8,270') — 4 swept tracks begin 0.0 mi from it; OSM railway=halt 'Needleton'"
@@ -36,13 +36,13 @@ status_source: "scrape_14ers_checklist emily"
 <!-- QUICKSTATS_START -->
 
 !!! tip "At a glance — 3-day trip"
-    **5 peaks** · **trip total ~31.5 mi · ~15,430 ft** · **~7.4 h drive** · [weather](https://forecast.weather.gov/MapClick.php?lat=37.66&lon=-107.63)
+    **5 peaks** · **trip total ~35.6 mi · ~19,515 ft** · **~7.4 h drive** · [weather](https://forecast.weather.gov/MapClick.php?lat=37.66&lon=-107.63)
 
     - **Pack-in (Needleton → Chicago Basin camp):** **6 mi** · **2,800 ft** gain
     - **Day 1 (Jupiter):** **5 mi** · **2,830 ft** gain · **Class 2+** · 1 peak
     - **Camp move — Twin Thumbs Pass + Ruby Pass:** **5 mi** · **2,900 ft** gain · 2,250 ft descent
-    - **Day 2 (Pigeon + Turret):** **8 mi** · **4,100 ft** gain · **Class 4** · 2 peaks
-    - **Day 3 (Monitor group — optional):** **3 mi** · **2,800 ft** gain · **Class 4** · 2 peaks
+    - **Day 2 (Pigeon + Turret):** **8.1 mi** · **4,995 ft** gain · **Class 4** · 2 peaks
+    - **Day 3 (Monitor group — optional):** **7 mi** · **5,990 ft** gain · **Class 4** · 2 peaks
     - **Pack-out (Ruby camp → Needleton):** **4.5 mi** · 3,400 ft descent
 
 <!-- QUICKSTATS_END -->
@@ -75,7 +75,7 @@ status_source: "scrape_14ers_checklist emily"
 |---|---|
 | Days | **6 days / 5 nights** with the optional day (5/4 without) — train in, pack in, climb, move camp, climb, pack out, train out |
 | Peaks | 5 ranked 13ers: Pigeon 13,977' · Jupiter 13,838' · Turret 13,837' · Animas 13,789' · Monitor 13,707' (+ unranked **Peak Thirteen 13,705'** free en route) |
-| Trip total | **~31.5 mi · ~15,400 ft** with the optional day (~28.5 mi / ~12,600 ft without) |
+| Trip total | **~35.5 mi · ~19,500 ft** with the optional day (~28.5 mi / ~13,500 ft without) — measured from recorded tracks + DEM |
 | Style | Train-served backpack: **Chicago Basin camp → over Twin Thumbs + Ruby passes → Ruby Basin camp** |
 | Hardest move | **Class 4** — Pigeon's summit slot & Monitor's saddle ribs |
 | Access | **D&SNG railroad** Durango → Needleton flag stop ([schedule/backpacker tickets](https://www.durangotrain.com)) — no road anywhere near |
@@ -164,6 +164,10 @@ the train the next morning.
 ### Basecamp — options & considerations
 
 **Recommended pair (matches the plan):** Chicago Basin ~11,000' → upper Ruby meadow ~11,640'.
+The meadow is the obvious convergence point of the recorded tracks on the
+[research map](https://caltopo.com/m/MU0K4JT) — sitting squarely between the
+Monitor/Animas cirque and the Pigeon–Turret saddle slope; the Day-2 and Day-3 route
+lines both radiate from it.
 
 | Camp | Elev | Pros | Cons |
 |---|---|---|---|
@@ -196,9 +200,11 @@ The warm-up and acclimatizer, away from the 14er conga lines:
 
 ---
 
-## Day 2 (after the move) — Pigeon + Turret (Class 4 crux · ~8 mi · ~4,100 ft from camp)
+## Day 2 (after the move) — Pigeon + Turret (Class 4 crux · 8.1 mi · ~5,000 ft from camp)
 
-The trip's centerpiece, from the upper Ruby meadow:
+The trip's centerpiece, from the upper Ruby meadow. **The magenta route line is Kyle's
+2013 from-camp loop, followed verbatim** (8.1 mi / ~5,000 ft DEM — the saddle re-climb
+on the return is why it out-gains the naive estimate):
 
 1. Ascend the broad **N/NE slope to the Pigeon–Turret saddle (~13,100')** — ~1,500' of
    grass and talus, the day's grunt.
@@ -213,10 +219,13 @@ The trip's centerpiece, from the upper Ruby meadow:
 
 ---
 
-## Day 3 (optional) — Monitor group: Monitor · Peak Thirteen · Animas (Class 4 · ~3 mi · ~2,800 ft from camp)
+## Day 3 (optional) — Monitor group: Monitor · Peak Thirteen · Animas (Class 4 · ~7 mi · ~6,000 ft from camp)
 
 A tight, aesthetic cirque day right above camp — strongly recommended while you're there
-(Animas and Monitor are two more bicentennials Emily won't get a cheaper shot at):
+(Animas and Monitor are two more bicentennials Emily won't get a cheaper shot at). Don't
+let "right above camp" fool you: **recorded parties log ~7 mi and 5,000–6,800 ft** for
+this traverse (guidebook sketches say far less) — the saddle drops/regains and couloir
+descents add up, making this the biggest climbing day of the trip:
 
 1. From the meadow, climb NE into the **Monitor/Pk 13/Animas cirque**, up tundra to
    ~12,800' under Peak Thirteen.
@@ -303,7 +312,8 @@ system this report's numbers cross-check against).
 - **Take the optional Monitor-group day** — Monitor (Cl 4) + Peak Thirteen (free) +
   Animas (Cl 3–4) from a cirque directly above the Ruby camp: ~3 mi round trip for two
   more bicentennials.
-- **~31.5 mi / ~15,400 ft over 6 train-bound days** (~28.5 / ~12,600 without the option).
+- **~35.5 mi / ~19,500 ft over 6 train-bound days** (~28.5 / ~13,500 without the option) —
+  and the "optional" Monitor day is the biggest single day, not a rest-day add-on.
 - **The camp move is a real mountain day:** two ~13,000' passes with full packs, all
   above treeline — weather rules it.
 - **Book the train early** ([durangotrain.com](https://www.durangotrain.com)), helmets +

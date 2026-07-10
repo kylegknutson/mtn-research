@@ -10,6 +10,15 @@ nearby:
 # Train-served backpack: D&SNG to Needleton, Chicago Basin + Ruby Basin camps,
 # camp move over Twin Thumbs Pass. One route per climbing day; day 3 is the
 # optional Monitor-group add-on (Peak Thirteen is unranked — prose only).
+# Day-route recipes (2026-07-10): days 2+3 are FROM-CAMP verbatim recorded tracks
+# (the TH-composed lines wrongly ran from Needleton via N Pigeon Creek — Kyle:
+# camp is the upper Ruby meadow ~11,640 where the tracks converge, between the
+# Monitor/Animas cirque and the Pigeon–Turret saddle):
+#   day 1: build_trip_day_routes.py line (Needleton→Jupiter verbatim trk_loj_17869;
+#          doubles as the pack-in corridor illustration)
+#   day 2: build_recommended_route.py jupiter_pigeon_turret
+#          --from-track caltopo_06AR6BF_pigeon-turret (Kyle's 2013 from-camp loop)
+#   day 3: build_recommended_route.py jupiter_pigeon_turret --from-track trk_loj_16157
 days:
 - {label: "Jupiter", objective_ids: [115]}
 - {label: "Pigeon + Turret", objective_ids: [73, 111]}
