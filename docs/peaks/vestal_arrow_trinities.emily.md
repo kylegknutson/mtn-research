@@ -11,6 +11,7 @@ caltopo_id: 4MR73J3
 regional_map_id: 06AR6BF
 peaks: 5
 days: 2
+gain_ft: 11400
 drive_h: 7.6
 dist_mi: 30
 days_detail:

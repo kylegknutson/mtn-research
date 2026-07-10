@@ -171,6 +171,11 @@ def finalize_phase(args):
     print("== finalize: inject climber status, regen index + quickstats + peak map, run QA gates ==")
     run([SCRIPTS / "climber_status.py"])
     run([SCRIPTS / "gen_index.py"])
+    # A climber report (--climber emily) lives on that climber's site, whose home-page
+    # peak table is a SEPARATE index (docs/index.<climber>.md) — regenerate it too, or
+    # the new report is in the nav but missing from the table (Vestal trip, 2026-07-10).
+    if getattr(args, "climber", None) and args.climber != "kyle":
+        run([SCRIPTS / "gen_index.py", "--climber", args.climber])
     run([SCRIPTS / "gen_quickstats.py"])
     run([SCRIPTS / "gen_peak_map.py"])
     # Safety net: surface any orphaned/duplicate "Research:" CalTopo map (e.g. from a
