@@ -67,6 +67,17 @@ def render(meta):
         # line — plain newlines inside an admonition collapse into one paragraph.
         lines.append(f'!!! tip "At a glance — {days}-day trip"')
         summ = f"**{meta['peaks']} peaks**" if meta.get("peaks") else ""
+        # Backpack trips: a TRIP TOTAL in the summary line (Kyle, 2026-07-10 — always
+        # for multi-day pack-ins). Computed from the components (pack-in + days +
+        # pack-out) so it can never disagree with the lines below it.
+        comps = ([meta["approach"]] if meta.get("approach") else []) + list(detail) \
+            + ([meta["packout"]] if meta.get("packout") else [])
+        if meta.get("approach") or meta.get("packout"):
+            tot_mi = sum(c.get("dist_mi") or 0 for c in comps)
+            tot_ft = sum(c.get("gain_ft") or 0 for c in comps)
+            if tot_mi and tot_ft:
+                summ += (" · " if summ else "") + \
+                    f"**trip total ~{n_mi(tot_mi)} mi · ~{n_ft(tot_ft)} ft**"
         if drive_s:
             summ += (" · " if summ else "") + f"**{drive_s}**"
         if wx:

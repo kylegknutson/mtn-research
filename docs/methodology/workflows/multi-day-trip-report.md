@@ -17,8 +17,11 @@ Source rigor (all three sources, confirmed logged-in) on **every peak** in the i
   and day stats assume; the options are there for parties who choose differently.
 - [ ] **Pack-in / pack-out in "At a glance" (Kyle, 2026-07-10 — ALWAYS for backpacks)** —
   frontmatter `approach: {label, dist_mi, gain_ft, loss_ft}` and `packout: {…}`;
-  gen_quickstats renders them as their own lines around the per-day list. Stats measured
-  to the RECOMMENDED camp; body text covers the alternatives.
+  gen_quickstats renders them as their own lines around the per-day list, plus a
+  **trip total (mi · ft) in the summary line, auto-summed from pack-in + days +
+  pack-out** so it can't drift from the components. Stats measured to the RECOMMENDED
+  camp; body text covers the alternatives. Keep frontmatter `dist_mi`/`gain_ft` equal
+  to the component sum (they feed the index table).
 - [ ] **Water sources** along approach and near camp (mark on map)
 - [ ] **Per-day peak stats** from GPX (each day's loop from camp). Peaks at *different* trailheads → **don't auto-route one loop**; run `build_recommended_route.py` per day-area and set `days_detail` + a per-day-sum `dist_mi`/`gain_ft`. ([Build the recommended route right](../source-requirements.md))
 - [ ] **Weather** — peaks ≤6 mi apart: one `weather:` NOAA link for the central peak. Peaks >6 mi apart: a `wx:` NOAA link per `days_detail` day (forecast.weather.gov/MapClick.php?lat=&lon= for the day's central peak).
