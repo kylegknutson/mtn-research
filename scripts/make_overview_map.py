@@ -741,8 +741,22 @@ def main():
                         help="don't mark other ranked 13ers/14ers visible in the frame")
     args = parser.parse_args()
 
+    title = args.title
+    if not title:
+        # Default the title to the report's H1 — regen loops without --title were
+        # clobbering custom titles back to the bare slug (2026-07-10).
+        import re as _re
+        for sub in ("peaks", "trips"):
+            for md in sorted((BASE_DIR / "docs" / sub).glob(f"{args.slug}*.md")):
+                m = _re.search(r"^#\s+(.+)$", md.read_text(), _re.M)
+                if m:
+                    title = m.group(1).strip()
+                    break
+            if title:
+                break
+
     out = Path(args.out) if args.out else MAPS_DIR / f"{args.slug}.png"
-    build_map(slug=args.slug, out_path=out, zoom=args.zoom, title=args.title,
+    build_map(slug=args.slug, out_path=out, zoom=args.zoom, title=title,
               context_summits=not args.no_context_summits)
 
 
