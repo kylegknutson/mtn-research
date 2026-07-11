@@ -40,6 +40,7 @@ Color scheme matches CalTopo research maps:
 
 import argparse
 import io
+import json
 import math
 import os
 import sys
@@ -513,10 +514,12 @@ def build_map(slug: str, out_path: Path, zoom: int | None = None, title: str = "
                            for plon, plat in peaks_ll)
 
         # Filter drawing buckets in-place — only in-scope segments are drawn
-        # and only their points contribute to the bbox.
+        # and only their points contribute to the bbox. RECOMMENDED lines are
+        # EXEMPT: the summit-scope rule is for research tracks, and it silently
+        # dropped the pack-in/pack-out legs (which never near a summit) from the
+        # Needleton PNG (Kyle, 2026-07-10). The plan always draws, whole.
         buckets["track_public"] = [(s, src) for s, src in buckets["track_public"] if _seg_in_scope(s)]
         buckets["track_kyle"]   = [s        for s        in buckets["track_kyle"]   if _seg_in_scope(s)]
-        buckets["recommended"]  = [s        for s        in buckets["recommended"]  if _seg_in_scope(s)]
 
         bbox_lons = (list(peak_lons)
                      + [pk_lon_c - MIN_DISPLAY_LON, pk_lon_c + MIN_DISPLAY_LON])
@@ -717,6 +720,12 @@ def build_map(slug: str, out_path: Path, zoom: int | None = None, title: str = "
     # ── save ─────────────────────────────────────────────────────────────────
     out_path.parent.mkdir(parents=True, exist_ok=True)
     img.convert("RGB").save(str(out_path), format="PNG", optimize=True)
+    # Extent sidecar — lets check_map_extents validate the ARTIFACT (is every
+    # recommended line inside the rendered frame?) instead of replicating this
+    # script's bbox logic, which let a dropped pack-in leg pass (2026-07-10).
+    sidecar = out_path.with_suffix(".extent.json")
+    sidecar.write_text(json.dumps({"lon_min": lon_min, "lon_max": lon_max,
+                                   "lat_min": lat_min, "lat_max": lat_max}) + "\n")
     print(f"Saved: {out_path}")
 
 
