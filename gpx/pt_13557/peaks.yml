@@ -2,7 +2,7 @@
 objective_ids:
 - 268
 # The standard route crosses Huerfano Peak's summit en route — deliberate pass-over.
-extra_summits: [116]
+pass_over_summits: [116]
 route_build: {method: legs}
 nearby:
   include: false

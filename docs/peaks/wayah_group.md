@@ -3,13 +3,13 @@ image: maps/wayah_group.png
 range: Sawatch
 drive_time: "~3h 30m"
 yds_class: "3–4 (Class 2 summits except PT 13,291; Class 3–4 linking them on the ridge)"
-gain: "~16.7 mi / ~8,018 ft (one-day loop from Wildcat Rd, DEM) — or split into 3 short loops"
+gain: "~16.4 mi / ~6,946 ft (one-day loop from Wildcat Rd, smoothed DEM) — or split into 3 short loops"
 status: unclimbed
 caltopo_id: 6SVRT30
 regional_map_id: L5VH4BU
 peak_ids: [611, 491, 792, 814, 511, 595]
-dist_mi: 16.7
-gain_ft: 8018
+dist_mi: 16.4
+gain_ft: 6946
 class: "3–4"
 peaks: 6
 days: 1
@@ -25,7 +25,7 @@ status_source: "peak_db ascents (Kyle — unclimbed)"
 <!-- QUICKSTATS_START -->
 
 !!! tip "At a glance — recommended day"
-    **16.7 mi** · **8,018 ft** gain · **Class 3–4** · 6 peaks · ~3.5 h drive · [weather](https://forecast.weather.gov/MapClick.php?lat=39.190&lon=-106.540)
+    **16.4 mi** · **6,946 ft** gain · **Class 3–4** · 6 peaks · ~3.5 h drive · [weather](https://forecast.weather.gov/MapClick.php?lat=39.190&lon=-106.540)
 
 <!-- QUICKSTATS_END -->
 
@@ -37,10 +37,10 @@ status_source: "peak_db ascents (Kyle — unclimbed)"
 !!! danger "Class — this is a Class 3–4 ridge, not a walk-up"
     The *summits* are Class 2 except **PT 13,291 (Class 3)** and **PT 13,220** (Class 2 via a game trail, **5th-class if taken direct**). **Linking the peaks along the crest is Class 3–4 scrambling** with real exposure on loose rock, and there are **Class 5 towers on the unranked points that must be bypassed** (per [Chipmunk's "A Tale of Two Ridges" TR](https://www.14ers.com/php14ers/tripreport.php?trip=22858)). Helmet; a rope is reasonable for the harder bits.
 
-> Six ranked 13ers strung along one long, committing ridge. Do them **all in one ~16.7 mi loop** from the end of Wildcat Road — or break them into **3 clean ~8–11 mi day-loops** off three different trailheads.
+> Six ranked 13ers strung along one long, committing ridge. Do them **all in one ~16.4 mi loop** from the end of Wildcat Road — or break them into **3 clean ~8–11 mi day-loops** off three different trailheads.
 
 ![Overview map](../maps/wayah_group.png)
-*[Interactive CalTopo map](https://caltopo.com/m/6SVRT30)* — the **recommended ~16.7 mi loop in bold magenta** (all six from the Wildcat Rd / Fryingpan Lakes TH), over recorded 14ers-library tracks (green); 6 summit markers + trailheads.
+*[Interactive CalTopo map](https://caltopo.com/m/6SVRT30)* — the **recommended ~16.4 mi loop in bold magenta** (all six from the Wildcat Rd / Fryingpan Lakes TH), over recorded 14ers-library tracks (green); 6 summit markers + trailheads.
 
 ---
 
@@ -67,11 +67,11 @@ All six are **ranked Sawatch 13ers** in the **Hunter-Fryingpan Wilderness**. The
 
 ## Option A — all six in one loop ⭐ big day
 
-A **~16.7 mi / ~8,018′ loop** (DEM-measured, stitched from recorded GPX) over all six from the **end of Wildcat Road** (the north Fryingpan-Lakes-area trailhead, ~11,400') — **no car shuttle needed.** Up onto the ridge, around the horseshoe over all six, and back down to the same TH.
+A **~16.4 mi / ~6,946′ loop** (DEM-measured, stitched from recorded GPX) over all six from the **end of Wildcat Road** (the north Fryingpan-Lakes-area trailhead, ~11,400') — **no car shuttle needed.** Up onto the ridge, around the horseshoe over all six, and back down to the same TH.
 
 - **Loop order:** PT 13,014 → PT 13,033 → PT 13,220 → PT 13,291 → Wayah Pk → PT 13,221 → back (reverse works too).
 - **Difficulty:** stay on the crest for **Class 3–4** scrambling; **the few Class 5 towers (on the unranked bumps) get bypassed** west or east. Loose rock and exposure — helmet, and a rope is reasonable.
-- **The day is the scrambling + ~8,018′ of gain at 13k', not the mileage** — you're on an exposed crest for hours, so a stable-weather window is essential. Recorded parties do the *full* 8-peak group as a longer outing; Kyle's six is the loop above.
+- **The day is the scrambling + ~6,946′ of gain at 13k', not the mileage** — you're on an exposed crest for hours, so a stable-weather window is essential. Recorded parties do the *full* 8-peak group as a longer outing; Kyle's six is the loop above.
 
 ---
 

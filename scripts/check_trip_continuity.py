@@ -76,9 +76,11 @@ def main():
         if not yml.exists():
             continue
         cfg = yaml.safe_load(yml.read_text()) or {}
-        # extra_summits = ranked peaks the route DELIBERATELY crosses en route
-        # (declared, so a pass-over is a decision — not a leaked bigger day).
-        obj_ids = set(cfg.get("objective_ids") or []) | set(cfg.get("extra_summits") or [])
+        # pass_over_summits = ranked peaks the route DELIBERATELY crosses en route
+        # (declared, so a pass-over is a decision — not a leaked bigger day). Its own
+        # field: reusing extra_summits broke check_route_summits' index alignment on
+        # nearby-include slugs (star_peak_a, 2026-07-10).
+        obj_ids = set(cfg.get("objective_ids") or []) | set(cfg.get("pass_over_summits") or [])
         routes = sorted(d.glob("*recommended*.gpx"))
         if not routes:
             continue
