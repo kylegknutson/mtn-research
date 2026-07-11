@@ -522,15 +522,35 @@ def build_map(slug: str, out_path: Path, zoom: int | None = None, title: str = "
                      + [pk_lon_c - MIN_DISPLAY_LON, pk_lon_c + MIN_DISPLAY_LON])
         bbox_lats = (list(peak_lats)
                      + [pk_lat_c - MIN_DISPLAY_LAT, pk_lat_c + MIN_DISPLAY_LAT])
-        for s, _ in buckets["track_public"]:
-            bbox_lons.extend(lon for lon, _ in s)
-            bbox_lats.extend(lat for _, lat in s)
-        for s in buckets["track_kyle"]:
-            bbox_lons.extend(lon for lon, _ in s)
-            bbox_lats.extend(lat for _, lat in s)
-        for s in buckets["recommended"]:
-            bbox_lons.extend(lon for lon, _ in s)
-            bbox_lats.extend(lat for _, lat in s)
+        if buckets["recommended"]:
+            # Frame on the PLAN, not the archive (Kyle, 2026-07-10): when composed
+            # recommended lines exist, THEY (+ objective summits) define the bbox.
+            # Source tracks no longer drive the extent — one party's Purgatory
+            # approach was stretching the Needleton map 20 mi west — and research
+            # tracks mostly OUTSIDE the frame are dropped entirely (in-frame
+            # fraction < 25%); the rest clip at the edge as background beta.
+            for s in buckets["recommended"]:
+                bbox_lons.extend(lon for lon, _ in s)
+                bbox_lats.extend(lat for _, lat in s)
+            f_lon_min, f_lon_max = min(bbox_lons), max(bbox_lons)
+            f_lat_min, f_lat_max = min(bbox_lats), max(bbox_lats)
+
+            def _in_frame_frac(seg):
+                inside = sum(1 for lon, lat in seg
+                             if f_lon_min <= lon <= f_lon_max and f_lat_min <= lat <= f_lat_max)
+                return inside / len(seg)
+
+            buckets["track_public"] = [(s, src) for s, src in buckets["track_public"]
+                                       if _in_frame_frac(s) >= 0.25]
+            buckets["track_kyle"] = [s for s in buckets["track_kyle"]
+                                     if _in_frame_frac(s) >= 0.25]
+        else:
+            for s, _ in buckets["track_public"]:
+                bbox_lons.extend(lon for lon, _ in s)
+                bbox_lats.extend(lat for _, lat in s)
+            for s in buckets["track_kyle"]:
+                bbox_lons.extend(lon for lon, _ in s)
+                bbox_lats.extend(lat for _, lat in s)
         _bx, _by = bbox_lons, bbox_lats
 
     elif track_lons:
