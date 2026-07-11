@@ -54,6 +54,13 @@ PROJECT = "mtn-share"
 SHARE_HOST = f"https://{PROJECT}.pages.dev"
 DEFAULT_TTL = 120
 
+# Attribution header (Kyle, 2026-07-11): the BODY is author-neutral ("the author");
+# who prepared it + how to reach him lives in one box at the top.
+AUTHOR_NAME = "Kyle Knutson"
+AUTHOR_EMAIL = "kyleg.knutson@gmail.com"
+AUTHOR_14ERS = "https://www.14ers.com/forum/memberlist.php?mode=viewprofile&un=letsgocu"
+AUTHOR_14ERS_LABEL = "14ers.com: letsgocu"
+
 CSS = """
 body{font-family:-apple-system,Segoe UI,Roboto,sans-serif;max-width:860px;margin:2rem auto;
 padding:0 1rem;color:#222;line-height:1.55}
@@ -67,6 +74,8 @@ img{max-width:100%;height:auto;border:1px solid #ddd}
 .admonition-title{font-weight:700;margin:0 0 .3rem}
 blockquote{border-left:3px solid #ccc;margin:1rem 0;padding:.2rem 1rem;color:#555}
 footer{margin-top:3rem;font-size:.8rem;color:#888;border-top:1px solid #ddd;padding-top:.6rem}
+.prepared{background:#fdf2f8;border:1px solid #e6008c33;border-radius:6px;
+padding:.6rem 1rem;margin:1rem 0;font-size:.95rem}
 """
 
 
@@ -120,6 +129,11 @@ def sanitize(text: str, share_map_url: str | None, slug: str) -> str:
             continue
         text = re.sub(rf"\b{re.escape(first)}(?:’s|'s)\b", "the party's", text)
         text = re.sub(rf"\b{re.escape(first)}\b", "the party", text)
+    # the author is named ONCE, in the header box — body prose stays neutral
+    text = re.sub(r"\bKyle Knutson(?:’s|'s)\b", "the author's", text)
+    text = re.sub(r"\bKyle(?:’s|'s)\b", "the author's", text)
+    text = re.sub(r"\bKyle Knutson\b", "the author", text)
+    text = re.sub(r"\bKyle\b", "the author", text)
     return text
 
 
@@ -132,12 +146,21 @@ def render(entry) -> None:
     title = re.sub(r"<[^>]+>", "", m.group(1)) if m else entry["slug"]
     expires = (date.fromisoformat(entry["created"])
                + timedelta(days=entry.get("ttl_days", DEFAULT_TTL))).isoformat()
+    # every external link opens a new tab (the report is the reader's home base)
+    body = re.sub(r'<a href="(http[^"]+)"',
+                  r'<a href="\1" target="_blank" rel="noopener noreferrer"', body)
+    prepared = (f"<div class='prepared'>Prepared by <strong>{AUTHOR_NAME}</strong> — "
+                f"questions: <a href='mailto:{AUTHOR_EMAIL}'>{AUTHOR_EMAIL}</a> · "
+                f"<a href='{AUTHOR_14ERS}' target='_blank' rel='noopener noreferrer'>"
+                f"{AUTHOR_14ERS_LABEL}</a></div>")
+    # header box directly under the H1
+    body = re.sub(r"(</h1>)", r"\1\n" + prepared.replace("\\", "\\\\"), body, count=1)
     html = (f"<!DOCTYPE html><html><head><meta charset='utf-8'>"
             f"<meta name='robots' content='noindex,nofollow'>"
             f"<meta name='viewport' content='width=device-width,initial-scale=1'>"
             f"<title>{title}</title><style>{CSS}</style></head><body>\n{body}\n"
-            f"<footer>Shared {entry['created']} · link expires ~{expires} · route research "
-            f"by Kyle Knutson · conditions change — verify everything yourself</footer>"
+            f"<footer>Shared {entry['created']} · link expires ~{expires} · "
+            f"conditions change — verify everything yourself</footer>"
             f"</body></html>\n")
     dest = SITE_DIR / "s" / entry["token"]
     dest.mkdir(parents=True, exist_ok=True)
