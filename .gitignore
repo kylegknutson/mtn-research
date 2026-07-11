@@ -52,3 +52,6 @@ gpx/*/tr_manifest.md
 # transient sweep_peak batch state
 tmp_*.json
 tmp_*.flag
+
+# staged Cloudflare Pages deploy dir for share_report.py (regenerable from share/ledger.json)
+share_site/

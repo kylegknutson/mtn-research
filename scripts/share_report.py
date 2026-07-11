@@ -4,44 +4,55 @@
 # dependencies = ["markdown", "PyYAML"]
 # ///
 """
-share_report.py — publish a SANITIZED, unlisted copy of one report for outsiders.
+share_report.py — sanitized, unlisted, TTL'd report shares on Cloudflare Pages.
 
-Kyle (2026-07-11): share single reports with people who shouldn't see the whole
-site, the climber pages, or the research CalTopo maps. This renders a report to a
-self-contained static HTML page at a tokenized path (docs/share/<slug>-<token>.html
-— MkDocs copies non-md files verbatim: no nav, no search index, no site chrome)
-and, unless --no-map, creates a NEW CalTopo map holding ONLY the recommended
-route lines + objective summit markers ("Share: <title>", URL sharing).
+Kyle (2026-07-11): shares live OUTSIDE the research site — a separate Cloudflare
+Pages project (same account as peak_checklist, project `mtn-share`), open (no auth)
+but enumeration-resistant, with a lifetime of a few months, regenerable later.
 
-Sanitized out:
-  frontmatter · CLIMBERS block · "Written for <climber>" · Status-for/in-DB lines ·
-  drive-from-home rows and quickstats drive fragments (personal origins) · research/
-  regional CalTopo links (replaced by the share map, or removed) · links into the
-  rest of the site (only the embedded PNG copy remains)
+Layout (staged locally in share_site/, deployed via wrangler):
+  share_site/s/<16-hex-token>/index.html   ← sanitized report (self-contained)
+  share_site/s/<16-hex-token>/map.png      ← recommended-only overview PNG
+  share_site/index.html                    ← blank (no root listing)
+  share_site/robots.txt + _headers         ← deny crawlers, X-Robots-Tag noindex
 
-A committed ledger (docs/share/shares.json) records slug/token/share-map/date —
-revoke a share by deleting its html+png and `delete_caltopo_map.py <share id>`.
+Anti-enumeration: no slug in the URL, 64-bit tokens, no cross-links, no index,
+noindex everywhere. Open link ≠ discoverable link.
 
-NOTE: GitHub Pages has no auth — a share link is unlisted (unguessable token),
-the same protection level as the rest of the site, not a login wall.
+Ledger (COMMITTED — the source of truth; pages are regenerable):
+  share/ledger.json — [{slug, token, source, share_map, created, ttl_days}]
 
-Usage:
-    scripts/share_report.py jupiter_pigeon_turret                # emily/base auto
-    scripts/share_report.py gladstone_peak --no-map
+Commands:
+    scripts/share_report.py <slug>                  # new share (+ share CalTopo map)
+    scripts/share_report.py <slug> --ttl-days 60
+    scripts/share_report.py --rebuild               # regen ALL live shares from ledger
+    scripts/share_report.py --prune                 # expire: rm pages + share maps
+    scripts/share_report.py --publish               # wrangler pages deploy share_site
+  (typical: <slug> && --publish;  cleanup: --prune && --publish)
+
+Sanitized out: frontmatter · CLIMBERS block · "Written for <climber>" · status lines ·
+drive-from-home rows/fragments · research/regional CalTopo links (→ the share map) ·
+site-internal links · third-party climber names (neutralized; Kyle stays).
+
+NOTE: shares are OPEN by design — the token is the only lock. Don't share anything
+that must stay truly private.
 """
 from __future__ import annotations
 import argparse, json, re, secrets, shutil, subprocess, sys
-from datetime import date
+from datetime import date, timedelta
 from pathlib import Path
 
 import markdown
 
 ROOT = Path(__file__).resolve().parent.parent
 DOCS = ROOT / "docs"
-SHARE = DOCS / "share"
 GPX = ROOT / "gpx"
 SCRIPTS = ROOT / "scripts"
-SITE = "https://kylegknutson.github.io/mtn-research"
+SITE_DIR = ROOT / "share_site"          # staged deploy dir (gitignored; regenerable)
+LEDGER = ROOT / "share" / "ledger.json"  # committed source of truth
+PROJECT = "mtn-share"
+SHARE_HOST = f"https://{PROJECT}.pages.dev"
+DEFAULT_TTL = 120
 
 CSS = """
 body{font-family:-apple-system,Segoe UI,Roboto,sans-serif;max-width:860px;margin:2rem auto;
@@ -59,6 +70,15 @@ footer{margin-top:3rem;font-size:.8rem;color:#888;border-top:1px solid #ddd;padd
 """
 
 
+def load_ledger():
+    return json.loads(LEDGER.read_text()) if LEDGER.exists() else []
+
+
+def save_ledger(entries):
+    LEDGER.parent.mkdir(parents=True, exist_ok=True)
+    LEDGER.write_text(json.dumps(entries, indent=1) + "\n")
+
+
 def find_report(slug: str) -> Path:
     cands = (sorted((DOCS / "peaks").glob(f"{slug}*.md"))
              + sorted((DOCS / "trips").glob(f"{slug}*.md")))
@@ -67,41 +87,29 @@ def find_report(slug: str) -> Path:
     return cands[0]
 
 
-def sanitize(text: str, share_map_url: str | None, png_name: str, slug: str) -> str:
-    # frontmatter off
+def sanitize(text: str, share_map_url: str | None, slug: str) -> str:
+    import yaml
     text = re.sub(r"\A---\n.*?\n---\n", "", text, flags=re.S)
-    # climbers block
     text = re.sub(r"<!-- CLIMBERS_START -->.*?<!-- CLIMBERS_END -->\n?", "", text, flags=re.S)
     out = []
     for line in text.splitlines():
         low = line.lower()
-        if low.startswith("*written for"):
-            continue
-        if low.startswith("**status for") or low.startswith("**status in db"):
-            continue
-        if low.startswith("**researched:"):
-            continue
-        if "| drive from" in low or "| **drive from" in low:
+        if (low.startswith("*written for") or low.startswith("**status for")
+                or low.startswith("**status in db") or low.startswith("**researched:")
+                or "| drive from" in low or "| **drive from" in low):
             continue
         out.append(line)
     text = "\n".join(out)
-    # quickstats drive fragment ("· **~7.4 h drive**")
     text = re.sub(r"\s*·\s*\*\*~?[\d.]+ ?h drive\*\*", "", text)
-    # research CalTopo links → share map (or strip the line/link)
     if share_map_url:
         text = re.sub(r"https://caltopo\.com/m/[A-Z0-9]+", share_map_url, text)
         text = text.replace("**CalTopo research map:**", "**Interactive map (recommended route):**")
-        # swept-track counts describe the research map, not the share map
         text = re.sub(r"\*\[Interactive CalTopo map\]\([^)]*\)[^\n]*",
                       f"*[Interactive map — recommended route]({share_map_url})*", text)
     else:
         text = re.sub(r"^.*caltopo\.com/m/.*$\n?", "", text, flags=re.M)
-    # image path → local copy
-    text = re.sub(rf"\.\./maps/{slug}\.png", png_name, text)
-    # md links into the rest of the site → plain text (keep external http links)
+    text = re.sub(rf"\.\./maps/{slug}\.png", "map.png", text)
     text = re.sub(r"\[([^\]]+)\]\((?!http)[^)]+\.md[^)]*\)", r"\1", text)
-    # neutralize third-party climber names in prose (Kyle, the author, stays)
-    import yaml
     for cy in sorted((ROOT / "climbers").glob("*.yml")):
         try:
             nm = (yaml.safe_load(cy.read_text()) or {}).get("name", "")
@@ -115,31 +123,53 @@ def sanitize(text: str, share_map_url: str | None, png_name: str, slug: str) -> 
     return text
 
 
-def main():
-    ap = argparse.ArgumentParser()
-    ap.add_argument("slug")
-    ap.add_argument("--no-map", action="store_true", help="skip the share CalTopo map")
-    args = ap.parse_args()
+def render(entry) -> None:
+    """(Re)generate share_site/s/<token>/ from the current report state."""
+    report = find_report(entry["slug"])
+    md = sanitize(report.read_text(), entry.get("share_map"), entry["slug"])
+    body = markdown.markdown(md, extensions=["tables", "admonition", "fenced_code"])
+    m = re.search(r"<h1[^>]*>(.*?)</h1>", body, re.S)
+    title = re.sub(r"<[^>]+>", "", m.group(1)) if m else entry["slug"]
+    expires = (date.fromisoformat(entry["created"])
+               + timedelta(days=entry.get("ttl_days", DEFAULT_TTL))).isoformat()
+    html = (f"<!DOCTYPE html><html><head><meta charset='utf-8'>"
+            f"<meta name='robots' content='noindex,nofollow'>"
+            f"<meta name='viewport' content='width=device-width,initial-scale=1'>"
+            f"<title>{title}</title><style>{CSS}</style></head><body>\n{body}\n"
+            f"<footer>Shared {entry['created']} · link expires ~{expires} · route research "
+            f"by Kyle Knutson · conditions change — verify everything yourself</footer>"
+            f"</body></html>\n")
+    dest = SITE_DIR / "s" / entry["token"]
+    dest.mkdir(parents=True, exist_ok=True)
+    (dest / "index.html").write_text(html)
+    shutil.copyfile(DOCS / "maps" / f"{entry['slug']}.png", dest / "map.png")
 
-    report = find_report(args.slug)
-    token = secrets.token_hex(4)
-    base = f"{args.slug}-{token}"
-    SHARE.mkdir(parents=True, exist_ok=True)
 
-    # 1) share CalTopo map: recommended lines + objective summits only
-    share_url = None
-    if not args.no_map:
-        title_m = re.search(r"^#\s+(.+)$", report.read_text(), re.M)
-        title = title_m.group(1).strip() if title_m else args.slug
-        files = sorted((GPX / args.slug).glob("*recommended*.gpx"))
-        pk = GPX / args.slug / f"{args.slug}_peaks_only.gpx"
+def write_site_chrome():
+    SITE_DIR.mkdir(parents=True, exist_ok=True)
+    (SITE_DIR / "index.html").write_text(
+        "<!DOCTYPE html><html><head><meta charset='utf-8'>"
+        "<meta name='robots' content='noindex,nofollow'><title>—</title></head>"
+        "<body></body></html>\n")
+    (SITE_DIR / "robots.txt").write_text("User-agent: *\nDisallow: /\n")
+    (SITE_DIR / "_headers").write_text("/*\n  X-Robots-Tag: noindex, nofollow\n")
+
+
+def new_share(slug: str, ttl: int, no_map: bool):
+    entry = {"slug": slug, "token": secrets.token_hex(8),
+             "source": find_report(slug).name, "share_map": None,
+             "created": date.today().isoformat(), "ttl_days": ttl}
+    if not no_map:
+        title_m = re.search(r"^#\s+(.+)$", find_report(slug).read_text(), re.M)
+        title = title_m.group(1).strip() if title_m else slug
+        files = sorted((GPX / slug).glob("*recommended*.gpx"))
+        pk = GPX / slug / f"{slug}_peaks_only.gpx"
         if pk.exists():
             files.append(pk)
         if not files:
-            sys.exit(f"ERROR: no recommended routes under gpx/{args.slug}/")
-        cmd = [str(SCRIPTS / "gpx_to_caltopo.py"),
-               "--new-map", f"Share: {title}", "--sharing", "URL",
-               "--marker-symbol", "peak", "--no-dedupe"]
+            sys.exit(f"ERROR: no recommended routes under gpx/{slug}/")
+        cmd = [str(SCRIPTS / "gpx_to_caltopo.py"), "--new-map", f"Share: {title}",
+               "--sharing", "URL", "--marker-symbol", "peak", "--no-dedupe"]
         for f in files:
             cmd += ["--gpx", str(f)]
         r = subprocess.run(cmd, capture_output=True, text=True)
@@ -147,33 +177,67 @@ def main():
         if not m:
             print(r.stdout[-800:], file=sys.stderr)
             sys.exit("ERROR: share CalTopo map creation failed")
-        share_url = f"https://caltopo.com/m/{m.group(1)}"
-        print(f"share CalTopo map: {share_url}")
+        entry["share_map"] = f"https://caltopo.com/m/{m.group(1)}"
+        print(f"share CalTopo map: {entry['share_map']}")
+    write_site_chrome()
+    render(entry)
+    save_ledger(load_ledger() + [entry])
+    print(f"\nShare link (after --publish): {SHARE_HOST}/s/{entry['token']}/")
 
-    # 2) sanitize + render
-    png_name = f"{base}.png"
-    md = sanitize(report.read_text(), share_url, png_name, args.slug)
-    body = markdown.markdown(md, extensions=["tables", "admonition", "fenced_code"])
-    title_m = re.search(r"<h1[^>]*>(.*?)</h1>", body, re.S)
-    page_title = re.sub(r"<[^>]+>", "", title_m.group(1)) if title_m else args.slug
-    html = (f"<!DOCTYPE html><html><head><meta charset='utf-8'>"
-            f"<meta name='robots' content='noindex,nofollow'>"
-            f"<meta name='viewport' content='width=device-width,initial-scale=1'>"
-            f"<title>{page_title}</title><style>{CSS}</style></head><body>\n{body}\n"
-            f"<footer>Shared {date.today().isoformat()} · route research by Kyle Knutson · "
-            f"conditions change — verify everything yourself</footer></body></html>\n")
-    (SHARE / f"{base}.html").write_text(html)
-    shutil.copyfile(DOCS / "maps" / f"{args.slug}.png", SHARE / png_name)
 
-    # 3) ledger
-    ledger_f = SHARE / "shares.json"
-    ledger = json.loads(ledger_f.read_text()) if ledger_f.exists() else []
-    ledger.append({"slug": args.slug, "file": f"{base}.html", "date": date.today().isoformat(),
-                   "share_map": share_url, "source": report.name})
-    ledger_f.write_text(json.dumps(ledger, indent=1) + "\n")
+def rebuild():
+    write_site_chrome()
+    live = load_ledger()
+    for e in live:
+        render(e)
+    print(f"rebuilt {len(live)} share(s) into {SITE_DIR}")
 
-    print(f"\nShare page: {SITE}/share/{base}.html")
-    print("(commit + push to publish; revoke = delete the html/png + the share map)")
+
+def prune():
+    keep, dropped = [], []
+    for e in load_ledger():
+        exp = date.fromisoformat(e["created"]) + timedelta(days=e.get("ttl_days", DEFAULT_TTL))
+        (keep if date.today() <= exp else dropped).append(e)
+    for e in dropped:
+        shutil.rmtree(SITE_DIR / "s" / e["token"], ignore_errors=True)
+        if e.get("share_map"):
+            mid = e["share_map"].rsplit("/", 1)[-1]
+            subprocess.run([str(SCRIPTS / "delete_caltopo_map.py"), mid, "--yes"])
+        print(f"pruned {e['slug']} ({e['token']}, created {e['created']})")
+    save_ledger(keep)
+    print(f"{len(dropped)} expired share(s) pruned, {len(keep)} live. Run --publish to deploy.")
+
+
+def publish():
+    rebuild()   # always deploy from a fresh, ledger-true state
+    r = subprocess.run(["npx", "-y", "wrangler", "pages", "deploy", str(SITE_DIR),
+                        "--project-name", PROJECT, "--commit-dirty=true"],
+                       capture_output=True, text=True)
+    print(r.stdout[-1200:] or r.stderr[-1200:])
+    if r.returncode != 0:
+        sys.exit("ERROR: wrangler deploy failed (npx wrangler login? project created?)")
+
+
+def main():
+    ap = argparse.ArgumentParser()
+    ap.add_argument("slug", nargs="?")
+    ap.add_argument("--ttl-days", type=int, default=DEFAULT_TTL)
+    ap.add_argument("--no-map", action="store_true")
+    ap.add_argument("--rebuild", action="store_true")
+    ap.add_argument("--prune", action="store_true")
+    ap.add_argument("--publish", action="store_true")
+    args = ap.parse_args()
+
+    if args.slug:
+        new_share(args.slug, args.ttl_days, args.no_map)
+    if args.prune:
+        prune()
+    if args.rebuild and not args.slug and not args.publish:
+        rebuild()
+    if args.publish:
+        publish()
+    if not any([args.slug, args.prune, args.rebuild, args.publish]):
+        ap.print_help()
 
 
 if __name__ == "__main__":
