@@ -125,6 +125,6 @@ Each pair sits above its own trailhead, so the relaxed way is **three ~8–11 mi
 ## TL;DR
 
 - **Six unclimbed ranked 13ers on the Wayah Group ridge** (NW of Massive/Oklahoma, Hunter-Fryingpan Wilderness): PT 13,220 + PT 13,291 + PT 13,033 + PT 13,014 + Wayah + PT 13,221.
-- **All six in one day = a committing Class 3–4 ridge loop** (~16.7 mi / ~8,018′ DEM) from the **end of Wildcat Road** — no shuttle. Stable weather only; the full 8-peak group is a separate, longer outing.
+- **All six in one day = a committing Class 3–4 ridge loop** (~16.4 mi / ~6,946′ smoothed DEM) from the **end of Wildcat Road** — no shuttle. Stable weather only; the full 8-peak group is a separate, longer outing.
 - **Or split into 3 short loops** (real GPX): **south pair** ~10.5 mi / 3,580′ (N Fork Lake Creek), **north pair** ~7.9 mi (Independence Pass/Lost Man), **middle pair** ~10.8 mi (Fryingpan).
 - **Class 2 summits except PT 13,291 (3); the crest links at Class 3–4** with Class 5 towers bypassed — helmet + rope-reasonable. ~3 h drive (Hwy 82). Cell dead — InReach.
