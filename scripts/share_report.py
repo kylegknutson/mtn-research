@@ -134,6 +134,9 @@ def sanitize(text: str, share_map_url: str | None, slug: str) -> str:
             rf"author's own recordings).*",
             text, flags=re.M)
         text = re.sub(r"\*\[Interactive CalTopo map\]\([^)]*\)[^\n]*\n?", "", text)
+        # bare map URLs (label lines, TL;DR) → clickable links; python-markdown
+        # doesn't autolink bare URLs (Kyle, 2026-07-11)
+        text = re.sub(r"(?<![(<])(https://caltopo\.com/m/[A-Z0-9]+)", r"<\1>", text)
     else:
         text = re.sub(r"^.*caltopo\.com/m/.*$\n?", "", text, flags=re.M)
     text = re.sub(rf"\.\./maps/{slug}\.png", "map.png", text)
