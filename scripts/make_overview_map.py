@@ -513,13 +513,11 @@ def build_map(slug: str, out_path: Path, zoom: int | None = None, title: str = "
                            and abs(c_lat - plat) * MI_PER_DEG_LAT <= CLIP_NEAR_MI
                            for plon, plat in peaks_ll)
 
-        # Filter drawing buckets in-place — only in-scope segments are drawn
-        # and only their points contribute to the bbox. RECOMMENDED lines are
-        # EXEMPT: the summit-scope rule is for research tracks, and it silently
-        # dropped the pack-in/pack-out legs (which never near a summit) from the
-        # Needleton PNG (Kyle, 2026-07-10). The plan always draws, whole.
-        buckets["track_public"] = [(s, src) for s, src in buckets["track_public"] if _seg_in_scope(s)]
-        buckets["track_kyle"]   = [s        for s        in buckets["track_kyle"]   if _seg_in_scope(s)]
+        # PNG = the PLAN only (Kyle, 2026-07-11): recommended lines + summits + TH.
+        # Research/source tracks are NOT drawn — they live on the interactive
+        # CalTopo map; the PNG is a quick visual overview and stays clean.
+        buckets["track_public"] = []
+        buckets["track_kyle"]   = []
 
         bbox_lons = (list(peak_lons)
                      + [pk_lon_c - MIN_DISPLAY_LON, pk_lon_c + MIN_DISPLAY_LON])

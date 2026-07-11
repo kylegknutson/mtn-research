@@ -31,7 +31,9 @@ MAPS = ROOT / "docs" / "maps"
 
 EXP_W, EXP_H = 1200, 960
 BEIGE = (232, 224, 213)              # COLOR_BG fallback in make_overview_map
-TRACK_COLORS = [(204, 51, 51), (0, 170, 0), (0, 102, 255)]  # LoJ / 14ers / pb
+# PNGs are recommended-route-only (Kyle, 2026-07-11) — scan for the magenta
+# composed line, not the (no longer drawn) source-track colors.
+TRACK_COLORS = [(230, 0, 140)]  # COLOR_RECOMMENDED #E6008C
 ANALYZE = (300, 240)                 # downsample for speed
 
 
