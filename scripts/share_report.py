@@ -96,6 +96,15 @@ def find_report(slug: str) -> Path:
     return cands[0]
 
 
+def source_track_count(slug: str) -> int:
+    """Recorded GPS source tracks that informed the recommended route (same
+    exclusions as the route builder's source pool)."""
+    skip = ("peaks_only", "landmark", "trailhead", "recommended", "_drive",
+            "drive_in", "waypoints", "summit", "target")
+    return sum(1 for f in (GPX / slug).glob("*.gpx")
+               if not any(s in f.name.lower() for s in skip))
+
+
 def sanitize(text: str, share_map_url: str | None, slug: str) -> str:
     import yaml
     text = re.sub(r"\A---\n.*?\n---\n", "", text, flags=re.S)
@@ -111,10 +120,20 @@ def sanitize(text: str, share_map_url: str | None, slug: str) -> str:
     text = "\n".join(out)
     text = re.sub(r"\s*·\s*\*\*~?[\d.]+ ?h drive\*\*", "", text)
     if share_map_url:
+        n_src = source_track_count(slug)
         text = re.sub(r"https://caltopo\.com/m/[A-Z0-9]+", share_map_url, text)
-        text = text.replace("**CalTopo research map:**", "**Interactive map (recommended route):**")
-        text = re.sub(r"\*\[Interactive CalTopo map\]\([^)]*\)[^\n]*",
-                      f"*[Interactive map — recommended route]({share_map_url})*", text)
+        # ONE map line (Kyle, 2026-07-11) + a provenance note; the PNG caption
+        # link was redundant and is dropped.
+        text = text.replace(
+            "**CalTopo research map:**",
+            "**Interactive CalTopo map with recommended route:**")
+        text = re.sub(
+            rf"^(\*\*Interactive CalTopo map with recommended route:\*\*.*)$",
+            rf"\1\n*The recommended route was distilled from **{n_src} recorded GPS "
+            rf"tracks** of real trips (14ers.com · ListsofJohn · peakbagger · the "
+            rf"author's own recordings).*",
+            text, flags=re.M)
+        text = re.sub(r"\*\[Interactive CalTopo map\]\([^)]*\)[^\n]*\n?", "", text)
     else:
         text = re.sub(r"^.*caltopo\.com/m/.*$\n?", "", text, flags=re.M)
     text = re.sub(rf"\.\./maps/{slug}\.png", "map.png", text)

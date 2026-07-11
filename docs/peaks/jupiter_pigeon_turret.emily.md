@@ -55,7 +55,9 @@ status_source: "scrape_14ers_checklist emily"
 **Status for Emily:** All **five unclimbed**. Pigeon's mile-high "Matterhorn" face over the Animas is the most dramatic summit profile in the Needles.
 
 ![Overview map](../maps/jupiter_pigeon_turret.png)
-*[Interactive CalTopo map](https://caltopo.com/m/MU0K4JT) — 26 swept tracks + Kyle's own 2013 recordings of this exact trip, plus the three composed day routes (magenta).*
+*The recommended route was distilled from **31 recorded GPS tracks** of real trips
+(14ers.com · ListsofJohn · peakbagger · Kyle's own recordings) — all layered on the
+[interactive CalTopo research map](https://caltopo.com/m/MU0K4JT).*
 
 ---
 
