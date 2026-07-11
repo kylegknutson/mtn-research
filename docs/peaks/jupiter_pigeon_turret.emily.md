@@ -73,7 +73,7 @@ status_source: "scrape_14ers_checklist emily"
 
 | | |
 |---|---|
-| Days | **6 days / 5 nights** with the optional day (5/4 without) — train in, pack in, climb, move camp, climb, pack out, train out |
+| Days | **6 days / 5 nights** with the optional day (5/4 without) — or the **compressed 4-day Thu→Sun** shape (see Itinerary options) |
 | Peaks | 5 ranked 13ers: Pigeon 13,977' · Jupiter 13,838' · Turret 13,837' · Animas 13,789' · Monitor 13,707' (+ unranked **Peak Thirteen 13,705'** free en route) |
 | Trip total | **~30.5 mi · ~15,800 ft** with the optional day (~26.5 mi / ~12,650 ft without) — every line composed camp-to-camp from recorded tracks, gain from smoothed DEM, cross-checked against terrain arithmetic (matches the 26–32 mi lean parties log) |
 | Style | Train-served backpack: **Chicago Basin camp → over Twin Thumbs + Ruby passes → Ruby Basin camp** |
@@ -119,6 +119,37 @@ Kyle did this identical trip in 2013 (his recorded tracks are on the research ma
 
 The reverse order's sole advantage — a maintained-trail exit — is neutralized by that
 Needleton camp.
+
+---
+
+## Itinerary options
+
+**Option A — relaxed (6 days / 5 nights):** the day-by-day shape this report is built
+around — pack in, Jupiter, move camp, Pigeon + Turret, Monitor group, pack out to a
+Needleton night. Each climbing day stands alone; the crux days come on fresh legs.
+
+**Option B — compressed long weekend (4 days, Thu→Sun):** stack the pack-in with
+Jupiter and the camp move with Pigeon/Turret. Same 30.4 mi / ~15,800 ft, two fewer
+nights out:
+
+| Day | Legs | Distance | Gain | Descent |
+|---|---|---|---|---|
+| **Thu** | Pack in (5.9 mi / +2,643') **+ Jupiter** (6.4 mi / +3,051') | **12.3 mi** | **~5,700'** | ~3,050' |
+| **Fri** | Camp move over both passes (4.2 mi / +2,378') **+ Pigeon & Turret** (4.8 mi / +4,594') | **9.0 mi** | **~6,970'** | ~6,300' |
+| **Sat** | Monitor · Peak Thirteen · Animas from camp | **3.9 mi** | **~3,140'** | ~3,140' |
+| **Sun** | Pack out to Needleton, flag the train | **5.2 mi** | ~0' | **~3,640'** |
+
+Option B's two trade-offs, eyes open:
+
+1. **Thursday is train-constrained.** The morning train drops at Needleton ~11:00–11:30,
+   so Jupiter tops out mid-to-late afternoon — squarely in monsoon hours. This day only
+   works in a genuinely stable weather window.
+2. **Friday stacks the crux on the biggest day:** ~7,000' of gain — two 13,000' passes
+   under a full pack, then the trip's hardest climbing (Pigeon's Class 4 slot) on tired
+   legs. Strong-party terrain; the 6-day shape exists precisely to separate these.
+
+Saturday and Sunday are comfortable either way — the Monitor day is compact (slow
+Class 4, but short), and the Sunday walk-out is all downhill with no train-time stress.
 
 ---
 
