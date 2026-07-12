@@ -27,6 +27,8 @@ note: format-comparison mock-up of docs/peaks/jupiter_pigeon_turret.emily.md (Ky
 
 ![Overview map](../maps/jupiter_pigeon_turret.png)
 
+---
+
 !!! danger "Class 4 terrain, remote basins, no bail-outs"
     - **Pigeon:** sustained Class 3 blocks with a 15-ft **Class 4 chimney-slot** near the top — exposed, route-finding-dependent.
     - **Monitor (optional day):** three loose couloirs with short **near-vertical Class 4 rib moves**.
@@ -41,21 +43,22 @@ move **Class 4** (Pigeon's summit slot, Monitor's saddle ribs).
 
 | Peak | Elev | Route | Class | CO rank |
 |---|---|---|---|---|
-| Jupiter Mountain | 13,838' | SW slopes from Chicago Basin | 2+ | #91 |
-| Pigeon Peak | 13,977' | via Pigeon–Turret saddle → SW basin → upper NW couloir | **3, Cl 4 crux slot** | #58 |
-| Turret Peak A | 13,837' | NW slope from the saddle | 2 | #92 |
-| Monitor Peak | 13,707' | W basin → Pk 13 ledge-ramp → saddle → N ridge | **4** | #143 |
-| Animas Mountain | 13,789' | E ridge from Peak Thirteen | 3 (some call the couloir exit 4) | #113 |
+| [Jupiter Mountain](https://www.14ers.com/peaks/10286) | 13,838' | SW slopes from Chicago Basin | 2+ | #91 |
+| [Pigeon Peak](https://www.14ers.com/peaks/10277) | 13,977' | via Pigeon–Turret saddle → SW basin → upper NW couloir | **3, Cl 4 crux slot** | #58 |
+| [Turret Peak A](https://www.14ers.com/peaks/10284) | 13,837' | NW slope from the saddle | 2 | #92 |
+| [Monitor Peak](https://www.14ers.com/peaks/10325) | 13,707' | W basin → Pk 13 ledge-ramp → saddle → N ridge | **4** | #143 |
+| [Animas Mountain](https://www.14ers.com/peaks/10299) | 13,789' | E ridge from Peak Thirteen | 3 (some call the couloir exit 4) | #113 |
 
 **Peak Thirteen (13,705', unranked)** sits directly between Monitor and Animas on the
 optional day's traverse — you summit it on the way whether you mean to or not.
 
+---
+
 ## Itinerary options
 
-**Direction — Chicago Basin first (as planned):** maintained trail for the full-pack
-miles, acclimatize on Jupiter before the Class 4, **descend** rather than ascend Ruby's
-loose climber's trail, and the last-night Needleton camp removes all train-time
-pressure. (Both directions get done — see the contrasting trip reports below.)
+**Direction — Chicago Basin first (as planned):** easier miles with the full packs,
+acclimatization before the Class 4, and you descend Ruby's loose trail instead of
+climbing it (full reasoning in *Other considerations*).
 
 **Option A — recommended (5 days / 4 nights):** exactly the day list in *At a glance*.
 *Why Jupiter and the camp move share Day 2:* both halves are moderate — Class 2+ in
@@ -81,6 +84,8 @@ and **Friday stacks the crux on the biggest day** — ~7,000' over two 13,000' p
 under a full pack, then Pigeon's Class 4 slot on tired legs. Option A exists precisely
 to avoid that.
 
+---
+
 ## Getting there — the train
 
 - **Durango & Silverton Narrow Gauge** from the Durango depot (~7.4 h drive from Denver);
@@ -93,6 +98,8 @@ to avoid that.
   a slow pack-out can't miss it.
 - No train? Hike in from **Purgatory Flats TH** — adds ~9 mi each way along the Animas;
   it's a slog.
+
+---
 
 ## The days, in order
 
@@ -170,6 +177,8 @@ Descend the unmaintained **Ruby Creek climber's trail** — steep, loose, and sl
 is why you descend it). Camp at Needleton by the river and flag the train the next
 morning.
 
+---
+
 ## Camps & water
 
 **Recommended pair (matches the plan):** Chicago Basin ~11,000' → upper Ruby meadow
@@ -191,6 +200,8 @@ cirque and the Pigeon–Turret saddle slope.
   on vegetation near tents, and hang everything scented or salty (goats AND marmots chew).
 - **Weminuche Wilderness:** no permits; groups ≤15; LNT throughout.
 
+---
+
 ## Gear & season
 
 - **Helmets mandatory** — loose couloirs, party-caused rockfall on Pigeon and the
@@ -207,6 +218,33 @@ cirque and the Pigeon–Turret saddle slope.
   pre-dawn starts, Turret-first sequencing to bank a summit.
 - **Bail-outs are poor:** once in Ruby Basin the only exits are back over the passes or
   down the Ruby trail — weather-day patience beats forcing a crux in the wet.
+
+---
+
+## Other considerations
+
+*Judgment calls a planner would reasonably ask about — the reasoning behind choices
+already baked into the plan above. Optional section; populated only when a trip has
+real forks in the road.*
+
+**Which direction — Chicago first or Ruby first?** Both directions get done
+(["Ruby via Chicago"](https://www.14ers.com/php14ers/tripreport.php?trip=22337) vs
+["Ruby to Chicago"](https://www.14ers.com/php14ers/tripreport.php?trip=12910)), but
+Chicago Basin first is the better order:
+
+1. **Easy miles first:** Needle Creek is a maintained trail — 2,800' with full packs on
+   good tread beats 3,400' up the unmaintained Ruby climber's trail cold off the train.
+2. **Acclimatize before the cruxes:** Jupiter (Class 2+) is the perfect first summit;
+   Pigeon/Monitor's Class 4 comes after two nights at 11,000'+.
+3. **Descend, don't ascend, the Ruby trail:** the pack-out drops the rugged, steep Ruby
+   Creek trail — a knee day, but far better down than up with camp on your back.
+4. **Train-schedule insurance:** camping at Needleton the last night means you flag the
+   train rested with zero time pressure — the only fixed appointment of the trip.
+
+The reverse order's sole advantage — a maintained-trail exit — is neutralized by that
+Needleton camp.
+
+---
 
 ## Trip reports & GPX (all three sources swept)
 
