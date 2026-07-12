@@ -67,20 +67,19 @@ them costs little, keeps the Class 4 days on fresh legs, and saves a night of fo
 If weather or energy argue otherwise, splitting them back apart (6 days) is the escape
 valve — camp doesn't move until you do.
 
-**Option B — compressed long weekend (4 days, Thu→Sun):** stack the pack-in with
-Jupiter and the camp move with Pigeon/Turret. Same ~30.4 mi / ~15,800 ft, one fewer
-night out:
+**Option B — compressed (4 days / 3 nights):** stack the pack-in with Jupiter and the
+camp move with Pigeon/Turret. Same ~30.4 mi / ~15,800 ft, one fewer night out:
 
 | Day | Legs | Distance | Gain | Descent |
 |---|---|---|---|---|
-| **Thu** | Pack in + Jupiter | **12.3 mi** | **~5,700'** | ~3,050' |
-| **Fri** | Camp move over both passes + Pigeon & Turret | **9.0 mi** | **~6,970'** | ~6,300' |
-| **Sat** | Monitor · Peak Thirteen · Animas from camp | **3.9 mi** | **~3,140'** | ~3,140' |
-| **Sun** | Pack out to Needleton, flag the train | **5.2 mi** | ~0' | **~3,640'** |
+| **Day 1** | Pack in + Jupiter | **12.3 mi** | **~5,700'** | ~3,050' |
+| **Day 2** | Camp move over both passes + Pigeon & Turret | **9.0 mi** | **~6,970'** | ~6,300' |
+| **Day 3** | Monitor · Peak Thirteen · Animas from camp | **3.9 mi** | **~3,140'** | ~3,140' |
+| **Day 4** | Pack out to Needleton, flag the train | **5.2 mi** | ~0' | **~3,640'** |
 
-Option B's two trade-offs, eyes open: **Thursday is train-constrained** (the ~11:00
+Option B's two trade-offs, eyes open: **Day 1 is train-constrained** (the ~11:00
 Needleton drop puts Jupiter's summit in monsoon hours — stable-window weather only),
-and **Friday stacks the crux on the biggest day** — ~7,000' over two 13,000' passes
+and **Day 2 stacks the crux on the biggest day** — ~7,000' over two 13,000' passes
 under a full pack, then Pigeon's Class 4 slot on tired legs. Option A exists precisely
 to avoid that.
 
