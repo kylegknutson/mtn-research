@@ -86,13 +86,15 @@ status_source: "scrape_14ers_checklist emily"
 
 ## Peaks covered
 
-| Peak | Day | Elev | Route | Class | peak_db |
+| Peak | Day | Elev | Route | Class | CO rank |
 |---|---|---|---|---|---|
-| Vestal Peak | 1 | 13,867' | **Wham Ridge** (N face) up · S face down | **5.4** (III) | 96 |
-| Arrow Peak | 1 | 13,817' | NE/East ramp | 3 | 127 |
-| West Trinity | 2 | 13,765' | SW ridge (start of traverse) | 2+/3 | 144 |
-| Trinity Peak | 2 | 13,816' | W ridge from W Trinity saddle | **4** (chimney crux) | 126 |
-| East Trinity | 2 | 13,752' | W ridge · descend NE ridge | 3 | 153 |
+| Vestal Peak | 1 | 13,867' | **Wham Ridge** (N face) up · S face down | **5.4** (III) | #78 |
+| Arrow Peak | 1 | 13,817' | NE/East ramp | 3 | #99 |
+| West Trinity | 2 | 13,765' | SW ridge (start of traverse) | 2+/3 | #121 |
+| Trinity Peak | 2 | 13,816' | W ridge from W Trinity saddle | **4** (chimney crux) | #100 |
+| East Trinity | 2 | 13,752' | W ridge · descend NE ridge | 3 | #128 |
+
+*(CO rank = elevation rank among Colorado's ranked 13ers + 14ers.)*
 
 All five ring **Vestal Basin** — summits are ≤1.5 mi apart. The classic combination is
 exactly Emily's plan: Wham + Arrow one day, the three-Trinity traverse the next.

@@ -61,3 +61,11 @@ One column for a single peak; a column per peak for combos. **Must include** the
 - **Multi-day:** *(none yet — first one sets the pattern)*
 
 > Existing reports predate parts of this template (cell-coverage format and trailhead-table-vs-bullet vary). Normalize on the next freshness pass rather than a bulk rewrite.
+
+## Rank references (Kyle, 2026-07-11)
+
+Never expose raw `peak_db` ids in report bodies — readers (and share-page
+recipients) can't use them. Peak tables use a **CO rank** column (`#58` style) and
+the report defines it once: *elevation rank among Colorado's ranked 13ers + 14ers*
+(peak_db's `rank`). peak_db ids live only in frontmatter/peaks.yml where the
+tooling needs them.

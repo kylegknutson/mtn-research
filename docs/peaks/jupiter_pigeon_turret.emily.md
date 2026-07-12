@@ -47,7 +47,7 @@ status_source: "scrape_14ers_checklist emily"
 
 <!-- QUICKSTATS_END -->
 
-*Written for **Emily** — all five unclimbed on her 14ers checklist. Pigeon (#58), Jupiter (#91) and Turret (#92) are **centennial 13ers**; Animas (#113) and Monitor (#143) are bicentennials.*
+*Written for **Emily** — all five unclimbed on her 14ers checklist. Pigeon (CO rank #58), Jupiter (#91) and Turret (#92) are **centennial 13ers**; Animas (#113) and Monitor (#143) are bicentennials. (Ranks = elevation rank among Colorado's ranked 13ers + 14ers.)*
 
 **Researched:** 2026-07-10
 **Report type:** Multi-day train-served backpack — two basins, one camp move over 13,000'
@@ -90,13 +90,13 @@ status_source: "scrape_14ers_checklist emily"
 
 ## Peaks covered
 
-| Peak | Day | Elev | Route | Class | peak_db |
+| Peak | Day | Elev | Route | Class | CO rank |
 |---|---|---|---|---|---|
-| Jupiter Mountain | 1 | 13,838' | SW slopes from Chicago Basin | 2+ | 115 |
-| Pigeon Peak | 2 | 13,977' | via Pigeon–Turret saddle → SW basin → upper NW couloir | **3, Cl 4 crux slot** | 73 |
-| Turret Peak A | 2 | 13,837' | NW slope from the saddle | 2 | 111 |
-| Monitor Peak | 3 (opt) | 13,707' | W basin → Pk 13 ledge-ramp → saddle → N ridge | **4** | 181 |
-| Animas Mountain | 3 (opt) | 13,789' | E ridge from Peak Thirteen | 3 (some call the couloir exit 4) | 135 |
+| Jupiter Mountain | 1 | 13,838' | SW slopes from Chicago Basin | 2+ | #91 |
+| Pigeon Peak | 2 | 13,977' | via Pigeon–Turret saddle → SW basin → upper NW couloir | **3, Cl 4 crux slot** | #58 |
+| Turret Peak A | 2 | 13,837' | NW slope from the saddle | 2 | #92 |
+| Monitor Peak | 3 (opt) | 13,707' | W basin → Pk 13 ledge-ramp → saddle → N ridge | **4** | #143 |
+| Animas Mountain | 3 (opt) | 13,789' | E ridge from Peak Thirteen | 3 (some call the couloir exit 4) | #113 |
 
 **Peak Thirteen (13,705', unranked)** sits directly between Monitor and Animas on the
 optional day's traverse — you summit it on the way whether you mean to or not. It's not
