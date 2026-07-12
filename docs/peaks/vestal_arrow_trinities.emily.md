@@ -47,6 +47,7 @@ status_source: "scrape_14ers_checklist emily"
 **Researched:** 2026-07-10
 **Report type:** Multi-day backpack trip — 5 ranked 13ers from a Vestal Basin camp over 2 climbing days
 **CalTopo research map:** https://caltopo.com/m/4MR73J3
+**Shareable link (sanitized — safe to forward to anyone):** <https://mtn-share.pages.dev/s/33fc621f3fbca2fe/> — no names, climbed status, or research maps; expires ~2026-11-08 (regenerate anytime: `share_report.py vestal_arrow_trinities`)
 **Status for Emily:** All **five unclimbed**. This is the heart of the Grenadiers — quartzite peaks that most consider the most beautiful climbing terrain in the San Juans.
 
 ![Overview map](../maps/vestal_arrow_trinities.png)
