@@ -57,8 +57,8 @@ optional day's traverse — you summit it on the way whether you mean to or not.
 ## Itinerary options
 
 **Direction — Chicago Basin first (as planned):** easier miles with the full packs,
-an easy warm-up summit before the Class 4, and you descend Ruby's loose trail instead
-of climbing it (full reasoning in *Other considerations*).
+and you descend Ruby's loose trail instead of climbing it (full reasoning in
+*Other considerations*).
 
 **Option A — recommended (5 days / 4 nights):** exactly the day list in *At a glance*.
 *Why Jupiter and the camp move share Day 2:* both halves are moderate — Class 2+ in
@@ -233,11 +233,9 @@ Chicago Basin first is the better order:
 
 1. **Easy miles first:** Needle Creek is a maintained trail — 2,800' with full packs on
    good tread beats 3,400' up the unmaintained Ruby climber's trail cold off the train.
-2. **Warm up before the cruxes:** Jupiter (Class 2+) is the perfect first summit —
-   the Class 4 days come after you've settled into the trip and seen the terrain.
-3. **Descend, don't ascend, the Ruby trail:** the pack-out drops the rugged, steep Ruby
+2. **Descend, don't ascend, the Ruby trail:** the pack-out drops the rugged, steep Ruby
    Creek trail — a knee day, but far better down than up with camp on your back.
-4. **Train-schedule insurance:** camping at Needleton the last night means you flag the
+3. **Train-schedule insurance:** camping at Needleton the last night means you flag the
    train rested with zero time pressure — the only fixed appointment of the trip.
 
 The reverse order's sole advantage — a maintained-trail exit — is neutralized by that
