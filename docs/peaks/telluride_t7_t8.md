@@ -176,4 +176,5 @@ This is itself a 3-ranked-13er link-up. Every reasonable approach naturally chai
 
 ---
 
+<!-- pre-3-source-rule -->
 **Sources checked:** 14ers.com · peakbagger.com · _LoJ not pulled — pre-3-source-rule report, pending a freshness pass_
