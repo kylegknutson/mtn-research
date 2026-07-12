@@ -29,7 +29,11 @@ status_source: "peak_db ascents"
 <!-- QUICKSTATS_END -->
 
 **Researched:** 2026-05-28 · **PT 13,002 combo added:** 2026-06-09
+
 **CalTopo research map:** https://caltopo.com/m/QL51DBE
+
+**Trip NOAA weather:** [NOAA point forecast](https://forecast.weather.gov/MapClick.php?lat=39.38053&lon=-106.52061) (same target as 14ers / LoJ / peakbagger weather links)
+
 **Status in DB:** both 0 ascents (unclimbed). **Cluster status:**
 - ✗ **PT 13,002 (1.92 mi) — unclimbed ranked, Class 3** ← **closest neighbor; see "Adding PT 13,002" below**
 - ✗ **PT 13,089 "Ribbed Peak" (4.25 mi) — unclimbed ranked** ← 13,002's natural ridge partner
@@ -53,7 +57,6 @@ status_source: "peak_db ascents"
 |---|---|
 | Elevation | 13,135' (LiDAR; map 13,139') |
 | Lat / Lon | 39.38053, −106.52061 |
-| Weather | [NOAA forecast](https://forecast.weather.gov/MapClick.php?lat=39.38053&lon=-106.52061) (same target as 14ers / LoJ / peakbagger weather links) |
 | 14ers.com peak page | https://www.14ers.com/peaks/10810/13er-savage-peak |
 | 14ers.com NE Ridge route | https://www.14ers.com/route.php?route=201207031210033 |
 | listsofjohn.com | https://listsofjohn.com/peak/674 |
@@ -71,10 +74,10 @@ status_source: "peak_db ascents"
 | 14ers winter ascents | 1 / Ski descents 29 — popular ski peak (Savage Couloir) |
 
 ![Overview map](../maps/savage_peak.png)
+
 <!-- PROVENANCE_START -->
-*The recommended route was distilled from **15 recorded GPS tracks** of real trips (Kyle's recordings) — all layered on the [interactive CalTopo research map](https://caltopo.com/m/QL51DBE).*
+*Note: the recommended route was distilled from **15 recorded GPS tracks** of real trips (Kyle's recordings) — all layered on the [interactive CalTopo research map](https://caltopo.com/m/QL51DBE).*
 <!-- PROVENANCE_END -->
-*[Interactive CalTopo map](https://caltopo.com/m/QL51DBE)*
 
 ---
 
@@ -270,19 +273,6 @@ jacolc 8/16/2024 (LoJ TR 27181): **15.5 mi / 6,300' / 11h35** — Sawatch main r
 - `savage_summit_TH.gpx` — summit + Missouri Lakes 2WD + 4WD parking + Homestake Rd gate waypoints
 - `savage_route_recommended.gpx` — from avalletta 171 (solo standard route validation)
 
----
-
-## TL;DR
-
-- **Recommended trip:** **Missouri Lakes TH → NE Ridge → summit**. **8 mi RT / 3,200' gain / Class 2 / ~5 hr.** 14ers.com has a clean route description (BillMiddlebrook). The route leaves the Missouri Lakes trail near a small clearing at PT 12,898', turns south through ponds + talus to gain the NE ridge near 11,700', then climbs the obvious ridge to summit (stay LEFT of rocks on the steep grassy point).
-- ⚠️ **CRITICAL: Homestake Rd (FS 703) is gated and closed at US24 from Nov 22 to May 21.** Late-May through November is the vehicle access window. Earlier-season skiing requires a long road approach. (Per Brian Kalet 5/4/2018)
-- **Mostly SOLO under Kyle's combo rule** — the standard Savage + Fancy combo doesn't apply (Fancy is climbed). One TR (dillonsarnelli 6/29/2016) does Jacque + Music + Savage but that's a logistics-heavy combo.
-- **PT 13,002 (1.92 mi) is the closest unclimbed ranked neighbor and the best pairing** — **Class 3** (ice axe), reachable from Savage's own Missouri Lakes TH. **Best combo: Savage + 13,002 from Missouri Lakes as one long day (~13–16 mi / ~6,000'+)**, two ascents from the shared trail. Standalone, 13,002 is 11.6 mi / 4,380' Class 3 from the Carter Creek TH. See "Adding PT 13,002."
-- **Go-big option:** a backpack linking **Savage + 13,002 + PT 13,089 ("Ribbed Peak") + PT 13,100 A** clears the whole Missouri/Holy Cross unclimbed cluster in one trip.
-- **Homestake + Savage combo:** geographically tempting (5.72 mi apart, both on Kyle's list) but different drainages, no TR validates it — see Homestake report
-- **Trail traffic:** popular Missouri Lakes / Fancy Pass loop crowds the first 2.5 mi in summer. Plan for early start
-- **Cell:** dead in the drainage, returns on the upper NE ridge. Carry InReach
-- **Drive:** **3h 39m from Boulder**
 
 ---
 

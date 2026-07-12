@@ -36,15 +36,16 @@ status_source: "peak_db ascents (Kyle — unclimbed)"
 <!-- QUICKSTATS_END -->
 
 **Researched:** 2026-06-07
-**Report type:** Multi-day trip (5 ranked 13ers over 3 climbing days, moving camp by vehicle each night)
+
 **CalTopo research map:** https://caltopo.com/m/AS71AEC
+
 **Status in DB:** All five 0 ascents (unclimbed). These are the far southeast San Juan 13ers — the South San Juan Wilderness high points plus Bennett on the Rio Grande side.
 
 ![Overview map](../maps/south_san_juans_3day.png)
+
 <!-- PROVENANCE_START -->
-*The recommended route was distilled from **36 recorded GPS tracks** of real trips (14ers.com · ListsofJohn · peakbagger · Kyle's recordings) — all layered on the [interactive CalTopo research map](https://caltopo.com/m/AS71AEC).*
+*Note: the recommended route was distilled from **36 recorded GPS tracks** of real trips (14ers.com · ListsofJohn · peakbagger · Kyle's recordings) — all layered on the [interactive CalTopo research map](https://caltopo.com/m/AS71AEC).*
 <!-- PROVENANCE_END -->
-*[Interactive CalTopo map](https://caltopo.com/m/AS71AEC)* — the three areas are ~17 mi apart; the overview is a regional locator, per-area route detail is on the CalTopo map.
 
 ---
 
@@ -177,14 +178,3 @@ Ascent GPX pulled for all five (Bennett pid 5880, Conejos 5883, Summit 5882, Uni
 
 **Sources checked:** 14ers.com ✓ (logged in, "Basin") · listsofjohn.com ✓ (logged in, "letsgocu") · peakbagger.com ✓ (logged in, "Kyle Knutson")
 
----
-
-## TL;DR
-
-- **Five unclimbed far-SE-San-Juan 13ers in a 3-day, 2-zone weekend**, all Class 1–2, moving car camp each night.
-- **Day 1 — Bennett** (Class 1, ~5–9 mi) on the drive in (Del Norte/Rio Grande side, closest to Boulder at ~5h10m) → relocate ~3 hr to Platoro.
-- **Day 2 — Summit + Montezuma + Unicorn** (the trio, **10.2 mi / 4,449', Class 2** — the big day) from Elwood Pass / Treasure Creek → 1.5-hr hop to Conejos.
-- **Day 3 — Conejos** (Class 1, **6.2 mi / ~2,500'**) from the Conejos River Rd → drive home.
-- **Drives between camps:** ~3 hr (Bennett→Platoro) and ~1.5 hr (Trio→Conejos); nothing worse than ~3 hr. The real cost is the ~5+ hr haul from Boulder each way.
-- **Season:** mid-July–September; put the exposed trio day on the best forecast. Cell dead — carry an InReach.
-- **Research map:** https://caltopo.com/m/AS71AEC (36 tracks, source-colored).

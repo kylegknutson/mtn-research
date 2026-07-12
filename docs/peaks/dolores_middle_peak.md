@@ -29,7 +29,9 @@ status_source: "peak_db ascents (both 0 ascents — unclimbed)"
 <!-- QUICKSTATS_END -->
 
 **Researched:** 2026-05-13
+
 **CalTopo research map (with all GPX layered):** https://caltopo.com/m/R1KSN0U
+
 **Status in your sheet:** Both 0 ascents (unclimbed). Same drainage divide as Mt. Wilson group, but a separate cluster.
 
 ---
@@ -55,10 +57,10 @@ status_source: "peak_db ascents (both 0 ascents — unclimbed)"
 Coordinates above are LiDAR-authoritative from the public CalTopo map "Fish Creek - Dolores & Middle Peaks" (CVV0). Wikipedia lists Dolores at 13,296 ft; the LiDAR value 13,289 is more current. Note Middle is ~16 ft higher and far more prominent (1,960' vs 730').
 
 ![Overview map](../maps/dolores_middle_peak.png)
+
 <!-- PROVENANCE_START -->
-*The recommended route was distilled from **7 recorded GPS tracks** of real trips (14ers.com · ListsofJohn · peakbagger) — all layered on the [interactive CalTopo research map](https://caltopo.com/m/R1KSN0U).*
+*Note: the recommended route was distilled from **7 recorded GPS tracks** of real trips (14ers.com · ListsofJohn · peakbagger) — all layered on the [interactive CalTopo research map](https://caltopo.com/m/R1KSN0U).*
 <!-- PROVENANCE_END -->
-*[Interactive CalTopo map](https://caltopo.com/m/R1KSN0U)*
 
 ---
 
@@ -201,18 +203,6 @@ The CalTopo research map now layers **real recorded GPX from all three sources**
 
 **All 7 swept tracks summit *both* peaks** and start within ~0.6 mi of the Fish Creek TH — the **bold magenta recommended route** (~5.8 mi, composed off these tracks; trip reports run 6.4–8.5 mi) is DEM-measured. **Avoid** the Dolores SW slopes (14ers TR 19949 author disabled the GPX as a warning — "incredibly dangerous").
 
----
-
-## TL;DR
-
-- **Recommended trip:** Route A (standard out-and-back, Dolores + Middle from Fish Creek TH) — both ranked 13ers, no extra effort wasted on unranked summits.
-- **If you want more scrambling:** Route B (loop with Middle's west ridge Class 3+ — fin / razor section).
-- **For 3 ranked 13ers in this cluster (D+M+Boskoff):** Two-day, two-TH plan is cleanest — Day 1 Fish Creek for D+M (8.49 mi, 3.9K'), Day 2 Woods Lake for Boskoff (9.4 mi, 3.8K'). Single-push 19-mi loop has been done by others (per imported tracks in your School Bus map) but has unconfirmed traverse class and TH road.
-- **Avoid:** Dolores SW slopes (TR 19949 warning).
-- **Layered tracks:** https://caltopo.com/m/R1KSN0U
-- **Drive in:** Dunton, CO → Fish Creek TH (5 mi 2WD dirt). High-clearance overkill.
-- **Best season:** July–early October.
-- **Skip:** Dunn Peak (12,612', unranked) — available essentially for free on the loop variant but doesn't move the needle on any list.
 
 ---
 

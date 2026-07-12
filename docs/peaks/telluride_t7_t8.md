@@ -28,7 +28,9 @@ status_source: "peak_db ascents"
 <!-- QUICKSTATS_END -->
 
 **Researched:** 2026-05-14
+
 **CalTopo research map:** https://caltopo.com/m/6FM1FEK
+
 **Status in your sheet:** All 3 unclimbed (T 7 and T 8 explicitly at 0 ascents; Telluride Pk LiDAR-confirmed ranked, no entry in your climb log).
 
 ---
@@ -52,10 +54,10 @@ status_source: "peak_db ascents"
 Coordinates from your "All" map markers (LiDAR-grade). Wikipedia / older sources occasionally list Telluride Peak at 13,509' — LiDAR puts it at 13,514'.
 
 ![Overview map](../maps/telluride_t7_t8.png)
+
 <!-- PROVENANCE_START -->
-*The recommended route was distilled from **19 recorded GPS tracks** of real trips (14ers.com · ListsofJohn · peakbagger) — all layered on the [interactive CalTopo research map](https://caltopo.com/m/6FM1FEK).*
+*Note: the recommended route was distilled from **19 recorded GPS tracks** of real trips (14ers.com · ListsofJohn · peakbagger) — all layered on the [interactive CalTopo research map](https://caltopo.com/m/6FM1FEK).*
 <!-- PROVENANCE_END -->
-*[Interactive CalTopo map](https://caltopo.com/m/6FM1FEK)*
 
 ---
 
@@ -171,19 +173,7 @@ This is itself a 3-ranked-13er link-up. Every reasonable approach naturally chai
 **Your existing planning data (in `_kyle_existing/`):**
 - `kyle_13_510b_actual_all.gpx` (1,724 pts) — imported track from your "All" map labeled "13,510B_actual". 5.26 mi loop coming within 808 m of Telluride Pk. Likely an imported track from someone's UN 13510B trip — useful as terrain reference for the area.
 
----
-
-## TL;DR
-
-- **Recommended trip:** Option A — Idarado Mine pullout circuit. **8.5 mi, 4,000' gain, all 3 ranked 13ers in one day.**
-- **Drive:** Ridgway → US 550 → ~12 mi past Ouray to Idarado Mine pullout (~30–35 min from Ridgway, ~75 min from Telluride going around).
-- **Decision point:** at the T 7/T 8 saddle, choose Class 2–3 north bypass or Class 3–4 ridge crest.
-- **Best season:** July–early October. Snowfield on N bypass may linger.
-- **Watch for:** lightning (long ridge exposure); be off summits by early afternoon.
-- **Avoid:** longer Imogene Pass base approach (5,100' gain, exceeds your filter); Black Bear Rd routes (only bag 2 peaks).
-- **No public GPX** found — request from Wild Wanderer if you want one, or manually grab the climb13ers CalTopo map link.
 
 ---
 
-<!-- pre-3-source-rule -->
 **Sources checked:** 14ers.com · peakbagger.com · _LoJ not pulled — pre-3-source-rule report, pending a freshness pass_

@@ -25,13 +25,16 @@ status_source: "peak_db ascents (Kyle — unclimbed)"
 <!-- QUICKSTATS_START -->
 
 !!! tip "At a glance — recommended day"
-    **16.4 mi** · **6,946 ft** gain · **Class 3–4** · 6 peaks · ~3.5 h drive · [weather](https://forecast.weather.gov/MapClick.php?lat=39.190&lon=-106.540)
+    **16.4 mi** · **6,946 ft** gain · **Class 3–4** · 6 peaks · ~3.5 h drive
 
 <!-- QUICKSTATS_END -->
 
 **Researched:** 2026-06-16
-**Report type:** Single-push ridge **loop** (big day) **or** 3 short day-loops — Kyle's six unclimbed ranked 13ers on the **Wayah Group** ridge.
+
 **CalTopo research map:** https://caltopo.com/m/6SVRT30
+
+**Trip NOAA weather:** [NOAA point forecast](https://forecast.weather.gov/MapClick.php?lat=39.190&lon=-106.540)
+
 **Status in DB:** all six unclimbed. These are Kyle's share of the **8-peak "Wayah Group"** — the long ridge NW of **Mount Massive / Mount Oklahoma** (both already done), between the **Hunter-Fryingpan Wilderness** and **Hwy 82 (Independence Pass)**.
 
 !!! danger "Class — this is a Class 3–4 ridge, not a walk-up"
@@ -40,10 +43,10 @@ status_source: "peak_db ascents (Kyle — unclimbed)"
 > Six ranked 13ers strung along one long, committing ridge. Do them **all in one ~16.4 mi loop** from the end of Wildcat Road — or break them into **3 clean ~8–11 mi day-loops** off three different trailheads.
 
 ![Overview map](../maps/wayah_group.png)
+
 <!-- PROVENANCE_START -->
-*The recommended route was distilled from **10 recorded GPS tracks** of real trips (14ers.com · ListsofJohn) — all layered on the [interactive CalTopo research map](https://caltopo.com/m/6SVRT30).*
+*Note: the recommended route was distilled from **10 recorded GPS tracks** of real trips (14ers.com · ListsofJohn) — all layered on the [interactive CalTopo research map](https://caltopo.com/m/6SVRT30).*
 <!-- PROVENANCE_END -->
-*[Interactive CalTopo map](https://caltopo.com/m/6SVRT30)* — the **recommended ~16.4 mi loop in bold magenta** (all six from the Wildcat Rd / Fryingpan Lakes TH), over recorded 14ers-library tracks (green); 6 summit markers + trailheads.
 
 ---
 
@@ -123,11 +126,3 @@ Each pair sits above its own trailhead, so the relaxed way is **three ~8–11 mi
 
 **Sources checked:** 14ers.com ✓ (logged in, "Basin") · listsofjohn.com ✓ · peakbagger.com ✓ (logged in, "Kyle Knutson") · climb13ers.com ✓
 
----
-
-## TL;DR
-
-- **Six unclimbed ranked 13ers on the Wayah Group ridge** (NW of Massive/Oklahoma, Hunter-Fryingpan Wilderness): PT 13,220 + PT 13,291 + PT 13,033 + PT 13,014 + Wayah + PT 13,221.
-- **All six in one day = a committing Class 3–4 ridge loop** (~16.4 mi / ~6,946′ smoothed DEM) from the **end of Wildcat Road** — no shuttle. Stable weather only; the full 8-peak group is a separate, longer outing.
-- **Or split into 3 short loops** (real GPX): **south pair** ~10.5 mi / 3,580′ (N Fork Lake Creek), **north pair** ~7.9 mi (Independence Pass/Lost Man), **middle pair** ~10.8 mi (Fryingpan).
-- **Class 2 summits except PT 13,291 (3); the crest links at Class 3–4** with Class 5 towers bypassed — helmet + rope-reasonable. ~3 h drive (Hwy 82). Cell dead — InReach.

@@ -28,15 +28,17 @@ status_source: "peak_db ascents"
 <!-- QUICKSTATS_END -->
 
 **Researched:** 2026-06-08
-**Report type:** Day trip (3 peaks, one outing)
+
 **CalTopo research map:** https://caltopo.com/m/DCQ8UKS
+
+**Trip NOAA weather:** [NOAA point forecast](https://forecast.weather.gov/MapClick.php?lat=37.82997&lon=-107.52956) | [NOAA](https://forecast.weather.gov/MapClick.php?lat=37.84968&lon=-107.49465) | [NOAA](https://forecast.weather.gov/MapClick.php?lat=37.84723&lon=-107.47533) (same target on all 3 sites)
 **Status in DB:** All three 0 ascents (unclimbed), all **ranked** San Juan 13ers (PT 13,003 = id 822, Class 1). A natural **Cuba Gulch** day off the **Lake Fork (Lake City)** side, in the Half Peak / Cataract Gulch pocket.
 
 ![Overview map](../maps/cuba_gulch_trio.png)
+
 <!-- PROVENANCE_START -->
-*The recommended route was distilled from **22 recorded GPS tracks** of real trips (14ers.com · ListsofJohn · peakbagger · Kyle's recordings) — all layered on the [interactive CalTopo research map](https://caltopo.com/m/DCQ8UKS).*
+*Note: the recommended route was distilled from **22 recorded GPS tracks** of real trips (14ers.com · ListsofJohn · peakbagger · Kyle's recordings) — all layered on the [interactive CalTopo research map](https://caltopo.com/m/DCQ8UKS).*
 <!-- PROVENANCE_END -->
-*[Interactive CalTopo map](https://caltopo.com/m/DCQ8UKS)*
 
 ---
 
@@ -50,7 +52,6 @@ status_source: "peak_db ascents"
 |---|---|---|---|
 | Elevation | 13,076' | 13,003' | 13,179' |
 | Lat / Lon | 37.82997, −107.52956 | 37.84968, −107.49465 | 37.84723, −107.47533 |
-| Weather | [NOAA](https://forecast.weather.gov/MapClick.php?lat=37.82997&lon=-107.52956) | [NOAA](https://forecast.weather.gov/MapClick.php?lat=37.84968&lon=-107.49465) | [NOAA](https://forecast.weather.gov/MapClick.php?lat=37.84723&lon=-107.47533) (same target on all 3 sites) |
 | Class (standard) | 2 | 1 | 2 |
 | Rank | ranked (CO 589) | ranked (CO 635) | ranked (CO 497) |
 | 14ers.com | [10577](https://www.14ers.com/php14ers/peak.php?peakid=10577) | [10871](https://www.14ers.com/peaks/10871/unnamed-13er-13003) | [10527](https://www.14ers.com/php14ers/peak.php?peakid=10527) |
@@ -151,14 +152,3 @@ Ascent GPX pulled for all three — PT 13,076 (pid 15336), Unnamed 13,003 (pid 3
 
 **Sources checked:** 14ers.com ✓ (logged in, "Basin") · listsofjohn.com ✓ (logged in, "letsgocu") · peakbagger.com ✓ (logged in, "Kyle Knutson")
 
----
-
-## TL;DR
-
-- **Three ranked San Juan 13ers in Cuba Gulch** — PT 13,076 + PT 13,003 + PT 13,179, in a ~2.3 mi arc off the **Lake Fork (Lake City)** side.
-- **The plan:** Cuba Gulch TH (~9,540') → 13,076 → 13,003 → 13,179 ridge → out. **~15.8 mi, ~4,900 ft, Class 2** (13,003 itself is Class 1). A moderate day.
-- **All three are ranked San Juan 13ers** — PT 13,003 (id 822) is the gentle Class 1 middle peak.
-- **Confirmed combo** — done together in TRs across all three sources, and on Kyle's own "Cuba Gulch – 13076, 13003, 13179" track.
-- **Drive:** [5h 52m](https://www.google.com/maps/dir/?api=1&origin=1162+Peakview+Circle,+Boulder,+CO+80302&destination=37.8993,-107.4332) to the Cuba Gulch TH via Lake City — a long day or an overnight.
-- **Season:** July–September; rough road up high. Cell dead — carry an InReach.
-- **Research map:** https://caltopo.com/m/DCQ8UKS

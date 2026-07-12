@@ -28,15 +28,17 @@ status_source: "peak_db ascents"
 <!-- QUICKSTATS_END -->
 
 **Researched:** 2026-06-03
-**Report type:** Day trip (3 ranked 13ers, one outing)
+
 **CalTopo research map:** https://caltopo.com/m/07PMBS1
+
+**Trip NOAA weather:** [NOAA point forecast](https://forecast.weather.gov/MapClick.php?lat=38.0542&lon=-107.4381) | [NOAA](https://forecast.weather.gov/MapClick.php?lat=38.0712&lon=-107.4209) | [NOAA](https://forecast.weather.gov/MapClick.php?lat=38.0728&lon=-107.3879)
 **Status in DB:** All three 0 ascents (unclimbed). The quiet 13er neighbors of **Uncompahgre Peak**, off **Nellie Creek**.
 
 ![Overview map](../maps/pt_13155_group.png)
+
 <!-- PROVENANCE_START -->
-*The recommended route was distilled from **18 recorded GPS tracks** of real trips (14ers.com · ListsofJohn · peakbagger · Kyle's recordings) — all layered on the [interactive CalTopo research map](https://caltopo.com/m/07PMBS1).*
+*Note: the recommended route was distilled from **18 recorded GPS tracks** of real trips (14ers.com · ListsofJohn · peakbagger · Kyle's recordings) — all layered on the [interactive CalTopo research map](https://caltopo.com/m/07PMBS1).*
 <!-- PROVENANCE_END -->
-*[Interactive CalTopo map](https://caltopo.com/m/07PMBS1)*
 
 ---
 
@@ -50,7 +52,6 @@ status_source: "peak_db ascents"
 |---|---|---|---|
 | Elevation (LiDAR) | 13,155' | 13,110' | 13,108' |
 | Lat / Lon | 38.0542, −107.4381 | 38.0712, −107.4209 | 38.0728, −107.3879 |
-| Weather | [NOAA](https://forecast.weather.gov/MapClick.php?lat=38.0542&lon=-107.4381) | [NOAA](https://forecast.weather.gov/MapClick.php?lat=38.0712&lon=-107.4209) | [NOAA](https://forecast.weather.gov/MapClick.php?lat=38.0728&lon=-107.3879) |
 | Class (standard) | 2 | 2 | 2 |
 | listsofjohn.com | [645](https://listsofjohn.com/peak/645) | [707](https://listsofjohn.com/peak/707) | [726](https://listsofjohn.com/peak/726) |
 | Peak DB id | 645 | 707 | 726 |
@@ -135,13 +136,3 @@ The same approach as the Uncompahgre 14er: up Nellie Creek into the high basin, 
 
 **Sources checked:** 14ers.com · listsofjohn.com · peakbagger.com
 
----
-
-## TL;DR
-
-- **Three-for-one** unclimbed San Juan 13ers — "Uncompahgre's Three Children" — from **Nellie Creek**. **Class 2** tundra; **~6–8 mi / ~3,000–3,500 ft from the 4WD TH** (much more from the 2WD lot).
-- **Drive:** [5h 34m / 280 mi](https://www.google.com/maps/dir/?api=1&origin=1162+Peakview+Circle,+Boulder,+CO+80302&destination=38.0204,-107.4007) to Lake City — a **camp-and-climb**, not a day-from-Boulder.
-- **Folds in Uncompahgre Peak** (14er) if wanted — same road/approach.
-- **4WD road** (Nellie Creek) gets you to 11,430'; stock cars add ~8 mi + ~2,000'.
-- High exposed tundra — alpine start, InReach, storms.
-- **Research map:** https://caltopo.com/m/07PMBS1 — 46 tracks layered, colored by source (your own tracks in purple).

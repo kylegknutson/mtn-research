@@ -28,17 +28,19 @@ status_source: "peak_db ascents"
 <!-- QUICKSTATS_END -->
 
 **Researched:** 2026-06-09
-**Report type:** Day trip — a 3-peak Class 2+ ridge loop, with an optional 4th-peak north extension
+
 **CalTopo research map:** https://caltopo.com/m/38DBF6E
+
+**Trip NOAA weather:** [NOAA point forecast](https://forecast.weather.gov/MapClick.php?lat=38.96511&lon=-106.54299) | [NOAA](https://forecast.weather.gov/MapClick.php?lat=38.95539&lon=-106.52653) | [NOAA](https://forecast.weather.gov/MapClick.php?lat=38.94244&lon=-106.52203) | [NOAA](https://forecast.weather.gov/MapClick.php?lat=38.99859&lon=-106.55393)
 **Status in DB:** all unclimbed.
 
 > **Which "Grizzly Peak"?** This is **Grizzly Peak E (13,309')** — the Pieplant/Taylor Park summit that links with Jenkins and PT 13,145 — **not** Grizzly Peak A (13,997', the famous near-14er near Independence Pass, a separate outing ~6 mi north).
 
 ![Overview map](../maps/grizzly_jenkins_group.png)
+
 <!-- PROVENANCE_START -->
-*The recommended route was distilled from **14 recorded GPS tracks** of real trips (14ers.com · ListsofJohn · peakbagger · Kyle's recordings) — all layered on the [interactive CalTopo research map](https://caltopo.com/m/38DBF6E).*
+*Note: the recommended route was distilled from **14 recorded GPS tracks** of real trips (14ers.com · ListsofJohn · peakbagger · Kyle's recordings) — all layered on the [interactive CalTopo research map](https://caltopo.com/m/38DBF6E).*
 <!-- PROVENANCE_END -->
-*[Interactive CalTopo map](https://caltopo.com/m/38DBF6E)* — 11 source GPX tracks (14ers library + LoJ), layered by source; 4 summit markers + Pieplant TH.
 
 ---
 
@@ -55,7 +57,6 @@ status_source: "peak_db ascents"
 | Class | 2 | 2 | **2+** (boulder/talus) | 2 |
 | CO Rank | 297 | 531 | 393 | 367 |
 | Also known as | — | UN 13145 / "UN 13140 B" | (pre-LiDAR 13,281) | formerly UN 13322 |
-| Weather | [NOAA](https://forecast.weather.gov/MapClick.php?lat=38.96511&lon=-106.54299) | [NOAA](https://forecast.weather.gov/MapClick.php?lat=38.95539&lon=-106.52653) | [NOAA](https://forecast.weather.gov/MapClick.php?lat=38.94244&lon=-106.52203) | [NOAA](https://forecast.weather.gov/MapClick.php?lat=38.99859&lon=-106.55393) |
 | 14ers.com | [10754](https://www.14ers.com/php14ers/peak.php?peakid=10754) | [10807](https://www.14ers.com/php14ers/peak.php?peakid=10807) | [10778](https://www.14ers.com/php14ers/peak.php?peakid=10778) | [10764](https://www.14ers.com/php14ers/peak.php?peakid=10764) |
 | LoJ | [370](https://listsofjohn.com/peak/370) | [666](https://listsofjohn.com/peak/666) | [515](https://listsofjohn.com/peak/515) | [466](https://listsofjohn.com/peak/466) |
 | peakbagger | [15652](https://peakbagger.com/peak.aspx?pid=15652) | [84735](https://peakbagger.com/peak.aspx?pid=84735) | [55291](https://peakbagger.com/peak.aspx?pid=55291) | [15841](https://peakbagger.com/peak.aspx?pid=15841) |
@@ -160,14 +161,3 @@ Route beta for all peaks: [Jenkins South Ridge](https://www.climb13ers.com/color
 
 **Sources checked:** 14ers.com ✓ (logged in, "letsgocu") · listsofjohn.com ✓ (logged in) · peakbagger.com ✓ (logged in, "Kyle Knutson") · climb13ers.com ✓
 
----
-
-## TL;DR
-
-- **Three ranked Sawatch 13ers in one Class 2+ loop from the Pieplant Mill site:** Jenkins (13,440') + PT 13,145 + Grizzly Pk E (13,309'). **~9 mi / ~4,800–5,300', a N→S ridge** — crux is sustained boulder-talus + a talus gully, not exposure.
-- **This is Grizzly Pk E, not Grizzly A** (the 13,997' Independence Pass peak).
-- **Trailhead:** Pieplant Mill (~10,200'), NE of Taylor Park Reservoir; **higher-clearance 2WD, no 4WD needed**; **all public NF, no permits.**
-- **Lake Fork Pk (13,333') optional add** — reachable from the same TH (proven: LoJ TR 26979) but it extends the day *north* into a ~13–15 mi outing; otherwise pair it with UN 13,305 from Sayres Gulch another time.
-- **Drive:** [~4h 15m](https://www.google.com/maps/dir/?api=1&origin=1162+Peakview+Circle,+Boulder,+CO+80302&destination=38.9398,-106.5600) from Boulder (Gunnison/Almont, or Cottonwood Pass seasonally).
-- **Season:** July–Sept; ice axe early season. Cell dead — carry an InReach.
-- **Research map:** https://caltopo.com/m/38DBF6E

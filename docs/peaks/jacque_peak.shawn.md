@@ -26,14 +26,18 @@ dist_mi: 7.5
 *Written for **Shawn** — peak unclimbed on his 13er checklist.*
 
 **Researched:** 2026-05-28 (base) / 2026-06-05 (Shawn)
+
 **CalTopo research map:** https://caltopo.com/m/R2NF0S2
+
+**Trip NOAA weather:** [NOAA point forecast](https://forecast.weather.gov/MapClick.php?lat=39.45485&lon=-106.19713)
+
 **Status for Shawn:** **Unclimbed.** CO Rank 482, ranked and prominent (Rise 2,296').
 
 ![Overview map](../maps/jacque_peak.png)
+
 <!-- PROVENANCE_START -->
-*The recommended route was distilled from **12 recorded GPS tracks** of real trips (recorded trips) — all layered on the [interactive CalTopo research map](https://caltopo.com/m/R2NF0S2).*
+*Note: the recommended route was distilled from **12 recorded GPS tracks** of real trips (recorded trips) — all layered on the [interactive CalTopo research map](https://caltopo.com/m/R2NF0S2).*
 <!-- PROVENANCE_END -->
-*[Interactive CalTopo map](https://caltopo.com/m/R2NF0S2)*
 
 ---
 
@@ -47,7 +51,6 @@ dist_mi: 7.5
 |---|---|
 | Elevation | 13,212' (LiDAR; map 13,205') |
 | Lat / Lon | 39.45485, −106.19713 |
-| Weather | [NOAA forecast](https://forecast.weather.gov/MapClick.php?lat=39.45485&lon=-106.19713) |
 | 14ers.com peak page | https://www.14ers.com/peaks/10229/13er-jacque-peak |
 | listsofjohn.com | https://listsofjohn.com/peak/603 |
 | peakbagger.com | https://peakbagger.com/peak.aspx?pid=5781 |
@@ -197,11 +200,6 @@ No same-drainage ranked 13er link-up: Bartlett Mtn (5.74 mi, the only nearby ran
 | 2025-03-16 | [Xander Westra](https://peakbagger.com/climber/ascent.aspx?aid=2784737) | **2,249' / 9.1 mi / 7h14** from 10,963' TH | Mayflower Gulch. ⚠️ crossed tailings pond — "do not recommend, learned it is trespassing." |
 | 2025-06-22 | [Jack Murdoch](https://peakbagger.com/climber/ascent.aspx?aid=2879347) | — | — |
 
----
-
-## TL;DR
-
-~10 mi RT, ~3,500', Class 2 from Copper Mountain base (I-70 Exit 195). ~5h typical pace. About 1h 50m from Edgewater. Standalone ranked day — no nearby ranked partners worth the detour. Go early for the exposed west ridge. Graveline Gulch (CO 91) saves mileage if you'd rather skip the ski area.
 
 ---
 

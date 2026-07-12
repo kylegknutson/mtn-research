@@ -25,22 +25,25 @@ weather: "https://forecast.weather.gov/MapClick.php?lat=38.0007&lon=-105.6004"
 <!-- QUICKSTATS_START -->
 
 !!! tip "At a glance — recommended day"
-    **13.5 mi** · **6,897 ft** gain · **Class 2–3** · 3 peaks · ~4 h drive · [weather](https://forecast.weather.gov/MapClick.php?lat=38.0007&lon=-105.6004)
+    **13.5 mi** · **6,897 ft** gain · **Class 2–3** · 3 peaks · ~4 h drive
 
 <!-- QUICKSTATS_END -->
 
 **Researched:** 2026-06-15
-**Report type:** Single push (big day) — the three unclimbed ranked 13ers ringing **Mount Adams** in the northern Sangre de Cristo.
+
 **CalTopo research map:** https://caltopo.com/m/VES1N54
+
+**Trip NOAA weather:** [NOAA point forecast](https://forecast.weather.gov/MapClick.php?lat=38.0007&lon=-105.6004)
+
 **Status in DB:** all three unclimbed. **Mount Adams A (13,937') itself is already done** — these are the high points on its **W, S, and SE ridges**, and every other ranked neighbor (Kit Carson, Challenger, Crestones, Humboldt, Fluted, Horn, Little Horn) is climbed too. This cleans up the Adams massif.
 
 > Three ridge-point 13ers around **Mount Adams**, above **Willow Lake** near Crestone. The peaks are Class 2, but **linking them on the ridges is Class 2+ with stretches of easy Class 3** (loose Crestone conglomerate; Class 3–4 if you stay on the crest) — on top of **6,400′ of gain** out of the deep Crestone trailhead.
 
 ![Overview map](../maps/mount_adams_trio.png)
+
 <!-- PROVENANCE_START -->
-*The recommended route was distilled from **16 recorded GPS tracks** of real trips (14ers.com · ListsofJohn · peakbagger) — all layered on the [interactive CalTopo research map](https://caltopo.com/m/VES1N54).*
+*Note: the recommended route was distilled from **16 recorded GPS tracks** of real trips (14ers.com · ListsofJohn · peakbagger) — all layered on the [interactive CalTopo research map](https://caltopo.com/m/VES1N54).*
 <!-- PROVENANCE_END -->
-*[Interactive CalTopo map](https://caltopo.com/m/VES1N54)* — 14ers-library tracks + Kyle's CalTopo in green; **recommended loop in bold magenta**; 3 summit markers + the Willow Creek / Willow Lake TH.
 
 ---
 
@@ -121,12 +124,3 @@ A loop over all three (DEM-measured): **~11.7 mi / ~6,400′**, **Class 2 summit
 
 **Sources checked:** 14ers.com ✓ (logged in, "Basin") · listsofjohn.com ✓ · peakbagger.com ✓ (logged in, "Kyle Knutson") · climb13ers.com ✓ (no dedicated pages) · Kyle's CalTopo ✓
 
----
-
-## TL;DR
-
-- **The three unclimbed ranked 13ers ringing Mount Adams** (W / S / SE ridge points) — PT 13,552 + Pt 13,580 A + PT 13,543. **Class 2 summits linked by Class 2+/easy Class 3 ridges** (loose Crestone conglomerate; Class 3–4 on the crests).
-- **~11.7 mi / ~6,400′ loop** from the **Willow Creek / Willow Lake TH** (Crestone, 2WD). Modest miles, **big gain** — the difficulty is the climb out of the deep trailhead, not the terrain.
-- **Mount Adams (13,937') is already done** — optional to re-tag mid-traverse. All other neighbors (Kit Carson, Challenger, Crestones, Humboldt, Fluted, Horn) climbed too.
-- **Sangre de Cristo Wilderness**, ~4 h drive; **Willow Lake makes a great backpack basecamp** to shorten the summit day. Early start for storms.
-- **Research map:** https://caltopo.com/m/VES1N54

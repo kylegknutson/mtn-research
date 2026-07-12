@@ -31,7 +31,11 @@ status_source: "peak_db ascents"
     Kyle's recorded outing (fast-hike up, jog down): **10.8 mi · 3,674 ft**, done as a **loop** — vs the ~6.3 mi / ~3,500 ft minimal estimate below. Gain was on target; he took a bigger loop than the minimal line (and started ~0.7 mi from the assumed Woodward-base TH). GPS track on file (`GPS Tracks/20260606_Summit_County…_actual.gpx`).
 
 **Researched:** 2026-05-28
+
 **CalTopo research map:** https://caltopo.com/m/R2NF0S2
+
+**Trip NOAA weather:** [NOAA point forecast](https://forecast.weather.gov/MapClick.php?lat=39.45485&lon=-106.19713) (same target as 14ers / LoJ / peakbagger weather links)
+
 **Status in DB:** **climbed** (2026-06-06). **Cluster status:**
 - ✗ **No same-drainage unclimbed ranked 13ers** — Bartlett Mtn (5.74 mi) is the only nearby unclimbed ranked peak, but it sits on the opposite side of Fremont Pass / Climax Mine and is a different drive entirely
 - ✓ Done nearby (Tenmile/Mosquito group): Pacific (4.49 mi), Crystal A (4.62), Atlantic (4.74), PT 13,207 (4.89), Fletcher (5.08), Peak 10 (5.08), Wheeler (6.08), Quandary (6.25), Clinton (6.51), N Star (6.74)
@@ -49,7 +53,6 @@ status_source: "peak_db ascents"
 |---|---|
 | Elevation | 13,212' (LiDAR; map 13,205') |
 | Lat / Lon | 39.45485, −106.19713 |
-| Weather | [NOAA forecast](https://forecast.weather.gov/MapClick.php?lat=39.45485&lon=-106.19713) (same target as 14ers / LoJ / peakbagger weather links) |
 | 14ers.com peak page | https://www.14ers.com/peaks/10229/13er-jacque-peak |
 | listsofjohn.com | https://listsofjohn.com/peak/603 |
 | peakbagger.com | https://peakbagger.com/peak.aspx?pid=5781 |
@@ -62,10 +65,10 @@ status_source: "peak_db ascents"
 | County | Summit |
 
 ![Overview map](../maps/jacque_peak.png)
+
 <!-- PROVENANCE_START -->
-*The recommended route was distilled from **12 recorded GPS tracks** of real trips (recorded trips) — all layered on the [interactive CalTopo research map](https://caltopo.com/m/R2NF0S2).*
+*Note: the recommended route was distilled from **12 recorded GPS tracks** of real trips (recorded trips) — all layered on the [interactive CalTopo research map](https://caltopo.com/m/R2NF0S2).*
 <!-- PROVENANCE_END -->
-*[Interactive CalTopo map](https://caltopo.com/m/R2NF0S2)*
 
 ---
 
@@ -233,19 +236,6 @@ The most common modern approach. Up through Copper ski terrain, over Union Mount
 - `jacque_peak_summit_TH.gpx` — Jacque summit + Copper Mtn base TH + CO 91 / Graveline pullout
 - `jacque_peak_route_recommended.gpx` — extract from Stratmoen 11112 (Jacque + Union via Woodward Express)
 
----
-
-## TL;DR
-
-- **Recommended trip:** From **Copper Mountain Resort base** via Woodward Express lift area, over Union Mountain (12,313'), to summit. **~10 mi RT, ~3,500' gain, Class 2** with talus/boulder hop near top. **~5 hr car-to-car** at typical pace.
-- **Alt for non-passholders / off-season:** **Graveline Gulch from CO 91** — ~7.5 mi / 3,700–4,000' / 5.5h. Watch the closed-mine boundary; game trail on the climbers' right per Lochary.
-- **DO NOT** use Mayflower Tailings Pond crossing — it's trespassing per Westra
-- **DO NOT** try Searle Gulch — no longer viable due to active mining (per Stratmoen)
-- **Effectively a SOLO day** — Tucker/Union/Copper trifecta is the standard combo but all sub-13k, so they don't count toward Kyle's ranked partner rule
-- **No same-drainage unclimbed ranked 13er link-up** — Bartlett Mtn 5.74 mi away but on the opposite side of Climax Mine, different drive entirely
-- **Best season:** late June through October. Winter doable — Copper route requires uphill registration (free for pass holders, mandatory armband, mornings only 5am–8:30am); Graveline Gulch avoids ski area entirely
-- **Cell:** strong on the Copper side; carry InReach for backcountry
-- **Drive:** **1h 42m from Boulder** — closest unclimbed CO 13er under 4,000' gain
 
 ---
 

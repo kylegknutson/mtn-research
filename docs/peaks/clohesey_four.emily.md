@@ -26,23 +26,25 @@ status_source: "scrape_14ers_checklist emily"
 <!-- QUICKSTATS_START -->
 
 !!! tip "At a glance — recommended day"
-    **12.2 mi** · **5,714 ft** gain · **Class 2+** · 4 peaks · ~2.75 h drive · [weather](https://forecast.weather.gov/MapClick.php?lat=38.920&lon=-106.410)
+    **12.2 mi** · **5,714 ft** gain · **Class 2+** · 4 peaks · ~2.75 h drive
 
 <!-- QUICKSTATS_END -->
 
 *Written for **Emily** — four ranked Sawatch 13ers above Clohesey Lake, linked in one day.*
 
-**Report type:** Day trip (4 ranked 13ers, one link-up loop)
 **CalTopo research map:** https://caltopo.com/m/P38PGQ6
+
+**Trip NOAA weather:** [NOAA point forecast](https://forecast.weather.gov/MapClick.php?lat=38.920&lon=-106.410)
+
 **Status for Emily:** all four **unclimbed** (on her 14ers checklist). A tidy cluster above **Clohesey Lake** in the Collegiate Peaks, SW of Missouri/Belford.
 
 > Four Class 2 ranked 13ers on the ridge above Clohesey Lake — **Magdalene Mtn, "Pear Pk", PT 13,517 A ("UN 13,513"), and PT 13,486**. They link into **one ~12 mi loop**; the only real catch is the **brutal 4x4 road to Clohesey Lake** (there's a walk-in alternative below).
 
 ![Overview map](../maps/clohesey_four.png)
+
 <!-- PROVENANCE_START -->
-*The recommended route was distilled from **22 recorded GPS tracks** of real trips (14ers.com · ListsofJohn · peakbagger) — all layered on the [interactive CalTopo research map](https://caltopo.com/m/P38PGQ6).*
+*Note: the recommended route was distilled from **22 recorded GPS tracks** of real trips (14ers.com · ListsofJohn · peakbagger) — all layered on the [interactive CalTopo research map](https://caltopo.com/m/P38PGQ6).*
 <!-- PROVENANCE_END -->
-*[Interactive CalTopo map](https://caltopo.com/m/P38PGQ6)* — the **recommended ~12 mi link-up loop in bold magenta**, over recorded 14ers-library tracks (green); 4 summit markers + the Clohesey Lake TH.
 
 ---
 
@@ -120,11 +122,3 @@ If the full day is too long on foot, the cluster also splits cleanly: **NW pair 
 
 **Sources checked:** 14ers.com ✓ (logged in, "Basin") · listsofjohn.com ✓ · peakbagger.com ✓ · climb13ers.com ✓
 
----
-
-## TL;DR
-
-- **Four ranked Class 2 Sawatch 13ers above Clohesey Lake** — Magdalene + Pear + 13,517 A ("13,513") + 13,486 — **link in one ~12.2 mi / ~5,700′ loop, Class 2+.**
-- **The 13,513 ↔ 13,486 link is documented** (a 2023 TR + climb13ers) at **Class 2+ max** — not a problem.
-- **The catch is the Clohesey Lake 4x4 road** (brutal first ledge). **Park low and hike the road up (~+3–4 mi / ~1,100′ → ~15–16 mi day)** to skip the driving — recommended.
-- **~2h45 from Highland (Denver).** Cell dead — InReach.

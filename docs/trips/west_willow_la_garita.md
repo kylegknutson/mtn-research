@@ -27,7 +27,7 @@ status_source: "peak_db ascents (Kyle — climbed)"
 <!-- QUICKSTATS_START -->
 
 !!! tip "At a glance — 2-day trip"
-    **5 peaks** · **~5 h drive** · [weather](https://forecast.weather.gov/MapClick.php?lat=37.9694&lon=-106.9872)
+    **5 peaks** · **~5 h drive**
 
     - **Day 1 (Trio):** **12.4 mi** · **3,558 ft** gain · **Class 2** · 3 peaks
     - **Day 2 (Bridge pair):** **10.2 mi** · **3,594 ft** gain · **Class 3** · 2 peaks
@@ -38,14 +38,15 @@ status_source: "peak_db ascents (Kyle — climbed)"
     Kyle did it as **two day-loops from the upper TH** (not a backpack): **Day 1 (Baldy Lejos trio) 12.4 mi · 3,558 ft**, **Day 2 (PT 13,308 + 13,166) 10.2 mi · 3,594 ft** — vs the ~19 mi / ~6,800 ft estimate. Right trailhead both days; ~15–25% longer per day. GPS tracks on file.
 
 **Researched:** 2026-06-10
-**Report type:** Multi-day trip / backpack — 5 ranked 13ers over 2 days from one trailhead
+
 **Status in DB:** all five **climbed** (2026-06-13/14).
 
 > Consolidates two day-reports that **launch from the same West Willow Creek upper TH** above Creede: the **[Baldy Lejos trio](../peaks/baldy_lejos_trio.md)** (Baldy Lejos + PT 13,115 + PT 13,030) and the **[PT 13,308 + PT 13,166 bridge pair](../peaks/pt_13308_13166.md)**. One trailhead, one camp — two day-loops (~12.4 and ~10.2 mi), or one big push. (The eastern [PT 13,408 + 13,026 pair](../peaks/pt_13026_13408.md) is *not* part of this — it's a separate Cochetopa/Eddiesville trailhead, a different drive.)
 
 ![Overview map](../maps/west_willow_la_garita.png)
+
 <!-- PROVENANCE_START -->
-*The recommended route was distilled from **19 recorded GPS tracks** of real trips (14ers.com · ListsofJohn · Kyle's recordings) — all layered on the [interactive CalTopo research map](https://caltopo.com/m/9PQM9TT).*
+*Note: the recommended route was distilled from **19 recorded GPS tracks** of real trips (14ers.com · ListsofJohn · Kyle's recordings) — all layered on the [interactive CalTopo research map](https://caltopo.com/m/9PQM9TT).*
 <!-- PROVENANCE_END -->
 *Five ranked 13ers around one **West Willow Creek upper TH** (orange). The two **magenta day-loops** are the recommended routes — the trio to the NW, the bridge pair to the E/SE — each radiating from the same camp. Per-area route detail + interactive maps: [trio (4278RCG)](https://caltopo.com/m/4278RCG) · [bridge pair (9VGDUR3)](https://caltopo.com/m/9VGDUR3).*
 
@@ -128,13 +129,7 @@ E/SE of camp: a loop tagging **PT 13,308** and **PT 13,166**, the latter carryin
 
 - **Dead.** Deep in the La Garita; no reception at the TH or on the peaks. Carry an **InReach / satellite messenger**.
 
+
 ---
-
-## TL;DR
-
-- **Five ranked La Garita 13ers from one West Willow upper TH**, best as a **2-day backpack** (~22.6 mi / ~7,150'): a Class 2 trio day NW + a Class 2/3 pair day E/SE, camping high near San Luis Pass.
-- **All five in a day is ~18 mi / ~6,000'** (one efficient graph-routed loop) — slightly shorter than two days, but a huge single day with a Class 3 move; strong parties only.
-- **Crux is the road** (4WD to ~11,500', sometimes gated) and **PT 13,166's Class 3**, not the tundra.
-- Detail + GPX: **[trio](../peaks/baldy_lejos_trio.md)** · **[bridge pair](../peaks/pt_13308_13166.md)**. Eastern [13,408 + 13,026 pair](../peaks/pt_13026_13408.md) is a *separate* Cochetopa trip.
 
 **Sources checked:** 14ers.com ✓ (logged in, "letsgocu") · listsofjohn.com ✓ (logged in) · peakbagger.com ✓ (logged in) · climb13ers.com ✓ — synthesized from the two underlying day-reports.

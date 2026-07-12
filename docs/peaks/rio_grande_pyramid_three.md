@@ -29,17 +29,18 @@ status_source: "peak_db ascents (Kyle — unclimbed)"
 <!-- QUICKSTATS_END -->
 
 **Researched:** 2026-06-15
-**Report type:** Single push (big day) *or* backpack — Kyle's three remaining unclimbed ranked 13ers around Rio Grande Pyramid.
+
 **CalTopo research map:** https://caltopo.com/m/TMVGNRR
+
 **Status in DB:** all three unclimbed. (Rio Grande Pyramid, Window Pk + Ute Ridge already done.)
 
 > The three red peaks around **Rio Grande Pyramid** in the **Weminuche Wilderness** — deep, remote, and a long way in. Two are easy Class 2; **PT 13,022 has a Class 3–4 exposed crux.**
 
 ![Overview map](../maps/rio_grande_pyramid_three.png)
+
 <!-- PROVENANCE_START -->
-*The recommended route was distilled from **10 recorded GPS tracks** of real trips (14ers.com · ListsofJohn) — all layered on the [interactive CalTopo research map](https://caltopo.com/m/TMVGNRR).*
+*Note: the recommended route was distilled from **10 recorded GPS tracks** of real trips (14ers.com · ListsofJohn) — all layered on the [interactive CalTopo research map](https://caltopo.com/m/TMVGNRR).*
 <!-- PROVENANCE_END -->
-*[Interactive CalTopo map](https://caltopo.com/m/TMVGNRR)* — 14ers-library tracks + Kyle's CalTopo in green; **recommended route (a real recorded loop) in bold magenta**; 3 summit markers + the Weminuche Trail TH.
 
 ---
 
@@ -128,12 +129,3 @@ Pages verified for all three; **ownership = Weminuche Wilderness** (Rio Grande N
 
 **Sources checked:** 14ers.com ✓ (logged in, "letsgocu") · listsofjohn.com ✓ · peakbagger.com ✓ (logged in, "Kyle Knutson") · climb13ers.com ✓ · Kyle's CalTopo ✓
 
----
-
-## TL;DR
-
-- **Your three remaining Rio Grande Pyramid 13ers in one push** — **~19.5 mi / ~5,200′** loop from the **Weminuche Trail TH** (2WD, Rio Grande Reservoir): PT 13,022 (SW) + the ridge-connected NE pair PT 13,290 ("Fools Pyramid") + PT 13,274.
-- **Class 2 except PT 13,022**, whose final ~200′ is an **exposed Class 3–4 scramble on teetering blocks** — the crux. Helmet.
-- **A ~20-mile day is big but doable — or backpack:** ~5 mi / 1,325′ to a base camp gets you all the RGP-area peaks on short days. Still a great option given the depth.
-- **Weminuche Wilderness**, ~5h45 drive (Creede → Rio Grande Reservoir). Cell dead — InReach essential.
-- **Research map:** https://caltopo.com/m/TMVGNRR

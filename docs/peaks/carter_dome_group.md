@@ -32,15 +32,17 @@ status_source: "peak_db ascents (Kyle — unclimbed)"
 <!-- QUICKSTATS_END -->
 
 **Researched:** 2026-06-04
-**Report type:** Day trip (6 peaks)
+
 **CalTopo research map:** https://caltopo.com/m/AAFUQQ1
+
+**Trip NOAA weather:** [NOAA point forecast](https://forecast.weather.gov/MapClick.php?lat=44.24945&lon=-71.22355) | [NOAA](https://forecast.weather.gov/MapClick.php?lat=44.25902&lon=-71.20166) | [NOAA (primary)](https://forecast.weather.gov/MapClick.php?lat=44.26756&lon=-71.17917) | [NOAA](https://forecast.weather.gov/MapClick.php?lat=44.28997&lon=-71.17627) | [NOAA](https://forecast.weather.gov/MapClick.php?lat=44.30308&lon=-71.16775) | [NOAA](https://forecast.weather.gov/MapClick.php?lat=44.34043&lon=-71.13177)
 **Status in DB:** Unclimbed — NH 48 peaks, no prior ascents logged
 
 ![Overview map](../maps/carter_dome_group.png)
+
 <!-- PROVENANCE_START -->
-*The recommended route was distilled from **42 recorded GPS tracks** of real trips (peakbagger) — all layered on the [interactive CalTopo research map](https://caltopo.com/m/AAFUQQ1).*
+*Note: the recommended route was distilled from **42 recorded GPS tracks** of real trips (peakbagger) — all layered on the [interactive CalTopo research map](https://caltopo.com/m/AAFUQQ1).*
 <!-- PROVENANCE_END -->
-*[Interactive CalTopo map](https://caltopo.com/m/AAFUQQ1)*
 
 ---
 
@@ -51,7 +53,6 @@ status_source: "peak_db ascents (Kyle — unclimbed)"
 | **Elevation** | 4,059.6 ft | 4,399.2 ft | 4,839.4 ft | 4,445.3 ft | 4,623.4 ft | 4,047.3 ft |
 | **Prominence** | 306 ft | 1,014 ft | 2,827 ft | 227 ft | 715 ft | 921 ft |
 | **Lat / Lon** | 44.24945, -71.22355 | 44.25902, -71.20166 | 44.26756, -71.17917 | 44.28997, -71.17627 | 44.30308, -71.16775 | 44.34043, -71.13177 |
-| **Weather** | [NOAA](https://forecast.weather.gov/MapClick.php?lat=44.24945&lon=-71.22355) | [NOAA](https://forecast.weather.gov/MapClick.php?lat=44.25902&lon=-71.20166) | [NOAA (primary)](https://forecast.weather.gov/MapClick.php?lat=44.26756&lon=-71.17917) | [NOAA](https://forecast.weather.gov/MapClick.php?lat=44.28997&lon=-71.17627) | [NOAA](https://forecast.weather.gov/MapClick.php?lat=44.30308&lon=-71.16775) | [NOAA](https://forecast.weather.gov/MapClick.php?lat=44.34043&lon=-71.13177) |
 | **Class** | 1 | 1 | 1 | 1 | 1 | 1 |
 | **Range** | Carter-Moriah Range | Carter-Moriah Range | Carter-Moriah Range | Carter-Moriah Range | Carter-Moriah Range | Carter-Moriah Range |
 | **NH 48 rank** | #44 | #20 | #8 | #19 | #12 | #41 |
@@ -182,11 +183,6 @@ Peak pages: [Carter Dome](https://listsofjohn.com/peak/17087) · [Wildcat A](htt
 - **[Carter Mountain and Wildcat Loop — AllTrails](https://www.alltrails.com/trail/us/new-hampshire/carters-and-wildcats-loop)** — 17.9 mi loop (Wildcats + Carters, no Moriah), 101 reviews, ~12h avg
 - **[SectionHiker — Leave No Stragglers](https://sectionhiker.com/leave-no-stragglers-how-to-hike-the-white-mountain-4000-footers/)** — standard NH 48 combo reference
 
----
-
-## TL;DR
-
-The full Wildcat–Carter–Moriah traverse is the Carter-Moriah Range's signature big day: 6 NH 48 peaks, ~20 miles, ~7,500 ft gain, ~12–13 hours, point-to-point Pinkham Notch → Shelburne with a 2-car spot or ~$20 Rattle River Hostel shuttle. Go S→N so the brutal Wildcat climb is early. Tag Mt. Hight (0.8 mi detour off Carter Dome) — it's the best view on the ridge. Water at Carter Notch Hut and Imp Campsite. Start by 0630; Moriah is farther than it looks on the map.
 
 ---
 

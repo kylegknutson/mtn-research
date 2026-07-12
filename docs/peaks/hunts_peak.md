@@ -29,8 +29,13 @@ status_source: "peak_db ascents"
 <!-- QUICKSTATS_END -->
 
 **Researched:** 2026-05-21
+
 **Freshness pass:** 2026-05-29 (added LoJ + peakbagger sources per 3-source methodology; reconfirmed cluster status)
+
 **CalTopo research map:** https://caltopo.com/m/2SCT1B6 (Sangres-tip dedicated research map; existing C105AEV still has Bushnell/Twin Sisters planning data)
+
+**Trip NOAA weather:** [NOAA point forecast](https://forecast.weather.gov/MapClick.php?lat=38.3831&lon=-105.94582) (same target as 14ers / LoJ / peakbagger weather links)
+
 **Status in DB:** 0 ascents (unclimbed). **Cluster status (reconfirmed 2026-05-29):**
 - ✓ Done nearby (Sangre N tip): Bushnell Pk (4.22 mi), Twin Sisters North (3.19 mi)
 - ✗ **No unclimbed ranked 13ers within 8 mi** — Hunts is a true standalone day, no link-up payoff
@@ -48,17 +53,16 @@ status_source: "peak_db ascents"
 |---|---|
 | Elevation | 13,061' (14ers consensus 13,071' on TRs) |
 | Lat / Lon | 38.3831, −105.94582 |
-| Weather | [NOAA forecast](https://forecast.weather.gov/MapClick.php?lat=38.3831&lon=-105.94582) (same target as 14ers / LoJ / peakbagger weather links) |
 | 14ers.com peak page | https://www.14ers.com/peaks/10684/13er-hunts-peak |
 | Range / Wilderness | Sangre de Cristo / Sangre de Cristo Wilderness |
 | Class (standard) | 2 |
 | Peak DB id | 748 |
 
 ![Overview map](../maps/hunts_peak.png)
+
 <!-- PROVENANCE_START -->
-*The recommended route was distilled from **8 recorded GPS tracks** of real trips (recorded trips) — all layered on the [interactive CalTopo research map](https://caltopo.com/m/2SCT1B6).*
+*Note: the recommended route was distilled from **8 recorded GPS tracks** of real trips (recorded trips) — all layered on the [interactive CalTopo research map](https://caltopo.com/m/2SCT1B6).*
 <!-- PROVENANCE_END -->
-*[Interactive CalTopo map](https://caltopo.com/m/2SCT1B6)*
 
 ---
 
@@ -177,16 +181,6 @@ Already layered from prior planning of Bushnell/Twin Sisters:
 
 → When building a dedicated Hunts research map, layer in the WildWanderer GPX from the 14ers library on top of this existing data.
 
----
-
-## TL;DR
-
-- **Recommended trip:** West Slopes out-and-back from Rock Creek TH. **6–7 mi RT, ~3,500' gain, Class 2.** Half-day solo.
-- **No link-up payoff** — Bushnell and Twin Sisters N (the only ranked neighbors within 8 mi) are already done. This is a standalone drive-and-bag day.
-- **Critical access flag:** FR 980 gate closed for Sage Grouse season → reopens May 15. Confirm gate status before driving the 3+ hours from anywhere.
-- **Best season:** mid-May (gate open) through October.
-- **Cell:** likely dead at TH, signal returning on the upper ridge with LOS to Salida. No community reports — carry InReach.
-- **Existing CalTopo data:** map C105AEV already has Hunts markers + tracks from previous Bushnell/Twin Sisters planning.
 
 ---
 

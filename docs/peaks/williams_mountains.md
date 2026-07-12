@@ -29,17 +29,18 @@ status_source: "peak_db ascents (Kyle — unclimbed)"
 <!-- QUICKSTATS_END -->
 
 **Researched:** 2026-06-15
-**Report type:** Day trip (long) or 2–3 day backpack — a 5-peak Class 3 ridge traverse
+
 **CalTopo research map:** https://caltopo.com/m/310E34A
+
 **Status in DB:** all five unclimbed.
 
 > The full **Williams Mountains** sub-range ridge, W of Independence Pass — *not* to be confused with Williams Peak. All five ranked summits in one outing.
 
 ![Overview map](../maps/williams_mountains.png)
+
 <!-- PROVENANCE_START -->
-*The recommended route was distilled from **7 recorded GPS tracks** of real trips (14ers.com · ListsofJohn · peakbagger) — all layered on the [interactive CalTopo research map](https://caltopo.com/m/310E34A).*
+*Note: the recommended route was distilled from **7 recorded GPS tracks** of real trips (14ers.com · ListsofJohn · peakbagger) — all layered on the [interactive CalTopo research map](https://caltopo.com/m/310E34A).*
 <!-- PROVENANCE_END -->
-*[Interactive CalTopo map](https://caltopo.com/m/310E34A)* — source GPX (14ers library + Kyle's CalTopo) in green, with the **recommended full-traverse loop in bold magenta**; 5 summit markers + Lost Man TH.
 
 ---
 
@@ -140,13 +141,3 @@ Per-summit route pages: [Williams Mountain](https://www.climb13ers.com/colorado-
 
 **Sources checked:** 14ers.com ✓ (logged in, "letsgocu") · listsofjohn.com ✓ (logged in) · peakbagger.com ✓ (logged in, "Kyle Knutson") · climb13ers.com ✓ · Kyle's CalTopo ✓
 
----
-
-## TL;DR
-
-- **All five ranked Williams Mountains 13ers in one outing** — a **~14.7 mi / ~6,084′ Class 3 ridge loop** from the **Lost Man TH** (passenger car, Hwy 82 W of Independence Pass): North (13,139) → Williams Mtn (13,390, HP) → South B (13,204) → South A (13,321) → South C (13,039).
-- **It's a scramble, not a walk:** Class 2/2+ with **brief Class 3 + short knife-edge sections**; Williams Mtn's north ridge is the crux. Ice axe recommended.
-- **Long single day or 2–3 day backpack** (camp at South Fork Pass, 11,840′) — both standard.
-- ⚠️ **Independence Pass (CO-82) closes in winter** — June–October access. **Hunter-Fryingpan Wilderness**, no permits, foot-only. Cell dead — InReach.
-- **Drive:** [~3h 45m](https://www.google.com/maps/dir/?api=1&origin=1162+Peakview+Circle,+Boulder,+CO+80302&destination=39.1219,-106.6242) from Boulder over Independence Pass.
-- **Research map:** https://caltopo.com/m/310E34A

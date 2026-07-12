@@ -25,22 +25,25 @@ status_source: "peak_db ascents"
 <!-- QUICKSTATS_START -->
 
 !!! tip "At a glance — recommended day"
-    **6.5 mi** · **3,573 ft** gain · **Class 2** · 1 peak · ~5.75 h drive · [weather](https://forecast.weather.gov/MapClick.php?lat=37.9067&lon=-107.4629)
+    **6.5 mi** · **3,573 ft** gain · **Class 2** · 1 peak · ~5.75 h drive
 
 <!-- QUICKSTATS_END -->
 
 **Researched:** 2026-06-15
-**Report type:** Single peak — your last unclimbed ranked 13er in the Handies cluster, climbed **on its own** (no add-on peaks).
+
 **CalTopo research map:** https://caltopo.com/m/4CBBN9L
+
+**Trip NOAA weather:** [NOAA point forecast](https://forecast.weather.gov/MapClick.php?lat=37.9067&lon=-107.4629)
+
 **Status in DB:** unclimbed. **Every ranked 13er within 4 miles is already done** (PT 13,801, Quarter, Sundog, Handies, Sunshine, Whitecross, American, Half, Redcloud…) — this is the lone cleanup peak.
 
 > A grassy **Class 2** 13er on the divide SE of Handies. Recorded parties always bag it alongside Handies / PT 13,801 / Whitecross, but it stands alone as a short, direct out-and-back from the **Grizzly Gulch TH** — which is what's mapped here.
 
 ![Overview map](../maps/campbell_creek_pk.png)
+
 <!-- PROVENANCE_START -->
-*The recommended route was distilled from **7 recorded GPS tracks** of real trips (14ers.com · ListsofJohn · peakbagger) — all layered on the [interactive CalTopo research map](https://caltopo.com/m/4CBBN9L).*
+*Note: the recommended route was distilled from **7 recorded GPS tracks** of real trips (14ers.com · ListsofJohn · peakbagger) — all layered on the [interactive CalTopo research map](https://caltopo.com/m/4CBBN9L).*
 <!-- PROVENANCE_END -->
-*[Interactive CalTopo map](https://caltopo.com/m/4CBBN9L)* — 3 recorded 14ers-library tracks (green; all multi-peak) + the **standalone recommended out-and-back in bold magenta**; summit marker + Grizzly Gulch TH.
 
 ---
 
@@ -115,11 +118,3 @@ A direct out-and-back, **~5.7 mi / ~3,443′, Class 2** — no neighboring summi
 
 **Sources checked:** 14ers.com ✓ (logged in, "letsgocu") · listsofjohn.com ✓ · peakbagger.com ✓ (logged in, "Kyle Knutson") · climb13ers.com ✓
 
----
-
-## TL;DR
-
-- **Your last unclimbed 13er in the Handies cluster** — **~5.7 mi / ~3,443′, Class 2** grass, **standalone** from the **Grizzly Gulch TH** (no add-on peaks needed).
-- **Stay on grass** near the top (loose scree otherwise), and **out-and-back the Grizzly side** — don't descend the Campbell Creek drainage (willow fight + river crossing).
-- **4WD** up the Lake Fork road; ~5h45 drive (Lake City). Cell dead — InReach.
-- **Research map:** https://caltopo.com/m/4CBBN9L

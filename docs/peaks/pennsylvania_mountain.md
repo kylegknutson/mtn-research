@@ -28,7 +28,11 @@ status_source: "peak_db ascents"
 <!-- QUICKSTATS_END -->
 
 **Researched:** 2026-05-28
+
 **CalTopo research map:** https://caltopo.com/m/P2V1QG5
+
+**Trip NOAA weather:** [NOAA point forecast](https://forecast.weather.gov/MapClick.php?lat=39.26461&lon=-106.14243) (same target as 14ers / LoJ / peakbagger weather links)
+
 **Status in DB:** 0 ascents (unclimbed). **Cluster status:**
 - ✗ **No unclimbed ranked 13ers within 8 mi** — Bartlett Mtn at 7.82 mi is the only one and it's on the opposite side of Climax Mine (different approach entirely)
 - ✓ Every other Mosquito Range 13er and 14er within 8 mi is done: London Mtn (1.62), Mt Evans B (2.19), Dyer Mtn (2.79), Mt Sherman (3.12), Mosquito Peak (3.28), Mt Buckskin (3.91), Mt Tweto (4.23), Mt Sheridan (4.46), Arkansas Mtn (5.07), Mt Democrat (5.18), Mt Bross (5.23), Horseshoe Mtn A (5.94), Mt Lincoln (6.22), Clinton Pk (7.16), N Star Mtn (7.82)
@@ -46,7 +50,6 @@ status_source: "peak_db ascents"
 |---|---|
 | Elevation | 13,013' (LiDAR; map 13,006') |
 | Lat / Lon | 39.26461, −106.14243 |
-| Weather | [NOAA forecast](https://forecast.weather.gov/MapClick.php?lat=39.26461&lon=-106.14243) (same target as 14ers / LoJ / peakbagger weather links) |
 | 14ers.com peak page | https://www.14ers.com/peaks/10275/13er-pennsylvania-mountain |
 | 14ers.com SE Ridge route | https://www.14ers.com/route.php?route=2021042410280187761 |
 | listsofjohn.com | https://listsofjohn.com/peak/812 |
@@ -61,10 +64,10 @@ status_source: "peak_db ascents"
 | Member ascents | 724 (14ers) + 270 (LoJ) — heavily climbed |
 
 ![Overview map](../maps/pennsylvania_mountain.png)
+
 <!-- PROVENANCE_START -->
-*The recommended route was distilled from **10 recorded GPS tracks** of real trips (recorded trips) — all layered on the [interactive CalTopo research map](https://caltopo.com/m/P2V1QG5).*
+*Note: the recommended route was distilled from **10 recorded GPS tracks** of real trips (recorded trips) — all layered on the [interactive CalTopo research map](https://caltopo.com/m/P2V1QG5).*
 <!-- PROVENANCE_END -->
-*[Interactive CalTopo map](https://caltopo.com/m/P2V1QG5)*
 
 ---
 
@@ -220,19 +223,6 @@ The 14ers.com route. The quickest, easiest, most documented option of any peak o
 - `pennsylvania_summit_TH.gpx` — summit + Pika TH waypoints
 - `pennsylvania_route_recommended.gpx` — from Stratmoen 7388 (winter validation of the standard line)
 
----
-
-## TL;DR
-
-- **Recommended trip:** **Pika TH → Southeast Ridge → summit**. **4.75 mi RT, 1,500' gain, Class 1.** Sub-2-hour ascent for fit hikers (Eli Boardman 2024: 1h 39m). The closest thing to a drive-up 13er on the closest-5 list.
-- **THE quickest option** of any unclimbed CO 13er under 4,000' gain on Kyle's list. By a lot. **Drive 2h, hike 4 hours total, drive 2h** = single day, easily.
-- **Year-round access** — Pika TH lot is accessible all seasons. Winter: snowshoes from ~12,200'. Mellow ski tour option.
-- **Use the Pika TH** off Hwy 9 via Sacramento Creek. Be aware: parking is now ~¼ mi down from old GPX tracks (Wahr 7/23/2023).
-- **DO NOT** approach via South Mosquito Creek / CR 696 from Mosquito Pass Rd — hostile London Mine claim-holder enforcement (RyanSchilling 2018)
-- **DO NOT** try the Sacramento Creek-to-Sherman loop — narrow strip of private "No Trespassing" land in the middle blocks it (Wahr 2023)
-- **Truly standalone day** — the Mosquito Range is essentially done for Kyle's ranked-13er+ list. Bartlett Mtn 7.82 mi away on the opposite side of Climax Mine is the closest unclimbed ranked peer, different drive entirely.
-- **Cell:** strong — exposed SE ridge with LOS to Hwy 9 / Fairplay corridor
-- **Drive:** **2h 5m from Boulder** — easy day trip
 
 ---
 

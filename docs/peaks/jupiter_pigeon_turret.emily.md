@@ -36,7 +36,7 @@ status_source: "scrape_14ers_checklist emily"
 <!-- QUICKSTATS_START -->
 
 !!! tip "At a glance — 3-day trip"
-    **5 peaks** · **trip total ~30.4 mi · ~15,809 ft** · **~7.4 h drive** · [weather](https://forecast.weather.gov/MapClick.php?lat=37.66&lon=-107.63)
+    **5 peaks** · **trip total ~30.4 mi · ~15,809 ft** · **~7.4 h drive**
 
     - **Pack-in (Needleton → Chicago Basin camp):** **5.9 mi** · **2,643 ft** gain
     - **Day 1 (Jupiter):** **6.4 mi** · **3,051 ft** gain · **Class 2+** · 1 peak
@@ -50,15 +50,19 @@ status_source: "scrape_14ers_checklist emily"
 *Written for **Emily** — all five unclimbed on her 14ers checklist. Pigeon (CO rank #58), Jupiter (#91) and Turret (#92) are **centennial 13ers**; Animas (#113) and Monitor (#143) are bicentennials. (Ranks = elevation rank among Colorado's ranked 13ers + 14ers.)*
 
 **Researched:** 2026-07-10
-**Report type:** Multi-day train-served backpack — two basins, one camp move over 13,000'
+
 **CalTopo research map:** https://caltopo.com/m/MU0K4JT
+
+**Trip NOAA weather:** [point forecast — Needle Mtns](https://forecast.weather.gov/MapClick.php?lat=37.66&lon=-107.63) (one forecast covers both basins)
+
 **Shareable link (sanitized — safe to forward to anyone):** <https://mtn-share.pages.dev/s/e6d42c6c59b6cda8/> — no names, climbed status, or research maps; expires ~2026-11-08 (regenerate anytime: `share_report.py jupiter_pigeon_turret`)
+
 **Status for Emily:** All **five unclimbed**. Pigeon's mile-high "Matterhorn" face over the Animas is the most dramatic summit profile in the Needles.
 
 ![Overview map](../maps/jupiter_pigeon_turret.png)
 
 <!-- PROVENANCE_START -->
-*The recommended route was distilled from **31 recorded GPS tracks** of real trips (14ers.com · ListsofJohn · peakbagger · Kyle's recordings) — all layered on the [interactive CalTopo research map](https://caltopo.com/m/MU0K4JT).*
+*Note: the recommended route was distilled from **31 recorded GPS tracks** of real trips (14ers.com · ListsofJohn · peakbagger · Kyle's recordings) — all layered on the [interactive CalTopo research map](https://caltopo.com/m/MU0K4JT).*
 <!-- PROVENANCE_END -->
 
 ---
@@ -84,7 +88,6 @@ status_source: "scrape_14ers_checklist emily"
 | Hardest move | **Class 4** — Pigeon's summit slot & Monitor's saddle ribs |
 | Access | **D&SNG railroad** Durango → Needleton flag stop ([schedule/backpacker tickets](https://www.durangotrain.com)) — no road anywhere near |
 | Drive from Highland | **[~7h 22m / 336 mi via Google Maps](https://www.google.com/maps/dir/?api=1&origin=Highland,+Denver,+CO&destination=37.2694,-107.8817)** to the Durango depot |
-| Weather | [NOAA point forecast — Needle Mtns](https://forecast.weather.gov/MapClick.php?lat=37.66&lon=-107.63) (one forecast covers both basins) |
 
 ---
 
@@ -174,6 +177,7 @@ Class 4, but short), and the Sunday walk-out is all downhill with no train-time 
 ### Pack-in (Day 0) — Needleton → Chicago Basin
 
 **5.9 mi · ~2,640 ft measured** (composed from recorded tracks) on the maintained
+
 **Needle Creek Trail**: cross the footbridge, turn south, and climb steadily through
 aspen then spruce to the **camp cluster at ~11,000'** — the realistic summer camping
 in Chicago Basin (the tundra above ~11,200' is not campable terrain). Every other
@@ -340,23 +344,3 @@ Chicago–Ruby move → Pigeon–Turret → Ruby hike-out), all layered on the
 system this report's numbers cross-check against).
 
 **Sources checked:** 14ers.com · listsofjohn.com · peakbagger.com · climb13ers.com
-
----
-
-## TL;DR
-
-- **Your plan is the right shape and the right direction** — train to Needleton, Chicago
-  Basin for Jupiter (Cl 2+), over Twin Thumbs + Ruby passes with camp, Pigeon + Turret
-  from Ruby (Cl 4 crux slot on Pigeon; do Turret first), out via the Ruby trail to a
-  Needleton night and the morning train. It's the itinerary Kyle recorded in 2013.
-- **Take the optional Monitor-group day** — Monitor (Cl 4) + Peak Thirteen (free) +
-  Animas (Cl 3–4) from a cirque directly above the Ruby camp: ~3 mi round trip for two
-  more bicentennials.
-- **~30.5 mi / ~15,800 ft over 6 train-bound days** (~26.5 / ~12,650 without the
-  option) — every line on the map is composed camp-to-camp from recorded tracks and
-  chains TH→camp→camp→TH, so the magenta system IS the navigation plan.
-- **The camp move is a real mountain day:** two ~13,000' passes with full packs, all
-  above treeline — weather rules it.
-- **Book the train early** ([durangotrain.com](https://www.durangotrain.com)), helmets +
-  early starts, goat/marmot discipline at camp, InReach always.
-- **Research map:** https://caltopo.com/m/MU0K4JT

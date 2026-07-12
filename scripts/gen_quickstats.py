@@ -59,7 +59,10 @@ def render(meta):
     detail = meta.get("days_detail")
     drive = meta.get("drive_h")
     drive_s = f"~{drive:g} h drive" if drive is not None else None
-    wx = meta.get("weather")            # one central NOAA link (peaks ≤6 mi apart)
+    # NOTE: the report-level `weather:` link is NOT rendered here — it lives as a
+    # "Trip NOAA weather" line under the CalTopo link (Kyle, 2026-07-11). Per-day
+    # wx links (days_detail, peaks >6 mi apart) still render on their day lines.
+    wx = None
     lines = []
     if detail:
         # Trip: a summary line (peaks · drive · central weather), then one list

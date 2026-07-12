@@ -28,15 +28,17 @@ status_source: "peak_db ascents"
 <!-- QUICKSTATS_END -->
 
 **Researched:** 2026-06-02
-**Report type:** Day trip (2 ranked 13ers, one outing)
+
 **CalTopo research map:** https://caltopo.com/m/GG1BKFL
+
+**Trip NOAA weather:** [NOAA point forecast](https://forecast.weather.gov/MapClick.php?lat=39.76009&lon=-106.34074) (same target as 14ers / LoJ / peakbagger weather links) | [NOAA forecast](https://forecast.weather.gov/MapClick.php?lat=39.77559&lon=-106.3504)
 **Status in DB:** Both 0 ascents (unclimbed). **Mount Powell is the highest peak in the Gore Range.**
 
 ![Overview map](../maps/powell_eagles_nest.png)
+
 <!-- PROVENANCE_START -->
-*The recommended route was distilled from **21 recorded GPS tracks** of real trips (recorded trips) — all layered on the [interactive CalTopo research map](https://caltopo.com/m/GG1BKFL).*
+*Note: the recommended route was distilled from **21 recorded GPS tracks** of real trips (recorded trips) — all layered on the [interactive CalTopo research map](https://caltopo.com/m/GG1BKFL).*
 <!-- PROVENANCE_END -->
-*[Interactive CalTopo map](https://caltopo.com/m/GG1BKFL)*
 
 ---
 
@@ -50,7 +52,6 @@ status_source: "peak_db ascents"
 |---|---|---|
 | Elevation (LiDAR) | 13,556' | 13,419' |
 | Lat / Lon | 39.76009, −106.34074 | 39.77559, −106.3504 |
-| Weather | [NOAA forecast](https://forecast.weather.gov/MapClick.php?lat=39.76009&lon=-106.34074) (same target as 14ers / LoJ / peakbagger weather links) | [NOAA forecast](https://forecast.weather.gov/MapClick.php?lat=39.77559&lon=-106.3504) |
 | Class (standard) | 2 | 3 |
 | 14ers.com peak page | [10218](https://www.14ers.com/peaks/10218/13er-mount-powell-a) | [10219](https://www.14ers.com/peaks/10219/13er-eagles-nest) |
 | listsofjohn.com | [245](https://listsofjohn.com/peak/245) | [380](https://listsofjohn.com/peak/380) |
@@ -139,13 +140,3 @@ A **standard combination**. The recent trip reports that hit either peak do both
 
 **Sources checked:** 14ers.com · listsofjohn.com · peakbagger.com
 
----
-
-## TL;DR
-
-- **The plan:** Mount Powell + Eagles Nest as one day from **Piney Lake** via the Upper Piney River trail. **~12–14 mi, ~5,500–7,000 ft, Class 2** (Powell) + **Class 3** (Eagles Nest + the connecting ridge).
-- **Well-established combo** — all the recent TRs do both together. Each is a true ranked partner for the other.
-- **Bags the Gore Range high point** (Powell) plus its neighbor in one outing.
-- **Drive:** [3h 5m / 129 mi](https://www.google.com/maps/dir/?api=1&origin=1162+Peakview+Circle,+Boulder,+CO+80302&destination=39.7203,-106.4051) from home — the *closest* of the deep-Gore 13ers, but a long day once you're hiking.
-- **Big committing day** — alpine start, InReach, Class 3 ridge scrambling on Gore rock. Best July–September.
-- **Research map:** https://caltopo.com/m/GG1BKFL — 21 GPX tracks layered, colored by source.

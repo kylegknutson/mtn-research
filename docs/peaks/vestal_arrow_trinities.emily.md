@@ -45,16 +45,20 @@ status_source: "scrape_14ers_checklist emily"
 *Written for **Emily** — all five unclimbed on her 14ers checklist. Vestal, Arrow, and Trinity are **centennial (top-100) 13ers**; West and East Trinity are bicentennials.*
 
 **Researched:** 2026-07-10
-**Report type:** Multi-day backpack trip — 5 ranked 13ers from a Vestal Basin camp over 2 climbing days
+
 **CalTopo research map:** https://caltopo.com/m/4MR73J3
+
+**Trip NOAA weather:** [NOAA point forecast](https://forecast.weather.gov/MapClick.php?lat=37.689&lon=-107.603) (peaks are ≤1.5 mi apart — one forecast covers all five)
+
 **Shareable link (sanitized — safe to forward to anyone):** <https://mtn-share.pages.dev/s/33fc621f3fbca2fe/> — no names, climbed status, or research maps; expires ~2026-11-08 (regenerate anytime: `share_report.py vestal_arrow_trinities`)
+
 **Status for Emily:** All **five unclimbed**. This is the heart of the Grenadiers — quartzite peaks that most consider the most beautiful climbing terrain in the San Juans.
 
 ![Overview map](../maps/vestal_arrow_trinities.png)
+
 <!-- PROVENANCE_START -->
-*The recommended route was distilled from **33 recorded GPS tracks** of real trips (14ers.com · ListsofJohn · peakbagger · Kyle's recordings) — all layered on the [interactive CalTopo research map](https://caltopo.com/m/4MR73J3).*
+*Note: the recommended route was distilled from **33 recorded GPS tracks** of real trips (14ers.com · ListsofJohn · peakbagger · Kyle's recordings) — all layered on the [interactive CalTopo research map](https://caltopo.com/m/4MR73J3).*
 <!-- PROVENANCE_END -->
-*[Interactive CalTopo map](https://caltopo.com/m/4MR73J3) — 30 swept GPX tracks layered by source, plus the two composed day routes (magenta).*
 
 ---
 
@@ -80,8 +84,6 @@ status_source: "scrape_14ers_checklist emily"
 | Style | Backpack via Elk Creek (Colorado Trail) to a **Vestal Basin camp (11,300–11,760')** |
 | Hardest move | **5.4** (Wham Ridge crux) · Day 2 is Class 4 (Trinity chimney) |
 | Drive from Highland | **[~7h 35m / 361 mi via Google Maps](https://www.google.com/maps/dir/?api=1&origin=Highland,+Denver,+CO&destination=37.7476,-107.6885)** to Molas Pass |
-| Weather | [NOAA point forecast — Vestal Basin](https://forecast.weather.gov/MapClick.php?lat=37.689&lon=-107.603) (peaks are ≤1.5 mi apart — one forecast covers all five) |
-
 ---
 
 ## Peaks covered
@@ -271,19 +273,3 @@ Trinity W Ridge 4, E Trinity W Ridge 3, camp-based mileages).
 
 **Sources checked:** 14ers.com · listsofjohn.com · peakbagger.com · climb13ers.com
 
----
-
-## TL;DR
-
-- **Five ranked 13ers (three centennials) from one gorgeous basin camp** — exactly the
-  plan Emily described: pack in from Molas Pass, **Wham Ridge (5.4) + Arrow (Cl 3)** one
-  day, the **Trinity traverse W→E (Cl 4 crux chimney)** the next, pack out.
-- **This is a climbing trip, not a hike** — hardest move 5.4 on Wham (rope optional but
-  reasonable), exposed Class 4 on Trinity, and Vestal's descent has a notorious
-  wrong-gully trap. Helmets on everything.
-- **~32.5 mi / ~13,300 ft over 4 days** (10 mi pack-in each way with a ~1,750' Animas
-  climb on exit; climbing days ~6.5 mi each from camp — all measured recorded lines).
-- **Drive: [~7h 35m from Highland](https://www.google.com/maps/dir/?api=1&origin=Highland,+Denver,+CO&destination=37.7476,-107.6885)** to the Molas Pass CT lot (paved, any car).
-- **Mid-July–September, dry rock only** for Wham; storms build fast — summit early.
-- **No cell anywhere — carry an InReach.** And hide everything from the marmots.
-- **Research map:** https://caltopo.com/m/4MR73J3

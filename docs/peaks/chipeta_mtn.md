@@ -28,17 +28,21 @@ status_source: "peak_db ascents"
 <!-- QUICKSTATS_END -->
 
 **Researched:** 2026-06-02
+
 **CalTopo research map:** https://caltopo.com/m/CDMT01G
+
+**Trip NOAA weather:** [NOAA point forecast](https://forecast.weather.gov/MapClick.php?lat=38.44767&lon=-106.24077) (same target as 14ers / LoJ / peakbagger weather links)
+
 **Status in DB:** 0 ascents (unclimbed). **Cluster status:**
 - ✗ **No unclimbed ranked 13er within 8 mi** — the nearby high points are sub-13k (Chipeta Mtn South 12,874', Pahlone Peak 12,670') and don't count as ranked combos.
 - **Mt Ouray** (13,979', ~3 mi NW) is the one ranked neighbor and the classic big-day pairing (josephnephi did Chipeta + Ouray), but it's a substantial separate climb — see Multi-peak note.
 - **Effectively a standalone day** at standard execution.
 
 ![Overview map](../maps/chipeta_mtn.png)
+
 <!-- PROVENANCE_START -->
-*The recommended route was distilled from **10 recorded GPS tracks** of real trips (recorded trips) — all layered on the [interactive CalTopo research map](https://caltopo.com/m/CDMT01G).*
+*Note: the recommended route was distilled from **10 recorded GPS tracks** of real trips (recorded trips) — all layered on the [interactive CalTopo research map](https://caltopo.com/m/CDMT01G).*
 <!-- PROVENANCE_END -->
-*[Interactive CalTopo map](https://caltopo.com/m/CDMT01G)*
 
 ---
 
@@ -52,7 +56,6 @@ status_source: "peak_db ascents"
 |---|---|
 | Elevation (LiDAR) | 13,495' |
 | Lat / Lon | 38.44767, −106.24077 |
-| Weather | [NOAA forecast](https://forecast.weather.gov/MapClick.php?lat=38.44767&lon=-106.24077) (same target as 14ers / LoJ / peakbagger weather links) |
 | Class (standard) | 2 |
 | Range | Sawatch (southern, Marshall Pass area) |
 | 14ers.com peak page | [10745](https://www.14ers.com/peaks/10745/13er-chipeta-mountain) |
@@ -133,12 +136,3 @@ A high, mellow tundra walk — one of the easier southern-Sawatch 13ers once you
 
 **Sources checked:** 14ers.com · listsofjohn.com · peakbagger.com
 
----
-
-## TL;DR
-
-- **Standalone day** from **Marshall Pass**: **~7.7 mi RT / ~3,450 ft (DEM)**, **Class 2** tundra walk along the Continental Divide. Gentle grade, but a real 2,630′ net climb to the summit — not the short outing some TRs suggest.
-- **Drive:** [4h 13m / 181 mi](https://www.google.com/maps/dir/?api=1&origin=1162+Peakview+Circle,+Boulder,+CO+80302&destination=38.3942,-106.2472) from home — the long pole here is the drive, not the climb.
-- **No ranked-13er neighbor within 8 mi** — effectively solo. For two ranked summits per the drive, pair with **Mt Ouray** (13,979', big-day add).
-- **Good early/late-season pick** — high, dry, wind-exposed Divide; 2WD to the pass in summer.
-- **Research map:** https://caltopo.com/m/CDMT01G — 10 GPX tracks layered, colored by source.

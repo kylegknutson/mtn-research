@@ -29,15 +29,15 @@ dist_mi: 20.8
 
 *Written for **Emily** — all seven unclimbed on her 14ers checklist.*
 
-**Report type:** Multi-peak loop (7 ranked 13ers around the Lakes of the Clouds cirque)
 **CalTopo research map:** https://caltopo.com/m/J9G39T0
+
 **Status for Emily:** All **seven unclimbed**. A horseshoe of ranked 13ers ringing the Lakes of the Clouds, northern Sangres.
 
 ![Overview map](../maps/lakes_of_clouds_loop.png)
+
 <!-- PROVENANCE_START -->
-*The recommended route was distilled from **68 recorded GPS tracks** of real trips (Kyle's recordings) — all layered on the [interactive CalTopo research map](https://caltopo.com/m/J9G39T0).*
+*Note: the recommended route was distilled from **68 recorded GPS tracks** of real trips (Kyle's recordings) — all layered on the [interactive CalTopo research map](https://caltopo.com/m/J9G39T0).*
 <!-- PROVENANCE_END -->
-*[Interactive CalTopo map](https://caltopo.com/m/J9G39T0)*
 
 ---
 
@@ -136,13 +136,3 @@ The loop is well documented as N + S arcs:
 
 **Sources checked:** 14ers.com · listsofjohn.com · peakbagger.com
 
----
-
-## TL;DR
-
-- **Seven ranked 13ers in one horseshoe** around the **Lakes of the Clouds** (northern Sangres) — all **Class 2**, all unclimbed for Emily.
-- **The challenge is size, not difficulty:** ~15–24 mi and ~8,000–12,000 ft for the full loop. **Best as a 2-day** with a camp at the lakes (north arc + south arc); a brutal single push for the very fit.
-- **Drive:** [3h 24m / 183 mi](https://www.google.com/maps/dir/?api=1&origin=Highland,+Denver,+CO&destination=38.1006,-105.7707) from Highland to the **Wild Cherry Creek TH** (SLV side).
-- **Beta = the GPX.** No signed standard route; follow the logged ridge tracks on the [research map](https://caltopo.com/m/J9G39T0). Route-finding, false summits, drops/​regains between peaks.
-- **Remote + committing:** InReach, early start, ridge bail plan, July–September.
-- **Research map:** https://caltopo.com/m/J9G39T0 — 20 GPX tracks layered, colored by source.

@@ -34,15 +34,17 @@ status_source: "peak_db ascents"
 <!-- QUICKSTATS_END -->
 
 **Researched:** 2026-06-07
-**Report type:** **2-day basecamp Trip** (3 ranked 13ers) — **Day 1 Star + Taylor**, **Day 2 Italian** from one camp near the end of CO 742; *or* link all three in one long day.
+
 **CalTopo research map:** https://caltopo.com/m/J6HBR6S
+
+**Trip NOAA weather:** [NOAA point forecast](https://forecast.weather.gov/MapClick.php?lat=38.97963&lon=-106.79967) (same target as 14ers / LoJ / peakbagger weather links) | [NOAA forecast](https://forecast.weather.gov/MapClick.php?lat=38.99204&lon=-106.78261) | [NOAA forecast](https://forecast.weather.gov/MapClick.php?lat=38.94532&lon=-106.75214)
 **Status in DB:** All three 0 ascents (unclimbed). These are the core unclimbed ranked 13ers of the **East Taylor Park / Star Pass cluster** — the densest pocket of unclimbed ranked 13ers on Kyle's near-term list.
 
 ![Overview map](../maps/star_peak_group.png)
+
 <!-- PROVENANCE_START -->
-*The recommended route was distilled from **7 recorded GPS tracks** of real trips (recorded trips) — all layered on the [interactive CalTopo research map](https://caltopo.com/m/J6HBR6S).*
+*Note: the recommended route was distilled from **7 recorded GPS tracks** of real trips (recorded trips) — all layered on the [interactive CalTopo research map](https://caltopo.com/m/J6HBR6S).*
 <!-- PROVENANCE_END -->
-*[Interactive CalTopo map](https://caltopo.com/m/J6HBR6S)*
 
 ---
 
@@ -56,7 +58,6 @@ status_source: "peak_db ascents"
 |---|---|---|---|
 | Elevation (LiDAR) | 13,527' (map 13,521') | 13,438' | 13,385' |
 | Lat / Lon | 38.97963, −106.79967 | 38.99204, −106.78261 | 38.94532, −106.75214 |
-| Weather | [NOAA forecast](https://forecast.weather.gov/MapClick.php?lat=38.97963&lon=-106.79967) (same target as 14ers / LoJ / peakbagger weather links) | [NOAA forecast](https://forecast.weather.gov/MapClick.php?lat=38.99204&lon=-106.78261) | [NOAA forecast](https://forecast.weather.gov/MapClick.php?lat=38.94532&lon=-106.75214) |
 | Class (standard) | 2 | 2 | 2 |
 | CO Rank | 241 | 299 | 331 |
 | Prominence | — | 817' | 1,357' |
@@ -181,15 +182,3 @@ Ascent GPX tracks pulled for all three (Star aid 1533069, Taylor aid 1533019, It
 
 **Sources checked:** 14ers.com ✓ (logged in, "Basin") · listsofjohn.com ✓ (logged in, "letsgocu") · peakbagger.com ✓ (logged in, "Kyle Knutson")
 
----
-
-## TL;DR
-
-- **Three unclimbed ranked Class 2 13ers** — Star (13,527'), Taylor (13,438'), Italian (13,385') — all off the **Taylor Park / Mt Tilton Trail** side (end of CO 742).
-- **Best plan:** weekend basecamp — **Day 1 Star + Taylor** (~8.6 mi, ~4,300', the clean pair) + **Day 2 Italian** (short half-day with American Flag). Or link **all three in one ~14–17 mi / ~6,500–8,000 ft day** (josephnephi proved the on-foot link).
-- **All Class 2** — tundra/talus, no technical difficulty; long exposure on the big day.
-- **Access gate:** Cottonwood Pass / CO 742 is **seasonally closed** (≈ late May–late October) — verify before driving.
-- **Drive:** [3h 40m](https://www.google.com/maps/dir/?api=1&origin=1162+Peakview+Circle,+Boulder,+CO+80302&destination=38.987,-106.757) from home to the Mt Tilton TH.
-- **Separate trip from Pearl + Oyster** — those neighbors are only ~3.5 mi away on foot but **~4 hours by car** (opposite, Aspen side of the crest). See the [Pearl + Oyster report](pearl_oyster.md).
-- **Cell:** likely dead at TH; carry an InReach.
-- **Research map:** https://caltopo.com/m/J6HBR6S

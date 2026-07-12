@@ -28,15 +28,17 @@ status_source: "peak_db ascents"
 <!-- QUICKSTATS_END -->
 
 **Researched:** 2026-06-08
-**Report type:** Day trip (2 ranked 13ers, one outing)
+
 **CalTopo research map:** https://caltopo.com/m/11EMC0L
+
+**Trip NOAA weather:** [NOAA point forecast](https://forecast.weather.gov/MapClick.php?lat=37.99556&lon=-107.50870) (same target as 14ers / LoJ / peakbagger weather links) | [NOAA forecast](https://forecast.weather.gov/MapClick.php?lat=37.99263&lon=-107.53414)
 **Status in DB:** Both 0 ascents (unclimbed). A natural pair on the **American Flats / Engineer Pass** side of the Uncompahgre high country (Lake City / Henson Creek access).
 
 ![Overview map](../maps/sunshine_13094.png)
+
 <!-- PROVENANCE_START -->
-*The recommended route was distilled from **8 recorded GPS tracks** of real trips (14ers.com · ListsofJohn · peakbagger) — all layered on the [interactive CalTopo research map](https://caltopo.com/m/11EMC0L).*
+*Note: the recommended route was distilled from **8 recorded GPS tracks** of real trips (14ers.com · ListsofJohn · peakbagger) — all layered on the [interactive CalTopo research map](https://caltopo.com/m/11EMC0L).*
 <!-- PROVENANCE_END -->
-*[Interactive CalTopo map](https://caltopo.com/m/11EMC0L)*
 
 ---
 
@@ -50,7 +52,6 @@ status_source: "peak_db ascents"
 |---|---|---|
 | Elevation (LiDAR) | 13,329' (pre-LiDAR 13,321') | 13,094' (pre-LiDAR 13,093'; 14ers ~13,099') |
 | Lat / Lon | 37.99556, −107.50870 | 37.99263, −107.53414 |
-| Weather | [NOAA forecast](https://forecast.weather.gov/MapClick.php?lat=37.99556&lon=-107.50870) (same target as 14ers / LoJ / peakbagger weather links) | [NOAA forecast](https://forecast.weather.gov/MapClick.php?lat=37.99263&lon=-107.53414) |
 | Class (standard) | 2 | 2 |
 | CO Rank | 371 | 571 |
 | Prominence | 1,088' | 348' |
@@ -160,14 +161,3 @@ Ascent GPX pulled for both — Sunshine (pid 15112) and PT 13,094 (pid 19480), 2
 
 **Sources checked:** 14ers.com ✓ (logged in, "Basin") · listsofjohn.com ✓ (logged in, "letsgocu") · peakbagger.com ✓ (logged in, "Kyle Knutson")
 
----
-
-## TL;DR
-
-- **Sunshine Mtn A (13,329') + PT 13,094**, ~1.4 mi apart on a Class 2 ridge — a clean pair, done together in every TR (usually + sub-13k Dolly Varden).
-- **The plan:** Henson Creek / American Flats spur (~11,000') → PT 13,094 ↔ Sunshine ridge → out. **~6.5 mi, ~3,300–5,400 ft, Class 2.** A moderate day.
-- **"13,099" = PT 13,094** (LiDAR 13,094'; 14ers may show 13,099') — the only unclimbed ranked 13er adjacent to Sunshine.
-- **Long drive:** [7h 31m](https://www.google.com/maps/dir/?api=1&origin=1162+Peakview+Circle,+Boulder,+CO+80302&destination=37.978,-107.541) to the Henson Creek (Lake City) side — plan it as an overnight, not a day trip from Boulder.
-- **Optional scramble:** add "Dragon's Back" (roped, 30 m) + Blackwall for a 16-mi American Flats traverse.
-- **Season:** July–September; rough 4WD up high. Cell dead — carry an InReach.
-- **Research map:** https://caltopo.com/m/11EMC0L (7 GPX tracks, source-colored).

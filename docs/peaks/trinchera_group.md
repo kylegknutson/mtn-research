@@ -28,17 +28,19 @@ status_source: "peak_db ascents"
 <!-- QUICKSTATS_END -->
 
 **Researched:** 2026-06-09
-**Report type:** Day trip (4 ranked 13ers, one crest traverse)
+
 **CalTopo research map:** https://caltopo.com/m/K7F110T
+
+**Trip NOAA weather:** [NOAA point forecast](https://forecast.weather.gov/MapClick.php?lat=37.28911&lon=-105.16478) | [NOAA](https://forecast.weather.gov/MapClick.php?lat=37.27470&lon=-105.15982) | [NOAA](https://forecast.weather.gov/MapClick.php?lat=37.25837&lon=-105.15456) | [NOAA](https://forecast.weather.gov/MapClick.php?lat=37.24923&lon=-105.15352) (same target on all sites)
 **Status in DB:** All four 0 ascents (unclimbed). The northern **Culebra Range** crest, done as one N→S ridge traverse.
 
 > **Access — public east side, NOT the Cielo Vista Ranch fee:** these summits sit on the **Culebra crest**, the east edge of Cielo Vista Ranch. The standard way to climb all four is from the **public Blue Lakes Trailhead (Cuchara / east side, San Isabel NF)** — NE slopes up Trinchera, then the ridge south. No ranch reservation/fee is needed for this east-side traverse (the ranch is *west* of the crest). (whileyh 2019; [stavislost route writeup](https://www.stavislost.com/hikes/trail/trinchera-peak-and-cuatro-peak-traverse).)
 
 ![Overview map](../maps/trinchera_group.png)
+
 <!-- PROVENANCE_START -->
-*The recommended route was distilled from **12 recorded GPS tracks** of real trips (14ers.com · ListsofJohn · peakbagger) — all layered on the [interactive CalTopo research map](https://caltopo.com/m/K7F110T).*
+*Note: the recommended route was distilled from **12 recorded GPS tracks** of real trips (14ers.com · ListsofJohn · peakbagger) — all layered on the [interactive CalTopo research map](https://caltopo.com/m/K7F110T).*
 <!-- PROVENANCE_END -->
-*[Interactive CalTopo map](https://caltopo.com/m/K7F110T)*
 
 ---
 
@@ -52,7 +54,6 @@ status_source: "peak_db ascents"
 |---|---|---|---|---|
 | Elevation | 13,522' | 13,218' | 13,492' | 13,337' |
 | Lat / Lon | 37.28911, −105.16478 | 37.27470, −105.15982 | 37.25837, −105.15456 | 37.24923, −105.15352 |
-| Weather | [NOAA](https://forecast.weather.gov/MapClick.php?lat=37.28911&lon=-105.16478) | [NOAA](https://forecast.weather.gov/MapClick.php?lat=37.27470&lon=-105.15982) | [NOAA](https://forecast.weather.gov/MapClick.php?lat=37.25837&lon=-105.15456) | [NOAA](https://forecast.weather.gov/MapClick.php?lat=37.24923&lon=-105.15352) (same target on all sites) |
 | Class | 2 | 2 | 2 | 2 |
 | CO Rank | 243 | 472 | 266 | 365 |
 | Prominence | 957' | 317' | 708' | 305' |
@@ -154,14 +155,3 @@ Ascent GPX pulled for all four — Trinchera (5923), Leaning South (96812), Cuat
 
 **Sources checked:** 14ers.com ✓ (logged in, "Basin") · listsofjohn.com ✓ (logged in, "letsgocu") · peakbagger.com ✓ (logged in, "Kyle Knutson")
 
----
-
-## TL;DR
-
-- **Four ranked Culebra-crest 13ers in one N→S traverse** — Trinchera (13,522') + Leaning South + Cuatro + Maxwell, all Class 2, ~2.8 mi of ridge.
-- **Public east-side approach — NO Cielo Vista Ranch fee.** From **Blue Lakes TH (Cuchara / CO-12)**: NE slopes up Trinchera, ridge run south, descend east. Ranch land is west of the crest — stay east.
-- **Big day:** **~14–18 mi, ~4,900–7,100 ft, Class 2** (whileyh did all 4 + Leaning North + English Saddle in 18.4 mi / 7,116'). Early start — long exposed crest.
-- **Bonus:** Leaning North Peak (13,112', ranked) is right on the traverse.
-- **Drive:** [4h 14m](https://www.google.com/maps/dir/?api=1&origin=1162+Peakview+Circle,+Boulder,+CO+80302&destination=37.31247,-105.13871) to Blue Lakes (La Veta / Cuchara) — one of the closer Sangre de Cristo trips.
-- **Season:** July–September; storms are the crux. Cell dead — carry an InReach.
-- **Research map:** https://caltopo.com/m/K7F110T

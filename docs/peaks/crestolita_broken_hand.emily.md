@@ -25,15 +25,16 @@ dist_mi: 3.9
 
 *Written for **Emily** — both peaks unclimbed on her 14ers checklist.*
 
-**Report type:** Day trip (2 ranked 13ers, one outing)
 **CalTopo research map:** https://caltopo.com/m/6TKA0RH
+
+**Trip NOAA weather:** [NOAA point forecast](https://forecast.weather.gov/MapClick.php?lat=37.95671&lon=-105.56665) | [NOAA forecast](https://forecast.weather.gov/MapClick.php?lat=37.9549&lon=-105.57561)
 **Status for Emily:** Both **unclimbed**. Crestone group satellites SW of Crestone Needle — the remaining ranked pair in the South Colony / Cottonwood cirque.
 
 ![Overview map](../maps/crestolita_broken_hand.png)
+
 <!-- PROVENANCE_START -->
-*The recommended route was distilled from **21 recorded GPS tracks** of real trips (recorded trips) — all layered on the [interactive CalTopo research map](https://caltopo.com/m/6TKA0RH).*
+*Note: the recommended route was distilled from **21 recorded GPS tracks** of real trips (recorded trips) — all layered on the [interactive CalTopo research map](https://caltopo.com/m/6TKA0RH).*
 <!-- PROVENANCE_END -->
-*[Interactive CalTopo map](https://caltopo.com/m/6TKA0RH)*
 
 ---
 
@@ -47,7 +48,6 @@ dist_mi: 3.9
 |---|---|---|
 | Elevation (LiDAR) | 13,575' | 13,264' |
 | Lat / Lon | 37.95671, −105.56665 | 37.9549, −105.57561 |
-| Weather | [NOAA forecast](https://forecast.weather.gov/MapClick.php?lat=37.95671&lon=-105.56665) | [NOAA forecast](https://forecast.weather.gov/MapClick.php?lat=37.9549&lon=-105.57561) |
 | Class (standard) | 3 | 2 (south face) |
 | Range / Wilderness | Sangre de Cristo / Sangre de Cristo Wilderness | same |
 | peak_db id | 258 | 524 |
@@ -107,11 +107,3 @@ This pairing is well documented — whileyh (2025), Alyson Kirk (2014), Furtherm
 
 **Sources checked:** 14ers.com · listsofjohn.com · peakbagger.com
 
----
-
-## TL;DR
-
-- **Both unclimbed for Emily.** Day trip from **South Colony Lakes** via Broken Hand Pass + the 0.6-mi connecting terrain. **~11–14 mi, ~6,400–7,100 ft, Class 3** (Broken Hand) + Class 2 (Crestolita).
-- **Drive:** [3h 26m / 162 mi](https://www.google.com/maps/dir/?api=1&origin=Highland,+Denver,+CO&destination=37.97592,-105.50657) from Highland to the South Colony 2WD lot.
-- Cleans up the last two ranked satellites of the Crestone cirque.
-- Big committing day — full alpine start, InReach, off the Class 3 ridge before storms.

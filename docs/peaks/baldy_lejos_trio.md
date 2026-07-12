@@ -31,17 +31,19 @@ status_source: "peak_db ascents (Kyle — climbed)"
     Kyle's recorded outing: **12.4 mi · 3,558 ft** as a **loop** from the West Willow upper TH — vs the ~11 mi / ~3,750 ft estimate below. Right trailhead, right loop; ~13% longer. GPS track on file.
 
 **Researched:** 2026-06-09
-**Report type:** Day trip — a Class 2 tundra trio north of San Luis Pass
+
 **CalTopo research map:** https://caltopo.com/m/4278RCG
+
+**Trip NOAA weather:** [NOAA point forecast](https://forecast.weather.gov/MapClick.php?lat=37.9941&lon=-107.0006) | [NOAA](https://forecast.weather.gov/MapClick.php?lat=37.9694&lon=-106.9872) | [NOAA](https://forecast.weather.gov/MapClick.php?lat=37.9466&lon=-107.0083)
 **Status in DB:** all three **climbed** (2026-06-13).
 
 > Western part of the seven-peak La Garita narrow-down. The eastern peaks are now two separate reports: the **[13,308 + 13,166 bridge pair](pt_13308_13166.md)** (same West Willow TH as this trio) and the **[13,026 + 13,408 pair](pt_13026_13408.md)** (Cochetopa / Eddiesville side).
 
 ![Overview map](../maps/baldy_lejos_trio.png)
+
 <!-- PROVENANCE_START -->
-*The recommended route was distilled from **9 recorded GPS tracks** of real trips (14ers.com · ListsofJohn) — all layered on the [interactive CalTopo research map](https://caltopo.com/m/4278RCG).*
+*Note: the recommended route was distilled from **9 recorded GPS tracks** of real trips (14ers.com · ListsofJohn) — all layered on the [interactive CalTopo research map](https://caltopo.com/m/4278RCG).*
 <!-- PROVENANCE_END -->
-*[Interactive CalTopo map](https://caltopo.com/m/4278RCG)* — 6 source GPX tracks (14ers library) in green, with the **recommended composed route in bold magenta**; 3 summit markers + the West Willow upper TH.
 
 ---
 
@@ -58,7 +60,6 @@ status_source: "peak_db ascents (Kyle — climbed)"
 | Class | 1+ / 2 (tundra) | 2 | 2 |
 | CO Rank | 553 | 556 | 619 |
 | Also known as | formerly UN 13,100 E | — | formerly UN 13,034 |
-| Weather | [NOAA](https://forecast.weather.gov/MapClick.php?lat=37.9941&lon=-107.0006) | [NOAA](https://forecast.weather.gov/MapClick.php?lat=37.9694&lon=-106.9872) | [NOAA](https://forecast.weather.gov/MapClick.php?lat=37.9466&lon=-107.0083) |
 | 14ers.com | [10562](https://www.14ers.com/php14ers/peak.php?peakid=10562) | [10554](https://www.14ers.com/php14ers/peak.php?peakid=10554) | [10591](https://www.14ers.com/php14ers/peak.php?peakid=10591) |
 | LoJ | [714](https://listsofjohn.com/peak/714) | [701](https://listsofjohn.com/peak/701) | [788](https://listsofjohn.com/peak/788) |
 | peakbagger | [84932](https://peakbagger.com/peak.aspx?pid=84932) | [84934](https://peakbagger.com/peak.aspx?pid=84934) | [84927](https://peakbagger.com/peak.aspx?pid=84927) |
@@ -141,14 +142,3 @@ Pages verified for all three; **ownership = La Garita Wilderness** (GMUG / Rio G
 
 **Sources checked:** 14ers.com ✓ (logged in, "letsgocu") · listsofjohn.com ✓ (logged in) · peakbagger.com ✓ (logged in) · climb13ers.com ✓
 
----
-
-## TL;DR
-
-- **Three ranked La Garita 13ers in one easy Class 2 tundra day** north of San Luis Pass: Baldy Lejos (13,118') + PT 13,115 + PT 13,030.
-- **Recommended ~11 mi / ~3,750' loop** (composed from real tracks; gain DEM-measured, matches CalTopo); recorded parties log **16–20 mi** because they wander and add unranked bumps. climb13ers' **10.2 mi / 2,630'** runs low on both. **Vehicle clearance + whether the 4WD road is open are the crux.**
-- **Trailhead:** West Willow Creek upper TH (~11,500'), up the rough road from Creede (¾ mi above town the road forks E/W Willow — take West Willow).
-- **La Garita Wilderness** — no permits, foot-only, dispersed camping OK.
-- **Drive:** ~5 h Boulder→Creede, then the 4WD road. Cell dead — InReach.
-- **Pairs naturally with the [13,308 + 13,166 bridge pair](pt_13308_13166.md)** from this same West Willow TH — together they're the **[West Willow La Garita 2-day trip](../trips/west_willow_la_garita.md)** (a strong party can link all five in one ~25 mi day); the [13,026 + 13,408 pair](pt_13026_13408.md) is a separate Cochetopa-side trip.
-- **Research map:** https://caltopo.com/m/4278RCG

@@ -28,7 +28,11 @@ status_source: "peak_db ascents"
 <!-- QUICKSTATS_END -->
 
 **Researched:** 2026-05-28
+
 **CalTopo research map:** https://caltopo.com/m/V4D61FV
+
+**Trip NOAA weather:** [NOAA point forecast](https://forecast.weather.gov/MapClick.php?lat=39.36757&lon=-106.41454) (same target as 14ers / LoJ / peakbagger weather links)
+
 **Status in DB:** 0 ascents (unclimbed). **Cluster status:**
 - ✗ **Savage Peak 5.72 mi unclimbed** ← also on Kyle's "do" list. See Multi-peak combo section below.
 - ✓ Done nearby (Holy Cross / Sawatch): Whitney Pk (5.37 mi), Fancy Pk (5.99), PT 13,786 (6.85), PT 13,253 (7.16), Holly Cross Ridge (7.38), Mt of the Holy Cross 14er (7.74)
@@ -47,7 +51,6 @@ status_source: "peak_db ascents"
 |---|---|
 | Elevation | 13,217' (LiDAR; map 13,209') |
 | Lat / Lon | 39.36757, −106.41454 |
-| Weather | [NOAA forecast](https://forecast.weather.gov/MapClick.php?lat=39.36757&lon=-106.41454) (same target as 14ers / LoJ / peakbagger weather links) |
 | 14ers.com peak page | https://www.14ers.com/peaks/10798/13er-homestake-peak |
 | listsofjohn.com | https://listsofjohn.com/peak/596 |
 | peakbagger.com | https://peakbagger.com/peak.aspx?pid=16688 |
@@ -64,10 +67,10 @@ status_source: "peak_db ascents"
 | 14ers winter ascents | 71 / Ski descents 61 — heavily skied peak |
 
 ![Overview map](../maps/homestake_peak.png)
+
 <!-- PROVENANCE_START -->
-*The recommended route was distilled from **10 recorded GPS tracks** of real trips (recorded trips) — all layered on the [interactive CalTopo research map](https://caltopo.com/m/V4D61FV).*
+*Note: the recommended route was distilled from **10 recorded GPS tracks** of real trips (recorded trips) — all layered on the [interactive CalTopo research map](https://caltopo.com/m/V4D61FV).*
 <!-- PROVENANCE_END -->
-*[Interactive CalTopo map](https://caltopo.com/m/V4D61FV)*
 
 ---
 
@@ -233,17 +236,6 @@ If you want the combo: design a 2-3 day Holy Cross-area backpacking trip (baseca
 - `homestake_summit_TH.gpx` — summit + Wurts Ditch parking + 10th Mtn Hut waypoints
 - `homestake_route_recommended.gpx` — from guttervan 16082 or josephnephi 15822 (most recent summer baselines)
 
----
-
-## TL;DR
-
-- **Recommended trip:** **Wurts Ditch parking → 10th Mtn Hut → Slide Lake → W ridge → summit → loop back**. Mapped line follows **guttervan's recorded loop: ~10.7 mi RT, ~3,217' gain, Class 2**; shortens toward **~7.8 mi / ~2,500'** if you drive 0.8 mi up past the gate, or extends to **13.6 mi / 3,551'** from the Crane Park / Hwy 24 gate (winter / pre-season)
-- **TRULY standalone day** under Kyle's "ranked 13er+ only" combo rule — Galena Mtn (12,900') is the natural ridge neighbor but sub-13k, so it doesn't count
-- **Homestake + Savage combo (both unclimbed, 5.72 mi apart):** geographically tempting but **no TR validates it as a same-day combo**. Different drainages. Treat as separate drives unless you want to design a 2-3 day Holy Cross basecamp trip
-- **Best season:** June–October for the easy 4WD-in version; **heavy ski touring use** Jan–April with 10th Mtn Hut reservations. Slide Lake basin = avalanche-named terrain
-- **TH directions:** Hwy 24 → Webster's Sand and Gravel Pit (mp 167.5) → FR 19 → FR 19A toward Slide Lake → parking before gate
-- **Cell:** weak in the basin, good on the ridge. Carry InReach
-- **Drive:** **3h 14m from Boulder**
 
 ---
 

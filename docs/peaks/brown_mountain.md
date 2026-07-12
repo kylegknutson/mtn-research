@@ -29,7 +29,11 @@ status_source: "peak_db ascents (Kyle — unclimbed)"
 <!-- QUICKSTATS_END -->
 
 **Researched:** 2026-05-14 (rev 4 — cluster status confirmed 5/15)
+
 **CalTopo research map:** https://caltopo.com/m/Q2C5650
+
+**Trip NOAA weather:** [NOAA point forecast](https://forecast.weather.gov/MapClick.php?lat=37.92078&lon=-108.63785) (same target as 14ers / LoJ / peakbagger weather links)
+
 **Status in your sheet:** 0 ascents (unclimbed). **Cluster status (Kyle confirmed 5/15):**
 - ✓ Done: Houghton, Tuttle, UN 13078, Hanson
 - ✗ **Unclimbed ranked 13ers nearby — pair with Brown:** **Bonita Pk** (1.81 mi from Brown), **Proposal Pk** (2.74 mi from Brown). See Multi-peak link-ups below.
@@ -47,17 +51,16 @@ status_source: "peak_db ascents (Kyle — unclimbed)"
 |---|---|
 | Elevation (LiDAR) | 13,347' (climb13ers + 14ers consensus); your sheet says 13,339' |
 | Lat / Lon | 37.92078, −108.63785 |
-| Weather | [NOAA forecast](https://forecast.weather.gov/MapClick.php?lat=37.92078&lon=-108.63785) (same target as 14ers / LoJ / peakbagger weather links) |
 | 14ers.com peak page | https://www.14ers.com/peaks/10441/13er-brown-mountain-a |
 | Range | San Juan Mountains |
 | Class (standard) | 2 |
 | Note | 3-mile ridgeline; high point is "DUCO Benchmark" |
 
 ![Overview map](../maps/brown_mountain.png)
+
 <!-- PROVENANCE_START -->
-*The recommended route was distilled from **6 recorded GPS tracks** of real trips (14ers.com · ListsofJohn · peakbagger) — all layered on the [interactive CalTopo research map](https://caltopo.com/m/Q2C5650).*
+*Note: the recommended route was distilled from **6 recorded GPS tracks** of real trips (14ers.com · ListsofJohn · peakbagger) — all layered on the [interactive CalTopo research map](https://caltopo.com/m/Q2C5650).*
 <!-- PROVENANCE_END -->
-*[Interactive CalTopo map](https://caltopo.com/m/Q2C5650)*
 
 ---
 
@@ -218,19 +221,6 @@ Earthline 8/11/2020 — 7.6 mi / 2,500' from Pt 12,947' high TH. Bags Brown + Ab
 
 **All layered on the CalTopo research map.**
 
----
-
-## TL;DR
-
-- **Recommended trip:** Drive Corkscrew Pass road from Ironton (US 550), park at the **Brown saddle (~11,755 ft, 37.91106, −107.65022)**. **~3 mi RT, ~1,600 ft gain, Class 2.** Steep grass to summit, watch for false summits.
-- **If you want the shortest hike:** drive all the way to Hurricane Pass top (~12,500 ft) — ~2-3 mi RT, ~700-900 ft gain. But you have to drive the narrow switchbacks.
-- **If you want the full workout / aspen colors:** park at Ironton, hike the full Neapolitan loop. 10 mi, 4,380 ft.
-- **Don't go for Brown alone** — **Bonita and Proposal are also unclimbed ranked 13ers**, both within ridge-walking distance.
-- **Recommended trip:** Brown + Bonita + Proposal from Silverton CR 25 via the whileyh 8-peak loop (drop the 5 already-done summits). ~10–12 mi, ~4,000–4,500 ft, Class 2. Measure exact stats off the GPX on the research map.
-- **Shorter alternative:** Brown + Bonita from Corkscrew Pass drive-in (~6–8 mi, ~2,800–3,500 ft). Saves Proposal for later.
-- **Best season:** July through early October. Don't drive after rain (slippery clay).
-- **Cluster context:** Houghton, Tuttle, UN 13078, Hanson are done. Hurricane / California / Emery are unranked 12ers, not tracked.
-- **Research map:** https://caltopo.com/m/Q2C5650 — yellow peaks, red trailheads, purple drive-in waypoints, green public track (Neapolitan), blue your imported tracks.
 
 ---
 

@@ -28,15 +28,17 @@ status_source: "peak_db ascents"
 <!-- QUICKSTATS_END -->
 
 **Researched:** 2026-05-31
-**Report type:** Day trip (2 ranked 13ers, one outing)
+
 **CalTopo research map:** https://caltopo.com/m/6TKA0RH
+
+**Trip NOAA weather:** [NOAA point forecast](https://forecast.weather.gov/MapClick.php?lat=37.95671&lon=-105.56665) (same target as 14ers / LoJ / peakbagger weather links) | [NOAA forecast](https://forecast.weather.gov/MapClick.php?lat=37.9549&lon=-105.57561)
 **Status in DB:** Both 0 ascents (unclimbed). **Crestone group context:** Crestone Peak, Crestone Needle, and Humboldt Peak are all ✓ done — these two are the remaining ranked satellites of the South Colony / Cottonwood cirque.
 
 ![Overview map](../maps/crestolita_broken_hand.png)
+
 <!-- PROVENANCE_START -->
-*The recommended route was distilled from **21 recorded GPS tracks** of real trips (recorded trips) — all layered on the [interactive CalTopo research map](https://caltopo.com/m/6TKA0RH).*
+*Note: the recommended route was distilled from **21 recorded GPS tracks** of real trips (recorded trips) — all layered on the [interactive CalTopo research map](https://caltopo.com/m/6TKA0RH).*
 <!-- PROVENANCE_END -->
-*[Interactive CalTopo map](https://caltopo.com/m/6TKA0RH)*
 
 ---
 
@@ -50,7 +52,6 @@ status_source: "peak_db ascents"
 |---|---|---|
 | Elevation (LiDAR) | 13,575' | 13,264' |
 | Lat / Lon | 37.95671, −105.56665 | 37.9549, −105.57561 |
-| Weather | [NOAA forecast](https://forecast.weather.gov/MapClick.php?lat=37.95671&lon=-105.56665) (same target as 14ers / LoJ / peakbagger weather links) | [NOAA forecast](https://forecast.weather.gov/MapClick.php?lat=37.9549&lon=-105.57561) |
 | Class (standard) | 3 | 2 (south face) |
 | CO Rank | 205 | 431 |
 | Prominence (LiDAR) | 649' | — |
@@ -201,16 +202,3 @@ For the efficient two-peak day, South Colony is the better base.
 
 **Sources checked:** 14ers.com ✓ (logged in, "Basin") · listsofjohn.com ✓ (logged in, "letsgocu") · peakbagger.com ✓ (logged in, "Kyle Knutson")
 
----
-
-## TL;DR
-
-- **The plan:** Crestolita + Broken Hand as one day via **Broken Hand Pass**. **Broken Hand = Class 3** standard from the pass; **Crestolita = Class 2** (south-facing gully / south face). The two do **not** link at easy class via the direct ridge — expect some up-and-down to bag both, ~11–14 mi and ~6,400–7,100 ft. **A big full day, not a half-day.**
-- **Approach choice:** **South Colony Lakes** = shorter approach but the inter-peak link involves descending/contouring. **Cottonwood Creek** = longer/rougher but each peak has an easy-class south side (supranihilest's "easiest" for Crestolita).
-- **Technical option:** the **Analemma NE Ridge + South Ridge of Broken Hand** traverse is a committing **5.easy / Extreme-exposure** scramble (~12 mi, 5,700', no bail) — a premier hard Sangres day, but *not* the way to simply tick both.
-- **Well-established combo** — whileyh, Alyson Kirk, Furthermore, Marmot72, josephnephi all did both together. Each is a true ranked-13er partner for the other.
-- **Cleans up the Crestone cirque** — Crestone Peak/Needle/Humboldt already done; these are the last two ranked satellites.
-- **Drive:** [3h 58m / 199 mi](https://www.google.com/maps/dir/?api=1&origin=1162+Peakview+Circle,+Boulder,+CO+80302&destination=37.97592,-105.50657) from home to the South Colony 2WD lot; careful stock AWD gets most of the way up the 4WD road.
-- **Snow option:** Crestolita's NE/north couloirs are a legit spring snow climb (axe/crampons).
-- **Cell:** no community data; likely dead at the TH, possible signal on the summits. Carry an InReach.
-- **Research map:** https://caltopo.com/m/6TKA0RH — 21 GPX tracks layered, colored by source.

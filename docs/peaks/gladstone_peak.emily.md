@@ -25,23 +25,25 @@ status_source: "scrape_14ers_checklist emily (usernum 45697) 2026-06-17; peak_db
 <!-- QUICKSTATS_START -->
 
 !!! tip "At a glance — recommended day"
-    **11.3 mi** · **4,976 ft** gain · **Class 4** · 1 peak · ~8 h drive · [weather](https://forecast.weather.gov/MapClick.php?lat=37.845&lon=-107.984)
+    **11.3 mi** · **4,976 ft** gain · **Class 4** · 1 peak · ~8 h drive
 
 <!-- QUICKSTATS_END -->
 
 *Written for **Emily** — the standalone Centennial between Mount Wilson and El Diente, by the shortest recorded day route (Cross Mountain TH / Bilk Basin).*
 
-**Report type:** Day climb (1 ranked Centennial 13er)
 **CalTopo research map:** https://caltopo.com/m/1PV10HH
+
+**Trip NOAA weather:** [NOAA point forecast](https://forecast.weather.gov/MapClick.php?lat=37.845&lon=-107.984)
+
 **Status for Emily:** **unclimbed** (on her 14ers checklist). CO rank **67**, a **Centennial** (highest 100 in Colorado) — the high prize of this trip.
 
 > **Gladstone Peak (13,923')** is the pyramid wedged between **Mount Wilson** and **El Diente** in the Wilson group. Climbed on its own, the **shortest recorded line is from the Cross Mountain TH up Bilk Basin** — a **~11.3 mi / ~5,000 ft round trip** to a **short Class 4 move right below the summit** (with an easier **Class 3** line just left of it). The mountain is **notoriously loose**; the difficulty is the rock quality and that final summit block, not the mileage.
 
 ![Overview map](../maps/gladstone_peak.png)
+
 <!-- PROVENANCE_START -->
-*The recommended route was distilled from **12 recorded GPS tracks** of real trips (14ers.com · ListsofJohn · peakbagger) — all layered on the [interactive CalTopo research map](https://caltopo.com/m/1PV10HH).*
+*Note: the recommended route was distilled from **12 recorded GPS tracks** of real trips (14ers.com · ListsofJohn · peakbagger) — all layered on the [interactive CalTopo research map](https://caltopo.com/m/1PV10HH).*
 <!-- PROVENANCE_END -->
-*[Interactive CalTopo map](https://caltopo.com/m/1PV10HH)* — the **recommended Cross Mountain / Bilk Basin route in bold magenta** (DEM-measured off a recorded 14ers track), over the other library tracks (green); summit marker + the Cross Mountain TH.
 
 ---
 
@@ -109,11 +111,3 @@ A **~11.3 mi / ~5,000′ round trip** (DEM-measured off a recorded 14ers track �
 
 **Sources checked:** 14ers.com ✓ (6 tracks) · peakbagger.com ✓ (3 tracks) · listsofjohn.com ✓ (no GPX, text TRs) · climb13ers.com ✓
 
----
-
-## TL;DR
-
-- **Gladstone Peak (13,923', CO rank 67, Centennial)** — the standalone prize of the Wilson group.
-- **~11.3 mi / ~5,000′ round trip** from the **Cross Mountain TH** (CO-145 near Lizard Head Pass) up **Bilk Basin** — the shortest clean Gladstone-only day; Class 2 tundra/talus → steep **loose** upper slopes → a **short Class 4 move below the summit** (Class 3 line just left).
-- **The hazard is loose rock + that summit move**, not the distance — **helmet, dry stable conditions, test every hold.**
-- **Far SW Colorado — long drive (~8h), plan to camp.** Cell dead — InReach.

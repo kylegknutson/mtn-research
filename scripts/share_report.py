@@ -136,8 +136,8 @@ def sanitize(text: str, share_map_url: str | None, slug: str) -> str:
             "**Interactive CalTopo map with recommended route:**")
         text = re.sub(
             rf"^(\*\*Interactive CalTopo map with recommended route:\*\*.*)$",
-            rf"\1\n*The recommended route was distilled from **{n_src} recorded GPS "
-            rf"tracks** of real trips (14ers.com · ListsofJohn · peakbagger · the "
+            rf"\1\n\n*Note: the recommended route was distilled from **{n_src} recorded "
+            rf"GPS tracks** of real trips (14ers.com · ListsofJohn · peakbagger · the "
             rf"author's own recordings).*",
             text, flags=re.M)
         text = re.sub(r"\*\[Interactive CalTopo map\]\([^)]*\)[^\n]*\n?", "", text)

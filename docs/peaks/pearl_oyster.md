@@ -28,15 +28,17 @@ status_source: "peak_db ascents"
 <!-- QUICKSTATS_END -->
 
 **Researched:** 2026-06-07
-**Report type:** Day trip (2 ranked 13ers, one outing)
+
 **CalTopo research map:** https://caltopo.com/m/852FBC0
+
+**Trip NOAA weather:** [NOAA point forecast](https://forecast.weather.gov/MapClick.php?lat=38.98095&lon=-106.83403) (same target as 14ers / LoJ / peakbagger weather links) | [NOAA forecast](https://forecast.weather.gov/MapClick.php?lat=38.98579&lon=-106.84413)
 **Status in DB:** Both 0 ascents (unclimbed). These two are a **locked pair** in the Pearl Pass area of the Maroon Bells–Snowmass Wilderness — the remaining unclimbed ranked 13ers on the Aspen/Castle Creek side near the divide.
 
 ![Overview map](../maps/pearl_oyster.png)
+
 <!-- PROVENANCE_START -->
-*The recommended route was distilled from **10 recorded GPS tracks** of real trips (14ers.com · peakbagger) — all layered on the [interactive CalTopo research map](https://caltopo.com/m/852FBC0).*
+*Note: the recommended route was distilled from **10 recorded GPS tracks** of real trips (14ers.com · peakbagger) — all layered on the [interactive CalTopo research map](https://caltopo.com/m/852FBC0).*
 <!-- PROVENANCE_END -->
-*[Interactive CalTopo map](https://caltopo.com/m/852FBC0)*
 
 ---
 
@@ -50,7 +52,6 @@ status_source: "peak_db ascents"
 |---|---|---|
 | Elevation (LiDAR) | 13,379' (map 13,362') | 13,316' |
 | Lat / Lon | 38.98095, −106.83403 | 38.98579, −106.84413 |
-| Weather | [NOAA forecast](https://forecast.weather.gov/MapClick.php?lat=38.98095&lon=-106.83403) (same target as 14ers / LoJ / peakbagger weather links) | [NOAA forecast](https://forecast.weather.gov/MapClick.php?lat=38.98579&lon=-106.84413) |
 | Class (standard) | 2 | 2 (2+ via the connecting ridge) |
 | CO Rank | 339 | 384 |
 | Prominence (LiDAR) | 604' | 419' |
@@ -167,15 +168,3 @@ Ascent GPX tracks pulled — Pearl (aid 1432986, 1380690) and Oyster (aid 143298
 
 **Sources checked:** 14ers.com ✓ (logged in, "Basin") · listsofjohn.com ✓ (logged in, "letsgocu") · peakbagger.com ✓ (logged in, "Kyle Knutson")
 
----
-
-## TL;DR
-
-- **A locked pair** — Pearl (13,379') + Oyster (13,316'), 0.64 mi apart, done together in *every* trip report. Both unclimbed, both ranked Class 2.
-- **The plan:** Pearl Pass Road 4WD → **Oyster via talus → Class 2+ ridge (0.64 mi, some exposure) → Pearl** → descend. **~10 mi, ~4,300 ft** for the clean pair (whileyh); +~2 mi/2,000' if you add Greg Mace + Carbonate Hill.
-- **Crux:** the short Oyster→Pearl connecting ridge (Class 2+, holds snow late).
-- **Season:** mid-July–September once Pearl Pass Rd melts out; legit spring snow climb (whileyh, mid-May, axe/crampons).
-- **Drive:** [4h 22m](https://www.google.com/maps/dir/?api=1&origin=1162+Peakview+Circle,+Boulder,+CO+80302&destination=39.017,-106.813) from home via Independence Pass (CO-82) to the Pearl Pass Rd trailhead; rough 4WD beyond.
-- **Separate trip from Star + Taylor + Italian** — only ~3.5 mi away on foot but **~4 hours by car** (opposite, Taylor Park side). See the [Star Peak Group report](star_peak_group.md).
-- **Wilderness:** Maroon Bells–Snowmass — no permit, wilderness rules apply. Cell likely dead; carry an InReach.
-- **Research map:** https://caltopo.com/m/852FBC0

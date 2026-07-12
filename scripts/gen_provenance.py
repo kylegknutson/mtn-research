@@ -64,7 +64,7 @@ def block(slug: str, caltopo_id: str | None) -> str:
     n = source_count(slug)
     tail = (f" — all layered on the [interactive CalTopo research map]"
             f"(https://caltopo.com/m/{caltopo_id})." if caltopo_id else ".")
-    return (f"{START}\n*The recommended route was distilled from **{n} recorded GPS "
+    return (f"{START}\n*Note: the recommended route was distilled from **{n} recorded GPS "
             f"tracks** of real trips ({source_list(slug)}){tail}*\n{END}")
 
 
@@ -84,8 +84,9 @@ def apply(md: Path, check: bool):
             return None
         i = img.end()
         new = text[:i] + "\n" + blk + text[i:]
-    # a `---` butted directly against the block can setext-mangle rendering
+    # blank lines around the block — butted neighbors merge paragraphs / setext-mangle
     new = new.replace(f"{END}\n---", f"{END}\n\n---")
+    new = re.sub(rf"(\.png\)) *\n({re.escape(START)})", r"\1\n\n\2", new)
     if new != text:
         if not check:
             md.write_text(new)
