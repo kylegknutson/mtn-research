@@ -147,8 +147,12 @@ single-peak/group report is essentially:
   → else create new — so it reuses the existing research map instead of orphaning a duplicate.
   Conventions: Kyle's recordings render **blue `#0066FF`** (gpx_to_caltopo forces `KYLE_COLOR`;
   `recolor_kyle_tracks.py --all --apply` fixes old ones); objective summits **green `#39FF14`
-  `peak`, ALL objectives** (not climbed-only); recommended routes magenta. `restyle_markers.py`
-  is regional-only. Detail: `docs/methodology/caltopo-pipeline.md`.
+  `peak`, ALL objectives** (not climbed-only); **other named/ranked summits in the PNG frame =
+  black `#000000` `peak` context markers, on CalTopo AND the PNG** (Kyle, 2026-07-12 — one
+  green/black mountain-icon convention everywhere; `fix_summit_markers.py --apply` reconciles
+  both marker sets on any map, reading the context list from the PNG's `.extent.json` sidecar);
+  recommended routes magenta. `restyle_markers.py` is regional-only. Detail:
+  `docs/methodology/caltopo-pipeline.md`.
 - **Change the report format → refresh EVERY report in the same change (Kyle, 2026-06-18).**
   Any change to the report "format" — a new/renamed frontmatter field, a new gate or
   required provenance token, a map style/legend, the report template, quickstats, the

@@ -144,13 +144,13 @@ def data_phase(args):
             run([SCRIPTS / "delete_caltopo_map.py", old_id, "--yes", "--force"])
             print(f"  (deleted superseded map {old_id} → replaced by {caltopo_id})")
 
-    # Summit markers: gpx_to_caltopo dedupes markers account-wide, so the per-
-    # report map's summit markers get SKIPPED when they already exist in the
-    # regional map. Add them explicitly as peak/#39FF14 (--no-dedupe) so the
-    # research map always shows its objectives.
+    # Summit markers — fix_summit_markers owns the convention (Kyle, 2026-07-12):
+    # green #39FF14 objectives + black context peaks (the PNG frame's other ranked
+    # summits, from the extent sidecar make_overview_map just wrote). Idempotent
+    # delete-then-add, so it also cleans any generic markers the bulk upload left.
     if caltopo_id:
-        run([SCRIPTS / "gpx_to_caltopo.py", "--gpx", str(gdir / f"{slug}_peaks_only.gpx"),
-             "--map-id", caltopo_id, "--marker-symbol", "peak", "--color", "#39FF14", "--no-dedupe"])
+        run([SCRIPTS / "fix_summit_markers.py", "--slug", slug,
+             "--map-id", caltopo_id, "--apply"])
 
     if regional:
         run([SCRIPTS / "sync_to_regional.py", "--slug", slug, "--map-id", regional])

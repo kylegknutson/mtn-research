@@ -90,6 +90,10 @@ width:1.15rem;height:1.15rem;background:#888;
 .admonition.map::before{background:#1976d2}
 .admonition-title:empty{display:none}
 .admonition-title{font-weight:700;margin:0 0 .3rem}
+/* condensed box internals (Kyle, 2026-07-12): the map-box Note sat in ~2.5em of
+   default <p>/<blockquote> margins — tighten inside admonitions only */
+.admonition p{margin:.3rem 0}
+.admonition blockquote{margin:.45rem 0 .1rem;padding:.1rem .9rem}
 blockquote{border-left:3px solid #ccc;margin:1rem 0;padding:.2rem 1rem;color:#555}
 footer{margin-top:3rem;font-size:.8rem;color:#888;border-top:1px solid #ddd;padding-top:.6rem}
 .prepared{background:#fdf2f8;border:1px solid #e6008c33;border-radius:6px;
@@ -257,13 +261,10 @@ def new_share(slug: str, ttl: int, no_map: bool):
         title_m = re.search(r"^#\s+(.+)$", find_report(slug).read_text(), re.M)
         title = title_m.group(1).strip() if title_m else slug
         files = sorted((GPX / slug).glob("*recommended*.gpx"))
-        pk = GPX / slug / f"{slug}_peaks_only.gpx"
-        if pk.exists():
-            files.append(pk)
         if not files:
             sys.exit(f"ERROR: no recommended routes under gpx/{slug}/")
         cmd = [str(SCRIPTS / "gpx_to_caltopo.py"), "--new-map", f"Share: {title}",
-               "--sharing", "URL", "--marker-symbol", "peak", "--no-dedupe"]
+               "--sharing", "URL", "--no-dedupe"]
         for f in files:
             cmd += ["--gpx", str(f)]
         r = subprocess.run(cmd, capture_output=True, text=True)
@@ -272,6 +273,9 @@ def new_share(slug: str, ttl: int, no_map: bool):
             print(r.stdout[-800:], file=sys.stderr)
             sys.exit("ERROR: share CalTopo map creation failed")
         entry["share_map"] = f"https://caltopo.com/m/{m.group(1)}"
+        # summit markers to the standard: green objectives + black context peaks
+        subprocess.run([str(SCRIPTS / "fix_summit_markers.py"), "--slug", slug,
+                        "--map-id", m.group(1), "--apply"], capture_output=True, text=True)
         print(f"share CalTopo map: {entry['share_map']}")
     write_site_chrome()
     render(entry)

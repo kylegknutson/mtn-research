@@ -4,22 +4,29 @@
 # dependencies = ["caltopo_python", "PyYAML"]
 # ///
 """
-fix_summit_markers.py — ensure a report's CalTopo map has proper summit markers.
+fix_summit_markers.py — reconcile a CalTopo map's summit markers to the standard.
 
-gpx_to_caltopo dedupes markers account-wide, so a per-report map's summit markers
-get SKIPPED when they already exist in the regional map — leaving the research
-map with no summit markers (Kyle, 2026-06-09). This restores them.
+THE standard (Kyle, 2026-07-12 — one convention across PNG and CalTopo):
+  - objective summits:     peak / #39FF14 (neon green), from <slug>_peaks_only.gpx
+  - other named/ranked summits in the PNG frame: peak / #000000 (black), from the
+    context_peaks list make_overview_map writes into docs/maps/<slug>.extent.json
+    (the PNG build is the single source of "what's in view" — this script never
+    recomputes that set).
 
-Idempotent: deletes any existing marker within ~120 m of an objective summit,
-then re-adds one **peak / #39FF14 (neon green)** marker per summit from
-gpx/<slug>/<slug>_peaks_only.gpx (via gpx_to_caltopo --no-dedupe).
+Idempotent: deletes any existing marker within ~120 m of a target summit, then
+re-adds the standard marker. Works on the report's research map by default, or
+any map via --map-id (share maps use this).
+
+Origin: gpx_to_caltopo dedupes markers account-wide, so a per-report map's summit
+markers got SKIPPED when they already existed in the regional map (2026-06-09).
 
     scripts/fix_summit_markers.py --slug trinchera_group        # dry-run
     scripts/fix_summit_markers.py --slug trinchera_group --apply
+    scripts/fix_summit_markers.py --slug x --map-id ABC123 --apply   # share map
     scripts/fix_summit_markers.py --all --apply                  # every report w/ a caltopo_id
 """
 from __future__ import annotations
-import argparse, logging, math, re, subprocess, sys
+import argparse, json, logging, math, re, subprocess, sys
 from pathlib import Path
 import yaml
 
@@ -31,12 +38,15 @@ PEAKDB = "/Users/kyleknutson/Library/Mobile Documents/com~apple~CloudDocs/shared
 CONFIG = ROOT / "scripts" / "cts.ini"
 ACCOUNT = "kyleg.knutson@gmail.com"
 SNAP_M = 120.0
+CTX_COLOR = "#000000"
 
 
 def report_path(slug):
-    for p in (ROOT / "docs" / "peaks" / f"{slug}.md", ROOT / "docs" / "trips" / f"{slug}.md"):
-        if p.exists():
-            return p
+    """First report for the slug — includes climber reports (<slug>.<climber>.md)."""
+    for sub in ("peaks", "trips"):
+        hits = sorted((ROOT / "docs" / sub).glob(f"{slug}*.md"))
+        if hits:
+            return hits[0]
     return None
 
 
@@ -49,16 +59,24 @@ def caltopo_id(slug):
 
 
 def objective_coords(slug):
-    """(lat, lon) for objective_ids (peak_db) + extra_summits."""
+    """(lat, lon) for objective_ids + pass_over_summits (both peak_db ids)."""
     cfg = yaml.safe_load((ROOT / "gpx" / slug / "peaks.yml").read_text())
-    out = [(e["lat"], e["lon"]) for e in (cfg.get("extra_summits") or [])]
-    ids = cfg.get("objective_ids") or []
+    ids = (cfg.get("objective_ids") or []) + (cfg.get("pass_over_summits") or [])
+    out = []
     if ids:
         sys.path.insert(0, PEAKDB)
         from peak_db_client import peaks
         by = {p["id"]: p for p in peaks()}
-        out += [(by[i]["lat"], by[i]["lon"]) for i in ids if i in by and by[i].get("lat")]
+        out = [(by[i]["lat"], by[i]["lon"]) for i in ids if i in by and by[i].get("lat")]
     return out
+
+
+def context_peaks(slug):
+    """The PNG's in-frame non-objective summits, from the extent sidecar."""
+    sidecar = ROOT / "docs" / "maps" / f"{slug}.extent.json"
+    if not sidecar.exists():
+        return []
+    return json.loads(sidecar.read_text()).get("context_peaks") or []
 
 
 def m_between(a, b):
@@ -72,18 +90,21 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--slug")
     ap.add_argument("--all", action="store_true")
+    ap.add_argument("--map-id", help="target map override (default: the report's caltopo_id); use for share maps")
     ap.add_argument("--apply", action="store_true")
     args = ap.parse_args()
 
     if args.all:
-        slugs = sorted({p.stem for p in (ROOT/"docs"/"peaks").glob("*.md") if p.stem.count(".") == 0}
-                       | {p.stem for p in (ROOT/"docs"/"trips").glob("*.md")})
+        slugs = sorted({p.stem.split(".")[0] for p in (ROOT/"docs"/"peaks").glob("*.md")
+                        if not p.stem.startswith("index")}
+                       | {p.stem.split(".")[0] for p in (ROOT/"docs"/"trips").glob("*.md")
+                          if not p.stem.startswith("index")})
     else:
         slugs = [args.slug]
 
     from caltopo_python import CaltopoSession
     for slug in slugs:
-        mid = caltopo_id(slug)
+        mid = args.map_id or caltopo_id(slug)
         peaks_only = ROOT / "gpx" / slug / f"{slug}_peaks_only.gpx"
         if not mid or not peaks_only.exists():
             continue
@@ -91,6 +112,8 @@ def main():
             objs = objective_coords(slug)
         except Exception as e:
             print(f"{slug}: skip ({e})"); continue
+        ctx = context_peaks(slug)
+        targets = objs + [(c["lat"], c["lon"]) for c in ctx]
         s = CaltopoSession(domainAndPort="caltopo.com", mapID=mid, configpath=str(CONFIG), account=ACCOUNT)
         markers = s.getFeatures(featureClass="Marker")
         near = []
@@ -99,10 +122,10 @@ def main():
             if len(g) < 2:
                 continue
             mlat, mlon = g[1], g[0]
-            if any(m_between((mlat, mlon), o) <= SNAP_M for o in objs):
+            if any(m_between((mlat, mlon), t) <= SNAP_M for t in targets):
                 near.append(mk)
-        action = f"delete {len(near)} existing summit-area marker(s), add {len(objs)} peak/green"
-        print(f"{slug} ({mid}): {len(objs)} objectives — {action}")
+        print(f"{slug} ({mid}): delete {len(near)} existing summit-area marker(s), "
+              f"add {len(objs)} peak/green + {len(ctx)} peak/black context")
         if not args.apply:
             continue
         for mk in near:
@@ -110,7 +133,14 @@ def main():
         subprocess.run([str(ROOT/"scripts"/"gpx_to_caltopo.py"), "--gpx", str(peaks_only),
                         "--map-id", mid, "--marker-symbol", "peak", "--color", "#39FF14",
                         "--no-dedupe"], capture_output=True, text=True)
-        print(f"  ✓ {slug}: summit markers restored")
+        for c in ctx:
+            try:
+                s.addMarker(lat=c["lat"], lon=c["lon"], title=c.get("name") or "",
+                            description="Nearby ranked summit (not an objective)",
+                            color=CTX_COLOR, symbol="peak")
+            except Exception as e:
+                print(f"  ERROR context marker {c.get('name')!r}: {e}")
+        print(f"  ✓ {slug}: summit markers reconciled")
 
 
 if __name__ == "__main__":

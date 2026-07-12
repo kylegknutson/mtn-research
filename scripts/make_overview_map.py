@@ -104,7 +104,7 @@ def ranked_summits_in_view(lon_min, lon_max, lat_min, lat_max, exclude_coords):
         if not (lon_min <= lon <= lon_max and lat_min <= lat <= lat_max):
             continue
         if any(abs(lon - ol) < 1e-3 and abs(lat - ola) < 1e-3 for ol, ola in exclude_coords):
-            continue   # this is an objective — already drawn as a blue mountain
+            continue   # this is an objective — already drawn as a green mountain
         out.append((lon, lat, p.get("display_name") or ""))
     # Named-but-unranked 14ers get context markers too (Kyle, 2026-07-11: North
     # Eolus deserves a summit marker). peak_db is ranked-only, so these five are
@@ -154,7 +154,10 @@ def track_source(path) -> str:
     if "loj" in n or "listsofjohn" in n:
         return "loj"
     return "public"
-COLOR_PEAK     = (25, 118, 210,  255)   # blue mountain — objective summit(s) (Kyle, 2026-07-11)
+COLOR_PEAK     = (57, 255, 20,  255)    # green mountain #39FF14 — objective summit(s); SAME green as
+                                        # the CalTopo summit markers (Kyle, 2026-07-12: one convention
+                                        # everywhere). Black outline + white snowcap keep it legible
+                                        # against forest-green basemap tiles.
 COLOR_PEAK_CTX = (35, 35, 35, 255)      # black mountain — other named/ranked summits in view (grey wasn't distinct enough)
 COLOR_DRIVE_IN = (153, 51,  204, 220)   # purple
 COLOR_TH       = (255, 102, 0,   220)   # orange
@@ -484,7 +487,7 @@ def build_map(slug: str, out_path: Path, zoom: int | None = None, title: str = "
             for lon, lat, name in parse_waypoints(path):
                 # a "peak" FILE can still carry non-summit waypoints (camp anchors
                 # in *_target_peaks_only.gpx) — classify each by name so a camp
-                # doesn't render as a blue objective mountain (Kyle, 2026-07-11)
+                # doesn't render as a green objective mountain (Kyle, 2026-07-11)
                 wkind = classify_waypoint_by_name(name) if kind == "peak" else kind
                 buckets[wkind].append((lon, lat, name))
                 all_lons.append(lon); all_lats.append(lat)
@@ -760,8 +763,14 @@ def build_map(slug: str, out_path: Path, zoom: int | None = None, title: str = "
     # recommended line inside the rendered frame?) instead of replicating this
     # script's bbox logic, which let a dropped pack-in leg pass (2026-07-10).
     sidecar = out_path.with_suffix(".extent.json")
+    # context_peaks in the sidecar too: fix_summit_markers.py syncs the SAME set
+    # onto the CalTopo map as black peak markers (Kyle, 2026-07-12 — PNG and
+    # CalTopo share one summit-icon convention), so the PNG build is the single
+    # source of "which non-objective summits are in view".
     sidecar.write_text(json.dumps({"lon_min": lon_min, "lon_max": lon_max,
-                                   "lat_min": lat_min, "lat_max": lat_max}) + "\n")
+                                   "lat_min": lat_min, "lat_max": lat_max,
+                                   "context_peaks": [{"name": n, "lat": lat, "lon": lon}
+                                                     for lon, lat, n in buckets["context_peak"]]}) + "\n")
     print(f"Saved: {out_path}")
 
 

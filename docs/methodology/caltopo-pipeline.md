@@ -152,8 +152,12 @@ Net effect: one clean set of **neon-green summit pins** + a quiet **gray** wash 
 | Marker kind | `symbol` | `color` |
 |---|---|---|
 | Objective summit | `peak` | `#39FF14` (neon green) |
+| **Context summit** — other named/ranked peak in the PNG frame (Kyle, 2026-07-12) | `peak` | `#000000` (black) |
 | **Trailhead** (peaks.yml `kind: trailhead`) | **`hiking`** (CalTopo blue hiker w/ pack) | **`#0066FF`** (blue) |
 | Any other imported waypoint | `point` | `#9E9E9E` (gray) |
+
+The overview PNG uses the same convention — green mountain icons for objectives, black
+for other named/ranked summits in view — so PNG and CalTopo read identically.
 
 > **Marker names + trailhead symbol (Kyle, 2026-06-15).** Summit marker titles are **just the peak name** — no `(13,118', Class 2, UNCLIMBED)` suffix (that lives in the report). `build_peak_gpx.py` writes name-only summits and tags `kind: trailhead` landmarks with `<sym>hiking</sym>`; `gpx_to_caltopo.py` honors each waypoint's `<sym>` (trailheads → the blue `hiking` icon). To restyle maps built before this: **`scripts/retro_restyle_markers.py`** (dry-run) then `--apply` — strips verbose summit titles and switches coord-matched trailheads to `hiking`/`#0066FF`. (Unknown CalTopo symbol codes fall back to an empty circle — `hiking` is the verified hiker-with-backpack code, not `trailhead`/`hiker`.)
 
@@ -174,16 +178,18 @@ Net effect: one clean set of **neon-green summit pins** + a quiet **gray** wash 
 > markers but **no green summit peaks**. (Surfaced on the Trinchera group: its map had
 > only the Blue Lakes TH marker.) The PNG is unaffected — `make_overview_map.py`
 > draws `peaks_only.gpx` directly.
-> - **In the pipeline:** `build_report.py` adds an explicit summit-marker step after
->   the CalTopo upload — `gpx_to_caltopo.py --gpx <slug>_peaks_only.gpx
->   --marker-symbol peak --color #39FF14 --no-dedupe` — so research maps always carry
->   their objectives.
+> - **In the pipeline:** `build_report.py` runs `fix_summit_markers.py --slug <slug>
+>   --map-id <new id> --apply` after the CalTopo upload — research maps always carry
+>   green objectives + black context summits. `share_report.py` runs the same for
+>   each new share map.
 > - **Repairing an existing map:** `scripts/fix_summit_markers.py --slug <slug>`
->   (dry-run) / `--apply`, or `--all --apply` for every report. Idempotent: deletes
->   any marker within ~120 m of an objective summit, then re-adds exactly one
->   `peak`/`#39FF14` marker per summit from `peaks_only.gpx`. Reads `caltopo_id` from
->   the report frontmatter and objectives from `peaks.yml` (`objective_ids` +
->   `extra_summits`). Skips reports lacking a `peaks.yml` or `caltopo_id`.
+>   (dry-run) / `--apply`, or `--all --apply` for every report, or `--map-id` for an
+>   arbitrary map (share maps). Idempotent: deletes any marker within ~120 m of a
+>   target summit, then re-adds one `peak`/`#39FF14` marker per objective (from
+>   `peaks_only.gpx`) and one `peak`/`#000000` per context summit (from the
+>   `context_peaks` list in `docs/maps/<slug>.extent.json` — the PNG build is the
+>   single source of "what's in view"). Objectives = peaks.yml `objective_ids` +
+>   `pass_over_summits`. Skips reports lacking a `peaks.yml` or `caltopo_id`.
 >
 > **Implementation:**
 > - **New uploads:** `scripts/sync_to_regional.py` enforces the marker scheme (reuses `gpx_to_caltopo.py --marker-symbol`, default `point`).
