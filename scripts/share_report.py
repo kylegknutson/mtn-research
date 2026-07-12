@@ -68,10 +68,20 @@ h1{border-bottom:2px solid #e6008c;padding-bottom:.3rem}
 table{border-collapse:collapse;margin:1rem 0;width:100%}
 td,th{border:1px solid #ccc;padding:.4rem .6rem;text-align:left;font-size:.95rem}
 img{max-width:100%;height:auto;border:1px solid #ddd}
-.admonition{border-left:4px solid #888;background:#f6f6f6;padding:.6rem 1rem;margin:1rem 0}
-.admonition.danger{border-color:#c00;background:#fff0f0}
-.admonition.tip{border-color:#e6008c;background:#fdf2f8}
-.admonition.info{border-color:#1976d2;background:#f0f6fd}
+.admonition{border-left:4px solid #888;background:#f6f6f6;margin:1rem 0;
+padding:.6rem 1rem .6rem 2.5rem;position:relative}
+.admonition::before{content:"";position:absolute;left:.75rem;top:.85rem;
+width:1.15rem;height:1.15rem;background:#888;
+-webkit-mask:var(--adm-icon) no-repeat center/contain;mask:var(--adm-icon) no-repeat center/contain}
+.admonition.danger{border-color:#e53935;background:#fff0f0;
+--adm-icon:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11 15H6l7-14v8h5l-7 14v-8Z"/></svg>')}
+.admonition.danger::before{background:#e53935}
+.admonition.tip{border-color:#00bfa5;background:#f0faf7;
+--adm-icon:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17.66 11.2c-.23-.3-.51-.56-.77-.82-.67-.6-1.43-1.03-2.07-1.66C13.33 7.26 13 4.85 13.95 3c-.95.23-1.78.75-2.49 1.32-2.59 2.08-3.61 5.75-2.39 8.9.04.1.08.2.08.33 0 .22-.15.42-.35.5-.23.1-.47.04-.66-.12a.58.58 0 0 1-.14-.17c-1.13-1.43-1.31-3.48-.55-5.12C5.78 10 4.87 12.3 5 14.47c.06.5.12 1 .29 1.5.14.6.41 1.2.71 1.73 1.08 1.73 2.95 2.97 4.96 3.22 2.14.27 4.43-.12 6.07-1.6 1.83-1.66 2.47-4.32 1.53-6.6l-.13-.26c-.21-.46-.77-1.26-.77-1.26Z"/></svg>')}
+.admonition.tip::before{background:#00bfa5}
+.admonition.info{border-color:#1976d2;background:#f0f6fd;
+--adm-icon:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11 9h2V7h-2m1 13c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8m0-18A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2m-1 15h2v-6h-2v6Z"/></svg>')}
+.admonition.info::before{background:#1976d2}
 .admonition-title:empty{display:none}
 .admonition-title{font-weight:700;margin:0 0 .3rem}
 blockquote{border-left:3px solid #ccc;margin:1rem 0;padding:.2rem 1rem;color:#555}
@@ -85,8 +95,8 @@ a{color:#7db4ff}
 td,th{border-color:#3a3f45}
 img{border-color:#3a3f45}
 .admonition{background:#1e2226;border-color:#666}
-.admonition.danger{background:#2a1a1a;border-color:#c00}
-.admonition.tip{background:#261a22;border-color:#e6008c}
+.admonition.danger{background:#2a1a1a;border-color:#e53935}
+.admonition.tip{background:#12241f;border-color:#00bfa5}
 .admonition.info{background:#16202b;border-color:#1976d2}
 blockquote{border-color:#3a3f45;color:#a8adb3}
 footer{border-color:#3a3f45}
@@ -205,6 +215,7 @@ def render(entry) -> None:
     html = (f"<!DOCTYPE html><html><head><meta charset='utf-8'>"
             f"<meta name='robots' content='noindex,nofollow'>"
             f"<meta name='color-scheme' content='light dark'>"
+            f"<link rel='icon' href='/favicon.png'>"
             f"<meta name='viewport' content='width=device-width,initial-scale=1'>"
             f"<title>{title}</title><style>{CSS}</style></head><body>\n{body}\n"
             f"<footer>Shared {entry['created']} · link expires ~{expires} · "
@@ -224,6 +235,10 @@ def write_site_chrome():
         "<body></body></html>\n")
     (SITE_DIR / "robots.txt").write_text("User-agent: *\nDisallow: /\n")
     (SITE_DIR / "_headers").write_text("/*\n  X-Robots-Tag: noindex, nofollow\n")
+    # same favicon as the research site
+    fav = DOCS / "assets" / "favicon.png"
+    if fav.exists():
+        shutil.copyfile(fav, SITE_DIR / "favicon.png")
 
 
 def new_share(slug: str, ttl: int, no_map: bool):
