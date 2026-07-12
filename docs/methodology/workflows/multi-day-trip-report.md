@@ -59,8 +59,9 @@ detail lives only in the map-box note + Trip reports section.
 2. **Peaks covered** — intro sentence (style · hardest move · access · days/nights;
    absorbs the old trip-at-a-glance table) + table with names linked to
    `14ers.com/peaks/<id>`
-3. **Itinerary options** — Option A (= the At-a-glance day list) with the stacking
-   recommendation; Option B table if a compressed shape exists; settled decisions
+3. **Itinerary options** — when more than one option exists, **EVERY option gets a
+   day-table with the same columns** (Kyle, 2026-07-12 — not prose for A and a table
+   for B); the recommendation + stacking rationale follow as prose. Settled decisions
    get one inline line pointing at *Other considerations*
 4. **Getting there** — train/access/trailhead + the clickable drive-from-home link
 5. **The days, in order** — `### Day N — …` strictly chronological (pack-in = Day 1,

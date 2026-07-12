@@ -100,12 +100,21 @@ optional day's traverse — you summit it on the way whether you mean to or not.
 and you descend Ruby's loose trail instead of climbing it (full reasoning in
 *Other considerations*).
 
-**Option A — recommended (5 days / 4 nights):** exactly the day list in *At a glance*.
+**Option A — recommended (5 days / 4 nights):**
+
+| Day | Legs | Distance | Gain | Descent |
+|---|---|---|---|---|
+| **Day 1** | Pack in to Chicago Basin | **5.9 mi** | **~2,640'** | ~0' |
+| **Day 2** | Jupiter (morning) + camp move to Ruby (afternoon) | **10.6 mi** | **~5,430'** | ~4,750' |
+| **Day 3** | Pigeon & Turret from camp | **4.8 mi** | **~4,590'** | ~4,590' |
+| **Day 4** | Monitor · Peak Thirteen · Animas from camp (optional) | **3.9 mi** | **~3,140'** | ~3,140' |
+| **Day 5** | Pack out to Needleton, flag the train | **5.2 mi** | ~0' | **~3,640'** |
+
 *Why Jupiter and the camp move share Day 2:* both halves are moderate — Class 2+ in
-the morning, a 4.2-mi pass crossing after (10.6 mi / ~5,430' combined) — so stacking
-them costs little, keeps the Class 4 days on fresh legs, and saves a night of food.
-If weather or energy argue otherwise, splitting them back apart (6 days) is the escape
-valve — camp doesn't move until you do.
+the morning, a 4.2-mi pass crossing after — so stacking them costs little, keeps the
+Class 4 days on fresh legs, and saves a night of food. If weather or energy argue
+otherwise, splitting them back apart (6 days) is the escape valve — camp doesn't move
+until you do.
 
 **Option B — compressed (4 days / 3 nights):** stack the pack-in with Jupiter and the
 camp move with Pigeon/Turret. Same ~30.4 mi / ~15,800 ft, one fewer night out:

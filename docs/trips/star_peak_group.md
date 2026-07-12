@@ -92,10 +92,18 @@ The cluster works two ways. Pick based on how big a day you want.
 
 **Option A — weekend from one Taylor Park basecamp (recommended):** camp near the end of CO 742 and split the cluster into two manageable Class 2 days:
 
-- **Day 1 — Star + Taylor** (the clean pair).
-- **Day 2 — Italian Mtn** (with American Flag Mtn if wanted): a shorter half-day from the CR 744 / Cement Creek spur, or repeat from the Mt Tilton side.
+| Day | Legs | Distance | Gain |
+|---|---|---|---|
+| **Day 1** | Star + Taylor (the clean pair) | **8.6 mi** | **~4,300'** |
+| **Day 2** | Italian Mtn (+ American Flag if wanted) from the CR 744 / Cement Creek spur — or repeat from the Mt Tilton side | **~6 mi** | **~2,500'** |
 
-**Option B — all three in one long day:** link Star + Taylor + Italian on foot from the Mt Tilton TH (the josephnephi line, trimmed of the sub-peak detours). Budget roughly **~14–17 mi and ~6,500–8,000 ft, Class 2**, a committing full alpine day — Italian adds a ~3.5 mi each-way tundra traverse across Star Pass with a big drop (~12,400') and regain.
+**Option B — all three in one long day:** link Star + Taylor + Italian on foot from the Mt Tilton TH (the josephnephi line, trimmed of the sub-peak detours):
+
+| Day | Legs | Distance | Gain |
+|---|---|---|---|
+| **Day 1** | Star + Taylor + Italian, one push (Class 2) | **~14–17 mi** | **~6,500–8,000'** |
+
+A committing full alpine day — Italian adds a ~3.5 mi each-way tundra traverse across Star Pass with a big drop (~12,400') and regain.
 
 **Combo stats (from TR GPX):**
 

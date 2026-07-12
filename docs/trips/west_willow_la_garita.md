@@ -81,7 +81,18 @@ All five share the **West Willow Creek upper TH** (~11,500'). They fall into **t
 
 **Recommended — 2 days from one camp:** camp high near the upper TH (or up toward San Luis Pass) and do **one loop each day**. Order is flexible — **save PT 13,166's Class 3 for the more stable-weather day.**
 
-**Big-day option — all five in one push, ~18 mi / ~6,000':** actually a touch *shorter* than the two days combined, because a single loop links them along the divide without two separate trailhead returns. But that's still **~18 mi and ~6,000' with a Class 3 move, at 12–13k', deep in the La Garita** — a genuine ultra-day. The **2-day split (camp high, one loop each day) is the sane recommendation**.
+| Day | Legs | Distance | Gain | Class |
+|---|---|---|---|---|
+| **Day 1** | Trio loop, NW ("Baldy Lejos" · PT 13,115 · PT 13,030) | **12.4 mi** | **~3,560'** | 2 |
+| **Day 2** | Bridge-pair loop, E/SE (PT 13,308 · PT 13,166) | **10.2 mi** | **~3,590'** | **3** |
+
+**Big-day option — all five in one push:**
+
+| Day | Legs | Distance | Gain | Class |
+|---|---|---|---|---|
+| **Day 1** | All five, one loop along the divide | **~18 mi** | **~6,000'** | **3** |
+
+Actually a touch *shorter* than the two days combined, because a single loop links them along the divide without two separate trailhead returns. But it's still an 18-mi Class 3 day at 12–13k', deep in the La Garita — a genuine ultra-day. The **2-day split (camp high, one loop each day) is the sane recommendation**.
 
 ---
 

@@ -44,7 +44,7 @@ restates mileage/gain (option-comparison tables are the one exception). Provenan
 | 1 | Header zone (H1 → quickstats → written-for → weather box → map box → status → PNG → provenance) | ✓ | ✓ |
 | 2 | `!!! danger` box (Class 4/5 or genuinely sketchy only; ≤1 line per hazard) | if warranted | if warranted |
 | 3 | Peaks covered — intro sentence (style · hardest move · access · days/nights) + table with **names linked to 14ers.com peak pages** (`14ers.com/peaks/<id>`, id from peak_db; CO peaks only) | ✓ | ✓ |
-| 4 | Itinerary options (settled decisions = one inline line → *Other considerations*) | if options exist | ✓ |
+| 4 | Itinerary options (>1 option ⇒ **every option gets a day-table, same columns**; settled decisions = one inline line → *Other considerations*) | if options exist | ✓ |
 | 5 | Getting there (trailhead/access; **clickable drive-from-home link lives here**) | ✓ | ✓ (train/shuttle etc.) |
 | 6 | Route description, in walking order | ✓ | "The days, in order" — `### Day N` chronological, pack-in = Day 1 |
 | 7 | Camps & water (basecamps + water merged) | — | ✓ |
