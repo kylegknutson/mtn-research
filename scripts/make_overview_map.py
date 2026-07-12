@@ -589,13 +589,14 @@ def build_map(slug: str, out_path: Path, zoom: int | None = None, title: str = "
         if buckets["context_peak"]:
             print(f"Context summits in view: {len(buckets['context_peak'])} ranked")
 
-    # Auto zoom: target ~400 px across the span in the output image
+    # Auto zoom: fetch tiles at native resolution ≥ the output canvas, so the
+    # final resize is a mild DOWNsample (crisp) instead of a 3× upscale (the
+    # blurry-terrain problem, Kyle 2026-07-11): smallest zoom whose global
+    # pixel span across our lon extent is ≥ IMG_W_PX.
     if zoom is None:
-        lon_span_padded = lon_max - lon_min
-        if   lon_span_padded > 0.5:  zoom = 11
-        elif lon_span_padded > 0.12: zoom = 12
-        elif lon_span_padded > 0.08: zoom = 13
-        else:                        zoom = 14
+        lon_span_padded = max(lon_max - lon_min, 1e-6)
+        zoom = math.ceil(math.log2(360.0 * IMG_W_PX / (256.0 * lon_span_padded)))
+        zoom = max(11, min(15, zoom))
 
     print(f"Extent: lon {lon_min:.4f}–{lon_max:.4f}, lat {lat_min:.4f}–{lat_max:.4f}, zoom={zoom}")
 
