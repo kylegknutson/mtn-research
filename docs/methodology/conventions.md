@@ -33,6 +33,14 @@ Implemented site-wide via `docs/javascripts/external-links-new-tab.js` (Material
 - Internal links (peak↔peak, anchors) stay same-tab automatically
 - If a theme/plugin update breaks it, fix the JS — don't add per-link attributes
 
+## Prose rules (Kyle, 2026-07-12)
+
+- **No acclimatization talk.** Anyone climbing these peaks is already acclimatized —
+  don't spend words on it (a "warm-up before the crux" framing is fine; altitude
+  adjustment is not). Only relevant if we ever cover 15,000'+ objectives.
+- **No weekday framing.** Itineraries are "Day 1, Day 2, …" — never Thu/Fri/Sat
+  (dates are the reader's business, not the report's).
+
 ## Naming conventions
 
 - Slugs use underscores: `jacque_peak`, `crestolita_broken_hand`
