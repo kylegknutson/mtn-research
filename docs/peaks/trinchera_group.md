@@ -51,9 +51,9 @@ status_source: "peak_db ascents"
 **Other climbers:** Emily Sharpe — not yet · Shawn D Keil — ✓ all
 <!-- CLIMBERS_END -->
 
-## Quick stats
+## Peaks covered
 
-| | Trinchera Pk | "Leaning South Pk" | Cuatro Pk | Mt Maxwell |
+| | [Trinchera Pk](https://www.14ers.com/peaks/10639) | ["Leaning South Pk"](https://www.14ers.com/peaks/10671) | [Cuatro Pk](https://www.14ers.com/peaks/10646) | [Mt Maxwell](https://www.14ers.com/peaks/10661) |
 |---|---|---|---|---|
 | Elevation | 13,522' | 13,218' | 13,492' | 13,337' |
 | Lat / Lon | 37.28911, −105.16478 | 37.27470, −105.15982 | 37.25837, −105.15456 | 37.24923, −105.15352 |
@@ -67,23 +67,9 @@ status_source: "peak_db ascents"
 
 The four form a **N→S crest chain over ~2.8 mi**: Trinchera → Leaning South (1.0 mi) → Cuatro (1.2 mi) → Maxwell (0.6 mi). All Class 2.
 
----
-
-## Why these four together
-
 A **standard Culebra crest traverse** — done as one outing in the trip reports (whileyh 2019 linked all four + Leaning North + English Saddle in a single day from Blue Lakes). The connecting ridge is Class 2 throughout, so once you're on the crest it's a walk from summit to summit.
 
 **Combos (ranked rule):** all four are ranked 13ers — a true 4-ranked-peak day. **Bonus on the same ridge:** "Leaning North Peak" (13,112', ranked) sits between Leaning South and Trinchera and is trivially added; the Mariquita/De Anza peaks to the south are already done.
-
----
-
-## Drive + approach
-
-| | |
-|---|---|
-| **Drive from Boulder** | **[4h 14m via Google Maps](https://www.google.com/maps/dir/?api=1&origin=1162+Peakview+Circle,+Boulder,+CO+80302&destination=37.31247,-105.13871)** (~232 mi, origin: 1162 Peakview Circle; via I-25 S + CO-12 E through La Veta / Cuchara) |
-| Trailhead | **Blue Lakes TH**, ~37.31247, −105.13871, **~10,500'** (Blue Lakes Campground, off CO-12 / Cuchara Pass — Blue Lakes Rd / FR 422). Public, San Isabel NF. |
-| Access note | **No Cielo Vista Ranch fee** for this east-side approach — the ranch is west of the crest. Stay east of the ridgeline; the summits are on the boundary. |
 
 ---
 
@@ -91,7 +77,7 @@ A **standard Culebra crest traverse** — done as one outing in the trip reports
 
 The standard line (whileyh 2019 / stavislost).
 
-**Combo stats (measured from TR GPX):**
+**Combo stats:**
 
 | Source | Peaks | Distance | Gain |
 |---|---|---|---|
@@ -116,22 +102,28 @@ Expect roughly **~14–18 mi and ~4,900–7,100 ft** for the four-peak day — *
 
 ---
 
-## Conditions / season
+## Getting there — Blue Lakes TH
 
-- **Best window:** **July through September.** High Sangre crest; the Blue Lakes road and upper basin open late.
-- **Storms:** a long, fully-exposed crest traverse — **afternoon monsoon storms are the main hazard.** Start very early; you're on the ridge for hours.
-- **Terrain:** Class 2 tundra/talus throughout — no technical sections, but it's a long day at altitude.
+| | |
+|---|---|
+| **Drive from Boulder** | **[4h 14m via Google Maps](https://www.google.com/maps/dir/?api=1&origin=1162+Peakview+Circle,+Boulder,+CO+80302&destination=37.31247,-105.13871)** (~232 mi, origin: 1162 Peakview Circle; via I-25 S + CO-12 E through La Veta / Cuchara) |
+| Trailhead | **Blue Lakes TH**, ~37.31247, −105.13871, **~10,500'** (Blue Lakes Campground, off CO-12 / Cuchara Pass — Blue Lakes Rd / FR 422). Public, San Isabel NF. |
+| Access note | **No Cielo Vista Ranch fee** for this east-side approach — the ranch is west of the crest. Stay east of the ridgeline; the summits are on the boundary. |
 
----
-
-## Permits / access
+**Permits / access:**
 
 - **San Isabel National Forest** (Blue Lakes / Cuchara, east side) — no permits, no fee.
 - **Cielo Vista Ranch** is private and west of the crest; the east-side traverse does **not** require its paid-access program. Keep descents east of the ridgeline to stay on public land.
 
 ---
 
-## Cell coverage
+## Gear & season
+
+- **Best window:** **July through September.** High Sangre crest; the Blue Lakes road and upper basin open late.
+- **Storms:** a long, fully-exposed crest traverse — **afternoon monsoon storms are the main hazard.** Start very early; you're on the ridge for hours.
+- **Terrain:** Class 2 tundra/talus throughout — no technical sections, but it's a long day at altitude.
+
+**Cell coverage:**
 
 - **14ers.com community DB:** no submitted reception reports for these summits.
 - **Geographic reasoning:** the **Blue Lakes approach and basins are likely dead** — deep in the Sangre. Summits may catch some signal east toward the Cuchara/Walsenburg side but treat it as unreliable.

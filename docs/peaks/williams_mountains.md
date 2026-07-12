@@ -49,9 +49,9 @@ status_source: "peak_db ascents (Kyle — unclimbed)"
 **Other climbers:** Emily Sharpe — not yet · Shawn D Keil — not yet
 <!-- CLIMBERS_END -->
 
-## Quick stats
+## Peaks covered
 
-| | Williams Mtn (HP) | Williams Mtn North | Williams Mtn South A | Williams Mtn South B | Williams Mtn South C |
+| | [Williams Mtn](https://www.14ers.com/peaks/10756) (HP) | [Williams Mtn North](https://www.14ers.com/peaks/10815) | [Williams Mtn South A](https://www.14ers.com/peaks/10766) | [Williams Mtn South B](https://www.14ers.com/peaks/10800) | [Williams Mtn South C](https://www.14ers.com/peaks/10832) |
 |---|---|---|---|---|---|
 | Your label | — | **13139** | **Williams Mtn South** | **13204** | **13039** |
 | Elevation | 13,390' | 13,139' | 13,321' | 13,204' | 13,039' |
@@ -70,12 +70,11 @@ The five form a **~3.5 mi N→S ridge**: North (13,139) → Williams Mtn (13,390
 
 ## Recommended day — Lost Man TH loop over all five ⭐
 
-A **full-traverse loop** that follows **Heather Ryan's recorded all-five line verbatim** (her real GPS track from the Lost Man TH over every summit and back; distance from that track, gain DEM-measured): **~14.7 mi / ~6,084′**, **Class 3**. Consistent with the recorded full-traverse TR (LoJ [TR 2019](https://listsofjohn.com/tr?Id=2019): ~13.9 mi / ~5,700′).
+A **full-traverse loop** that follows **Heather Ryan's recorded all-five line** from the Lost Man TH over every summit and back — consistent with the recorded full-traverse TR (LoJ [TR 2019](https://listsofjohn.com/tr?Id=2019): ~13.9 mi / ~5,700′).
 
 | | |
 |---|---|
 | Peaks | all five Williams summits |
-| **Recommended loop** | **~14.7 mi / ~6,084′ (DEM)** |
 | Class | **3** — mostly Class 2/2+ tundra & talus, with **brief Class 3 scrambles** and **short knife-edge ridge sections** on the connecting ridges (TR 2019). Ice axe recommended. |
 | Trailhead | **Lost Man TH (~10,500')**, Hwy 82 W of Independence Pass — **passenger car** |
 | Style | a **long single day** *or* a **2–3 day backpack** (camp at South Fork Pass) — both are standard |
@@ -91,7 +90,7 @@ A **full-traverse loop** that follows **Heather Ryan's recorded all-five line ve
 
 ---
 
-## Drive + approach
+## Getting there — Lost Man TH
 
 | | |
 |---|---|
@@ -102,16 +101,14 @@ A **full-traverse loop** that follows **Heather Ryan's recorded all-five line ve
 
 ---
 
-## Conditions / season
+## Gear & season
 
 - **Best window:** **July–September** (Independence Pass gate dictates the shoulders; high, exposed ridge holds snow late).
 - **Terrain:** Class 2/2+ with **Class 3 scrambling and short knife-edge ridge sections** — committing once you're on the traverse. **Ice axe recommended** for early-season snow on the connecting ridges.
 - **Storms:** a long, fully-exposed ridge — very early start; the backpack option lets you start high and beat the weather.
 - **Escape:** few easy bail points mid-ridge; commit only with a good forecast.
 
----
-
-## Cell coverage
+**Cell coverage:**
 
 - **14ers.com community DB:** no reception reports for these summits.
 - **Geographic reasoning:** deep in the Hunter-Fryingpan — **treat as dead** at the TH and on the ridge (some signal possible toward the Aspen/Hwy 82 corridor from the high points).

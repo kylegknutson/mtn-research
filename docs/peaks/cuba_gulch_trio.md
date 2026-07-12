@@ -49,9 +49,11 @@ status_source: "peak_db ascents"
 **Other climbers:** Emily Sharpe — not yet · Shawn D Keil — 1 of 3 (PT 13,076)
 <!-- CLIMBERS_END -->
 
-## Quick stats
+## Peaks covered
 
-| | PT 13,076 | Unnamed 13,003 | PT 13,179 |
+A **standard Cuba Gulch outing** — the three are climbed together, confirmed by trip reports across all three sources **and Kyle's own GPS track** ("Cuba Gulch – 13076, 13003, 13179"). They share the single Cuba Gulch approach off the Lake Fork. All three are **ranked** San Juan 13ers, so it's a true 3-ranked-peak day; the neighboring ranked peaks (Half Peak, Quarter Peak, Canby, Cataract, Sheep Mtn A) are already done — this cleans up what's left in the Cuba Gulch / Cataract pocket.
+
+| | [PT 13,076](https://www.14ers.com/peaks/10577) | [Unnamed 13,003](https://www.14ers.com/peaks/10871) | [PT 13,179](https://www.14ers.com/peaks/10527) |
 |---|---|---|---|
 | Elevation | 13,076' | 13,003' | 13,179' |
 | Lat / Lon | 37.82997, −107.52956 | 37.84968, −107.49465 | 37.84723, −107.47533 |
@@ -66,15 +68,33 @@ The three sit in a ~2.3 mi arc: **13,003 is the middle peak** (~1.1 mi from 13,1
 
 ---
 
-## Why these three together
+## Recommended route — Cuba Gulch, the 13,076 ↔ 13,003 ↔ 13,179 ridge ⭐
 
-A **standard Cuba Gulch outing** — the three are climbed together, confirmed by trip reports across all three sources **and Kyle's own GPS track** ("Cuba Gulch – 13076, 13003, 13179"). They share the single Cuba Gulch approach off the Lake Fork.
+The standard line, from the trip reports and Kyle's combining track.
 
-**Combos (ranked rule):** all three are **ranked** San Juan 13ers, so it's a true 3-ranked-peak day. The neighboring ranked peaks (Half Peak, Quarter Peak, Canby, Cataract, Sheep Mtn A) are already done — this cleans up what's left in the Cuba Gulch / Cataract pocket.
+**Combo options:**
+
+| Source | Peaks | Distance | Gain |
+|---|---|---|---|
+| Clean trio (best LoJ/CalTopo track) | 13,076 + 13,003 + 13,179 | **~15.8 mi** | **~4,900 ft** |
+| Bigger traverses (LoJ 8472, etc.) | + Half Peak / Cataract neighbors | up to 21.9 mi | up to ~12,500 ft |
+
+Class 2 throughout for the clean three-peak day — gain grows fast if you add the ranked neighbors (those are already done for Kyle).
+
+### Route sequence
+1. From the **Cuba Gulch TH (~9,540')**, head up Cuba Gulch toward the basin below the three peaks.
+2. Climb the ridge over **PT 13,076 → Unnamed 13,003 → PT 13,179** (or reverse) — Class 2 tundra/talus on the connecting ridge.
+3. Descend back into Cuba Gulch to the TH.
+
+### Per-peak route notes
+
+- **PT 13,076** — Class 2; the SW end of the arc. No formal 14ers route description (TR-only beta).
+- **PT 13,003** — **Class 1**; the middle, gentlest peak (ranked, peak_db id 822). Grabbed on the ridge between the other two.
+- **PT 13,179** — Class 2; the NE end, ~1.1 mi from 13,003, near Half Peak's south ridge.
 
 ---
 
-## Drive + approach
+## Getting there — Cuba Gulch TH
 
 | | |
 |---|---|
@@ -83,56 +103,19 @@ A **standard Cuba Gulch outing** — the three are climbed together, confirmed b
 | Trailhead | **Cuba Gulch TH**, ~37.8993, −107.4332, **~9,540'**. High-clearance helpful on the upper road. |
 | Note | A long-ish haul (~6 hr each way) — workable as a big day or an overnight out of Lake City. |
 
----
-
-## Recommended plan — Cuba Gulch, the 13,076 ↔ 13,003 ↔ 13,179 ridge ⭐
-
-The standard line, from the trip reports and Kyle's combining track.
-
-**Combo stats (measured from TR GPX):**
-
-| Source | Peaks | Distance | Gain |
-|---|---|---|---|
-| Clean trio (best LoJ/CalTopo track) | 13,076 + 13,003 + 13,179 | **~15.8 mi** | **~4,900 ft** |
-| Bigger traverses (LoJ 8472, etc.) | + Half Peak / Cataract neighbors | up to 21.9 mi | up to ~12,500 ft |
-
-Expect roughly **~15.8 mi and ~4,900 ft** for the clean three-peak day, Class 2 throughout (gain grows fast if you add the ranked neighbors — those are already done for Kyle).
-
-### Route sequence
-1. From the **Cuba Gulch TH (~9,540')**, head up Cuba Gulch toward the basin below the three peaks.
-2. Climb the ridge over **PT 13,076 → Unnamed 13,003 → PT 13,179** (or reverse) — Class 2 tundra/talus on the connecting ridge.
-3. Descend back into Cuba Gulch to the TH.
-
----
-
-## Per-peak route notes
-
-- **PT 13,076** — Class 2; the SW end of the arc. No formal 14ers route description (TR-only beta).
-- **PT 13,003** — **Class 1**; the middle, gentlest peak (ranked, peak_db id 822). Grabbed on the ridge between the other two.
-- **PT 13,179** — Class 2; the NE end, ~1.1 mi from 13,003, near Half Peak's south ridge.
-
----
-
-## Conditions / season
-
-- **Best window:** **July through September.** High San Juan tundra; the Lake Fork / Cuba Gulch road opens late and the upper section is rough.
-- **Storms:** standard San Juan afternoon monsoon exposure on the open ridge — early start, off the high ground by early afternoon.
-- **Terrain:** Class 2 tundra/talus throughout the standard line — no technical sections.
-
----
-
-## Permits / access
+**Permits / access:**
 
 - **Uncompahgre / Gunnison NF–BLM** (Lake Fork / Cuba Gulch) — no permits; the summits are not in designated wilderness (per peak_db). Standard Leave No Trace.
 - Cuba Gulch road: high-clearance recommended up high; check conditions.
 
 ---
 
-## Cell coverage
+## Gear & season
 
-- **14ers.com community DB:** no submitted reception reports for these summits.
-- **Geographic reasoning:** the **Cuba Gulch approach and basin are almost certainly dead** — deep in the Lake Fork backcountry. Summits may catch intermittent signal but treat it as unreliable.
-- **Standard recommendation:** carry an **InReach / satellite messenger**.
+- **Best window:** **July through September.** High San Juan tundra; the Lake Fork / Cuba Gulch road opens late and the upper section is rough.
+- **Storms:** standard San Juan afternoon monsoon exposure on the open ridge — early start, off the high ground by early afternoon.
+- **Terrain:** Class 2 tundra/talus throughout the standard line — no technical sections.
+- **Cell coverage:** no submitted 14ers.com reception reports for these summits; the **Cuba Gulch approach and basin are almost certainly dead** — deep in the Lake Fork backcountry. Summits may catch intermittent signal but treat it as unreliable — carry an **InReach / satellite messenger**.
 
 ---
 
@@ -154,4 +137,3 @@ Peak pages exist for all three (13,003 as "Unnamed 13003"); **no formal route de
 Ascent GPX pulled for all three — PT 13,076 (pid 15336), Unnamed 13,003 (pid 39877), PT 13,179 (pid 39878), 3 tracks each — layered on the CalTopo map.
 
 **Sources checked:** 14ers.com ✓ (logged in, "Basin") · listsofjohn.com ✓ (logged in, "letsgocu") · peakbagger.com ✓ (logged in, "Kyle Knutson")
-

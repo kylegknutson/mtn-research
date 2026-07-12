@@ -49,9 +49,9 @@ status_source: "peak_db ascents (Kyle — unclimbed)"
 **Other climbers:** Emily Sharpe — not yet · Shawn D Keil — ✓ all
 <!-- CLIMBERS_END -->
 
-## Quick stats
+## Peaks covered
 
-| | PT 13,290 ("Fools Pyramid") | PT 13,274 | PT 13,022 |
+| | [PT 13,290](https://www.14ers.com/peaks/10473) ("Fools Pyramid") | [PT 13,274](https://www.14ers.com/peaks/10479) | [PT 13,022](https://www.14ers.com/peaks/10600) |
 |---|---|---|---|
 | Elevation | 13,290' | 13,274' | 13,022' |
 | Lat / Lon | 37.6876, −107.3750 | 37.6966, −107.3690 | 37.6517, −107.3953 |
@@ -70,12 +70,11 @@ status_source: "peak_db ascents (Kyle — unclimbed)"
 
 ## The single push — Weminuche Trail TH loop ⭐
 
-A **real recorded loop** through all three (DEM-measured): **~19.5 mi / ~5,200′**. This is a **big day** — the Weminuche approach is long and deep — but not the monster the composed estimate first suggested. A party did the *whole* RGP group (these three + Rio Grande Pyramid) in one ~30 mi / ~9,800′ day (LoJ [TR 1934](https://listsofjohn.com/tr?Id=1934)), noting "some might say stupid" to do it as a day trip. **Most people backpack** (see below).
+A **real recorded loop** through all three. This is a **big day** — the Weminuche approach is long and deep — but not the monster the composed estimate first suggested. A party did the *whole* RGP group (these three + Rio Grande Pyramid) in one ~30 mi / ~9,800′ day (LoJ [TR 1934](https://listsofjohn.com/tr?Id=1934)), noting "some might say stupid" to do it as a day trip. **Most people backpack** (see *Other considerations*).
 
 | | |
 |---|---|
 | Peaks | PT 13,290 + PT 13,274 + PT 13,022 |
-| **Recommended loop** | **~19.5 mi / ~5,200′ (DEM)** |
 | Class | **2**, but **PT 13,022 is the crux: "a fairly complicated and exposed 3rd–4th class scramble on teetering blocks" on the final ~200′.** Helmet; the other two are straightforward Class 2. |
 | Trailhead | **Weminuche Trail TH (Thirtymile, Rio Grande Reservoir), ~9,300'** — 2WD |
 
@@ -87,13 +86,7 @@ A **real recorded loop** through all three (DEM-measured): **~19.5 mi / ~5,200�
 
 ---
 
-## Strongly consider a backpack ⛺
-
-This is **classic backpack country.** A short, easy pack-in — **~5 mi / ~1,325′** to a base camp near Weminuche Pass / the meadows — sets you up for **all the Rio Grande Pyramid 13ers** (these three + RGP + Window) on short summit days, instead of a ~20-mile push. Given the distance, a **2-night backpack is still a great way to clean up these three.**
-
----
-
-## Drive + approach
+## Getting there — Weminuche Trail TH
 
 | | |
 |---|---|
@@ -103,12 +96,18 @@ This is **classic backpack country.** A short, easy pack-in — **~5 mi / ~1,325
 
 ---
 
-## Conditions / season
+## Gear & season
 
 - **Best window:** **July–September** — deep, high Weminuche; long approach holds snow.
 - **Terrain:** mostly Class 2 tundra/talus; **the PT 13,022 summit block is exposed Class 3–4 on loose, teetering rock** — the one place to be careful.
 - **Storms:** you're a long way from the car — start very early or (better) camp high.
 - **Cell:** dead, deep wilderness — **InReach essential.**
+
+---
+
+## Other considerations
+
+**Strongly consider a backpack ⛺** — this is **classic backpack country.** A short, easy pack-in — **~5 mi / ~1,325′** to a base camp near Weminuche Pass / the meadows — sets you up for **all the Rio Grande Pyramid 13ers** (these three + RGP + Window) on short summit days, instead of a ~20-mile push. Given the distance, a **2-night backpack is still a great way to clean up these three.**
 
 ---
 

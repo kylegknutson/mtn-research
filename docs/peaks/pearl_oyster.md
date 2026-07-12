@@ -49,9 +49,9 @@ status_source: "peak_db ascents"
 **Other climbers:** Emily Sharpe — not yet · Shawn D Keil — ✓ all
 <!-- CLIMBERS_END -->
 
-## Quick stats
+## Peaks covered
 
-| | Pearl Mtn | "Oyster Pk" |
+| | [Pearl Mtn](https://www.14ers.com/peaks/10112) | ["Oyster Pk"](https://www.14ers.com/peaks/10116) |
 |---|---|---|
 | Elevation (LiDAR) | 13,379' (map 13,362') | 13,316' |
 | Lat / Lon | 38.98095, −106.83403 | 38.98579, −106.84413 |
@@ -67,11 +67,7 @@ status_source: "peak_db ascents"
 
 **The two summits are 0.64 mi apart** on a connecting ridge — the tightest pair of the five Eastern-Elk peaks researched.
 
----
-
-## Why these two together
-
-A **locked pair, not a forced pairing** — every trip report that hits either peak does **both** in one outing:
+**Why these two together:** a **locked pair, not a forced pairing** — every trip report that hits either peak does **both** in one outing:
 
 - **whileyh** (2020-05-17) — Pearl + Oyster, the cleanest example of the exact pair (snow/booted, Pearl Pass Road)
 - **josephnephi** (2024-07-02) — Oyster + Pearl (+ sub-13k Carbonate Hill, Greg Mace Peak)
@@ -80,17 +76,6 @@ A **locked pair, not a forced pairing** — every trip report that hits either p
 - **Furthermore** (2008-08-27) — both as part of a Cathedral-basin mega-traverse from the Aspen side
 
 **Combos (ranked-13er+ rule):** each is a true ranked-13er partner for the other (13,379' and 13,316', both ranked). The frequent companions — Greg Mace Peak and Carbonate Hill — are **sub-13k bumps** and don't count toward the ranked tally; the ranked objective here is exactly these two.
-
----
-
-## Drive + approach
-
-| | |
-|---|---|
-| **Drive from Boulder** | **[4h 22m via Google Maps](https://www.google.com/maps/dir/?api=1&origin=1162+Peakview+Circle,+Boulder,+CO+80302&destination=39.017,-106.813)** (~225 mi, origin: 1162 Peakview Circle; via I-70 W + CO-82 over Independence Pass) |
-| Primary trailhead | **Pearl Pass Road (4WD)**, Aspen / Castle Creek (Ashcroft) side — park ~39.017, −106.813 near the upper creek crossing (whileyh, josephnephi). Rough 4WD; how far you drive sets the day length. |
-| Southern alternate | From the **Brush Creek / Crested Butte side** (~38.965, −106.847) — John Kirk's approach, climbing the pair from the south. |
-| Big-traverse alt | From **Cathedral Lake TH** (Aspen) as part of a Cathedral-basin link-up (Furthermore) — much longer; only if chaining the already-done Cathedral/Electric Pass peaks. |
 
 ---
 
@@ -125,28 +110,25 @@ Expect roughly **~10 mi and ~4,300 ft** for the clean two-peak day from a reason
 
 ---
 
-## Conditions / season
+## Getting there — drive & trailhead
+
+| | |
+|---|---|
+| **Drive from Boulder** | **[4h 22m via Google Maps](https://www.google.com/maps/dir/?api=1&origin=1162+Peakview+Circle,+Boulder,+CO+80302&destination=39.017,-106.813)** (~225 mi, origin: 1162 Peakview Circle; via I-70 W + CO-82 over Independence Pass) |
+| Primary trailhead | **Pearl Pass Road (4WD)**, Aspen / Castle Creek (Ashcroft) side — park ~39.017, −106.813 near the upper creek crossing (whileyh, josephnephi). Rough 4WD; how far you drive sets the day length. |
+| Southern alternate | From the **Brush Creek / Crested Butte side** (~38.965, −106.847) — John Kirk's approach, climbing the pair from the south. |
+| Big-traverse alt | From **Cathedral Lake TH** (Aspen) as part of a Cathedral-basin link-up (Furthermore) — much longer; only if chaining the already-done Cathedral/Electric Pass peaks. |
+
+---
+
+## Gear & season
 
 - **Best window:** **mid-July through September** once Pearl Pass Road and the upper basin melt out. The road is a high, rough 4WD that opens late.
 - **Snow season:** a legitimate spring objective (whileyh mid-May, booting) — the connecting ridge and basin hold snow; bring axe/crampons and expect postholing below treeline.
 - **Crux:** the Oyster→Pearl ridge at Class 2+ with exposure — more serious when snow-covered.
 - **Storms:** standard high-Elk afternoon storm risk on the exposed ridge — early start.
-
----
-
-## Permits / access
-
-- **Maroon Bells–Snowmass Wilderness** — no climbing permit required, but wilderness regulations apply (the overnight-camping permit/reservation system covers the Conundrum/Maroon core, not the Pearl Pass approach).
-- White River / Gunnison National Forest — no fee at the trailhead.
-- Pearl Pass Road is a serious 4WD route; high-clearance 4WD strongly recommended.
-
----
-
-## Cell coverage
-
-- **14ers.com community DB:** no submitted reception reports for these summits or the Pearl Pass approach.
-- **Geographic reasoning:** the **Pearl Pass Road approach and basin are likely dead** — deep in the Maroon Bells–Snowmass backcountry. **Summits may catch line-of-sight signal** toward the Aspen/Castle Creek corridor, but treat it as unreliable.
-- **Standard recommendation:** carry an **InReach / satellite messenger**.
+- **Permits / access:** **Maroon Bells–Snowmass Wilderness** — no climbing permit required, but wilderness regulations apply (the overnight-camping permit/reservation system covers the Conundrum/Maroon core, not the Pearl Pass approach). White River / Gunnison National Forest — no fee at the trailhead. Pearl Pass Road is a serious 4WD route; high-clearance 4WD strongly recommended.
+- **Cell:** no submitted 14ers.com reception reports for these summits or the Pearl Pass approach. The **Pearl Pass Road approach and basin are likely dead** — deep in the Maroon Bells–Snowmass backcountry; **summits may catch line-of-sight signal** toward the Aspen/Castle Creek corridor, but treat it as unreliable. Carry an **InReach / satellite messenger**.
 
 ---
 

@@ -49,9 +49,9 @@ status_source: "peak_db ascents"
 **Other climbers:** Emily Sharpe — 1 of 2 (Mount Powell A) · Shawn D Keil — 1 of 2 (Mount Powell A)
 <!-- CLIMBERS_END -->
 
-## Quick stats
+## Peaks covered
 
-| | Mount Powell A | Eagles Nest A |
+| | [Mount Powell A](https://www.14ers.com/peaks/10218) | [Eagles Nest A](https://www.14ers.com/peaks/10219) |
 |---|---|---|
 | Elevation (LiDAR) | 13,556' | 13,419' |
 | Lat / Lon | 39.76009, −106.34074 | 39.77559, −106.3504 |
@@ -64,11 +64,7 @@ status_source: "peak_db ascents"
 
 **The two summits are 1.19 mi apart** — a natural, well-established pairing.
 
----
-
-## Why these two together
-
-A **standard combination**. The recent trip reports that hit either peak do both in one outing:
+**Why these two together:** a **standard combination**. The recent trip reports that hit either peak do both in one outing:
 
 - **elijahdgendron** (2025-08-17) — Powell + Eagles Nest
 - **josephnephi** (2025-07-07) — Powell + Eagles Nest
@@ -79,20 +75,9 @@ A **standard combination**. The recent trip reports that hit either peak do both
 
 ---
 
-## Drive + approach
-
-| | |
-|---|---|
-| **Drive from Boulder** | **[3h 5m via Google Maps](https://www.google.com/maps/dir/?api=1&origin=1162+Peakview+Circle,+Boulder,+CO+80302&destination=39.7203,-106.4051)** (129 mi, origin: 1162 Peakview Circle) — the closest of the deep-Gore 13ers |
-| Trailhead | **Piney Lake / Piney River Ranch** (~9,350'), ~11 mi up Red Sandstone Rd / Piney Lake Rd, N of Vail |
-| Vehicle | Piney Lake Rd is dirt — washboarded but 2WD-passable in dry conditions; rough/​muddy when wet. Piney River Ranch charges day-use parking. |
-| Approach | From Piney Lake, the **Upper Piney River trail** east, then up toward Kneeknocker Pass / Powell's west approach |
-
----
-
 ## Recommended plan — Piney Lake ⭐
 
-**Combo stats (from TR GPX):** roughly **~12–14 mi and ~5,500–7,000 ft** for the pair from Piney Lake — a long, committing alpine day. (Some logged tracks run longer/​bigger with extra sub-peaks.)
+A long, committing alpine day for the pair from Piney Lake. (Some logged tracks run longer/​bigger with extra sub-peaks.)
 
 1. From **Piney Lake**, follow the **Upper Piney River trail** east up the valley.
 2. Climb out of the basin toward the Powell massif (the standard line gains the **west/​southwest side** of Powell).
@@ -104,30 +89,25 @@ A **standard combination**. The recent trip reports that hit either peak do both
 
 ---
 
-## Conditions / season
+## Getting there — drive & trailhead
+
+| | |
+|---|---|
+| **Drive from Boulder** | **[3h 5m via Google Maps](https://www.google.com/maps/dir/?api=1&origin=1162+Peakview+Circle,+Boulder,+CO+80302&destination=39.7203,-106.4051)** (129 mi, origin: 1162 Peakview Circle) — the closest of the deep-Gore 13ers |
+| Trailhead | **Piney Lake / Piney River Ranch** (~9,350'), ~11 mi up Red Sandstone Rd / Piney Lake Rd, N of Vail |
+| Vehicle | Piney Lake Rd is dirt — washboarded but 2WD-passable in dry conditions; rough/​muddy when wet. Piney River Ranch charges day-use parking. |
+| Approach | From Piney Lake, the **Upper Piney River trail** east, then up toward Kneeknocker Pass / Powell's west approach |
+
+---
+
+## Gear & season
 
 - **Best window:** July through September. The Gore holds snow late and the approach is long — mid-summer for the dry standard lines.
 - **Rock:** classic Gore Range — solid where steep, but loose blocks; Eagles Nest's Class 3 demands attention.
-- **Length:** this is a **big day** (12–14+ mi, 5,500'+). Alpine start; watch the long exit.
+- **Length:** this is a **big day**. Alpine start; watch the long exit.
 - **Storms:** standard high-Gore afternoon storm exposure on a long ridge — be moving early.
-- **Access:** Piney Lake Rd can be rough/​muddy after rain; Piney River Ranch is private (day-use fee, seasonal).
-
----
-
-## Permits / access
-
-- **Eagles Nest Wilderness** (White River NF) — no permits required; standard wilderness rules (no motorized, leash dogs, groups ≤ 15).
-- Piney River Ranch is private land at the trailhead — pay the day-use parking fee; be respectful of the ranch operation.
-
----
-
-## Cell coverage
-
-- **14ers.com community DB:** no reports for either summit.
-- **Geographic reasoning:**
-  - **Piney Lake TH / Upper Piney basin:** likely **dead** — deep valley behind the Gore crest, shadowed from the I-70/​Vail corridor.
-  - **Powell / Eagles Nest summits:** **possible signal on top** — high Gore points with some LOS toward the Vail / I-70 corridor to the south, but not reliable.
-- **Standard recommendation:** carry an **InReach** — long, committing day with a Class 3 crux and a deep-valley approach.
+- **Access:** Piney Lake Rd can be rough/​muddy after rain; Piney River Ranch is private land at the trailhead (day-use parking fee, seasonal) — be respectful of the ranch operation. **Eagles Nest Wilderness** (White River NF) — no permits required; standard wilderness rules (no motorized, leash dogs, groups ≤ 15).
+- **Cell:** no 14ers.com community-DB reports for either summit. **Piney Lake TH / Upper Piney basin:** likely **dead** — deep valley behind the Gore crest, shadowed from the I-70/​Vail corridor. **Powell / Eagles Nest summits:** **possible signal on top** — some LOS toward the Vail / I-70 corridor to the south, but not reliable. Carry an **InReach** — long, committing day with a Class 3 crux and a deep-valley approach.
 
 ---
 

@@ -49,23 +49,28 @@ Source rigor (all three sources, confirmed logged-in) on **every peak** in the i
 - [ ] **Bailout/escape routes** from camp
 - [ ] **Single CalTopo map + PNG** showing camps, water, pack route, and each day's loop
 
-## Body sections (multi-day flavor)
+## Body sections (multi-day flavor — v2 format, Kyle 2026-07-12)
 
-1. **Trip Stats** — total days, total peaks, total distance/gain, pack-in distance, basecamp elevation
-2. **Overview map** (embedded PNG + CalTopo link — camps, water, pack route, day loops)
-3. **Peaks covered** — table: peak / day / class / from-camp stats / combo notes
-4. **Logistics**
-   - Pack-in (route, distance, gain, time with full pack)
-   - Basecamp(s) (location, elevation, water, legality)
-   - Pack-out
-5. **Day-by-day itinerary** — one subsection per day: peaks, route, stats, connector beta, bailouts
-6. **Water** — sources with locations
-7. **Gear** — group / personal / technical
-8. **Conditions / season / permits** — including wilderness camping/permit rules
-9. **Weather strategy** — sequencing exposed days
-10. **Trip reports & GPX** — grouped by source, flagging multi-day/backpack TRs specifically
-11. **TL;DR**
-12. **Sources checked** footer
+Fixed order, `---` between sections; exemplar: [Jupiter, Pigeon & Turret](../../peaks/jupiter_pigeon_turret.emily.md).
+At-a-glance is the ONLY home for day stats (headings carry class only); provenance
+detail lives only in the map-box note + Trip reports section.
+
+1. **Danger box** (if Class 4/5 / genuinely sketchy — ≤1 line per hazard)
+2. **Peaks covered** — intro sentence (style · hardest move · access · days/nights;
+   absorbs the old trip-at-a-glance table) + table with names linked to
+   `14ers.com/peaks/<id>`
+3. **Itinerary options** — Option A (= the At-a-glance day list) with the stacking
+   recommendation; Option B table if a compressed shape exists; settled decisions
+   get one inline line pointing at *Other considerations*
+4. **Getting there** — train/access/trailhead + the clickable drive-from-home link
+5. **The days, in order** — `### Day N — …` strictly chronological (pack-in = Day 1,
+   pack-out = last; a shared day gets "Day N, morning/afternoon")
+6. **Camps & water** — camp options table + water + regs merged
+7. **Gear & season** — gear + season window + monsoon strategy + bail-outs merged
+8. **Other considerations** (optional) — judgment forks with full rationale
+   (direction, alternate access…)
+9. **Trip reports & GPX** — grouped by source; sweep counts live here
+10. **Sources checked** footer
 
 ## Notes
 

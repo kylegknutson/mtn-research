@@ -42,19 +42,19 @@ dist_mi: 20.8
 
 ---
 
-## The seven peaks
+## Peaks covered
 
 In rough ridge order around the cirque (N → S → back):
 
 | # | Peak | Elevation | Class | peak_db |
 |---|---|---|---|---|
-| 1 | De Anza Peak A | 13,391' | 2 | 431 |
-| 2 | Gibbs Peak A ⭐ high point | 13,577' | 2 | 272 |
-| 3 | Mt Marcy | 13,504' | 2 | 327 |
-| 4 | "Silver Peak" | 13,517' | 2 | 307 |
-| 5 | PT 13,494 ("Cotton King") | 13,494' | 2 | 326 |
-| 6 | PT 13,130 | 13,130' | 2 | 694 |
-| 7 | Owen A, Mt | 13,361' | 2 | 446 |
+| 1 | [De Anza Peak A](https://www.14ers.com/peaks/10657) | 13,391' | 2 | 431 |
+| 2 | [Gibbs Peak A](https://www.14ers.com/peaks/10633) ⭐ high point | 13,577' | 2 | 272 |
+| 3 | [Mt Marcy](https://www.14ers.com/peaks/10645) | 13,504' | 2 | 327 |
+| 4 | ["Silver Peak"](https://www.14ers.com/peaks/10641) | 13,517' | 2 | 307 |
+| 5 | [PT 13,494](https://www.14ers.com/peaks/10644) ("Cotton King") | 13,494' | 2 | 326 |
+| 6 | [PT 13,130](https://www.14ers.com/peaks/10679) | 13,130' | 2 | 694 |
+| 7 | [Owen A, Mt](https://www.14ers.com/peaks/10660) | 13,361' | 2 | 446 |
 
 All **Class 2** on the standard lines — the difficulty here is **distance, gain, and ridge route-finding**, not technical climbing.
 
@@ -62,7 +62,22 @@ All **Class 2** on the standard lines — the difficulty here is **distance, gai
 
 ---
 
-## Drive + approach (from Highland, Denver)
+## Recommended plan — Lakes of the Clouds horseshoe ⭐
+
+The seven ring the **Lakes of the Clouds** cirque. The natural line climbs to the lakes, gains the ridge, and traverses the horseshoe, tagging summits along the crest.
+
+**Loop stats:** the full seven is a **very big outing — on the order of ~15–24 mi and ~8,000–12,000 ft** depending on the exact line and which THs you link. Individual arcs (per the logged tracks) run ~6–14 mi.
+
+**Two ways to do it:**
+
+1. **Two days (recommended)** — backpack to a **camp near the Lakes of the Clouds**, then split the ridge into a **north arc** (De Anza · Gibbs · Marcy · Silver) and a **south arc** (Cotton King/PT 13,494 · PT 13,130 · Owen) on either side of the camp. This is how josephnephi did it (2024: north arc one day, south arc the next).
+2. **One long push** — a huge single-day horseshoe for the very fit (expect 24 mi / 12,000 ft class numbers on the bigger logged tracks). Alpine start, all-day commitment.
+
+> **Study the GPX on the [research map](https://caltopo.com/m/J9G39T0)** for the exact ridge sequence — the connecting ridges are Class 2 but have route-finding, false summits, and a few drops/​regains between peaks. There's no single "standard route" sign here; the logged tracks are the beta.
+
+---
+
+## Getting there — drive + approach (from Highland, Denver)
 
 | | |
 |---|---|
@@ -71,47 +86,27 @@ All **Class 2** on the standard lines — the difficulty here is **distance, gai
 | West approach | **Cotton Creek / Wild Cherry Creek / Rito Alto Creek** from the San Luis Valley side (Moffat) — the line the logged loop GPX on the research map follow |
 | Vehicle | Dirt forest roads to the THs; 2WD-passable in dry conditions, rough/​muddy when wet |
 
-> The seven can be linked from **either side** of the range. The logged loop tracks on the [research map](https://caltopo.com/m/J9G39T0) are the **west (SLV)** approach (drive time above); many 14ers parties use **Gibson Creek (east)** — check both before committing, depending on which THs you want to start/finish at.
-
 ---
 
-## Recommended plan — Lakes of the Clouds horseshoe ⭐
-
-The seven ring the **Lakes of the Clouds** cirque. The natural line climbs to the lakes, gains the ridge, and traverses the horseshoe, tagging summits along the crest.
-
-**Loop stats (from TR GPX):** the full seven is a **very big outing — on the order of ~15–24 mi and ~8,000–12,000 ft** depending on the exact line and which THs you link. Individual arcs (per the logged tracks) run ~6–14 mi.
-
-**Two ways to do it:**
-
-1. **Two days (recommended)** — backpack to a **camp near the Lakes of the Clouds**, then split the ridge into a **north arc** (De Anza · Gibbs · Marcy · Silver) and a **south arc** (Cotton King/PT 13,494 · PT 13,130 · Owen) on either side of the camp. This is how josephnephi did it (2024: north arc one day, south arc the next).
-2. **One long push** — a huge single-day horseshoe for the very fit and acclimatized (expect 24 mi / 12,000 ft class numbers on the bigger logged tracks). Alpine start, all-day commitment.
-
-> **Study the GPX on the [research map](https://caltopo.com/m/J9G39T0)** for the exact ridge sequence — the connecting ridges are Class 2 but have route-finding, false summits, and a few drops/​regains between peaks. There's no single "standard route" sign here; the logged tracks are the beta.
-
----
-
-## Conditions / season
+## Gear & season
 
 - **Best window:** July–September for dry Class 2 tundra/​talus and the dirt approach roads. Snow lingers in the cirque into early summer (several logged tracks are late-May with snow).
 - **Terrain:** high tundra, talus, and grassy/​rocky ridges — solid Sangre Class 2, but long exposed ridgelines.
 - **Water:** the Lakes of the Clouds + creek drainages make a 2-day camp easy to supply (treat).
 - **Storms:** you're on exposed ridge for hours — early start, and have a bail plan off the ridge into the basin if weather builds.
 - **Length is the hazard:** big mileage + gain at 13k. Pace, fuel, and turnaround discipline matter more than any move on the route.
+- **Permits / access:** **Sangre de Cristo Wilderness** (Rio Grande / San Isabel NF) — no permits required; standard wilderness rules (no motorized, groups ≤ 15, leash/​control dogs). Dispersed camping near the lakes is allowed under Leave No Trace; camp on durable surfaces away from water.
+- **Cell coverage:** no 14ers.com community-DB reports for these summits. The cirque and west-side approaches are **deep behind the range crest** — expect **dead** at the THs and lakes; **summits/​high ridge** may catch intermittent signal toward the San Luis Valley (west) but don't rely on it. **Carry an InReach** — this is a long, committing, remote multi-peak day/​overnight.
 
 ---
 
-## Permits / access
+## Other considerations
 
-- **Sangre de Cristo Wilderness** (Rio Grande / San Isabel NF) — no permits required; standard wilderness rules (no motorized, groups ≤ 15, leash/​control dogs).
-- Dispersed camping near the lakes is allowed under Leave No Trace; camp on durable surfaces away from water.
-
----
-
-## Cell coverage
-
-- **14ers.com community DB:** no reports for these summits.
-- **Geographic reasoning:** the cirque and west-side approaches are **deep behind the range crest** — expect **dead** at the THs and lakes. **Summits/​high ridge** may catch intermittent signal toward the San Luis Valley (west) but don't rely on it.
-- **Standard recommendation:** **carry an InReach** — this is a long, committing, remote multi-peak day/​overnight.
+**Which side of the range?** The seven can be linked from **either side**. The logged
+loop tracks on the [research map](https://caltopo.com/m/J9G39T0) are the **west (SLV)**
+approach — Wild Cherry Creek, the drive-time target above. Many 14ers parties use
+**Gibson Creek (east)** from the Wet Mountain Valley instead — check both before
+committing, depending on which THs you want to start/finish at.
 
 ---
 

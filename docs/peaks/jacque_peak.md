@@ -43,15 +43,21 @@ status_source: "peak_db ascents"
 - ✓ Done nearby (Tenmile/Mosquito group): Pacific (4.49 mi), Crystal A (4.62), Atlantic (4.74), PT 13,207 (4.89), Fletcher (5.08), Peak 10 (5.08), Wheeler (6.08), Quandary (6.25), Clinton (6.51), N Star (6.74)
 - **Effectively a standalone day** — combinations with Tucker/Union/Copper Mtn (12,xxx's) are common but those are all sub-13k and don't count as ranked combos
 
+![Overview map](../maps/jacque_peak.png)
+
+<!-- PROVENANCE_START -->
+*Note: the recommended route was distilled from **12 recorded GPS tracks** of real trips (recorded trips) — all layered on the [interactive CalTopo research map](https://caltopo.com/m/R2NF0S2).*
+<!-- PROVENANCE_END -->
+
 ---
 
 <!-- CLIMBERS_START -->
 **Other climbers:** Emily Sharpe — not yet · Shawn D Keil — ✓ climbed
 <!-- CLIMBERS_END -->
 
-## Quick stats
+## The peak
 
-| | Jacque Peak |
+| | [Jacque Peak](https://www.14ers.com/peaks/10229) |
 |---|---|
 | Elevation | 13,212' (LiDAR; map 13,205') |
 | Lat / Lon | 39.45485, −106.19713 |
@@ -65,12 +71,6 @@ status_source: "peak_db ascents"
 | CO Prominence Rank | 58 (Rise 2,296' LiDAR — high prominence!) |
 | Quad | Copper Mountain |
 | County | Summit |
-
-![Overview map](../maps/jacque_peak.png)
-
-<!-- PROVENANCE_START -->
-*Note: the recommended route was distilled from **12 recorded GPS tracks** of real trips (recorded trips) — all layered on the [interactive CalTopo research map](https://caltopo.com/m/R2NF0S2).*
-<!-- PROVENANCE_END -->
 
 ---
 
@@ -124,7 +124,7 @@ The most common modern approach. Up through Copper ski terrain, over Union Mount
 
 ---
 
-## Trailhead — Copper Mountain Resort base
+## Getting there — Copper Mountain Resort base
 
 | | |
 |---|---|
@@ -147,35 +147,23 @@ The most common modern approach. Up through Copper ski terrain, over Union Mount
 | Caveat | Walk a few hundred yards north on CO 91 before crossing west to avoid mine property |
 | Facilities | None |
 
+**Permits / access:**
+
+- White River National Forest — no permits, no fees
+- **NOT in Eagles Nest Wilderness** (peak sits on the boundary; standard route from Copper is outside)
+- Copper Mountain Resort base parking: free in summer. In ski season, interior lots are free before 8:30am and after 2pm (hangtag from Mammut Store required during the day — you get it when picking up your uphill armband)
+- ⚠️ **CO 91 / Graveline approach:** be careful with closed mine boundary — Lochary, avalletta, and Stratmoen all flag No Parking enforcement on the concrete-barrier side
+
 ---
 
-## Conditions / season
+## Gear & season
 
 - **Best window:** late June through October. Talus crux is unpleasant under snow but doable
 - **Summer storms:** standard Colorado afternoon storm risk on the exposed west ridge — early start needed. Stratmoen got smoke obscuring the views in August (wildfire season factor)
 - **Winter:** Multiple winter ascents in PB record (Dec/Feb/March). Stratmoen's late-Aug climb mentions smoky views. jacolc winter 2017 ascent took 9h46 vs 5.5h summer
 - **Lift-served winter (Copper uphill access):** hiking through Copper ski terrain during ski season requires **mandatory annual registration** + visible armband. **Free for Copper Season Pass or Ikon Pass holders** — but you must still register online and pick up the armband at the Mammut Store in Center Village ($5 for a new armband, free insert). Non-pass holders can purchase an Uphill Access Pass separately. Must use designated routes only — **Route 1 (Aerie/PHQ, 2,210 ft) runs mornings only, 5am–8:30am**, and you must descend the same route. See [Copper uphill access page](https://www.coppercolorado.com/events-activities/winter-activities/uphill-access/). Otherwise Graveline Gulch (CO 91) is the clean ski-area-free option for anyone.
 - **Wind:** typical Gore Range exposure on the west ridge
-
----
-
-## Cell coverage
-
-- **14ers.com community DB:** not yet queried — typically 0 reports for 13ers without route descriptions
-- **Geographic reasoning:**
-  - **TH (Copper base village):** strong signal — full resort coverage
-  - **Approach (Copper Bowl):** strong on the east-facing ski terrain
-  - **West ridge / summit:** likely good — LOS to I-70 corridor towers (Vail, Frisco) and Copper village
-- **Standard recommendation:** carry InReach but coverage should be solid for the Copper-side approach. Graveline Gulch start is more drainage-shadowed.
-
----
-
-## Permits / access
-
-- White River National Forest — no permits, no fees
-- **NOT in Eagles Nest Wilderness** (peak sits on the boundary; standard route from Copper is outside)
-- Copper Mountain Resort base parking: free in summer. In ski season, interior lots are free before 8:30am and after 2pm (hangtag from Mammut Store required during the day — you get it when picking up your uphill armband)
-- ⚠️ **CO 91 / Graveline approach:** be careful with closed mine boundary — Lochary, avalletta, and Stratmoen all flag No Parking enforcement on the concrete-barrier side
+- **Cell coverage:** 14ers.com community DB not yet queried — typically 0 reports for 13ers without route descriptions. Geographic reasoning: TH (Copper base village) strong signal — full resort coverage; approach (Copper Bowl) strong on the east-facing ski terrain; west ridge / summit likely good — LOS to I-70 corridor towers (Vail, Frisco) and Copper village. Carry InReach but coverage should be solid for the Copper-side approach. Graveline Gulch start is more drainage-shadowed.
 
 ---
 
@@ -237,7 +225,6 @@ The most common modern approach. Up through Copper ski terrain, over Union Mount
 **Generated (to build):**
 - `jacque_peak_summit_TH.gpx` — Jacque summit + Copper Mtn base TH + CO 91 / Graveline pullout
 - `jacque_peak_route_recommended.gpx` — extract from Stratmoen 11112 (Jacque + Union via Woodward Express)
-
 
 ---
 

@@ -47,9 +47,9 @@ dist_mi: 7.5
 **Other climbers:** Emily Sharpe — not yet · Kyle Knutson — ✓ climbed
 <!-- CLIMBERS_END -->
 
-## Quick stats
+## The peak
 
-| | Jacque Peak |
+| | [Jacque Peak](https://www.14ers.com/peaks/10229) |
 |---|---|
 | Elevation | 13,212' (LiDAR; map 13,205') |
 | Lat / Lon | 39.45485, −106.19713 |
@@ -61,27 +61,7 @@ dist_mi: 7.5
 | CO Rank | 482 |
 | CO Prominence Rank | 58 (Rise 2,296' — high prominence!) |
 
----
-
-## Drive + trailhead (from Edgewater)
-
-| | |
-|---|---|
-| **Drive from Edgewater** | **[~1h 50m via Google Maps](https://www.google.com/maps/dir/?api=1&origin=Edgewater,+CO+80214&destination=39.4914,-106.1568)** (~76 mi, I-70 W → Exit 195) |
-| Primary trailhead | Copper Mountain Resort base village, I-70 Exit 195 |
-| Vehicle | Anything — paved to base village |
-| Start elev | ~9,712' (base village) |
-| Parking | Free in summer. In ski season: interior lots free before 8:30am and after 2pm; pick up a hangtag at the Mammut Store when you get your uphill armband |
-| Facilities | Full village amenities (food, restrooms, water) in season |
-
-### Alt TH — CO 91 / Graveline Gulch
-
-| | |
-|---|---|
-| Location | East side of CO 91, ~1.5 mi south of Copper exit, across from closed mine |
-| Drive from Edgewater | **[~1h 50m via Google Maps](https://www.google.com/maps/dir/?api=1&origin=Edgewater,+CO+80214&destination=39.3938,-106.1469)** (similar to Copper) |
-| Start elev | ~10,500' |
-| Parking | Side of CO 91 — park *before* the concrete barriers (mine has aggressive No Parking enforcement) |
+No same-drainage ranked 13er link-up: Bartlett Mtn (5.74 mi, the only nearby ranked peak) is across Climax Mine / Fremont Pass — a completely different drive. Tucker, Union, and Copper Mountain are all sub-13k. **Effectively a standalone day** for a ranked-peak tick.
 
 ---
 
@@ -109,9 +89,7 @@ Up through Copper ski terrain, over Union Mountain (12,313'), then long ridge wa
 5. Long talus/boulder hop to summit (false summit first — Stratmoen flags it)
 6. Descend the same way, or drop down Copper ski runs for a shortcut
 
----
-
-## Alternates
+### Alternates
 
 **Graveline Gulch from CO 91** — ~7.5 mi RT, 3,700–4,000', ~5.5h
 - Shorter mileage than Copper side; no ski-area crossing
@@ -126,34 +104,40 @@ Up through Copper ski terrain, over Union Mountain (12,313'), then long ridge wa
 
 ---
 
-## Conditions / season
+## Getting there — Copper Mountain base (from Edgewater)
 
-- **Best window:** late June through October
-- **Afternoon storms:** exposed west ridge — start early
-- **Winter:** Copper route requires uphill registration (free for Copper/Ikon pass holders, mandatory armband, mornings only 5am–8:30am on Route 1). Graveline Gulch (CO 91) avoids the ski area entirely — multiple winter PB ascents on record via both options
+| | |
+|---|---|
+| **Drive from Edgewater** | **[~1h 50m via Google Maps](https://www.google.com/maps/dir/?api=1&origin=Edgewater,+CO+80214&destination=39.4914,-106.1568)** (~76 mi, I-70 W → Exit 195) |
+| Primary trailhead | Copper Mountain Resort base village, I-70 Exit 195 |
+| Vehicle | Anything — paved to base village |
+| Start elev | ~9,712' (base village) |
+| Parking | Free in summer. In ski season: interior lots free before 8:30am and after 2pm; pick up a hangtag at the Mammut Store when you get your uphill armband |
+| Facilities | Full village amenities (food, restrooms, water) in season |
 
----
+### Alt TH — CO 91 / Graveline Gulch
 
-## Cluster / combo note
+| | |
+|---|---|
+| Location | East side of CO 91, ~1.5 mi south of Copper exit, across from closed mine |
+| Drive from Edgewater | **[~1h 50m via Google Maps](https://www.google.com/maps/dir/?api=1&origin=Edgewater,+CO+80214&destination=39.3938,-106.1469)** (similar to Copper) |
+| Start elev | ~10,500' |
+| Parking | Side of CO 91 — park *before* the concrete barriers (mine has aggressive No Parking enforcement) |
 
-No same-drainage ranked 13er link-up: Bartlett Mtn (5.74 mi, the only nearby ranked peak) is across Climax Mine / Fremont Pass — a completely different drive. Tucker, Union, and Copper Mountain are all sub-13k. **Effectively a standalone day** for a ranked-peak tick.
-
----
-
-## Cell coverage
-
-- **Copper base village:** strong signal (full resort coverage)
-- **Copper Bowl approach:** strong (east-facing ski terrain)
-- **West ridge / summit:** good — line-of-sight to I-70 corridor towers (Vail, Frisco, Copper)
-- Carry InReach as standard; coverage should be solid the Copper side
-
----
-
-## Permits / access
+**Permits / access:**
 
 - White River NF — no permits, no fees
 - NOT in Eagles Nest Wilderness
 - ⚠️ CO 91 / Graveline: park before the mine barriers; don't cross the mine boundary
+
+---
+
+## Gear & season
+
+- **Best window:** late June through October
+- **Afternoon storms:** exposed west ridge — start early
+- **Winter:** Copper route requires uphill registration (free for Copper/Ikon pass holders, mandatory armband, mornings only 5am–8:30am on Route 1). Graveline Gulch (CO 91) avoids the ski area entirely — multiple winter PB ascents on record via both options
+- **Cell coverage:** Copper base village strong signal (full resort coverage); Copper Bowl approach strong (east-facing ski terrain); west ridge / summit good — line-of-sight to I-70 corridor towers (Vail, Frisco, Copper). Carry InReach as standard; coverage should be solid the Copper side
 
 ---
 
@@ -201,7 +185,6 @@ No same-drainage ranked 13er link-up: Bartlett Mtn (5.74 mi, the only nearby ran
 | 2025-08-08 | [Alex Gaab](https://peakbagger.com/climber/ascent.aspx?aid=2934720) | **3,500' / 10.2 mi / 3h** | Copper Mountain. "Long scrambles, a few actual climbing spots, but never anything truly dangerous, rock was stable" |
 | 2025-03-16 | [Xander Westra](https://peakbagger.com/climber/ascent.aspx?aid=2784737) | **2,249' / 9.1 mi / 7h14** from 10,963' TH | Mayflower Gulch. ⚠️ crossed tailings pond — "do not recommend, learned it is trespassing." |
 | 2025-06-22 | [Jack Murdoch](https://peakbagger.com/climber/ascent.aspx?aid=2879347) | — | — |
-
 
 ---
 

@@ -20,6 +20,10 @@ class_source: "14ers TR #20763 (Class 4 summit move; Class 3 alt left of it); li
 status_source: "scrape_14ers_checklist emily (usernum 45697) 2026-06-17; peak_db ascents (Kyle ✓ climbed)"
 ---
 
+<!-- CLIMBERS_START -->
+**Other climbers:** Kyle Knutson — ✓ climbed · Shawn D Keil — ✓ climbed
+<!-- CLIMBERS_END -->
+
 # Gladstone Peak — 13,923' Centennial (San Juan, Wilson group)
 
 <!-- QUICKSTATS_START -->
@@ -49,13 +53,13 @@ status_source: "scrape_14ers_checklist emily (usernum 45697) 2026-06-17; peak_db
 
 ---
 
-<!-- CLIMBERS_START -->
-**Other climbers:** Kyle Knutson — ✓ climbed · Shawn D Keil — ✓ climbed
-<!-- CLIMBERS_END -->
+!!! danger "Class 4 summit move + very loose rock — this is the hard part"
+    - **Class 4 summit move:** a short committing pull onto the summit block — a recorded TR ([14ers #20763](https://www.14ers.com/php14ers/tripreport.php?trip=20763)) describes "**the true 'Class 4' move to pull to the top**" with "**a nice Class 3 alternative to the left of it**," so the very top goes at stiff Class 3 if you pick the line carefully.
+    - **Rock quality:** "**I hardly trusted a rock all day**" — the upper mountain is steep, loose talus and shifting blocks; helmet on, test every hold, nobody directly below you, and save it for dry, stable conditions (wet or snowy rock here is serious).
 
-## Quick stats
+## The peak
 
-| | Gladstone Peak |
+| | [Gladstone Peak](https://www.14ers.com/peaks/10278) |
 |---|---|
 | Elevation | **13,923'** |
 | Lat / Lon | 37.84513, −107.98415 |
@@ -69,21 +73,19 @@ status_source: "scrape_14ers_checklist emily (usernum 45697) 2026-06-17; peak_db
 
 ---
 
-!!! danger "Class 4 summit move + very loose rock — this is the hard part"
-    However you approach it, **Gladstone ends with a short Class 4 move pulling onto the summit block.** A recorded TR ([14ers #20763](https://www.14ers.com/php14ers/tripreport.php?trip=20763)) describes "**the true 'Class 4' move to pull to the top**," with "**a nice Class 3 alternative to the left of it**" — so the very top can be done at **stiff Class 3** if you pick the line carefully, but expect at least one committing move.
-    The bigger theme is **rock quality:** the same party wrote "**I hardly trusted a rock all day.**" The upper mountain is **steep, loose talus and shifting blocks** — helmet on, test every hold, and don't climb it with people directly below you. Save it for **dry, stable conditions**; wet or snowy rock here is serious.
-
 ## The route — Cross Mountain TH / Bilk Basin ⭐
 
-A **~11.3 mi / ~5,000′ round trip** (DEM-measured off a recorded 14ers track — the shortest clean **Gladstone-only day** in the library; the Navajo Basin/Rock-of-Ages side from the west is a longer day, usually done when combining the Wilsons). Class 4 at the summit, Class 2 talus and tundra below it.
+The **shortest clean Gladstone-only day** in the track library (the Navajo Basin /
+Rock-of-Ages side from the west is a longer day, usually done when combining the
+Wilsons). Class 4 at the summit, Class 2 talus and tundra below it.
 
 - **Line:** **Cross Mountain TH** (CO-145 near Lizard Head Pass, ~10,000′) → **Lizard Head / Cross Mountain trail** into **Bilk Basin** (the SE cirque under the Wilson group) → up Gladstone's **southeast slopes** (steepening, loose talus) → the **short Class 4 crux just below the summit** (Class 3 line just left).
 - **Why this side:** it's the **shortest standalone** approach to Gladstone — a roadside CO-145 trailhead, no long basin backpack and less gain than the western (Navajo Basin) approaches.
-- **Effort, not just grade:** still a **long, high day** — ~5,000′ of gain and a steep, loose finish.
+- **Effort, not just grade:** still a **long, high day** with a steep, loose finish.
 
 ---
 
-## Drive + approach (from Highland, Denver)
+## Getting there — drive + approach (from Highland, Denver)
 
 | | |
 |---|---|
@@ -93,7 +95,7 @@ A **~11.3 mi / ~5,000′ round trip** (DEM-measured off a recorded 14ers track �
 
 ---
 
-## Conditions / season
+## Gear & season
 
 - **Best window:** **mid-July through September**, once the upper basin and the loose summit slopes are dry and snow-free. The Class 4 crux is **much more dangerous with snow/ice or wet rock.**
 - **Terrain:** trail + basin to talus; the **upper mountain is steep and notoriously loose** to a **Class 4** finish. Helmet strongly recommended.
@@ -112,4 +114,3 @@ A **~11.3 mi / ~5,000′ round trip** (DEM-measured off a recorded 14ers track �
 - **climb13ers.com:** Gladstone Peak route notes (Wilson group).
 
 **Sources checked:** 14ers.com ✓ (6 tracks) · peakbagger.com ✓ (3 tracks) · listsofjohn.com ✓ (no GPX, text TRs) · climb13ers.com ✓
-

@@ -52,9 +52,9 @@ status_source: "peak_db ascents"
 **Other climbers:** Emily Sharpe — ✓ climbed · Shawn D Keil — ✓ climbed
 <!-- CLIMBERS_END -->
 
-## Quick stats
+## The peak
 
-| | Chipeta Mountain |
+| | [Chipeta Mountain](https://www.14ers.com/peaks/10745) |
 |---|---|
 | Elevation (LiDAR) | 13,495' |
 | Lat / Lon | 38.44767, −106.24077 |
@@ -68,22 +68,9 @@ status_source: "peak_db ascents"
 
 ---
 
-## Drive + approach
-
-| | |
-|---|---|
-| **Drive from Boulder** | **[4h 13m via Google Maps](https://www.google.com/maps/dir/?api=1&origin=1162+Peakview+Circle,+Boulder,+CO+80302&destination=38.3942,-106.2472)** (181 mi, origin: 1162 Peakview Circle) |
-| Trailhead | Marshall Pass (~10,842'), off US‑285 via Poncha Springs → CR 200 (gravel) |
-| Vehicle | 2WD gravel to Marshall Pass in summer; the road is well-graded (old railroad grade) |
-| Approach | From the pass the route follows the **Continental Divide / Colorado Trail** north over rolling tundra toward Chipeta's south ridge |
-
----
-
 ## Recommended route — Marshall Pass, NW up the Divide ⭐
 
-A high, mellow tundra walk — one of the easier southern-Sawatch 13ers once you're at the pass.
-
-**Stats (DEM-measured from the recorded tracks):** **~7.7 mi RT / ~3,450 ft** from Marshall Pass (more if you chain Chipeta South). Class 2 throughout. *(The 2,630′ net climb from the 10,842′ pass to the 13,472′ summit rules out the lower estimates some TRs cite.)*
+A high, mellow tundra walk — one of the easier southern-Sawatch 13ers once you're at the pass. **Class 2 throughout** (more mileage if you chain Chipeta South). *(The 2,630′ net climb from the 10,842′ pass to the 13,472′ summit rules out the lower estimates some TRs cite.)*
 
 1. From Marshall Pass, head **north/NW along the Continental Divide** (Colorado Trail / Monarch Crest corridor) on tundra.
 2. Follow the broad ridge over (or around) **Chipeta Mtn South** (12,874') toward Chipeta's south slopes.
@@ -94,35 +81,33 @@ A high, mellow tundra walk — one of the easier southern-Sawatch 13ers once you
 
 ---
 
-## Multi-peak note — Chipeta + Mt Ouray (big day)
+## Drive + approach
 
-**Mt Ouray** (13,979', ~3 mi NW, ranked, unclimbed) is the standout combo (josephnephi 2023: Chipeta + Ouray). It roughly **doubles the day** (Ouray is a steeper, more prominent peak with its own ~2,500'+ climb) and is usually approached from the Marshall Pass side too. If you want two ranked summits per the long drive, this is the pairing — plan a long alpine day rather than the short Chipeta-only outing.
-
----
-
-## Conditions / season
-
-- **Best window:** June through October for the dry Marshall Pass road + tundra. The high, open Divide makes this a good early/late-season pick when higher Sawatch peaks are snowy.
-- **Snow:** whileyh climbed late May (snow lingering); by mid-June the tundra is mostly dry.
-- **Storms:** fully exposed on the Divide — early start, off the ridge by early afternoon.
-- **Wind:** the Marshall Pass / Monarch corridor is notoriously windy; bring layers.
-
----
-
-## Permits / access
+| | |
+|---|---|
+| **Drive from Boulder** | **[4h 13m via Google Maps](https://www.google.com/maps/dir/?api=1&origin=1162+Peakview+Circle,+Boulder,+CO+80302&destination=38.3942,-106.2472)** (181 mi, origin: 1162 Peakview Circle) |
+| Trailhead | Marshall Pass (~10,842'), off US‑285 via Poncha Springs → CR 200 (gravel) |
+| Vehicle | 2WD gravel to Marshall Pass in summer; the road is well-graded (old railroad grade) |
+| Approach | From the pass the route follows the **Continental Divide / Colorado Trail** north over rolling tundra toward Chipeta's south ridge |
 
 - San Isabel / Gunnison NF — no permits, no fees.
 - Marshall Pass Rd (CR 200 / FR 200) is a maintained gravel road (former narrow-gauge grade) — 2WD friendly in summer; gated/snowed in winter.
 
 ---
 
-## Cell coverage
+## Gear & season
 
-- **14ers.com community DB:** no reports for the summit.
-- **Geographic reasoning:**
-  - **Marshall Pass TH (~10,842'):** likely **some signal** — high pass with LOS toward the Poncha Springs / Salida corridor (US‑50 towers ~15 mi E).
-  - **Summit (13,495'):** likely **good** — high open Divide point with broad line-of-sight east to the Arkansas Valley.
-- **Standard recommendation:** carry an InReach, but coverage on this corridor is better than most 13er areas.
+- **Best window:** June through October for the dry Marshall Pass road + tundra. The high, open Divide makes this a good early/late-season pick when higher Sawatch peaks are snowy.
+- **Snow:** whileyh climbed late May (snow lingering); by mid-June the tundra is mostly dry.
+- **Storms:** fully exposed on the Divide — early start, off the ridge by early afternoon.
+- **Wind:** the Marshall Pass / Monarch corridor is notoriously windy; bring layers.
+- **Cell:** no 14ers.com community reports for the summit, but the Marshall Pass TH (~10,842') likely has **some signal** (high pass with LOS toward the Poncha Springs / Salida corridor — US‑50 towers ~15 mi E) and the summit (13,495') likely **good** (broad line-of-sight east to the Arkansas Valley). Carry an InReach as standard, but coverage on this corridor is better than most 13er areas.
+
+---
+
+## Other considerations
+
+**Chipeta + Mt Ouray (big day):** **Mt Ouray** (13,979', ~3 mi NW, ranked, unclimbed) is the standout combo (josephnephi 2023: Chipeta + Ouray). It roughly **doubles the day** (Ouray is a steeper, more prominent peak with its own ~2,500'+ climb) and is usually approached from the Marshall Pass side too. If you want two ranked summits per the long drive, this is the pairing — plan a long alpine day rather than the short Chipeta-only outing.
 
 ---
 

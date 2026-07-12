@@ -21,6 +21,10 @@ class_source: "route beta — listsofjohn + peakbagger trip-report tracks (Class
 status_source: "scrape_14ers_checklist emily"
 ---
 
+<!-- CLIMBERS_START -->
+**Other climbers:** Kyle Knutson — ✓ all · Shawn D Keil — 1 of 4 (PT 13,486)
+<!-- CLIMBERS_END -->
+
 # Clohesey Four — Magdalene + Pear + 13,513 + 13,486 (Sawatch)
 
 <!-- QUICKSTATS_START -->
@@ -50,13 +54,9 @@ status_source: "scrape_14ers_checklist emily"
 
 ---
 
-<!-- CLIMBERS_START -->
-**Other climbers:** Kyle Knutson — ✓ all · Shawn D Keil — 1 of 4 (PT 13,486)
-<!-- CLIMBERS_END -->
+## Peaks covered
 
-## Quick stats
-
-| | Magdalene Mtn | "Pear Pk" | PT 13,517 A ("13,513") | PT 13,486 |
+| | [Magdalene Mtn](https://www.14ers.com/peaks/10709) | ["Pear Pk"](https://www.14ers.com/peaks/10747) | [PT 13,517 A ("13,513")](https://www.14ers.com/peaks/10741) | [PT 13,486](https://www.14ers.com/peaks/10746) |
 |---|---|---|---|---|
 | Elevation | 13,780' | 13,459' | 13,513' (LiDAR) | 13,486' |
 | Lat / Lon | 38.9070, −106.3676 | 38.9106, −106.4021 | 38.9283, −106.4218 | 38.9342, −106.4248 |
@@ -73,15 +73,23 @@ All four are **ranked Class 2** Sawatch 13ers. They sit in a ~3 mi arc above Clo
 
 ## The link-up — one loop over all four ⭐
 
-**Yes, all four link in one outing** — a **~12.2 mi / ~5,700′ loop, Class 2+** from the **Clohesey Lake TH** (DEM-measured, stitched from recorded GPX):
+**Yes, all four link in one outing** — a **Class 2+ loop** from the **Clohesey Lake TH**:
 
 - **Loop order:** Clohesey Lake TH → **PT 13,486 → PT 13,517 A** (the close NW pair) → **"Pear Pk"** → **Magdalene Mtn** → back to the lake (reverse works too).
 - **Difficulty:** all four *summits* are Class 2. **The connectors are Class 2 to a max of Class 2+** — including the **13,517 A ↔ 13,486 link**, which a recorded TR ([2023](https://www.14ers.com/php14ers/tripreport.php?trip=22289)) specifically documents as "**class 2+ max**" (the author wrote it up precisely because there wasn't much beta on linking 13,513 with the newly LiDAR-ranked neighbor). Route also on the **Cooneys' climb13ers** site.
-- Tundra and talus, no technical sections — the day is the mileage + ~5,700′ of gain, not difficulty.
+- Tundra and talus, no technical sections — the day is the mileage + gain, not difficulty.
+
+If the full day is too long on foot, the cluster also splits cleanly: **NW pair (13,486 + 13,517 A)** and **Pear + Magdalene** are each a shorter loop from the lake.
 
 ---
 
-## ⚠️ The Clohesey Lake road — and the walk-in alternative
+## Getting there — the Clohesey Lake road (and the walk-in alternative)
+
+| | |
+|---|---|
+| **Drive from Denver** | **[~2h 45m via Google Maps](https://www.google.com/maps/dir/?api=1&origin=Highland,+Denver,+CO&destination=38.9650,-106.4050)** — via US-285 / Leadville to **US-24**, then **Clear Creek Rd (CR 390)** west toward Vicksburg; the **Clohesey Lake road** branches south off it. |
+| Trailhead | **Clohesey Lake TH** (~38.951, −106.408, ~11,000') — **4x4 only** up the road. Park-low option at the **Clear Creek Rd / Clohesey road junction** (~38.965, −106.405). |
+| Land | **San Isabel NF** (Collegiate Peaks area) — no permits/fees, foot travel beyond the TH. |
 
 **The road up to Clohesey Lake is a serious 4x4 obstacle, not a casual drive.** Per the 2023 TR: *"the initial hurdle on the road right out of Clear Creek is very impressive… requires an impressive 4x4 vehicle or the willingness to potentially damage whatever vehicle you take."* That party (in a stock Tacoma) **parked at the bottom and walked in.**
 
@@ -90,21 +98,9 @@ All four are **ranked Class 2** Sawatch 13ers. They sit in a ~3 mi arc above Clo
 | **Drive to Clohesey Lake TH** (~11,000') | Only with a **capable, high-clearance 4x4** you don't mind scraping — the first ledge right off Clear Creek Rd is the crux. Gives the **~12.2 mi / ~5,700′** loop above. |
 | **Park low + hike the road ⭐ (recommended for Emily)** | Park where the Clohesey road leaves **Clear Creek Rd** (~38.965, −106.405, 2WD/high-clearance) and **hike the rough road ~1.5–2 mi up to the lake.** Adds **~3–4 mi RT and ~1,000–1,200′** → a **~15–16 mi / ~6,800′ day**, but **no sketchy driving.** |
 
-If the full day is too long on foot, the cluster also splits cleanly: **NW pair (13,486 + 13,517 A)** and **Pear + Magdalene** are each a shorter loop from the lake.
-
 ---
 
-## Drive + approach (from Highland, Denver)
-
-| | |
-|---|---|
-| **Drive from Denver** | **[~2h 45m via Google Maps](https://www.google.com/maps/dir/?api=1&origin=Highland,+Denver,+CO&destination=38.9650,-106.4050)** — via US-285 / Leadville to **US-24**, then **Clear Creek Rd (CR 390)** west toward Vicksburg; the **Clohesey Lake road** branches south off it. |
-| Trailhead | **Clohesey Lake TH** (~38.951, −106.408, ~11,000') — **4x4 only** up the road. Park-low option at the **Clear Creek Rd / Clohesey road junction** (~38.965, −106.405). |
-| Land | **San Isabel NF** (Collegiate Peaks area) — no permits/fees, foot travel beyond the TH. |
-
----
-
-## Conditions / season
+## Gear & season
 
 - **Best window:** **July–September.** High Sawatch tundra; the Clohesey road and upper basins melt out by early summer.
 - **Terrain:** Class 2 tundra/talus on the summits; **Class 2+ max** on the connecting ridges (a little careful routefinding on the 13,517 A ↔ 13,486 link). No scrambling crux.
@@ -123,4 +119,3 @@ If the full day is too long on foot, the cluster also splits cleanly: **NW pair 
 - **climb13ers.com:** the **Cooneys' route** for the 13,513 ↔ 13,486 link-up (cited in the 14ers TR).
 
 **Sources checked:** 14ers.com ✓ (logged in, "Basin") · listsofjohn.com ✓ · peakbagger.com ✓ · climb13ers.com ✓
-

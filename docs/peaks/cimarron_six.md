@@ -49,9 +49,16 @@ status_source: "peak_db ascents (Kyle — unclimbed)"
 **Other climbers:** Emily Sharpe — not yet · Shawn D Keil — not yet
 <!-- CLIMBERS_END -->
 
-## Quick stats
+!!! danger "Class — this is a Class 3–4 day"
+    - **PT 13,222 B (NW ridge)** and **El Punto (direct)** are **Class 3–4** per a recorded full-six TR ([Boggy B, 8/2024](https://www.14ers.com/php14ers/tripreport.php?trip=22747)).
+    - **Heisshorn** is Class 3 on loose, fragmented rock; the other three PTs are 2–2+ — but it's all rotten Cimarron rock.
+    - **Helmet; a rope is reasonable for the harder bits. Do not treat this as a Class 2 day.**
 
-| | "Heisshorn" | PT 13,382 | PT 13,215 | "El Punto" | PT 13,340 A | PT 13,222 B |
+---
+
+## Peaks covered
+
+| | ["Heisshorn"](https://www.14ers.com/peaks/10417) | [PT 13,382](https://www.14ers.com/peaks/10430) | [PT 13,215](https://www.14ers.com/peaks/10507) | ["El Punto"](https://www.14ers.com/peaks/10465) | [PT 13,340 A](https://www.14ers.com/peaks/10437) | [PT 13,222 B](https://www.14ers.com/peaks/10493) |
 |---|---|---|---|---|---|---|
 | Elevation | 13,418' | 13,382' | 13,215' | 13,319' | 13,350' | 13,220' |
 | Lat / Lon | 38.0779, −107.5117 | 38.0717, −107.5148 | 38.0741, −107.5249 | 38.0898, −107.4996 | 38.0984, −107.4958 | 38.1057, −107.4902 |
@@ -68,15 +75,12 @@ Two sub-groups: a **south-of-Coxcomb trio** (Heisshorn / 13,382 / 13,215) and an
 
 ## Recommended day — Middle Fork Cimarron loop over all six ⭐
 
-A **composed loop** (shortest line through all six, stitched from recorded GPS; gain DEM-measured): **~13.3 mi / ~5,785′**. Multiple parties do exactly this set in a day (4 recorded full-six tracks on 14ers).
-
-!!! danger "Class — this is a Class 3–4 day"
-    **PT 13,222 B is Class 3–4** — its NW ridge goes "class 3-4" per a recorded full-six TR ([Boggy B, 8/2024](https://www.14ers.com/php14ers/tripreport.php?trip=22747)), and **El Punto is also Class 3–4** on the direct line; Heisshorn is Class 3. So gear up for a **Class 3–4 scramble on loose, exposed rock — helmet, and a rope is reasonable for the harder bits.** The other three PTs (13,382 / 13,215 / 13,340 A) are Class 2–2+. **Do not treat this as a Class 2 day.**
+A loop on the shortest line through all six. Multiple parties do exactly this set in a day (4 recorded full-six tracks on 14ers).
 
 | | |
 |---|---|
 | Peaks | all six |
-| **Recommended loop** | **~13.3 mi / ~5,785′ (DEM)** |
+| **Recommended loop** | stats in *At a glance* |
 | Class | **3–4** — **PT 13,222 B (NW ridge) and El Punto are Class 3–4** per a recorded full-six TR ([Boggy B, 8/2024](https://www.14ers.com/php14ers/tripreport.php?trip=22747)). Heisshorn is "a substantial scramble on loose, fragmented rock" (Class 3; some want a rope). The other three PTs are 2–2+ — but it's all rotten Cimarron rock. Helmet; a rope is reasonable. |
 | Trailhead | **Middle Fork Cimarron (Trail #227), ~10,000'** — passenger car (with care over a few dips) |
 
@@ -85,7 +89,7 @@ A **composed loop** (shortest line through all six, stitched from recorded GPS; 
 2. Traverse SW/S along the divide to **"Heisshorn" (13,418')** — the high point and **loose Class 3 crux**.
 3. Finish the south trio: **PT 13,382 → PT 13,215**, then descend back to the Middle Fork trail and out.
 
-> **It's a loose-rock Class 3–4 scramble day.** **PT 13,222 B (NW ridge) and El Punto are Class 3–4** (per the Boggy B full-six TR) — the cruxes; Heisshorn is Class 3 with rotten/exposed rock. The other three PTs are Class 2/2+. Helmet advised; a rope is "mighty nice" for the exposed bits per recorded TRs. Long day at altitude — early start.
+> Long day at altitude — early start; a rope is "mighty nice" for the exposed bits per recorded TRs.
 
 ---
 
@@ -99,7 +103,7 @@ A **composed loop** (shortest line through all six, stitched from recorded GPS; 
 
 ---
 
-## Conditions / season
+## Gear & season
 
 - **Best window:** **July–September** — high, remote, north-facing snow lingers.
 - **Terrain:** Class 2–3 on **notoriously loose Cimarron rock** — slow, careful scrambling; helmet advised.

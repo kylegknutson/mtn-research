@@ -41,8 +41,6 @@ status_source: "peak_db ascents (Kyle — climbed)"
 
 **Status in DB:** all five **climbed** (2026-06-13/14).
 
-> Consolidates two day-reports that **launch from the same West Willow Creek upper TH** above Creede: the **[Baldy Lejos trio](../peaks/baldy_lejos_trio.md)** (Baldy Lejos + PT 13,115 + PT 13,030) and the **[PT 13,308 + PT 13,166 bridge pair](../peaks/pt_13308_13166.md)**. One trailhead, one camp — two day-loops (~12.4 and ~10.2 mi), or one big push. (The eastern [PT 13,408 + 13,026 pair](../peaks/pt_13026_13408.md) is *not* part of this — it's a separate Cochetopa/Eddiesville trailhead, a different drive.)
-
 ![Overview map](../maps/west_willow_la_garita.png)
 
 <!-- PROVENANCE_START -->
@@ -56,49 +54,38 @@ status_source: "peak_db ascents (Kyle — climbed)"
 **Other climbers:** Emily Sharpe — not yet · Shawn D Keil — 3 of 5 (Baldy Lejos, PT 13,115, PT 13,030)
 <!-- CLIMBERS_END -->
 
-## Trip stats
+## Peaks covered
 
-| | |
-|---|---|
-| Days | **2** (camp high near the upper TH / San Luis Pass) |
-| Peaks | **5 ranked 13ers** — all climbed (2026-06-13/14) |
-| Class | **2**, with one **Class 3** move on PT 13,166 |
-| **Day — trio** | Baldy Lejos + PT 13,115 + PT 13,030 — **~12.4 mi / ~3,558'** (DEM, recorded loop) |
-| **Day — bridge pair** | PT 13,308 + PT 13,166 — **~10.2 mi / ~3,594'** (DEM, recorded loop) |
-| **2-day total** | **~22.6 mi / ~7,150'** |
-| **Big-day option (all 5)** | **~18 mi / ~6,000'** — one efficient loop, but a huge day (see below) |
-| Trailhead | **West Willow Creek upper TH (~11,500', 4WD — road status not guaranteed)** |
-| Drive from Boulder | **~5 h to Creede**, then the rough West Willow Creek 4WD road |
-| Land | **La Garita Wilderness** (Rio Grande / GMUG NF) — no permits/fees, foot-only beyond the TH, **dispersed/backpack camping allowed** |
+Five ranked 13ers around one **West Willow Creek upper TH** above Creede — this consolidates
+two day-reports that **launch from the same trailhead**: the **[Baldy Lejos trio](../peaks/baldy_lejos_trio.md)**
+and the **[PT 13,308 + PT 13,166 bridge pair](../peaks/pt_13308_13166.md)**. One trailhead,
+one camp — two day-loops, or one big push. Hardest move: **one Class 3 on PT 13,166**; the
+rest benign Class 2 tundra. (The eastern [PT 13,408 + 13,026 pair](../peaks/pt_13026_13408.md)
+is *not* part of this — it's a separate Cochetopa/Eddiesville trailhead, a different drive.)
 
-All distances/gains are **DEM-measured from real recorded GPX** (`build_recommended_route.py`), not estimates.
+| Peak | Day loop | Elev | Class |
+|---|---|---|---|
+| ["Baldy Lejos"](https://www.14ers.com/peaks/10562) | 1 — trio (NW) | 13,118' | 2 |
+| [PT 13,115](https://www.14ers.com/peaks/10554) | 1 — trio (NW) | 13,115' | 2 |
+| [PT 13,030](https://www.14ers.com/peaks/10591) | 1 — trio (NW) | 13,030' | 2 |
+| [PT 13,308](https://www.14ers.com/peaks/10461) | 2 — bridge pair (E/SE) | 13,308' | 2 |
+| [PT 13,166](https://www.14ers.com/peaks/10534) | 2 — bridge pair (E/SE) | 13,166' | **3** |
 
----
-
-## Why 2 days from one camp
-
-All five share the **West Willow Creek upper TH** (~11,500', up the rough road from Creede). They fall into **two natural loops that meet along the high divide**:
-
-- **The trio** (Baldy Lejos, PT 13,115, PT 13,030) sits **NW** of the TH — a ~12.4 mi Class 2 tundra loop.
-- **The bridge pair** (PT 13,308, PT 13,166) sits **E/SE** of the TH — a ~10.2 mi loop with a **Class 3** move on PT 13,166.
-
-Camp high near the upper TH (or up toward San Luis Pass) and do **one loop each day**. Order is flexible — **save PT 13,166's Class 3 for the more stable-weather day.**
-
-> **Doing all five in one push is ~18 mi / ~6,000'** — actually a touch *shorter* than the two days combined, because a single graph-routed loop links them along the divide without two separate trailhead returns. But that's still **~18 mi and ~6,000' with a Class 3 move, at 12–13k', deep in the La Garita** — a genuine ultra-day. The **2-day split (camp high, one loop each day) is the sane recommendation**; it also lets you save PT 13,166's Class 3 for the better-weather day.
+All five sit in the **La Garita Wilderness** (Rio Grande / GMUG NF) — no permits/fees, foot-only beyond the TH.
 
 ---
 
-## Day plan
+## Itinerary options
 
-### Trio day — Baldy Lejos + PT 13,115 + PT 13,030 · ~12.4 mi / ~3,558' · Class 2
-A rolling tundra loop NW of camp: up onto the divide, north to **Baldy Lejos (13,118')**, back south over **PT 13,115**, then **PT 13,030**, and down. Benign Class 2 — the day is length + altitude, not difficulty. **Full route, trip reports, and GPX: [Baldy Lejos trio report](../peaks/baldy_lejos_trio.md).**
+All five share the **West Willow Creek upper TH** (~11,500'). They fall into **two natural loops that meet along the high divide** — the trio NW of the TH, the bridge pair E/SE:
 
-### Bridge-pair day — PT 13,308 + PT 13,166 · ~10.2 mi / ~3,594' · Class 2 (Class 3 on 13,166)
-E/SE of camp: a loop tagging **PT 13,308** and **PT 13,166**, the latter carrying a **Class 3** move — do it in good weather and dry rock. More gain than the trio for similar mileage. **Full route, trip reports, and GPX: [PT 13,308 + 13,166 report](../peaks/pt_13308_13166.md).**
+**Recommended — 2 days from one camp:** camp high near the upper TH (or up toward San Luis Pass) and do **one loop each day**. Order is flexible — **save PT 13,166's Class 3 for the more stable-weather day.**
+
+**Big-day option — all five in one push, ~18 mi / ~6,000':** actually a touch *shorter* than the two days combined, because a single loop links them along the divide without two separate trailhead returns. But that's still **~18 mi and ~6,000' with a Class 3 move, at 12–13k', deep in the La Garita** — a genuine ultra-day. The **2-day split (camp high, one loop each day) is the sane recommendation**.
 
 ---
 
-## Drive + approach (shared)
+## Getting there — Creede & the West Willow Creek road
 
 | | |
 |---|---|
@@ -110,25 +97,31 @@ E/SE of camp: a loop tagging **PT 13,308** and **PT 13,166**, the latter carryin
 
 ---
 
-## Camp
+## The days, in order
+
+### Day 1 — Baldy Lejos trio (Class 2)
+
+A rolling tundra loop NW of camp: up onto the divide, north to **Baldy Lejos (13,118')**, back south over **PT 13,115**, then **PT 13,030**, and down. Benign Class 2 — the day is length + altitude, not difficulty. **Full route, trip reports, and GPX: [Baldy Lejos trio report](../peaks/baldy_lejos_trio.md).**
+
+### Day 2 — PT 13,308 + PT 13,166 bridge pair (Class 3)
+
+E/SE of camp: a loop tagging **PT 13,308** and **PT 13,166**, the latter carrying a **Class 3** move — do it in good weather and dry rock. More gain than the trio for similar mileage. **Full route, trip reports, and GPX: [PT 13,308 + 13,166 report](../peaks/pt_13308_13166.md).**
+
+---
+
+## Camps & water
 
 - **La Garita Wilderness** — dispersed/backpack camping allowed beyond the TH (foot travel only). Camp near the **upper TH** or up toward **San Luis Pass** to sit central between the two loops.
 - High and exposed; water from the upper West Willow / basin creeks (treat).
 
 ---
 
-## Conditions / season
+## Gear & season
 
 - **Best window:** **July–September.** High, remote La Garita; the West Willow road and upper basins open late.
 - **Terrain:** rolling alpine tundra Class 2; **one Class 3 move on PT 13,166** — wants dry rock.
 - **Storms:** wide-open tundra, no fast escape — start early both days, watch the sky.
-
----
-
-## Cell coverage
-
-- **Dead.** Deep in the La Garita; no reception at the TH or on the peaks. Carry an **InReach / satellite messenger**.
-
+- **Cell coverage: dead.** Deep in the La Garita; no reception at the TH or on the peaks. Carry an **InReach / satellite messenger**.
 
 ---
 

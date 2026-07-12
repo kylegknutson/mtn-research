@@ -83,7 +83,7 @@ def main():
 
     print(f"Ranked peaks within {args.radius_mi} mi of {label}  (climbed = {args.climber}):")
     print(f"  {'mi':>4}  {'id':>4}  {'name':22} {'elev':>6} {'cls':>4} {'rank':>5}  {'14ers':>6} {'pb':>6}  status")
-    for d, p in sorted(rows):
+    for d, p in sorted(rows, key=lambda r: r[0]):   # key: distance ties must not compare the peak dicts
         st = "✓ climbed" if p["id"] in done else "✗ UNCLIMBED"
         print(f"  {d:4.2f}  {p['id']:>4}  {str(p['display_name'])[:22]:22} {p['elevation_ft']:>6} "
               f"{str(p.get('yds_class')):>4} {str(p.get('co_rank')):>5}  "

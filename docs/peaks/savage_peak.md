@@ -47,15 +47,21 @@ status_source: "peak_db ascents"
 
 **The Fancy + Savage combo (the standard "Holy Cross 13er day" in TRs) doesn't apply for Kyle** since Fancy is already done. **The best ranked pairing is PT 13,002** — the closest unclimbed neighbor (1.92 mi), which is reachable from Savage's own Missouri Lakes TH. **See [Adding PT 13,002](#adding-pt-13002-ways-to-combine) below.**
 
+![Overview map](../maps/savage_peak.png)
+
+<!-- PROVENANCE_START -->
+*Note: the recommended route was distilled from **15 recorded GPS tracks** of real trips (Kyle's recordings) — all layered on the [interactive CalTopo research map](https://caltopo.com/m/QL51DBE).*
+<!-- PROVENANCE_END -->
+
 ---
 
 <!-- CLIMBERS_START -->
 **Other climbers:** Emily Sharpe — not yet · Shawn D Keil — 1 of 2 (Savage Pk)
 <!-- CLIMBERS_END -->
 
-## Quick stats
+## Peaks covered
 
-| | Savage Peak |
+| | [Savage Peak](https://www.14ers.com/peaks/10810) |
 |---|---|
 | Elevation | 13,135' (LiDAR; map 13,139') |
 | Lat / Lon | 39.38053, −106.52061 |
@@ -75,17 +81,11 @@ status_source: "peak_db ascents"
 | 14ers GPX library | [6 entries](https://www.14ers.com/php14ers/gpxlib_locator.php?peakid=10810) |
 | 14ers winter ascents | 1 / Ski descents 29 — popular ski peak (Savage Couloir) |
 
-![Overview map](../maps/savage_peak.png)
-
-<!-- PROVENANCE_START -->
-*Note: the recommended route was distilled from **15 recorded GPS tracks** of real trips (Kyle's recordings) — all layered on the [interactive CalTopo research map](https://caltopo.com/m/QL51DBE).*
-<!-- PROVENANCE_END -->
-
 ---
 
 ## Recommended route — Northeast Ridge from Missouri Lakes TH ⭐
 
-The 14ers.com official route (BillMiddlebrook, May 2023). Solid Class 2 ridge climb with a documented line. **8 mi RT / 3,200' gain** from the 2WD TH at 10,000' for **Savage on its own** — the "at a glance" headline above is the **full Savage + PT 13,002 combo** (~14.3 mi / ~5,800 ft, DEM, from the recorded TR-22657 track; see [Adding PT 13,002](#adding-pt-13002-ways-to-combine)).
+The 14ers.com official route (BillMiddlebrook, May 2023). Solid Class 2 ridge climb with a documented line. **8 mi RT / 3,200' gain** from the 2WD TH at 10,000' for **Savage on its own** — the "at a glance" headline above is the **full Savage + PT 13,002 combo** (see [Adding PT 13,002](#adding-pt-13002-ways-to-combine)).
 
 | Route | Stats (14ers official) |
 |---|---|
@@ -125,14 +125,6 @@ The 14ers.com official route (BillMiddlebrook, May 2023). Solid Class 2 ridge cl
 
 ---
 
-## Multi-peak combos for Kyle
-
-**Fancy Peak (climbed, 2.76 mi)** — the natural same-day combo per the John Kirk 2016 + josephnephi 2024 + whileyh 2020 TRs (all combine Savage + Fancy). Not relevant for Kyle since Fancy is done.
-
-**PT 13,089 ("Ribbed Peak", 4.25 mi) + PT 13,100 A (5.17 mi)** — these two are 13,002's *natural ridge partners* (see below), not Savage's. They're a long day / overnight from the Fancy Pass / Fairview Lake side, away from Savage's NE ridge.
-
----
-
 ## Adding PT 13,002 — ways to combine
 
 **PT 13,002 (LiDAR 13,002', formerly UN 12,977) is the closest unclimbed ranked 13er to Savage — just 1.92 mi NW** — and climb13ers lists Savage as its neighboring peak. It was missed in the original cluster scan because it had no coordinates in the DB at the time (one of six coord-null ranked peaks, since backfilled).
@@ -167,7 +159,7 @@ jacolc 8/16/2024 (LoJ TR 27181): **15.5 mi / 6,300' / 11h35** — Sawatch main r
 
 ---
 
-## Trailhead — Missouri Lakes TH (off Homestake Rd / FS 703)
+## Getting there — Missouri Lakes TH (off Homestake Rd / FS 703)
 
 | | |
 |---|---|
@@ -186,9 +178,16 @@ jacolc 8/16/2024 (LoJ TR 27181): **15.5 mi / 6,300' / 11h35** — Sawatch main r
 
 **Plan accordingly.** Late-May through November is your window for vehicle access. Earlier-season skiing requires a long road approach from Hwy 24 (multiple miles before the trailhead).
 
+**Permits / access:**
+
+- Holy Cross Wilderness — no day-use permits required
+- White River NF — no fees
+- **Homestake Rd seasonal gate** (Nov 22 – May 21) is the access binding constraint
+- Standard wilderness rules: leash dogs, no motorized, pack out everything
+
 ---
 
-## Conditions / season
+## Gear & season
 
 - **Best window:** **late May through mid-November** (gate dictates). Brian Kalet's gate-closure note is the binding constraint
 - **Snow:** whileyh 9/12/2020 described "mid-calf deep" snow above the trail by Labor Day weekend (i.e. early-fall snow can be substantial). Bring postholing tolerance for shoulder seasons
@@ -197,9 +196,7 @@ jacolc 8/16/2024 (LoJ TR 27181): **15.5 mi / 6,300' / 11h35** — Sawatch main r
 - **Trail crowds:** Missouri Lakes / Fancy Pass loop is on the local "must-do hikes" lists — expect summer trail traffic on the first 2.5 mi
 - **Wind:** NE ridge is exposed; standard layering
 
----
-
-## Cell coverage
+**Cell coverage:**
 
 - **14ers.com community DB:** TODO query (Peak Conditions last updated 7/5/2025)
 - **Geographic reasoning:**
@@ -211,12 +208,11 @@ jacolc 8/16/2024 (LoJ TR 27181): **15.5 mi / 6,300' / 11h35** — Sawatch main r
 
 ---
 
-## Permits / access
+## Other considerations
 
-- Holy Cross Wilderness — no day-use permits required
-- White River NF — no fees
-- **Homestake Rd seasonal gate** (Nov 22 – May 21) is the access binding constraint
-- Standard wilderness rules: leash dogs, no motorized, pack out everything
+**Fancy Peak (climbed, 2.76 mi)** — the natural same-day combo per the John Kirk 2016 + josephnephi 2024 + whileyh 2020 TRs (all combine Savage + Fancy). Not relevant for Kyle since Fancy is done.
+
+**PT 13,089 ("Ribbed Peak", 4.25 mi) + PT 13,100 A (5.17 mi)** — these two are 13,002's *natural ridge partners* (see [Adding PT 13,002](#adding-pt-13002-ways-to-combine)), not Savage's. They're a long day / overnight from the Fancy Pass / Fairview Lake side, away from Savage's NE ridge.
 
 ---
 

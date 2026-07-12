@@ -49,9 +49,9 @@ status_source: "peak_db ascents"
 **Other climbers:** Emily Sharpe — not yet · Shawn D Keil — ✓ all
 <!-- CLIMBERS_END -->
 
-## Quick stats
+## Peaks covered
 
-| | Sunshine Mtn A | PT 13,094 |
+| | [Sunshine Mtn A](https://www.14ers.com/peaks/10446) | [PT 13,094](https://www.14ers.com/peaks/10566) |
 |---|---|---|
 | Elevation (LiDAR) | 13,329' (pre-LiDAR 13,321') | 13,094' (pre-LiDAR 13,093'; 14ers ~13,099') |
 | Lat / Lon | 37.99556, −107.50870 | 37.99263, −107.53414 |
@@ -64,13 +64,7 @@ status_source: "peak_db ascents"
 | peakbagger | [pid 15112](https://peakbagger.com/peak.aspx?pid=15112) | [pid 19480](https://peakbagger.com/peak.aspx?pid=19480) |
 | Peak DB id | 468 | 725 |
 
-**The two summits are ~1.4 mi apart** on a connecting ridge above the American Flats benches — a natural, well-established pairing.
-
----
-
-## Why these two together
-
-A **standard pairing** — every trip report that hits either peak does **both** in one outing, almost always with sub-13k **Dolly Varden Mountain** (12,935') in between:
+**The two summits are ~1.4 mi apart** on a connecting ridge above the American Flats benches — a natural, well-established pairing. Every trip report that hits either peak does **both** in one outing, almost always with sub-13k **Dolly Varden Mountain** (12,935') in between:
 
 - **whileyh** (2020-07-06) — Sunshine + PT 13,094 + Dolly Varden (the clean combo)
 - **josephnephi** (2023-05-29) — Dolly Varden + Sunshine + PT 13,094
@@ -80,22 +74,11 @@ A **standard pairing** — every trip report that hits either peak does **both**
 
 ---
 
-## Drive + approach
-
-| | |
-|---|---|
-| **Drive from Boulder** | **[7h 31m via Google Maps](https://www.google.com/maps/dir/?api=1&origin=1162+Peakview+Circle,+Boulder,+CO+80302&destination=37.978,-107.541)** (~367 mi, origin: 1162 Peakview Circle; via US-285 + US-50 to Lake City) |
-| Access corridor | **Henson Creek Rd (Hinsdale CR 20) from Lake City** — the Engineer Pass road toward Capitol City / American Flats |
-| Combo trailhead | ~37.978, −107.541, **~11,000'** (spur off the Henson Creek / Engineer Pass corridor). High-clearance/4WD for the upper road. |
-| Note | This is a **long haul** (~7.5 hr each way, far SW Colorado) — best as an overnight/car-camp out of Lake City, not a Boulder day trip. |
-
----
-
 ## Recommended plan — Henson Creek / American Flats, the Sunshine ↔ 13,094 ridge ⭐
 
 The standard and most efficient line for the pair (whileyh 2020, josephnephi 2023).
 
-**Combo stats (measured from TR GPX):**
+**Combo stats:**
 
 | Source track | Peaks | Distance | Gain |
 |---|---|---|---|
@@ -121,23 +104,30 @@ Expect roughly **~6.5 mi and ~3,300–5,400 ft** for the clean two-peak day (gai
 
 ---
 
-## Conditions / season
+## Getting there — Henson Creek / American Flats
 
-- **Best window:** **July through September.** High San Juan tundra; the Henson Creek / Engineer Pass road network opens late and is a rough 4WD up high.
-- **Snow:** josephnephi's late-May outing caught snow (higher gain) — expect lingering snow into early summer on N aspects and the upper road.
-- **Storms:** standard San Juan afternoon monsoon exposure on the open ridge — early start, off the high ground by early afternoon.
-- **Terrain:** Class 2 tundra/talus on the standard line; no technical difficulty (Dragon's Back, a roped option, is separate).
+| | |
+|---|---|
+| **Drive from Boulder** | **[7h 31m via Google Maps](https://www.google.com/maps/dir/?api=1&origin=1162+Peakview+Circle,+Boulder,+CO+80302&destination=37.978,-107.541)** (~367 mi, origin: 1162 Peakview Circle; via US-285 + US-50 to Lake City) |
+| Access corridor | **Henson Creek Rd (Hinsdale CR 20) from Lake City** — the Engineer Pass road toward Capitol City / American Flats |
+| Combo trailhead | ~37.978, −107.541, **~11,000'** (spur off the Henson Creek / Engineer Pass corridor). High-clearance/4WD for the upper road. |
+| Note | This is a **long haul** (~7.5 hr each way, far SW Colorado) — best as an overnight/car-camp out of Lake City, not a Boulder day trip. |
 
----
-
-## Permits / access
+**Permits / access:**
 
 - **American Flats Wilderness Study Area / Uncompahgre NF–BLM** — no permits; the summits are not in designated wilderness (per peak_db), though the area abuts the Uncompahgre Wilderness. Standard Leave No Trace.
 - Henson Creek Rd / Engineer Pass: a serious high-clearance 4WD route up high — check conditions before committing the upper road.
 
 ---
 
-## Cell coverage
+## Gear & season
+
+- **Best window:** **July through September.** High San Juan tundra; the Henson Creek / Engineer Pass road network opens late and is a rough 4WD up high.
+- **Snow:** josephnephi's late-May outing caught snow (higher gain) — expect lingering snow into early summer on N aspects and the upper road.
+- **Storms:** standard San Juan afternoon monsoon exposure on the open ridge — early start, off the high ground by early afternoon.
+- **Terrain:** Class 2 tundra/talus on the standard line; no technical difficulty (Dragon's Back, a roped option, is separate).
+
+**Cell coverage:**
 
 - **14ers.com community DB:** no submitted reception reports for these summits.
 - **Geographic reasoning:** the **Henson Creek approach and basin are almost certainly dead** — deep in the Lake City / Engineer Pass backcountry. **Summits may catch intermittent signal** but treat it as unreliable.

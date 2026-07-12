@@ -34,15 +34,23 @@ status_source: "peak_db ascents (both 0 ascents — unclimbed)"
 
 **Status in your sheet:** Both 0 ascents (unclimbed). Same drainage divide as Mt. Wilson group, but a separate cluster.
 
+![Overview map](../maps/dolores_middle_peak.png)
+
+<!-- PROVENANCE_START -->
+*Note: the recommended route was distilled from **7 recorded GPS tracks** of real trips (14ers.com · ListsofJohn · peakbagger) — all layered on the [interactive CalTopo research map](https://caltopo.com/m/R1KSN0U).*
+<!-- PROVENANCE_END -->
+
 ---
 
 <!-- CLIMBERS_START -->
 **Other climbers:** Emily Sharpe — not yet · Shawn D Keil — ✓ all
 <!-- CLIMBERS_END -->
 
-## Quick stats
+## Peaks covered
 
-| | Dolores Peak | Middle Peak | Dunn Peak (bonus) |
+The **standard pair — Dolores + Middle from the Fish Creek TH** — is the recommended day: both ranked 13ers, Class 2, the ranked-peak optimum from this TH. Up from TH, into upper basin to Middle/Dolores saddle, hit Dolores first (right/SE from saddle), back to saddle, then Middle (left/NW from saddle). Return same route. ~6 hr moving. (Adding Boskoff for a 3-ranked-13er day, linking the Wilson group, or tacking on Dunn are all analyzed in *Other considerations*.)
+
+| | [Dolores Peak](https://www.14ers.com/peaks/10470) | [Middle Peak](https://www.14ers.com/peaks/10460) | Dunn Peak (bonus) |
 |---|---|---|---|
 | Elevation (LiDAR) | 13,289' | 13,305' | 12,612' |
 | Prominence | 730' | **1,960'** | unranked |
@@ -55,55 +63,6 @@ status_source: "peak_db ascents (both 0 ascents — unclimbed)"
 | LoJ name in your sheet | `Dolores Pk` | `Middle Pk` (also `"Middle Point"`) | not on your list |
 
 Coordinates above are LiDAR-authoritative from the public CalTopo map "Fish Creek - Dolores & Middle Peaks" (CVV0). Wikipedia lists Dolores at 13,296 ft; the LiDAR value 13,289 is more current. Note Middle is ~16 ft higher and far more prominent (1,960' vs 730').
-
-![Overview map](../maps/dolores_middle_peak.png)
-
-<!-- PROVENANCE_START -->
-*Note: the recommended route was distilled from **7 recorded GPS tracks** of real trips (14ers.com · ListsofJohn · peakbagger) — all layered on the [interactive CalTopo research map](https://caltopo.com/m/R1KSN0U).*
-<!-- PROVENANCE_END -->
-
----
-
-## Multi-peak link-ups (read this first)
-
-Realistic combinations from the **Fish Creek TH** (37.82419, −108.11985). Only ranked 13ers count as link-ups for you; sub-13ers and unranked summits are noted but not recommended.
-
-### 1. Dolores + Middle (the standard pair) — recommended
-**8.49 mi RT, 3,896' gain, Class 2.** Both ranked 13ers. Up from TH, into upper basin to Middle/Dolores saddle, hit Dolores first (right/SE from saddle), back to saddle, then Middle (left/NW from saddle). Return same route. ~6 hr moving. This is the ranked-peak optimum from this TH.
-
-### 2. Dolores + Middle + Boskoff Peak (the only 3-ranked-13er option in this cluster)
-
-Boskoff Peak: **13,134' LiDAR, 37.855305, −108.031375** — sits ~7 km east of Middle on the long ridge running from Wilson Peak westward. PeakVisor lists Mt. Wilson as parent, so it's not a "next door" peak to Middle/Dolores; it's a real ridge run away.
-
-**Option A — Single push (long day, novel traverse).** A 3,312-pt track in Kyle's School Bus map (imported, source unknown) shows it's been done as a **~19.9-mi loop bagging all 4 cluster peaks** from a north-side TH at **37.8867, −108.0547**. Skipping Dunn shaves ~0.2 mi + 600' off that.
-- ~19 mi, ~5,000–5,500' gain (one valley-floor ascent; rest is ridge undulations)
-- Class 2 baseline + Middle's W-ridge Class 3+ if taken; **Middle→Boskoff connector ridge is the unknown** — climb13ers.com says about the 3-peak cluster: "it is possible to climb all three in one day but the effort is arduous and the ridge has sustained exposure." Plan for Class 3+ exposure.
-- North TH access road not yet confirmed — likely FSR 611 from Beaver Park / Lone Cone area (per Robert Ormes' Dunn Peak description), but verify before driving out.
-
-**Option B — Two days, two trailheads (clean, recommended).**
-- **Day 1: Fish Creek TH → Dolores + Middle** (8.49 mi, 3,896' gain, Class 2, ~6 hr)
-- Drive: Fish Creek → CO 145 → Fall Creek Rd / FSR 618 → Woods Lake. **~1.5–2 hr.**
-- **Day 2: Woods Lake TH → Boskoff** (9.4 mi, 3,800' gain, Class 2+, 6–8 hr) — up Woods Lake Trail to Elk Creek Trail jct (3.3 mi), then SW ridge of Boskoff. One Class 2+ crux at 12,360' on loose rock.
-- **Total: 17.89 mi, 7,696' gain.** Standard routes both days, no novel traverse beta needed.
-
-| | Option A (single push) | Option B (two day) |
-|---|---|---|
-| Distance | ~19 mi | ~17.9 mi |
-| Gain | ~5–5.5K' | 7.7K' |
-| Days | 1 | 2 |
-| Trailheads | 1 (north TH, unconfirmed road) | 2 (Fish Creek + Woods Lake) |
-| Exposure | Middle W-ridge + Middle→Boskoff connector | Standard routes only |
-| Best start | Counter-clockwise: Boskoff first (easy walk-up), Middle ridge in the middle with energy, easy descent off Dolores | **Day 1 at Fish Creek** for D+M; Boskoff Day 2 (mostly tundra walk) on tired legs |
-
-**Recommendation:** Option B unless you specifically want the single-push challenge. Negligible mileage difference, no novel traverse beta required, and the gain spreads across two days.
-
-**Open questions if pursuing Option A:** (1) exact road accessing 37.8867, −108.0547, (2) class rating on the Middle→Boskoff connector ridge.
-
-### Linking with Wilson Group
-Not realistic in the same trip — Mt. Wilson / El Diente / Wilson Peak / Gladstone are on the OTHER side of Lizard Head Wilderness (Kilpacker TH or Rock of Ages). Your existing CalTopo data shows Wilson group markers and tracks (verify against sheet — likely already climbed).
-
-### Bonus elevation only (not ranked, won't count for you)
-- **Dunn Peak (12,612', unranked).** Sits right next to Middle/Dolores and adds maybe 0.2 mi + 600' gain to a Fish Creek day. The Earthline 2015 loop bagged it as a casual add-on. **Skip unless you want the workout** — doesn't move the needle on any list.
 
 ---
 
@@ -147,7 +106,7 @@ TMC describes a Middle Peak loop from the same parking spot with **Class 4 scram
 
 ---
 
-## Trailhead — Fish Creek TH
+## Getting there — Fish Creek TH
 
 - **Location:** 37.82419, −108.11985
 - **Drive from Boulder:** **[7h 30m via Google Maps](https://www.google.com/maps/dir/?api=1&origin=1162+Peakview+Circle,+Boulder,+CO+80302&destination=37.82419,-108.11985)** (359 mi, origin: 1162 Peakview Circle)
@@ -158,9 +117,15 @@ TMC describes a Middle Peak loop from the same parking spot with **Class 4 scram
 - **Approach driving:** From Dunton, follow the dirt road north 5 mi. The CVV0 map has a "Dunton Road Turnoff" waypoint at 37.77197, −108.99 if you need a routing reference (note: well south of the TH — that's an early junction, not the parking).
 - **Camping:** Dispersed camping at the TH itself. Dunton has paid options if you want a hot springs night.
 
+**Permits / access:**
+
+- **Lizard Head Wilderness, San Juan National Forest** — no permits required, no fees.
+- Standard wilderness regs: pack out everything, no motorized, group size ≤ 15, camp ≥ 100' from water.
+- **Road status:** Verify Dunton Rd / Forest Road conditions in spring/late fall via [San Juan NF road conditions](https://www.fs.usda.gov/main/sanjuan/conditions).
+
 ---
 
-## Conditions / season
+## Gear & season
 
 - **Best window:** July through early October (per most sources). Snow lingers in upper basin into June.
 - **Dunton dirt road:** Closes in winter once snow stays. Verify before any shoulder-season trip.
@@ -171,11 +136,43 @@ TMC describes a Middle Peak loop from the same parking spot with **Class 4 scram
 
 ---
 
-## Permits / access
+## Other considerations
 
-- **Lizard Head Wilderness, San Juan National Forest** — no permits required, no fees.
-- Standard wilderness regs: pack out everything, no motorized, group size ≤ 15, camp ≥ 100' from water.
-- **Road status:** Verify Dunton Rd / Forest Road conditions in spring/late fall via [San Juan NF road conditions](https://www.fs.usda.gov/main/sanjuan/conditions).
+Realistic combinations from the **Fish Creek TH** (37.82419, −108.11985). Only ranked 13ers count as link-ups for you; sub-13ers and unranked summits are noted but not recommended.
+
+### Dolores + Middle + Boskoff Peak (the only 3-ranked-13er option in this cluster)
+
+Boskoff Peak: **13,134' LiDAR, 37.855305, −108.031375** — sits ~7 km east of Middle on the long ridge running from Wilson Peak westward. PeakVisor lists Mt. Wilson as parent, so it's not a "next door" peak to Middle/Dolores; it's a real ridge run away.
+
+**Option A — Single push (long day, novel traverse).** A 3,312-pt track in Kyle's School Bus map (imported, source unknown) shows it's been done as a **~19.9-mi loop bagging all 4 cluster peaks** from a north-side TH at **37.8867, −108.0547**. Skipping Dunn shaves ~0.2 mi + 600' off that.
+- ~19 mi, ~5,000–5,500' gain (one valley-floor ascent; rest is ridge undulations)
+- Class 2 baseline + Middle's W-ridge Class 3+ if taken; **Middle→Boskoff connector ridge is the unknown** — climb13ers.com says about the 3-peak cluster: "it is possible to climb all three in one day but the effort is arduous and the ridge has sustained exposure." Plan for Class 3+ exposure.
+- North TH access road not yet confirmed — likely FSR 611 from Beaver Park / Lone Cone area (per Robert Ormes' Dunn Peak description), but verify before driving out.
+
+**Option B — Two days, two trailheads (clean, recommended).**
+- **Day 1: Fish Creek TH → Dolores + Middle** (8.49 mi, 3,896' gain, Class 2, ~6 hr)
+- Drive: Fish Creek → CO 145 → Fall Creek Rd / FSR 618 → Woods Lake. **~1.5–2 hr.**
+- **Day 2: Woods Lake TH → Boskoff** (9.4 mi, 3,800' gain, Class 2+, 6–8 hr) — up Woods Lake Trail to Elk Creek Trail jct (3.3 mi), then SW ridge of Boskoff. One Class 2+ crux at 12,360' on loose rock.
+- **Total: 17.89 mi, 7,696' gain.** Standard routes both days, no novel traverse beta needed.
+
+| | Option A (single push) | Option B (two day) |
+|---|---|---|
+| Distance | ~19 mi | ~17.9 mi |
+| Gain | ~5–5.5K' | 7.7K' |
+| Days | 1 | 2 |
+| Trailheads | 1 (north TH, unconfirmed road) | 2 (Fish Creek + Woods Lake) |
+| Exposure | Middle W-ridge + Middle→Boskoff connector | Standard routes only |
+| Best start | Counter-clockwise: Boskoff first (easy walk-up), Middle ridge in the middle with energy, easy descent off Dolores | **Day 1 at Fish Creek** for D+M; Boskoff Day 2 (mostly tundra walk) on tired legs |
+
+**Recommendation:** Option B unless you specifically want the single-push challenge. Negligible mileage difference, no novel traverse beta required, and the gain spreads across two days.
+
+**Open questions if pursuing Option A:** (1) exact road accessing 37.8867, −108.0547, (2) class rating on the Middle→Boskoff connector ridge.
+
+### Linking with Wilson Group
+Not realistic in the same trip — Mt. Wilson / El Diente / Wilson Peak / Gladstone are on the OTHER side of Lizard Head Wilderness (Kilpacker TH or Rock of Ages). Your existing CalTopo data shows Wilson group markers and tracks (verify against sheet — likely already climbed).
+
+### Bonus elevation only (not ranked, won't count for you)
+- **Dunn Peak (12,612', unranked).** Sits right next to Middle/Dolores and adds maybe 0.2 mi + 600' gain to a Fish Creek day. The Earthline 2015 loop bagged it as a casual add-on. **Skip unless you want the workout** — doesn't move the needle on any list.
 
 ---
 
@@ -202,7 +199,6 @@ The CalTopo research map now layers **real recorded GPX from all three sources**
 - **peakbagger.com** — 2 ascent GPS tracks ([Dolores pid 5818](https://peakbagger.com/peak.aspx?pid=5818) / [Middle pid 14675](https://peakbagger.com/peak.aspx?pid=14675)) (blue).
 
 **All 7 swept tracks summit *both* peaks** and start within ~0.6 mi of the Fish Creek TH — the **bold magenta recommended route** (~5.8 mi, composed off these tracks; trip reports run 6.4–8.5 mi) is DEM-measured. **Avoid** the Dolores SW slopes (14ers TR 19949 author disabled the GPX as a warning — "incredibly dangerous").
-
 
 ---
 

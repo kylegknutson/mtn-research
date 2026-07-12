@@ -55,9 +55,14 @@ status_source: "peak_db ascents"
 **Other climbers:** Emily Sharpe — not yet · Shawn D Keil — ✓ all
 <!-- CLIMBERS_END -->
 
-## Quick stats
+## Peaks covered
 
-| | Star Peak A | Taylor Pk A | Italian Mtn |
+A **2-day basecamp weekend from Taylor Park** — camp near the end of CO 742 and climb the
+cluster as two Class 2 days (or link all three in one long push — see *Itinerary options*).
+Hardest move **Class 2** throughout; everything approaches from the **Taylor Park (east)
+side** of the Elk crest, and none carry a wilderness designation at the summit.
+
+| | [Star Peak A](https://www.14ers.com/peaks/10099) | [Taylor Pk A](https://www.14ers.com/peaks/10104) | [Italian Mtn](https://www.14ers.com/peaks/10110) |
 |---|---|---|---|
 | Elevation (LiDAR) | 13,527' (map 13,521') | 13,438' | 13,385' |
 | Lat / Lon | 38.97963, −106.79967 | 38.99204, −106.78261 | 38.94532, −106.75214 |
@@ -71,12 +76,6 @@ status_source: "peak_db ascents"
 | peakbagger | [pid 14666](https://peakbagger.com/peak.aspx?pid=14666) | [pid 15740](https://peakbagger.com/peak.aspx?pid=15740) | [pid 16662](https://peakbagger.com/peak.aspx?pid=16662) |
 | Peak DB id | 301 | 365 | 420 |
 
-All three are **Class 2** and all approached from the **Taylor Park (east) side** of the Elk crest. None carry a wilderness designation at the summit.
-
----
-
-## Why these three together
-
 This is an **approach grouping**, not a summit-proximity guess. All three are reached from the **same Taylor Park road network** (CO 742, east of Taylor Park Reservoir):
 
 - **Star + Taylor are the standard pair** — done together in *every* trip report that hits either (whileyh, John Kirk, Furthermore). They sit 1.25 mi apart on a connecting Class 2 ridge above the Mt Tilton Trail.
@@ -87,7 +86,28 @@ This is an **approach grouping**, not a summit-proximity guess. All three are re
 
 ---
 
-## Drive + approach
+## Itinerary options
+
+The cluster works two ways. Pick based on how big a day you want.
+
+**Option A — weekend from one Taylor Park basecamp (recommended):** camp near the end of CO 742 and split the cluster into two manageable Class 2 days:
+
+- **Day 1 — Star + Taylor** (the clean pair).
+- **Day 2 — Italian Mtn** (with American Flag Mtn if wanted): a shorter half-day from the CR 744 / Cement Creek spur, or repeat from the Mt Tilton side.
+
+**Option B — all three in one long day:** link Star + Taylor + Italian on foot from the Mt Tilton TH (the josephnephi line, trimmed of the sub-peak detours). Budget roughly **~14–17 mi and ~6,500–8,000 ft, Class 2**, a committing full alpine day — Italian adds a ~3.5 mi each-way tundra traverse across Star Pass with a big drop (~12,400') and regain.
+
+**Combo stats (from TR GPX):**
+
+| Source track | Peaks | Distance | Gain |
+|---|---|---|---|
+| whileyh 2020 (LoJ 17731) | Star + Taylor | 8.6 mi | ~4,311' |
+| John Kirk 2016 (LoJ 7235) | Star + Taylor (+Crystal) | 10.7 mi | ~5,883' |
+| josephnephi 2024 (LoJ 26881) | Star + Taylor + Italian + Lambertson + 5 sub-peaks | 24.8 mi | ~12,585' |
+
+---
+
+## Getting there — Taylor Park
 
 | | |
 |---|---|
@@ -98,68 +118,38 @@ This is an **approach grouping**, not a summit-proximity guess. All three are re
 
 ---
 
-## Recommended plan ⭐
+## The days, in order
 
-The cluster works two ways. Pick based on how big a day you want.
+### Day 1 — Star + Taylor (Class 2)
 
-### Option A — Weekend from one Taylor Park basecamp (recommended)
-Camp near the end of CO 742 and split the cluster into two manageable Class 2 days:
-
-- **Day 1 — Star + Taylor** (the clean pair): **~8.6 mi, ~4,300 ft, Class 2** (measured from whileyh's GPX, LoJ 17731).
-- **Day 2 — Italian Mtn** (with American Flag Mtn if wanted): a shorter half-day from the CR 744 / Cement Creek spur, or repeat from the Mt Tilton side.
-
-### Option B — All three in one long day
-Link Star + Taylor + Italian on foot from the Mt Tilton TH (the josephnephi line, trimmed of the sub-peak detours). Budget roughly **~14–17 mi and ~6,500–8,000 ft, Class 2**, a committing full alpine day — Italian adds a ~3.5 mi each-way tundra traverse across Star Pass with a big drop (~12,400') and regain.
-
-**Combo stats (measured from TR GPX):**
-
-| Source track | Peaks | Distance | Gain |
-|---|---|---|---|
-| whileyh 2020 (LoJ 17731) | Star + Taylor | 8.6 mi | ~4,311' |
-| John Kirk 2016 (LoJ 7235) | Star + Taylor (+Crystal) | 10.7 mi | ~5,883' |
-| josephnephi 2024 (LoJ 26881) | Star + Taylor + Italian + Lambertson + 5 sub-peaks | 24.8 mi | ~12,585' |
-
-### Route sequence (Star + Taylor, Mt Tilton Trail)
 1. From the **end of CO 742 / Mt Tilton Trail TH**, hike the Mt Tilton Trail ~1.5 mi (trail runs on the **north** side of the stream, contrary to the topo).
 2. At the **Taylor Pass junction**, leave the trail and climb directly **north** to the base of Taylor's west ridge (old mine workings).
-3. Gain the ridge to **Taylor Peak (13,438', Class 2)**.
+3. Gain the ridge to **Taylor Peak (13,438', Class 2)** — the natural first summit of the pair.
 4. Follow the connecting ridge **SW ~1.25 mi (Class 2)** to **Star Peak A (13,527')**.
 5. Descend back toward the Taylor Pass junction and out — *or*, for Option B, drop SW and traverse to Italian.
 
-### Italian extension / standalone
-From the Star–Taylor side, descend SW across the basin/Star Pass area (Class 2 tundra, significant elevation loss) and climb **Italian Mtn (13,385')** from the north/east. As a standalone, Italian is most efficiently done from the **CR 744 or Cement Creek** spur, commonly paired with **American Flag Mountain** (12,723', sub-13k).
+Neither peak carries a formal 14ers.com route description ("no route descriptions… try the Trip Reports") — the standard line is this Taylor→Star ridge from the Mt Tilton Trail, Class 2 throughout.
+
+### Day 2 — Italian Mountain (Class 2)
+
+From the Star–Taylor side, descend SW across the basin/Star Pass area (Class 2 tundra, significant elevation loss) and climb **Italian Mtn (13,385')** from the north/east. As a standalone, Italian is most efficiently done from the **CR 744 or Cement Creek** spur, commonly paired with **American Flag Mountain** (12,723', sub-13k) — standalone TRs use the Taylor Park spurs (CR 744 / CO 759–Cement Creek) and add American Flag Mtn + Lambertson Peak. Class 2 tundra/talus; the highest-prominence peak of the three (1,357').
 
 ---
 
-## Per-peak route notes
+## Camps & water
 
-- **Star Peak A** — no formal 14ers route description ("no route descriptions… try the Trip Reports"). Standard line is the Taylor→Star ridge from the Mt Tilton Trail; Class 2 throughout.
-- **Taylor Peak A** — the natural first summit of the pair; west ridge off the Mt Tilton Trail / Taylor Pass junction, Class 2.
-- **Italian Mtn** — Class 2 tundra/talus; standalone TRs use the Taylor Park spurs (CR 744 / CO 759–Cement Creek) and add American Flag Mtn + Lambertson Peak. The highest-prominence peak of the three (1,357').
+- Dispersed camping plentiful near the end of CO 742 (fills on summer weekends) — the Option-A basecamp.
+- No wilderness permits — the summits are on Gunnison NF land outside designated wilderness. No fees.
 
 ---
 
-## Conditions / season
+## Gear & season
 
 - **Best window:** late June through early October. Snow lingers in the basins into early summer.
 - **Access window:** **Cottonwood Pass / CO 742 seasonal closure** (≈ late May–late October) gates the whole trip — verify CDOT first.
 - **Terrain:** Class 2 tundra, grass, and talus; no technical difficulty on the standard lines. Old mining roads/workings aid the lower Taylor approach.
 - **Storms:** long exposed ridges and tundra — early start, off the high ground by early afternoon (especially for the big one-day link).
-
----
-
-## Permits / access
-
-- No wilderness permits — the summits are on Gunnison NF land outside designated wilderness.
-- No fees. Dispersed camping plentiful near the end of CO 742 (fills on summer weekends).
-
----
-
-## Cell coverage
-
-- **14ers.com community DB:** no submitted reception reports for these summits/TH (typical for the East Taylor Park backcountry).
-- **Geographic reasoning:** the **Mt Tilton TH and lower basins are likely dead** — deep in East Taylor Park, shadowed from towers. **Summits may catch intermittent signal** with line-of-sight east, but don't count on it.
-- **Standard recommendation:** carry an **InReach / satellite messenger**, especially for the big one-day link.
+- **Cell coverage:** no submitted reception reports in the 14ers.com community DB for these summits/TH (typical for the East Taylor Park backcountry). Geographic reasoning: the **Mt Tilton TH and lower basins are likely dead** — deep in East Taylor Park, shadowed from towers; **summits may catch intermittent signal** with line-of-sight east, but don't count on it. Carry an **InReach / satellite messenger**, especially for the big one-day link.
 
 ---
 
@@ -184,4 +174,3 @@ Ascent GPX tracks pulled for all three (Star aid 1533069, Taylor aid 1533019, It
 **GPX collected: 8 track files across all three sources** (LoJ combos + 14ers library + peakbagger ascents) — all layered on the research map, colored by source.
 
 **Sources checked:** 14ers.com ✓ (logged in, "Basin") · listsofjohn.com ✓ (logged in, "letsgocu") · peakbagger.com ✓ (logged in, "Kyle Knutson")
-

@@ -32,21 +32,29 @@ One column for a single peak; a column per peak for combos. **Must include** the
 
 `**[<Xh Ym> via Google Maps](<directions URL>)** (origin: <home address>)` — see [conventions](conventions.md).
 
-## Required sections
+## Required sections — v2 format (Kyle, 2026-07-12)
 
-| Section | Single peak | Day trip | Multi-day |
+Fixed order, `---` divider between every `##` section. The **At-a-glance callout is
+the single home for day/trip stats** — section headings carry class only, prose never
+restates mileage/gain (option-comparison tables are the one exception). Provenance
+("composed from N tracks…") lives ONLY in the map-box note + the Trip-reports section.
+
+| # | Section | Day trip / single peak | Multi-day trip |
 |---|---|---|---|
-| Quick Stats | ✓ | ✓ (per-peak cols) | Trip Stats |
-| Overview map (PNG + CalTopo) | ✓ | ✓ | ✓ |
-| Cluster / why-combined | cluster status | why these together | peaks-covered table |
-| Recommended route/plan ⭐ | ✓ | ✓ (with combo stats) | day-by-day itinerary |
-| Alternates | ✓ | ✓ | per-day bailouts |
-| Trailhead / approach | ✓ | ✓ | pack-in/out + camps |
-| Conditions / season / permits | ✓ | ✓ | ✓ (+ camping rules) |
-| Cell coverage | ✓ | ✓ | ✓ |
-| Trip reports (all 3 sources) | ✓ | ✓ | ✓ |
-| TL;DR | ✓ | ✓ | ✓ |
-| **Sources checked footer** | ✓ | ✓ | ✓ |
+| 1 | Header zone (H1 → quickstats → written-for → weather box → map box → status → PNG → provenance) | ✓ | ✓ |
+| 2 | `!!! danger` box (Class 4/5 or genuinely sketchy only; ≤1 line per hazard) | if warranted | if warranted |
+| 3 | Peaks covered — intro sentence (style · hardest move · access · days/nights) + table with **names linked to 14ers.com peak pages** (`14ers.com/peaks/<id>`, id from peak_db; CO peaks only) | ✓ | ✓ |
+| 4 | Itinerary options (settled decisions = one inline line → *Other considerations*) | if options exist | ✓ |
+| 5 | Getting there (trailhead/access; **clickable drive-from-home link lives here**) | ✓ | ✓ (train/shuttle etc.) |
+| 6 | Route description, in walking order | ✓ | "The days, in order" — `### Day N` chronological, pack-in = Day 1 |
+| 7 | Camps & water (basecamps + water merged) | — | ✓ |
+| 8 | Gear & season (gear + conditions/season/permits + bail-outs merged) | ✓ | ✓ |
+| 9 | Other considerations — *optional*: judgment forks (direction, alternate access) with full rationale | if forks exist | if forks exist |
+| 10 | Trip reports & GPX (all 3 sources; sweep counts live here) | ✓ | ✓ |
+| 11 | **Sources checked footer** | ✓ | ✓ |
+
+Prose rules: **no TL;DR section** (cut 2026-07-11), **no weekday framing** (Day 1, Day 2…),
+**no acclimatization talk** — see [conventions](conventions.md).
 
 ## Required footer
 
@@ -58,9 +66,7 @@ One column for a single peak; a column per peak for combos. **Must include** the
 
 - **Single peak:** [Hunts Peak](../peaks/hunts_peak.md), [Jacque Peak](../peaks/jacque_peak.md)
 - **Day trip:** [Crestolita + Broken Hand](../peaks/crestolita_broken_hand.md)
-- **Multi-day:** *(none yet — first one sets the pattern)*
-
-> Existing reports predate parts of this template (cell-coverage format and trailhead-table-vs-bullet vary). Normalize on the next freshness pass rather than a bulk rewrite.
+- **Multi-day (v2 exemplar):** [Jupiter, Pigeon & Turret](../peaks/jupiter_pigeon_turret.emily.md)
 
 ## Rank references (Kyle, 2026-07-11)
 

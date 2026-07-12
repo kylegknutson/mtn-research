@@ -53,16 +53,15 @@ status_source: "peak_db ascents"
 **Other climbers:** Emily Sharpe — not yet · Shawn D Keil — not yet
 <!-- CLIMBERS_END -->
 
-## Quick stats
+## The peak
 
-| | Campbell Creek Pk |
+| | [Campbell Creek Pk](https://www.14ers.com/peaks/10399) |
 |---|---|
 | Elevation | 13,461' (LiDAR; 13,454' previous) |
 | Lat / Lon | 37.90666, −107.46294 |
 | Class | **2** (grass/tundra) |
 | CO Rank | 284 |
 | Range / County | San Juan / Hinsdale |
-| Recommended climb | **~5.7 mi / ~3,443'** (DEM, standalone out-and-back) |
 | 14ers.com | [10399](https://www.14ers.com/php14ers/peak.php?peakid=10399) |
 | LoJ | [357](https://listsofjohn.com/peak/357) |
 | peakbagger | [84977](https://peakbagger.com/peak.aspx?pid=84977) |
@@ -72,12 +71,12 @@ status_source: "peak_db ascents"
 
 ## The standalone climb — Grizzly Gulch TH ⭐
 
-A direct out-and-back, **~5.7 mi / ~3,443′, Class 2** — no neighboring summits required. Every recorded track does Campbell Creek as part of a Handies-area multi-peak day; this is the shortest line that tags **only** Campbell Creek.
+A direct **Class 2** out-and-back — no neighboring summits required. Every recorded track does Campbell Creek as part of a Handies-area multi-peak day; this is the shortest line that tags **only** Campbell Creek.
 
 | | |
 |---|---|
 | Peak | Campbell Creek Pk (13,461') |
-| **Recommended route** | **~5.7 mi / ~3,443′ (DEM), out-and-back** |
+| **Recommended route** | out-and-back (stats in *At a glance*) |
 | Class | **2** — mostly grass and tundra; **stay on the grass to avoid loose scree/dirt** near the top |
 | Trailhead | **Grizzly Gulch / Silver Creek TH, ~10,400'** — Lake Fork (Cinnamon Pass) road; **4WD/high-clearance**. Same lot as the Handies NE-slopes route, across the valley from Redcloud/Sunshine. |
 
@@ -100,7 +99,7 @@ A direct out-and-back, **~5.7 mi / ~3,443′, Class 2** — no neighboring summi
 
 ---
 
-## Conditions / season
+## Gear & season
 
 - **Best window:** **July–September.** The Lake Fork road and upper basin open late; north-facing grass holds snow into early summer.
 - **Terrain:** benign **Class 2 grass/tundra** — the difficulty is altitude and a bit of routefinding to stay on grass, not scrambling.

@@ -54,36 +54,26 @@ status_source: "peak_db ascents (Kyle — unclimbed)"
 **Other climbers:** Emily Sharpe — not yet · Shawn D Keil — 3 of 5 (Summit Pk, Unicorn, The, Montezuma Pk)
 <!-- CLIMBERS_END -->
 
-## Trip stats
-
-| | |
-|---|---|
-| Days | 3 climbing days (drive down the evening before) |
-| Peaks | 5 ranked 13ers — all unclimbed, all Class 1–2 |
-| Total distance / gain | ~22–25 mi · ~9,000–10,000 ft across the three days |
-| Style | **Car-camp, moving camp by vehicle each night** (not a backpack) |
-| Drive from Boulder | **[5h 10m via Google Maps](https://www.google.com/maps/dir/?api=1&origin=1162+Peakview+Circle,+Boulder,+CO+80302&destination=37.460,-106.415)** to the Day-1 (Bennett) trailhead |
-| One basecamp move | ~3 hr (Bennett/Del Norte side → Platoro side); the other hop is ~1.5 hr |
-
-This is a **drive-and-day-hike** trip, not a backcountry basecamp: each peak/group is a separate Class 1–2 day from a car camp near its trailhead, with a vehicle relocation between days.
-
----
-
 ## Peaks covered
 
-| Peak | Day | Elev | Class | Prom | From-camp stats | peak_db |
-|---|---|---|---|---|---|---|
-| Bennett Pk | 1 | 13,206' | 1 | 1,752' | ~5–9 mi / 2,400–3,400' (varies w/ 4WD start) | 607 |
-| Summit Pk | 2 | 13,304' | 2 | 2,736' | trio: **10.2 mi / 4,449'** | 488 |
-| Montezuma Pk | 2 | 13,158' | 2 | 688' | (same trio loop) | 654 |
-| "The Unicorn" | 2 | 13,030' | 2 | 425' | (same trio loop) | 796 |
-| Conejos Pk | 3 | 13,176' | 1 | 1,912' | **6.2 mi / ~2,500'** | 633 |
+A **drive-and-day-hike trip, not a backpack** — three Class 1–2 climbing days (drive down
+the evening before), each from a **car camp near its trailhead, moving camp by vehicle each
+night** (one ~3 hr relocation from the Bennett/Del Norte side to the Platoro side; the other
+hop is ~1.5 hr). Hardest move **Class 2**, on the Summit-trio ridge.
+
+| Peak | Day | Elev | Class | Prom | peak_db |
+|---|---|---|---|---|---|
+| [Bennett Pk](https://www.14ers.com/peaks/10509) | 1 | 13,206' | 1 | 1,752' | 607 |
+| [Summit Pk](https://www.14ers.com/peaks/10459) | 2 | 13,304' | 2 | 2,736' | 488 |
+| [Montezuma Pk](https://www.14ers.com/peaks/10536) | 2 | 13,158' | 2 | 688' | 654 |
+| ["The Unicorn"](https://www.14ers.com/peaks/10594) | 2 | 13,030' | 2 | 425' | 796 |
+| [Conejos Pk](https://www.14ers.com/peaks/10522) | 3 | 13,176' | 1 | 1,912' | 633 |
 
 Summit, Montezuma, Unicorn, and Conejos sit in the **South San Juan Wilderness**; Bennett is just outside it on the Rio Grande side. Summit Peak (2,736' prom, 39.6 mi isolation) is the high point of the whole South San Juan range.
 
 ---
 
-## Why a 3-day weekend works (grouping logic)
+## Itinerary options
 
 Grouped by **approach**, not summit proximity — the five fall into three trailheads:
 
@@ -91,33 +81,13 @@ Grouped by **approach**, not summit proximity — the five fall into three trail
 - **Conejos** is its own short Class 1 day from the **Conejos River Rd (FS 250/105)** — only ~1.5 hr from the trio trailhead (same Platoro orbit).
 - **Bennett** is the outlier — 15–17 mi NE, climbed from the **Del Norte / Rio Grande side (FS 265)**, a different drainage ~3 hr by road from the others.
 
-So it's a clean **2-zone, 3-day** trip: do Bennett on the way in (it's the closest to Boulder), then relocate to the Platoro zone for the trio + Conejos.
+So it's a clean **2-zone, 3-day** trip — **Bennett on the way in, then relocate to the Platoro zone for the trio + Conejos** (full reasoning in *Other considerations*).
 
 ---
 
-## Day-by-day itinerary (moving camp each night)
+## Getting there — two zones, three trailheads
 
-### Eve — drive down
-Boulder → **Bennett Pk TH** (FS 265, Del Norte side), **~5h 10m**. Car camp near the trailhead.
-
-### Day 1 — Bennett Peak (13,206', Class 1)
-- **Stats:** ~5–9 mi / 2,400–3,400' depending how far you drive the FS 265 / Cat Creek-area road (high-clearance helps; PB tracks range from a 4.7-mi high start to ~8.6 mi lower).
-- **Route:** standard Class 1 tundra/ridge walk; a big standalone massif (1,752' prom). Often combined with sub-13k Pintada/Windy/Sheep/Silver (josephnephi did a 5-peak day, LoJ 24347) — skip those to keep it short.
-- **Then:** drive **~3 hr** to the Platoro zone (Bennett TH → Trio TH is ~2h 49m / 57 mi via US-160). Car camp near Elwood Pass / Treasure Creek.
-
-### Day 2 — Summit + Montezuma + Unicorn (the trio, Class 2)
-- **Stats (measured, LoJ 24954):** **10.2 mi / 4,449'**, Class 2 — the day's biggest.
-- **Route:** the standard one-day loop over all three (0.6–1.6 mi apart) from the **Elwood Pass / FS 380 → Treasure Creek (FR 243)** area. josephnephi (2023, LoJ 24954) and Furthermore (LoJ 1487) both did the trio in a push.
-- **Then:** drive **~1h 28m / 28 mi** (FS 250 network) to the Conejos River Rd. Car camp near the Conejos TH.
-
-### Day 3 — Conejos Peak (13,176', Class 1)
-- **Stats (measured, LoJ 24956):** **6.2 mi / ~2,500'**, Class 1 — a short final day.
-- **Route:** from **FS 250 → 105** (Conejos River; "all 2WD, last 5 mi rocky, mid-clearance recommended" — whileyh). Standard Class 1 walk-up.
-- **Then:** drive home (~5 hr).
-
----
-
-## Logistics — drives between camps
+**Drive from Boulder:** **[5h 10m via Google Maps](https://www.google.com/maps/dir/?api=1&origin=1162+Peakview+Circle,+Boulder,+CO+80302&destination=37.460,-106.415)** to the Day-1 (Bennett) trailhead.
 
 | Leg | Drive | Notes |
 |---|---|---|
@@ -126,11 +96,33 @@ Boulder → **Bennett Pk TH** (FS 265, Del Norte side), **~5h 10m**. Car camp ne
 | Trio → Conejos camp | ~1h 28m / 28 mi | FS 250 dirt network, Platoro orbit |
 | Conejos → home | ~5 hr | via US-285 N |
 
-> Conejos ↔ Bennett directly is ~3h 19m / 109 mi (US-160 around) — which is why Bennett goes first/on-the-way-in rather than as a side trip from Platoro.
+**Driving directions between approaches:**
 
-### Driving directions between approaches
 - **Bennett Pk TH → Trio TH (Elwood Pass / Treasure Creek)**: [directions](https://www.google.com/maps/dir/?api=1&origin=37.46,-106.415&destination=37.363,-106.67)
 - **Trio TH → Conejos Pk TH (Conejos River Rd)**: [directions](https://www.google.com/maps/dir/?api=1&origin=37.363,-106.67&destination=37.296,-106.539)
+
+---
+
+## The days, in order
+
+### The evening before — drive down
+
+Boulder → **Bennett Pk TH** (FS 265, Del Norte side). Car camp near the trailhead.
+
+### Day 1 — Bennett Peak (Class 1)
+
+- **Route:** standard Class 1 tundra/ridge walk; a big standalone massif (1,752' prom). Expect ~5–9 mi / 2,400–3,400' depending how far you drive the FS 265 / Cat Creek-area road (high-clearance helps; PB tracks range from a 4.7-mi high start to ~8.6 mi lower). Often combined with sub-13k Pintada/Windy/Sheep/Silver (josephnephi did a 5-peak day, LoJ 24347) — skip those to keep it short.
+- **Then:** drive **~3 hr** to the Platoro zone (see *Getting there*). Car camp near Elwood Pass / Treasure Creek.
+
+### Day 2 — Summit + Montezuma + Unicorn (the trio, Class 2)
+
+- **Route:** the standard one-day loop over all three (0.6–1.6 mi apart) from the **Elwood Pass / FS 380 → Treasure Creek (FR 243)** area — the trip's biggest day. josephnephi (2023, LoJ 24954) and Furthermore (LoJ 1487) both did the trio in a push.
+- **Then:** drive **~1h 28m** (FS 250 network) to the Conejos River Rd (see *Getting there*). Car camp near the Conejos TH.
+
+### Day 3 — Conejos Peak (Class 1)
+
+- **Route:** from **FS 250 → 105** (Conejos River; "all 2WD, last 5 mi rocky, mid-clearance recommended" — whileyh). Standard Class 1 walk-up — a short final day.
+- **Then:** drive home (~5 hr).
 
 ---
 
@@ -143,17 +135,18 @@ Boulder → **Bennett Pk TH** (FS 265, Del Norte side), **~5h 10m**. Car camp ne
 
 ---
 
-## Gear / conditions / season
+## Gear & season
 
 - **Best window:** **mid-July through September** — the South San Juans hold snow late and the access roads (Elwood Pass, FS 250) open late. Afternoon monsoon storms are the dominant hazard on the exposed Class 2 trio ridge.
 - **Gear:** standard Class 1–2 — no rope/axe/crampons in season. High-clearance/AWD useful on all three approach roads (FS 265, FS 380/243, FS 250→105); none strictly require hard 4WD to a reasonable start, but higher clearance shortens the days.
 - **Weather strategy:** put the **trio (Day 2)** — the longest, most-exposed, Class 2 ridge day — on the most stable forecast day; Bennett and Conejos are shorter Class 1 and more storm-tolerant.
+- **Cell coverage:** no 14ers.com community reception data for these summits. Geographic reasoning: **all three trailheads/basins are likely dead** (deep SE San Juan / Conejos backcountry); summits may catch intermittent line-of-sight toward the San Luis Valley (Bennett/Conejos, facing E) but not reliably. **Carry an InReach** — this is remote country with long drives between zones.
 
 ---
 
-## Cell coverage
+## Other considerations
 
-- No 14ers.com community reception data for these summits. Geographic reasoning: **all three trailheads/basins are likely dead** (deep SE San Juan / Conejos backcountry); summits may catch intermittent line-of-sight toward the San Luis Valley (Bennett/Conejos, facing E) but not reliably. **Carry an InReach** — this is remote country with long drives between zones.
+**Why Bennett first, on the way in?** It's the closest trailhead to Boulder, and Conejos ↔ Bennett directly is ~3h 19m / 109 mi (US-160 around) — which is why Bennett goes first/on-the-way-in rather than as a side trip from Platoro.
 
 ---
 
@@ -178,4 +171,3 @@ Peak pages exist for all five; **no formal route descriptions** (route beta is T
 Ascent GPX pulled for all five (Bennett pid 5880, Conejos 5883, Summit 5882, Unicorn 70845, Montezuma 16087) — 24 ascent tracks layered. PB isolation confirms the grouping (Unicorn 0.59 mi, Montezuma 1.56 mi, Conejos 8.1 mi, Bennett 17.1 mi).
 
 **Sources checked:** 14ers.com ✓ (logged in, "Basin") · listsofjohn.com ✓ (logged in, "letsgocu") · peakbagger.com ✓ (logged in, "Kyle Knutson")
-

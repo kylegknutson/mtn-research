@@ -51,9 +51,11 @@ status_source: "peak_db ascents"
 **Other climbers:** Emily Sharpe — not yet · Shawn D Keil — not yet
 <!-- CLIMBERS_END -->
 
-## Quick stats
+## Peaks covered
 
-| | Jenkins Mtn | PT 13,145 | Grizzly Pk E | "Lake Fork Pk" *(optional)* |
+The core three form a **N→S ridge chain**: Jenkins (north) → PT 13,145 (0.7 mi) → Grizzly Pk E (1.0 mi). Lake Fork sits ~2.4 mi **north** of Jenkins — a proven but long add-on (see *Other considerations*).
+
+| | [Jenkins Mtn](https://www.14ers.com/peaks/10754) | [PT 13,145](https://www.14ers.com/peaks/10807) | [Grizzly Pk E](https://www.14ers.com/peaks/10778) | ["Lake Fork Pk"](https://www.14ers.com/peaks/10764) *(optional)* |
 |---|---|---|---|---|
 | Elevation | 13,440' | 13,145' | 13,309' | 13,333' |
 | Lat / Lon | 38.96511, −106.54299 | 38.95539, −106.52653 | 38.94244, −106.52203 | 38.99859, −106.55393 |
@@ -65,11 +67,9 @@ status_source: "peak_db ascents"
 | peakbagger | [15652](https://peakbagger.com/peak.aspx?pid=15652) | [84735](https://peakbagger.com/peak.aspx?pid=84735) | [55291](https://peakbagger.com/peak.aspx?pid=55291) | [15841](https://peakbagger.com/peak.aspx?pid=15841) |
 | Peak DB id | 370 | 666 | 515 | 466 |
 
-The core three form a **N→S ridge chain**: Jenkins (north) → PT 13,145 (0.7 mi) → Grizzly Pk E (1.0 mi). Lake Fork sits ~2.4 mi **north** of Jenkins.
-
 ---
 
-## Recommended day — Jenkins + PT 13,145 + Grizzly E loop from Pieplant ⭐
+## Recommended route — Jenkins + PT 13,145 + Grizzly E loop from Pieplant ⭐
 
 The standard outing: a **counter-/clockwise loop from the Pieplant Mill site** taking in all three. Per climb13ers, the loop is **9.15 mi / 4,810'** (GPX tracks below range ~7.5–9 mi and ~5,300–6,800', depending on line and how directly the ridge is followed). **Class 2+** overall — the "+" is Grizzly E's boulder-talus.
 
@@ -88,23 +88,11 @@ The standard outing: a **counter-/clockwise loop from the Pieplant Mill site** t
 4. **Continue south along the connecting ridge** over **PT 13,145** and on to **Grizzly Pk E (13,309')** — this is where the day earns its Class 2+: a tricky ridge section, a talus gully, and sustained boulder-hopping.
 5. Descend Grizzly's slopes back toward Pieplant to close the loop (or reverse the ridge).
 
-> **Direction:** most parties go Jenkins-first (north end) then traverse south to Grizzly. Either way it's a loop back to Pieplant.
+> **Direction:** most parties go Jenkins-first (north end) then traverse south to Grizzly. Either way it's a loop back to Pieplant. Whether to add **Lake Fork Pk** as a 4th is a genuine fork — full reasoning in *Other considerations*.
 
 ---
 
-## Optional 4th — should you add "Lake Fork Peak"?
-
-**Short answer: only if you're fit and have a long summer day.** Lake Fork Pk (13,333', Class 2) is a legitimate add but it pulls the **opposite direction** from the trio:
-
-- It sits **~2.4 mi north of Jenkins**, while the trio extends *south*. So adding it means climbing north to Lake Fork **and** south over Jenkins/13,145/Grizzly — a long out-and-back-plus-traverse, roughly a **~13–15 mi day**.
-- climb13ers notes Lake Fork **"could be reached from the Taylor Park/Pieplant side,"** even though its *standard* route is from **Sayres Gulch (South Fork of Lake Creek, east side)** where it pairs with UN 13,305.
-- **It has been linked with the trio:** LoJ trip report [26979](https://listsofjohn.com/tr?Id=26979&pkid=370) covers Jenkins + PT 13,145 + Lake Fork together — so the Pieplant-side add is proven, just long.
-
-**Recommendation:** do the clean **3-peak loop** as the default. Tack on Lake Fork only if you want a big day — otherwise it's more efficient later from **Sayres Gulch paired with UN 13,305** (a separate, shorter outing).
-
----
-
-## Drive + approach
+## Getting there — Pieplant Mill site
 
 | | |
 |---|---|
@@ -116,19 +104,24 @@ The standard outing: a **counter-/clockwise loop from the Pieplant Mill site** t
 
 ---
 
-## Conditions / season
+## Gear & season
 
 - **Best window:** **July through September.** High Sawatch; the Pieplant/Taylor Park roads and Cottonwood Pass open late spring, and north-facing gullies hold snow into early summer.
 - **Crux is terrain, not technical:** sustained boulder-talus and a talus-filled gully on the Jenkins→Grizzly ridge — slow, ankle-aware going. **Carry an ice axe early season** for the gully (climb13ers recommends one).
 - **Storms:** a long, exposed ridge day — start early and be off the crest by early afternoon.
+- **Cell coverage:** no submitted 14ers.com reception reports for these summits or the Pieplant TH; the Pieplant/Taylor Park drainages are **likely dead** (deep valleys NE of the reservoir) — summits may catch intermittent signal but treat it as unreliable. Carry an **InReach / satellite messenger** — remote trailhead, long loop.
 
 ---
 
-## Cell coverage
+## Other considerations
 
-- **14ers.com community DB:** no submitted reception reports for these summits or the Pieplant TH.
-- **Geographic reasoning:** the Pieplant/Taylor Park drainages are **likely dead** (deep valleys NE of the reservoir); summits may catch intermittent signal but treat it as unreliable.
-- **Recommendation:** carry an **InReach / satellite messenger** — remote trailhead, long loop.
+**Optional 4th — should you add "Lake Fork Peak"? Short answer: only if you're fit and have a long summer day.** Lake Fork Pk (13,333', Class 2) is a legitimate add but it pulls the **opposite direction** from the trio:
+
+- It sits **~2.4 mi north of Jenkins**, while the trio extends *south*. So adding it means climbing north to Lake Fork **and** south over Jenkins/13,145/Grizzly — a long out-and-back-plus-traverse, roughly a **~13–15 mi day**.
+- climb13ers notes Lake Fork **"could be reached from the Taylor Park/Pieplant side,"** even though its *standard* route is from **Sayres Gulch (South Fork of Lake Creek, east side)** where it pairs with UN 13,305.
+- **It has been linked with the trio:** LoJ trip report [26979](https://listsofjohn.com/tr?Id=26979&pkid=370) covers Jenkins + PT 13,145 + Lake Fork together — so the Pieplant-side add is proven, just long.
+
+**Recommendation:** do the clean **3-peak loop** as the default. Tack on Lake Fork only if you want a big day — otherwise it's more efficient later from **Sayres Gulch paired with UN 13,305** (a separate, shorter outing).
 
 ---
 
@@ -163,4 +156,3 @@ Peak pages verified for all four (Jenkins 15652, Grizzly E 55291, PT 13,145 = "P
 Route beta for all peaks: [Jenkins South Ridge](https://www.climb13ers.com/colorado-13ers/jenkins-mountain) · [Grizzly Pk E NE Ridge](https://www.climb13ers.com/colorado-13ers/grizzly-peak--grizzly-peak-e) · ["Lake Fork Peak"](https://www.climb13ers.com/colorado-13ers/un-13322--lake-fork-peak). The Grizzly E page documents the **Jenkins–UN13,140–Grizzly loop** (9.15 mi / 4,810').
 
 **Sources checked:** 14ers.com ✓ (logged in, "letsgocu") · listsofjohn.com ✓ (logged in) · peakbagger.com ✓ (logged in, "Kyle Knutson") · climb13ers.com ✓
-

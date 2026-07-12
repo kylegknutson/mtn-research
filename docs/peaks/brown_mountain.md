@@ -47,9 +47,17 @@ status_source: "peak_db ascents (Kyle — unclimbed)"
 **Other climbers:** Emily Sharpe — not yet · Shawn D Keil — ✓ climbed
 <!-- CLIMBERS_END -->
 
-## Quick stats
+![Overview map](../maps/brown_mountain.png)
 
-| | Brown Mountain (DUCO BM) |
+<!-- PROVENANCE_START -->
+*Note: the recommended route was distilled from **6 recorded GPS tracks** of real trips (14ers.com · ListsofJohn · peakbagger) — all layered on the [interactive CalTopo research map](https://caltopo.com/m/Q2C5650).*
+<!-- PROVENANCE_END -->
+
+---
+
+## The peak
+
+| | [Brown Mountain (DUCO BM)](https://www.14ers.com/peaks/10441) |
 |---|---|
 | Elevation (LiDAR) | 13,347' (climb13ers + 14ers consensus); your sheet says 13,339' |
 | Lat / Lon | 37.92078, −108.63785 |
@@ -57,12 +65,6 @@ status_source: "peak_db ascents (Kyle — unclimbed)"
 | Range | San Juan Mountains |
 | Class (standard) | 2 |
 | Note | 3-mile ridgeline; high point is "DUCO Benchmark" |
-
-![Overview map](../maps/brown_mountain.png)
-
-<!-- PROVENANCE_START -->
-*Note: the recommended route was distilled from **6 recorded GPS tracks** of real trips (14ers.com · ListsofJohn · peakbagger) — all layered on the [interactive CalTopo research map](https://caltopo.com/m/Q2C5650).*
-<!-- PROVENANCE_END -->
 
 ---
 
@@ -177,20 +179,14 @@ Earthline 8/11/2020 — 7.6 mi / 2,500' from Pt 12,947' high TH. Bags Brown + Ab
 
 ---
 
-## Conditions / season
+## Gear & season
 
 - **Best window:** mid-June through early October. Expect snow patches on N aspects into July
 - **September observations** (per TR 22851): cold mornings, cloud/snow possible, beautiful aspen color on US 550
 - **Hazards:** false summits on Brown ridge; steep grass slopes can be slippery wet/icy; standard storm exposure on a long ridge
 - **4WD road traffic:** Corkscrew Gulch sees lots of 4WD traffic in summer — can mean dust on dry days. Wet days much quieter
 - **US 550 (Million Dollar Highway):** open year-round but check CDOT for winter closures (avalanche control)
-
----
-
-## Permits / access
-
-- Uncompahgre / San Juan National Forest — no permits, no fees
-- Standard wilderness rules don't apply (this is mostly mining-era public land outside designated wilderness)
+- **Permits / access:** Uncompahgre / San Juan National Forest — no permits, no fees. Standard wilderness rules don't apply (this is mostly mining-era public land outside designated wilderness)
 
 ---
 

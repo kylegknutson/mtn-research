@@ -40,15 +40,21 @@ status_source: "peak_db ascents"
 - ✓ Every other Mosquito Range 13er and 14er within 8 mi is done: London Mtn (1.62), Mt Evans B (2.19), Dyer Mtn (2.79), Mt Sherman (3.12), Mosquito Peak (3.28), Mt Buckskin (3.91), Mt Tweto (4.23), Mt Sheridan (4.46), Arkansas Mtn (5.07), Mt Democrat (5.18), Mt Bross (5.23), Horseshoe Mtn A (5.94), Mt Lincoln (6.22), Clinton Pk (7.16), N Star Mtn (7.82)
 - **Pure standalone half-day** — the Mosquito Range is essentially done for ranked combos. Pennsylvania is the loose end.
 
+![Overview map](../maps/pennsylvania_mountain.png)
+
+<!-- PROVENANCE_START -->
+*Note: the recommended route was distilled from **10 recorded GPS tracks** of real trips (recorded trips) — all layered on the [interactive CalTopo research map](https://caltopo.com/m/P2V1QG5).*
+<!-- PROVENANCE_END -->
+
 ---
 
 <!-- CLIMBERS_START -->
 **Other climbers:** Emily Sharpe — ✓ climbed · Shawn D Keil — ✓ climbed
 <!-- CLIMBERS_END -->
 
-## Quick stats
+## The peak
 
-| | Pennsylvania Mountain |
+| | [Pennsylvania Mountain](https://www.14ers.com/peaks/10275) |
 |---|---|
 | Elevation | 13,013' (LiDAR; map 13,006') |
 | Lat / Lon | 39.26461, −106.14243 |
@@ -64,12 +70,6 @@ status_source: "peak_db ascents"
 | Quad | Climax |
 | County | Park |
 | Member ascents | 724 (14ers) + 270 (LoJ) — heavily climbed |
-
-![Overview map](../maps/pennsylvania_mountain.png)
-
-<!-- PROVENANCE_START -->
-*Note: the recommended route was distilled from **10 recorded GPS tracks** of real trips (recorded trips) — all layered on the [interactive CalTopo research map](https://caltopo.com/m/P2V1QG5).*
-<!-- PROVENANCE_END -->
 
 ---
 
@@ -120,6 +120,22 @@ The 14ers.com route. The quickest, easiest, most documented option of any peak o
 
 → **Be prepared for the parking spot to be a quarter mile farther down than older GPX tracks show.**
 
+---
+
+## Gear & season
+
+- **Best window:** YEAR-ROUND — the route's signature feature is its all-season accessibility per the 14ers route description and PaulStratmoen's 1/20/2020 ascent
+- **Winter:** Pika TH lot may not be plowed (Stratmoen parked at a wide spot down the road). Snowshoes likely needed from ~12,200' up. Multiple Jan/Feb ascents in the LoJ TR record
+- **Summer storms:** Standard Mosquito Range afternoon storm risk — but the route is short enough that early morning starts give plenty of buffer
+- **Ski:** 130 member winter ascents + 52 ski descents on 14ers. Grade tops out ~25% — mellow ski tour
+- **Wind:** SE ridge is exposed; standard layering
+- **Cell:** 14ers.com community DB — TODO query (community DB at 14ers has the "peak conditions" page; not yet pulled for this peak). Geographic reasoning: **TH (~11,500')** likely good — line-of-sight toward Fairplay (Hwy 9 corridor towers, ~8 mi); **SE ridge / tundra slope** likely strong — wide-open tundra with LOS to Fairplay and the South Park valley; **summit** likely strong — high point above the SE ridge with clean LOS to multiple corridors. Likely no InReach needed for this peak, but carry one for habit
+- **Permits / access:** Pike-San Isabel National Forest — no permits, no fees. Pennsylvania Mountain has a **Pennsylvania Mountain Land Trust / Open Space** designation on the lower SE slopes — the Pika TH and the official trail respect this; stay on trail in that section. ⚠️ **CR 696 access from Mosquito Pass Rd is contested** — see RyanSchilling 2018 below; use Pika TH. Day-use only, leash dogs, standard public-land rules
+
+---
+
+## Other considerations
+
 ### Alternate THs (older — only if Pika TH is closed/inaccessible)
 
 **B. Mountain View Drive end** — avalletta 5/1/2021 used this
@@ -134,36 +150,6 @@ The 14ers.com route. The quickest, easiest, most documented option of any peak o
 **⚠️ AVOID — Sacramento Creek loop** (Wahr 7/23/2023):
 > "There was a narrow strip of private land signed No Trespassing. I'm not sure it was accurate but I didn't just want to leave my car there."
 - Wahr's original Pennsylvania-to-Sherman loop got blocked; he switched to the standard Pika TH instead
-
----
-
-## Conditions / season
-
-- **Best window:** YEAR-ROUND — the route's signature feature is its all-season accessibility per the 14ers route description and PaulStratmoen's 1/20/2020 ascent
-- **Winter:** Pika TH lot may not be plowed (Stratmoen parked at a wide spot down the road). Snowshoes likely needed from ~12,200' up. Multiple Jan/Feb ascents in the LoJ TR record
-- **Summer storms:** Standard Mosquito Range afternoon storm risk — but the route is short enough that early morning starts give plenty of buffer
-- **Ski:** 130 member winter ascents + 52 ski descents on 14ers. Grade tops out ~25% — mellow ski tour
-- **Wind:** SE ridge is exposed; standard layering
-
----
-
-## Cell coverage
-
-- **14ers.com community DB:** TODO query (community DB at 14ers has the "peak conditions" page; not yet pulled for this peak)
-- **Geographic reasoning:**
-  - **TH (~11,500'):** likely good — line-of-sight toward Fairplay (Hwy 9 corridor towers, ~8 mi)
-  - **SE ridge / tundra slope:** likely strong — wide-open tundra with LOS to Fairplay and the South Park valley
-  - **Summit:** likely strong — high point above the SE ridge with clean LOS to multiple corridors
-- **Standard recommendation:** likely no InReach needed for this peak, but carry one for habit
-
----
-
-## Permits / access
-
-- Pike-San Isabel National Forest — no permits, no fees
-- Pennsylvania Mountain has a **Pennsylvania Mountain Land Trust / Open Space** designation on the lower SE slopes — the Pika TH and the official trail respect this. Stay on trail in that section.
-- ⚠️ **CR 696 access from Mosquito Pass Rd is contested** — see RyanSchilling 2018 above. Use Pika TH.
-- Day-use only, leash dogs, standard public-land rules
 
 ---
 

@@ -49,7 +49,9 @@ status_source: "peak_db ascents (Kyle — unclimbed)"
 
 ---
 
-## Quick Stats
+## Peaks covered
+
+The Carter-Moriah Range forms a continuous ridgeline running SW–NE along the east side of Pinkham Notch, with the Wildcat peaks anchoring the south end and Mount Moriah the north. All six are connected by the AT/Carter-Moriah Trail and Wildcat Ridge Trail with no off-ridge detours required.
 
 | | Wildcat D | Wildcat A | Carter Dome | South Carter | Middle Carter | Mount Moriah |
 |---|---|---|---|---|---|---|
@@ -62,14 +64,6 @@ status_source: "peak_db ascents (Kyle — unclimbed)"
 | **Peakbagger** | [pid=6985](https://www.peakbagger.com/peak.aspx?pid=6985) | [pid=6981](https://www.peakbagger.com/peak.aspx?pid=6981) | [pid=6980](https://www.peakbagger.com/peak.aspx?pid=6980) | [pid=6978](https://www.peakbagger.com/peak.aspx?pid=6978) | [pid=6977](https://www.peakbagger.com/peak.aspx?pid=6977) | [pid=6974](https://www.peakbagger.com/peak.aspx?pid=6974) |
 | **LoJ** | [100592](https://listsofjohn.com/peak/100592) | [100574](https://listsofjohn.com/peak/100574) | [17087](https://listsofjohn.com/peak/17087) | [100573](https://listsofjohn.com/peak/100573) | [100566](https://listsofjohn.com/peak/100566) | [100597](https://listsofjohn.com/peak/100597) |
 
-**[~32h drive via Google Maps](https://www.google.com/maps/dir/?api=1&origin=1162+Peakview+Circle+Boulder+CO+80302&destination=44.2574,-71.2530)** (origin: Boulder, CO) — fly trip in practice: MHT (Manchester) or BOS (Boston) + ~2h rental car drive to Pinkham Notch.
-
----
-
-## Why these together
-
-The Carter-Moriah Range forms a continuous ridgeline running SW–NE along the east side of Pinkham Notch, with the Wildcat peaks anchoring the south end and Mount Moriah the north. All six are connected by the AT/Carter-Moriah Trail and Wildcat Ridge Trail with no off-ridge detours required.
-
 The Wildcat–Carter–Moriah full traverse is a well-established big day in the White Mountains, knocking out 6 of the NH 48 in a single point-to-point outing. Multiple Peakbagger ascent logs confirm this is a genuine combo done regularly, not just a geographic coincidence — most notably Collin Sweeney (2022-09-03, all 6 peaks), Jim Wilkinson (2019-07-30), and a detailed 2019 Protean Wanderer TR documenting the full day start to finish.
 
 For context on the scale options:
@@ -79,19 +73,6 @@ For context on the scale options:
 | Carters only (loop) | 3 | ~13 mi | ~4,500 ft |
 | Carters + Wildcats (loop) | 5 | ~18 mi | ~6,600 ft |
 | **Full traverse (this report)** | **6** | **~20 mi** | **~7,400–7,650 ft** |
-
----
-
-## Drive + Approach
-
-**South trailhead (start):** AMC Pinkham Notch Visitor Center, NH-16, Gorham, NH. Parking fee (~$5). Well-staffed AMC facility with water, bathrooms, and gear shop. This is also the trailhead for the Presidential Traverse — plan for a full lot on summer weekends.
-
-**North trailhead (end):** Rattle River Trailhead, RT 2, Shelburne, NH. Free roadside parking.
-
-**Shuttle:** ~10 miles by road between the two trailheads. Options:
-- **2-car spot** — leave one car at Rattle River before driving to Pinkham.
-- **Rattle River Hostel shuttle** — the hostel on RT 2 in Shelburne runs hiker shuttles to Pinkham Notch for ~$20. Call ahead.
-- Gorham town center is an alternate north-end option if exiting via Stony Brook Trail or the Carter-Moriah trailhead off US-2 (slightly shorter to Moriah, but adds road walking).
 
 ---
 
@@ -115,7 +96,7 @@ For context on the scale options:
 | Middle Carter → North Carter → Moriah | Carter-Moriah Trail (AT) | North Carter (not NH 48) at 0.9 mi; Moriah ~3.5 mi from Middle Carter total; **Imp Campsite** on this stretch — last reliable water |
 | Moriah → Rattle River TH | Kenduskeag Trail or Rattle River Trail → RT 2 | Rattle River Trail is the most direct exit to RT 2 |
 
-**Combo stats:** ~20 miles, ~7,400–7,650 ft gain, 12–13.5 hours car-to-car.
+**Time:** 12–13.5 hours car-to-car.
 
 ---
 
@@ -133,19 +114,22 @@ For context on the scale options:
 
 ---
 
-## Alternates
+## Drive + Approach
 
-**Abort at Carter Dome:** If energy flags, descend via Nineteen Mile Brook Trail back to NH-16 (Carter Dome → Carter Notch → Nineteen Mile Brook Trail, ~4 mi). Requires a car at the 19 Mile Brook Trailhead (or road walk ~1.5 mi back to Pinkham).
+**[~32h drive via Google Maps](https://www.google.com/maps/dir/?api=1&origin=1162+Peakview+Circle+Boulder+CO+80302&destination=44.2574,-71.2530)** (origin: Boulder, CO) — fly trip in practice: MHT (Manchester) or BOS (Boston) + ~2h rental car drive to Pinkham Notch.
 
-**Skip Moriah, exit at Imp Campsite area:** The IMP Trail off North Carter drops directly to NH-16 — bails out of Moriah and cuts the day to ~16 mi.
+**South trailhead (start):** AMC Pinkham Notch Visitor Center, NH-16, Gorham, NH. Parking fee (~$5). Well-staffed AMC facility with water, bathrooms, and gear shop. This is also the trailhead for the Presidential Traverse — plan for a full lot on summer weekends.
 
-**Reverse (N→S):** Some prefer starting in Gorham with Moriah first. The Wildcat descent is very steep — knees will know it at the end of a 20-mile day.
+**North trailhead (end):** Rattle River Trailhead, RT 2, Shelburne, NH. Free roadside parking.
 
-**Wildcats standalone:** Wildcat A + D as a standalone loop from Pinkham Notch is ~8.5 mi, ~3,200 ft gain — a good standalone NH 48 day.
+**Shuttle:** ~10 miles by road between the two trailheads. Options:
+- **2-car spot** — leave one car at Rattle River before driving to Pinkham.
+- **Rattle River Hostel shuttle** — the hostel on RT 2 in Shelburne runs hiker shuttles to Pinkham Notch for ~$20. Call ahead.
+- Gorham town center is an alternate north-end option if exiting via Stony Brook Trail or the Carter-Moriah trailhead off US-2 (slightly shorter to Moriah, but adds road walking).
 
 ---
 
-## Conditions / Season / Permits
+## Gear & season
 
 **Season:** Late May through October for a comfortable day hike. The Wildcat climb can hold ice well into May. Winter crossings of this full traverse are rare; the Wildcats in winter are a serious undertaking.
 
@@ -156,6 +140,18 @@ For context on the scale options:
 **Weather:** Summit weather on the Carter Range can be severe — this ridge sits in the full brunt of storms off Pinkham Notch. Mt. Washington Observatory weather applies. Start early; be off Moriah before dark if possible.
 
 **Water:** Carter Notch Hut (restrooms, tap water available — donation expected). Imp Campsite on the AT between Middle Carter and Moriah. Carry 2–3L minimum; the stretch from Carter Notch to Imp is long with no reliable sources.
+
+---
+
+## Other considerations
+
+**Abort at Carter Dome:** If energy flags, descend via Nineteen Mile Brook Trail back to NH-16 (Carter Dome → Carter Notch → Nineteen Mile Brook Trail, ~4 mi). Requires a car at the 19 Mile Brook Trailhead (or road walk ~1.5 mi back to Pinkham).
+
+**Skip Moriah, exit at Imp Campsite area:** The IMP Trail off North Carter drops directly to NH-16 — bails out of Moriah and cuts the day to ~16 mi.
+
+**Reverse (N→S):** Some prefer starting in Gorham with Moriah first. The Wildcat descent is very steep — knees will know it at the end of a 20-mile day.
+
+**Wildcats standalone:** Wildcat A + D as a standalone loop from Pinkham Notch is ~8.5 mi, ~3,200 ft gain — a good standalone NH 48 day.
 
 ---
 

@@ -34,15 +34,21 @@ status_source: "peak_db ascents"
 
 **Status in your sheet:** All 3 unclimbed (T 7 and T 8 explicitly at 0 ascents; Telluride Pk LiDAR-confirmed ranked, no entry in your climb log).
 
+![Overview map](../maps/telluride_t7_t8.png)
+
+<!-- PROVENANCE_START -->
+*Note: the recommended route was distilled from **19 recorded GPS tracks** of real trips (14ers.com · ListsofJohn · peakbagger) — all layered on the [interactive CalTopo research map](https://caltopo.com/m/6FM1FEK).*
+<!-- PROVENANCE_END -->
+
 ---
 
 <!-- CLIMBERS_START -->
 **Other climbers:** Emily Sharpe — not yet · Shawn D Keil — 2 of 3 (Telluride Pk, T 7)
 <!-- CLIMBERS_END -->
 
-## Quick stats
+## Peaks covered
 
-| | Telluride Peak | T 7 | T 8 |
+| | [Telluride Peak](https://www.14ers.com/peaks/10375) | [T 7](https://www.14ers.com/peaks/10434) | [T 8](https://www.14ers.com/peaks/10449) |
 |---|---|---|---|
 | Elevation (LiDAR) | 13,514' | 13,360' | 13,315' |
 | Lat / Lon | 37.92479, −107.73596 | 37.93418, −107.72316 | 37.94190, −107.71606 |
@@ -54,25 +60,65 @@ status_source: "peak_db ascents"
 
 Coordinates from your "All" map markers (LiDAR-grade). Wikipedia / older sources occasionally list Telluride Peak at 13,509' — LiDAR puts it at 13,514'.
 
-![Overview map](../maps/telluride_t7_t8.png)
-
-<!-- PROVENANCE_START -->
-*Note: the recommended route was distilled from **19 recorded GPS tracks** of real trips (14ers.com · ListsofJohn · peakbagger) — all layered on the [interactive CalTopo research map](https://caltopo.com/m/6FM1FEK).*
-<!-- PROVENANCE_END -->
-
 ---
 
-## Multi-peak link-ups (read this first)
+## Recommended route — Idarado Mine circuit (Option A) ⭐
 
-This is itself a 3-ranked-13er link-up. Every reasonable approach naturally chains all three (or all three + Fort Peabody / UN 13510 as soft adds).
+This is itself a 3-ranked-13er link-up. Every reasonable approach naturally chains all three (or all three + Fort Peabody / UN 13510 as soft adds). **The Idarado Mine circuit (Option A) is the recommended line — it fits your filters; the alternatives and rejected approaches are in *Other considerations*.**
 
-### Option A — Idarado Mine circuit (recommended, fits your filters)
 **8.5 mi RT, ~4,000' gain, Class 2 (with optional 2–3 traverse).** Source: climb13ers.com route description.
 - Start: Idarado Mine pullout, US 550, ~12 mi south of Ouray (~MP 90)
 - Up Commodore Gulch → Telluride Peak south slopes → ridge north to Telluride Pk summit
 - Drop to 12,860' saddle, climb 500' to T 7
 - Traverse T 7 → T 8 (Class 2–3 via north-side bypass; Class 3–4 if you stay on crest through rock towers)
 - Descend off T 8 back toward Imogene Pass road or Commodore Gulch to TH
+
+**Sequence (clockwise loop, T-Pk → T 7 → T 8):**
+1. From the parking circle, walk downhill NW toward old mine support buildings, then west and up to intercept the old mine road.
+2. Hike NW along the road to the creek in Commodore Gulch.
+3. Up Commodore Gulch, then ascend a tributary stream course toward Telluride Peak's south slopes.
+4. Telluride Peak summit (Class 2, tundra + minor scree/chiprock).
+5. North along ridge to Pt 13,365 just south of Imogene Pass summit.
+6. Down to the 12,860' saddle, then up 500 vertical feet to **T 7** (broad/flat summit, easy tundra).
+7. Traverse east/NE toward **T 8**. **Decision point at T 7/T 8 saddle**:
+   - **Class 2–3:** Drop on the **north side** of the ridge, bypass the rock towers on scree/grass/snowfield, regain the ridge before T 8.
+   - **Class 3–4:** Stay on crest through the rock towers (more sustained scrambling).
+8. Descend T 8 west/SW to regain the Imogene Pass area, then back down via Commodore Gulch tributaries to the TH.
+
+**Counter-clockwise variation:** start with T 8 first (per TR 20401's approach). Then the difficult T 8 → T 7 traverse is done with fresh legs but you're committed to it before the easier walk to Telluride Pk.
+
+---
+
+## Getting there — Idarado Mine pullout
+
+- **Approx location:** 37.9038, −107.7032 (verify mile post 90 on US 550)
+- **Drive from Boulder:** **[6h 19m via Google Maps](https://www.google.com/maps/dir/?api=1&origin=1162+Peakview+Circle,+Boulder,+CO+80302&destination=37.9038,-107.7032)** (326 mi, origin: 1162 Peakview Circle)
+- **~12 mi south of Ouray** on US 550 (paved highway — no special vehicle needed for the drive)
+- From the Ridgway → Telluride corridor: head south on US 550 from Ouray (15 min from Ridgway); continue ~12 mi past Ouray to the Idarado Mine pullout (large parking circle at ~MP 90, on the right going south). Total drive from Ridgway ~30–35 min.
+- Large parking circle overlooks the historic Idarado Mine
+- Summer toilets at the pullout
+- Free parking, no fees, no permits required
+
+**Permits / access:**
+
+- US 550 is a state highway, no permits
+- Uncompahgre / San Juan National Forest, Mt. Sneffels Wilderness boundary nearby — no permits needed for day hikes here (the route stays mostly outside the wilderness boundary on old mining terrain)
+- No quotas, no fees
+
+---
+
+## Gear & season
+
+- **Best window:** July through early October. Tundra / scree / minor scrambling — dry conditions ideal
+- **US 550 (Million Dollar Hwy):** open year-round but expect winter closures during avalanche control. Spring + fall: check CDOT
+- **Snow:** N-side bypass on T 7→T 8 traverse may hold a snowfield into July (per TR 20401 — used as part of the descent)
+- **Water:** Commodore Gulch creek + tributaries on lower approach; treat. Above ~12,000' = none reliable
+- **Hazards:** Class 3–4 rock towers if you don't bypass; loose scree/chiprock on Telluride Pk approach; storm exposure on the high ridge (3 hr+ of unprotected ridge walking)
+- **Lightning:** standard San Juans summer rule — be off the ridge by noon/1 PM
+
+---
+
+## Other considerations
 
 ### Option B — Imogene Pass base (longer, easier driving)
 **14 mi RT, ~5,100' gain, Class 2.** Source: 14ers.com TR 20401 (July 2020).
@@ -92,56 +138,6 @@ This is itself a 3-ranked-13er link-up. Every reasonable approach naturally chai
 ### What does NOT make sense
 - Driving up Imogene Pass road from Telluride side: requires 4WD/high-clearance and adds zero advantage over starting at the Idarado pullout
 - Black Bear Pass road: similar — high-clearance / 4WD only and longer
-
----
-
-## Recommended trip — Option A details
-
-**Drive:** From the Ridgway → Telluride corridor, head south on US 550 from Ouray (15 min from Ridgway). Continue ~12 mi past Ouray to the Idarado Mine pullout (large parking circle at ~MP 90, on the right going south). Total drive from Ridgway ~30–35 min.
-
-**Sequence (clockwise loop, T-Pk → T 7 → T 8):**
-1. From the parking circle, walk downhill NW toward old mine support buildings, then west and up to intercept the old mine road.
-2. Hike NW along the road to the creek in Commodore Gulch.
-3. Up Commodore Gulch, then ascend a tributary stream course toward Telluride Peak's south slopes.
-4. Telluride Peak summit (Class 2, tundra + minor scree/chiprock).
-5. North along ridge to Pt 13,365 just south of Imogene Pass summit.
-6. Down to the 12,860' saddle, then up 500 vertical feet to **T 7** (broad/flat summit, easy tundra).
-7. Traverse east/NE toward **T 8**. **Decision point at T 7/T 8 saddle**:
-   - **Class 2–3:** Drop on the **north side** of the ridge, bypass the rock towers on scree/grass/snowfield, regain the ridge before T 8.
-   - **Class 3–4:** Stay on crest through the rock towers (more sustained scrambling).
-8. Descend T 8 west/SW to regain the Imogene Pass area, then back down via Commodore Gulch tributaries to the TH.
-
-**Counter-clockwise variation:** start with T 8 first (per TR 20401's approach). Then the difficult T 8 → T 7 traverse is done with fresh legs but you're committed to it before the easier walk to Telluride Pk.
-
----
-
-## Trailhead — Idarado Mine pullout
-
-- **Approx location:** 37.9038, −107.7032 (verify mile post 90 on US 550)
-- **Drive from Boulder:** **[6h 19m via Google Maps](https://www.google.com/maps/dir/?api=1&origin=1162+Peakview+Circle,+Boulder,+CO+80302&destination=37.9038,-107.7032)** (326 mi, origin: 1162 Peakview Circle)
-- **~12 mi south of Ouray** on US 550 (paved highway — no special vehicle needed for the drive)
-- Large parking circle overlooks the historic Idarado Mine
-- Summer toilets at the pullout
-- Free parking, no fees, no permits required
-
----
-
-## Conditions / season
-
-- **Best window:** July through early October. Tundra / scree / minor scrambling — dry conditions ideal
-- **US 550 (Million Dollar Hwy):** open year-round but expect winter closures during avalanche control. Spring + fall: check CDOT
-- **Snow:** N-side bypass on T 7→T 8 traverse may hold a snowfield into July (per TR 20401 — used as part of the descent)
-- **Water:** Commodore Gulch creek + tributaries on lower approach; treat. Above ~12,000' = none reliable
-- **Hazards:** Class 3–4 rock towers if you don't bypass; loose scree/chiprock on Telluride Pk approach; storm exposure on the high ridge (3 hr+ of unprotected ridge walking)
-- **Lightning:** standard San Juans summer rule — be off the ridge by noon/1 PM
-
----
-
-## Permits / access
-
-- US 550 is a state highway, no permits
-- Uncompahgre / San Juan National Forest, Mt. Sneffels Wilderness boundary nearby — no permits needed for day hikes here (the route stays mostly outside the wilderness boundary on old mining terrain)
-- No quotas, no fees
 
 ---
 

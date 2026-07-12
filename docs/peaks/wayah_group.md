@@ -39,9 +39,6 @@ status_source: "peak_db ascents (Kyle — unclimbed)"
 
 **Status in DB:** all six unclimbed. These are Kyle's share of the **8-peak "Wayah Group"** — the long ridge NW of **Mount Massive / Mount Oklahoma** (both already done), between the **Hunter-Fryingpan Wilderness** and **Hwy 82 (Independence Pass)**.
 
-!!! danger "Class — this is a Class 3–4 ridge, not a walk-up"
-    The *summits* are Class 2 except **PT 13,291 (Class 3)** and **PT 13,220** (Class 2 via a game trail, **5th-class if taken direct**). **Linking the peaks along the crest is Class 3–4 scrambling** with real exposure on loose rock, and there are **Class 5 towers on the unranked points that must be bypassed** (per [Chipmunk's "A Tale of Two Ridges" TR](https://www.14ers.com/php14ers/tripreport.php?trip=22858)). Helmet; a rope is reasonable for the harder bits.
-
 > Six ranked 13ers strung along one long, committing ridge. Do them **all in one ~16.4 mi loop** from the end of Wildcat Road — or break them into **3 clean ~8–11 mi day-loops** off three different trailheads.
 
 ![Overview map](../maps/wayah_group.png)
@@ -56,9 +53,14 @@ status_source: "peak_db ascents (Kyle — unclimbed)"
 **Other climbers:** Emily Sharpe — 2 of 6 (PT 13,291, PT 13,220) · Shawn D Keil — not yet
 <!-- CLIMBERS_END -->
 
-## Quick stats
+!!! danger "Class — this is a Class 3–4 ridge, not a walk-up"
+    - **Summits:** Class 2 except **PT 13,291 (Class 3)** and **PT 13,220** (Class 2 via a game trail, **5th-class if taken direct**).
+    - **Linking the peaks along the crest is Class 3–4 scrambling** with real exposure on loose rock; **Class 5 towers on the unranked points must be bypassed** (per [Chipmunk's "A Tale of Two Ridges" TR](https://www.14ers.com/php14ers/tripreport.php?trip=22858)).
+    - Helmet; a rope is reasonable for the harder bits.
 
-| | PT 13,220 | PT 13,291 | PT 13,033 | PT 13,014 | Wayah Pk | PT 13,221 |
+## Peaks covered
+
+| | [PT 13,220](https://www.14ers.com/peaks/10801) | [PT 13,291](https://www.14ers.com/peaks/10769) | [PT 13,033](https://www.14ers.com/peaks/10833) | [PT 13,014](https://www.14ers.com/peaks/10835) | [Wayah Pk](https://www.14ers.com/peaks/10775) | [PT 13,221](https://www.14ers.com/peaks/10797) |
 |---|---|---|---|---|---|---|
 | Elevation | 13,220' | 13,291' | 13,033' | 13,014' | 13,277' | 13,221' |
 | Lat / Lon | 39.1615, −106.5516 | 39.1669, −106.5350 | 39.1851, −106.5585 | 39.2124, −106.5677 | 39.2053, −106.5292 | 39.2148, −106.5281 |
@@ -75,30 +77,15 @@ All six are **ranked Sawatch 13ers** in the **Hunter-Fryingpan Wilderness**. The
 
 ## Option A — all six in one loop ⭐ big day
 
-A **~16.4 mi / ~6,946′ loop** (DEM-measured, stitched from recorded GPX) over all six from the **end of Wildcat Road** (the north Fryingpan-Lakes-area trailhead, ~11,400') — **no car shuttle needed.** Up onto the ridge, around the horseshoe over all six, and back down to the same TH.
+A **loop over all six** from the **end of Wildcat Road** (the north Fryingpan-Lakes-area trailhead, ~11,400') — **no car shuttle needed.** Up onto the ridge, around the horseshoe over all six, and back down to the same TH.
 
 - **Loop order:** PT 13,014 → PT 13,033 → PT 13,220 → PT 13,291 → Wayah Pk → PT 13,221 → back (reverse works too).
 - **Difficulty:** stay on the crest for **Class 3–4** scrambling; **the few Class 5 towers (on the unranked bumps) get bypassed** west or east. Loose rock and exposure — helmet, and a rope is reasonable.
-- **The day is the scrambling + ~6,946′ of gain at 13k', not the mileage** — you're on an exposed crest for hours, so a stable-weather window is essential. Recorded parties do the *full* 8-peak group as a longer outing; Kyle's six is the loop above.
+- **The day is the scrambling + the gain at 13k', not the mileage** — you're on an exposed crest for hours, so a stable-weather window is essential. Recorded parties do the *full* 8-peak group as a longer outing; Kyle's six is the loop above.
 
 ---
 
-## Option B — split into 3 short day-loops (real recorded routes)
-
-Each pair sits above its own trailhead, so the relaxed way is **three ~8–11 mi loops** (combine any two for a 2-day weekend). All distances/gains are **DEM-measured from recorded GPX**:
-
-| Loop | Peaks | Trailhead | Stats |
-|---|---|---|---|
-| **South pair** | PT 13,291 (Cl 3) + PT 13,220 | **North Fork Lake Creek TH** (Hwy 82) | **~10.5 mi / ~3,580′** (DEM) |
-| **North pair** | Wayah Pk + PT 13,221 | **Independence Pass / Lost Man** (Hwy 82) | **~7.9 mi** (recorded loop) |
-| **Middle pair** | PT 13,033 + PT 13,014 | **South Fork Pass / Fryingpan** (Frying Pan Rd) | **~10.8 mi** (recorded loop) |
-
-- The **south pair** is the cleanest single day and gets you the Class 3 peak (PT 13,291) — a good first bite.
-- The **north** and **middle** pairs are best off the Fryingpan / upper-Hwy-82 side; combine them if camping near South Fork Pass.
-
----
-
-## Drive + approach
+## Getting there
 
 | | |
 |---|---|
@@ -108,12 +95,27 @@ Each pair sits above its own trailhead, so the relaxed way is **three ~8–11 mi
 
 ---
 
-## Conditions / season
+## Gear & season
 
 - **Best window:** **July–September.** High, remote Sawatch ridge; the traverse needs dry rock and a **stable-weather day** (long, exposed, committing).
 - **Terrain:** Class 2 tundra/talus to the summits; **Class 3–4 scrambling on loose rock to link them**, with bypasses around the Class 5 towers. Willows and a faint approach on the North Fork Lake Creek side.
 - **Storms:** you're on an exposed crest for hours on the traverse — very early start, or split it into the short loops.
 - **Cell:** dead — carry an InReach.
+
+---
+
+## Other considerations
+
+**Option B — split into 3 short day-loops (real recorded routes).** Each pair sits above its own trailhead, so the relaxed way is **three ~8–11 mi loops** (combine any two for a 2-day weekend):
+
+| Loop | Peaks | Trailhead | Stats |
+|---|---|---|---|
+| **South pair** | PT 13,291 (Cl 3) + PT 13,220 | **North Fork Lake Creek TH** (Hwy 82) | **~10.5 mi / ~3,580′** |
+| **North pair** | Wayah Pk + PT 13,221 | **Independence Pass / Lost Man** (Hwy 82) | **~7.9 mi** |
+| **Middle pair** | PT 13,033 + PT 13,014 | **South Fork Pass / Fryingpan** (Frying Pan Rd) | **~10.8 mi** |
+
+- The **south pair** is the cleanest single day and gets you the Class 3 peak (PT 13,291) — a good first bite.
+- The **north** and **middle** pairs are best off the Fryingpan / upper-Hwy-82 side; combine them if camping near South Fork Pass.
 
 ---
 

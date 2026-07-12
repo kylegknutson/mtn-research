@@ -65,38 +65,23 @@ status_source: "scrape_14ers_checklist emily"
 ---
 
 !!! danger "Technical trip — Class 4 and low 5th class terrain"
-    **Wham Ridge (Vestal) is an alpine rock route (III 5.4)** — careful route-finding keeps
-    it at 5.4 (crux hand crack), but off-route quickly becomes 5.6+. Most experienced
-    scrambler parties solo it in dry conditions; carrying a light rope + small rack for the
-    upper headwall is common and smart for a first time on it.
-    **Vestal's descent is a known trap:** from the summit, do **not** drop into the first
-    gullies off the top (they cliff out into loose Class 4). Traverse the ridge south, then
-    southeast to the further **SE-facing gully** before descending the choss to the
-    Vestal–Arrow saddle side.
-    **Trinity Peak's crux** on the traverse is a short (~20 ft) **exposed Class 4 chimney**
-    regaining the ridge from the south-side ledges — cairned, solid rock, but no-fall terrain.
-
-## The trip at a glance
-
-| | |
-|---|---|
-| Days | **4 days / 3 nights** — pack in, 2 climbing days, pack out (strong parties compress to 3 days) |
-| Peaks | 5 ranked 13ers: Vestal 13,867' · Arrow 13,817' · Trinity 13,816' · W Trinity 13,765' · E Trinity 13,752' |
-| Trip total | **~32.5 mi · ~13,300 ft** — every leg a measured recorded line (Kyle's 2013 trip), gain from smoothed DEM, cross-checked against terrain arithmetic |
-| Style | Backpack via Elk Creek (Colorado Trail) to a **Vestal Basin camp (11,300–11,760')** |
-| Hardest move | **5.4** (Wham Ridge crux) · Day 2 is Class 4 (Trinity chimney) |
-| Drive from Highland | **[~7h 35m / 361 mi via Google Maps](https://www.google.com/maps/dir/?api=1&origin=Highland,+Denver,+CO&destination=37.7476,-107.6885)** to Molas Pass |
----
+    - **Wham Ridge (Vestal) is an alpine rock route (III 5.4)** — careful route-finding keeps it at 5.4 (crux hand crack), off-route quickly becomes 5.6+; most experienced scrambler parties solo it dry, but a light rope + small rack for the upper headwall is common and smart for a first time on it.
+    - **Vestal's descent is a known trap:** do **not** drop into the first gullies off the top (they cliff out into loose Class 4) — traverse the ridge south, then southeast to the further **SE-facing gully** before descending the choss to the Vestal–Arrow saddle side.
+    - **Trinity Peak's crux** on the traverse is a short (~20 ft) **exposed Class 4 chimney** regaining the ridge from the south-side ledges — cairned, solid rock, but no-fall terrain.
 
 ## Peaks covered
 
+A backpack via **Elk Creek (Colorado Trail)** to a **Vestal Basin camp (11,300–11,760')** —
+**4 days / 3 nights**: pack in, two climbing days, pack out (strong parties compress to
+3 days). Hardest move **5.4** (Wham Ridge's crux hand crack); the Trinity day is Class 4.
+
 | Peak | Day | Elev | Route | Class | CO rank |
 |---|---|---|---|---|---|
-| Vestal Peak | 1 | 13,867' | **Wham Ridge** (N face) up · S face down | **5.4** (III) | #78 |
-| Arrow Peak | 1 | 13,817' | NE/East ramp | 3 | #99 |
-| West Trinity | 2 | 13,765' | SW ridge (start of traverse) | 2+/3 | #121 |
-| Trinity Peak | 2 | 13,816' | W ridge from W Trinity saddle | **4** (chimney crux) | #100 |
-| East Trinity | 2 | 13,752' | W ridge · descend NE ridge | 3 | #128 |
+| [Vestal Peak](https://www.14ers.com/peaks/10281) | 2 | 13,867' | **Wham Ridge** (N face) up · S face down | **5.4** (III) | #78 |
+| [Arrow Peak](https://www.14ers.com/peaks/10295) | 2 | 13,817' | NE/East ramp | 3 | #99 |
+| [West Trinity](https://www.14ers.com/peaks/10303) | 3 | 13,765' | SW ridge (start of traverse) | 2+/3 | #121 |
+| [Trinity Peak](https://www.14ers.com/peaks/10294) | 3 | 13,816' | W ridge from W Trinity saddle | **4** (chimney crux) | #100 |
+| [East Trinity](https://www.14ers.com/peaks/10307) | 3 | 13,752' | W ridge · descend NE ridge | 3 | #128 |
 
 *(CO rank = elevation rank among Colorado's ranked 13ers + 14ers.)*
 
@@ -105,67 +90,36 @@ exactly Emily's plan: Wham + Arrow one day, the three-Trinity traverse the next.
 
 ---
 
-## Logistics
+## Getting there — Molas Pass trailhead
 
-### Getting there — Molas Pass trailhead
+- Park at the **Colorado Trail / Molas Trail lot just north of Molas Pass** on US 550
+  (37.7476, -107.6885, ~10,610' — gravel lot, any car). This is where 12 of the 30 swept
+  GPX tracks start. US 550 is paved all the way; no 4WD needed.
+- **Drive from Highland:**
+  **[~7h 35m / 361 mi via Google Maps](https://www.google.com/maps/dir/?api=1&origin=Highland,+Denver,+CO&destination=37.7476,-107.6885)**
+  to Molas Pass.
+- Alternative approach: the **Durango & Silverton train to Elk Park** cuts ~5 mi and the
+  1,700' Animas climb out, but chains you to the train schedule — several swept tracks
+  use it (their starts show at the Animas River, ~8,900').
 
-Park at the **Colorado Trail / Molas Trail lot just north of Molas Pass** on US 550
-(37.7476, -107.6885, ~10,610' — gravel lot, any car). This is where 12 of the 30 swept
-GPX tracks start. US 550 is paved all the way; no 4WD needed.
+---
 
-> Alternative approach: the **Durango & Silverton train to Elk Park** cuts ~5 mi and the
-> 1,700' Animas climb out, but chains you to the train schedule — several swept tracks
-> use it (their starts show at the Animas River, ~8,900').
+## The days, in order
 
 ### Day 1 — Pack-in: Molas Pass → Vestal Basin
 
-**10 mi · ~3,080 ft up · ~2,250 ft down, measured** (the drawn corridor line — composed
-from recorded tracks, Molas lot to the basin camp; you repay the descent on the way out)
-
 1. Colorado Trail from Molas Pass — ~4 mi of switchbacks **down** to the Animas River
-   bridge (8,900').
+   bridge (8,900'); you repay this descent on the way out.
 2. Cross the bridge, then **Elk Creek Trail (CT east)** up the spectacular Elk Creek
    canyon to the **beaver ponds** meadow (~11,200') — the Grenadiers' north walls appear
    across the valley.
 3. Just past the beaver ponds, drop right onto the **unmaintained Vestal Creek trail**
    (cairned climber's path): steep, braided in places, with deadfall. It climbs ~700' into
    **Vestal Basin**.
-4. Camp in the basin — see **Basecamp options** below (the pack-in stats above assume
-   the recommended lower-meadow/upper-bench camp at 11,300–11,760').
+4. Camp in the basin — see **Camps & water** below (the recommended camps are the
+   lower-meadow/upper-bench pair at 11,300–11,760').
 
-### Basecamp — options & considerations
-
-**Recommended: the lower meadow (~11,300')** below Arrow and Vestal's north faces —
-the best mix of sites, water, and position for the harder day (Wham starts right above it).
-
-| Camp | Elev | Pros | Cons |
-|---|---|---|---|
-| **Lower meadow** ⭐ | ~11,300' | Most/best sites; Vestal Creek water; shortest start for **Day 1** (Wham + Arrow right overhead) | Adds ~0.5 mi / ~450' to Day 2; marmot central |
-| **Upper bench** | ~11,760' | Cuts ~1 mi / ~450' off **Day 2** (Trinities); climb13ers measures its routes from here | Fewer, smaller, more exposed sites; Day 1 starts with a contour back west |
-| **Beaver ponds (Elk Creek)** | ~11,200' | On the maintained CT — big sites, easy water; good late-arrival fallback | Adds the steep ~700' unmaintained Vestal Creek climb to **both** climbing days |
-
-Considerations for all three:
-
-- **Water:** Vestal Creek runs by both basin camps; the ponds have Elk Creek. All reliable
-  season-long (treat).
-- **Marmots (serious):** the basin camps are notorious — marmots here chew packs, straps,
-  pole grips, boots, anything salty. Everything inside the tent or hung, always.
-- **Weather exposure:** the higher you camp, the more wind/lightning exposure — the lower
-  meadow has tree shelter, the upper bench little.
-- **LNT:** durable surfaces, established sites, 100'+ from water — this basin sees heavy
-  summer use.
-- **Split-camp variant:** some parties move camp mid-trip (lower meadow for Day 1, upper
-  bench before Day 2) — rarely worth the packing time for the ~1 mi it saves.
-
-### Day 4 — Pack-out
-
-Reverse the approach: 10 mi, mostly down Elk Creek, then the **~1,750 ft climb back up**
-from the Animas to Molas Pass at the end — budget energy (and snacks) for it. (Same
-corridor as the pack-in, so the map shows one line for both.)
-
----
-
-## Day 2 — Vestal via Wham Ridge, then Arrow (Class 5.4 · 6.4 mi · ~4,280 ft from camp, measured)
+### Day 2 — Vestal via Wham Ridge, then Arrow (Class 5.4)
 
 The Grenadiers' marquee day, and one of Colorado's classic alpine rock routes.
 
@@ -183,15 +137,12 @@ The Grenadiers' marquee day, and one of Colorado's classic alpine rock routes.
    (Class 3).
 5. Retrace the ramp and drop back to camp.
 
-**Measured stats:** the Day-1 line on the maps is **Kyle's 2013 from-camp loop, followed
-verbatim — 6.4 mi / ~4,282 ft (smoothed DEM)**. Parties commonly log 8–14 hours for the pair.
+Parties commonly log 8–14 hours for the pair.
 
 > **Order matters:** do **Wham first** (N face needs dry rock and you want the crux behind
 > you before weather), then Arrow — its ramp descends fast if storms build.
 
----
-
-## Day 3 — The Trinity traverse, W→E (Class 4 · 6.3 mi · ~3,700 ft from camp, measured)
+### Day 3 — The Trinity traverse, W→E (Class 4)
 
 Three summits by the classic west-to-east line — climb high, traverse, descend easy.
 
@@ -210,19 +161,44 @@ Three summits by the classic west-to-east line — climb high, traverse, descend
    then ~300 ft of scree to tundra. Stroll back past the unnamed lake at 12,396' to camp —
    a gorgeous finish.
 
-**Measured stats:** the Day-2 line is **Kyle's 2013 from-camp traverse loop, verbatim —
-6.3 mi / ~3,709 ft (smoothed DEM)**.
+### Day 4 — Pack-out: Vestal Basin → Molas Pass
+
+Reverse the approach: mostly down Elk Creek, then the **~1,750 ft climb back up** from
+the Animas to Molas Pass at the end — budget energy (and snacks) for it. (Same corridor
+as the pack-in, so the map shows one line for both.)
 
 ---
 
-## Water
+## Camps & water
 
-- **Vestal Creek** runs through both camp meadows — reliable all season (treat).
-- Day 1: fill at camp; the Arrow/Vestal hanging valley is dry rock glacier.
-- Day 2: the 12,396' lake under East Trinity on the return; carry the day's water from camp.
-- Elk Creek is beside the approach trail nearly the whole way.
+**Recommended: the lower meadow (~11,300')** below Arrow and Vestal's north faces —
+the best mix of sites, water, and position for the harder day (Wham starts right above it).
 
-## Gear
+| Camp | Elev | Pros | Cons |
+|---|---|---|---|
+| **Lower meadow** ⭐ | ~11,300' | Most/best sites; Vestal Creek water; shortest start for **Day 2** (Wham + Arrow right overhead) | Adds ~0.5 mi / ~450' to Day 3; marmot central |
+| **Upper bench** | ~11,760' | Cuts ~1 mi / ~450' off **Day 3** (Trinities); climb13ers measures its routes from here | Fewer, smaller, more exposed sites; Day 2 starts with a contour back west |
+| **Beaver ponds (Elk Creek)** | ~11,200' | On the maintained CT — big sites, easy water; good late-arrival fallback | Adds the steep ~700' unmaintained Vestal Creek climb to **both** climbing days |
+
+Considerations for all three:
+
+- **Water:** Vestal Creek runs by both basin camps; the ponds have Elk Creek. All reliable
+  season-long (treat). Elk Creek is beside the approach trail nearly the whole way.
+- **Water on the climbing days:** Day 2 — fill at camp; the Arrow/Vestal hanging valley is
+  dry rock glacier. Day 3 — carry the day's water from camp; the 12,396' lake under East
+  Trinity is on the return.
+- **Marmots (serious):** the basin camps are notorious — marmots here chew packs, straps,
+  pole grips, boots, anything salty. Everything inside the tent or hung, always.
+- **Weather exposure:** the higher you camp, the more wind/lightning exposure — the lower
+  meadow has tree shelter, the upper bench little.
+- **LNT:** durable surfaces, established sites, 100'+ from water — this basin sees heavy
+  summer use.
+- **Split-camp variant:** some parties move camp mid-trip (lower meadow for Day 2, upper
+  bench before Day 3) — rarely worth the packing time for the ~1 mi it saves.
+
+---
+
+## Gear & season
 
 - **Rock:** helmet (mandatory — chossy descents + party rockfall), approach shoes or
   sticky trail runners for Wham's slab. **Light 30 m rope + small rack/harness optional**
@@ -232,9 +208,6 @@ Three summits by the classic west-to-east line — climb high, traverse, descend
 - **Camp:** bear-appropriate food storage; **marmot-proof everything** (in-tent or hung).
 - **InReach/PLB** — no cell coverage anywhere in this drainage (deep Weminuche; dead at
   the TH, in the basin, and on most summits).
-
-## Conditions / season / permits
-
 - **Best window: mid-July through September** — you want Wham's quartzite dry. The N face
   holds snow/wet into early July; afternoon monsoon storms peak mid-July–August.
 - **Storm strategy:** both days top out early. Wham Ridge is a lightning rod — be moving
@@ -268,10 +241,9 @@ complete Molas→basin→peaks→Molas trip ([gpx 6244](https://listsofjohn.com/
 and a 2025 Vestal Basin approach ([gpx 18276](https://listsofjohn.com/gpx/18276.gpx)).
 
 **peakbagger.com** — 10 ascent tracks (logged in), incl. a clean Trinity-traverse loop
-(the Day-2 composed route follows one verbatim).
+(the Trinity-day composed route follows one verbatim).
 
 **climb13ers.com** — per-route class/terrain detail used throughout (S Face 2+, E Ramp 3,
 Trinity W Ridge 4, E Trinity W Ridge 3, camp-based mileages).
 
 **Sources checked:** 14ers.com · listsofjohn.com · peakbagger.com · climb13ers.com
-

@@ -41,15 +41,21 @@ status_source: "peak_db ascents"
 - ✗ **No unclimbed ranked 13ers within 8 mi** — Hunts is a true standalone day, no link-up payoff
 - **Combos: Solo** (per the ranked-13er+ rule — Twin Sisters and Bushnell are climbed; Red Mtn at 12,994' is sub-13k and doesn't count even when paired in TRs like Mtnman200's)
 
+![Overview map](../maps/hunts_peak.png)
+
+<!-- PROVENANCE_START -->
+*Note: the recommended route was distilled from **8 recorded GPS tracks** of real trips (recorded trips) — all layered on the [interactive CalTopo research map](https://caltopo.com/m/2SCT1B6).*
+<!-- PROVENANCE_END -->
+
 ---
 
 <!-- CLIMBERS_START -->
 **Other climbers:** Emily Sharpe — not yet · Shawn D Keil — ✓ climbed
 <!-- CLIMBERS_END -->
 
-## Quick stats
+## The peak
 
-| | Hunts Pk |
+| | [Hunts Pk](https://www.14ers.com/peaks/10684) |
 |---|---|
 | Elevation | 13,061' (14ers consensus 13,071' on TRs) |
 | Lat / Lon | 38.3831, −105.94582 |
@@ -57,12 +63,6 @@ status_source: "peak_db ascents"
 | Range / Wilderness | Sangre de Cristo / Sangre de Cristo Wilderness |
 | Class (standard) | 2 |
 | Peak DB id | 748 |
-
-![Overview map](../maps/hunts_peak.png)
-
-<!-- PROVENANCE_START -->
-*Note: the recommended route was distilled from **8 recorded GPS tracks** of real trips (recorded trips) — all layered on the [interactive CalTopo research map](https://caltopo.com/m/2SCT1B6).*
-<!-- PROVENANCE_END -->
 
 ---
 
@@ -95,7 +95,7 @@ The standard out-and-back. Class 2, half-day, no link-up obligations, no permits
 
 ---
 
-## Trailhead — Rock Creek TH
+## Getting there — Rock Creek TH
 
 | | |
 |---|---|
@@ -108,35 +108,23 @@ The standard out-and-back. Class 2, half-day, no link-up obligations, no permits
 | Facilities | None |
 | Trail | Old road behind the closed gate at TH (no vehicle access past gate) |
 
+**Permits / access:**
+
+- Sangre de Cristo Wilderness — no permits required
+- San Isabel National Forest — no fee
+- **Sage Grouse seasonal gate closure** — see trailhead table above
+- Day-use only is fine; standard wilderness rules (no motorized, leash dogs, etc.)
+
 ---
 
-## Conditions / season
+## Gear & season
 
 - **Best window:** mid-May through October (gate-dependent on the low end)
 - **Snow:** WildWanderer reports consolidated patches mid-May, manageable without traction. By mid-June expect mostly dry
 - **Storms:** Standard Sangre afternoon storm risk on the long west ridge — get an early start
 - **Burn zone:** wet/dripping vegetation after rain; no shade on the ascent
 - **Wind:** WildWanderer noted "very cold and very windy" on the summit even in mid-May → bring layers
-
----
-
-## Cell coverage
-
-- **14ers.com community DB:** 0 reports for both Hunts Pk and Rock Creek TH (no data)
-- **Geographic reasoning:**
-  - **TH:** likely dead — Rock Creek drainage is tucked behind the W flank of the range
-  - **Approach (lower ridge / burn zone):** likely **some signal** as you gain ~11,000'+ and the W aspect opens to the San Luis Valley (Salida ~17 mi N has line-of-sight to the upper ridge)
-  - **Summit:** likely **good signal** — Hunts is the obvious high point at the N tip of the range with clean LOS to Salida and US 285 corridor towers
-- **Standard recommendation:** carry an InReach. Community data is non-existent for this peak.
-
----
-
-## Permits / access
-
-- Sangre de Cristo Wilderness — no permits required
-- San Isabel National Forest — no fee
-- **Sage Grouse seasonal gate closure** — see Trailhead section above
-- Day-use only is fine; standard wilderness rules (no motorized, leash dogs, etc.)
+- **Cell coverage:** 0 community reports for both Hunts Pk and Rock Creek TH (no data). Geographic reasoning: TH likely dead — Rock Creek drainage is tucked behind the W flank of the range; approach (lower ridge / burn zone) likely **some signal** as you gain ~11,000'+ and the W aspect opens to the San Luis Valley (Salida ~17 mi N has line-of-sight to the upper ridge); summit likely **good signal** — Hunts is the obvious high point at the N tip of the range with clean LOS to Salida and US 285 corridor towers. Carry an InReach — community data is non-existent for this peak.
 
 ---
 
@@ -180,7 +168,6 @@ Already layered from prior planning of Bushnell/Twin Sisters:
 - **Tracks:** Hunts 001, Hunts 002, plus several Kyle Knutson tracks and 62s GPS dumps in the area
 
 → When building a dedicated Hunts research map, layer in the WildWanderer GPX from the 14ers library on top of this existing data.
-
 
 ---
 

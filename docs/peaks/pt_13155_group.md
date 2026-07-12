@@ -49,9 +49,9 @@ status_source: "peak_db ascents"
 **Other climbers:** Emily Sharpe — not yet · Shawn D Keil — ✓ all
 <!-- CLIMBERS_END -->
 
-## Quick stats
+## Peaks covered
 
-| | PT 13,155 | PT 13,110 | PT 13,108 |
+| | [PT 13,155](https://www.14ers.com/peaks/10531) | [PT 13,110](https://www.14ers.com/peaks/10559) | [PT 13,108](https://www.14ers.com/peaks/10567) |
 |---|---|---|---|
 | Elevation (LiDAR) | 13,155' | 13,110' | 13,108' |
 | Lat / Lon | 38.0542, −107.4381 | 38.0712, −107.4209 | 38.0728, −107.3879 |
@@ -62,28 +62,13 @@ status_source: "peak_db ascents"
 
 Weather is the **same NOAA target on all three** (and on 14ers/LoJ/peakbagger). The three points sit in a ~2.5-mi arc on the high tundra SE/E of Uncompahgre Peak.
 
----
-
-## Why these three together
-
-A **standard cluster day** — they're literally catalogued as **"Uncompahgre's Three Children."** TRs that hit one almost always do all three from Nellie Creek:
+**Why these three together:** a **standard cluster day** — they're literally catalogued as **"Uncompahgre's Three Children."** TRs that hit one almost always do all three from Nellie Creek:
 
 - **"Uncompahgres 3 Children"** ([14ers 22909](https://www.14ers.com/php14ers/tripreport.php?trip=22909)) — exactly this combo
 - **"Uncompahgre's Less Climbed Friends"** ([9334](https://www.14ers.com/php14ers/tripreport.php?trip=9334)) · **"Wetterhorn and Uncompahgre's quiet 13er neighbors"** ([17490](https://www.14ers.com/php14ers/tripreport.php?trip=17490))
 - **"From Nellie Creek Trailhead"** ([22365](https://www.14ers.com/php14ers/tripreport.php?trip=22365)) · **"Nellie and East Nellie from Nellie Creek"** ([20364](https://www.14ers.com/php14ers/tripreport.php?trip=20364))
 
 All three are ranked 13ers, so each is a true combo partner — 3-for-1 on the long Lake City drive.
-
----
-
-## Drive + approach
-
-| | |
-|---|---|
-| **Drive from Boulder** | **[5h 34m via Google Maps](https://www.google.com/maps/dir/?api=1&origin=1162+Peakview+Circle,+Boulder,+CO+80302&destination=38.0204,-107.4007)** (280 mi, origin: 1162 Peakview Circle) — the long pole here is the drive; plan to camp |
-| 2WD trailhead | Nellie Creek **2WD lot** (~9,320'), 5 mi up the Uncompahgre/CR-20 road from Lake City |
-| 4WD trailhead | Nellie Creek **upper TH** (~11,430') — ~4 mi of **rough, high-clearance 4WD** (the standard Uncompahgre road; creek crossing) |
-| Vehicle | Stock cars stop at the 2WD lot (adds ~8 mi RT + ~2,000'); the upper TH needs real 4WD/clearance |
 
 ---
 
@@ -102,26 +87,24 @@ The same approach as the Uncompahgre 14er: up Nellie Creek into the high basin, 
 
 ---
 
-## Conditions / season
+## Getting there — drive & trailhead
+
+| | |
+|---|---|
+| **Drive from Boulder** | **[5h 34m via Google Maps](https://www.google.com/maps/dir/?api=1&origin=1162+Peakview+Circle,+Boulder,+CO+80302&destination=38.0204,-107.4007)** (280 mi, origin: 1162 Peakview Circle) — the long pole here is the drive; plan to camp |
+| 2WD trailhead | Nellie Creek **2WD lot** (~9,320'), 5 mi up the Uncompahgre/CR-20 road from Lake City |
+| 4WD trailhead | Nellie Creek **upper TH** (~11,430') — ~4 mi of **rough, high-clearance 4WD** (the standard Uncompahgre road; creek crossing) |
+| Vehicle | Stock cars stop at the 2WD lot (adds ~8 mi RT + ~2,000'); the upper TH needs real 4WD/clearance |
+
+---
+
+## Gear & season
 
 - **Best window:** July through September — high San Juan tundra, late snowmelt; Nellie Creek road opens once dry.
 - **Storms:** wide-open high tundra with zero shelter — classic San Juan afternoon-storm exposure. Alpine start, off the ridges by early afternoon.
 - **Road:** Nellie Creek 4WD is rough with a creek crossing; impassable when wet/snowy. Lake City is the last services.
-- **Altitude:** everything here is 13k+ on the approach to a 14er trailhead — acclimatize.
-
----
-
-## Permits / access
-
-- **Uncompahgre Wilderness** (Gunnison NF / BLM) — no permits; standard wilderness rules.
-- Nellie Creek Rd (FR 877) off the Henson Creek / CR-20 road from Lake City; 4WD beyond the 2WD lot.
-
----
-
-## Cell coverage
-
-- **14ers.com community DB:** no reports for these points.
-- **Geographic reasoning:** likely **dead** at the Nellie Creek TH/basin (deep drainage behind Uncompahgre); **possible signal on the high points** with line-of-sight toward Lake City, but unreliable. **Carry an InReach** — remote, far from services.
+- **Permits / access:** **Uncompahgre Wilderness** (Gunnison NF / BLM) — no permits; standard wilderness rules. Nellie Creek Rd (FR 877) off the Henson Creek / CR-20 road from Lake City; 4WD beyond the 2WD lot.
+- **Cell:** no 14ers.com community-DB reports for these points; likely **dead** at the Nellie Creek TH/basin (deep drainage behind Uncompahgre); **possible signal on the high points** with line-of-sight toward Lake City, but unreliable. **Carry an InReach** — remote, far from services.
 
 ---
 

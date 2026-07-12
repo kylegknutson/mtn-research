@@ -54,9 +54,9 @@ status_source: "peak_db ascents (Kyle — climbed)"
 **Other climbers:** Emily Sharpe — not yet · Shawn D Keil — ✓ all
 <!-- CLIMBERS_END -->
 
-## Quick stats
+## Peaks covered
 
-| | "Baldy Lejos" | PT 13,115 | PT 13,030 |
+| | ["Baldy Lejos"](https://www.14ers.com/peaks/10562) | [PT 13,115](https://www.14ers.com/peaks/10554) | [PT 13,030](https://www.14ers.com/peaks/10591) |
 |---|---|---|---|
 | Elevation | 13,118' | 13,115' | 13,030' |
 | Lat / Lon | 37.9941, −107.0006 | 37.9694, −106.9872 | 37.9466, −107.0083 |
@@ -79,9 +79,9 @@ An **easy, mostly Class 2 tundra walk** — climb13ers calls Baldy Lejos a "Clas
 | | |
 |---|---|
 | Peaks | Baldy Lejos + PT 13,115 + PT 13,030 |
-| **Recommended loop (composed)** | **~11 mi / ~3,750'** — the shortest route through the three ranked peaks, composed from real recorded GPS via the graph router (`build_recommended_route.py`); gain from a DEM, matches CalTopo |
+| **Recommended loop** | the shortest loop through only the three ranked summits (stats in *At a glance*) |
 | Recorded GPX range | **16–20 mi** — what parties actually log, because they start low, wander, and bag unranked bumps |
-| climb13ers' estimate | **~10.2 mi / ~2,630'** — an *approximation* ("Not intended for use as a GPX track"); **both numbers run low** — the real loop is ~11 mi and ~3,750' of DEM-measured gain |
+| climb13ers' estimate | **~10.2 mi / ~2,630'** — an *approximation* ("Not intended for use as a GPX track"); **both numbers run low** vs the measured loop |
 | Class | 2 (1+ tundra on Baldy Lejos) |
 | Trailhead | **West Willow Creek upper TH (~11,500', 4WD — road status not guaranteed; see below)** |
 
@@ -91,10 +91,11 @@ The shortest real route is a **loop** (the 11,500' TH sits between the south and
 2. Head **south down the divide to PT 13,115** — *"most will go over 13,115 to reach Baldy Lejos"* (climb13ers).
 3. Continue **south to PT 13,030**, then back **east/SE to the TH** to close the loop.
 
-![Recommended composed route](../maps/baldy_lejos_trio.png)
-*The **recommended route (bold magenta)** — the shortest loop through only the three ranked summits, **~11 mi / ~3,750'** from the 11,500' upper TH, stitched from real recorded GPS (gain DEM-measured, matches CalTopo). It's drawn over all six recorded tracks (green): it rides the same ground others walked but trims the sprawl to lower trailheads, the western spur, and the unranked add-on bumps.*
+The recommended route (bold magenta on the map) rides the same ground the recorded
+tracks (green) walked but trims the sprawl to lower trailheads, the western spur, and
+the unranked add-on bumps.
 
-> **The crux is the road, not the difficulty.** The upper TH is 4WD-only and climb13ers found the Forest Service had it **gated ~1.25 mi below in 2019 for "serious road degradation."** Even starting *at* the 11,500' TH, recorded parties log **16–20 mi** because they wander and add unranked peaks — the **~11 mi loop above is the disciplined version**. (Gain is **~3,750'**, measured from a DEM and confirmed on CalTopo — *not* the GPS `<ele>` in the tracks, which is too noisy to trust, nor climb13ers' 2,630', which runs low.)
+> **The crux is the road, not the difficulty.** The upper TH is 4WD-only and climb13ers found the Forest Service had it **gated ~1.25 mi below in 2019 for "serious road degradation."** Even starting *at* the 11,500' TH, recorded parties log **16–20 mi** because they wander and add unranked peaks — the **loop above is the disciplined version**.
 
 ---
 
@@ -111,19 +112,12 @@ The shortest real route is a **loop** (the 11,500' TH sits between the south and
 
 ---
 
-## Conditions / season
+## Gear & season
 
 - **Best window:** **July through September.** High, remote La Garita; the West Willow road and upper basins open late.
 - **Terrain:** benign — rolling alpine tundra, Class 2 with chiprock up high. The challenge is length + altitude + the 4WD approach, not difficulty.
 - **Storms:** wide-open tundra with no fast escape — start early, watch the sky.
-
----
-
-## Cell coverage
-
-- **14ers.com community DB:** no reception reports for these summits.
-- **Geographic reasoning:** deep in the La Garita — **treat as dead** at the TH and on the peaks.
-- **Recommendation:** carry an **InReach / satellite messenger**.
+- **Cell:** no 14ers.com reception reports, and it's deep in the La Garita — **treat as dead** at the TH and on the peaks; carry an **InReach / satellite messenger**.
 
 ---
 

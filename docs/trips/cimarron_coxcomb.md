@@ -39,8 +39,6 @@ status_source: "peak_db ascents (Kyle — unclimbed)"
 
 **Status in DB:** all eight **unclimbed**. (Coxcomb + Redcliff already done.)
 
-> Consolidates the **Cimarron** group near **Coxcomb**: the **[remaining six](../peaks/cimarron_six.md)** off the **Middle Fork** (Heisshorn + El Punto + four PTs) in one big loop, plus **Fortress and Precipice** (days 2–3 below) climbed **individually** off the **West Fork**. Two forks of the same road — a weekend to finish the area. **Loose, exposed San Juan Class 3**, not a tundra walk.
-
 ![Overview map](../maps/cimarron_coxcomb.png)
 
 <!-- PROVENANCE_START -->
@@ -54,52 +52,41 @@ status_source: "peak_db ascents (Kyle — unclimbed)"
 **Other climbers:** Emily Sharpe — not yet · Shawn D Keil — not yet
 <!-- CLIMBERS_END -->
 
-## Trip stats
+## Peaks covered
 
-| | |
-|---|---|
-| Climbs | **3** — one six-peak loop + two individual peaks (relocate camp between the Middle & West Fork roads) |
-| Peaks | **8 ranked 13ers** — all unclimbed |
-| Class | **Up to 3–4** — on the Middle Fork six, **PT 13,222 B (NW ridge) and El Punto are Class 3–4** (per a recorded full-six TR); otherwise loose, rotten Cimarron Class 3 (incl. Fortress + Precipice). Helmet; a rope is reasonable. |
-| **Middle Fork six** | Heisshorn + PT 13,382 + PT 13,215 + El Punto + PT 13,340 A + PT 13,222 B — **~15.3 mi / ~6,393'** (DEM) |
-| **Fortress (solo)** | West Fork out-and-back — **~7.3 mi / ~2,845'** (DEM) |
-| **Precipice (solo)** | West Fork out-and-back — **~6.0 mi / ~2,788'** (DEM) |
-| **Trip total** | **~28.6 mi / ~12,026'** |
-| Trailheads | **Middle Fork Cimarron TH (#227, ~10,000')** and **West Fork Cimarron TH (~10,430')** — two separate fork roads |
-| Drive from Boulder | **~5h 30m** via US-50 to the Cimarron turnoff (E of Montrose) |
-| Land | **GMUG National Forest** (Uncompahgre Wilderness covers the high terrain) — no permits/fees, foot-only |
+The **Cimarron** group near **Coxcomb** — the eight ranked 13ers that finish Kyle's
+Coxcomb-area list (Coxcomb + Redcliff already done), as **three climbs over a weekend**
+(~28.6 mi / ~12,026' total): the **[remaining six](../peaks/cimarron_six.md)** off the
+**Middle Fork** (Heisshorn + El Punto + four PTs) in one big loop, plus **Fortress and
+Precipice** climbed **individually** off the **West Fork**. Two forks of the same road,
+with a short vehicle relocation between them. Hardest moves **Class 3–4** (PT 13,222 B's
+NW ridge and El Punto) — **loose, exposed San Juan Class 3**, not a tundra walk.
 
-All distances/gains are **DEM-measured from real recorded GPX**, not estimates.
+| Peak | Day | Elev | Class (route) |
+|---|---|---|---|
+| [PT 13,222 B](https://www.14ers.com/peaks/10493) | 1 | 13,220' | **3–4** (NW ridge) |
+| [PT 13,340 A](https://www.14ers.com/peaks/10437) | 1 | 13,350' | 2/2+ |
+| ["El Punto"](https://www.14ers.com/peaks/10465) | 1 | 13,319' | **3–4** |
+| ["Heisshorn"](https://www.14ers.com/peaks/10417) | 1 | 13,418' | 3, loose |
+| [PT 13,382](https://www.14ers.com/peaks/10430) | 1 | 13,382' | 2/2+ |
+| [PT 13,215](https://www.14ers.com/peaks/10507) | 1 | 13,215' | 2/2+ |
+| ["Fortress Pk"](https://www.14ers.com/peaks/10488) | 2 | 13,246' | 3, loose |
+| [Precipice Pk](https://www.14ers.com/peaks/10539) | 3 | 13,141' | 3, loose |
 
 ---
 
-## How the 8 split
+## Itinerary options
 
-These eight finish Kyle's Coxcomb-area ranked 13ers, and they split by **trailhead**:
+The eight split by **trailhead**:
 
 - **The Middle Fork six** sit on the divide **S and NE of Coxcomb** — one big loop from the **Middle Fork Cimarron TH (#227)** (a known full-six outing, 4 recorded tracks).
-- **Fortress + Precipice** sit **N of Coxcomb** above the **West Fork** — climbed as **two individual out-and-backs** from the **West Fork Cimarron TH**. They're ~1.5 mi apart but the connecting ridge is cut by **deep notches** with no recorded track linking them, so each is its own climb (different days, or two separate out-and-backs in one long day).
+- **Fortress + Precipice** sit **N of Coxcomb** above the **West Fork** — climbed as **two individual out-and-backs** from the **West Fork Cimarron TH**. They're ~1.5 mi apart but the connecting ridge is cut by **deep notches** with no recorded track linking them, so each is its own climb — different days, or a fit party can do **both as separate out-and-backs in one long day** (they are **not linked** on the ridge; each is its own day route on the maps).
 
 Both forks branch off the same Cimarron road, so the **camp move between days is short** (drop back to the main road, up the other fork). The six-peak loop is the big day; Fortress and Precipice are shorter, steeper half-days.
 
 ---
 
-## Day plan
-
-### Middle Fork six · ~15.3 mi / ~6,393' · Class 3–4
-The NE trio first (PT 13,222 B → PT 13,340 A → El Punto), then traverse to **Heisshorn**, and finish the south pair (PT 13,382 → PT 13,215). **PT 13,222 B (NW ridge) and El Punto are Class 3–4** (per the [Boggy B full-six TR](https://www.14ers.com/php14ers/tripreport.php?trip=22747)) — the cruxes; Heisshorn is loose **Class 3**; the other three PTs are Class 2/2+. **Full route, trip reports, and GPX: [Cimarron Remaining Six report](../peaks/cimarron_six.md).**
-
-### Precipice (solo) · ~6.0 mi / ~2,788' · Class 3
-A short, steep out-and-back from the **West Fork Cimarron TH** — faint social trail and an ultra-steep footpath up through forest to a loose Class 3 finish.
-
-### Fortress (solo) · ~7.3 mi / ~2,845' · Class 3
-A slightly longer out-and-back from the same **West Fork TH**, further S toward Coxcomb — loose Cimarron rock, Class 3.
-
-> Fortress and Precipice both start at the West Fork TH, so a fit party can do **both as separate out-and-backs in one long day** — but they are **not linked** on the ridge. Each is its own day route on the maps above.
-
----
-
-## Drive + approach (shared)
+## Getting there — the Cimarron fork roads
 
 | | |
 |---|---|
@@ -109,25 +96,36 @@ A slightly longer out-and-back from the same **West Fork TH**, further S toward 
 
 ---
 
-## Camp
+## The days, in order
+
+### Day 1 — Middle Fork six (Class 3–4)
+
+The NE trio first (PT 13,222 B → PT 13,340 A → El Punto), then traverse to **Heisshorn**, and finish the south pair (PT 13,382 → PT 13,215). **PT 13,222 B (NW ridge) and El Punto are Class 3–4** (per the [Boggy B full-six TR](https://www.14ers.com/php14ers/tripreport.php?trip=22747)) — the cruxes; Heisshorn is loose **Class 3**; the other three PTs are Class 2/2+. **Full route, trip reports, and GPX: [Cimarron Remaining Six report](../peaks/cimarron_six.md).**
+
+### Day 2 — Fortress (Class 3)
+
+An out-and-back from the **West Fork Cimarron TH**, S toward Coxcomb — slightly the longer of the two West Fork days; loose Cimarron rock, Class 3.
+
+### Day 3 — Precipice (Class 3)
+
+A short, steep out-and-back from the same **West Fork TH** — faint social trail and an ultra-steep footpath up through forest to a loose Class 3 finish.
+
+---
+
+## Camps & water
 
 - **Camp low between the forks** (dispersed sites along the Cimarron / fork roads) or at each fork's TH the night before its climb. The relocation between days is a short drive down-and-over, not a long reposition.
 - High, exposed basins; water from the fork creeks (treat).
 
 ---
 
-## Conditions / season
+## Gear & season
 
 - **Best window:** **July–September** — high, remote; steep N-facing approaches (especially the Precipice side) hold snow.
-- **Terrain:** **loose, rotten Cimarron Class 3** throughout — careful scrambling, helmet advised; Heisshorn, El Punto, and both West Fork peaks are the committing bits.
+- **Terrain:** **loose, rotten Cimarron Class 3** throughout — careful scrambling; Heisshorn, El Punto, and both West Fork peaks are the committing bits.
+- **Gear:** **helmet; a rope is reasonable** for the Class 3–4 cruxes (PT 13,222 B's NW ridge, El Punto).
 - **Storms:** long exposed divides with few quick bail points mid-loop — very early starts.
-
----
-
-## Cell coverage
-
-- **Dead** — no reception at either TH or on the peaks. Carry an **InReach / satellite messenger**.
-
+- **Cell coverage: dead** — no reception at either TH or on the peaks. Carry an **InReach / satellite messenger**.
 
 ---
 

@@ -36,10 +36,16 @@ status_source: "peak_db ascents"
     **CalTopo research map:** https://caltopo.com/m/V4D61FV
 
 **Status in DB:** 0 ascents (unclimbed). **Cluster status:**
-- ✗ **Savage Peak 5.72 mi unclimbed** ← also on Kyle's "do" list. See Multi-peak combo section below.
+- ✗ **Savage Peak 5.72 mi unclimbed** ← also on Kyle's "do" list. See *Other considerations* below.
 - ✓ Done nearby (Holy Cross / Sawatch): Whitney Pk (5.37 mi), Fancy Pk (5.99), PT 13,786 (6.85), PT 13,253 (7.16), Holly Cross Ridge (7.38), Mt of the Holy Cross 14er (7.74)
 - **No nearby ranked partner climbed via Homestake's standard TH** — Galena Mtn (12,900', sub-13k) is the closest peer reachable on the same day from Wurts Ditch, but doesn't count
-- **Effectively a standalone day** in standard execution; see Multi-peak section for the Homestake + Savage hypothetical
+- **Effectively a standalone day** in standard execution; see *Other considerations* for the Homestake + Savage hypothetical
+
+![Overview map](../maps/homestake_peak.png)
+
+<!-- PROVENANCE_START -->
+*Note: the recommended route was distilled from **10 recorded GPS tracks** of real trips (recorded trips) — all layered on the [interactive CalTopo research map](https://caltopo.com/m/V4D61FV).*
+<!-- PROVENANCE_END -->
 
 ---
 
@@ -47,9 +53,9 @@ status_source: "peak_db ascents"
 **Other climbers:** Emily Sharpe — not yet · Shawn D Keil — not yet
 <!-- CLIMBERS_END -->
 
-## Quick stats
+## The peak
 
-| | Homestake Peak |
+| | [Homestake Peak](https://www.14ers.com/peaks/10798) |
 |---|---|
 | Elevation | 13,217' (LiDAR; map 13,209') |
 | Lat / Lon | 39.36757, −106.41454 |
@@ -68,23 +74,17 @@ status_source: "peak_db ascents"
 | 14ers GPX library | [3 entries](https://www.14ers.com/php14ers/gpxlib_locator.php?peakid=10798) |
 | 14ers winter ascents | 71 / Ski descents 61 — heavily skied peak |
 
-![Overview map](../maps/homestake_peak.png)
-
-<!-- PROVENANCE_START -->
-*Note: the recommended route was distilled from **10 recorded GPS tracks** of real trips (recorded trips) — all layered on the [interactive CalTopo research map](https://caltopo.com/m/V4D61FV).*
-<!-- PROVENANCE_END -->
-
 ---
 
 ## Recommended route — High TH from Wurts Ditch / 10th Mountain Hut ⭐
 
-Park at the Wurts Ditch parking (before the gate), hike the road to the 10th Mountain Memorial Hut area, cross the meadow to Slide Lake, gain the west ridge, summit, and loop back. The mapped recommended line follows **guttervan's 2024 recorded loop verbatim** (a real GPS track from the parking over the summit and back). Driving 0.8 mi up past the gate (when open) shortens it toward avalletta's ~7.8 mi.
+Park at the Wurts Ditch parking (before the gate), hike the road to the 10th Mountain Memorial Hut area, cross the meadow to Slide Lake, gain the west ridge, summit, and loop back (guttervan's 2024 loop). Driving 0.8 mi up past the gate (when open) shortens it toward avalletta's ~7.8 mi.
 
 | Route | Stats |
 |---|---|
 | Difficulty | Class 2 (some snow/cornice navigation in winter per Burks 5/2025) |
-| Distance | **~10.7 mi RT** (guttervan 2024 recorded loop from the Wurts Ditch parking) — **~7.8 mi** if you drive 0.8 mi up past the gate (avalletta 11/16/2012) |
-| Gain | **~3,217'** (DEM, full loop) — ~2,500' on the shorter drive-up |
+| Distance | **~10.7 mi RT** (guttervan 2024 loop from the Wurts Ditch parking) — **~7.8 mi** if you drive 0.8 mi up past the gate (avalletta 11/16/2012) |
+| Gain | **~3,217'** (full loop) — ~2,500' on the shorter drive-up |
 | Time | ~5–6 hours |
 | Start elev | ~10,400' at the parking (higher if you drive Wurts Ditch Road up) |
 | Summit | 13,217' |
@@ -118,23 +118,7 @@ jacolc 7/18/2020 covered the section of CD Ridge from Tennessee Pass to Galena M
 
 ---
 
-## Multi-peak combo: Homestake + Savage Peak (5.72 mi away, also unclimbed)
-
-**Status:** Both peaks on Kyle's "closest 10 under 4,000'" list. Worth evaluating before driving 3h 14m to either.
-
-**Geography:** Savage is on the **west** side of the Continental Divide (Holy Cross / Cross Creek drainage), Homestake on the **east** (Eagle River / Slide Lake). They share the CD ridge but are 5.72 mi apart, separated by intermediate sub-13k bumps and Whitney Peak (13,286' — climbed).
-
-**Same-day combo viability — LOW:**
-- **No LoJ or peakbagger TR found combining Homestake + Savage in one outing.**
-- Standard TH for each is opposite-side: Wurts Ditch (E) for Homestake, Missouri Lakes / Holy Cross City Rd (W) for Savage
-- A ridge traverse would be ~12+ mi between summits across rolling sub-13k terrain — long technical day, not done in any documented TR
-- **Conclusion:** treat them as **separate trips with separate trailheads** despite the geographic proximity. The drive time is identical (3h 14m for Homestake, 3h 39m for Savage) but the trailhead approaches face different directions off I-70.
-
-If you want the combo: design a 2-3 day Holy Cross-area backpacking trip (basecamp at Cross Creek / Missouri Lakes) that ridge-walks N over Galena, hits Homestake, descends to Whitney + Savage. Speculative — no TR validates this route.
-
----
-
-## Trailhead — Wurts Ditch Road (off Hwy 24 north of Leadville)
+## Getting there — Wurts Ditch Road (off Hwy 24 north of Leadville)
 
 | | |
 |---|---|
@@ -152,9 +136,16 @@ If you want the combo: design a 2-3 day Holy Cross-area backpacking trip (baseca
 - 13.6 mi for the full peak per PB
 - Lower start (~10,148')
 
+**Permits / access:**
+
+- Holy Cross Wilderness — no permits required for day-use
+- San Isabel NF / White River NF — no fees
+- **10th Mountain Memorial Hut** — reservations via 10th Mountain Hut Association (separate from day-use)
+- Standard wilderness rules: leash dogs, no motorized, pack out everything
+
 ---
 
-## Conditions / season
+## Gear & season
 
 - **Best window:** June through October for the dry-road approach. **Ski/winter** (Jan–April) is heavily documented — 71 winter ascents + 61 ski descents on 14ers
 - **Snow:** Burks May 2025 had "99% snow coverage on the whole route" with ridge-ice and a small cornice. Late May still very wintery
@@ -162,27 +153,23 @@ If you want the combo: design a 2-3 day Holy Cross-area backpacking trip (baseca
 - **Wind:** West ridge is exposed; standard layering
 - **Winter access:** Wurts Ditch Rd gate likely closed; ski-tour from Hwy 24 (or chain up). 10th Mountain Hut reservations open up the option of basecamping
 - **Avalanche:** Slide Lake basin has slide-path terrain in winter (the lake is named that for a reason). Check CAIC before winter trips
+- **Cell coverage:** no community reception reports queried (14ers Peak Conditions last updated 5/3/2025). Geographic reasoning: TH (Wurts Ditch parking, ~10,400') likely **weak** — drainage shadowed from Hwy 24 corridor; 10th Mtn Hut area likely **weak** (meadow basin behind ridge); Slide Lake basin likely **dead** (deep cirque); ridge/summit likely **good** — LOS to Leadville (Hwy 24 corridor) and Vail Pass towers. Carry an InReach — cell drops in the basin, returns on the ridge
 
 ---
 
-## Cell coverage
+## Other considerations
 
-- **14ers.com community DB:** TODO query (Peak Conditions last updated 5/3/2025)
-- **Geographic reasoning:**
-  - **TH (Wurts Ditch parking, ~10,400'):** likely **weak** — drainage shadowed from Hwy 24 corridor
-  - **10th Mtn Hut area:** likely **weak** — meadow basin behind ridge
-  - **Slide Lake basin:** likely **dead** — deep cirque
-  - **Ridge / summit:** likely **good** — LOS to Leadville (Hwy 24 corridor) and Vail Pass towers
-- **Standard recommendation:** carry InReach. Cell drops in the basin, returns on the ridge
+**Multi-peak combo: Homestake + Savage Peak (5.72 mi away, also unclimbed).** Both peaks on Kyle's "closest 10 under 4,000'" list. Worth evaluating before driving 3h 14m to either.
 
----
+**Geography:** Savage is on the **west** side of the Continental Divide (Holy Cross / Cross Creek drainage), Homestake on the **east** (Eagle River / Slide Lake). They share the CD ridge but are 5.72 mi apart, separated by intermediate sub-13k bumps and Whitney Peak (13,286' — climbed).
 
-## Permits / access
+**Same-day combo viability — LOW:**
+- **No LoJ or peakbagger TR found combining Homestake + Savage in one outing.**
+- Standard TH for each is opposite-side: Wurts Ditch (E) for Homestake, Missouri Lakes / Holy Cross City Rd (W) for Savage
+- A ridge traverse would be ~12+ mi between summits across rolling sub-13k terrain — long technical day, not done in any documented TR
+- **Conclusion:** treat them as **separate trips with separate trailheads** despite the geographic proximity. The drive time is identical (3h 14m for Homestake, 3h 39m for Savage) but the trailhead approaches face different directions off I-70.
 
-- Holy Cross Wilderness — no permits required for day-use
-- San Isabel NF / White River NF — no fees
-- **10th Mountain Memorial Hut** — reservations via 10th Mountain Hut Association (separate from day-use)
-- Standard wilderness rules: leash dogs, no motorized, pack out everything
+If you want the combo: design a 2-3 day Holy Cross-area backpacking trip (basecamp at Cross Creek / Missouri Lakes) that ridge-walks N over Galena, hits Homestake, descends to Whitney + Savage. Speculative — no TR validates this route.
 
 ---
 
@@ -237,7 +224,6 @@ If you want the combo: design a 2-3 day Holy Cross-area backpacking trip (baseca
 **Generated (to build):**
 - `homestake_summit_TH.gpx` — summit + Wurts Ditch parking + 10th Mtn Hut waypoints
 - `homestake_route_recommended.gpx` — from guttervan 16082 or josephnephi 15822 (most recent summer baselines)
-
 
 ---
 

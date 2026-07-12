@@ -53,9 +53,9 @@ weather: "https://forecast.weather.gov/MapClick.php?lat=38.0007&lon=-105.6004"
 **Other climbers:** Emily Sharpe — 1 of 3 (PT 13,552) · Shawn D Keil — 2 of 3 (PT 13,552, Pt 13,580A)
 <!-- CLIMBERS_END -->
 
-## Quick stats
+## Peaks covered
 
-| | PT 13,552 | Pt 13,580 A | PT 13,543 |
+| | [PT 13,552](https://www.14ers.com/peaks/10634) | [Pt 13,580 A](https://www.14ers.com/peaks/10627) | [PT 13,543](https://www.14ers.com/peaks/10635) |
 |---|---|---|---|
 | Elevation | 13,552' | 13,543' (LiDAR; map 13,580') | 13,543' |
 | Lat / Lon | 38.0036, −105.6189 | 38.0007, −105.6004 | 37.9914, −105.5918 |
@@ -75,12 +75,11 @@ All three are **ranked Sangre de Cristo 13ers** in the **Sangre de Cristo Wilder
 
 ## The single push — Willow Creek / Willow Lake TH loop ⭐
 
-A loop over all three (DEM-measured): **~11.7 mi / ~6,400′**, **Class 2 summits linked by Class 2+/easy Class 3 ridges**, from the **Willow Creek / Willow Lake TH** in Crestone. Modest mileage but **big gain** — you climb ~4,600′ just to reach the Adams ridgeline, then traverse the three ridge points.
+A loop over all three from the **Willow Creek / Willow Lake TH** in Crestone — **Class 2 summits linked by Class 2+/easy Class 3 ridges**. Modest mileage but **big gain** — you climb ~4,600′ just to reach the Adams ridgeline, then traverse the three ridge points.
 
 | | |
 |---|---|
 | Peaks | PT 13,552 + Pt 13,580 A + PT 13,543 |
-| **Recommended loop** | **~11.7 mi / ~6,400′ (DEM)** |
 | Class | **Summits Class 2; connecting ridges Class 2+ with easy Class 3** — saddle downclimbs on ledges/short slabs of loose Crestone conglomerate (Class 3–4 if you stay on the crest). Helmet. |
 | Trailhead | **Willow Creek / Willow Lake TH (Crestone), ~8,900'** — 2WD (passenger car) |
 
@@ -90,11 +89,11 @@ A loop over all three (DEM-measured): **~11.7 mi / ~6,400′**, **Class 2 summit
 3. The summits are Class 2, but **the connecting ridges and saddle downclimbs run Class 2+ to easy Class 3** (ledges, short slabs, the odd chimney on Crestone conglomerate) — keep it to Class 2+ with careful bypasses, or take the crest at Class 3–4. Mount Adams (13,937', center) is the higher point between them and is **already done**, so it's optional to re-tag.
 4. Descend back to the Willow Lake trail and out.
 
-> **Mostly gain + altitude — but not trivial scrambling.** ~6,400′ in ~11.7 mi from a deep Crestone trailhead, plus **easy Class 3 moves on the connecting ridges**. Wear a helmet for the loose rock and start early for the Sangre afternoon storms on exposed ridges.
+> **Mostly gain + altitude — but not trivial scrambling.** Big sustained gain from a deep Crestone trailhead, plus **easy Class 3 moves on the connecting ridges**. Wear a helmet for the loose rock and start early for the Sangre afternoon storms on exposed ridges.
 
 ---
 
-## Drive + approach
+## Getting there — drive & trailhead
 
 | | |
 |---|---|
@@ -104,12 +103,16 @@ A loop over all three (DEM-measured): **~11.7 mi / ~6,400′**, **Class 2 summit
 
 ---
 
-## Conditions / season
+## Gear & season
 
 - **Best window:** **June–September.** The Willow Lake trail melts out by early summer; the upper ridges hold snow into June.
 - **Terrain:** Class 2 to the summits, but the **connecting ridges are Class 2+/easy Class 3** on loose Crestone conglomerate (ledge/slab downclimbs at the saddles) — careful scrambling, helmet, on top of a lot of sustained uphill.
 - **Storms:** long exposed ridge time at 13,500'+ — start very early, off the high points by early afternoon.
 - **Cell:** unreliable to dead in the basin — carry an InReach.
+
+---
+
+## Other considerations
 
 **Backpack option:** Willow Lake is a classic camp ~4–5 mi in; camping there shortens the summit day on the ridges considerably and is the relaxed way to do the trio (plus the lake is excellent).
 
