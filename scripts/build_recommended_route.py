@@ -215,6 +215,21 @@ def snap_route_to_tracks(route, tracks, snap_m=12.0):
     return out
 
 
+def route_display_name(out: Path, slug: str) -> str:
+    """Descriptor-first track name (Kyle, 2026-07-11): CalTopo list views truncate,
+    so 'Pigeon Turret day — recommended…' beats 'Recommended route (composed): …'.
+    Derived from the output filename: day_<x>_recommended → '<X> day',
+    leg_<x>_recommended → '<X> leg', <slug>_recommended → slug words."""
+    stem = out.stem.replace("_recommended", "")
+    if stem.startswith("day_"):
+        desc = stem[4:].replace("_", " ").title() + " day"
+    elif stem.startswith("leg_"):
+        desc = stem[4:].replace("_", " ").title() + " leg"
+    else:
+        desc = (stem or slug).replace("_", " ").title()
+    return f"{desc} — recommended route (composed)"
+
+
 def accumulated_gain(eles, threshold_m):
     """Sum positive elevation deltas, ignoring runs of net climb below threshold."""
     if not eles:
@@ -552,7 +567,7 @@ def main():
             f.write('<?xml version="1.0" encoding="UTF-8"?>\n')
             f.write('<gpx version="1.1" creator="build_recommended_route.py" '
                     'xmlns="http://www.topografix.com/GPX/1/1">\n')
-            f.write(f'<trk><name>Recommended route (composed): {args.slug} '
+            f.write(f'<trk><name>{route_display_name(out, args.slug)} '
                     f'— {dist/1609.34:.1f} mi / {gain*3.281:.0f} ft</name><trkseg>\n')
             for la, lo, ele in route:
                 es = f"<ele>{ele:.1f}</ele>" if ele is not None else ""
@@ -765,7 +780,7 @@ def main():
                 'xmlns="http://www.topografix.com/GPX/1/1">\n')
         for si, seg in enumerate(segments):
             tag = f" [seg {si + 1}/{len(segments)}]" if len(segments) > 1 else ""
-            f.write(f'<trk><name>Recommended route (composed): {args.slug} '
+            f.write(f'<trk><name>{route_display_name(out, args.slug)} '
                     f'— {dist / 1609.34:.1f} mi / {gain * 3.281:.0f} ft{tag}</name><trkseg>\n')
             for p in seg:
                 la, lo, ele = p[0], p[1], (p[2] if len(p) > 2 else None)
