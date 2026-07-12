@@ -117,7 +117,11 @@ def sanitize(text: str, share_map_url: str | None, slug: str) -> str:
         low = line.lower()
         if (low.startswith("*written for") or low.startswith("**status for")
                 or low.startswith("**status in db") or low.startswith("**researched:")
-                or "| drive from" in low or "| **drive from" in low):
+                or "| drive from" in low or "| **drive from" in low
+                # any directions link with a personal home origin (TL;DR bullets
+                # leaked "from Highland" on the vestal share, 2026-07-11)
+                or ("google.com/maps/dir" in low and "origin=" in low)
+                or low.startswith("**shareable link")):
             continue
         out.append(line)
     text = "\n".join(out)

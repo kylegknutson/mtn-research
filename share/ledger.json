@@ -6,5 +6,13 @@
   "share_map": "https://caltopo.com/m/BK1EQ9F",
   "created": "2026-07-11",
   "ttl_days": 120
+ },
+ {
+  "slug": "vestal_arrow_trinities",
+  "token": "33fc621f3fbca2fe",
+  "source": "vestal_arrow_trinities.emily.md",
+  "share_map": "https://caltopo.com/m/04Q4LME",
+  "created": "2026-07-11",
+  "ttl_days": 120
  }
 ]
