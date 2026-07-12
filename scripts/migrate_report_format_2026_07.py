@@ -93,9 +93,18 @@ def migrate(md: Path) -> bool:
                        + f'!!! info ""\n    **CalTopo research map:** {m.group(1)}\n'),
             text, count=1, flags=re.M)
 
+    # 4e) custom admonition types + label (Kyle, 2026-07-12): weather box is
+    # `!!! weather ""` (yellow) labeled "NOAA weather link:", map box is
+    # `!!! map ""` (blue). Styling: docs/stylesheets/admonitions.css + share CSS.
+    text = re.sub(r'^!!! tip ""\n(    \*\*)Trip NOAA weather:',
+                  r'!!! weather ""\n\1NOAA weather link:', text, flags=re.M)
+    text = re.sub(r'^(    \*\*)Trip NOAA weather:', r"\1NOAA weather link:", text, flags=re.M)
+    text = re.sub(r'^!!! info ""\n(?=    \*\*CalTopo research map:)', '!!! map ""\n',
+                  text, flags=re.M)
+
     # 4d) each box must be followed by a blank line — an unindented line glued to
     # the last indented row lazily continues the admonition paragraph
-    text = re.sub(r"(^    \*\*(?:CalTopo research map|Trip NOAA weather):\*\*.*$\n)(?=\S)",
+    text = re.sub(r"(^    \*\*(?:CalTopo research map|NOAA weather link):\*\*.*$\n)(?=\S)",
                   r"\1\n", text, flags=re.M)
 
     # 5) blank-line-separate consecutive header bold-lines (outside tables/admonitions)

@@ -29,10 +29,10 @@ status_source: "peak_db ascents"
 
 **Researched:** 2026-06-09
 
-!!! tip ""
-    **Trip NOAA weather:** [Trinchera Group Weather](https://forecast.weather.gov/MapClick.php?lat=37.28911&lon=-105.16478)
+!!! weather ""
+    **NOAA weather link:** [Trinchera Group Weather](https://forecast.weather.gov/MapClick.php?lat=37.28911&lon=-105.16478)
 
-!!! info ""
+!!! map ""
     **CalTopo research map:** https://caltopo.com/m/K7F110T
 
 **Status in DB:** All four 0 ascents (unclimbed). The northern **Culebra Range** crest, done as one N→S ridge traverse.

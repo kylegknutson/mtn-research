@@ -32,10 +32,10 @@ status_source: "peak_db ascents"
 
 **Researched:** 2026-05-28
 
-!!! tip ""
-    **Trip NOAA weather:** [Jacque Peak Weather](https://forecast.weather.gov/MapClick.php?lat=39.45485&lon=-106.19713)
+!!! weather ""
+    **NOAA weather link:** [Jacque Peak Weather](https://forecast.weather.gov/MapClick.php?lat=39.45485&lon=-106.19713)
 
-!!! info ""
+!!! map ""
     **CalTopo research map:** https://caltopo.com/m/R2NF0S2
 
 **Status in DB:** **climbed** (2026-06-06). **Cluster status:**

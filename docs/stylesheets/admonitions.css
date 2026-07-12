@@ -1,0 +1,18 @@
+/* Custom admonition types (Kyle, 2026-07-12):
+   weather — yellow, for the "NOAA weather link" box
+   map     — blue, for the "CalTopo research map" box
+   Both render titleless (`!!! weather ""`), so styling is border + tint. */
+
+.md-typeset .admonition.weather {
+  border-color: #f9a825;
+}
+.md-typeset .admonition.weather {
+  background-color: rgba(249, 168, 37, 0.08);
+}
+
+.md-typeset .admonition.map {
+  border-color: #1976d2;
+}
+.md-typeset .admonition.map {
+  background-color: rgba(25, 118, 210, 0.07);
+}

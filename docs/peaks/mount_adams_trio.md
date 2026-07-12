@@ -31,10 +31,10 @@ weather: "https://forecast.weather.gov/MapClick.php?lat=38.0007&lon=-105.6004"
 
 **Researched:** 2026-06-15
 
-!!! tip ""
-    **Trip NOAA weather:** [Mount Adams Trio Weather](https://forecast.weather.gov/MapClick.php?lat=38.0007&lon=-105.6004)
+!!! weather ""
+    **NOAA weather link:** [Mount Adams Trio Weather](https://forecast.weather.gov/MapClick.php?lat=38.0007&lon=-105.6004)
 
-!!! info ""
+!!! map ""
     **CalTopo research map:** https://caltopo.com/m/VES1N54
 
 **Status in DB:** all three unclimbed. **Mount Adams A (13,937') itself is already done** — these are the high points on its **W, S, and SE ridges**, and every other ranked neighbor (Kit Carson, Challenger, Crestones, Humboldt, Fluted, Horn, Little Horn) is climbed too. This cleans up the Adams massif.

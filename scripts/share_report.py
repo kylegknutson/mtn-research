@@ -82,6 +82,12 @@ width:1.15rem;height:1.15rem;background:#888;
 .admonition.info{border-color:#1976d2;background:#f0f6fd;
 --adm-icon:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11 9h2V7h-2m1 13c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8m0-18A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2m-1 15h2v-6h-2v6Z"/></svg>')}
 .admonition.info::before{background:#1976d2}
+.admonition.weather{border-color:#f9a825;background:#fdf7e6;
+--adm-icon:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 19a5 5 0 0 1-5-5c0-2.5 1.8-4.6 4.2-4.9A7 7 0 0 1 12 4a7 7 0 0 1 6.8 5.1H19a4 4 0 0 1 4 4 4 4 0 0 1-4 4H6Z"/></svg>')}
+.admonition.weather::before{background:#f9a825}
+.admonition.map{border-color:#1976d2;background:#f0f6fd;
+--adm-icon:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15 19l-6-2.11V5l6 2.11V19M20.5 3l-.16.03L15 5.1 9 3 3.36 4.9c-.21.07-.36.25-.36.48V20.5a.5.5 0 0 0 .5.5l.16-.03L9 18.9l6 2.1 5.64-1.9c.21-.07.36-.25.36-.48V3.5a.5.5 0 0 0-.5-.5Z"/></svg>')}
+.admonition.map::before{background:#1976d2}
 .admonition-title:empty{display:none}
 .admonition-title{font-weight:700;margin:0 0 .3rem}
 blockquote{border-left:3px solid #ccc;margin:1rem 0;padding:.2rem 1rem;color:#555}
@@ -98,6 +104,8 @@ img{border-color:#3a3f45}
 .admonition.danger{background:#2a1a1a;border-color:#e53935}
 .admonition.tip{background:#12241f;border-color:#00bfa5}
 .admonition.info{background:#16202b;border-color:#1976d2}
+.admonition.weather{background:#2a2413;border-color:#f9a825}
+.admonition.map{background:#16202b;border-color:#1976d2}
 blockquote{border-color:#3a3f45;color:#a8adb3}
 footer{border-color:#3a3f45}
 .prepared{background:#261a22;border-color:#e6008c55}

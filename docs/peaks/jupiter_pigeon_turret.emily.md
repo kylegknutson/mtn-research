@@ -51,10 +51,10 @@ status_source: "scrape_14ers_checklist emily"
 
 **Researched:** 2026-07-10
 
-!!! tip ""
-    **Trip NOAA weather:** [Jupiter, Pigeon & Turret Weather](https://forecast.weather.gov/MapClick.php?lat=37.66&lon=-107.63)
+!!! weather ""
+    **NOAA weather link:** [Jupiter, Pigeon & Turret Weather](https://forecast.weather.gov/MapClick.php?lat=37.66&lon=-107.63)
 
-!!! info ""
+!!! map ""
     **CalTopo research map:** https://caltopo.com/m/MU0K4JT
 
 **Shareable link (sanitized — safe to forward to anyone):** <https://mtn-share.pages.dev/s/e6d42c6c59b6cda8/> — no names, climbed status, or research maps; expires ~2026-11-08 (regenerate anytime: `share_report.py jupiter_pigeon_turret`)

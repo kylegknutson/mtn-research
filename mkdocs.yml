@@ -119,6 +119,7 @@ extra_css:
   - https://unpkg.com/leaflet@1.9.4/dist/leaflet.css
   - stylesheets/peak-map.css?v=4
   - stylesheets/report-stats.css?v=1
+  - stylesheets/admonitions.css?v=1
 
 extra_javascript:
   - javascripts/external-links-new-tab.js

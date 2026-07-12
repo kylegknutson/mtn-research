@@ -29,10 +29,10 @@ status_source: "peak_db ascents"
 
 **Researched:** 2026-06-02
 
-!!! tip ""
-    **Trip NOAA weather:** [Chipeta Mountain Weather](https://forecast.weather.gov/MapClick.php?lat=38.44767&lon=-106.24077)
+!!! weather ""
+    **NOAA weather link:** [Chipeta Mountain Weather](https://forecast.weather.gov/MapClick.php?lat=38.44767&lon=-106.24077)
 
-!!! info ""
+!!! map ""
     **CalTopo research map:** https://caltopo.com/m/CDMT01G
 
 **Status in DB:** 0 ascents (unclimbed). **Cluster status:**

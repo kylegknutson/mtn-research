@@ -30,10 +30,10 @@ status_source: "peak_db ascents (Kyle — unclimbed)"
 
 **Researched:** 2026-05-14 (rev 4 — cluster status confirmed 5/15)
 
-!!! tip ""
-    **Trip NOAA weather:** [Brown Mountain Weather](https://forecast.weather.gov/MapClick.php?lat=37.92078&lon=-108.63785)
+!!! weather ""
+    **NOAA weather link:** [Brown Mountain Weather](https://forecast.weather.gov/MapClick.php?lat=37.92078&lon=-108.63785)
 
-!!! info ""
+!!! map ""
     **CalTopo research map:** https://caltopo.com/m/Q2C5650
 
 **Status in your sheet:** 0 ascents (unclimbed). **Cluster status (Kyle confirmed 5/15):**

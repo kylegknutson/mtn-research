@@ -29,10 +29,10 @@ status_source: "peak_db ascents"
 
 **Researched:** 2026-05-28
 
-!!! tip ""
-    **Trip NOAA weather:** [Homestake Peak Weather](https://forecast.weather.gov/MapClick.php?lat=39.36757&lon=-106.41454)
+!!! weather ""
+    **NOAA weather link:** [Homestake Peak Weather](https://forecast.weather.gov/MapClick.php?lat=39.36757&lon=-106.41454)
 
-!!! info ""
+!!! map ""
     **CalTopo research map:** https://caltopo.com/m/V4D61FV
 
 **Status in DB:** 0 ascents (unclimbed). **Cluster status:**

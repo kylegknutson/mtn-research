@@ -27,10 +27,10 @@ dist_mi: 7.5
 
 **Researched:** 2026-05-28 (base) / 2026-06-05 (Shawn)
 
-!!! tip ""
-    **Trip NOAA weather:** [Jacque Peak Weather](https://forecast.weather.gov/MapClick.php?lat=39.45485&lon=-106.19713)
+!!! weather ""
+    **NOAA weather link:** [Jacque Peak Weather](https://forecast.weather.gov/MapClick.php?lat=39.45485&lon=-106.19713)
 
-!!! info ""
+!!! map ""
     **CalTopo research map:** https://caltopo.com/m/R2NF0S2
 
 **Status for Shawn:** **Unclimbed.** CO Rank 482, ranked and prominent (Rise 2,296').
