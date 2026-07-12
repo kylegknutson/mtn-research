@@ -29,9 +29,11 @@ status_source: "peak_db ascents"
 
 **Researched:** 2026-06-09
 
-**CalTopo research map:** https://caltopo.com/m/38DBF6E
+!!! tip "Map & weather"
+    **CalTopo research map:** https://caltopo.com/m/38DBF6E
 
-**Trip NOAA weather:** [NOAA point forecast](https://forecast.weather.gov/MapClick.php?lat=38.96511&lon=-106.54299) | [NOAA](https://forecast.weather.gov/MapClick.php?lat=38.95539&lon=-106.52653) | [NOAA](https://forecast.weather.gov/MapClick.php?lat=38.94244&lon=-106.52203) | [NOAA](https://forecast.weather.gov/MapClick.php?lat=38.99859&lon=-106.55393)
+    **Trip NOAA weather:** [Grizzly Pk E + PT 13,145 + Jenkins Mtn Weather](https://forecast.weather.gov/MapClick.php?lat=38.96511&lon=-106.54299)
+
 **Status in DB:** all unclimbed.
 
 > **Which "Grizzly Peak"?** This is **Grizzly Peak E (13,309')** — the Pieplant/Taylor Park summit that links with Jenkins and PT 13,145 — **not** Grizzly Peak A (13,997', the famous near-14er near Independence Pass, a separate outing ~6 mi north).

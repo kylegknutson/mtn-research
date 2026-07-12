@@ -59,6 +59,33 @@ def migrate(md: Path) -> bool:
         text = re.sub(r"(^\*\*CalTopo research map:\*\*.*$)", r"\1\n\n" + ins,
                       text, count=1, flags=re.M)
 
+    # 4b) normalize the weather line (Kyle, 2026-07-11): link text "<Area> Weather"
+    # (area = H1 stem), no "point forecast", no trailing parentheticals
+    h1 = re.search(r"^#\s+(.+)$", text, re.M)
+    if h1:
+        area = re.split(r"\s+[—(]", h1.group(1), maxsplit=1)[0].strip()
+        text = re.sub(r"^\*\*Trip NOAA weather:\*\*\s*\[[^\]]*\]\((\S+?)\).*$",
+                      rf"**Trip NOAA weather:** [{area} Weather](\1)",
+                      text, flags=re.M)
+
+    # 4c) highlight the map + weather lines in an admonition box, same treatment
+    # as "At a glance" (Kyle, 2026-07-11)
+    if '!!! tip "Map & weather"' not in text:
+        text = re.sub(
+            r"^\*\*CalTopo research map:\*\*\s*(\S+)\s*\n"
+            r"(?:\s*\n)?"
+            r"(?:^\*\*Trip NOAA weather:\*\*\s*(.+)\n)?",
+            lambda m: ('!!! tip "Map & weather"\n'
+                       f"    **CalTopo research map:** {m.group(1)}\n"
+                       + (f"\n    **Trip NOAA weather:** {m.group(2).strip()}\n"
+                          if m.group(2) else "")),
+            text, count=1, flags=re.M)
+
+    # 4d) the box must be followed by a blank line — an unindented line glued to
+    # the last indented row lazily continues the admonition paragraph
+    text = re.sub(r"(^    \*\*(?:CalTopo research map|Trip NOAA weather):\*\*.*$\n)(?=\S)",
+                  r"\1\n", text, flags=re.M)
+
     # 5) blank-line-separate consecutive header bold-lines (outside tables/admonitions)
     for _ in range(6):
         new = re.sub(r"(^\*\*[^\n|]+$)\n(\*\*)", r"\1\n\n\2", text, flags=re.M)

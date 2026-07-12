@@ -29,7 +29,8 @@ dist_mi: 20.8
 
 *Written for **Emily** — all seven unclimbed on her 14ers checklist.*
 
-**CalTopo research map:** https://caltopo.com/m/J9G39T0
+!!! tip "Map & weather"
+    **CalTopo research map:** https://caltopo.com/m/J9G39T0
 
 **Status for Emily:** All **seven unclimbed**. A horseshoe of ranked 13ers ringing the Lakes of the Clouds, northern Sangres.
 

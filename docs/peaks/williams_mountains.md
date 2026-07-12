@@ -30,7 +30,8 @@ status_source: "peak_db ascents (Kyle — unclimbed)"
 
 **Researched:** 2026-06-15
 
-**CalTopo research map:** https://caltopo.com/m/310E34A
+!!! tip "Map & weather"
+    **CalTopo research map:** https://caltopo.com/m/310E34A
 
 **Status in DB:** all five unclimbed.
 

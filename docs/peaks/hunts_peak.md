@@ -34,7 +34,7 @@ status_source: "peak_db ascents"
 
 **CalTopo research map:** https://caltopo.com/m/2SCT1B6 (Sangres-tip dedicated research map; existing C105AEV still has Bushnell/Twin Sisters planning data)
 
-**Trip NOAA weather:** [NOAA point forecast](https://forecast.weather.gov/MapClick.php?lat=38.3831&lon=-105.94582) (same target as 14ers / LoJ / peakbagger weather links)
+**Trip NOAA weather:** [Hunts Peak Weather](https://forecast.weather.gov/MapClick.php?lat=38.3831&lon=-105.94582)
 
 **Status in DB:** 0 ascents (unclimbed). **Cluster status (reconfirmed 2026-05-29):**
 - ✓ Done nearby (Sangre N tip): Bushnell Pk (4.22 mi), Twin Sisters North (3.19 mi)

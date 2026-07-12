@@ -29,9 +29,11 @@ status_source: "peak_db ascents"
 
 **Researched:** 2026-06-03
 
-**CalTopo research map:** https://caltopo.com/m/07PMBS1
+!!! tip "Map & weather"
+    **CalTopo research map:** https://caltopo.com/m/07PMBS1
 
-**Trip NOAA weather:** [NOAA point forecast](https://forecast.weather.gov/MapClick.php?lat=38.0542&lon=-107.4381) | [NOAA](https://forecast.weather.gov/MapClick.php?lat=38.0712&lon=-107.4209) | [NOAA](https://forecast.weather.gov/MapClick.php?lat=38.0728&lon=-107.3879)
+    **Trip NOAA weather:** [PT 13,155 Group Weather](https://forecast.weather.gov/MapClick.php?lat=38.0542&lon=-107.4381)
+
 **Status in DB:** All three 0 ascents (unclimbed). The quiet 13er neighbors of **Uncompahgre Peak**, off **Nellie Creek**.
 
 ![Overview map](../maps/pt_13155_group.png)

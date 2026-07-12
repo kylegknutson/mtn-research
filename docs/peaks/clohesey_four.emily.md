@@ -32,9 +32,10 @@ status_source: "scrape_14ers_checklist emily"
 
 *Written for **Emily** — four ranked Sawatch 13ers above Clohesey Lake, linked in one day.*
 
-**CalTopo research map:** https://caltopo.com/m/P38PGQ6
+!!! tip "Map & weather"
+    **CalTopo research map:** https://caltopo.com/m/P38PGQ6
 
-**Trip NOAA weather:** [NOAA point forecast](https://forecast.weather.gov/MapClick.php?lat=38.920&lon=-106.410)
+    **Trip NOAA weather:** [Clohesey Four Weather](https://forecast.weather.gov/MapClick.php?lat=38.920&lon=-106.410)
 
 **Status for Emily:** all four **unclimbed** (on her 14ers checklist). A tidy cluster above **Clohesey Lake** in the Collegiate Peaks, SW of Missouri/Belford.
 

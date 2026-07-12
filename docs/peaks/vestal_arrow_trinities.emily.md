@@ -46,9 +46,10 @@ status_source: "scrape_14ers_checklist emily"
 
 **Researched:** 2026-07-10
 
-**CalTopo research map:** https://caltopo.com/m/4MR73J3
+!!! tip "Map & weather"
+    **CalTopo research map:** https://caltopo.com/m/4MR73J3
 
-**Trip NOAA weather:** [NOAA point forecast](https://forecast.weather.gov/MapClick.php?lat=37.689&lon=-107.603) (peaks are ≤1.5 mi apart — one forecast covers all five)
+    **Trip NOAA weather:** [Vestal, Arrow & the Trinities Weather](https://forecast.weather.gov/MapClick.php?lat=37.689&lon=-107.603)
 
 **Shareable link (sanitized — safe to forward to anyone):** <https://mtn-share.pages.dev/s/33fc621f3fbca2fe/> — no names, climbed status, or research maps; expires ~2026-11-08 (regenerate anytime: `share_report.py vestal_arrow_trinities`)
 

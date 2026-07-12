@@ -29,9 +29,11 @@ status_source: "peak_db ascents"
 
 **Researched:** 2026-06-02
 
-**CalTopo research map:** https://caltopo.com/m/GG1BKFL
+!!! tip "Map & weather"
+    **CalTopo research map:** https://caltopo.com/m/GG1BKFL
 
-**Trip NOAA weather:** [NOAA point forecast](https://forecast.weather.gov/MapClick.php?lat=39.76009&lon=-106.34074) (same target as 14ers / LoJ / peakbagger weather links) | [NOAA forecast](https://forecast.weather.gov/MapClick.php?lat=39.77559&lon=-106.3504)
+    **Trip NOAA weather:** [Mount Powell + Eagles Nest Weather](https://forecast.weather.gov/MapClick.php?lat=39.76009&lon=-106.34074)
+
 **Status in DB:** Both 0 ascents (unclimbed). **Mount Powell is the highest peak in the Gore Range.**
 
 ![Overview map](../maps/powell_eagles_nest.png)

@@ -29,9 +29,10 @@ status_source: "peak_db ascents"
 
 **Researched:** 2026-06-02
 
-**CalTopo research map:** https://caltopo.com/m/CDMT01G
+!!! tip "Map & weather"
+    **CalTopo research map:** https://caltopo.com/m/CDMT01G
 
-**Trip NOAA weather:** [NOAA point forecast](https://forecast.weather.gov/MapClick.php?lat=38.44767&lon=-106.24077) (same target as 14ers / LoJ / peakbagger weather links)
+    **Trip NOAA weather:** [Chipeta Mountain Weather](https://forecast.weather.gov/MapClick.php?lat=38.44767&lon=-106.24077)
 
 **Status in DB:** 0 ascents (unclimbed). **Cluster status:**
 - ✗ **No unclimbed ranked 13er within 8 mi** — the nearby high points are sub-13k (Chipeta Mtn South 12,874', Pahlone Peak 12,670') and don't count as ranked combos.

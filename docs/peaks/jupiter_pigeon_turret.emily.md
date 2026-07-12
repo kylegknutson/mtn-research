@@ -51,9 +51,10 @@ status_source: "scrape_14ers_checklist emily"
 
 **Researched:** 2026-07-10
 
-**CalTopo research map:** https://caltopo.com/m/MU0K4JT
+!!! tip "Map & weather"
+    **CalTopo research map:** https://caltopo.com/m/MU0K4JT
 
-**Trip NOAA weather:** [point forecast — Needle Mtns](https://forecast.weather.gov/MapClick.php?lat=37.66&lon=-107.63) (one forecast covers both basins)
+    **Trip NOAA weather:** [Jupiter, Pigeon & Turret Weather](https://forecast.weather.gov/MapClick.php?lat=37.66&lon=-107.63)
 
 **Shareable link (sanitized — safe to forward to anyone):** <https://mtn-share.pages.dev/s/e6d42c6c59b6cda8/> — no names, climbed status, or research maps; expires ~2026-11-08 (regenerate anytime: `share_report.py jupiter_pigeon_turret`)
 

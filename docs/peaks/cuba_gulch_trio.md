@@ -29,9 +29,11 @@ status_source: "peak_db ascents"
 
 **Researched:** 2026-06-08
 
-**CalTopo research map:** https://caltopo.com/m/DCQ8UKS
+!!! tip "Map & weather"
+    **CalTopo research map:** https://caltopo.com/m/DCQ8UKS
 
-**Trip NOAA weather:** [NOAA point forecast](https://forecast.weather.gov/MapClick.php?lat=37.82997&lon=-107.52956) | [NOAA](https://forecast.weather.gov/MapClick.php?lat=37.84968&lon=-107.49465) | [NOAA](https://forecast.weather.gov/MapClick.php?lat=37.84723&lon=-107.47533) (same target on all 3 sites)
+    **Trip NOAA weather:** [Cuba Gulch Trio Weather](https://forecast.weather.gov/MapClick.php?lat=37.82997&lon=-107.52956)
+
 **Status in DB:** All three 0 ascents (unclimbed), all **ranked** San Juan 13ers (PT 13,003 = id 822, Class 1). A natural **Cuba Gulch** day off the **Lake Fork (Lake City)** side, in the Half Peak / Cataract Gulch pocket.
 
 ![Overview map](../maps/cuba_gulch_trio.png)

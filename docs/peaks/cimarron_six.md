@@ -30,7 +30,8 @@ status_source: "peak_db ascents (Kyle — unclimbed)"
 
 **Researched:** 2026-06-15
 
-**CalTopo research map:** https://caltopo.com/m/55M4430
+!!! tip "Map & weather"
+    **CalTopo research map:** https://caltopo.com/m/55M4430
 
 **Status in DB:** all six unclimbed. (Coxcomb + Redcliff already done.)
 

@@ -30,9 +30,10 @@ status_source: "peak_db ascents (Kyle — unclimbed)"
 
 **Researched:** 2026-05-14 (rev 4 — cluster status confirmed 5/15)
 
-**CalTopo research map:** https://caltopo.com/m/Q2C5650
+!!! tip "Map & weather"
+    **CalTopo research map:** https://caltopo.com/m/Q2C5650
 
-**Trip NOAA weather:** [NOAA point forecast](https://forecast.weather.gov/MapClick.php?lat=37.92078&lon=-108.63785) (same target as 14ers / LoJ / peakbagger weather links)
+    **Trip NOAA weather:** [Brown Mountain Weather](https://forecast.weather.gov/MapClick.php?lat=37.92078&lon=-108.63785)
 
 **Status in your sheet:** 0 ascents (unclimbed). **Cluster status (Kyle confirmed 5/15):**
 - ✓ Done: Houghton, Tuttle, UN 13078, Hanson

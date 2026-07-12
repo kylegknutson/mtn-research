@@ -31,9 +31,10 @@ status_source: "scrape_14ers_checklist emily (usernum 45697) 2026-06-17; peak_db
 
 *Written for **Emily** — the standalone Centennial between Mount Wilson and El Diente, by the shortest recorded day route (Cross Mountain TH / Bilk Basin).*
 
-**CalTopo research map:** https://caltopo.com/m/1PV10HH
+!!! tip "Map & weather"
+    **CalTopo research map:** https://caltopo.com/m/1PV10HH
 
-**Trip NOAA weather:** [NOAA point forecast](https://forecast.weather.gov/MapClick.php?lat=37.845&lon=-107.984)
+    **Trip NOAA weather:** [Gladstone Peak Weather](https://forecast.weather.gov/MapClick.php?lat=37.845&lon=-107.984)
 
 **Status for Emily:** **unclimbed** (on her 14ers checklist). CO rank **67**, a **Centennial** (highest 100 in Colorado) — the high prize of this trip.
 

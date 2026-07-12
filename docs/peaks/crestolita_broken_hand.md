@@ -29,9 +29,11 @@ status_source: "peak_db ascents"
 
 **Researched:** 2026-05-31
 
-**CalTopo research map:** https://caltopo.com/m/6TKA0RH
+!!! tip "Map & weather"
+    **CalTopo research map:** https://caltopo.com/m/6TKA0RH
 
-**Trip NOAA weather:** [NOAA point forecast](https://forecast.weather.gov/MapClick.php?lat=37.95671&lon=-105.56665) (same target as 14ers / LoJ / peakbagger weather links) | [NOAA forecast](https://forecast.weather.gov/MapClick.php?lat=37.9549&lon=-105.57561)
+    **Trip NOAA weather:** [Crestolita + Broken Hand Peak Weather](https://forecast.weather.gov/MapClick.php?lat=37.95671&lon=-105.56665)
+
 **Status in DB:** Both 0 ascents (unclimbed). **Crestone group context:** Crestone Peak, Crestone Needle, and Humboldt Peak are all ✓ done — these two are the remaining ranked satellites of the South Colony / Cottonwood cirque.
 
 ![Overview map](../maps/crestolita_broken_hand.png)

@@ -29,9 +29,11 @@ status_source: "peak_db ascents"
 
 **Researched:** 2026-06-08
 
-**CalTopo research map:** https://caltopo.com/m/11EMC0L
+!!! tip "Map & weather"
+    **CalTopo research map:** https://caltopo.com/m/11EMC0L
 
-**Trip NOAA weather:** [NOAA point forecast](https://forecast.weather.gov/MapClick.php?lat=37.99556&lon=-107.50870) (same target as 14ers / LoJ / peakbagger weather links) | [NOAA forecast](https://forecast.weather.gov/MapClick.php?lat=37.99263&lon=-107.53414)
+    **Trip NOAA weather:** [Sunshine Mountain A + PT 13,094 Weather](https://forecast.weather.gov/MapClick.php?lat=37.99556&lon=-107.50870)
+
 **Status in DB:** Both 0 ascents (unclimbed). A natural pair on the **American Flats / Engineer Pass** side of the Uncompahgre high country (Lake City / Henson Creek access).
 
 ![Overview map](../maps/sunshine_13094.png)

@@ -32,9 +32,10 @@ status_source: "peak_db ascents"
 
 **Researched:** 2026-05-28
 
-**CalTopo research map:** https://caltopo.com/m/R2NF0S2
+!!! tip "Map & weather"
+    **CalTopo research map:** https://caltopo.com/m/R2NF0S2
 
-**Trip NOAA weather:** [NOAA point forecast](https://forecast.weather.gov/MapClick.php?lat=39.45485&lon=-106.19713) (same target as 14ers / LoJ / peakbagger weather links)
+    **Trip NOAA weather:** [Jacque Peak Weather](https://forecast.weather.gov/MapClick.php?lat=39.45485&lon=-106.19713)
 
 **Status in DB:** **climbed** (2026-06-06). **Cluster status:**
 - ✗ **No same-drainage unclimbed ranked 13ers** — Bartlett Mtn (5.74 mi) is the only nearby unclimbed ranked peak, but it sits on the opposite side of Fremont Pass / Climax Mine and is a different drive entirely

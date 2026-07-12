@@ -33,9 +33,11 @@ status_source: "peak_db ascents (Kyle — unclimbed)"
 
 **Researched:** 2026-06-04
 
-**CalTopo research map:** https://caltopo.com/m/AAFUQQ1
+!!! tip "Map & weather"
+    **CalTopo research map:** https://caltopo.com/m/AAFUQQ1
 
-**Trip NOAA weather:** [NOAA point forecast](https://forecast.weather.gov/MapClick.php?lat=44.24945&lon=-71.22355) | [NOAA](https://forecast.weather.gov/MapClick.php?lat=44.25902&lon=-71.20166) | [NOAA (primary)](https://forecast.weather.gov/MapClick.php?lat=44.26756&lon=-71.17917) | [NOAA](https://forecast.weather.gov/MapClick.php?lat=44.28997&lon=-71.17627) | [NOAA](https://forecast.weather.gov/MapClick.php?lat=44.30308&lon=-71.16775) | [NOAA](https://forecast.weather.gov/MapClick.php?lat=44.34043&lon=-71.13177)
+    **Trip NOAA weather:** [Carter Dome Group Weather](https://forecast.weather.gov/MapClick.php?lat=44.24945&lon=-71.22355)
+
 **Status in DB:** Unclimbed — NH 48 peaks, no prior ascents logged
 
 ![Overview map](../maps/carter_dome_group.png)

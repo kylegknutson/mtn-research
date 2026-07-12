@@ -29,9 +29,11 @@ status_source: "peak_db ascents"
 
 **Researched:** 2026-06-07
 
-**CalTopo research map:** https://caltopo.com/m/852FBC0
+!!! tip "Map & weather"
+    **CalTopo research map:** https://caltopo.com/m/852FBC0
 
-**Trip NOAA weather:** [NOAA point forecast](https://forecast.weather.gov/MapClick.php?lat=38.98095&lon=-106.83403) (same target as 14ers / LoJ / peakbagger weather links) | [NOAA forecast](https://forecast.weather.gov/MapClick.php?lat=38.98579&lon=-106.84413)
+    **Trip NOAA weather:** [Pearl Mountain + Oyster Peak Weather](https://forecast.weather.gov/MapClick.php?lat=38.98095&lon=-106.83403)
+
 **Status in DB:** Both 0 ascents (unclimbed). These two are a **locked pair** in the Pearl Pass area of the Maroon Bells–Snowmass Wilderness — the remaining unclimbed ranked 13ers on the Aspen/Castle Creek side near the divide.
 
 ![Overview map](../maps/pearl_oyster.png)

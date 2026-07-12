@@ -76,6 +76,19 @@ blockquote{border-left:3px solid #ccc;margin:1rem 0;padding:.2rem 1rem;color:#55
 footer{margin-top:3rem;font-size:.8rem;color:#888;border-top:1px solid #ddd;padding-top:.6rem}
 .prepared{background:#fdf2f8;border:1px solid #e6008c33;border-radius:6px;
 padding:.6rem 1rem;margin:1rem 0;font-size:.95rem}
+@media (prefers-color-scheme: dark){
+body{background:#151719;color:#d7dade}
+h1{border-color:#e6008c}
+a{color:#7db4ff}
+td,th{border-color:#3a3f45}
+img{border-color:#3a3f45}
+.admonition{background:#1e2226;border-color:#666}
+.admonition.danger{background:#2a1a1a;border-color:#c00}
+.admonition.tip{background:#261a22;border-color:#e6008c}
+blockquote{border-color:#3a3f45;color:#a8adb3}
+footer{border-color:#3a3f45}
+.prepared{background:#261a22;border-color:#e6008c55}
+}
 """
 
 
@@ -134,11 +147,13 @@ def sanitize(text: str, share_map_url: str | None, slug: str) -> str:
         text = text.replace(
             "**CalTopo research map:**",
             "**Interactive CalTopo map with recommended route:**")
+        # (indent-tolerant: the map line may live inside the "Map & weather"
+        # admonition box; the note joins it at the same indent)
         text = re.sub(
-            rf"^(\*\*Interactive CalTopo map with recommended route:\*\*.*)$",
-            rf"\1\n\n*Note: the recommended route was distilled from **{n_src} recorded "
-            rf"GPS tracks** of real trips (14ers.com · ListsofJohn · peakbagger · the "
-            rf"author's own recordings).*",
+            rf"^([ \t]*)(\*\*Interactive CalTopo map with recommended route:\*\*.*)$",
+            rf"\1\2\n\1\n\1*Note: the recommended route was distilled from **{n_src} "
+            rf"recorded GPS tracks** of real trips (14ers.com · ListsofJohn · peakbagger "
+            rf"· the author's own recordings).*",
             text, flags=re.M)
         text = re.sub(r"\*\[Interactive CalTopo map\]\([^)]*\)[^\n]*\n?", "", text)
         # bare map URLs (label lines, TL;DR) → clickable links; python-markdown
@@ -186,6 +201,7 @@ def render(entry) -> None:
     body = re.sub(r"(</h1>)", r"\1\n" + prepared.replace("\\", "\\\\"), body, count=1)
     html = (f"<!DOCTYPE html><html><head><meta charset='utf-8'>"
             f"<meta name='robots' content='noindex,nofollow'>"
+            f"<meta name='color-scheme' content='light dark'>"
             f"<meta name='viewport' content='width=device-width,initial-scale=1'>"
             f"<title>{title}</title><style>{CSS}</style></head><body>\n{body}\n"
             f"<footer>Shared {entry['created']} · link expires ~{expires} · "

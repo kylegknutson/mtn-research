@@ -37,7 +37,8 @@ status_source: "peak_db ascents (Kyle — unclimbed)"
 
 **Researched:** 2026-06-07
 
-**CalTopo research map:** https://caltopo.com/m/AS71AEC
+!!! tip "Map & weather"
+    **CalTopo research map:** https://caltopo.com/m/AS71AEC
 
 **Status in DB:** All five 0 ascents (unclimbed). These are the far southeast San Juan 13ers — the South San Juan Wilderness high points plus Bennett on the Rio Grande side.
 

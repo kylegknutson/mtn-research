@@ -104,8 +104,24 @@ def ranked_summits_in_view(lon_min, lon_max, lat_min, lat_max, exclude_coords):
         if not (lon_min <= lon <= lon_max and lat_min <= lat <= lat_max):
             continue
         if any(abs(lon - ol) < 1e-3 and abs(lat - ola) < 1e-3 for ol, ola in exclude_coords):
-            continue   # this is an objective — already drawn gold
+            continue   # this is an objective — already drawn as a blue mountain
         out.append((lon, lat, p.get("display_name") or ""))
+    # Named-but-unranked 14ers get context markers too (Kyle, 2026-07-11: North
+    # Eolus deserves a summit marker). peak_db is ranked-only, so these five are
+    # an explicit exception list.
+    NAMED_UNRANKED_14ERS = [
+        (-106.1188, 39.3468, "Mount Cameron"),
+        (-108.0053, 37.8393, "El Diente Peak"),
+        (-106.9749, 39.0787, "Conundrum Peak"),
+        (-107.6212, 37.6224, "North Eolus"),
+        (-106.9873, 39.0760, "North Maroon Peak"),
+    ]
+    for lon, lat, name in NAMED_UNRANKED_14ERS:
+        if not (lon_min <= lon <= lon_max and lat_min <= lat <= lat_max):
+            continue
+        if any(abs(lon - ol) < 1e-3 and abs(lat - ola) < 1e-3 for ol, ola in exclude_coords):
+            continue
+        out.append((lon, lat, name))
     return out
 
 COLOR_PUBLIC   = (204, 51,  51,  220)   # red (fallback / unclassified public)
@@ -138,8 +154,8 @@ def track_source(path) -> str:
     if "loj" in n or "listsofjohn" in n:
         return "loj"
     return "public"
-COLOR_PEAK     = (255, 204, 0,   255)   # gold — objective summit(s)
-COLOR_PEAK_CTX = (190, 190, 190, 255)   # silver-gray — other ranked summits in view
+COLOR_PEAK     = (25, 118, 210,  255)   # blue mountain — objective summit(s) (Kyle, 2026-07-11)
+COLOR_PEAK_CTX = (35, 35, 35, 255)      # black mountain — other named/ranked summits in view (grey wasn't distinct enough)
 COLOR_DRIVE_IN = (153, 51,  204, 220)   # purple
 COLOR_TH       = (255, 102, 0,   220)   # orange
 COLOR_DRIVE    = (0,   0,   0,   235)   # black — the driving route between camps
@@ -226,7 +242,10 @@ def classify_waypoint_by_name(name: str) -> str:
     n = name.lower()
     if any(t in n for t in ("trailhead", " th)", "parking", "pullout", "mine th", "basin th")):
         return "th"
-    if any(t in n for t in ("pass", "junction", "jct", "road jct", "saddle", "col", "drive-in")):
+    # camps are landmarks, not summits — with mountain icons for peaks, a camp
+    # drawn as a blue mountain reads as an objective (Kyle, 2026-07-11)
+    if any(t in n for t in ("pass", "junction", "jct", "road jct", "saddle", "col",
+                            "drive-in", "camp")):
         return "drive_in"
     return "peak"
 
@@ -353,6 +372,20 @@ def draw_square(draw: ImageDraw.ImageDraw, ix: int, iy: int, size: int, color: t
     draw.rectangle([ix - size, iy - size, ix + size, iy + size],
                    fill=color, outline=(0, 0, 0, 255))
 
+def draw_mountain(draw: ImageDraw.ImageDraw, ix: int, iy: int, size: int, color: tuple):
+    """Peak marker (Kyle, 2026-07-11): a mountain silhouette with a snowcap —
+    bigger and more legible than the old stars; same size for objectives and
+    context summits, distinguished by color only."""
+    h = int(size * 1.5)
+    base = [(ix, iy - h), (ix - size, iy + size // 2), (ix + size, iy + size // 2)]
+    draw.polygon(base, fill=color, outline=(0, 0, 0, 255))
+    # snowcap: small triangle at the apex
+    c = size * 0.42
+    cap = [(ix, iy - h),
+           (ix - c * 0.66, iy - h + c),
+           (ix + c * 0.66, iy - h + c)]
+    draw.polygon(cap, fill=(255, 255, 255, 255))
+
 def draw_label(draw: ImageDraw.ImageDraw, ix: int, iy: int, text: str, font):
     label = text.split("(")[0].strip()[:26]
     bbox = draw.textbbox((0, 0), label, font=font)
@@ -373,8 +406,8 @@ def draw_legend(img: Image.Image, public_sources, has_kyle, has_peak, has_drive_
         items.append((f"{SOURCE_LABELS.get(src, src)} routes", SOURCE_COLORS.get(src, COLOR_PUBLIC)[:3]))
     if has_kyle:    items.append(("Imported tracks (Kyle)", COLOR_KYLE[:3]))
     if has_drive_route: items.append(("Driving route (road)",  COLOR_DRIVE[:3]))
-    if has_peak:    items.append(("Objective summit ★",      COLOR_PEAK[:3]))
-    if has_context_peak: items.append(("Other ranked summit ★", COLOR_PEAK_CTX[:3]))
+    if has_peak:    items.append(("Objective summit ▲",      COLOR_PEAK[:3]))
+    if has_context_peak: items.append(("Other ranked summit ▲", COLOR_PEAK_CTX[:3]))
     if has_drive_in:items.append(("Drive-in / landmark ▲", COLOR_DRIVE_IN[:3]))
     if has_th:      items.append(("Trailhead ■",            COLOR_TH[:3]))
     if not items:   return
@@ -449,9 +482,13 @@ def build_map(slug: str, out_path: Path, zoom: int | None = None, title: str = "
                     peak_lons.append(lon); peak_lats.append(lat)
         else:
             for lon, lat, name in parse_waypoints(path):
-                buckets[kind].append((lon, lat, name))
+                # a "peak" FILE can still carry non-summit waypoints (camp anchors
+                # in *_target_peaks_only.gpx) — classify each by name so a camp
+                # doesn't render as a blue objective mountain (Kyle, 2026-07-11)
+                wkind = classify_waypoint_by_name(name) if kind == "peak" else kind
+                buckets[wkind].append((lon, lat, name))
                 all_lons.append(lon); all_lats.append(lat)
-                if kind == "peak":
+                if wkind == "peak":
                     peak_lons.append(lon); peak_lats.append(lat)
 
     for f in public_files: _ingest(f, False)
@@ -657,8 +694,8 @@ def build_map(slug: str, out_path: Path, zoom: int | None = None, title: str = "
     marker_cfg = {
         "drive_in":     (COLOR_DRIVE_IN, draw_triangle, 7),
         "th":           (COLOR_TH,       draw_square,   6),
-        "context_peak": (COLOR_PEAK_CTX, draw_star,     7),
-        "peak":         (COLOR_PEAK,     draw_star,     10),
+        "context_peak": (COLOR_PEAK_CTX, draw_mountain, 12),
+        "peak":         (COLOR_PEAK,     draw_mountain, 12),
     }
     # In a dense/large frame, labelling every ranked summit makes label soup.
     # Mark them all, but only LABEL the nearest N to the objective; the rest get

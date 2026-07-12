@@ -32,9 +32,11 @@ status_source: "peak_db ascents (Kyle — climbed)"
 
 **Researched:** 2026-06-09
 
-**CalTopo research map:** https://caltopo.com/m/4278RCG
+!!! tip "Map & weather"
+    **CalTopo research map:** https://caltopo.com/m/4278RCG
 
-**Trip NOAA weather:** [NOAA point forecast](https://forecast.weather.gov/MapClick.php?lat=37.9941&lon=-107.0006) | [NOAA](https://forecast.weather.gov/MapClick.php?lat=37.9694&lon=-106.9872) | [NOAA](https://forecast.weather.gov/MapClick.php?lat=37.9466&lon=-107.0083)
+    **Trip NOAA weather:** ["Baldy Lejos" + PT 13,115 + PT 13,030 Weather](https://forecast.weather.gov/MapClick.php?lat=37.9941&lon=-107.0006)
+
 **Status in DB:** all three **climbed** (2026-06-13).
 
 > Western part of the seven-peak La Garita narrow-down. The eastern peaks are now two separate reports: the **[13,308 + 13,166 bridge pair](pt_13308_13166.md)** (same West Willow TH as this trio) and the **[13,026 + 13,408 pair](pt_13026_13408.md)** (Cochetopa / Eddiesville side).

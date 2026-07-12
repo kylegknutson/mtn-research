@@ -30,9 +30,10 @@ status_source: "peak_db ascents"
 
 **Researched:** 2026-05-28 · **PT 13,002 combo added:** 2026-06-09
 
-**CalTopo research map:** https://caltopo.com/m/QL51DBE
+!!! tip "Map & weather"
+    **CalTopo research map:** https://caltopo.com/m/QL51DBE
 
-**Trip NOAA weather:** [NOAA point forecast](https://forecast.weather.gov/MapClick.php?lat=39.38053&lon=-106.52061) (same target as 14ers / LoJ / peakbagger weather links)
+    **Trip NOAA weather:** [Savage Peak + PT 13,002 Weather](https://forecast.weather.gov/MapClick.php?lat=39.38053&lon=-106.52061)
 
 **Status in DB:** both 0 ascents (unclimbed). **Cluster status:**
 - ✗ **PT 13,002 (1.92 mi) — unclimbed ranked, Class 3** ← **closest neighbor; see "Adding PT 13,002" below**
@@ -141,7 +142,6 @@ The 14ers.com official route (BillMiddlebrook, May 2023). Solid Class 2 ridge cl
 | Lat / Lon | 39.39940, −106.54680 |
 | **Class** | **3** (climb13ers: "exposed Class 2+, some consider Class 3"; moderate exposure in short sections near the summit — **ice axe recommended**) |
 | Range / Wilderness | Sawatch / **Holy Cross Wilderness** (White River NF — same as Savage) |
-| Weather | [NOAA](https://forecast.weather.gov/MapClick.php?lat=39.39940&lon=-106.54680) |
 | 14ers.com | [10872](https://www.14ers.com/php14ers/peak.php?peakid=10872) · climb13ers [UN 13002](https://www.climb13ers.com/colorado-13ers/un13002--carter-creek) |
 | LoJ / peakbagger | [839](https://listsofjohn.com/peak/839) · [113688](https://peakbagger.com/peak.aspx?pid=113688) |
 | Peak DB id | 839 |
