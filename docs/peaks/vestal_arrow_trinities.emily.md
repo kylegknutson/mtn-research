@@ -50,6 +50,9 @@ status_source: "scrape_14ers_checklist emily"
 **Status for Emily:** All **five unclimbed**. This is the heart of the Grenadiers — quartzite peaks that most consider the most beautiful climbing terrain in the San Juans.
 
 ![Overview map](../maps/vestal_arrow_trinities.png)
+<!-- PROVENANCE_START -->
+*The recommended route was distilled from **33 recorded GPS tracks** of real trips (14ers.com · ListsofJohn · peakbagger · Kyle's recordings) — all layered on the [interactive CalTopo research map](https://caltopo.com/m/4MR73J3).*
+<!-- PROVENANCE_END -->
 *[Interactive CalTopo map](https://caltopo.com/m/4MR73J3) — 30 swept GPX tracks layered by source, plus the two composed day routes (magenta).*
 
 ---

@@ -33,6 +33,9 @@ status_source: "peak_db ascents"
 **Status in DB:** Both 0 ascents (unclimbed). These two are a **locked pair** in the Pearl Pass area of the Maroon Bells–Snowmass Wilderness — the remaining unclimbed ranked 13ers on the Aspen/Castle Creek side near the divide.
 
 ![Overview map](../maps/pearl_oyster.png)
+<!-- PROVENANCE_START -->
+*The recommended route was distilled from **10 recorded GPS tracks** of real trips (14ers.com · peakbagger) — all layered on the [interactive CalTopo research map](https://caltopo.com/m/852FBC0).*
+<!-- PROVENANCE_END -->
 *[Interactive CalTopo map](https://caltopo.com/m/852FBC0)*
 
 ---

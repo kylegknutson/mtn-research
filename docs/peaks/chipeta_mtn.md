@@ -35,6 +35,9 @@ status_source: "peak_db ascents"
 - **Effectively a standalone day** at standard execution.
 
 ![Overview map](../maps/chipeta_mtn.png)
+<!-- PROVENANCE_START -->
+*The recommended route was distilled from **10 recorded GPS tracks** of real trips (recorded trips) — all layered on the [interactive CalTopo research map](https://caltopo.com/m/CDMT01G).*
+<!-- PROVENANCE_END -->
 *[Interactive CalTopo map](https://caltopo.com/m/CDMT01G)*
 
 ---

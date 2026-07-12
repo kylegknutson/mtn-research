@@ -55,6 +55,9 @@ status_source: "peak_db ascents (both 0 ascents — unclimbed)"
 Coordinates above are LiDAR-authoritative from the public CalTopo map "Fish Creek - Dolores & Middle Peaks" (CVV0). Wikipedia lists Dolores at 13,296 ft; the LiDAR value 13,289 is more current. Note Middle is ~16 ft higher and far more prominent (1,960' vs 730').
 
 ![Overview map](../maps/dolores_middle_peak.png)
+<!-- PROVENANCE_START -->
+*The recommended route was distilled from **7 recorded GPS tracks** of real trips (14ers.com · ListsofJohn · peakbagger) — all layered on the [interactive CalTopo research map](https://caltopo.com/m/R1KSN0U).*
+<!-- PROVENANCE_END -->
 *[Interactive CalTopo map](https://caltopo.com/m/R1KSN0U)*
 
 ---

@@ -33,6 +33,9 @@ status_source: "peak_db ascents"
 **Status in DB:** All three 0 ascents (unclimbed). The quiet 13er neighbors of **Uncompahgre Peak**, off **Nellie Creek**.
 
 ![Overview map](../maps/pt_13155_group.png)
+<!-- PROVENANCE_START -->
+*The recommended route was distilled from **18 recorded GPS tracks** of real trips (14ers.com · ListsofJohn · peakbagger · Kyle's recordings) — all layered on the [interactive CalTopo research map](https://caltopo.com/m/07PMBS1).*
+<!-- PROVENANCE_END -->
 *[Interactive CalTopo map](https://caltopo.com/m/07PMBS1)*
 
 ---

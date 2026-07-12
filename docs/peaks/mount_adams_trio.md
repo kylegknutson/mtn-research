@@ -37,6 +37,9 @@ weather: "https://forecast.weather.gov/MapClick.php?lat=38.0007&lon=-105.6004"
 > Three ridge-point 13ers around **Mount Adams**, above **Willow Lake** near Crestone. The peaks are Class 2, but **linking them on the ridges is Class 2+ with stretches of easy Class 3** (loose Crestone conglomerate; Class 3–4 if you stay on the crest) — on top of **6,400′ of gain** out of the deep Crestone trailhead.
 
 ![Overview map](../maps/mount_adams_trio.png)
+<!-- PROVENANCE_START -->
+*The recommended route was distilled from **16 recorded GPS tracks** of real trips (14ers.com · ListsofJohn · peakbagger) — all layered on the [interactive CalTopo research map](https://caltopo.com/m/VES1N54).*
+<!-- PROVENANCE_END -->
 *[Interactive CalTopo map](https://caltopo.com/m/VES1N54)* — 14ers-library tracks + Kyle's CalTopo in green; **recommended loop in bold magenta**; 3 summit markers + the Willow Creek / Willow Lake TH.
 
 ---

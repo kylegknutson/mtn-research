@@ -34,6 +34,9 @@ dist_mi: 20.8
 **Status for Emily:** All **seven unclimbed**. A horseshoe of ranked 13ers ringing the Lakes of the Clouds, northern Sangres.
 
 ![Overview map](../maps/lakes_of_clouds_loop.png)
+<!-- PROVENANCE_START -->
+*The recommended route was distilled from **68 recorded GPS tracks** of real trips (Kyle's recordings) — all layered on the [interactive CalTopo research map](https://caltopo.com/m/J9G39T0).*
+<!-- PROVENANCE_END -->
 *[Interactive CalTopo map](https://caltopo.com/m/J9G39T0)*
 
 ---

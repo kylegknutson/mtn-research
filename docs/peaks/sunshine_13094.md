@@ -33,6 +33,9 @@ status_source: "peak_db ascents"
 **Status in DB:** Both 0 ascents (unclimbed). A natural pair on the **American Flats / Engineer Pass** side of the Uncompahgre high country (Lake City / Henson Creek access).
 
 ![Overview map](../maps/sunshine_13094.png)
+<!-- PROVENANCE_START -->
+*The recommended route was distilled from **8 recorded GPS tracks** of real trips (14ers.com · ListsofJohn · peakbagger) — all layered on the [interactive CalTopo research map](https://caltopo.com/m/11EMC0L).*
+<!-- PROVENANCE_END -->
 *[Interactive CalTopo map](https://caltopo.com/m/11EMC0L)*
 
 ---

@@ -30,6 +30,9 @@ dist_mi: 7.5
 **Status for Shawn:** **Unclimbed.** CO Rank 482, ranked and prominent (Rise 2,296').
 
 ![Overview map](../maps/jacque_peak.png)
+<!-- PROVENANCE_START -->
+*The recommended route was distilled from **12 recorded GPS tracks** of real trips (recorded trips) — all layered on the [interactive CalTopo research map](https://caltopo.com/m/R2NF0S2).*
+<!-- PROVENANCE_END -->
 *[Interactive CalTopo map](https://caltopo.com/m/R2NF0S2)*
 
 ---

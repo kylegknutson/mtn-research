@@ -54,6 +54,9 @@ status_source: "peak_db ascents (Kyle — unclimbed)"
 | Note | 3-mile ridgeline; high point is "DUCO Benchmark" |
 
 ![Overview map](../maps/brown_mountain.png)
+<!-- PROVENANCE_START -->
+*The recommended route was distilled from **6 recorded GPS tracks** of real trips (14ers.com · ListsofJohn · peakbagger) — all layered on the [interactive CalTopo research map](https://caltopo.com/m/Q2C5650).*
+<!-- PROVENANCE_END -->
 *[Interactive CalTopo map](https://caltopo.com/m/Q2C5650)*
 
 ---

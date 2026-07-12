@@ -39,6 +39,9 @@ status_source: "peak_db ascents"
 **Status in DB:** All three 0 ascents (unclimbed). These are the core unclimbed ranked 13ers of the **East Taylor Park / Star Pass cluster** — the densest pocket of unclimbed ranked 13ers on Kyle's near-term list.
 
 ![Overview map](../maps/star_peak_group.png)
+<!-- PROVENANCE_START -->
+*The recommended route was distilled from **7 recorded GPS tracks** of real trips (recorded trips) — all layered on the [interactive CalTopo research map](https://caltopo.com/m/J6HBR6S).*
+<!-- PROVENANCE_END -->
 *[Interactive CalTopo map](https://caltopo.com/m/J6HBR6S)*
 
 ---

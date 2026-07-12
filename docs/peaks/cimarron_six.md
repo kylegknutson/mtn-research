@@ -36,6 +36,9 @@ status_source: "peak_db ascents (Kyle — unclimbed)"
 > The remaining **Cimarron** ranked 13ers around Coxcomb, *other than* Fortress + Precipice. Loose, exposed San Juan scrambling — **not** a tundra walk.
 
 ![Overview map](../maps/cimarron_six.png)
+<!-- PROVENANCE_START -->
+*The recommended route was distilled from **15 recorded GPS tracks** of real trips (14ers.com · ListsofJohn · peakbagger · Kyle's recordings) — all layered on the [interactive CalTopo research map](https://caltopo.com/m/55M4430).*
+<!-- PROVENANCE_END -->
 *[Interactive CalTopo map](https://caltopo.com/m/55M4430)* — 14ers-library tracks + Kyle's CalTopo in green; **recommended composed loop in bold magenta**; 6 summit markers.
 
 ---

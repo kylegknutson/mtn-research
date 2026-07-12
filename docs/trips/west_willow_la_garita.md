@@ -44,6 +44,9 @@ status_source: "peak_db ascents (Kyle — climbed)"
 > Consolidates two day-reports that **launch from the same West Willow Creek upper TH** above Creede: the **[Baldy Lejos trio](../peaks/baldy_lejos_trio.md)** (Baldy Lejos + PT 13,115 + PT 13,030) and the **[PT 13,308 + PT 13,166 bridge pair](../peaks/pt_13308_13166.md)**. One trailhead, one camp — two day-loops (~12.4 and ~10.2 mi), or one big push. (The eastern [PT 13,408 + 13,026 pair](../peaks/pt_13026_13408.md) is *not* part of this — it's a separate Cochetopa/Eddiesville trailhead, a different drive.)
 
 ![Overview map](../maps/west_willow_la_garita.png)
+<!-- PROVENANCE_START -->
+*The recommended route was distilled from **19 recorded GPS tracks** of real trips (14ers.com · ListsofJohn · Kyle's recordings) — all layered on the [interactive CalTopo research map](https://caltopo.com/m/9PQM9TT).*
+<!-- PROVENANCE_END -->
 *Five ranked 13ers around one **West Willow Creek upper TH** (orange). The two **magenta day-loops** are the recommended routes — the trio to the NW, the bridge pair to the E/SE — each radiating from the same camp. Per-area route detail + interactive maps: [trio (4278RCG)](https://caltopo.com/m/4278RCG) · [bridge pair (9VGDUR3)](https://caltopo.com/m/9VGDUR3).*
 
 ---

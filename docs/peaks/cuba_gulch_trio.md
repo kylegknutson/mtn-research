@@ -33,6 +33,9 @@ status_source: "peak_db ascents"
 **Status in DB:** All three 0 ascents (unclimbed), all **ranked** San Juan 13ers (PT 13,003 = id 822, Class 1). A natural **Cuba Gulch** day off the **Lake Fork (Lake City)** side, in the Half Peak / Cataract Gulch pocket.
 
 ![Overview map](../maps/cuba_gulch_trio.png)
+<!-- PROVENANCE_START -->
+*The recommended route was distilled from **22 recorded GPS tracks** of real trips (14ers.com · ListsofJohn · peakbagger · Kyle's recordings) — all layered on the [interactive CalTopo research map](https://caltopo.com/m/DCQ8UKS).*
+<!-- PROVENANCE_END -->
 *[Interactive CalTopo map](https://caltopo.com/m/DCQ8UKS)*
 
 ---

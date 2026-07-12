@@ -35,6 +35,9 @@ status_source: "peak_db ascents"
 > **Access — public east side, NOT the Cielo Vista Ranch fee:** these summits sit on the **Culebra crest**, the east edge of Cielo Vista Ranch. The standard way to climb all four is from the **public Blue Lakes Trailhead (Cuchara / east side, San Isabel NF)** — NE slopes up Trinchera, then the ridge south. No ranch reservation/fee is needed for this east-side traverse (the ranch is *west* of the crest). (whileyh 2019; [stavislost route writeup](https://www.stavislost.com/hikes/trail/trinchera-peak-and-cuatro-peak-traverse).)
 
 ![Overview map](../maps/trinchera_group.png)
+<!-- PROVENANCE_START -->
+*The recommended route was distilled from **12 recorded GPS tracks** of real trips (14ers.com · ListsofJohn · peakbagger) — all layered on the [interactive CalTopo research map](https://caltopo.com/m/K7F110T).*
+<!-- PROVENANCE_END -->
 *[Interactive CalTopo map](https://caltopo.com/m/K7F110T)*
 
 ---

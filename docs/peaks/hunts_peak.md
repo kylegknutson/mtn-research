@@ -55,6 +55,9 @@ status_source: "peak_db ascents"
 | Peak DB id | 748 |
 
 ![Overview map](../maps/hunts_peak.png)
+<!-- PROVENANCE_START -->
+*The recommended route was distilled from **8 recorded GPS tracks** of real trips (recorded trips) — all layered on the [interactive CalTopo research map](https://caltopo.com/m/2SCT1B6).*
+<!-- PROVENANCE_END -->
 *[Interactive CalTopo map](https://caltopo.com/m/2SCT1B6)*
 
 ---

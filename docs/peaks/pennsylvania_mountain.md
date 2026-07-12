@@ -61,6 +61,9 @@ status_source: "peak_db ascents"
 | Member ascents | 724 (14ers) + 270 (LoJ) — heavily climbed |
 
 ![Overview map](../maps/pennsylvania_mountain.png)
+<!-- PROVENANCE_START -->
+*The recommended route was distilled from **10 recorded GPS tracks** of real trips (recorded trips) — all layered on the [interactive CalTopo research map](https://caltopo.com/m/P2V1QG5).*
+<!-- PROVENANCE_END -->
 *[Interactive CalTopo map](https://caltopo.com/m/P2V1QG5)*
 
 ---

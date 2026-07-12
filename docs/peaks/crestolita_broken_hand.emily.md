@@ -30,6 +30,9 @@ dist_mi: 3.9
 **Status for Emily:** Both **unclimbed**. Crestone group satellites SW of Crestone Needle — the remaining ranked pair in the South Colony / Cottonwood cirque.
 
 ![Overview map](../maps/crestolita_broken_hand.png)
+<!-- PROVENANCE_START -->
+*The recommended route was distilled from **21 recorded GPS tracks** of real trips (recorded trips) — all layered on the [interactive CalTopo research map](https://caltopo.com/m/6TKA0RH).*
+<!-- PROVENANCE_END -->
 *[Interactive CalTopo map](https://caltopo.com/m/6TKA0RH)*
 
 ---

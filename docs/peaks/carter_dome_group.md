@@ -37,6 +37,9 @@ status_source: "peak_db ascents (Kyle — unclimbed)"
 **Status in DB:** Unclimbed — NH 48 peaks, no prior ascents logged
 
 ![Overview map](../maps/carter_dome_group.png)
+<!-- PROVENANCE_START -->
+*The recommended route was distilled from **42 recorded GPS tracks** of real trips (peakbagger) — all layered on the [interactive CalTopo research map](https://caltopo.com/m/AAFUQQ1).*
+<!-- PROVENANCE_END -->
 *[Interactive CalTopo map](https://caltopo.com/m/AAFUQQ1)*
 
 ---

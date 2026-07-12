@@ -37,6 +37,9 @@ status_source: "peak_db ascents"
 > A grassy **Class 2** 13er on the divide SE of Handies. Recorded parties always bag it alongside Handies / PT 13,801 / Whitecross, but it stands alone as a short, direct out-and-back from the **Grizzly Gulch TH** — which is what's mapped here.
 
 ![Overview map](../maps/campbell_creek_pk.png)
+<!-- PROVENANCE_START -->
+*The recommended route was distilled from **7 recorded GPS tracks** of real trips (14ers.com · ListsofJohn · peakbagger) — all layered on the [interactive CalTopo research map](https://caltopo.com/m/4CBBN9L).*
+<!-- PROVENANCE_END -->
 *[Interactive CalTopo map](https://caltopo.com/m/4CBBN9L)* — 3 recorded 14ers-library tracks (green; all multi-peak) + the **standalone recommended out-and-back in bold magenta**; summit marker + Grizzly Gulch TH.
 
 ---

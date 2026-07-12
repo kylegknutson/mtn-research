@@ -35,6 +35,9 @@ status_source: "peak_db ascents"
 > **Which "Grizzly Peak"?** This is **Grizzly Peak E (13,309')** — the Pieplant/Taylor Park summit that links with Jenkins and PT 13,145 — **not** Grizzly Peak A (13,997', the famous near-14er near Independence Pass, a separate outing ~6 mi north).
 
 ![Overview map](../maps/grizzly_jenkins_group.png)
+<!-- PROVENANCE_START -->
+*The recommended route was distilled from **14 recorded GPS tracks** of real trips (14ers.com · ListsofJohn · peakbagger · Kyle's recordings) — all layered on the [interactive CalTopo research map](https://caltopo.com/m/38DBF6E).*
+<!-- PROVENANCE_END -->
 *[Interactive CalTopo map](https://caltopo.com/m/38DBF6E)* — 11 source GPX tracks (14ers library + LoJ), layered by source; 4 summit markers + Pieplant TH.
 
 ---

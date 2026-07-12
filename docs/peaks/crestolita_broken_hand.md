@@ -33,6 +33,9 @@ status_source: "peak_db ascents"
 **Status in DB:** Both 0 ascents (unclimbed). **Crestone group context:** Crestone Peak, Crestone Needle, and Humboldt Peak are all ✓ done — these two are the remaining ranked satellites of the South Colony / Cottonwood cirque.
 
 ![Overview map](../maps/crestolita_broken_hand.png)
+<!-- PROVENANCE_START -->
+*The recommended route was distilled from **21 recorded GPS tracks** of real trips (recorded trips) — all layered on the [interactive CalTopo research map](https://caltopo.com/m/6TKA0RH).*
+<!-- PROVENANCE_END -->
 *[Interactive CalTopo map](https://caltopo.com/m/6TKA0RH)*
 
 ---

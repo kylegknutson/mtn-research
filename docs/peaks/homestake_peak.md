@@ -64,6 +64,9 @@ status_source: "peak_db ascents"
 | 14ers winter ascents | 71 / Ski descents 61 — heavily skied peak |
 
 ![Overview map](../maps/homestake_peak.png)
+<!-- PROVENANCE_START -->
+*The recommended route was distilled from **10 recorded GPS tracks** of real trips (recorded trips) — all layered on the [interactive CalTopo research map](https://caltopo.com/m/V4D61FV).*
+<!-- PROVENANCE_END -->
 *[Interactive CalTopo map](https://caltopo.com/m/V4D61FV)*
 
 ---

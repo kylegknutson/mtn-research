@@ -40,6 +40,9 @@ status_source: "peak_db ascents (Kyle — unclimbed)"
 > Six ranked 13ers strung along one long, committing ridge. Do them **all in one ~16.4 mi loop** from the end of Wildcat Road — or break them into **3 clean ~8–11 mi day-loops** off three different trailheads.
 
 ![Overview map](../maps/wayah_group.png)
+<!-- PROVENANCE_START -->
+*The recommended route was distilled from **10 recorded GPS tracks** of real trips (14ers.com · ListsofJohn) — all layered on the [interactive CalTopo research map](https://caltopo.com/m/6SVRT30).*
+<!-- PROVENANCE_END -->
 *[Interactive CalTopo map](https://caltopo.com/m/6SVRT30)* — the **recommended ~16.4 mi loop in bold magenta** (all six from the Wildcat Rd / Fryingpan Lakes TH), over recorded 14ers-library tracks (green); 6 summit markers + trailheads.
 
 ---

@@ -36,6 +36,9 @@ status_source: "peak_db ascents (Kyle — unclimbed)"
 > The three red peaks around **Rio Grande Pyramid** in the **Weminuche Wilderness** — deep, remote, and a long way in. Two are easy Class 2; **PT 13,022 has a Class 3–4 exposed crux.**
 
 ![Overview map](../maps/rio_grande_pyramid_three.png)
+<!-- PROVENANCE_START -->
+*The recommended route was distilled from **10 recorded GPS tracks** of real trips (14ers.com · ListsofJohn) — all layered on the [interactive CalTopo research map](https://caltopo.com/m/TMVGNRR).*
+<!-- PROVENANCE_END -->
 *[Interactive CalTopo map](https://caltopo.com/m/TMVGNRR)* — 14ers-library tracks + Kyle's CalTopo in green; **recommended route (a real recorded loop) in bold magenta**; 3 summit markers + the Weminuche Trail TH.
 
 ---

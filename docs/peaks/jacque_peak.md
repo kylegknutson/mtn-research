@@ -62,6 +62,9 @@ status_source: "peak_db ascents"
 | County | Summit |
 
 ![Overview map](../maps/jacque_peak.png)
+<!-- PROVENANCE_START -->
+*The recommended route was distilled from **12 recorded GPS tracks** of real trips (recorded trips) — all layered on the [interactive CalTopo research map](https://caltopo.com/m/R2NF0S2).*
+<!-- PROVENANCE_END -->
 *[Interactive CalTopo map](https://caltopo.com/m/R2NF0S2)*
 
 ---

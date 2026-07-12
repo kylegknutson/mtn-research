@@ -38,6 +38,9 @@ status_source: "peak_db ascents (Kyle — climbed)"
 > Western part of the seven-peak La Garita narrow-down. The eastern peaks are now two separate reports: the **[13,308 + 13,166 bridge pair](pt_13308_13166.md)** (same West Willow TH as this trio) and the **[13,026 + 13,408 pair](pt_13026_13408.md)** (Cochetopa / Eddiesville side).
 
 ![Overview map](../maps/baldy_lejos_trio.png)
+<!-- PROVENANCE_START -->
+*The recommended route was distilled from **9 recorded GPS tracks** of real trips (14ers.com · ListsofJohn) — all layered on the [interactive CalTopo research map](https://caltopo.com/m/4278RCG).*
+<!-- PROVENANCE_END -->
 *[Interactive CalTopo map](https://caltopo.com/m/4278RCG)* — 6 source GPX tracks (14ers library) in green, with the **recommended composed route in bold magenta**; 3 summit markers + the West Willow upper TH.
 
 ---

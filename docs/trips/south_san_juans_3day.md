@@ -41,6 +41,9 @@ status_source: "peak_db ascents (Kyle — unclimbed)"
 **Status in DB:** All five 0 ascents (unclimbed). These are the far southeast San Juan 13ers — the South San Juan Wilderness high points plus Bennett on the Rio Grande side.
 
 ![Overview map](../maps/south_san_juans_3day.png)
+<!-- PROVENANCE_START -->
+*The recommended route was distilled from **36 recorded GPS tracks** of real trips (14ers.com · ListsofJohn · peakbagger · Kyle's recordings) — all layered on the [interactive CalTopo research map](https://caltopo.com/m/AS71AEC).*
+<!-- PROVENANCE_END -->
 *[Interactive CalTopo map](https://caltopo.com/m/AS71AEC)* — the three areas are ~17 mi apart; the overview is a regional locator, per-area route detail is on the CalTopo map.
 
 ---

@@ -52,6 +52,9 @@ status_source: "peak_db ascents"
 Coordinates from your "All" map markers (LiDAR-grade). Wikipedia / older sources occasionally list Telluride Peak at 13,509' — LiDAR puts it at 13,514'.
 
 ![Overview map](../maps/telluride_t7_t8.png)
+<!-- PROVENANCE_START -->
+*The recommended route was distilled from **19 recorded GPS tracks** of real trips (14ers.com · ListsofJohn · peakbagger) — all layered on the [interactive CalTopo research map](https://caltopo.com/m/6FM1FEK).*
+<!-- PROVENANCE_END -->
 *[Interactive CalTopo map](https://caltopo.com/m/6FM1FEK)*
 
 ---

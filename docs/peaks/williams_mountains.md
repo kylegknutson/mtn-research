@@ -36,6 +36,9 @@ status_source: "peak_db ascents (Kyle — unclimbed)"
 > The full **Williams Mountains** sub-range ridge, W of Independence Pass — *not* to be confused with Williams Peak. All five ranked summits in one outing.
 
 ![Overview map](../maps/williams_mountains.png)
+<!-- PROVENANCE_START -->
+*The recommended route was distilled from **7 recorded GPS tracks** of real trips (14ers.com · ListsofJohn · peakbagger) — all layered on the [interactive CalTopo research map](https://caltopo.com/m/310E34A).*
+<!-- PROVENANCE_END -->
 *[Interactive CalTopo map](https://caltopo.com/m/310E34A)* — source GPX (14ers library + Kyle's CalTopo) in green, with the **recommended full-traverse loop in bold magenta**; 5 summit markers + Lost Man TH.
 
 ---

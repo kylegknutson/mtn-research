@@ -58,6 +58,7 @@ REPO_WIDE = [
     (["check_reports.py"], "source-rigor footer"),
     (["gen_index.py", "--check"], "index table current"),
     (["gen_quickstats.py", "--check"], "quick-stats current"),
+    (["gen_provenance.py", "--check"], "route-provenance notes current"),
     (["gen_peak_map.py", "--check"], "home-map data current"),
     (["backfill_dist_mi.py", "--check"], "single-day reports have a distance"),
     (["check_nav.py"], "every report reachable from its site's nav"),

@@ -71,6 +71,9 @@ status_source: "peak_db ascents"
 | 14ers winter ascents | 1 / Ski descents 29 — popular ski peak (Savage Couloir) |
 
 ![Overview map](../maps/savage_peak.png)
+<!-- PROVENANCE_START -->
+*The recommended route was distilled from **15 recorded GPS tracks** of real trips (Kyle's recordings) — all layered on the [interactive CalTopo research map](https://caltopo.com/m/QL51DBE).*
+<!-- PROVENANCE_END -->
 *[Interactive CalTopo map](https://caltopo.com/m/QL51DBE)*
 
 ---

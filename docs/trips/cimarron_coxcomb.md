@@ -42,6 +42,9 @@ status_source: "peak_db ascents (Kyle — unclimbed)"
 > Consolidates the **Cimarron** group near **Coxcomb**: the **[remaining six](../peaks/cimarron_six.md)** off the **Middle Fork** (Heisshorn + El Punto + four PTs) in one big loop, plus **Fortress and Precipice** (days 2–3 below) climbed **individually** off the **West Fork**. Two forks of the same road — a weekend to finish the area. **Loose, exposed San Juan Class 3**, not a tundra walk.
 
 ![Overview map](../maps/cimarron_coxcomb.png)
+<!-- PROVENANCE_START -->
+*The recommended route was distilled from **30 recorded GPS tracks** of real trips (14ers.com · ListsofJohn · peakbagger · Kyle's recordings).*
+<!-- PROVENANCE_END -->
 *All eight ranked 13ers around Coxcomb. **Magenta routes:** the six-peak Middle Fork loop (E/SE) and the two individual West Fork out-and-backs to Fortress and Precipice (NW). Per-area route detail + interactive map: [Middle Fork six (55M4430)](https://caltopo.com/m/55M4430); Fortress + Precipice are the two West Fork day routes above.*
 
 ---

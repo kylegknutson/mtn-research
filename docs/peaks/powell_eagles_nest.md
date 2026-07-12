@@ -33,6 +33,9 @@ status_source: "peak_db ascents"
 **Status in DB:** Both 0 ascents (unclimbed). **Mount Powell is the highest peak in the Gore Range.**
 
 ![Overview map](../maps/powell_eagles_nest.png)
+<!-- PROVENANCE_START -->
+*The recommended route was distilled from **21 recorded GPS tracks** of real trips (recorded trips) — all layered on the [interactive CalTopo research map](https://caltopo.com/m/GG1BKFL).*
+<!-- PROVENANCE_END -->
 *[Interactive CalTopo map](https://caltopo.com/m/GG1BKFL)*
 
 ---

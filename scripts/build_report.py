@@ -177,6 +177,7 @@ def finalize_phase(args):
     if getattr(args, "climber", None) and args.climber != "kyle":
         run([SCRIPTS / "gen_index.py", "--climber", args.climber])
     run([SCRIPTS / "gen_quickstats.py"])
+    run([SCRIPTS / "gen_provenance.py"])
     run([SCRIPTS / "gen_peak_map.py"])
     # Safety net: surface any orphaned/duplicate "Research:" CalTopo map (e.g. from a
     # past rebuild or a manual frontmatter id change) so a stale "wrong version" map

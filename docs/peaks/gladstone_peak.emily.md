@@ -38,6 +38,9 @@ status_source: "scrape_14ers_checklist emily (usernum 45697) 2026-06-17; peak_db
 > **Gladstone Peak (13,923')** is the pyramid wedged between **Mount Wilson** and **El Diente** in the Wilson group. Climbed on its own, the **shortest recorded line is from the Cross Mountain TH up Bilk Basin** — a **~11.3 mi / ~5,000 ft round trip** to a **short Class 4 move right below the summit** (with an easier **Class 3** line just left of it). The mountain is **notoriously loose**; the difficulty is the rock quality and that final summit block, not the mileage.
 
 ![Overview map](../maps/gladstone_peak.png)
+<!-- PROVENANCE_START -->
+*The recommended route was distilled from **12 recorded GPS tracks** of real trips (14ers.com · ListsofJohn · peakbagger) — all layered on the [interactive CalTopo research map](https://caltopo.com/m/1PV10HH).*
+<!-- PROVENANCE_END -->
 *[Interactive CalTopo map](https://caltopo.com/m/1PV10HH)* — the **recommended Cross Mountain / Bilk Basin route in bold magenta** (DEM-measured off a recorded 14ers track), over the other library tracks (green); summit marker + the Cross Mountain TH.
 
 ---

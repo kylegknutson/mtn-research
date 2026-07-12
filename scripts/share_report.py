@@ -109,6 +109,9 @@ def sanitize(text: str, share_map_url: str | None, slug: str) -> str:
     import yaml
     text = re.sub(r"\A---\n.*?\n---\n", "", text, flags=re.S)
     text = re.sub(r"<!-- CLIMBERS_START -->.*?<!-- CLIMBERS_END -->\n?", "", text, flags=re.S)
+    # reports carry their own provenance block (gen_provenance.py) pointing at the
+    # RESEARCH map — the share page emits its own note against the share map
+    text = re.sub(r"<!-- PROVENANCE_START -->.*?<!-- PROVENANCE_END -->\n?", "", text, flags=re.S)
     out = []
     for line in text.splitlines():
         low = line.lower()

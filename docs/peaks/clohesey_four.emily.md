@@ -39,6 +39,9 @@ status_source: "scrape_14ers_checklist emily"
 > Four Class 2 ranked 13ers on the ridge above Clohesey Lake — **Magdalene Mtn, "Pear Pk", PT 13,517 A ("UN 13,513"), and PT 13,486**. They link into **one ~12 mi loop**; the only real catch is the **brutal 4x4 road to Clohesey Lake** (there's a walk-in alternative below).
 
 ![Overview map](../maps/clohesey_four.png)
+<!-- PROVENANCE_START -->
+*The recommended route was distilled from **22 recorded GPS tracks** of real trips (14ers.com · ListsofJohn · peakbagger) — all layered on the [interactive CalTopo research map](https://caltopo.com/m/P38PGQ6).*
+<!-- PROVENANCE_END -->
 *[Interactive CalTopo map](https://caltopo.com/m/P38PGQ6)* — the **recommended ~12 mi link-up loop in bold magenta**, over recorded 14ers-library tracks (green); 4 summit markers + the Clohesey Lake TH.
 
 ---
