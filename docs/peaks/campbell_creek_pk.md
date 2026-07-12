@@ -31,10 +31,11 @@ status_source: "peak_db ascents"
 
 **Researched:** 2026-06-15
 
-!!! tip "Map & weather"
-    **CalTopo research map:** https://caltopo.com/m/4CBBN9L
-
+!!! tip ""
     **Trip NOAA weather:** [Campbell Creek Pk Weather](https://forecast.weather.gov/MapClick.php?lat=37.9067&lon=-107.4629)
+
+!!! info ""
+    **CalTopo research map:** https://caltopo.com/m/4CBBN9L
 
 **Status in DB:** unclimbed. **Every ranked 13er within 4 miles is already done** (PT 13,801, Quarter, Sundog, Handies, Sunshine, Whitecross, American, Half, Redcloud…) — this is the lone cleanup peak.
 

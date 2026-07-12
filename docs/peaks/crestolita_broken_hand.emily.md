@@ -25,10 +25,11 @@ dist_mi: 3.9
 
 *Written for **Emily** — both peaks unclimbed on her 14ers checklist.*
 
-!!! tip "Map & weather"
-    **CalTopo research map:** https://caltopo.com/m/6TKA0RH
-
+!!! tip ""
     **Trip NOAA weather:** [Crestolita + Broken Hand Peak Weather](https://forecast.weather.gov/MapClick.php?lat=37.95671&lon=-105.56665)
+
+!!! info ""
+    **CalTopo research map:** https://caltopo.com/m/6TKA0RH
 
 **Status for Emily:** Both **unclimbed**. Crestone group satellites SW of Crestone Needle — the remaining ranked pair in the South Colony / Cottonwood cirque.
 

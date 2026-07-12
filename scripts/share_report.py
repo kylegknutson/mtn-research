@@ -71,6 +71,8 @@ img{max-width:100%;height:auto;border:1px solid #ddd}
 .admonition{border-left:4px solid #888;background:#f6f6f6;padding:.6rem 1rem;margin:1rem 0}
 .admonition.danger{border-color:#c00;background:#fff0f0}
 .admonition.tip{border-color:#e6008c;background:#fdf2f8}
+.admonition.info{border-color:#1976d2;background:#f0f6fd}
+.admonition-title:empty{display:none}
 .admonition-title{font-weight:700;margin:0 0 .3rem}
 blockquote{border-left:3px solid #ccc;margin:1rem 0;padding:.2rem 1rem;color:#555}
 footer{margin-top:3rem;font-size:.8rem;color:#888;border-top:1px solid #ddd;padding-top:.6rem}
@@ -85,6 +87,7 @@ img{border-color:#3a3f45}
 .admonition{background:#1e2226;border-color:#666}
 .admonition.danger{background:#2a1a1a;border-color:#c00}
 .admonition.tip{background:#261a22;border-color:#e6008c}
+.admonition.info{background:#16202b;border-color:#1976d2}
 blockquote{border-color:#3a3f45;color:#a8adb3}
 footer{border-color:#3a3f45}
 .prepared{background:#261a22;border-color:#e6008c55}
@@ -147,11 +150,11 @@ def sanitize(text: str, share_map_url: str | None, slug: str) -> str:
         text = text.replace(
             "**CalTopo research map:**",
             "**Interactive CalTopo map with recommended route:**")
-        # (indent-tolerant: the map line may live inside the "Map & weather"
-        # admonition box; the note joins it at the same indent)
+        # the note joins the map's admonition box as an INDENTED quote (Kyle,
+        # 2026-07-11), matching whatever indent the map line has
         text = re.sub(
             rf"^([ \t]*)(\*\*Interactive CalTopo map with recommended route:\*\*.*)$",
-            rf"\1\2\n\1\n\1*Note: the recommended route was distilled from **{n_src} "
+            rf"\1\2\n\1\n\1> *Note: the recommended route was distilled from **{n_src} "
             rf"recorded GPS tracks** of real trips (14ers.com · ListsofJohn · peakbagger "
             rf"· the author's own recordings).*",
             text, flags=re.M)

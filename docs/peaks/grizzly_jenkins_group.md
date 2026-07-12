@@ -29,10 +29,11 @@ status_source: "peak_db ascents"
 
 **Researched:** 2026-06-09
 
-!!! tip "Map & weather"
-    **CalTopo research map:** https://caltopo.com/m/38DBF6E
-
+!!! tip ""
     **Trip NOAA weather:** [Grizzly Pk E + PT 13,145 + Jenkins Mtn Weather](https://forecast.weather.gov/MapClick.php?lat=38.96511&lon=-106.54299)
+
+!!! info ""
+    **CalTopo research map:** https://caltopo.com/m/38DBF6E
 
 **Status in DB:** all unclimbed.
 

@@ -29,10 +29,11 @@ status_source: "peak_db ascents"
 
 **Researched:** 2026-05-28
 
-!!! tip "Map & weather"
-    **CalTopo research map:** https://caltopo.com/m/V4D61FV
-
+!!! tip ""
     **Trip NOAA weather:** [Homestake Peak Weather](https://forecast.weather.gov/MapClick.php?lat=39.36757&lon=-106.41454)
+
+!!! info ""
+    **CalTopo research map:** https://caltopo.com/m/V4D61FV
 
 **Status in DB:** 0 ascents (unclimbed). **Cluster status:**
 - ✗ **Savage Peak 5.72 mi unclimbed** ← also on Kyle's "do" list. See Multi-peak combo section below.

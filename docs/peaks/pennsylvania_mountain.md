@@ -29,10 +29,11 @@ status_source: "peak_db ascents"
 
 **Researched:** 2026-05-28
 
-!!! tip "Map & weather"
-    **CalTopo research map:** https://caltopo.com/m/P2V1QG5
-
+!!! tip ""
     **Trip NOAA weather:** [Pennsylvania Mountain Weather](https://forecast.weather.gov/MapClick.php?lat=39.26461&lon=-106.14243)
+
+!!! info ""
+    **CalTopo research map:** https://caltopo.com/m/P2V1QG5
 
 **Status in DB:** 0 ascents (unclimbed). **Cluster status:**
 - ✗ **No unclimbed ranked 13ers within 8 mi** — Bartlett Mtn at 7.82 mi is the only one and it's on the opposite side of Climax Mine (different approach entirely)

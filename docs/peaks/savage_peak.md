@@ -30,10 +30,11 @@ status_source: "peak_db ascents"
 
 **Researched:** 2026-05-28 · **PT 13,002 combo added:** 2026-06-09
 
-!!! tip "Map & weather"
-    **CalTopo research map:** https://caltopo.com/m/QL51DBE
-
+!!! tip ""
     **Trip NOAA weather:** [Savage Peak + PT 13,002 Weather](https://forecast.weather.gov/MapClick.php?lat=39.38053&lon=-106.52061)
+
+!!! info ""
+    **CalTopo research map:** https://caltopo.com/m/QL51DBE
 
 **Status in DB:** both 0 ascents (unclimbed). **Cluster status:**
 - ✗ **PT 13,002 (1.92 mi) — unclimbed ranked, Class 3** ← **closest neighbor; see "Adding PT 13,002" below**
