@@ -65,19 +65,31 @@ def render(meta):
     wx = None
     lines = []
     if detail:
-        # Trip: a summary line (peaks · drive · central weather), then one list
-        # item per day. The list (and the blank line) force each day onto its own
-        # line — plain newlines inside an admonition collapse into one paragraph.
-        lines.append(f'!!! tip "At a glance — {days}-day trip"')
+        # Chronological sequence — pack-in, climbing days, camp moves, pack-out.
+        # EVERY entry is a real calendar day (Kyle, 2026-07-12: a pack day of a
+        # multi-day backpack is a legit day). Entries may carry an explicit
+        # `day: N` to share a day (e.g. Jupiter + camp move in one push); without
+        # it, each entry auto-increments. Frontmatter `days:` keeps its gate
+        # meaning (climbing days with routes); the header derives the TRIP length
+        # from the sequence.
+        seq = ([("leg", meta["approach"])] if meta.get("approach") else []) \
+            + [("move" if dd.get("move") else "climb", dd) for dd in detail] \
+            + ([("leg", meta["packout"])] if meta.get("packout") else [])
+        cur = 0
+        numbered = []
+        for kind, item in seq:
+            cur = item.get("day") or cur + 1
+            numbered.append((cur, kind, item))
+        trip_days = max(n for n, _, _ in numbered)
+
+        lines.append(f'!!! tip "At a glance — {trip_days}-day trip"')
         summ = f"**{meta['peaks']} peaks**" if meta.get("peaks") else ""
         # Backpack trips: a TRIP TOTAL in the summary line (Kyle, 2026-07-10 — always
-        # for multi-day pack-ins). Computed from the components (pack-in + days +
-        # pack-out) so it can never disagree with the lines below it.
-        comps = ([meta["approach"]] if meta.get("approach") else []) + list(detail) \
-            + ([meta["packout"]] if meta.get("packout") else [])
+        # for multi-day pack-ins). Computed from the components so it can never
+        # disagree with the lines below it.
         if meta.get("approach") or meta.get("packout"):
-            tot_mi = sum(c.get("dist_mi") or 0 for c in comps)
-            tot_ft = sum(c.get("gain_ft") or 0 for c in comps)
+            tot_mi = sum(item.get("dist_mi") or 0 for _, _, item in numbered)
+            tot_ft = sum(item.get("gain_ft") or 0 for _, _, item in numbered)
             if tot_mi and tot_ft:
                 summ += (" · " if summ else "") + \
                     f"**trip total ~{n_mi(tot_mi)} mi · ~{n_ft(tot_ft)} ft**"
@@ -87,29 +99,16 @@ def render(meta):
             summ += (" · " if summ else "") + f"[weather]({wx})"
         lines.append(f"    {summ}")
         lines.append("")
-        # Backpack trips: pack-in/pack-out are first-class "At a glance" lines
-        # (Kyle, 2026-07-10 — ALWAYS for multi-day backpacks). Frontmatter:
-        #   approach: {label, dist_mi, gain_ft, loss_ft}   packout: {…}
-        appr = meta.get("approach")
-        if appr:
-            lines.append(f"    - **{appr.get('label', 'Pack-in')}:** {stat_line(appr)}")
-        # `move: true` entries are non-climbing legs (mid-trip camp moves) — rendered
-        # in chronological position but not numbered as climbing days (and not counted
-        # against frontmatter `days:`, which stays = climbing days with routes).
-        day_n = 0
-        for dd in detail:
-            if dd.get("move"):
-                lines.append(f"    - **{dd.get('label', 'Camp move')}:** {stat_line(dd)}")
-                continue
-            day_n += 1
-            label = dd.get("label", f"Day {day_n}")
-            item = f"    - **Day {day_n} ({label}):** {stat_line(dd)}"
-            if dd.get("wx"):           # per-day link when peaks are >6 mi apart
-                item += f" · [weather]({dd['wx']})"
-            lines.append(item)
-        po = meta.get("packout")
-        if po:
-            lines.append(f"    - **{po.get('label', 'Pack-out')}:** {stat_line(po)}")
+        for n, kind, item in numbered:
+            if kind == "climb":
+                label = item.get("label", "")
+                row = f"    - **Day {n} ({label}):** {stat_line(item)}"
+                if item.get("wx"):     # per-day link when peaks are >6 mi apart
+                    row += f" · [weather]({item['wx']})"
+            else:
+                label = item.get("label", "Camp move" if kind == "move" else "Pack day")
+                row = f"    - **Day {n} — {label}:** {stat_line(item)}"
+            lines.append(row)
     else:
         head = stat_line(meta)
         if drive_s:

@@ -32,13 +32,13 @@ status_source: "scrape_14ers_checklist emily"
 
 <!-- QUICKSTATS_START -->
 
-!!! tip "At a glance — 2-day trip"
+!!! tip "At a glance — 4-day trip"
     **5 peaks** · **trip total ~32.7 mi · ~13,318 ft** · **~7.6 h drive**
 
-    - **Pack-in (Molas Pass → Vestal Basin camp):** **10 mi** · **3,077 ft** gain · 2,250 ft descent
-    - **Day 1 (Vestal (Wham Ridge) + Arrow):** **6.4 mi** · **4,282 ft** gain · **Class 5.4** · 2 peaks
-    - **Day 2 (Trinity traverse (W→E)):** **6.3 mi** · **3,709 ft** gain · **Class 4** · 3 peaks
-    - **Pack-out (camp → Molas Pass):** **10 mi** · **2,250 ft** gain · 3,077 ft descent
+    - **Day 1 — Pack-in (Molas Pass → Vestal Basin camp):** **10 mi** · **3,077 ft** gain · 2,250 ft descent
+    - **Day 2 (Vestal (Wham Ridge) + Arrow):** **6.4 mi** · **4,282 ft** gain · **Class 5.4** · 2 peaks
+    - **Day 3 (Trinity traverse (W→E)):** **6.3 mi** · **3,709 ft** gain · **Class 4** · 3 peaks
+    - **Day 4 — Pack-out (camp → Molas Pass):** **10 mi** · **2,250 ft** gain · 3,077 ft descent
 
 <!-- QUICKSTATS_END -->
 
@@ -117,7 +117,7 @@ GPX tracks start. US 550 is paved all the way; no 4WD needed.
 > 1,700' Animas climb out, but chains you to the train schedule — several swept tracks
 > use it (their starts show at the Animas River, ~8,900').
 
-### Pack-in (Day 0) — Molas Pass → Vestal Basin
+### Day 1 — Pack-in: Molas Pass → Vestal Basin
 
 **10 mi · ~3,080 ft up · ~2,250 ft down, measured** (the drawn corridor line — composed
 from recorded tracks, Molas lot to the basin camp; you repay the descent on the way out)
@@ -157,7 +157,7 @@ Considerations for all three:
 - **Split-camp variant:** some parties move camp mid-trip (lower meadow for Day 1, upper
   bench before Day 2) — rarely worth the packing time for the ~1 mi it saves.
 
-### Pack-out (final day)
+### Day 4 — Pack-out
 
 Reverse the approach: 10 mi, mostly down Elk Creek, then the **~1,750 ft climb back up**
 from the Animas to Molas Pass at the end — budget energy (and snacks) for it. (Same
@@ -165,7 +165,7 @@ corridor as the pack-in, so the map shows one line for both.)
 
 ---
 
-## Day 1 — Vestal via Wham Ridge, then Arrow (Class 5.4 · 6.4 mi · ~4,280 ft from camp, measured)
+## Day 2 — Vestal via Wham Ridge, then Arrow (Class 5.4 · 6.4 mi · ~4,280 ft from camp, measured)
 
 The Grenadiers' marquee day, and one of Colorado's classic alpine rock routes.
 
@@ -191,7 +191,7 @@ verbatim — 6.4 mi / ~4,282 ft (smoothed DEM)**. Parties commonly log 8–14 ho
 
 ---
 
-## Day 2 — The Trinity traverse, W→E (Class 4 · 6.3 mi · ~3,700 ft from camp, measured)
+## Day 3 — The Trinity traverse, W→E (Class 4 · 6.3 mi · ~3,700 ft from camp, measured)
 
 Three summits by the classic west-to-east line — climb high, traverse, descend easy.
 

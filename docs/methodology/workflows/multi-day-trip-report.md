@@ -11,6 +11,15 @@ This is the most complex flavor: it's a day-trip report per day, wrapped in trip
 Source rigor (all three sources, confirmed logged-in) on **every peak** in the itinerary, plus:
 
 - [ ] **Itinerary design** — group peaks by day from the basecamp(s); balance daily gain/distance/class
+- [ ] **Pack/move days are REAL days (Kyle, 2026-07-12)** — the At-a-glance day list
+  numbers EVERY calendar day: pack-in, climbing days, camp moves, pack-out. Entries in
+  `approach:`/`packout:`/`days_detail` take an optional `day: N` so two legs can share
+  a day (e.g. a morning summit + afternoon camp move); without it each entry
+  auto-increments. The header's "N-day trip" derives from the sequence (frontmatter
+  `days:` keeps its gate meaning: climbing days with routes). **When building the
+  report, decide — and RECOMMEND — where camp moves and pack legs fall:** stack a move
+  with a moderate climbing day when both halves are easy and it saves a night; give it
+  its own day when the adjacent climbs are the trip's crux (keep Class 4+ on fresh legs).
 - [ ] **Basecamp selection — its own report section (Kyle, 2026-07-10)** — a "Basecamp —
   options & considerations" section listing every viable camp (elevation, pros/cons table)
   plus water/marmots/exposure/LNT notes. The recommended camp is what the pack-in stats
