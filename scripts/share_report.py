@@ -206,9 +206,10 @@ def sanitize(text: str, share_map_url: str | None, slug: str) -> str:
     return text
 
 
-def render(entry) -> None:
-    """(Re)generate share_site/s/<token>/ from the current report state."""
-    report = find_report(entry["slug"])
+def render(entry, report: Path | None = None, dest: Path | None = None) -> None:
+    """(Re)generate share_site/s/<token>/ from the current report state.
+    report/dest overrides serve --preview (render a draft md to preview/<name>/)."""
+    report = report or find_report(entry["slug"])
     md = sanitize(report.read_text(), entry.get("share_map"), entry["slug"])
     body = markdown.markdown(md, extensions=["tables", "admonition", "fenced_code"])
     m = re.search(r"<h1[^>]*>(.*?)</h1>", body, re.S)
@@ -233,7 +234,7 @@ def render(entry) -> None:
             f"<footer>Shared {entry['created']} · link expires ~{expires} · "
             f"conditions change — verify everything yourself</footer>"
             f"</body></html>\n")
-    dest = SITE_DIR / "s" / entry["token"]
+    dest = dest or SITE_DIR / "s" / entry["token"]
     dest.mkdir(parents=True, exist_ok=True)
     (dest / "index.html").write_text(html)
     shutil.copyfile(DOCS / "maps" / f"{entry['slug']}.png", dest / "map.png")
@@ -283,6 +284,22 @@ def new_share(slug: str, ttl: int, no_map: bool):
     print(f"\nShare link (after --publish): {SHARE_HOST}/s/{entry['token']}/")
 
 
+def preview(md_file: str, like_slug: str):
+    """Render a DRAFT report md through the exact share pipeline (sanitize + CSS)
+    into share_site/preview/<stem>/ — for format comparisons. Not in the ledger;
+    reuses the modeled slug's live share map/token metadata. Publish with --publish
+    (rebuild leaves preview/ alone); remove the dir when done comparing."""
+    src = Path(md_file)
+    if not src.exists():
+        sys.exit(f"ERROR: {src} not found")
+    entry = next((e for e in load_ledger() if e["slug"] == like_slug), None)
+    if not entry:
+        sys.exit(f"ERROR: no live share for {like_slug!r} to model the preview on")
+    write_site_chrome()
+    render(entry, report=src, dest=SITE_DIR / "preview" / src.stem)
+    print(f"preview (after --publish): {SHARE_HOST}/preview/{src.stem}/")
+
+
 def rebuild():
     write_site_chrome()
     live = load_ledger()
@@ -324,9 +341,14 @@ def main():
     ap.add_argument("--rebuild", action="store_true")
     ap.add_argument("--prune", action="store_true")
     ap.add_argument("--publish", action="store_true")
+    ap.add_argument("--preview", metavar="MD", help="render a draft md to preview/<stem>/ (format mock-up)")
+    ap.add_argument("--like", metavar="SLUG", help="live share whose map/metadata the preview borrows")
     args = ap.parse_args()
 
-    if args.slug:
+    if args.preview:
+        preview(args.preview, args.like or args.slug or "")
+        args.slug = None   # --like piggybacks on the slug arg; don't mint a share
+    elif args.slug:
         new_share(args.slug, args.ttl_days, args.no_map)
     if args.prune:
         prune()
@@ -334,7 +356,7 @@ def main():
         rebuild()
     if args.publish:
         publish()
-    if not any([args.slug, args.prune, args.rebuild, args.publish]):
+    if not any([args.slug, args.prune, args.rebuild, args.publish, args.preview]):
         ap.print_help()
 
 
