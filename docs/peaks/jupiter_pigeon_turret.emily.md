@@ -52,6 +52,7 @@ status_source: "scrape_14ers_checklist emily"
 **Researched:** 2026-07-10
 **Report type:** Multi-day train-served backpack — two basins, one camp move over 13,000'
 **CalTopo research map:** https://caltopo.com/m/MU0K4JT
+**Shareable link (sanitized — safe to forward to anyone):** <https://mtn-share.pages.dev/s/e6d42c6c59b6cda8/> — no names, climbed status, or research maps; expires ~2026-11-08 (regenerate anytime: `share_report.py jupiter_pigeon_turret`)
 **Status for Emily:** All **five unclimbed**. Pigeon's mile-high "Matterhorn" face over the Animas is the most dramatic summit profile in the Needles.
 
 ![Overview map](../maps/jupiter_pigeon_turret.png)
