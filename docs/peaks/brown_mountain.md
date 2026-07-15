@@ -31,7 +31,7 @@ status_source: "peak_db ascents (Kyle — unclimbed)"
 **Researched:** 2026-05-14 (rev 4 — cluster status confirmed 5/15)
 
 !!! weather ""
-    **NOAA weather link:** [Brown Mountain Weather](https://forecast.weather.gov/MapClick.php?lat=37.92078&lon=-108.63785)
+    **NOAA weather link:** [Brown Mountain Weather](https://forecast.weather.gov/MapClick.php?lat=37.92078&lon=-107.63785)
 
 !!! map ""
     **CalTopo research map:** https://caltopo.com/m/Q2C5650
@@ -60,7 +60,7 @@ status_source: "peak_db ascents (Kyle — unclimbed)"
 | | [Brown Mountain (DUCO BM)](https://www.14ers.com/peaks/10441) |
 |---|---|
 | Elevation (LiDAR) | 13,347' (climb13ers + 14ers consensus); your sheet says 13,339' |
-| Lat / Lon | 37.92078, −108.63785 |
+| Lat / Lon | 37.92078, −107.63785 |
 | 14ers.com peak page | https://www.14ers.com/peaks/10441/13er-brown-mountain-a |
 | Range | San Juan Mountains |
 | Class (standard) | 2 |
