@@ -25,6 +25,8 @@ from pathlib import Path
 import yaml
 
 ROOT = Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(ROOT / "scripts"))
+from gpx_root import glob_gpx, gpx_file   # worktree-aware gpx resolution
 GPX = ROOT / "gpx"
 DOCS = ROOT / "docs"
 OUT = DOCS / "data" / "peaks.json"
@@ -81,7 +83,7 @@ def recommended_routes(slug: str) -> list:
     import xml.etree.ElementTree as ET
     NS = "{http://www.topografix.com/GPX/1/1}"
     out = []
-    for f in sorted((GPX / slug).glob("*recommended*.gpx")):
+    for f in sorted(glob_gpx(ROOT, slug, "*recommended*.gpx")):
         try:
             root = ET.parse(f).getroot()
         except Exception:
@@ -114,7 +116,7 @@ def build_routes() -> list:
             if not coords_list:
                 continue
             objs = []
-            yml = GPX / slug / "peaks.yml"
+            yml = gpx_file(ROOT, slug, "peaks.yml")
             if yml.exists():
                 try:
                     objs = (yaml.safe_load(yml.read_text()) or {}).get("objective_ids") or []

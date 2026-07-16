@@ -30,6 +30,7 @@ GPX = ROOT / "gpx"
 DOCS = ROOT / "docs"
 sys.path.insert(0, str(ROOT / "scripts"))
 import infer_route_recipe as ir   # pts_of, route_len_mi, build, reproduces
+from gpx_root import glob_gpx, gpx_file   # worktree-aware gpx resolution
 
 
 def report_slugs(only):
@@ -40,20 +41,20 @@ def report_slugs(only):
                 continue
             if only and p.stem != only:
                 continue
-            if (GPX / p.stem / "peaks.yml").exists():
+            if gpx_file(ROOT, p.stem, "peaks.yml").exists():
                 out.append(p.stem)
     return out
 
 
 def committed(slug):
-    rf = GPX / slug / f"{slug}_recommended.gpx"
+    rf = gpx_file(ROOT, slug, f"{slug}_recommended.gpx")
     return ir.pts_of(rf) if rf.exists() else []
 
 
 def check(slug):
-    cfg = yaml.safe_load((GPX / slug / "peaks.yml").read_text()) or {}
+    cfg = yaml.safe_load(gpx_file(ROOT, slug, "peaks.yml").read_text()) or {}
     if cfg.get("days"):
-        days = sorted((GPX / slug).glob("day_*recommended*.gpx"))
+        days = sorted(glob_gpx(ROOT, slug, "day_*recommended*.gpx"))
         bad = [d.name for d in days if len(ir.pts_of(d)) < 2]
         if not days:
             return False, "trip: no day_*_recommended.gpx files"

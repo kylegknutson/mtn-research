@@ -30,6 +30,8 @@ from pathlib import Path
 import yaml
 
 ROOT = Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(ROOT / "scripts"))
+from gpx_root import glob_gpx   # worktree-aware gpx resolution
 GPX = ROOT / "gpx"
 
 
@@ -56,7 +58,7 @@ def main():
     missing = short = 0
     for p in reports:
         base = p.stem.split(".")[0]
-        routes = list((GPX / base).glob("*recommended*.gpx"))
+        routes = glob_gpx(ROOT, base, "*recommended*.gpx")
         meta = fm(p)
         try:
             days = int(meta.get("days") or 1)

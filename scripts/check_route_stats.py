@@ -32,6 +32,8 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 GPX_ROOT = ROOT / "gpx"
+sys.path.insert(0, str(ROOT / "scripts"))
+from gpx_root import glob_gpx   # worktree-aware gpx resolution
 PEAKS_DIR = ROOT / "docs" / "peaks"
 NS = "{http://www.topografix.com/GPX/1/1}"
 SKIP = ("peaks_only", "landmark", "trailhead", "recommended", "_drive", "drive_in", "waypoints", "summit")
@@ -99,7 +101,7 @@ def main():
     findings = 0
     for d in dirs:
         slug = d.name
-        files = [f for f in d.glob("*.gpx") if not any(s in f.name.lower() for s in SKIP)]
+        files = [f for f in glob_gpx(ROOT, slug, "*.gpx") if not any(s in f.name.lower() for s in SKIP)]
         miles = [m for f in files if (m := track_miles(f))]
         if not miles:
             continue
@@ -112,7 +114,7 @@ def main():
         # SHORTER than any recorded track — that's not an optimistic estimate, it's
         # measured. So exempt any headline mileage that matches the recommended
         # route's own measured length (within 15%) from SHORTER-THAN-REAL.
-        rec = next((track_miles(f) for f in d.glob("*recommended*.gpx")), None)
+        rec = next((track_miles(f) for f in glob_gpx(ROOT, slug, "*recommended*.gpx")), None)
         flags = []
         if re.search(r"climb\s*13ers", gain, re.I):
             flags.append("HEADLINE-SOURCE (climb13ers estimate in headline)")

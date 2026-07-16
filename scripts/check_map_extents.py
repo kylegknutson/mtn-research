@@ -24,6 +24,8 @@ import xml.etree.ElementTree as ET
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(ROOT / "scripts"))
+from gpx_root import glob_gpx   # worktree-aware gpx resolution
 GPX_DIR = ROOT / "gpx"
 MAPS_DIR = ROOT / "docs" / "maps"
 NS = "{http://www.topografix.com/GPX/1/1}"
@@ -47,7 +49,7 @@ def main() -> None:
             continue
         if not (GPX_DIR / slug).is_dir():
             continue
-        routes = sorted((GPX_DIR / slug).glob("*recommended*.gpx"))
+        routes = sorted(glob_gpx(ROOT, slug, "*recommended*.gpx"))
         if not routes:
             continue
         checked += 1

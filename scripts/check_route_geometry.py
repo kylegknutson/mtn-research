@@ -39,6 +39,8 @@ from pathlib import Path
 import xml.etree.ElementTree as ET
 
 GPX_ROOT = Path(__file__).resolve().parent.parent / "gpx"
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from gpx_root import gpx_roots, glob_gpx   # worktree-aware gpx resolution
 NS = "{http://www.topografix.com/GPX/1/1}"
 
 # A real leg's consecutive points are < ~0.1 mi apart. Composed routes can show
@@ -89,9 +91,11 @@ def main():
     args = ap.parse_args()
 
     if args.slug:
-        files = sorted((GPX_ROOT / args.slug).glob("*_recommended.gpx"))
+        files = sorted(glob_gpx(GPX_ROOT.parent, args.slug, "*_recommended.gpx"))
     else:
-        files = sorted(GPX_ROOT.glob("*/*_recommended.gpx"))
+        slugs = sorted({p.name for r in gpx_roots(GPX_ROOT.parent) if r.is_dir()
+                        for p in r.iterdir() if p.is_dir()})
+        files = [f for s in slugs for f in sorted(glob_gpx(GPX_ROOT.parent, s, "*_recommended.gpx"))]
 
     if not files:
         print("No *_recommended.gpx routes found.")
