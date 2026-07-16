@@ -40,6 +40,8 @@ from itertools import permutations
 from pathlib import Path
 
 GPX_ROOT = Path(__file__).resolve().parent.parent / "gpx"
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from gpx_root import slug_dir   # worktree-aware source-track resolution (read-only)
 NS = "{http://www.topografix.com/GPX/1/1}"
 
 
@@ -530,16 +532,21 @@ def main():
                          "trip (combine with --start <day TH lat,lon> and --out day_<label>_recommended.gpx)")
     args = ap.parse_args()
 
-    d = GPX_ROOT / args.slug
+    d = GPX_ROOT / args.slug          # WRITE target (this worktree) + peaks.yml source
     if not d.exists():
         sys.exit(f"ERROR: {d} not found")
+    # READ source tracks from here: the worktree's own dir if it has tracks, else the
+    # main worktree's (gitignored tracks aren't copied into a fresh linked worktree, so
+    # a recipe-gate rebuild from there would otherwise find nothing). Outputs still go
+    # to `d`/--out; peaks.yml still read from `d` so a local recipe edit isn't masked.
+    src = slug_dir(GPX_ROOT.parent, args.slug)
 
     # Escape hatch: designate a single recorded track as the route. The graph/legs
     # routers minimize distance through pooled points and can stitch a long path
     # (cuba_gulch_trio: 22 mi composed vs a real 15.8 mi party track that tours all
     # three). When analyze_tracks.py shows a clean single track, use it verbatim.
     if args.from_track:
-        matches = sorted(f for f in d.glob("*.gpx")
+        matches = sorted(f for f in src.glob("*.gpx")
                          if args.from_track.lower() in f.name.lower()
                          and not any(s in f.name.lower() for s in SKIP))
         if len(matches) != 1:
@@ -577,7 +584,7 @@ def main():
         export_to_gps_tracks(args.slug)
         return
 
-    track_files = [f for f in sorted(d.glob("*.gpx"))
+    track_files = [f for f in sorted(src.glob("*.gpx"))
                    if not any(s in f.name.lower() for s in SKIP)]
     # Split each file at big inter-point gaps (>SPLIT_GAP_M). A multi-day recording
     # flattens its trkseg boundaries into one point list, so the overnight jump
@@ -602,7 +609,7 @@ def main():
         sys.exit("ERROR: no usable source tracks")
     print(f"Source tracks: {len(tracks)} (gap-split from {len(set(track_files))} file(s))")
 
-    pk = Path(args.peaks_only) if args.peaks_only else next(d.glob("*peaks_only*.gpx"), None)
+    pk = Path(args.peaks_only) if args.peaks_only else next(src.glob("*peaks_only*.gpx"), None)
     if not pk or not pk.exists():
         sys.exit("ERROR: no *_peaks_only.gpx (need objective summits)")
     objs = parse_waypoints(pk)
@@ -638,7 +645,7 @@ def main():
                 if l.get("kind") == "trailhead" and l.get("lat") is not None:
                     ths.append((l.get("ele_ft") or 0, l["lat"], l["lon"], l["name"]))
         if not ths:  # fallback: highest waypoint in the landmarks gpx
-            lm = next(d.glob("*landmark*.gpx"), None)
+            lm = next(src.glob("*landmark*.gpx"), None)
             ths = [(ele or 0, la, lo, nm) for la, lo, nm, ele in (parse_waypoints(lm) if lm else [])]
         if ths:
             ths.sort(reverse=True)

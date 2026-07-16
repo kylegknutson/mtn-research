@@ -34,6 +34,7 @@ PER_SLUG = [
     ("check_source_coverage.py", "3-source GPX present"),
     ("check_report_ready.py", "th/class/status provenance"),
     ("check_class.py", "class ≥ hardest summit"),
+    ("check_coordinates.py", "printed coords sit on the peak"),
     ("check_route_stats.py", "headline mileage matches GPX"),
     ("check_route_summits.py", "route reaches each summit"),
     ("check_route_exists.py", "has a recommended route"),

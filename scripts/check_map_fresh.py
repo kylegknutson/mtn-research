@@ -26,8 +26,15 @@ import argparse, sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-GPX = ROOT / "gpx"
-MAPS = ROOT / "docs" / "maps"
+sys.path.insert(0, str(ROOT / "scripts"))
+from gpx_root import main_tree
+# mtime freshness needs REAL build times. A linked worktree's files are all stamped at
+# `git checkout` time in arbitrary order (a tracked/frozen route can land newer than its
+# committed PNG → false STALE), so judge freshness from the main worktree, where the
+# route/PNG mtimes reflect the actual build. Normal checkout → BASE == ROOT (unchanged).
+BASE = main_tree(ROOT) or ROOT
+GPX = BASE / "gpx"
+MAPS = BASE / "docs" / "maps"
 SKIP = ("peaks_only", "landmark", "trailhead", "_drive", "drive_in", "waypoints",
         "summit", "actual", "kyle")
 

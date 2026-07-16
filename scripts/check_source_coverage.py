@@ -37,6 +37,8 @@ import argparse, json, re, sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(ROOT / "scripts"))
+from gpx_root import glob_gpx, gpx_file   # worktree-aware gpx resolution
 GPX = ROOT / "gpx"
 PEAKS = ROOT / "docs" / "peaks"
 TRIPS = ROOT / "docs" / "trips"
@@ -58,11 +60,8 @@ def base_slug(report: Path) -> str:
 
 def track_sources(slug: str):
     """{source: count} of recorded track files present for this slug."""
-    d = GPX / slug
     counts = {s: 0 for s in SOURCE_TOKENS}
-    if not d.exists():
-        return counts
-    for f in d.glob("*.gpx"):
+    for f in glob_gpx(ROOT, slug, "*.gpx"):
         n = f.name.lower()
         if any(x in n for x in NON_TRACK):
             continue
@@ -75,7 +74,7 @@ def track_sources(slug: str):
 
 def declared_empty(slug: str):
     """sources recorded as deliberately empty in gpx/<slug>/sources.json."""
-    p = GPX / slug / "sources.json"
+    p = gpx_file(ROOT, slug, "sources.json")
     if not p.exists():
         return set()
     try:

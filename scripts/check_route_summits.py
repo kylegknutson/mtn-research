@@ -29,6 +29,8 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 GPX_ROOT = ROOT / "gpx"
+sys.path.insert(0, str(ROOT / "scripts"))
+from gpx_root import glob_gpx, gpx_file   # worktree-aware gpx resolution
 NS = "{http://www.topografix.com/GPX/1/1}"
 
 
@@ -47,7 +49,7 @@ def _objective_count(d: Path) -> int | None:
     homestake's nearby Savage Pk has none). build_peak_gpx always writes the
     objectives FIRST, so the authoritative count is len(objective_ids) from
     peaks.yml (or the report's frontmatter peak_ids); the rest are context."""
-    yml = d / "peaks.yml"
+    yml = gpx_file(ROOT, d.name, "peaks.yml")
     if yml.exists():
         try:
             cfg = yaml.safe_load(yml.read_text()) or {}
@@ -67,7 +69,7 @@ def _objective_count(d: Path) -> int | None:
 def summits(d: Path):
     """OBJECTIVE summits only (the route must reach these; nearby-context peaks
     in peaks_only.gpx are not objectives)."""
-    f = d / f"{d.name}_peaks_only.gpx"
+    f = gpx_file(ROOT, d.name, f"{d.name}_peaks_only.gpx")
     if not f.exists():
         return []
     root = ET.parse(f).getroot()
@@ -87,7 +89,7 @@ def route_pts(d: Path):
     # if ANY day's route passes it. Reading just the first file falsely failed the
     # other days' peaks (caught on cimarron_coxcomb, 2026-06-18). iter() also spans
     # multiple <trk> within a file (individual out-and-back climbs).
-    files = sorted(d.glob("*recommended*.gpx"))
+    files = sorted(glob_gpx(ROOT, d.name, "*recommended*.gpx"))
     if not files:
         return None
     pts = []

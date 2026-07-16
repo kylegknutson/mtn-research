@@ -32,6 +32,8 @@ import yaml
 
 ROOT = Path(__file__).resolve().parent.parent
 GPX = ROOT / "gpx"
+sys.path.insert(0, str(ROOT / "scripts"))
+from gpx_root import glob_gpx, gpx_file   # worktree-aware gpx resolution
 NS = "{http://www.topografix.com/GPX/1/1}"
 PEAKS_JSON = ROOT / "docs" / "data" / "peaks.json"
 
@@ -72,7 +74,7 @@ def main():
     fails = 0
     dirs = [GPX / args.slug] if args.slug else sorted(p for p in GPX.iterdir() if p.is_dir())
     for d in dirs:
-        yml = d / "peaks.yml"
+        yml = gpx_file(ROOT, d.name, "peaks.yml")
         if not yml.exists():
             continue
         cfg = yaml.safe_load(yml.read_text()) or {}
@@ -81,7 +83,7 @@ def main():
         # field: reusing extra_summits broke check_route_summits' index alignment on
         # nearby-include slugs (star_peak_a, 2026-07-10).
         obj_ids = set(cfg.get("objective_ids") or []) | set(cfg.get("pass_over_summits") or [])
-        routes = sorted(d.glob("*recommended*.gpx"))
+        routes = sorted(glob_gpx(ROOT, d.name, "*recommended*.gpx"))
         if not routes:
             continue
 
@@ -112,7 +114,7 @@ def main():
         if cfg.get("legs"):
             anchors = [(l["lat"], l["lon"]) for l in (cfg.get("landmarks") or [])
                        if l.get("kind") == "trailhead"]
-            for tf in d.glob("*_target_peaks_only.gpx"):
+            for tf in glob_gpx(ROOT, d.name, "*_target_peaks_only.gpx"):
                 anchors += wpts(tf)
             for day in (cfg.get("days") or []):
                 if day.get("start"):
