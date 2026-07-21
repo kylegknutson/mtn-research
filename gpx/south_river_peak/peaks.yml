@@ -1,0 +1,14 @@
+# Waypoint config — south_river_peak (South River Pk, 13,156', eastern San Juans)
+objective_ids:
+- 657
+
+nearby:
+  include: false
+
+# Recommended route follows the shortest clean recorded Ivy Creek track that
+# summits and starts at the Ivy Creek Campground TH (LoJ 14413, 22.1 mi). The
+# 95-mi 14ers track is a CDT-style thru-hike that doesn't summit — not route beta.
+route_build: {method: from_track, track: "loj_14413"}
+
+landmarks:
+  - {name: "Ivy Creek TH (Ivy Creek Campground, FR 526)", lat: 37.6821, lon: -106.9994, ele_ft: 9290, kind: trailhead}

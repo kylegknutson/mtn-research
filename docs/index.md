@@ -37,6 +37,7 @@ Every ranked Colorado 13er/14er — **green peak = has a report** (click it to o
 | [South San Juans 3-Day Weekend](trips/south_san_juans_3day.md) | San Juan | 2 | 23.4 | 9,500 | 5 | 3 | 1.7 | 5.2 | unclimbed |
 | [Cimarron "Remaining Six"](peaks/cimarron_six.md) | San Juan | 4 | 15.3 | 6,393 | 6 | 1 | 6 | 5.5 | unclimbed |
 | [PT 13,408 + PT 13,026](peaks/pt_13026_13408.md) | San Juan | 2 | 15.9 | 5,021 | 2 | 1 | 2 | 5.5 | unclimbed |
+| [South River Peak](peaks/south_river_peak.md) | San Juan | 2 | 22.1 | 5,038 | 1 | 1 | 1 | 5.5 | unclimbed |
 | [Cimarron / Coxcomb](trips/cimarron_coxcomb.md) | San Juan | 4 | 28.6 | 12,026 | 8 | 3 | 2.7 | 5.5 | unclimbed |
 | [PT 13,155 Group](peaks/pt_13155_group.md) | San Juan | 2 | 11.4 | 4,463 | 3 | 1 | 3 | 5.6 | unclimbed |
 | [Campbell Creek Pk](peaks/campbell_creek_pk.md) | San Juan | 2 | 6.5 | 3,573 | 1 | 1 | 1 | 5.75 | unclimbed |
