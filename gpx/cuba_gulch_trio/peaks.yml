@@ -3,10 +3,14 @@
 # coordinates were backfilled in peak_db on 2026-06-09, so it's a normal
 # objective now — no extra_summits workaround needed.)
 objective_ids: [752, 822, 639]   # PT 13,076 (752), PT 13,003 (822), PT 13,179 (639)
-route_build: {method: from_track, track: "cuba-gultch-13076-13003-13179"}
+# Route composed from the MINNIE GULCH approach (SW) — the intended trailhead
+# (Kyle, 2026-07-12). The prior from_track recipe followed a Cuba-Gulch-TH (NE)
+# track that started ~3 mi off and on the wrong side; graph-composed from the
+# Minnie Gulch TH landmark below via --start auto.
+route_build: {method: graph}
 
 nearby:
   include: false
 
 landmarks:
-  - {name: "Cuba Gulch TH (Lake Fork side)", lat: 37.8993, lon: -107.4332, ele_ft: 9538, kind: trailhead}
+  - {name: "Minnie Gulch TH (CR 24, upper)", lat: 37.8414, lon: -107.5489, ele_ft: 11046, kind: trailhead}

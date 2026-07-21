@@ -41,9 +41,9 @@ Every ranked Colorado 13er/14er — **green peak = has a report** (click it to o
 | [PT 13,155 Group](peaks/pt_13155_group.md) | San Juan | 2 | 11.4 | 4,463 | 3 | 1 | 3 | 5.6 | unclimbed |
 | [Campbell Creek Pk](peaks/campbell_creek_pk.md) | San Juan | 2 | 6.5 | 3,573 | 1 | 1 | 1 | 5.75 | unclimbed |
 | [Rio Grande Pyramid Three](peaks/rio_grande_pyramid_three.md) | San Juan | 2–4 | 19.5 | 5,207 | 3 | 1 | 3 | 5.75 | unclimbed |
-| [Cuba Gulch Trio](peaks/cuba_gulch_trio.md) | San Juan | 2 | 15.8 | 4,900 | 3 | 1 | 3 | 5.9 | unclimbed |
 | [Brown Mountain](peaks/brown_mountain.md) | San Juan | 2 | 8.9 | 3,739 | 1 | 1 | 1 | 6.3 | unclimbed |
 | [Telluride Peak Group](peaks/telluride_t7_t8.md) | San Juan | 2-3 | 10.1 | 6,057 | 3 | 1 | 3 | 6.3 | unclimbed |
+| [Cuba Gulch Trio](peaks/cuba_gulch_trio.md) | San Juan | 2 | 13.7 | 4,771 | 3 | 1 | 3 | 7.5 | unclimbed |
 | [Dolores Peak + Middle Peak](peaks/dolores_middle_peak.md) | San Juan | 2 | 6.4 | 3,921 | 2 | 1 | 2 | 7.5 | climbed |
 | [Sunshine Mountain A + PT 13,094](peaks/sunshine_13094.md) | San Juan | 2 | 6.4 | 3,619 | 2 | 1 | 2 | 7.5 | unclimbed |
 | [Carter Dome Group](peaks/carter_dome_group.md) | Carter-Moriah Range | 1 | 24.7 | 9,088 | 6 | 1 | 6 | 32 | unclimbed |

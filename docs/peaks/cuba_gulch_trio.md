@@ -1,19 +1,19 @@
 ---
 image: maps/cuba_gulch_trio.png
 range: San Juan
-drive_time: "5h 52m"
+drive_time: "~7h 30m"
 yds_class: "2"
-gain: "~15.8 mi / ~4,900 ft (full trio, DEM)"
+gain: "~13.7 mi / ~4,770 ft (full trio via Minnie Gulch, DEM)"
 status: unclimbed
 caltopo_id: DCQ8UKS
 regional_map_id: 06AR6BF
-dist_mi: 15.8
-gain_ft: 4900
+dist_mi: 13.7
+gain_ft: 4771
 class: 2
 peaks: 3
 days: 1
-drive_h: 5.9
-th_source: "recorded GPS-track starts at Cuba Gulch TH (Lake Fork side) (37.8993,-107.4332) — swept tracks begin 0.1 mi away"
+drive_h: 7.5
+th_source: "recorded GPS-track starts at Minnie Gulch TH (CR 24 upper, 37.8414,-107.5489, ~11,050') — LoJ TR24533 + peakbagger ascents begin there; OSM way 'County Road 24 (Minnie Gulch Road)'"
 class_source: "route beta — 14ers.com route beta / trip reports, listsofjohn, peakbagger (see route options)"
 status_source: "peak_db ascents"
 ---
@@ -23,7 +23,7 @@ status_source: "peak_db ascents"
 <!-- QUICKSTATS_START -->
 
 !!! tip "At a glance — recommended day"
-    **15.8 mi** · **4,900 ft** gain · **Class 2** · 3 peaks · ~5.9 h drive
+    **13.7 mi** · **4,771 ft** gain · **Class 2** · 3 peaks · ~7.5 h drive
 
 <!-- QUICKSTATS_END -->
 
@@ -35,7 +35,7 @@ status_source: "peak_db ascents"
 !!! map ""
     **CalTopo research map:** https://caltopo.com/m/DCQ8UKS
 
-**Status in DB:** All three 0 ascents (unclimbed), all **ranked** San Juan 13ers (PT 13,003 = id 822, Class 1). A natural **Cuba Gulch** day off the **Lake Fork (Lake City)** side, in the Half Peak / Cataract Gulch pocket.
+**Status in DB:** All three 0 ascents (unclimbed), all **ranked** San Juan 13ers (PT 13,003 = id 822, Class 1). The trio rings the head of **Cuba Gulch**, but the practical approach is up **Minnie Gulch from the Animas / Silverton side** — in the Half Peak pocket of the Grenadier-fringe San Juans.
 
 ![Overview map](../maps/cuba_gulch_trio.png)
 
@@ -51,7 +51,7 @@ status_source: "peak_db ascents"
 
 ## Peaks covered
 
-A **standard Cuba Gulch outing** — the three are climbed together, confirmed by trip reports across all three sources **and Kyle's own GPS track** ("Cuba Gulch – 13076, 13003, 13179"). They share the single Cuba Gulch approach off the Lake Fork. All three are **ranked** San Juan 13ers, so it's a true 3-ranked-peak day; the neighboring ranked peaks (Half Peak, Quarter Peak, Canby, Cataract, Sheep Mtn A) are already done — this cleans up what's left in the Cuba Gulch / Cataract pocket.
+A **three-in-one ridge day** climbed together in trip reports across all three sources. The peaks sit on the divide at the head of Cuba Gulch, but the recorded approach is **up Minnie Gulch (CR 24) from the Animas / Silverton side** — a legal public route that avoids the patented mining claims lower in the neighboring drainages. All three are **ranked** San Juan 13ers, so it's a true 3-ranked-peak day; the neighboring ranked peaks (Half Peak, Quarter Peak, Canby, Cataract, Sheep Mtn A) are already done for Kyle.
 
 | | [PT 13,076](https://www.14ers.com/peaks/10577) | [Unnamed 13,003](https://www.14ers.com/peaks/10871) | [PT 13,179](https://www.14ers.com/peaks/10527) |
 |---|---|---|---|
@@ -68,23 +68,28 @@ The three sit in a ~2.3 mi arc: **13,003 is the middle peak** (~1.1 mi from 13,1
 
 ---
 
-## Recommended route — Cuba Gulch, the 13,076 ↔ 13,003 ↔ 13,179 ridge ⭐
+## Recommended route — up Minnie Gulch, the 13,076 ↔ 13,003 ↔ 13,179 ridge ⭐
 
-The standard line, from the trip reports and Kyle's combining track.
+The composed line follows the recorded Minnie Gulch approach and the connecting
+ridge — **~13.7 mi · ~4,770 ft, Class 2**, from the Minnie Gulch TH.
 
 **Combo options:**
 
-| Source | Peaks | Distance | Gain |
+| Option | Peaks | Distance | Gain |
 |---|---|---|---|
-| Clean trio (best LoJ/CalTopo track) | 13,076 + 13,003 + 13,179 | **~15.8 mi** | **~4,900 ft** |
+| Recommended trio (Minnie Gulch) | 13,076 + 13,003 + 13,179 | **~13.7 mi** | **~4,770 ft** |
 | Bigger traverses (LoJ 8472, etc.) | + Half Peak / Cataract neighbors | up to 21.9 mi | up to ~12,500 ft |
 
 Class 2 throughout for the clean three-peak day — gain grows fast if you add the ranked neighbors (those are already done for Kyle).
 
 ### Route sequence
-1. From the **Cuba Gulch TH (~9,540')**, head up Cuba Gulch toward the basin below the three peaks.
-2. Climb the ridge over **PT 13,076 → Unnamed 13,003 → PT 13,179** (or reverse) — Class 2 tundra/talus on the connecting ridge.
-3. Descend back into Cuba Gulch to the TH.
+1. From the **Minnie Gulch TH (CR 24, ~11,050')**, hike up Minnie Gulch to the basin
+   under **PT 13,076** (the SW end of the arc).
+2. Climb PT 13,076, then follow the connecting divide ridge over **Unnamed 13,003 →
+   PT 13,179** (or reverse) — Class 2 tundra/talus.
+3. Return along the ridge / Minnie Gulch back to the TH. **Stay on the ridge and
+   Minnie-Gulch side — the lower Cuba Gulch and Maggie/Minnie drainages hold patented
+   mining claims (private).**
 
 ### Per-peak route notes
 
@@ -94,28 +99,29 @@ Class 2 throughout for the clean three-peak day — gain grows fast if you add t
 
 ---
 
-## Getting there — Cuba Gulch TH
+## Getting there — Minnie Gulch TH (Silverton side)
 
 | | |
 |---|---|
-| **Drive from Boulder** | **[5h 52m via Google Maps](https://www.google.com/maps/dir/?api=1&origin=1162+Peakview+Circle,+Boulder,+CO+80302&destination=37.8993,-107.4332)** (~290 mi, origin: 1162 Peakview Circle; via US-285 + US-50 to Lake City) |
-| Access corridor | **Lake Fork Rd (CR 30) → Cuba Gulch (CR 35) from Lake City** (the Lake San Cristobal / Cinnamon Pass direction) |
-| Trailhead | **Cuba Gulch TH**, ~37.8993, −107.4332, **~9,540'**. High-clearance helpful on the upper road. |
-| Note | A long-ish haul (~6 hr each way) — workable as a big day or an overnight out of Lake City. |
+| **Drive from Boulder** | **[~7h 30m via Google Maps](https://www.google.com/maps/dir/?api=1&origin=1162+Peakview+Circle,+Boulder,+CO+80302&destination=37.8414,-107.5489)** (~370 mi; via US-285/US-50 → US-550 to Silverton, then CR 2 + CR 24) |
+| Access corridor | **Silverton → CR 2 (Animas Forks / Eureka road) → CR 24 (Minnie Gulch Road)** — the Animas side, *not* the Lake Fork/Lake City direction |
+| Trailhead | **Minnie Gulch TH (CR 24 upper), ~37.8414, −107.5489, ~11,050'.** CR 24 is a rough gravel shelf road (**high-clearance / 4WD** up high); park where the driving ends and walk up the gulch. |
+| Note | A long haul (~7½ hr each way) — most reasonable as an overnight out of Silverton. |
 
 **Permits / access:**
 
-- **Uncompahgre / Gunnison NF–BLM** (Lake Fork / Cuba Gulch) — no permits; the summits are not in designated wilderness (per peak_db). Standard Leave No Trace.
-- Cuba Gulch road: high-clearance recommended up high; check conditions.
+- **BLM / Gunnison NF, San Juan backcountry** — no permits; the summits are not in designated wilderness (per peak_db). Standard Leave No Trace.
+- **Private mining claims:** the lower Minnie/Maggie/Cuba Gulch floors hold **patented mining claims (private property)** — stay on CR 24 and the public ridge; do not cut across claim parcels or old mine workings.
+- Minnie Gulch Road (CR 24): rough gravel, high-clearance recommended; check conditions.
 
 ---
 
 ## Gear & season
 
-- **Best window:** **July through September.** High San Juan tundra; the Lake Fork / Cuba Gulch road opens late and the upper section is rough.
+- **Best window:** **July through September.** High San Juan tundra; the Minnie Gulch (CR 24) road opens late and the upper section is rough.
 - **Storms:** standard San Juan afternoon monsoon exposure on the open ridge — early start, off the high ground by early afternoon.
 - **Terrain:** Class 2 tundra/talus throughout the standard line — no technical sections.
-- **Cell coverage:** no submitted 14ers.com reception reports for these summits; the **Cuba Gulch approach and basin are almost certainly dead** — deep in the Lake Fork backcountry. Summits may catch intermittent signal but treat it as unreliable — carry an **InReach / satellite messenger**.
+- **Cell coverage:** no submitted 14ers.com reception reports for these summits; the **Minnie Gulch approach and basin are almost certainly dead** — deep in the Animas/Silverton backcountry. Summits may catch intermittent signal but treat it as unreliable — carry an **InReach / satellite messenger**.
 
 ---
 
