@@ -40,6 +40,7 @@ Every ranked Colorado 13er/14er — **green peak = has a report** (click it to o
 | [Cimarron / Coxcomb](trips/cimarron_coxcomb.md) | San Juan | 4 | 28.6 | 12,026 | 8 | 3 | 2.7 | 5.5 | unclimbed |
 | [PT 13,155 Group](peaks/pt_13155_group.md) | San Juan | 2 | 11.4 | 4,463 | 3 | 1 | 3 | 5.6 | unclimbed |
 | [Campbell Creek Pk](peaks/campbell_creek_pk.md) | San Juan | 2 | 6.5 | 3,573 | 1 | 1 | 1 | 5.75 | unclimbed |
+| [Chief Mtn A](peaks/chief_mtn_a.md) | San Juan | 2 | 15.5 | 4,093 | 1 | 1 | 1 | 5.75 | unclimbed |
 | [Rio Grande Pyramid Three](peaks/rio_grande_pyramid_three.md) | San Juan | 2–4 | 24.8 | 5,984 | 3 | 1 | 3 | 5.75 | unclimbed |
 | [Brown Mountain](peaks/brown_mountain.md) | San Juan | 2 | 8.9 | 3,739 | 1 | 1 | 1 | 6.3 | unclimbed |
 | [Telluride Peak Group](peaks/telluride_t7_t8.md) | San Juan | 2-3 | 10.1 | 6,057 | 3 | 1 | 3 | 6.3 | unclimbed |

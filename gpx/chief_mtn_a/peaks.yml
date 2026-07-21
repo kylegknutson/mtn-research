@@ -1,0 +1,14 @@
+# Waypoint config — chief_mtn_a (Chief Mtn A, 13,019', Weminuche)
+objective_ids:
+- 807
+
+nearby:
+  include: false
+
+# Recommended route follows the shortest clean recorded Ute Creek track that
+# summits Chief and starts at the Thirtymile TH (LoJ 14251, 15.4 mi). The 53/95-mi
+# swept tracks are mega-thru-hikes (the 95 doesn't even summit) — not route beta.
+route_build: {method: from_track, track: "loj_14251"}
+
+landmarks:
+  - {name: "Ute Creek TH (Thirtymile, Rio Grande Reservoir)", lat: 37.7233, lon: -107.259, ele_ft: 9303, kind: trailhead}
