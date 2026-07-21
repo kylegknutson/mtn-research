@@ -7,8 +7,8 @@ gain: "3,500 ft"
 status: climbed
 caltopo_id: R2NF0S2
 regional_map_id: 6E4GJV2
-dist_mi: 7.5
-gain_ft: 3131
+dist_mi: 10.3
+gain_ft: 3473
 class: 2
 peaks: 1
 days: 1
@@ -23,12 +23,12 @@ status_source: "peak_db ascents"
 <!-- QUICKSTATS_START -->
 
 !!! tip "At a glance — recommended day"
-    **7.5 mi** · **3,131 ft** gain · **Class 2** · 1 peak · ~1.7 h drive
+    **10.3 mi** · **3,473 ft** gain · **Class 2** · 1 peak · ~1.7 h drive
 
 <!-- QUICKSTATS_END -->
 
 !!! success "✅ Climbed 2026-06-06 — actual: 10.8 mi / 3,674 ft (loop)"
-    Kyle's recorded outing (fast-hike up, jog down): **10.8 mi · 3,674 ft**, done as a **loop** — vs the ~6.3 mi / ~3,500 ft minimal estimate below. Gain was on target; he took a bigger loop than the minimal line (and started ~0.7 mi from the assumed Woodward-base TH). GPS track on file (`GPS Tracks/20260606_Summit_County…_actual.gpx`).
+    Kyle's recorded outing (fast-hike up, jog down): **10.8 mi · 3,674 ft**, done as a **loop** — right in line with the ~10.2 mi / ~3,500 ft recommended Copper loop below (he started ~0.7 mi from the assumed Woodward-base TH). GPS track on file (`GPS Tracks/20260606_Summit_County…_actual.gpx`).
 
 **Researched:** 2026-05-28
 

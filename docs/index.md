@@ -15,7 +15,7 @@ Every ranked Colorado 13er/14er — **green peak = has a report** (click it to o
 <!-- PEAKS_TABLE_START -->
 | Peak / Trip | Range | Class | Dist (mi) | Gain (ft) | Peaks | Days | Pk/day | Drive (h) | Status |
 |---|---|---|--:|--:|--:|--:|--:|--:|---|
-| [Jacque Peak](peaks/jacque_peak.md) | Gore | 2 | 7.5 | 3,131 | 1 | 1 | 1 | 1.7 | climbed |
+| [Jacque Peak](peaks/jacque_peak.md) | Gore | 2 | 10.3 | 3,473 | 1 | 1 | 1 | 1.7 | climbed |
 | [Pennsylvania Mountain](peaks/pennsylvania_mountain.md) | Mosquito | 2 | 4.7 | 1,248 | 1 | 1 | 1 | 2.1 | unclimbed |
 | [Mount Powell + Eagles Nest](peaks/powell_eagles_nest.md) | Gore | 3 | 13.8 | 6,024 | 2 | 1 | 2 | 3.1 | unclimbed |
 | [Homestake Peak](peaks/homestake_peak.md) | Sawatch | 2 | 10.7 | 3,217 | 1 | 1 | 1 | 3.2 | unclimbed |
@@ -40,7 +40,7 @@ Every ranked Colorado 13er/14er — **green peak = has a report** (click it to o
 | [Cimarron / Coxcomb](trips/cimarron_coxcomb.md) | San Juan | 4 | 28.6 | 12,026 | 8 | 3 | 2.7 | 5.5 | unclimbed |
 | [PT 13,155 Group](peaks/pt_13155_group.md) | San Juan | 2 | 11.4 | 4,463 | 3 | 1 | 3 | 5.6 | unclimbed |
 | [Campbell Creek Pk](peaks/campbell_creek_pk.md) | San Juan | 2 | 6.5 | 3,573 | 1 | 1 | 1 | 5.75 | unclimbed |
-| [Rio Grande Pyramid Three](peaks/rio_grande_pyramid_three.md) | San Juan | 2–4 | 19.5 | 5,207 | 3 | 1 | 3 | 5.75 | unclimbed |
+| [Rio Grande Pyramid Three](peaks/rio_grande_pyramid_three.md) | San Juan | 2–4 | 24.8 | 5,984 | 3 | 1 | 3 | 5.75 | unclimbed |
 | [Brown Mountain](peaks/brown_mountain.md) | San Juan | 2 | 8.9 | 3,739 | 1 | 1 | 1 | 6.3 | unclimbed |
 | [Telluride Peak Group](peaks/telluride_t7_t8.md) | San Juan | 2-3 | 10.1 | 6,057 | 3 | 1 | 3 | 6.3 | unclimbed |
 | [Cuba Gulch Trio](peaks/cuba_gulch_trio.md) | San Juan | 2 | 13.7 | 4,771 | 3 | 1 | 3 | 7.5 | unclimbed |

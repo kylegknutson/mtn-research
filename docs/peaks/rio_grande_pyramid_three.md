@@ -3,13 +3,13 @@ image: maps/rio_grande_pyramid_three.png
 range: San Juan
 drive_time: "~5h 45m"
 yds_class: "2 (Class 3–4 crux on PT 13,022)"
-gain: "~19.5 mi / ~5,200 ft (3-peak loop, DEM)"
+gain: "~24.8 mi / ~5,980 ft (full approach from Weminuche TH, DEM)"
 status: unclimbed
 caltopo_id: TMVGNRR
 regional_map_id: 06AR6BF
 peak_ids: [517, 532, 804]
-dist_mi: 19.5
-gain_ft: 5207
+dist_mi: 24.8
+gain_ft: 5984
 class: "2–4"
 peaks: 3
 days: 1
@@ -24,7 +24,7 @@ status_source: "peak_db ascents (Kyle — unclimbed)"
 <!-- QUICKSTATS_START -->
 
 !!! tip "At a glance — recommended day"
-    **19.5 mi** · **5,207 ft** gain · **Class 2–4** · 3 peaks · ~5.75 h drive
+    **24.8 mi** · **5,984 ft** gain · **Class 2–4** · 3 peaks · ~5.75 h drive
 
 <!-- QUICKSTATS_END -->
 
@@ -70,7 +70,7 @@ status_source: "peak_db ascents (Kyle — unclimbed)"
 
 ## The single push — Weminuche Trail TH loop ⭐
 
-A **real recorded loop** through all three. This is a **big day** — the Weminuche approach is long and deep — but not the monster the composed estimate first suggested. A party did the *whole* RGP group (these three + Rio Grande Pyramid) in one ~30 mi / ~9,800′ day (LoJ [TR 1934](https://listsofjohn.com/tr?Id=1934)), noting "some might say stupid" to do it as a day trip. **Most people backpack** (see *Other considerations*).
+A **real recorded loop** through all three, from the Weminuche Trail TH — **~24.8 mi · ~5,980 ft**, the honest full-approach day. It's a **big day**: the Weminuche approach is long and deep. A party did the *whole* RGP group (these three + Rio Grande Pyramid) in one ~30 mi / ~9,800′ day (LoJ [TR 1934](https://listsofjohn.com/tr?Id=1934)), noting "some might say stupid" to do it as a day trip. **Most people backpack** (see *Other considerations*).
 
 | | |
 |---|---|
@@ -107,7 +107,7 @@ A **real recorded loop** through all three. This is a **big day** — the Weminu
 
 ## Other considerations
 
-**Strongly consider a backpack ⛺** — this is **classic backpack country.** A short, easy pack-in — **~5 mi / ~1,325′** to a base camp near Weminuche Pass / the meadows — sets you up for **all the Rio Grande Pyramid 13ers** (these three + RGP + Window) on short summit days, instead of a ~20-mile push. Given the distance, a **2-night backpack is still a great way to clean up these three.**
+**Strongly consider a backpack ⛺** — this is **classic backpack country.** A short, easy pack-in — **~5 mi / ~1,325′** to a base camp near Weminuche Pass / the meadows — sets you up for **all the Rio Grande Pyramid 13ers** (these three + RGP + Window) on short summit days, instead of the **~25-mile** full-approach push. Given the distance, a **2-night backpack is still a great way to clean up these three.**
 
 ---
 

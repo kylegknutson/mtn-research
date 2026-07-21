@@ -1,6 +1,10 @@
 # Waypoint config for build_peak_gpx.py — Jacque Peak.
 objective_ids: [603]
-route_build: {method: from_track, track: "pbAscent2784737"}
+# Copper Mountain loop (N) — the standard legal approach up the ski-area ridge
+# (Kyle, 2026-07-12). The prior track (pbAscent2784737) approached from the S via
+# Mayflower/Graveline and crossed patented mining claims (private). 62587 is the
+# 14ers GPX-lib Copper loop, closest to Kyle's own recorded 2026-06-06 line.
+route_build: {method: from_track, track: "62587"}
 
 nearby:
   include: false

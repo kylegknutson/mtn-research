@@ -38,6 +38,7 @@ PER_SLUG = [
     ("check_route_summits.py", "route reaches each summit"),
     ("check_route_exists.py", "has a recommended route"),
     ("check_route_recipe.py", "route reproducible from peaks.yml recipe"),
+    ("check_route_starts.py", "single-day route starts at its trailhead"),
     ("check_trip_continuity.py", "no foreign summits; trip legs chain TH→camp→TH"),
     ("check_map_fresh.py", "PNG not stale vs route/tracks"),
 ]

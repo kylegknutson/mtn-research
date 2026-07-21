@@ -6,7 +6,10 @@ objective_ids:
 - 804   # PT 13,022
 # The recorded line deliberately crosses Rio Grande Pyramid's summit between PTs.
 pass_over_summits: [120]
-route_build: {method: from_track, track: "trk_14ers_4"}
+# trk_14ers_3 tours all three summits AND starts at the Weminuche Trail TH
+# (Thirtymile) — the honest full-approach line. The prior trk_14ers_4 started
+# ~6.6 mi in (from a backpack camp), omitting the long approach (Kyle, 2026-07-12).
+route_build: {method: from_track, track: "trk_14ers_3"}
 nearby:
   include: false
 landmarks:

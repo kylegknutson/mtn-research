@@ -32,8 +32,20 @@ import yaml
 
 ROOT = Path(__file__).resolve().parent.parent
 GPX = ROOT / "gpx"
+DOCS = ROOT / "docs"
 NS = "{http://www.topografix.com/GPX/1/1}"
-THRESH_MI = 0.3
+# 1.0 mi: benign trailheads legitimately sit ~0.5–0.9 mi from where recorded tracks
+# start (a resort base, a road gate, a parking lot before the 4WD section). The real
+# drift this catches began 2.7–6.6 mi off (jacque-mining, cuba, rio). Set the fail
+# line above the benign band, below the drift band (Kyle, 2026-07-12).
+THRESH_MI = 1.0
+
+
+def has_report(slug: str) -> bool:
+    """A published report exists for this slug (Kyle's or a climber variant)."""
+    return bool(list((DOCS / "peaks").glob(f"{slug}.md"))
+                or list((DOCS / "peaks").glob(f"{slug}.*.md"))
+                or list((DOCS / "trips").glob(f"{slug}.md")))
 
 
 def hav_mi(a, b, c, d):
@@ -71,9 +83,12 @@ def main():
     slugs = [args.slug] if args.slug else sorted(
         d.name for d in GPX.iterdir() if d.is_dir() and (d / "peaks.yml").exists())
 
-    flagged, skipped_trips, no_th = [], [], []
+    flagged, skipped_trips, no_th, no_report = [], [], [], []
     for slug in slugs:
         d = GPX / slug
+        if not has_report(slug):
+            no_report.append(slug)      # orphan gpx dir (no published page) — nothing to check
+            continue
         try:
             cfg = yaml.safe_load((d / "peaks.yml").read_text()) or {}
         except Exception:
