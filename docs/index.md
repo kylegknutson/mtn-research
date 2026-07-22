@@ -34,10 +34,12 @@ Every ranked Colorado 13er/14er — **green peak = has a report** (click it to o
 | [Pearl Mountain + Oyster Peak](peaks/pearl_oyster.md) | Elk | 2+ | 8.8 | 4,073 | 2 | 1 | 2 | 4.4 | unclimbed |
 | [PT 13,557](peaks/pt_13557.md) | Sangre de Cristo | 2 | 12.2 | 5,544 | 1 | 1 | 1 | 4.7 | unclimbed |
 | ["Baldy Lejos" + PT 13,115 + PT 13,030](peaks/baldy_lejos_trio.md) | San Juan | 2 | 11.9 | 3,707 | 3 | 1 | 3 | 5 | climbed |
+| [Henry Mountain](peaks/henry_mountain.md) | Sawatch | 2 | 9.3 | 3,666 | 1 | 1 | 1 | 5 | unclimbed |
 | [PT 13,308 + PT 13,166](peaks/pt_13308_13166.md) | San Juan | 3 | 10.2 | 3,594 | 2 | 1 | 2 | 5 | climbed |
 | [West Willow Creek](trips/west_willow_la_garita.md) | San Juan | 3 | 22.6 | 7,152 | 5 | 2 | 2.5 | 5 | climbed |
 | [South San Juans 3-Day Weekend](trips/south_san_juans_3day.md) | San Juan | 2 | 23.4 | 9,500 | 5 | 3 | 1.7 | 5.2 | unclimbed |
 | [Cimarron "Remaining Six"](peaks/cimarron_six.md) | San Juan | 4 | 15.3 | 6,393 | 6 | 1 | 6 | 5.5 | unclimbed |
+| [Fairview Peak](peaks/fairview_peak.md) | Sawatch | 1 | 2.8 | 1,137 | 1 | 1 | 1 | 5.5 | unclimbed |
 | [PT 13,408 + PT 13,026](peaks/pt_13026_13408.md) | San Juan | 2 | 15.9 | 5,021 | 2 | 1 | 2 | 5.5 | unclimbed |
 | [South River Peak](peaks/south_river_peak.md) | San Juan | 2 | 22.1 | 5,038 | 1 | 1 | 1 | 5.5 | unclimbed |
 | [Cimarron / Coxcomb](trips/cimarron_coxcomb.md) | San Juan | 4 | 28.6 | 12,026 | 8 | 3 | 2.7 | 5.5 | unclimbed |

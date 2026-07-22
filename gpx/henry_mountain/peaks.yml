@@ -1,0 +1,14 @@
+# Waypoint config — henry_mountain (Henry Mtn, 13,272', Class 2, Gunnison/Gold Basin)
+objective_ids:
+- 541
+
+nearby:
+  include: false
+
+# Shortest clean recorded track from the multi-track-confirmed SE trailhead (three
+# tracks converge at ~38.656,-106.576, ~10,060', Gold Creek / Gold Basin area). The
+# far-north tracks are ~17 mi — not the standard line.
+route_build: {method: from_track, track: "pb_1"}
+
+landmarks:
+  - {name: "Gold Creek / Gold Basin TH (SE approach)", lat: 38.6559, lon: -106.5756, ele_ft: 10060, kind: trailhead}

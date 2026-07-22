@@ -1,0 +1,14 @@
+# Waypoint config — fairview_peak (Fairview Pk A, 13,224', Class 1, Gunnison/Gold Basin)
+objective_ids:
+- 591
+
+nearby:
+  include: false
+
+# Fairview is a short Class 1 walk from high in Gold Basin — recorded tracks start all
+# over the rough 4WD road (11,770'–12,410'). Anchored to a moderate ~12,030' start
+# (pb_1, 2.8 mi); the 1.5-mi and lower ~7-mi options are noted in the report.
+route_build: {method: from_track, track: "pb_1"}
+
+landmarks:
+  - {name: "Gold Basin 4WD (Gold Creek Rd, upper)", lat: 38.6709, lon: -106.5375, ele_ft: 12030, kind: trailhead}
