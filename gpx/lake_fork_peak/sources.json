@@ -1,0 +1,17 @@
+{
+  "14ers": {
+    "checked": true,
+    "found": 1,
+    "note": "gpxlib_locator.php"
+  },
+  "peakbagger": {
+    "checked": true,
+    "found": 0,
+    "note": "no ascents with downloadable GPS tracks"
+  },
+  "listsofjohn": {
+    "checked": true,
+    "found": 4,
+    "note": "LoJ member GPX tracks"
+  }
+}

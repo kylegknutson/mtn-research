@@ -1,15 +1,13 @@
 # Waypoint config — grizzly_jenkins_group
-# Grizzly Pk E (515) + PT 13,145 (666) + Jenkins Mtn (370) core trio,
-# + optional "Lake Fork Pk" (466) north extension. All Sawatch, from Pieplant.
+# Grizzly Pk E (515) + PT 13,145 (666) + Jenkins Mtn (370) — one connected loop from
+# Pieplant. (The former "optional Lake Fork Pk" north extension was 5.6 mi away with no
+# recorded connector — bundling it made a phantom straight line in GPS viewers, so it's
+# now its own report: lake_fork_peak. Kyle, 2026-07-12.)
 objective_ids:
 - 370   # Jenkins Mountain 13,440
 - 666   # PT 13,145 (UN 13145 / formerly UN 13140 B)
 - 515   # Grizzly Peak E 13,309
-- 466   # "Lake Fork Peak" 13,333 (optional north extension)
-# Recommended route = two disconnected segments (Lake Fork is 2.4 mi N of the trio with no
-# recorded connecting track). Built verbatim from these recorded tracks, in order — each
-# becomes its own <trkseg> (no invented connector).
-route_build: {method: multi_segment, tracks: [trio_14ers_1, lakefork_14ers_6]}
+route_build: {method: from_track, track: "trio_14ers_1"}
 nearby:
   include: false
 landmarks:

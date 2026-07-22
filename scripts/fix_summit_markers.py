@@ -71,12 +71,47 @@ def objective_coords(slug):
     return out
 
 
-def context_peaks(slug):
-    """The PNG's in-frame non-objective summits, from the extent sidecar."""
+CONTEXT_MARGIN_MI = 4.0   # CalTopo shows ranked neighbors this far BEYOND the PNG
+                          # frame (Kyle, 2026-07-12: "a larger area to see more of
+                          # what's around" — the interactive map can zoom, so more
+                          # context is useful there; the PNG stays tight/uncluttered).
+
+
+def context_peaks(slug, margin_mi=CONTEXT_MARGIN_MI):
+    """Non-objective ranked summits to mark black on CalTopo. Starts from the PNG's
+    frame (extent sidecar) and EXPANDS the bbox by margin_mi so the interactive map
+    carries more surrounding context than the tight PNG. Falls back to the sidecar's
+    frame-set if peak_db is unavailable."""
     sidecar = ROOT / "docs" / "maps" / f"{slug}.extent.json"
     if not sidecar.exists():
         return []
-    return json.loads(sidecar.read_text()).get("context_peaks") or []
+    ext = json.loads(sidecar.read_text())
+    lo0, lo1 = ext.get("lon_min"), ext.get("lon_max")
+    la0, la1 = ext.get("lat_min"), ext.get("lat_max")
+    if None in (lo0, lo1, la0, la1):
+        return ext.get("context_peaks") or []
+    dlat = margin_mi / 69.0
+    dlon = margin_mi / (69.0 * max(math.cos(math.radians((la0 + la1) / 2)), 0.1))
+    lo0, lo1, la0, la1 = lo0 - dlon, lo1 + dlon, la0 - dlat, la1 + dlat
+    try:
+        sys.path.insert(0, PEAKDB)
+        from peak_db_client import peaks
+    except Exception:
+        return ext.get("context_peaks") or []   # fallback: tight PNG set
+    objs = objective_coords(slug)
+    out = []
+    for p in peaks():
+        if not p.get("ranked"):
+            continue
+        lat, lon = p.get("lat"), p.get("lon")
+        if lat is None or lon is None:
+            continue
+        if not (lo0 <= lon <= lo1 and la0 <= lat <= la1):
+            continue
+        if any(m_between((lat, lon), o) <= 200 for o in objs):
+            continue   # this is an objective (drawn green) — skip
+        out.append({"name": p.get("display_name") or "", "lat": lat, "lon": lon})
+    return out
 
 
 def m_between(a, b):

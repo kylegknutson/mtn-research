@@ -1,0 +1,22 @@
+# Waypoint config — lake_fork_peak ("Lake Fork Pk", 13,333', Sawatch)
+# Split out of grizzly_jenkins_group (Kyle, 2026-07-12): it sits 5.6 mi N of that
+# trio with no recorded connector, so it's its own outing.
+objective_ids:
+- 466
+
+# The Sayres Gulch loop deliberately crosses two other ranked 13ers on the ridge
+# circuit — PT 13,305 (502) and PT 13,232 B (561), both already climbed by Kyle.
+# Declared as pass-overs (bonus summits), not foreign teleports.
+pass_over_summits: [502, 561]
+
+nearby:
+  include: false
+
+# Recommended = shortest clean recorded track that summits AND starts at the
+# multi-track-confirmed South Fork Lake Creek / Sayres Gulch TH (two LoJ tracks
+# begin within ~20 m of each other there). The lone 7.3-mi track starts 900' higher
+# up the rough 4WD road — noted as an alternate, not the default.
+route_build: {method: from_track, track: "loj_8199"}
+
+landmarks:
+  - {name: "South Fork Lake Creek / Sayres Gulch TH (FR 391)", lat: 39.0210, lon: -106.5349, ele_ft: 10974, kind: trailhead}

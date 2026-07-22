@@ -23,11 +23,12 @@ Every ranked Colorado 13er/14er — **green peak = has a report** (click it to o
 | [Hunts Peak](peaks/hunts_peak.md) | Sangre de Cristo | 2 | 6.8 | 3,489 | 1 | 1 | 1 | 3.6 | unclimbed |
 | [Savage Peak + PT 13,002](peaks/savage_peak.md) | Sawatch | 2-3 | 13.4 | 5,721 | 2 | 1 | 2 | 3.6 | unclimbed |
 | [Star Peak Group](trips/star_peak_group.md) | Elk | 2 | 14.6 | 6,800 | 3 | 2 | 1.5 | 3.7 | unclimbed |
+| ["Lake Fork Pk"](peaks/lake_fork_peak.md) | Sawatch | 2 | 11.1 | 4,313 | 1 | 1 | 1 | 3.75 | unclimbed |
 | [Williams Mountains Traverse](peaks/williams_mountains.md) | Sawatch | 3 | 14.7 | 6,084 | 5 | 1 | 5 | 3.8 | unclimbed |
 | [Crestolita + Broken Hand Peak](peaks/crestolita_broken_hand.md) | Sangre de Cristo | 3 | 3.9 | 3,015 | 2 | 1 | 2 | 4 | unclimbed |
 | [Mount Adams Trio](peaks/mount_adams_trio.md) | Sangre de Cristo | 2–3 | 13.5 | 6,897 | 3 | 1 | 3 | 4 | unclimbed |
 | [Chipeta Mountain](peaks/chipeta_mtn.md) | Sawatch | 2 | 8.3 | 3,362 | 1 | 1 | 1 | 4.2 | unclimbed |
-| [Grizzly Pk E + PT 13,145 + Jenkins Mtn](peaks/grizzly_jenkins_group.md) | Sawatch | 2+ | 12.6 | 6,736 | 4 | 1 | 4 | 4.2 | unclimbed |
+| [Grizzly Pk E + PT 13,145 + Jenkins Mtn](peaks/grizzly_jenkins_group.md) | Sawatch | 2+ | 7.5 | 4,441 | 3 | 1 | 3 | 4.2 | unclimbed |
 | [Trinchera Group](peaks/trinchera_group.md) | Sangre de Cristo | 2 | 15.7 | 6,756 | 4 | 1 | 4 | 4.2 | unclimbed |
 | [Pearl Mountain + Oyster Peak](peaks/pearl_oyster.md) | Elk | 2+ | 8.8 | 4,073 | 2 | 1 | 2 | 4.4 | unclimbed |
 | [PT 13,557](peaks/pt_13557.md) | Sangre de Cristo | 2 | 12.2 | 5,544 | 1 | 1 | 1 | 4.7 | unclimbed |
