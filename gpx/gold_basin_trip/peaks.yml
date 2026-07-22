@@ -1,0 +1,29 @@
+# Gold Basin car-camp trip — Fairview Pk A (591) + Henry Mtn (541), Gunnison.
+# Both ~5.5 h from home in the same Gold Creek Rd (FR 771) system, so one trip beats
+# two long round-trips. Car-camp: base in Gold Basin, do each peak from its own TH with
+# a short vehicle relocation between them. Per-peak detail: docs/peaks/fairview_peak.md,
+# docs/peaks/henry_mountain.md.
+objective_ids:
+- 591   # Fairview Pk A 13,224 (Class 1, upper Gold Basin 4WD)
+- 541   # Henry Mtn 13,272 (Class 2, Gold Creek → Gunsight Pass)
+
+days:
+- label: fairview
+  objective_ids: [591]
+- label: henry
+  objective_ids: [541]
+
+nearby:
+  include: false
+
+landmarks:
+- name: "Gold Basin 4WD (Fairview, upper)"
+  lat: 38.6709
+  lon: -106.5375
+  ele_ft: 12030
+  kind: trailhead
+- name: "Gold Creek / Gold Basin SE TH (Henry)"
+  lat: 38.6559
+  lon: -106.5756
+  ele_ft: 10060
+  kind: trailhead

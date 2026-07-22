@@ -43,6 +43,7 @@ Every ranked Colorado 13er/14er — **green peak = has a report** (click it to o
 | [PT 13,408 + PT 13,026](peaks/pt_13026_13408.md) | San Juan | 2 | 15.9 | 5,021 | 2 | 1 | 2 | 5.5 | unclimbed |
 | [South River Peak](peaks/south_river_peak.md) | San Juan | 2 | 22.1 | 5,038 | 1 | 1 | 1 | 5.5 | unclimbed |
 | [Cimarron / Coxcomb](trips/cimarron_coxcomb.md) | San Juan | 4 | 28.6 | 12,026 | 8 | 3 | 2.7 | 5.5 | unclimbed |
+| [Gold Basin Trip](trips/gold_basin_trip.md) | Sawatch | 2 | 12.1 | 4,803 | 2 | 2 | 1 | 5.5 | unclimbed |
 | [PT 13,155 Group](peaks/pt_13155_group.md) | San Juan | 2 | 11.4 | 4,463 | 3 | 1 | 3 | 5.6 | unclimbed |
 | [Campbell Creek Pk](peaks/campbell_creek_pk.md) | San Juan | 2 | 6.5 | 3,573 | 1 | 1 | 1 | 5.75 | unclimbed |
 | [Chief Mtn A](peaks/chief_mtn_a.md) | San Juan | 2 | 15.5 | 4,093 | 1 | 1 | 1 | 5.75 | unclimbed |
