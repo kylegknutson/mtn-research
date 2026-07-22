@@ -3,21 +3,21 @@ image: maps/rito_alto_group.png
 range: Sangre de Cristo
 drive_time: "~4h 30m"
 yds_class: "2"
-gain: "~9,158 ft (3 days incl. pack-in/out)"
+gain: "~10,765 ft (3 days incl. pack-in/out)"
 status: unclimbed
 caltopo_id: AFRQGK8
 regional_map_id: L5VH4BU
-gain_ft: 9158
+gain_ft: 10765
 class: 2
 peaks: 4
 days: 3
 drive_h: 4.5
 weather: "https://forecast.weather.gov/MapClick.php?lat=38.088&lon=-105.665"
 days_detail:
-  - {label: "Drive + pack in", peaks: 0, dist_mi: 4.83, gain_ft: 1631, class: "1", day: 1}
-  - {label: "PT 13,054 (Pyramid Mtn)", peaks: 1, dist_mi: 11.05, gain_ft: 4061, class: "2", day: 2}
-  - {label: "North 3 + pack out", peaks: 3, dist_mi: 8.25, gain_ft: 3466, class: "2", day: 3}
-dist_mi: 24.13
+  - {label: "Drive + pack in", peaks: 0, dist_mi: 5.87, gain_ft: 1658, class: "1", day: 1}
+  - {label: "PT 13,054 (Pyramid Mtn)", peaks: 1, dist_mi: 13.13, gain_ft: 4641, class: "2", day: 2}
+  - {label: "North 3 + pack out", peaks: 3, dist_mi: 10.4, gain_ft: 4466, class: "2", day: 3}
+dist_mi: 29.4
 th_source: "recorded GPS-track starts at Hermit Pass Rd TH (38.0938,-105.6311, ~11,376') via 2021 crest-traverse (trk_ctx_loj_5598 at 12,067' near TH); OSM Overpass 'Hermit Lake Trailhead' node at 38.0933,-105.6317; AllTrails 'Rito Alto Lake via Rito Alto Trail' documents the west approach"
 class_source: "route beta — LoJ peak pages 755/759/791/770 (all Class 2, standard route from Rito Alto basin); climb13ers Rito Alto Peak / Eureka Mountain / Hermit Peak crest = Class 2/2+ (\"moderately rocky, fun rock and wildflowers,\" documented 4–5 summit day); no ridge segment on this trip exceeds Class 2"
 status_source: "peak_db ascents (Kyle — all 4 unclimbed)"
@@ -28,9 +28,9 @@ status_source: "peak_db ascents (Kyle — all 4 unclimbed)"
 !!! tip "At a glance — 3-day trip"
     **4 peaks** · **~4.5 h drive**
 
-    - **Day 1 (Drive + pack in):** **4.83 mi** · **1,631 ft** gain · **Class 1**
-    - **Day 2 (PT 13,054 (Pyramid Mtn)):** **11.05 mi** · **4,061 ft** gain · **Class 2** · 1 peak
-    - **Day 3 (North 3 + pack out):** **8.25 mi** · **3,466 ft** gain · **Class 2** · 3 peaks
+    - **Day 1 (Drive + pack in):** **5.87 mi** · **1,658 ft** gain · **Class 1**
+    - **Day 2 (PT 13,054 (Pyramid Mtn)):** **13.13 mi** · **4,641 ft** gain · **Class 2** · 1 peak
+    - **Day 3 (North 3 + pack out):** **10.4 mi** · **4,466 ft** gain · **Class 2** · 3 peaks
 
 <!-- QUICKSTATS_END -->
 
@@ -50,7 +50,7 @@ of the crest — **Rito Alto Pk, Hermit Pk A, Eureka Mtn A** — already climbed
 ![Overview map](../maps/rito_alto_group.png)
 
 <!-- PROVENANCE_START -->
-*Note: the recommended route was distilled from **24 recorded GPS tracks** of real trips (14ers.com · ListsofJohn · peakbagger) — all layered on the [interactive CalTopo research map](https://caltopo.com/m/AFRQGK8).*
+*Note: the recommended route was distilled from **22 recorded GPS tracks** of real trips (14ers.com · ListsofJohn · peakbagger) — all layered on the [interactive CalTopo research map](https://caltopo.com/m/AFRQGK8).*
 <!-- PROVENANCE_END -->
 
 ---
@@ -99,41 +99,45 @@ the trailhead at ~11,376'.
 
 ### Day 1 — Drive from Boulder, pack in to Rito Alto Lake
 
-**~4.83 mi · ~1,631 ft** on the mapped **Hermit Pass Trail**. From the trailhead the trail
-climbs the last ~1,600 ft to the crest at Hermit Pass (~13,000'), then drops west into the
-Rito Alto basin. The mapped trail passes about **0.5 mi east of the actual campsite** — from
-where it bottoms out in the basin (~12,000'), a short off-trail WNW walk brings you to the
-lake shore.
+**~5.87 mi · ~1,658 ft** on the mapped **Hermit Pass Trail (Rito Alto Trail Way 2)**. From
+the trailhead the trail climbs the last ~1,600 ft to the crest at Hermit Pass (~13,000'),
+then drops west into the Rito Alto basin. The trail goes right along the **west shore of
+Rito Alto Lake** — camp is a **spur trail up an embankment** on the left side of the trail
+(per AllTrails + climb13ers), a level site amid low conifers at ~11,880', before the NW
+stream crossing.
 
-**Camp:** Rito Alto Lake (~11,900'). Documented backpack camp (AllTrails "Rito Alto Lake via
-Rito Alto Trail" + LoJ TRs) — the well-used site is a spur up an embankment on the west
-side of the lake per AllTrails reviews.
+**Camp:** Rito Alto Lake (~11,880'). Documented backpack site — AllTrails "Rito Alto Lake
+via Rito Alto Trail" has 14 backpacker reviews.
 
 ### Day 2 — PT 13,054 "Pyramid Mtn" (Class 2)
 
-**~11.05 mi · ~4,061 ft** — the longest day, front-loaded. From camp, back to the mapped
-trail and follow it south past **San Isabel Lake** into the drainage below Pyramid Mtn's
-east basin. From the trail's south end (below the crest between Eureka Mtn A and Pyramid
-Mtn), leave the trail and climb the standard east lobe to the summit. Return via the reverse.
+**~13.13 mi · ~4,641 ft** — the longest day, front-loaded. From camp, back on the **Rito
+Alto Trail** briefly and then onto the **North Fork Crestone Trail** (which runs SE from
+just east of the lake past San Isabel Lake area down to Pyramid Mtn's east basin at
+~12,000'). From the trail's south end, a short off-trail east-lobe climb (~0.7 mi) reaches
+the summit — this is the recorded standard route per **trk_14ers_2**. Return via the same
+line.
 
 Class 2 tundra and talus; standard route per LoJ.
 
 ### Day 3 — North 3 + pack out to trailhead
 
-**~3.42 mi climb + ~4.83 mi pack out = 8.25 mi · ~3,466 ft** total.
+**~4.53 mi climb + ~5.87 mi pack out = 10.4 mi · ~4,466 ft** total.
 
-**Morning climb** — three peaks on the crest directly above camp:
+**Morning climb** — trail-and-crest loop over the north 3 (per composed route on the map):
 
-- From camp, cross the basin NW off-trail up to **PT 13,062 A "Mas Alto"** — the highest
-  and northernmost of the three. This is ~1.5 mi cross-country up from the lake basin (no
-  recorded trail; a natural terrain approach).
-- Chain south along the crest via **PT 13,060 A "Alto"** and **PT 13,031 "Menos Alto"** —
-  short ridge saddles (12,203' and 12,709' respectively; both Class 2, per LoJ + trk_loj_16073
-  recorded traverse).
-- Off-trail descent from PT 13,031 back down to camp (~0.75 mi).
+- From camp, follow the **Rito Alto Trail SOUTH** ~0.5 mi to where it comes closest to PT
+  13,031's east flank (~11,830').
+- Short off-trail ascent (~0.4 mi) up the drainage to **PT 13,031 "Menos Alto"** (13,031').
+- Chain **N along the crest** via **PT 13,060 A "Alto"** (13,059', ~0.9 mi, 12,709' saddle)
+  and **PT 13,062 A "Mas Alto"** (13,065', ~0.4 mi, 12,697' saddle) — recorded track per
+  **trk_loj_16073**.
+- Off-trail descent (~0.6 mi) from PT 13,062 SE back to the **Rito Alto Trail** near the
+  crest crossing.
+- Rito Alto Trail SOUTH ~1.7 mi back over the shoulder above the lake, down to camp.
 
-**Then pack out** — reverse of Day 1 back to Hermit Pass Rd TH (**~4.83 mi · ~1,131 ft** gain
-back over Hermit Pass, then descent to TH). Drive home ~4.5 h.
+**Then pack out** — reverse of Day 1 back to Hermit Pass Rd TH (**~5.87 mi · ~1,679 ft**
+gain back over Hermit Pass, then descent to TH). Drive home ~4.5 h.
 
 ---
 

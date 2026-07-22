@@ -32,7 +32,7 @@ Every ranked Colorado 13er/14er — **green peak = has a report** (click it to o
 | [Grizzly Pk E + PT 13,145 + Jenkins Mtn](peaks/grizzly_jenkins_group.md) | Sawatch | 2+ | 7.5 | 4,441 | 3 | 1 | 3 | 4.2 | unclimbed |
 | [Trinchera Group](peaks/trinchera_group.md) | Sangre de Cristo | 2 | 15.7 | 6,756 | 4 | 1 | 4 | 4.2 | unclimbed |
 | [Pearl Mountain + Oyster Peak](peaks/pearl_oyster.md) | Elk | 2+ | 8.8 | 4,073 | 2 | 1 | 2 | 4.4 | unclimbed |
-| [rito_alto_group](trips/rito_alto_group.md) | Sangre de Cristo | 2 | 24.13 | 9,158 | 4 | 3 | 1.3 | 4.5 | unclimbed |
+| [rito_alto_group](trips/rito_alto_group.md) | Sangre de Cristo | 2 | 29.4 | 10,765 | 4 | 3 | 1.3 | 4.5 | unclimbed |
 | [PT 13,557](peaks/pt_13557.md) | Sangre de Cristo | 2 | 12.2 | 5,544 | 1 | 1 | 1 | 4.7 | unclimbed |
 | ["Baldy Lejos" + PT 13,115 + PT 13,030](peaks/baldy_lejos_trio.md) | San Juan | 2 | 11.9 | 3,707 | 3 | 1 | 3 | 5 | climbed |
 | [Henry Mountain](peaks/henry_mountain.md) | Sawatch | 2 | 9.3 | 3,666 | 1 | 1 | 1 | 5 | unclimbed |
