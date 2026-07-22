@@ -38,7 +38,7 @@ Every ranked Colorado 13er/14er — **green peak = has a report** (click it to o
 | [Henry Mountain](peaks/henry_mountain.md) | Sawatch | 2 | 9.3 | 3,666 | 1 | 1 | 1 | 5 | unclimbed |
 | [PT 13,308 + PT 13,166](peaks/pt_13308_13166.md) | San Juan | 3 | 10.2 | 3,594 | 2 | 1 | 2 | 5 | climbed |
 | [West Willow Creek](trips/west_willow_la_garita.md) | San Juan | 3 | 22.6 | 7,152 | 5 | 2 | 2.5 | 5 | climbed |
-| [South San Juans 3-Day Weekend](trips/south_san_juans_3day.md) | San Juan | 2 | 23.4 | 9,500 | 5 | 3 | 1.7 | 5.2 | unclimbed |
+| [South San Juans 3-Day Weekend](trips/south_san_juans_3day.md) | San Juan | 2 | 19.11 | 9,500 | 5 | 3 | 1.7 | 5.2 | unclimbed |
 | [Cimarron "Remaining Six"](peaks/cimarron_six.md) | San Juan | 4 | 15.3 | 6,393 | 6 | 1 | 6 | 5.5 | unclimbed |
 | [Fairview Peak](peaks/fairview_peak.md) | Sawatch | 1 | 2.8 | 1,137 | 1 | 1 | 1 | 5.5 | unclimbed |
 | [PT 13,408 + PT 13,026](peaks/pt_13026_13408.md) | San Juan | 2 | 15.9 | 5,021 | 2 | 1 | 2 | 5.5 | unclimbed |

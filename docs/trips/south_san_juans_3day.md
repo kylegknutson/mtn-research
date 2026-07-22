@@ -13,10 +13,10 @@ peaks: 5
 days: 3
 drive_h: 5.2
 days_detail:  # peaks ~17 mi apart → one NOAA link per day
-  - {label: "Bennett", peaks: 1, dist_mi: 7, gain_ft: 2900, class: "1", wx: "https://forecast.weather.gov/MapClick.php?lat=37.4834&lon=-106.4339"}
-  - {label: "Summit trio", peaks: 3, dist_mi: 10.2, gain_ft: 4449, class: "2", wx: "https://forecast.weather.gov/MapClick.php?lat=37.3505&lon=-106.6969"}
-  - {label: "Conejos", peaks: 1, dist_mi: 6.2, gain_ft: 2500, class: "1", wx: "https://forecast.weather.gov/MapClick.php?lat=37.2886&lon=-106.5710"}
-dist_mi: 23.4
+  - {label: "Bennett", peaks: 1, dist_mi: 4.94, gain_ft: 2900, class: "1", wx: "https://forecast.weather.gov/MapClick.php?lat=37.4834&lon=-106.4339"}
+  - {label: "Summit trio", peaks: 3, dist_mi: 8.26, gain_ft: 4449, class: "2", wx: "https://forecast.weather.gov/MapClick.php?lat=37.3505&lon=-106.6969"}
+  - {label: "Conejos", peaks: 1, dist_mi: 5.91, gain_ft: 2500, class: "1", wx: "https://forecast.weather.gov/MapClick.php?lat=37.2886&lon=-106.5710"}
+dist_mi: 19.11
 th_source: "recorded GPS-track starts at the 3 day THs — Bennett Pk TH FS265 (37.46,-106.415), Trio/Elwood Pass TH (37.363,-106.67), Conejos Pk TH (37.296,-106.539); peaks.yml trailheads + swept-track approaches"
 class_source: "route beta — 14ers.com 13er routes + listsofjohn + peakbagger trip reports (Class 2 max on the Summit trio; Bennett/Conejos Class 1)"
 status_source: "peak_db ascents (Kyle — unclimbed)"
@@ -29,9 +29,9 @@ status_source: "peak_db ascents (Kyle — unclimbed)"
 !!! tip "At a glance — 3-day trip"
     **5 peaks** · **~5.2 h drive**
 
-    - **Day 1 (Bennett):** **7 mi** · **2,900 ft** gain · **Class 1** · 1 peak · [weather](https://forecast.weather.gov/MapClick.php?lat=37.4834&lon=-106.4339)
-    - **Day 2 (Summit trio):** **10.2 mi** · **4,449 ft** gain · **Class 2** · 3 peaks · [weather](https://forecast.weather.gov/MapClick.php?lat=37.3505&lon=-106.6969)
-    - **Day 3 (Conejos):** **6.2 mi** · **2,500 ft** gain · **Class 1** · 1 peak · [weather](https://forecast.weather.gov/MapClick.php?lat=37.2886&lon=-106.5710)
+    - **Day 1 (Bennett):** **4.94 mi** · **2,900 ft** gain · **Class 1** · 1 peak · [weather](https://forecast.weather.gov/MapClick.php?lat=37.4834&lon=-106.4339)
+    - **Day 2 (Summit trio):** **8.26 mi** · **4,449 ft** gain · **Class 2** · 3 peaks · [weather](https://forecast.weather.gov/MapClick.php?lat=37.3505&lon=-106.6969)
+    - **Day 3 (Conejos):** **5.91 mi** · **2,500 ft** gain · **Class 1** · 1 peak · [weather](https://forecast.weather.gov/MapClick.php?lat=37.2886&lon=-106.5710)
 
 <!-- QUICKSTATS_END -->
 
