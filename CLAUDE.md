@@ -15,10 +15,17 @@ scripts, and raw `grep`/`sed` instead of using the scripts. Don't repeat that.)
 - **Don't prompt Kyle for auth pre-emptively.** Only ask him to log in if the **MCP
   browser itself** shows logged-out (or a sweep returns a login page). Never prompt off
   `check_sources_login.py`'s standalone profile — it diverges and false-flagged a login.
-- **Retro after every report (Kyle, 2026-06-16).** End each build with a 2–3 line
-  self-retro: what did Kyle have to catch or correct, what was prompted that shouldn't
-  have been, what got hand-written that should be a `scripts/*.py`. Fold the fix into the
-  rails (gate / CLAUDE.md / memory / script) immediately — relentless improvement.
+- **Retro after every report — measured in Kyle's interaction (Kyle, 2026-06-16 /
+  reinforced 2026-07-12).** End EVERY build with an explicit evaluation of **how much
+  interaction this report cost Kyle** and how to drive it toward zero next time. Count
+  the concrete touches: permission prompts, manual clicks (e.g. peakbagger Cloudflare),
+  corrections Kyle had to make, decisions I kicked to him that a sensible default could
+  have settled, and anything I hand-wrote in shell that should be a script. For each,
+  **standardize + allow-list the fix immediately** — a new/extended `scripts/*.py` (with
+  its `.claude/settings.json` allow entry), a gate, a default recorded in CLAUDE.md, or a
+  memory. The bar: the *same* interaction should never be needed on the next report. This
+  is not a nicety — it's the point. (See the ≤3-prompts-per-run budget below and
+  [[feedback-fewer-shell-prompts]].)
 - **Assume, don't ask:** individual-vs-combo and trip grouping — pick the sensible
   default; Kyle redoes if he wants it the other way. When ≥2 reports share a
   drainage/area/drive, proactively build the Trip.
@@ -68,6 +75,14 @@ single-peak/group report is essentially:
      Cloudflare "Verifying you are human…" wall (it's an automated profile Cloudflare
      won't clear — we hit this 2026-06-16). The MCP browser is the only reliable
      peakbagger path; `sweep_gpx.py` is at best a 14ers+LoJ headless convenience.
+   - **peakbagger Cloudflare — clear it WITHOUT bugging Kyle first (2026-07-12).** In
+     the MCP browser, pb usually clears on its own; the "Just a moment…" challenge is a
+     JS check that auto-redirects in a genuine browser given a few seconds. If a pb
+     navigate returns "Just a moment…"/403, **wait ~8–10 s (`browser_wait_for`) and
+     re-check ONCE — do NOT hammer reloads** (back-to-back reloads interrupt the JS
+     challenge; that's what forced a manual click on the La Plata build). Only if it's
+     still walled after the wait, ask Kyle to click the checkbox — that's the one
+     legitimate human touch, and it should be rare.
 3. File the swept tracks into `gpx/<slug>/` with `scripts/ingest_gpx.py --slug <slug>
    --json <blob.json>` (for browser_evaluate blobs; direct downloads just get named +
    moved there).
