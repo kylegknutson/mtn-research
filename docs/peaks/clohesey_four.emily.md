@@ -40,7 +40,7 @@ status_source: "scrape_14ers_checklist emily"
     **NOAA weather link:** [Clohesey Four Weather](https://forecast.weather.gov/MapClick.php?lat=38.920&lon=-106.410)
 
 !!! map ""
-    **CalTopo research map:** https://caltopo.com/m/P38PGQ6
+    **CalTopo research map:** <https://caltopo.com/m/P38PGQ6>
 
 **Status for Emily:** all four **unclimbed** (on her 14ers checklist). A tidy cluster above **Clohesey Lake** in the Collegiate Peaks, SW of Missouri/Belford.
 

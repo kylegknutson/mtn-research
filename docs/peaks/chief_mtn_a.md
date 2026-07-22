@@ -38,7 +38,7 @@ status_source: "peak_db ascents (Kyle — unclimbed)"
     **NOAA weather link:** [Chief Mtn A Weather](https://forecast.weather.gov/MapClick.php?lat=37.636&lon=-107.209)
 
 !!! map ""
-    **CalTopo research map:** https://caltopo.com/m/306L9V1
+    **CalTopo research map:** <https://caltopo.com/m/306L9V1>
 
 **Status in DB:** unclimbed. A ranked (CO #625), gentle **Class 2** 13er deep in the
 **Weminuche Wilderness** — no ranked neighbors within 4 miles, so it's a standalone

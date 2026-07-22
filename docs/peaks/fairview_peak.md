@@ -38,7 +38,7 @@ status_source: "peak_db ascents (Kyle — unclimbed)"
     **NOAA weather link:** [Fairview Peak Weather](https://forecast.weather.gov/MapClick.php?lat=38.68&lon=-106.54)
 
 !!! map ""
-    **CalTopo research map:** https://caltopo.com/m/C57DGK4
+    **CalTopo research map:** <https://caltopo.com/m/C57DGK4>
 
 **Status in DB:** unclimbed. A ranked (CO #465), **Class 1** tundra summit above Gold
 Basin, NE of Gunnison. Its whole difficulty is the **rough 4WD drive** up Gold Creek

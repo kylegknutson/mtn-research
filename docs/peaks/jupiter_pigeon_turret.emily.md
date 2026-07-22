@@ -55,7 +55,7 @@ status_source: "scrape_14ers_checklist emily"
     **NOAA weather link:** [Jupiter, Pigeon & Turret Weather](https://forecast.weather.gov/MapClick.php?lat=37.66&lon=-107.63)
 
 !!! map ""
-    **CalTopo research map:** https://caltopo.com/m/MU0K4JT
+    **CalTopo research map:** <https://caltopo.com/m/MU0K4JT>
 
 **Shareable link (sanitized — safe to forward to anyone):** <https://mtn-share.pages.dev/s/e6d42c6c59b6cda8/> — no names, climbed status, or research maps; expires ~2026-11-08 (regenerate anytime: `share_report.py jupiter_pigeon_turret`)
 

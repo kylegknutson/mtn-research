@@ -37,7 +37,7 @@ status_source: "peak_db ascents (Kyle — unclimbed)"
     **NOAA weather link:** [Carter Dome Group Weather](https://forecast.weather.gov/MapClick.php?lat=44.24945&lon=-71.22355)
 
 !!! map ""
-    **CalTopo research map:** https://caltopo.com/m/AAFUQQ1
+    **CalTopo research map:** <https://caltopo.com/m/AAFUQQ1>
 
 **Status in DB:** Unclimbed — NH 48 peaks, no prior ascents logged
 

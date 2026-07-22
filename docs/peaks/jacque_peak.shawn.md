@@ -32,7 +32,7 @@ gain_ft: 3473
     **NOAA weather link:** [Jacque Peak Weather](https://forecast.weather.gov/MapClick.php?lat=39.45485&lon=-106.19713)
 
 !!! map ""
-    **CalTopo research map:** https://caltopo.com/m/R2NF0S2
+    **CalTopo research map:** <https://caltopo.com/m/R2NF0S2>
 
 **Status for Shawn:** **Unclimbed.** CO Rank 482, ranked and prominent (Rise 2,296').
 

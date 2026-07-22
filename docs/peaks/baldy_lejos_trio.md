@@ -36,7 +36,7 @@ status_source: "peak_db ascents (Kyle — climbed)"
     **NOAA weather link:** ["Baldy Lejos" + PT 13,115 + PT 13,030 Weather](https://forecast.weather.gov/MapClick.php?lat=37.9941&lon=-107.0006)
 
 !!! map ""
-    **CalTopo research map:** https://caltopo.com/m/4278RCG
+    **CalTopo research map:** <https://caltopo.com/m/4278RCG>
 
 **Status in DB:** all three **climbed** (2026-06-13).
 

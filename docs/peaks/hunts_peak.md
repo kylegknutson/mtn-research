@@ -32,7 +32,7 @@ status_source: "peak_db ascents"
 
 **Freshness pass:** 2026-05-29 (added LoJ + peakbagger sources per 3-source methodology; reconfirmed cluster status)
 
-**CalTopo research map:** https://caltopo.com/m/2SCT1B6 (Sangres-tip dedicated research map; existing C105AEV still has Bushnell/Twin Sisters planning data)
+**CalTopo research map:** <https://caltopo.com/m/2SCT1B6> (Sangres-tip dedicated research map; existing C105AEV still has Bushnell/Twin Sisters planning data)
 
 **Trip NOAA weather:** [Hunts Peak Weather](https://forecast.weather.gov/MapClick.php?lat=38.3831&lon=-105.94582)
 

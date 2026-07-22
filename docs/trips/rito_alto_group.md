@@ -3,21 +3,21 @@ image: maps/rito_alto_group.png
 range: Sangre de Cristo
 drive_time: "~4h 30m"
 yds_class: "2"
-gain: "~9,844 ft (3 days incl. pack-in/out)"
+gain: "~9,820 ft (3 days incl. pack-in/out)"
 status: unclimbed
 caltopo_id: AFRQGK8
 regional_map_id: L5VH4BU
-gain_ft: 9844
+gain_ft: 9820
 class: 2
 peaks: 4
 days: 3
 drive_h: 4.5
 weather: "https://forecast.weather.gov/MapClick.php?lat=38.088&lon=-105.665"
 days_detail:
-  - {label: "Drive + pack in", peaks: 0, dist_mi: 4.60, gain_ft: 1350, class: "1", day: 1}
+  - {label: "Drive + pack in", peaks: 0, dist_mi: 5.36, gain_ft: 1339, class: "1", day: 1}
   - {label: "PT 13,054 (Pyramid Mtn)", peaks: 1, dist_mi: 13.13, gain_ft: 4641, class: "2", day: 2}
-  - {label: "North 3 + pack out", peaks: 3, dist_mi: 7.92, gain_ft: 3853, class: "2", day: 3}
-dist_mi: 25.65
+  - {label: "North 3 + pack out", peaks: 3, dist_mi: 9.40, gain_ft: 3840, class: "2", day: 3}
+dist_mi: 27.89
 th_source: "recorded GPS-track starts at Hermit Pass Rd TH (38.0938,-105.6311, ~11,376') via 2021 crest-traverse (trk_ctx_loj_5598 at 12,067' near TH); OSM Overpass 'Hermit Lake Trailhead' node at 38.0933,-105.6317; AllTrails 'Rito Alto Lake via Rito Alto Trail' documents the west approach"
 class_source: "route beta — LoJ peak pages 755/759/791/770 (all Class 2, standard route from Rito Alto basin); climb13ers Rito Alto Peak / Eureka Mountain / Hermit Peak crest = Class 2/2+ (\"moderately rocky, fun rock and wildflowers,\" documented 4–5 summit day); no ridge segment on this trip exceeds Class 2"
 status_source: "peak_db ascents (Kyle — all 4 unclimbed)"
@@ -28,9 +28,9 @@ status_source: "peak_db ascents (Kyle — all 4 unclimbed)"
 !!! tip "At a glance — 3-day trip"
     **4 peaks** · **~4.5 h drive**
 
-    - **Day 1 (Drive + pack in):** **4.6 mi** · **1,350 ft** gain · **Class 1**
+    - **Day 1 (Drive + pack in):** **5.36 mi** · **1,339 ft** gain · **Class 1**
     - **Day 2 (PT 13,054 (Pyramid Mtn)):** **13.13 mi** · **4,641 ft** gain · **Class 2** · 1 peak
-    - **Day 3 (North 3 + pack out):** **7.92 mi** · **3,853 ft** gain · **Class 2** · 3 peaks
+    - **Day 3 (North 3 + pack out):** **9.4 mi** · **3,840 ft** gain · **Class 2** · 3 peaks
 
 <!-- QUICKSTATS_END -->
 
@@ -40,7 +40,7 @@ status_source: "peak_db ascents (Kyle — all 4 unclimbed)"
     **NOAA weather link:** [Rito Alto basin weather](https://forecast.weather.gov/MapClick.php?lat=38.088&lon=-105.665)
 
 !!! map ""
-    **CalTopo research map:** https://caltopo.com/m/AFRQGK8
+    **CalTopo research map:** <https://caltopo.com/m/AFRQGK8>
 
 **Status in DB:** all 4 unclimbed. Four ranked west-Sangre 13ers arrayed above Rito Alto
 Lake — three on the north crest (**PT 13,062 A "Mas Alto"**, **PT 13,060 A "Alto"**,
@@ -99,10 +99,10 @@ the trailhead at ~11,376'.
 
 ### Day 1 — Drive from Boulder, pack in to Rito Alto Lake
 
-**~4.60 mi · ~1,350 ft** — the recommended pack-in is a **verbatim segment of trk_loj_14848**
-(a recorded ListsofJohn trip that loops the whole east-side approach). From the trailhead the
-route climbs the last ~1,300 ft to the crest near Hermit Pass, then drops west into the Rito
-Alto basin. The trail passes right through camp at the lake's west shore.
+**~5.36 mi · ~1,339 ft** on **mapped OSM trails** — first Hermit Lake Road (`highway=track`,
+the 4WD dirt road extension from TH), then Rito Alto Trail over Hermit Pass (~13,000') and
+down west into the Rito Alto basin. The trail passes right through camp at the lake's west
+shore.
 
 **Camp:** Rito Alto Lake (~11,880'). Documented backpack site — AllTrails "Rito Alto Lake
 via Rito Alto Trail" has 14 backpacker reviews; the campsite is a **spur trail up an
@@ -121,16 +121,17 @@ Class 2 tundra and talus; standard route per LoJ.
 
 ### Day 3 — North 3 + pack out to trailhead
 
-**~4.04 mi climb + ~3.88 mi pack out = 7.92 mi · ~3,853 ft** total.
+**~4.04 mi climb + ~5.36 mi pack out = 9.40 mi · ~3,840 ft** total.
 
-**Morning climb** — camp-to-camp loop over the north 3, verbatim from **trk_loj_14848** (the
-same recorded trip). From camp, the trail ascends the west drainage NW to the crest, tags
-**PT 13,062 A "Mas Alto"** (13,065'), traverses S along the ridge past **PT 13,060 A "Alto"**
-(13,059'), continues to **PT 13,031 "Menos Alto"** (13,031'), then descends the east ridge
-back to camp. All three saddles and both spur ridges recorded Class 2.
+**Morning climb** — camp-to-camp loop over the north 3, verbatim from **trk_loj_14848** (a
+recorded east-side loop). From camp, the recorded trail ascends the west drainage NW to the
+crest, tags **PT 13,062 A "Mas Alto"** (13,065'), traverses S along the ridge past
+**PT 13,060 A "Alto"** (13,059'), continues to **PT 13,031 "Menos Alto"** (13,031'), then
+descends the east ridge back to camp. All three saddles and both spur ridges recorded Class 2.
 
-**Then pack out** — the return half of trk_loj_14848 back over Hermit Pass to the TH
-(**~3.88 mi · ~1,692 ft** — mostly a gentle descent after the pass). Drive home ~4.5 h.
+**Then pack out** — reverse of Day 1 back to the TH on the mapped **Rito Alto Trail** and
+**Hermit Lake Road** (**~5.36 mi · ~1,679 ft** gain back over Hermit Pass, then descent).
+Drive home ~4.5 h.
 
 ---
 

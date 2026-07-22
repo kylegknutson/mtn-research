@@ -39,7 +39,7 @@ status_source: "scrape_14ers_checklist emily (usernum 45697) 2026-06-17; peak_db
     **NOAA weather link:** [Gladstone Peak Weather](https://forecast.weather.gov/MapClick.php?lat=37.845&lon=-107.984)
 
 !!! map ""
-    **CalTopo research map:** https://caltopo.com/m/1PV10HH
+    **CalTopo research map:** <https://caltopo.com/m/1PV10HH>
 
 **Status for Emily:** **unclimbed** (on her 14ers checklist). CO rank **67**, a **Centennial** (highest 100 in Colorado) — the high prize of this trip.
 

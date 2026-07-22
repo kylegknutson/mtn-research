@@ -38,7 +38,7 @@ status_source: "peak_db ascents (Kyle — unclimbed)"
     **NOAA weather link:** [Lake Fork Pk Weather](https://forecast.weather.gov/MapClick.php?lat=38.999&lon=-106.554)
 
 !!! map ""
-    **CalTopo research map:** https://caltopo.com/m/EFA1LAT
+    **CalTopo research map:** <https://caltopo.com/m/EFA1LAT>
 
 **Status in DB:** unclimbed. A ranked (CO #367), **Class 2** Sawatch 13er above the South
 Fork of Lake Creek, southeast of Twin Lakes. Split out of the

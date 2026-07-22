@@ -31,7 +31,7 @@ status_source: "peak_db ascents (Kyle — unclimbed)"
 **Researched:** 2026-06-15
 
 !!! map ""
-    **CalTopo research map:** https://caltopo.com/m/TMVGNRR
+    **CalTopo research map:** <https://caltopo.com/m/TMVGNRR>
 
 **Status in DB:** all three unclimbed. (Rio Grande Pyramid, Window Pk + Ute Ridge already done.)
 

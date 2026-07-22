@@ -38,7 +38,7 @@ status_source: "peak_db ascents (Kyle — La Plata climbed, PT 13,222 unclimbed)
     **NOAA weather link:** [La Plata + PT 13,222 Weather](https://forecast.weather.gov/MapClick.php?lat=39.03&lon=-106.47)
 
 !!! map ""
-    **CalTopo research map:** https://caltopo.com/m/5LGGVCQ
+    **CalTopo research map:** <https://caltopo.com/m/5LGGVCQ>
 
 **Status in DB:** **La Plata Peak (14,344') is climbed;** the target here is **PT 13,222**
 — which *is* the summit of **Ellingwood Ridge**, La Plata's notorious NE ridge. Pairing

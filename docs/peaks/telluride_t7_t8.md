@@ -30,7 +30,7 @@ status_source: "peak_db ascents"
 **Researched:** 2026-05-14
 
 !!! map ""
-    **CalTopo research map:** https://caltopo.com/m/6FM1FEK
+    **CalTopo research map:** <https://caltopo.com/m/6FM1FEK>
 
 **Status in your sheet:** All 3 unclimbed (T 7 and T 8 explicitly at 0 ascents; Telluride Pk LiDAR-confirmed ranked, no entry in your climb log).
 

@@ -38,7 +38,7 @@ status_source: "peak_db ascents (Kyle — unclimbed)"
     **NOAA weather link:** [Henry Mountain Weather](https://forecast.weather.gov/MapClick.php?lat=38.69&lon=-106.62)
 
 !!! map ""
-    **CalTopo research map:** https://caltopo.com/m/P01ARC3
+    **CalTopo research map:** <https://caltopo.com/m/P01ARC3>
 
 **Status in DB:** unclimbed. A ranked (CO #424), **Class 2** summit at the head of the
 Gold Creek drainage NE of Gunnison. A moderate day via Gunsight Pass — no technical

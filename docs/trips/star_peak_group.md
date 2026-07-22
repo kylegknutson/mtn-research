@@ -39,7 +39,7 @@ status_source: "peak_db ascents"
     **NOAA weather link:** [Star Peak Group Weather](https://forecast.weather.gov/MapClick.php?lat=38.97963&lon=-106.79967)
 
 !!! map ""
-    **CalTopo research map:** https://caltopo.com/m/J6HBR6S
+    **CalTopo research map:** <https://caltopo.com/m/J6HBR6S>
 
 **Status in DB:** All three 0 ascents (unclimbed). These are the core unclimbed ranked 13ers of the **East Taylor Park / Star Pass cluster** — the densest pocket of unclimbed ranked 13ers on Kyle's near-term list.
 

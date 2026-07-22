@@ -33,7 +33,7 @@ status_source: "peak_db ascents"
     **NOAA weather link:** [Cuba Gulch Trio Weather](https://forecast.weather.gov/MapClick.php?lat=37.82997&lon=-107.52956)
 
 !!! map ""
-    **CalTopo research map:** https://caltopo.com/m/DCQ8UKS
+    **CalTopo research map:** <https://caltopo.com/m/DCQ8UKS>
 
 **Status in DB:** All three 0 ascents (unclimbed), all **ranked** San Juan 13ers (PT 13,003 = id 822, Class 1). The trio rings the head of **Cuba Gulch**, but the practical approach is up **Minnie Gulch from the Animas / Silverton side** — in the Half Peak pocket of the Grenadier-fringe San Juans.
 

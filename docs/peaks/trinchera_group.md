@@ -33,7 +33,7 @@ status_source: "peak_db ascents"
     **NOAA weather link:** [Trinchera Group Weather](https://forecast.weather.gov/MapClick.php?lat=37.28911&lon=-105.16478)
 
 !!! map ""
-    **CalTopo research map:** https://caltopo.com/m/K7F110T
+    **CalTopo research map:** <https://caltopo.com/m/K7F110T>
 
 **Status in DB:** All four 0 ascents (unclimbed). The northern **Culebra Range** crest, done as one N→S ridge traverse.
 

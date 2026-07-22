@@ -35,7 +35,7 @@ status_source: "peak_db ascents (Kyle — unclimbed)"
     **NOAA weather link:** [Wayah Group Weather](https://forecast.weather.gov/MapClick.php?lat=39.190&lon=-106.540)
 
 !!! map ""
-    **CalTopo research map:** https://caltopo.com/m/6SVRT30
+    **CalTopo research map:** <https://caltopo.com/m/6SVRT30>
 
 **Status in DB:** all six unclimbed. These are Kyle's share of the **8-peak "Wayah Group"** — the long ridge NW of **Mount Massive / Mount Oklahoma** (both already done), between the **Hunter-Fryingpan Wilderness** and **Hwy 82 (Independence Pass)**.
 

@@ -43,7 +43,7 @@ status_source: "peak_db ascents (Kyle — both unclimbed)"
     **NOAA weather link:** [Gold Basin Weather](https://forecast.weather.gov/MapClick.php?lat=38.68&lon=-106.58)
 
 !!! map ""
-    **CalTopo research map:** https://caltopo.com/m/0H0CS75
+    **CalTopo research map:** <https://caltopo.com/m/0H0CS75>
 
 **Status in DB:** both unclimbed. Two ranked Gunnison 13ers in the **Gold Creek / Gold
 Basin** system — packaged as **one car-camp trip** because they're ~5.5 h from home and

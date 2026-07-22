@@ -33,7 +33,7 @@ status_source: "peak_db ascents"
     **NOAA weather link:** [Mount Powell + Eagles Nest Weather](https://forecast.weather.gov/MapClick.php?lat=39.76009&lon=-106.34074)
 
 !!! map ""
-    **CalTopo research map:** https://caltopo.com/m/GG1BKFL
+    **CalTopo research map:** <https://caltopo.com/m/GG1BKFL>
 
 **Status in DB:** Both 0 ascents (unclimbed). **Mount Powell is the highest peak in the Gore Range.**
 

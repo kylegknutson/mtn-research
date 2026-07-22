@@ -38,7 +38,7 @@ status_source: "peak_db ascents (Kyle — unclimbed)"
     **NOAA weather link:** [South River Peak Weather](https://forecast.weather.gov/MapClick.php?lat=37.574&lon=-106.982)
 
 !!! map ""
-    **CalTopo research map:** https://caltopo.com/m/J2M0586
+    **CalTopo research map:** <https://caltopo.com/m/J2M0586>
 
 **Status in DB:** unclimbed. A ranked (CO #522), gentle **Class 2** 13er at the head
 of the **South Fork of the Rio Grande**, near the eastern edge of the Weminuche. A
