@@ -1,0 +1,71 @@
+# Rito Alto group — 4 unclimbed Sangre de Cristo 13ers, 3-day backpack.
+# Access: HERMIT PASS RD TH (~11,690', end of 4WD road) on the east side. Pack in over
+# Hermit Pass and down the mapped Rito Alto Trail (Way 2) into the Rito
+# Alto Lake basin. Camp on the Rito Alto Trail west shore near the lake
+# per AllTrails + climb13ers ("at ~11,880', trail junction, spur up an
+# embankment on the left as the trail heads around the west side of the
+# lake, before the NW stream crossing").
+#
+# Days:
+#   Day 1: drive + pack in (TH → camp via Hermit Pass Rd + Rito Alto Tr)
+#   Day 2: PT 13,054 "Pyramid" from camp — Rito Alto Tr S + North Fork
+#          Crestone Tr (trail runs from lake area SE past San Isabel Lake
+#          down to PT 13,054's base, then a short off-trail east-lobe
+#          climb to summit per trk_14ers_2 recording)
+#   Day 3: north 3 (PT 13,062 → 13,060 → 13,031) via crest chain (trk_loj_16073)
+#          + short off-trail spurs from camp to first peak / last peak to camp;
+#          then pack out via reverse of Day 1.
+objective_ids:
+- 755   # PT 13,062 A / "Mas Alto Peak"
+- 759   # PT 13,060 A / "Alto Peak"
+- 791   # PT 13,031   / "Menos Alto Peak"
+- 770   # PT 13,054   / "Pyramid Mountain"
+
+# Neighbor peaks on the same crest — swept for ridge-access beta (trk_ctx_*).
+context_ids:
+- 437   # Hermit Pk A 13,311 (✓)
+- 312   # Eureka Mtn A 13,505 (✓)
+- 133   # Rito Alto Peak 13,801 (✓)
+
+days:
+- label: north3
+  objective_ids: [755, 759, 791]
+  start: "38.0897,-105.6780"   # Rito Alto Lake camp (on Rito Alto Trail west shore, ~11,880')
+  track: "route_day3_north3"    # composed: camp → PT 13,062 → 13,060 → 13,031 → camp
+- label: south
+  objective_ids: [770]
+  start: "38.0897,-105.6780"
+  track: "route_day2_south"     # composed: camp → Rito Alto Tr S / NFCT → PT 13,054 → camp
+
+legs:
+- label: pack_in                  # Hermit Pass Rd TH → Rito Alto Lake camp (OSM Rito Alto Tr via Hermit Pass)
+  track: "trail_pack_in_osm"
+- label: pack_out
+  track: "trail_pack_out_osm"     # reverse of pack_in
+
+nearby:
+  include: false
+
+landmarks:
+- name: "Hermit Pass Rd TH (end of 4WD, ~11,690')"
+  lat: 38.09612
+  lon: -105.63400
+  ele_ft: 11690
+  kind: trailhead
+# TH coord is the actual end-of-road parking where recorded trips start (per
+# trk_loj_14848 idx 0 — the recording's origin). The OSM node "Hermit Lake
+# Trailhead" at 38.0938,-105.6311 (11,376') is a lower point on the same
+# Hermit Pass Rd (FS 160) that maps a different trail head, not this trip's
+# start. Confirmed by trk_loj_14848 starting at 38.0961,-105.6340 (11,688').
+- name: "Rito Alto Lake camp (~11,880')"
+  lat: 38.0897
+  lon: -105.6780
+  ele_ft: 11880
+  kind: camp
+# Campsite anchor is on the Rito Alto Trail's closest node to the lake shore.
+# Per climb13ers.com approach description: "at about the same elevation as the
+# trail junction (around 11,880 ft), there are some benches amid the low
+# conifers … very nice campsite on the left side of the trail by following a
+# short spur trail up an embankment as the trail goes along the west side of
+# the lake … a little before that [NW] stream crossing, on the left and up a
+# small slope, room for a couple tents."
