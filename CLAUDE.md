@@ -29,6 +29,16 @@ scripts, and raw `grep`/`sed` instead of using the scripts. Don't repeat that.)
 - **Assume, don't ask:** individual-vs-combo and trip grouping — pick the sensible
   default; Kyle redoes if he wants it the other way. When ≥2 reports share a
   drainage/area/drive, proactively build the Trip.
+- **Far-from-home + same-area ⇒ SURFACE the combined trip, even if Kyle asked for
+  individuals (Kyle, 2026-07-12).** Two 11-hour round trips to the same area is the thing
+  to prevent. Trigger: peaks share an access area/road system AND the drive from home is
+  long (**`drive_h` ≥ ~4**). When that's true, don't silently build separate reports —
+  **push back / offer the combined multi-day (car-camp or backpack) option** up front:
+  "these are both ~5.5 h to Gold Basin — worth one trip; want the combined report?" He
+  can still say individual (he did for Fairview/Henry — but I should have flagged the
+  Gold Basin trip). A cross-link in each report's *Other considerations* is NOT enough;
+  say it in chat when you notice, before building. (Miss: built Fairview + Henry solo
+  without offering the ~5.5 h Gold Basin combined trip.)
 - **Default to single-push combos; don't over-hedge.** Kyle's actual log (601
   ascents) shows a high multi-peak-day tolerance — **4+ peaks on ~24% of his days,
   up to 12 in a day**; 3–6 peaks in one push is routine. So when clustered peaks
