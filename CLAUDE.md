@@ -176,6 +176,18 @@ single-peak/group report is essentially:
   a `"Bash(scripts/<name>.py *)"` entry to `.claude/settings.json` `permissions.allow`**
   — there is no glob rule; every script has its own entry, and a missing one is how 700+
   one-off approvals piled up in settings.local.json by 2026-07.
+- **Budget: ≤3 permission prompts per report run (Kyle, 2026-07-12).** Every rails
+  `scripts/*.py` is already allow-listed, and `rg`/`grep`/`sed`/`tail`/`cat`/`curl -s`
+  auto-allow — so a clean build should prompt ~never. Prompts come from **improvising in
+  shell**: `awk` (can't be allow-listed — arbitrary code), `rm`, `chmod`, and **compound
+  `for`/`while` loops or heredocs** (opaque to the allow-checker even when the inner
+  command is allow-listed). Rules: (a) **never `awk` GPX** — `list_source_tracks.py <slug>
+  --starts` prints every track's start lat/lon + elevation + max-gap + objective coverage +
+  TH-distance, which is everything the ad-hoc awk gave; (b) **don't `rm` sweep blobs** —
+  `sweep_peak.py --ingest` deletes the blob itself; (c) **run each allow-listed script as
+  its OWN Bash call**, not chained in a `for` loop (the loop prompts, the individual calls
+  don't); (d) read gate/command output with the **Read tool**, not `grep`/`tail` in Bash.
+  When a new parsing need shows up, add it to a script — don't reach for shell.
 - **Headline distance from measured GPX; gain from a DEM** — never climb13ers prose,
   never GPS `<ele>` (it logs 30,000′ on a 13er).
 - **The 3-source sweep must PROVE itself — claims aren't checking (Kyle, 2026-06-16).**

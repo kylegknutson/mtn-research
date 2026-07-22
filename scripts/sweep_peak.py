@@ -158,6 +158,19 @@ def _unwrap(raw):
     return data
 
 
+def _cleanup_blob(blob_path):
+    """Delete the throwaway browser_evaluate sweep blob after a successful ingest,
+    so callers never need an ad-hoc `rm` (a permission prompt). Only removes .json
+    files — refuses anything else as a safety guard."""
+    try:
+        p = Path(blob_path)
+        if p.suffix == ".json" and p.is_file():
+            p.unlink()
+            print(f"  (cleaned up blob {p.name})")
+    except Exception:
+        pass
+
+
 def _sig(gpx):
     p = re.findall(r'lat="([-\d.]+)"\s+lon="([-\d.]+)"', gpx)
     if len(p) < 2:
@@ -207,6 +220,7 @@ def ingest(slug, which, blob_path):
               f"verified pids {meta.get('pb_pids', {})}")
         if meta.get("errors"):
             print("  errors:", *meta["errors"][:5], sep="\n    ")
+        _cleanup_blob(blob_path)
         return
     # 14ers / pb: write track files, dedup against what's on disk
     seen = _existing_sigs(slug)
@@ -229,6 +243,7 @@ def ingest(slug, which, blob_path):
     st["swept"] = sorted(set(st.get("swept", []) + [src]))
     save_state(slug, st)
     print(f"  {src}: {written} new track(s) (total {n})")
+    _cleanup_blob(blob_path)
     if meta.get("errors"):
         print("  errors:", *meta["errors"], sep="\n    ")
 

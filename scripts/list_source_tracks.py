@@ -36,8 +36,32 @@ def pts(p):
     return [(float(t.get("lat")), float(t.get("lon"))) for t in ET.parse(p).getroot().iter(NS+"trkpt")]
 
 
+def first_ele_ft(f):
+    """First trkpt elevation in feet (nan if none)."""
+    for pt in ET.parse(f).getroot().iter(NS+"trkpt"):
+        e = pt.find(NS+"ele")
+        if e is not None and e.text:
+            try:
+                return float(e.text) * 3.28084
+            except ValueError:
+                return float("nan")
+    return float("nan")
+
+
+def max_gap_mi(tp):
+    """Largest jump between consecutive points (mi) — a teleport/straight-run tell."""
+    if len(tp) < 2:
+        return 0.0
+    return max(hav(*tp[i], *tp[i+1]) for i in range(len(tp)-1)) / 1609.344
+
+
 def main():
-    slug = sys.argv[1]
+    # Usage: list_source_tracks.py <slug> [--starts]
+    #   --starts adds start lat,lon · start elevation (ft) · max within-track gap (mi)
+    #   so callers never need ad-hoc awk/rg over the GPX to find a TH or a teleport.
+    args = [a for a in sys.argv[1:] if not a.startswith("--")]
+    starts = "--starts" in sys.argv
+    slug = args[0]
     d = GPX / slug
     cfg = yaml.safe_load((d / "peaks.yml").read_text()) or {}
     th = next((lm for lm in cfg.get("landmarks", []) if lm.get("kind") == "trailhead"), None)
@@ -61,11 +85,18 @@ def main():
         samp = tp[::8] or tp
         covered = sum(1 for (la, lo), _ in objs if min(hav(la, lo, p[0], p[1]) for p in samp) <= COVER_M)
         th_ft = hav(tp[0][0], tp[0][1], th["lat"], th["lon"]) * 3.28084 if th else float("nan")
-        rows.append((miles, covered, th_ft, f.name))
-    rows.sort(reverse=True)
-    for miles, covered, th_ft, name in rows:
-        flag = "✓all" if objs and covered == len(objs) else f"{covered}/{len(objs)}"
-        print(f"  {miles:5.1f} mi  cover {flag:>5}  start {th_ft:6.0f} ft from TH   {name}")
+        row = {"miles": miles, "covered": covered, "th_ft": th_ft, "name": f.name}
+        if starts:
+            row.update(slat=tp[0][0], slon=tp[0][1], sele=first_ele_ft(f), gap=max_gap_mi(tp))
+        rows.append(row)
+    rows.sort(key=lambda r: r["miles"], reverse=True)
+    for r in rows:
+        flag = "✓all" if objs and r["covered"] == len(objs) else f"{r['covered']}/{len(objs)}"
+        line = f"  {r['miles']:5.1f} mi  cover {flag:>5}  start {r['th_ft']:6.0f} ft from TH   {r['name']}"
+        if starts:
+            line += (f"\n      start {r['slat']:.5f},{r['slon']:.5f}  "
+                     f"{r['sele']:,.0f}' ele  max-gap {r['gap']:.2f} mi")
+        print(line)
 
 
 if __name__ == "__main__":
