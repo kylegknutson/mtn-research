@@ -41,16 +41,16 @@ import xml.etree.ElementTree as ET
 GPX_ROOT = Path(__file__).resolve().parent.parent / "gpx"
 NS = "{http://www.topografix.com/GPX/1/1}"
 
-# A real leg's consecutive points are < ~0.1 mi apart. Composed routes can show
-# ~0.4-0.5 mi gaps where two source tracks are stitched at a shared waypoint; those
-# are acceptable. A multi-mile hop is always a router teleport.
-# TODO (Kyle, 2026-06-22): FAIL_MI=1.0 only catches multi-mile teleports — it let a
-# 0.77 mi corner-cut ship on cimarron's Fortress day as a mere warn. Lower to ~0.7 to
-# catch sub-mile corner-cuts, but that also flags hunts_peak (whose only clean recorded
-# route is a 12.6 mi point-to-point shuttle, not a loop) — needs a hunts route decision
-# first. build_trip_day_routes.py now defaults to --legs so trip day routes don't cut.
-WARN_MI = 0.5
-FAIL_MI = 1.0
+# A real leg's consecutive points are < ~0.15 mi apart (natural OSM/GPS spacing).
+# Anything larger is either a router teleport or an off-trail spur that should have
+# been densified. Both belong to the author to eliminate — a human following the
+# recommended route on their phone shouldn't see a straight-line jump. If a real
+# off-trail spur is unavoidable, densify it with intermediate waypoints so the
+# largest consecutive-point gap stays under FAIL_MI. (Kyle, 2026-07-22: caught
+# 0.54 mi camp spurs on rito_alto_group that had escaped as mere warns; tightened
+# so gate catches them, not the human reviewer.)
+WARN_MI = 0.2
+FAIL_MI = 0.5
 
 
 def hav_mi(a, b):

@@ -58,14 +58,28 @@ def save_state(slug, st):
     state_path(slug).write_text(json.dumps(st, indent=2) + "\n")
 
 
-def objective_peaks(slug):
-    cfg = yaml.safe_load((GPX / slug / "peaks.yml").read_text())
-    ids = cfg.get("objective_ids") or []
+def _resolve_peaks(ids):
     sys.path.insert(0, PEAKDB)
     from peak_db_client import peaks
     by = {p["id"]: p for p in peaks()}
     return [{"loj": i, "f14": by[i].get("fourteeners_id"), "name": by[i].get("display_name")}
             for i in ids if i in by]
+
+
+def objective_peaks(slug):
+    cfg = yaml.safe_load((GPX / slug / "peaks.yml").read_text())
+    return _resolve_peaks(cfg.get("objective_ids") or [])
+
+
+def context_peaks(slug):
+    """Neighbor peaks (peaks.yml `context_ids:`) that share this cluster's
+    trailheads / ridge system. Their libraries are swept for APPROACH beta —
+    how people gain the ridge, and whether the best line to an objective goes
+    over an already-climbed neighbor — NOT as objectives. Tracks are filed
+    trk_ctx_* so they inform route composition + show on the map but stay
+    distinct from objective coverage. (Kyle, 2026-07-22.)"""
+    cfg = yaml.safe_load((GPX / slug / "peaks.yml").read_text())
+    return _resolve_peaks(cfg.get("context_ids") or [])
 
 
 # --- fetch JS per origin (each returns a JSON string) ---------------------------
@@ -123,8 +137,12 @@ JS_PB = r"""async () => {
 }"""
 
 
-def emit(slug, which):
-    peaks = objective_peaks(slug)
+def emit(slug, which, context=False):
+    peaks = context_peaks(slug) if context else objective_peaks(slug)
+    if context and not peaks:
+        sys.exit("no context_ids in peaks.yml — add neighbor peak ids to sweep for ridge-access beta")
+    pidkey = "ctx_pids" if context else "pids"
+    tag = " (CONTEXT/neighbor peaks)" if context else ""
     if which == "loj":
         url = f"https://listsofjohn.com/peak/{peaks[0]['loj']}" if peaks else "https://listsofjohn.com/"
         js = JS_LOJ.replace("__PEAKS__", json.dumps([{"loj": p["loj"]} for p in peaks]))
@@ -133,13 +151,15 @@ def emit(slug, which):
         js = JS_14ERS.replace("__PEAKS__", json.dumps([{"f14": p["f14"]} for p in peaks]))
     else:  # pb
         st = load_state(slug)
-        pids = sorted(set(st.get("pids", {}).values()))
+        pids = sorted(set(st.get(pidkey, {}).values()))
         if not pids:
-            sys.exit("no pids yet — run `--emit loj` + `--ingest loj <file>` first")
+            sys.exit(f"no {'context ' if context else ''}pids yet — run `--emit loj{' --context' if context else ''}` "
+                     f"+ `--ingest loj <file>{' --context' if context else ''}` first")
         url = f"https://peakbagger.com/peak.aspx?pid={pids[0]}"
         js = JS_PB.replace("__PIDS__", json.dumps(pids))
-    print(f"# 1) navigate the MCP browser to: {url}", file=sys.stderr)
-    print(f"# 2) browser_evaluate(function=<the JS below>)  — then: sweep_peak.py --slug {slug} --ingest {which} <persisted-file>", file=sys.stderr)
+    ctxflag = " --context" if context else ""
+    print(f"# 1) navigate the MCP browser to: {url}{tag}", file=sys.stderr)
+    print(f"# 2) browser_evaluate(function=<the JS below>)  — then: sweep_peak.py --slug {slug} --ingest {which} <persisted-file>{ctxflag}", file=sys.stderr)
     print(js)
 
 
@@ -192,13 +212,21 @@ def _existing_sigs(slug):
     return sigs
 
 
-def ingest(slug, which, blob_path):
+def ingest(slug, which, blob_path, context=False):
+    # Context (neighbor) tracks are filed trk_ctx_* so route composition + the map
+    # can use them for ridge-access beta while staying distinct from objective
+    # coverage (they must NOT count toward a source's objective sweep). Their pb
+    # pids live under st['ctx_pids'] so the context pb emit is scoped to neighbors.
+    pfx = "ctx_" if context else ""
     data = _unwrap(Path(blob_path).read_text())
     meta = json.loads(data.pop("_meta", "{}")) if isinstance(data.get("_meta"), str) else {}
     st = load_state(slug)
     if which == "loj":
-        st["pids"].update(meta.get("pb_pids", {}))
-        st["swept"] = sorted(set(st.get("swept", []) + ["listsofjohn"]))
+        if context:
+            st.setdefault("ctx_pids", {}).update(meta.get("pb_pids", {}))
+        else:
+            st["pids"].update(meta.get("pb_pids", {}))
+            st["swept"] = sorted(set(st.get("swept", []) + ["listsofjohn"]))
         # write harvested LoJ TR tracks (dedup against disk), keep the gpx id in
         # the filename so it's traceable back to the LoJ trip report
         seen = _existing_sigs(slug)
@@ -211,12 +239,14 @@ def ingest(slug, which, blob_path):
                 print(f"  dedup {name}"); continue
             if sig:
                 seen.add(sig)
-            (GPX / slug / f"{name}.gpx").write_text(gpx)
+            fn = name.replace("trk_loj_", f"trk_{pfx}loj_") if context else name
+            (GPX / slug / f"{fn}.gpx").write_text(gpx)
             written += 1
-            print(f"  wrote {name}.gpx ({len(gpx)//1024} KB)")
-        st["loj_gpx"] = _count_on_disk(slug)["listsofjohn"] > 0
+            print(f"  wrote {fn}.gpx ({len(gpx)//1024} KB)")
+        if not context:
+            st["loj_gpx"] = _count_on_disk(slug)["listsofjohn"] > 0
         save_state(slug, st)
-        print(f"  LoJ: {written} new track(s); TRs seen {meta.get('tr_seen', '?')}; "
+        print(f"  LoJ{' CONTEXT' if context else ''}: {written} new track(s); TRs seen {meta.get('tr_seen', '?')}; "
               f"verified pids {meta.get('pb_pids', {})}")
         if meta.get("errors"):
             print("  errors:", *meta["errors"][:5], sep="\n    ")
@@ -225,7 +255,8 @@ def ingest(slug, which, blob_path):
     # 14ers / pb: write track files, dedup against what's on disk
     seen = _existing_sigs(slug)
     src = "14ers" if which == "14ers" else "peakbagger"
-    n = st["counts"].get(src, 0)
+    ck = f"ctx_{src}" if context else src
+    n = st["counts"].get(ck, 0)
     written = 0
     for name, gpx in sorted(data.items()):
         if not isinstance(gpx, str) or "<trkpt" not in gpx:
@@ -235,14 +266,15 @@ def ingest(slug, which, blob_path):
             print(f"  dedup {name}"); continue
         seen.add(sig)
         n += 1
-        fn = f"trk_{'14ers' if which=='14ers' else 'pb'}_{n}.gpx"
+        fn = f"trk_{pfx}{'14ers' if which=='14ers' else 'pb'}_{n}.gpx"
         (GPX / slug / fn).write_text(gpx)
         written += 1
         print(f"  wrote {fn} ({len(gpx)//1024} KB)")
-    st["counts"][src] = n
-    st["swept"] = sorted(set(st.get("swept", []) + [src]))
+    st["counts"][ck] = n
+    if not context:
+        st["swept"] = sorted(set(st.get("swept", []) + [src]))
     save_state(slug, st)
-    print(f"  {src}: {written} new track(s) (total {n})")
+    print(f"  {src}{' CONTEXT' if context else ''}: {written} new track(s) (total {n})")
     _cleanup_blob(blob_path)
     if meta.get("errors"):
         print("  errors:", *meta["errors"], sep="\n    ")
@@ -254,7 +286,7 @@ def _count_on_disk(slug):
     has 14ers tracks, without re-fetching/renumbering 14ers)."""
     c = {"14ers": 0, "peakbagger": 0, "listsofjohn": 0}
     skip = ("peaks_only", "landmark", "trailhead", "recommended", "_drive",
-            "drive_in", "waypoints", "summit", "actual", "kyle")
+            "drive_in", "waypoints", "summit", "actual", "kyle", "ctx")
     # MUST match check_source_coverage.SOURCE_TOKENS (order matters: "pb" is broad,
     # so test 14ers/loj first) — else finalize's committed sources.json disagrees with
     # the coverage gate. Older sweeps name pb tracks "*_pbAscent*" (no "_pb_"), so the
@@ -507,6 +539,9 @@ def main():
     ap.add_argument("--emit", choices=["loj", "14ers", "pb"])
     ap.add_argument("--ingest", nargs=2, metavar=("WHICH", "FILE"))
     ap.add_argument("--finalize", action="store_true")
+    ap.add_argument("--context", action="store_true",
+                    help="sweep peaks.yml `context_ids:` (neighbor peaks) for ridge-access "
+                         "beta; tracks filed trk_ctx_* (not objective coverage)")
     ap.add_argument("--emit-batch", choices=["loj", "14ers", "pb"], dest="emit_batch")
     ap.add_argument("--ingest-batch", nargs=2, metavar=("WHICH", "FILE"), dest="ingest_batch")
     ap.add_argument("--finalize-batch", action="store_true", dest="finalize_batch")
@@ -522,9 +557,9 @@ def main():
     elif args.finalize_batch:
         finalize_batch()
     elif args.emit:
-        emit(args.slug, args.emit)
+        emit(args.slug, args.emit, context=args.context)
     elif args.ingest:
-        ingest(args.slug, args.ingest[0], args.ingest[1])
+        ingest(args.slug, args.ingest[0], args.ingest[1], context=args.context)
     elif args.finalize:
         finalize(args.slug)
     else:
