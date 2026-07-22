@@ -96,6 +96,14 @@ single-peak/group report is essentially:
 3. File the swept tracks into `gpx/<slug>/` with `scripts/ingest_gpx.py --slug <slug>
    --json <blob.json>` (for browser_evaluate blobs; direct downloads just get named +
    moved there).
+3b. **Sweep the full OSM trail network** with `scripts/sweep_osm_trails.py --slug <slug>` —
+   ALWAYS run this alongside the 3-source recorded-track sweep (Kyle, 2026-07-22). Writes
+   `trail_osm_<name>_<way-id>.gpx` per mapped trail in the objective+context+landmark bbox
+   (default 2-mi pad). OSM trails go into route composition as ordinary source tracks —
+   the graph router picks either recorded tracks or mapped trails as walkable edges. The
+   Rio Grande Pyramid + Rito Alto builds both burned iterations discovering trails that
+   OSM already knew about; the sweep prevents this. Files skip source-coverage (OSM ≠
+   recorded beta). See [[feedback-osm-trail-sweep-standard]].
 4. `scripts/scaffold_report.py --slug <slug> --objective-ids …` writes
    `gpx/<slug>/peaks.yml`; then fill in `nearby.include`, the trailhead landmark, and the
    `route_build:` recipe (see step 6).

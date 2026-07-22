@@ -286,7 +286,7 @@ def _count_on_disk(slug):
     has 14ers tracks, without re-fetching/renumbering 14ers)."""
     c = {"14ers": 0, "peakbagger": 0, "listsofjohn": 0}
     skip = ("peaks_only", "landmark", "trailhead", "recommended", "_drive",
-            "drive_in", "waypoints", "summit", "actual", "kyle", "ctx")
+            "drive_in", "waypoints", "summit", "actual", "kyle", "ctx", "trail_osm")
     # MUST match check_source_coverage.SOURCE_TOKENS (order matters: "pb" is broad,
     # so test 14ers/loj first) — else finalize's committed sources.json disagrees with
     # the coverage gate. Older sweeps name pb tracks "*_pbAscent*" (no "_pb_"), so the

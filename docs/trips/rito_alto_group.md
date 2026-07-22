@@ -50,7 +50,7 @@ of the crest — **Rito Alto Pk, Hermit Pk A, Eureka Mtn A** — already climbed
 ![Overview map](../maps/rito_alto_group.png)
 
 <!-- PROVENANCE_START -->
-*Note: the recommended route was distilled from **22 recorded GPS tracks** of real trips (14ers.com · ListsofJohn · peakbagger) — all layered on the [interactive CalTopo research map](https://caltopo.com/m/AFRQGK8).*
+*Note: the recommended route was distilled from **64 recorded GPS tracks** of real trips (14ers.com · ListsofJohn · peakbagger) — all layered on the [interactive CalTopo research map](https://caltopo.com/m/AFRQGK8).*
 <!-- PROVENANCE_END -->
 
 ---
