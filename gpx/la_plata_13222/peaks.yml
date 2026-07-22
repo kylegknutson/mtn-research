@@ -1,0 +1,16 @@
+# Waypoint config — la_plata_13222 (La Plata Peak 14er + PT 13,222, Sawatch)
+# La Plata (6, climbed) + neighboring PT 13,222 (581, Class 3, unclimbed) — 1.36 mi
+# NE of La Plata toward Ellingwood Ridge. Combo from the standard CO-82 trailhead.
+objective_ids:
+- 6      # La Plata Peak 14,344 (climbed)
+- 581    # PT 13,222 (Class 3, the unclimbed target)
+
+nearby:
+  include: false
+
+# Shortest clean recorded track that summits BOTH and starts/ends at the CO-82 La Plata
+# TH (5 combo tracks converge there — confirmed TH).
+route_build: {method: from_track, track: "14ers_15"}
+
+landmarks:
+  - {name: "La Plata Peak TH (CO-82)", lat: 39.0670, lon: -106.5050, ele_ft: 10150, kind: trailhead}

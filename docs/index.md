@@ -19,6 +19,7 @@ Every ranked Colorado 13er/14er — **green peak = has a report** (click it to o
 | [Pennsylvania Mountain](peaks/pennsylvania_mountain.md) | Mosquito | 2 | 4.7 | 1,248 | 1 | 1 | 1 | 2.1 | unclimbed |
 | [Mount Powell + Eagles Nest](peaks/powell_eagles_nest.md) | Gore | 3 | 13.8 | 6,024 | 2 | 1 | 2 | 3.1 | unclimbed |
 | [Homestake Peak](peaks/homestake_peak.md) | Sawatch | 2 | 10.7 | 3,217 | 1 | 1 | 1 | 3.2 | unclimbed |
+| [La Plata Peak + PT 13,222](peaks/la_plata_13222.md) | Sawatch | 3 | 11.1 | 4,888 | 2 | 1 | 2 | 3.25 | unclimbed |
 | [Wayah Group](peaks/wayah_group.md) | Sawatch | 3–4 | 16.4 | 6,946 | 6 | 1 | 6 | 3.5 | unclimbed |
 | [Hunts Peak](peaks/hunts_peak.md) | Sangre de Cristo | 2 | 6.8 | 3,489 | 1 | 1 | 1 | 3.6 | unclimbed |
 | [Savage Peak + PT 13,002](peaks/savage_peak.md) | Sawatch | 2-3 | 13.4 | 5,721 | 2 | 1 | 2 | 3.6 | unclimbed |
