@@ -378,17 +378,21 @@ def draw_square(draw: ImageDraw.ImageDraw, ix: int, iy: int, size: int, color: t
                    fill=color, outline=(0, 0, 0, 255))
 
 def draw_mountain(draw: ImageDraw.ImageDraw, ix: int, iy: int, size: int, color: tuple):
-    """Peak marker (Kyle, 2026-07-11): a mountain silhouette with a snowcap —
-    bigger and more legible than the old stars; same size for objectives and
-    context summits, distinguished by color only."""
+    """Peak marker (Kyle, 2026-07-11): a mountain silhouette with a snowcap.
+    CENTERED on (ix, iy) — the anchor is the icon's vertical MIDDLE, so the symbol
+    sits ON its summit point (matching CalTopo), not floating above it. (Kyle,
+    2026-07-23: base-anchored icons read as ~100-300 ft north of the true point on
+    the PNG.)"""
     h = int(size * 1.5)
-    base = [(ix, iy - h), (ix - size, iy + size // 2), (ix + size, iy + size // 2)]
+    apex_y = iy - h // 2          # tip half the height above the point…
+    base_y = iy + h // 2          # …base half below → bbox centered on (ix, iy)
+    base = [(ix, apex_y), (ix - size, base_y), (ix + size, base_y)]
     draw.polygon(base, fill=color, outline=(0, 0, 0, 255))
     # snowcap: small triangle at the apex
     c = size * 0.42
-    cap = [(ix, iy - h),
-           (ix - c * 0.66, iy - h + c),
-           (ix + c * 0.66, iy - h + c)]
+    cap = [(ix, apex_y),
+           (ix - c * 0.66, apex_y + c),
+           (ix + c * 0.66, apex_y + c)]
     draw.polygon(cap, fill=(255, 255, 255, 255))
 
 def draw_label(draw: ImageDraw.ImageDraw, ix: int, iy: int, text: str, font):
@@ -728,6 +732,8 @@ def build_map(slug: str, out_path: Path, zoom: int | None = None, title: str = "
             px, py = lonlat_to_px(lon, lat, zoom)
             ix, iy = px_to_img(px, py, origin_px, origin_py, scale_x, scale_y, IMG_H_PX)
             draw_fn(draw, ix, iy, size, color)
+            if os.environ.get("DEBUG_ANCHORS"):
+                draw.ellipse([ix-2, iy-2, ix+2, iy+2], fill=(255,0,0,255), outline=(255,255,0,255))
             if name and (kind != "context_peak" or (lon, lat) in label_context):
                 font = font_lg if kind == "peak" else font_sm
                 draw_label(draw, ix, iy, name, font)
