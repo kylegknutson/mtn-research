@@ -59,15 +59,18 @@ KYLE_COLOR = "#0066FF"   # blue — matches make_overview_map COLOR_KYLE (0,102,
 # deliberately restricted to blues / greens / orange-yellows / violets, none of which
 # read as magenta or red. RECOMMENDED_COLOR + RESERVED_HUE_RANGE are asserted against
 # the palette at import so a future edit can't reintroduce a colliding color.
-RECOMMENDED_COLOR = "#E6008C"
-PALETTE = [
-    "#0066FF",  # blue
+RECOMMENDED_COLOR = "#E6008C"   # magenta — recommended routes only
+KYLE_HUE = 216                  # #0066FF blue — reserved for Kyle's recordings
+
+# Base source-track hues: NO blue (reserved for Kyle), NO magenta/pink/red (reserved
+# for recommended / confusing). Source→color is NOT a fixed convention (Kyle, 2026-07-23
+# — colors don't need to mean "which source"); tracks just cycle through these.
+BASE_PALETTE = [
     "#00AA00",  # green
     "#FF8800",  # orange
     "#9933CC",  # purple
     "#00BBCC",  # teal
     "#FFCC00",  # yellow
-    "#0099FF",  # sky blue
     "#99CC00",  # chartreuse
     "#6633FF",  # indigo
     "#009966",  # sea green
@@ -90,14 +93,45 @@ def _hue_deg(hexcolor: str) -> float:
     return hue * 60
 
 
-# Guard: reject any palette color within ±40° hue of magenta (322°) OR in the red
-# band (<25° / >345°). Fires at import so a bad palette edit can never ship.
+def _mix(hexcolor: str, toward: tuple[int, int, int], frac: float) -> str:
+    h = hexcolor.lstrip("#")
+    rgb = [int(h[i:i + 2], 16) for i in (0, 2, 4)]
+    out = [round(c + (t - c) * frac) for c, t in zip(rgb, toward)]
+    return "#" + "".join(f"{v:02X}" for v in out)
+
+
+# When a map has more source tracks than base hues, keep them distinct by shifting
+# LIGHTNESS in tiers (hue unchanged, so still never magenta/red/blue). Tier 0 = base,
+# then alternate darker / lighter, deepening each round → base×N distinct shades,
+# effectively unlimited. (Kyle, 2026-07-23: "what if there are more than 10 tracks?")
+_BLACK, _WHITE = (0, 0, 0), (255, 255, 255)
+_TIER_MIX = [None, (_BLACK, 0.45), (_WHITE, 0.45), (_BLACK, 0.68), (_WHITE, 0.68)]
+
+
+def track_color(index: int) -> str:
+    """Deterministic distinct color for the index-th source track on a map."""
+    n = len(BASE_PALETTE)
+    base = BASE_PALETTE[index % n]
+    tier = (index // n) % len(_TIER_MIX)
+    if tier == 0:
+        return base
+    toward, frac = _TIER_MIX[tier]
+    return _mix(base, toward, frac)
+
+
+# Backward-compat alias — old code referenced PALETTE[i % len(PALETTE)].
+PALETTE = BASE_PALETTE
+
+# Guard (fires at import so a bad palette edit can never ship): every base color must
+# be well clear of magenta (recommended), the red band, AND Kyle's blue.
 _MAGENTA_HUE = _hue_deg(RECOMMENDED_COLOR)
-for _c in PALETTE:
+for _c in BASE_PALETTE:
     _hd = _hue_deg(_c)
-    _dist = min(abs(_hd - _MAGENTA_HUE), 360 - abs(_hd - _MAGENTA_HUE))
-    assert _dist > 40, f"palette color {_c} (hue {_hd:.0f}°) too close to recommended magenta ({_MAGENTA_HUE:.0f}°)"
-    assert not (_hd < 25 or _hd > 345), f"palette color {_c} (hue {_hd:.0f}°) is in the red band — confusing"
+    _dmag = min(abs(_hd - _MAGENTA_HUE), 360 - abs(_hd - _MAGENTA_HUE))
+    _dblue = min(abs(_hd - KYLE_HUE), 360 - abs(_hd - KYLE_HUE))
+    assert _dmag > 40, f"palette {_c} (hue {_hd:.0f}°) too close to recommended magenta"
+    assert not (_hd < 25 or _hd > 345), f"palette {_c} (hue {_hd:.0f}°) in the red band — confusing"
+    assert _dblue > 25, f"palette {_c} (hue {_hd:.0f}°) too close to Kyle-blue ({KYLE_HUE}°)"
 
 
 def parse_gpx(path: Path):
@@ -391,7 +425,7 @@ def main() -> None:
         if args.color:
             color = args.color
         else:
-            color = PALETTE[(i + args.color_offset) % len(PALETTE)]
+            color = track_color(i + args.color_offset)   # group color (markers)
 
         for f in fs:
             for entry in parse_gpx(f):
@@ -413,7 +447,10 @@ def main() -> None:
                             skipped_tracks += 1
                             continue
                     folder_id = get_folder_id(label)
-                    line_color = PALETTE[track_color_idx % len(PALETTE)] if args.vary_colors else color
+                    # Every source track gets its OWN distinct color (per-track, not
+                    # per-group) so a busy research map with many tracks stays legible.
+                    # (Kyle, 2026-07-23 — dropped the source→color convention.)
+                    line_color = args.color if args.color else track_color(track_color_idx + args.color_offset)
                     if not args.color and "_kyle_existing" in f.parts:
                         line_color = KYLE_COLOR   # Kyle's own recordings always blue on web maps
                     track_color_idx += 1

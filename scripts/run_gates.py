@@ -41,6 +41,7 @@ PER_SLUG = [
     ("check_route_starts.py", "single-day route starts at its trailhead"),
     ("check_trip_continuity.py", "no foreign summits; trip legs chain TH→camp→TH"),
     ("check_report_stats.py", "frontmatter/days_detail/routes agree on dist+gain"),
+    ("check_caltopo_complete.py", "CalTopo map has all recommended routes + source tracks (local-only; skips w/o dump)"),
     ("check_map_fresh.py", "PNG not stale vs route/tracks"),
 ]
 # Map-QA gates are SLOW (pure-Python per-pixel PNG loops + full-track parsing, ~5 s
