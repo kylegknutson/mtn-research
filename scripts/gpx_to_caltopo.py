@@ -353,6 +353,13 @@ def main() -> None:
     if not files:
         sys.exit("No .gpx files specified. Use --gpx-dir or --gpx.")
 
+    # Recommended routes upload LAST so they render ON TOP of the source tracks/trails
+    # (CalTopo draw order = feature creation order). Otherwise day_/leg_/<slug>_recommended
+    # sort alphabetically BEFORE trk_/trail_ and get buried, invisible on the map — a
+    # CONFIRMED bug (Kyle 2026-07-23, visually verified on the Italian Mtn map: the
+    # magenta route was present in the sidebar but hidden under the source tracks).
+    files.sort(key=lambda f: (1 if "recommended" in f.stem else 0))
+
     # Group files by source label
     grouped: dict[str, list[Path]] = {}
     for f in files:

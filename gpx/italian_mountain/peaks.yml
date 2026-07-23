@@ -12,8 +12,9 @@
 objective_ids: [420]   # Italian Mtn 13,385 (Class 2, Elks/Pearl Pass quad)
 
 route_build:
-  method: from_track
-  track: "route_italian_south_ridge"   # pb ascent, trimmed to Italian-only out-and-back
+  method: graph   # shortest optimized path to Italian through pooled recorded tracks +
+                  # OSM trails — trims detours other climbers made for peaks not on this
+                  # report (e.g. American Flag / the 12er S of Italian). start = the TH.
 
 nearby:
   include: false
