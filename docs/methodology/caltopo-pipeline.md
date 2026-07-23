@@ -93,7 +93,7 @@ scripts/caltopo_mytracks.py --slug <slug>       # add his tracks in the report's
 ```
 scripts/gpx_to_caltopo.py --gpx-dir gpx/<slug> --new-map "Research: <Peak>" --no-dedupe
 ```
-`--no-dedupe` is required for research maps so summit/peak markers always render even if they exist in other maps. Color by source: LoJ red (palette default), 14ers green (`#00AA00`), peakbagger blue (`#0066FF`). Capture the returned map ID.
+`--no-dedupe` is required for research maps so summit/peak markers always render even if they exist in other maps. **Track colors (Kyle, 2026-07-23):** magenta `#E6008C` is RESERVED for the recommended route; blue `#0066FF` is RESERVED for Kyle's own recordings. Every other source track (recorded + OSM trail) gets a distinct color from a palette of safe hues (greens/oranges/purples/teals/yellows — NO magenta/pink/red/blue), assigned **per-track** via `gpx_to_caltopo.track_color(i)`, which shifts lightness in tiers past the 8 base hues so >8 tracks stay distinct. There is NO fixed source→color convention anymore. An import-time guard rejects any palette color near magenta/red/blue. Capture the returned map ID.
 
 ### 3b. Also add the new tracks to the REGIONAL map
 **Requirement (Kyle, 2026-06):** every external GPX track pulled during research goes into **two** CalTopo maps — the per-research map (above) *and* the **regional map** for the range those peaks sit in. The per-research map is the focused working view; the regional map is the durable, cumulative archive of every track for that range, built up over time across all research sessions.
@@ -143,7 +143,7 @@ Do NOT mark a peak "researched" or update the index until all three artifacts ar
 
 1. **Summit markers → DROP, use mine.** Any imported waypoint at/near a known summit (matches a `peaks_only.gpx` summit by name, or within ~75 m of one) is discarded. The objective summits are added from `peaks_only.gpx` as **neon-green mountain markers — `symbol=peak`, `color=#39FF14`** (the canonical summit scheme on the regional maps). Dedupe ON, so they're added only if not already present.
 2. **All other imported markers → GRAY — `symbol=point`, `color=#9E9E9E`.** They stay on the map as useful context (camps, junctions, the TR author's trailhead) but are visually subordinated to the summit pins.
-3. The **tracks** themselves are unaffected — still kept and colored by source (LoJ red `#FF0000` / 14ers green `#00AA00` / peakbagger blue `#0066FF` / personal purple `#9933CC`).
+3. The **tracks** themselves are unaffected — kept and colored per-track from the safe palette (no magenta/pink/red/blue; magenta reserved for the recommended route, blue for Kyle's recordings). To re-apply the current palette to an existing map without a full rebuild, use **`scripts/recolor_map_tracks.py <slug>`** (edits strokes in place — same map ID, no frontmatter/repo churn, idempotent). `scripts/check_caltopo_complete.py` verifies a map still has all its recommended routes + source tracks.
 
 Net effect: one clean set of **neon-green summit pins** + a quiet **gray** wash of secondary author waypoints, with the source-colored route lines on top.
 
