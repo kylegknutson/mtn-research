@@ -1,0 +1,22 @@
+# PT 13,060 B (LoJ "13067", 14ers "Unnamed 13067") — Elk Range, Snowmass Wilderness.
+# Ranked 13er (13,067' LiDAR, Class 3), 0.52 mi N of Clark Peak A (Kyle climbed Clark
+# + Capitol + Snowmass already — this is the leftover on the Snowmass Lake massif).
+# Long approach: Snowmass Creek TH up Snowmass Creek to Snowmass Lake (~8.5 mi in),
+# then Class 3 to the summit. Recorded tracks 14.5-23 mi RT — a big single day or a
+# backpack to Snowmass Lake. Drive from Boulder ~4 h (far, but its own approach — does
+# NOT share a TH with the other unclimbed Elk 13ers Daly A / Siberia, so it stands alone).
+objective_ids: [760]   # PT 13,060 B / "13067" (Class 3, Elk, Snowmass Wilderness)
+
+route_build:
+  method: from_track   # one recorded pb ascent verbatim (Snowmass Creek → West Snowmass
+  track: "trk_pb_1"    # Creek → Pierre Lakes → summit). The graph router stitched 71
+                       # tracks and introduced a 0.36-mi jump in the trail-less Pierre
+                       # Lakes talus; a single continuous GPS track is cleaner + honest
+                       # for this off-trail Class 3 basin (no add-on peaks to trim — 1
+                       # objective, so nothing to optimize away).
+
+nearby:
+  include: false
+
+landmarks:
+- {name: "Snowmass Creek TH (Snowmass Falls)", lat: 39.20014, lon: -106.99401, ele_ft: 8400, kind: trailhead}
