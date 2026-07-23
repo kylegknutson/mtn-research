@@ -59,8 +59,15 @@ KYLE_COLOR = "#0066FF"   # blue — matches make_overview_map COLOR_KYLE (0,102,
 # deliberately restricted to blues / greens / orange-yellows / violets, none of which
 # read as magenta or red. RECOMMENDED_COLOR + RESERVED_HUE_RANGE are asserted against
 # the palette at import so a future edit can't reintroduce a colliding color.
-RECOMMENDED_COLOR = "#E6008C"   # magenta — recommended routes only
+RECOMMENDED_COLOR = "#E6008C"   # magenta — recommended climb routes only
 KYLE_HUE = 216                  # #0066FF blue — reserved for Kyle's recordings
+
+# Inter-trailhead DRIVING route (the road between a trip's camps/trailheads). It's a
+# "recommendation of sorts" but NOT the climb, so it's a distinct PINK — deliberately
+# magenta-adjacent (same family = "recommended") yet clearly LIGHTER so nobody mistakes
+# it for the magenta climb line (Kyle, 2026-07-23). Reserved like magenta/blue; the
+# source-track palette already avoids this whole hue region, so no collision.
+DRIVE_COLOR = "#FF69B4"         # pink — inter-trailhead driving route
 
 # Base source-track hues: NO blue (reserved for Kyle), NO magenta/pink/red (reserved
 # for recommended / confusing). Source→color is NOT a fixed convention (Kyle, 2026-07-23
@@ -344,21 +351,22 @@ def main() -> None:
             files.extend(sorted(kyle_dir.glob("*.gpx")))
             files.extend(sorted(kyle_dir.glob("*.GPX")))
     files.extend(args.gpx)
-    # *_drive*.gpx is a PNG-only annotation (the road between camps, drawn black
-    # on the overview) — never upload it to CalTopo.
-    skipped_drive = [f for f in files if f.stem.endswith("_drive") or "_drive_" in f.stem]
-    files = [f for f in files if f not in skipped_drive]
-    for f in skipped_drive:
-        print(f"  skip (PNG-only drive route): {f.name}")
     if not files:
         sys.exit("No .gpx files specified. Use --gpx-dir or --gpx.")
 
-    # Recommended routes upload LAST so they render ON TOP of the source tracks/trails
-    # (CalTopo draw order = feature creation order). Otherwise day_/leg_/<slug>_recommended
-    # sort alphabetically BEFORE trk_/trail_ and get buried, invisible on the map — a
-    # CONFIRMED bug (Kyle 2026-07-23, visually verified on the Italian Mtn map: the
-    # magenta route was present in the sidebar but hidden under the source tracks).
-    files.sort(key=lambda f: (1 if "recommended" in f.stem else 0))
+    # Z-ORDER (CalTopo draw order = feature creation order): source tracks first,
+    # then the pink inter-trailhead DRIVE route, then the magenta recommended climb
+    # route LAST so it renders ON TOP of everything. (Kyle 2026-07-23: the *_drive*
+    # road now uploads to CalTopo too — pink, distinct from the magenta climb — it's
+    # no longer PNG-only. And recommended-on-top fixed the buried-route bug seen on
+    # the Italian Mtn map.)
+    def _z(f):
+        if "recommended" in f.stem:
+            return 2
+        if f.stem.endswith("_drive") or "_drive_" in f.stem:
+            return 1
+        return 0
+    files.sort(key=_z)
 
     # Group files by source label
     grouped: dict[str, list[Path]] = {}
@@ -463,8 +471,14 @@ def main() -> None:
                     track_color_idx += 1
                     # Convention: the composed recommended route is ALWAYS magenta
                     # (matches the PNG legend), on every map incl. climber maps —
-                    # never a palette color that collides with a source track.
-                    if "recommended route" in (name or "").lower():
+                    # never a palette color that collides with a source track. The
+                    # inter-trailhead driving route is PINK (a "recommendation of
+                    # sorts", not the climb). Detect by filename OR track name.
+                    is_drive = (f.stem.endswith("_drive") or "_drive_" in f.stem
+                                or "driving route" in (name or "").lower())
+                    if not args.color and is_drive:
+                        line_color = DRIVE_COLOR
+                    elif "recommended route" in (name or "").lower():
                         line_color = RECOMMENDED_COLOR
                     try:
                         session.addLine(

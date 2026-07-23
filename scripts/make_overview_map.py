@@ -161,9 +161,11 @@ COLOR_PEAK     = (57, 255, 20,  255)    # green mountain #39FF14 — objective s
 COLOR_PEAK_CTX = (35, 35, 35, 255)      # black mountain — other named/ranked summits in view (grey wasn't distinct enough)
 COLOR_DRIVE_IN = (153, 51,  204, 220)   # purple
 COLOR_TH       = (255, 102, 0,   220)   # orange
-COLOR_DRIVE    = (0,   0,   0,   235)   # black — the driving route between camps
-                                        # (reserved: not used on the CalTopo map, so
-                                        #  it reads as "road", not a GPS track)
+COLOR_DRIVE    = (255, 105, 180, 235)   # pink (#FF69B4) — the inter-trailhead driving
+                                        # route: a "recommendation of sorts" but NOT the
+                                        # climb, so magenta-adjacent yet clearly lighter.
+                                        # Matches gpx_to_caltopo.DRIVE_COLOR (now uploaded
+                                        # to CalTopo too, not PNG-only). (Kyle 2026-07-23)
 # Composed "recommended" route — pieced together from real source tracks but
 # narrowed to the report's ranked objectives (build_recommended_route.py). Drawn
 # on top of everything as a bold cased magenta line so it's unmistakable as the
@@ -228,7 +230,7 @@ def parse_waypoints(gpx_path: Path) -> list[tuple[float, float, str]]:
 def classify_file(path: Path, is_kyle: bool) -> str:
     stem = path.stem.lower()
     if stem.endswith("_drive") or "_drive_" in stem:
-        return "drive_route"      # the road connecting camps (multi-day) — PNG only
+        return "drive_route"      # the road connecting camps (multi-day); pink, on PNG + CalTopo
     if "recommended" in stem:
         return "recommended"      # composed shortest route through the objectives
     if "peaks_only" in stem or "summit" in stem:
@@ -677,7 +679,8 @@ def build_map(slug: str, out_path: Path, zoom: int | None = None, title: str = "
         draw_track(draw, seg, SOURCE_COLORS.get(src, COLOR_PUBLIC), 3, origin_px, origin_py, scale_x, scale_y, IMG_H_PX, zoom)
     for seg in buckets["track_kyle"]:
         draw_track(draw, seg, COLOR_KYLE, 2, origin_px, origin_py, scale_x, scale_y, IMG_H_PX, zoom, dashed=True)
-    # driving route between camps — drawn last/on top, black dashed (multi-day)
+    # driving route between camps — pink dashed (multi-day); distinct from the solid
+    # magenta climb route drawn just after. Also uploaded to CalTopo in pink now.
     for seg in buckets["drive_route"]:
         draw_track(draw, seg, COLOR_DRIVE, 3, origin_px, origin_py, scale_x, scale_y, IMG_H_PX, zoom, dashed=True)
     # composed "recommended" route — bold cased magenta, on top of all source tracks
