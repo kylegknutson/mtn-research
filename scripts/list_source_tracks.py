@@ -61,6 +61,7 @@ def main():
     #   so callers never need ad-hoc awk/rg over the GPX to find a TH or a teleport.
     args = [a for a in sys.argv[1:] if not a.startswith("--")]
     starts = "--starts" in sys.argv
+    which = "--which" in sys.argv
     slug = args[0]
     d = GPX / slug
     cfg = yaml.safe_load((d / "peaks.yml").read_text()) or {}
@@ -83,9 +84,10 @@ def main():
             continue
         miles = sum(hav(*tp[i], *tp[i+1]) for i in range(len(tp)-1)) / 1609.344
         samp = tp[::8] or tp
-        covered = sum(1 for (la, lo), _ in objs if min(hav(la, lo, p[0], p[1]) for p in samp) <= COVER_M)
+        hit = [nm for (la, lo), nm in objs if min(hav(la, lo, p[0], p[1]) for p in samp) <= COVER_M]
+        covered = len(hit)
         th_ft = hav(tp[0][0], tp[0][1], th["lat"], th["lon"]) * 3.28084 if th else float("nan")
-        row = {"miles": miles, "covered": covered, "th_ft": th_ft, "name": f.name}
+        row = {"miles": miles, "covered": covered, "th_ft": th_ft, "name": f.name, "hit": hit}
         if starts:
             row.update(slat=tp[0][0], slon=tp[0][1], sele=first_ele_ft(f), gap=max_gap_mi(tp))
         rows.append(row)
@@ -96,6 +98,8 @@ def main():
         if starts:
             line += (f"\n      start {r['slat']:.5f},{r['slon']:.5f}  "
                      f"{r['sele']:,.0f}' ele  max-gap {r['gap']:.2f} mi")
+        if which and r["hit"]:
+            line += f"\n      peaks: {', '.join(r['hit'])}"
         print(line)
 
 

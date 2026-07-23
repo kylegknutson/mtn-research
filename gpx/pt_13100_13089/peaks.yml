@@ -1,0 +1,18 @@
+# PT 13,100 A + PT 13,089 ("Ribbed Peak") — south pair, Holy Cross Wilderness.
+# Two unclimbed ranked 13ers ~1 mi apart at the head of the Woods Lake drainage,
+# SE of the Gold Dust group (own trailhead, ~1.5-2 h drive from Fulford). Climbed
+# together in the recorded peakbagger ascent from Woods Lake TH.
+#   PT 13,100 A (711) — Class 2, 13,071'
+#   PT 13,089  (732) — "Ribbed Peak", LoJ Class 3, 13,089' (the crux)
+# Single Class 3 day; graph-optimized from Woods Lake TH through the pooled tracks
+# + OSM trails (trims any add-on-peak detours the recorded party made).
+objective_ids: [711, 732]   # PT 13,100 A, PT 13,089 / "Ribbed Peak"
+
+route_build:
+  method: graph   # shortest optimized path to both objectives from Woods Lake TH
+
+nearby:
+  include: false
+
+landmarks:
+- {name: "Woods Lake TH", lat: 39.42269, lon: -106.63916, ele_ft: 9390, kind: trailhead}

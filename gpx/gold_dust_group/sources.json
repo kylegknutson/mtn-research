@@ -1,0 +1,17 @@
+{
+  "14ers": {
+    "checked": true,
+    "found": 2,
+    "note": "gpxlib_locator.php"
+  },
+  "peakbagger": {
+    "checked": true,
+    "found": 3,
+    "note": "verified pids {'412': '5723', '440': '40415', '688': '84734'}"
+  },
+  "listsofjohn": {
+    "checked": true,
+    "found": 0,
+    "note": "no downloadable GPX (text TRs only)"
+  }
+}

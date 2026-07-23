@@ -117,30 +117,37 @@ def check_slug(slug):
     if not md:
         return [], f"{slug}: no report md — skip"
     fm = parse_frontmatter(md) or {}
-    if not fm.get("days_detail"):
-        return [], f"{slug}: no days_detail — skip"
-
-    # 1) days_detail arithmetic vs frontmatter totals
-    fails = []
-    days = fm["days_detail"]
-    days_dist_sum = sum(float(d.get("dist_mi", 0)) for d in days)
-    days_gain_sum = sum(float(d.get("gain_ft", 0)) for d in days)
     fm_dist = float(fm.get("dist_mi", 0))
     fm_gain = float(fm.get("gain_ft", 0))
+
+    # Nothing to check: no per-day breakdown AND no headline distance.
+    if not fm.get("days_detail") and fm_dist <= 0:
+        return [], f"{slug}: no days_detail / dist_mi — skip"
 
     def within(x, y, pct, abs_min):
         return abs(x - y) <= max(y * pct / 100.0, abs_min)
 
-    if not within(days_dist_sum, fm_dist, DIST_TOL_PCT, DIST_TOL_ABS_MI):
-        fails.append(
-            f"frontmatter dist_mi={fm_dist:.2f} but sum(days_detail.dist_mi)={days_dist_sum:.2f} "
-            f"(delta {abs(days_dist_sum - fm_dist):.2f} mi)"
-        )
-    if not within(days_gain_sum, fm_gain, GAIN_TOL_PCT, GAIN_TOL_ABS_FT):
-        fails.append(
-            f"frontmatter gain_ft={fm_gain:.0f} but sum(days_detail.gain_ft)={days_gain_sum:.0f} "
-            f"(delta {abs(days_gain_sum - fm_gain):.0f} ft)"
-        )
+    fails = []
+
+    # 1) days_detail arithmetic vs frontmatter totals — multi-day / day-detail
+    # reports only. Single-day reports (no days_detail) skip this but STILL get the
+    # route-vs-frontmatter distance check below (#2) — that's what catches a stale
+    # dist_mi after a single-peak route rebuild (Kyle, 2026-07-23: pt_13100_13089
+    # shipped 12.77 in frontmatter while the committed route was 11.36).
+    if fm.get("days_detail"):
+        days = fm["days_detail"]
+        days_dist_sum = sum(float(d.get("dist_mi", 0)) for d in days)
+        days_gain_sum = sum(float(d.get("gain_ft", 0)) for d in days)
+        if not within(days_dist_sum, fm_dist, DIST_TOL_PCT, DIST_TOL_ABS_MI):
+            fails.append(
+                f"frontmatter dist_mi={fm_dist:.2f} but sum(days_detail.dist_mi)={days_dist_sum:.2f} "
+                f"(delta {abs(days_dist_sum - fm_dist):.2f} mi)"
+            )
+        if not within(days_gain_sum, fm_gain, GAIN_TOL_PCT, GAIN_TOL_ABS_FT):
+            fails.append(
+                f"frontmatter gain_ft={fm_gain:.0f} but sum(days_detail.gain_ft)={days_gain_sum:.0f} "
+                f"(delta {abs(days_gain_sum - fm_gain):.0f} ft)"
+            )
 
     # 2) route files vs frontmatter dist_mi — DISTANCE only. Gain from routes is
     # unreliable because build_recommended_route DEM-samples at build time but
@@ -152,7 +159,7 @@ def check_slug(slug):
         route_dist = 0.0
         for gpx in sorted(slug_dir.glob("*_recommended.gpx")):
             route_dist += measure_gpx_dist_mi(gpx)
-        if route_dist > 0 and not within(route_dist, fm_dist, DIST_TOL_PCT, DIST_TOL_ABS_MI):
+        if route_dist > 0 and fm_dist > 0 and not within(route_dist, fm_dist, DIST_TOL_PCT, DIST_TOL_ABS_MI):
             fails.append(
                 f"frontmatter dist_mi={fm_dist:.2f} but sum(actual *_recommended.gpx)={route_dist:.2f} "
                 f"(delta {abs(route_dist - fm_dist):.2f} mi — route files updated but frontmatter stale?)"

@@ -1,0 +1,17 @@
+{
+  "14ers": {
+    "checked": true,
+    "found": 0,
+    "note": "no 14ers library / not a 14ers.com peak"
+  },
+  "peakbagger": {
+    "checked": true,
+    "found": 1,
+    "note": "verified pids {'711': '84729', '732': '84730'}"
+  },
+  "listsofjohn": {
+    "checked": true,
+    "found": 0,
+    "note": "no downloadable GPX (text TRs only)"
+  }
+}

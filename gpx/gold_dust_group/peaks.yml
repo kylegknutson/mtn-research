@@ -1,0 +1,24 @@
+# Gold Dust Group — 2-day car-camp trip, northern Sawatch / Holy Cross Wilderness.
+# Three unclimbed ranked 13ers ringing the Lake Charles / Mystic Island Lake basin
+# above Fulford (Eagle County). Split by APPROACH into two climbing days:
+#   Day 1 — Gold Dust + Pika, Class 2+, from the Fulford Cave / Lake Charles TH
+#           (climb13ers West Ridge, 10.5 mi / 3,950' RT; the two share a rugged
+#           connecting ridge and are climbed together in every TR).
+#   Day 2 — Finnegan ("North Gold Dust", LoJ Class 3+), from the Nolan Creek Rd /
+#           New York Creek side ~45 min drive from the Fulford TH — a separate
+#           northern approach (no recorded track links it to Gold Dust from Fulford).
+# Car camp in the Fulford / Yeoman Park area; reposition the vehicle between the two
+# trailheads on Day 2. Drive from Boulder ~2.5 h.
+objective_ids: [440, 412, 688]   # Finnegan, Gold Dust, Pika
+
+nearby:
+  include: false
+
+# Per-day objective assignments → one recommended route per day (build_trip_day_routes.py).
+days:
+- {label: "Gold Dust + Pika", objective_ids: [412, 688]}
+- {label: "Finnegan", objective_ids: [440]}
+
+landmarks:
+- {name: "Fulford Cave / Lake Charles TH", lat: 39.4914, lon: -106.6587, ele_ft: 9430, kind: trailhead}
+- {name: "Nolan Creek Rd / New York Creek TH (Finnegan)", lat: 39.52196, lon: -106.63021, ele_ft: 11201, kind: trailhead}
