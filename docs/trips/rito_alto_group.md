@@ -3,11 +3,11 @@ image: maps/rito_alto_group.png
 range: Sangre de Cristo
 drive_time: "~4h 30m"
 yds_class: "2"
-gain: "~9,820 ft (3 days incl. pack-in/out)"
+gain: "~9,996 ft (3 days incl. pack-in/out)"
 status: unclimbed
 caltopo_id: AFRQGK8
 regional_map_id: L5VH4BU
-gain_ft: 9820
+gain_ft: 9996
 class: 2
 peaks: 4
 days: 3
@@ -16,9 +16,9 @@ weather: "https://forecast.weather.gov/MapClick.php?lat=38.088&lon=-105.665"
 days_detail:
   - {label: "Drive + pack in", peaks: 0, dist_mi: 5.36, gain_ft: 1339, class: "1", day: 1}
   - {label: "PT 13,054 (Pyramid Mtn)", peaks: 1, dist_mi: 13.13, gain_ft: 4641, class: "2", day: 2}
-  - {label: "North 3 + pack out", peaks: 3, dist_mi: 9.40, gain_ft: 3840, class: "2", day: 3}
-dist_mi: 27.89
-th_source: "recorded GPS-track starts at Hermit Pass Rd TH (38.0938,-105.6311, ~11,376') via 2021 crest-traverse (trk_ctx_loj_5598 at 12,067' near TH); OSM Overpass 'Hermit Lake Trailhead' node at 38.0933,-105.6317; AllTrails 'Rito Alto Lake via Rito Alto Trail' documents the west approach"
+  - {label: "North 3 + pack out", peaks: 3, dist_mi: 9.15, gain_ft: 4016, class: "2", day: 3}
+dist_mi: 27.64
+th_source: "recorded GPS-track starts at the end-of-4WD Hermit Pass Rd TH (38.09612,-105.63400, ~11,690' — trk_loj_14848 origin); OSM Overpass 'Hermit Lake Trailhead' node is a lower point at 38.0933,-105.6317 (~11,376'); AllTrails 'Rito Alto Lake via Rito Alto Trail' documents the west approach"
 class_source: "route beta — LoJ peak pages 755/759/791/770 (all Class 2, standard route from Rito Alto basin); climb13ers Rito Alto Peak / Eureka Mountain / Hermit Peak crest = Class 2/2+ (\"moderately rocky, fun rock and wildflowers,\" documented 4–5 summit day); no ridge segment on this trip exceeds Class 2"
 status_source: "peak_db ascents (Kyle — all 4 unclimbed)"
 ---
@@ -30,7 +30,7 @@ status_source: "peak_db ascents (Kyle — all 4 unclimbed)"
 
     - **Day 1 (Drive + pack in):** **5.36 mi** · **1,339 ft** gain · **Class 1**
     - **Day 2 (PT 13,054 (Pyramid Mtn)):** **13.13 mi** · **4,641 ft** gain · **Class 2** · 1 peak
-    - **Day 3 (North 3 + pack out):** **9.4 mi** · **3,840 ft** gain · **Class 2** · 3 peaks
+    - **Day 3 (North 3 + pack out):** **9.15 mi** · **4,016 ft** gain · **Class 2** · 3 peaks
 
 <!-- QUICKSTATS_END -->
 
@@ -62,7 +62,7 @@ of the crest — **Rito Alto Pk, Hermit Pk A, Eureka Mtn A** — already climbed
 ## Peaks covered
 
 A **backpack from a Rito Alto Lake basecamp**, accessed via the **Hermit Pass Rd TH (4WD,
-~11,376')** on the east side of the range — much shorter than the ~7.5 mi west approach.
+~11,690')** on the east side of the range — much shorter than the ~7.5 mi west approach.
 Hardest move **Class 2** throughout (four standard-route PTs; no exposed connecting
 ridge on this line).
 
@@ -82,15 +82,15 @@ San Isabel Lake. The north 3 form a **chained crest ridge** directly above the l
 
 ## Getting there — Hermit Pass Rd TH (east side, 4WD)
 
-**Drive from Boulder:** **[~4h 30m via Google Maps](https://www.google.com/maps/dir/?api=1&origin=1162+Peakview+Circle,+Boulder,+CO+80302&destination=38.0938,-105.6311)**
+**Drive from Boulder:** **[~4h 30m via Google Maps](https://www.google.com/maps/dir/?api=1&origin=1162+Peakview+Circle,+Boulder,+CO+80302&destination=38.09612,-105.63400)**
 — I-25 S to Colorado Springs, US-50 W to Cañon City, CO-69 S to Westcliffe, then the
 **Hermit Pass Road** (Custer County Rd 160 → FS 160) up out of the Wet Mountain Valley to
-the trailhead at ~11,376'.
+the trailhead at ~11,690'.
 
 | | |
 |---|---|
 | **Trailhead** | Hermit Pass Rd TH, 38.09612,-105.63400, **~11,690'** (end of 4WD road) |
-| **Access** | **4WD required** — Hermit Pass Rd (FS 160) climbs from Westcliffe (~7,900') to 11,376' on a rocky, high-clearance road. Multiple 14ers/LoJ TRs confirm 4WD-only above the lower switchbacks. |
+| **Access** | **4WD required** — Hermit Pass Rd (FS 160) climbs from Westcliffe (~7,900') to ~11,690' on a rocky, high-clearance road. Multiple 14ers/LoJ TRs confirm 4WD-only above the lower switchbacks. |
 | **Wilderness** | Sangre de Cristo Wilderness (Rio Grande NF, east side) — no permits/fees; standard wilderness rules (LNT, no mechanized travel). |
 
 ---
@@ -121,7 +121,7 @@ Class 2 tundra and talus; standard route per LoJ.
 
 ### Day 3 — North 3 + pack out to trailhead
 
-**~4.04 mi climb + ~5.36 mi pack out = 9.40 mi · ~3,840 ft** total.
+**~3.79 mi climb + ~5.36 mi pack out = 9.15 mi · ~4,016 ft** total.
 
 **Morning climb** — camp-to-camp loop over the north 3, verbatim from **trk_loj_14848** (a
 recorded east-side loop). From camp, the recorded trail ascends the west drainage NW to the
@@ -167,7 +167,7 @@ Drive home ~4.5 h.
 
 **Why the east (Hermit Pass Rd) approach vs. the west (San Luis Valley) approach?** The
 recorded objective tracks all start from the west TH (8,255') and climb 15+ mi round-trip
-to reach any of the four peaks. From the east — a 4WD start at 11,376' — the pack-in to
+to reach any of the four peaks. From the east — a 4WD start at ~11,690' — the pack-in to
 Rito Alto Lake is only ~4.8 mi with ~1,600 ft gain, and once at camp both peak-days shrink
 substantially. **If 4WD isn't available**, the west approach becomes the default — expect
 each peak-day to become a long single-push round-trip (~13–17 mi with 5,000–6,000 ft gain);
