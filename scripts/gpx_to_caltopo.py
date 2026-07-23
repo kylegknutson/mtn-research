@@ -51,24 +51,53 @@ CALTOPO_DIR = ROOT / "caltopo"
 # so they read consistently on web maps the way they already do blue in the report
 # PNGs (make_overview_map.COLOR_KYLE). Explicit --color still overrides.
 KYLE_COLOR = "#0066FF"   # blue — matches make_overview_map COLOR_KYLE (0,102,255)
+
+# The composed recommended route is ALWAYS magenta (#E6008C, matches the PNG legend).
+# RESERVED: no source-track palette color may be magenta OR anywhere near it — no
+# magenta / pink / rose / crimson / red hues — or a recorded track gets confused for
+# the recommended route on the CalTopo map (Kyle, 2026-07-23). The palette below is
+# deliberately restricted to blues / greens / orange-yellows / violets, none of which
+# read as magenta or red. RECOMMENDED_COLOR + RESERVED_HUE_RANGE are asserted against
+# the palette at import so a future edit can't reintroduce a colliding color.
+RECOMMENDED_COLOR = "#E6008C"
 PALETTE = [
-    "#FF0000",  # red       (LoJ)
-    "#0066FF",  # blue      (peakbagger)
-    "#00AA00",  # green     (14ers)
+    "#0066FF",  # blue
+    "#00AA00",  # green
     "#FF8800",  # orange
-    "#9933CC",  # purple    (personal recordings)
+    "#9933CC",  # purple
     "#00BBCC",  # teal
-    "#FF3399",  # hot pink
     "#FFCC00",  # yellow
-    "#FF6633",  # coral
     "#0099FF",  # sky blue
-    "#CC0055",  # crimson
     "#99CC00",  # chartreuse
     "#6633FF",  # indigo
-    "#FF66CC",  # rose
     "#009966",  # sea green
-    "#FF6600",  # amber
 ]
+
+
+def _hue_deg(hexcolor: str) -> float:
+    h = hexcolor.lstrip("#")
+    r, g, b = (int(h[i:i + 2], 16) / 255 for i in (0, 2, 4))
+    mx, mn = max(r, g, b), min(r, g, b)
+    if mx == mn:
+        return 0.0
+    d = mx - mn
+    if mx == r:
+        hue = ((g - b) / d) % 6
+    elif mx == g:
+        hue = (b - r) / d + 2
+    else:
+        hue = (r - g) / d + 4
+    return hue * 60
+
+
+# Guard: reject any palette color within ±40° hue of magenta (322°) OR in the red
+# band (<25° / >345°). Fires at import so a bad palette edit can never ship.
+_MAGENTA_HUE = _hue_deg(RECOMMENDED_COLOR)
+for _c in PALETTE:
+    _hd = _hue_deg(_c)
+    _dist = min(abs(_hd - _MAGENTA_HUE), 360 - abs(_hd - _MAGENTA_HUE))
+    assert _dist > 40, f"palette color {_c} (hue {_hd:.0f}°) too close to recommended magenta ({_MAGENTA_HUE:.0f}°)"
+    assert not (_hd < 25 or _hd > 345), f"palette color {_c} (hue {_hd:.0f}°) is in the red band — confusing"
 
 
 def parse_gpx(path: Path):
@@ -392,7 +421,7 @@ def main() -> None:
                     # (matches the PNG legend), on every map incl. climber maps —
                     # never a palette color that collides with a source track.
                     if "recommended route" in (name or "").lower():
-                        line_color = "#E6008C"
+                        line_color = RECOMMENDED_COLOR
                     try:
                         session.addLine(
                             points=coords,
