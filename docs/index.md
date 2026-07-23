@@ -23,7 +23,7 @@ Every ranked Colorado 13er/14er — **green peak = has a report** (click it to o
 | [Wayah Group](peaks/wayah_group.md) | Sawatch | 3–4 | 16.4 | 6,946 | 6 | 1 | 6 | 3.5 | unclimbed |
 | [Hunts Peak](peaks/hunts_peak.md) | Sangre de Cristo | 2 | 6.8 | 3,489 | 1 | 1 | 1 | 3.6 | unclimbed |
 | [Savage Peak + PT 13,002](peaks/savage_peak.md) | Sawatch | 2-3 | 13.4 | 5,721 | 2 | 1 | 2 | 3.6 | unclimbed |
-| [Star Peak Group](trips/star_peak_group.md) | Elk | 2 | 14.6 | 6,800 | 3 | 2 | 1.5 | 3.7 | unclimbed |
+| [Star Peak Group](trips/star_peak_group.md) | Elk | 2 | 8.61 | 4,041 | 2 | 1 | 2 | 3.7 | unclimbed |
 | ["Lake Fork Pk"](peaks/lake_fork_peak.md) | Sawatch | 2 | 11.1 | 4,313 | 1 | 1 | 1 | 3.75 | unclimbed |
 | [Williams Mountains Traverse](peaks/williams_mountains.md) | Sawatch | 3 | 14.7 | 6,084 | 5 | 1 | 5 | 3.8 | unclimbed |
 | [Crestolita + Broken Hand Peak](peaks/crestolita_broken_hand.md) | Sangre de Cristo | 3 | 3.9 | 3,015 | 2 | 1 | 2 | 4 | unclimbed |

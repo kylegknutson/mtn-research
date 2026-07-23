@@ -3,33 +3,31 @@ image: maps/star_peak_group.png
 range: Elk
 drive_time: "3h 40m"
 yds_class: "2"
-gain: "2-day basecamp: Day 1 Star+Taylor ~8.6 mi / ~4,300 ft · Day 2 Italian (half-day) — or all three in one ~14–17 mi / ~6,500–8,000 ft day"
+gain: "Star+Taylor day trip — 8.6 mi / ~4,040 ft"
 status: unclimbed
 caltopo_id: J6HBR6S
 regional_map_id: 1G2G7DM
-dist_mi: 14.6
-gain_ft: 6800
+dist_mi: 8.61
+gain_ft: 4041
 class: 2
-peaks: 3
-days: 2
+peaks: 2
+days: 1
 days_detail:
-  - {label: "Star + Taylor", dist_mi: 8.6, gain_ft: 4300, class: "2", peaks: 2}
-  - {label: "Italian (+ American Flag opt.)", class: "2", peaks: 1}
+  - {label: "Star + Taylor", dist_mi: 8.61, gain_ft: 4041, class: "2", peaks: 2}
 drive_h: 3.7
 th_source: "recorded GPS-track starts at Mt Tilton Trail TH (end of CO 742) (38.9872,-106.7573) — swept tracks begin 0.0 mi away"
 class_source: "route beta — 14ers.com route beta / trip reports, listsofjohn, peakbagger (see route options)"
 status_source: "peak_db ascents"
 ---
 
-# Star Peak Group — Star + Taylor + Italian (Elk Mountains)
+# Star Peak Group — Star + Taylor day trip (Elk Mountains)
 
 <!-- QUICKSTATS_START -->
 
-!!! tip "At a glance — 2-day trip"
-    **3 peaks** · **~3.7 h drive**
+!!! tip "At a glance — 1-day trip"
+    **2 peaks** · **~3.7 h drive**
 
-    - **Day 1 (Star + Taylor):** **8.6 mi** · **4,300 ft** gain · **Class 2** · 2 peaks
-    - **Day 2 (Italian (+ American Flag opt.)):** **Class 2** · 1 peak
+    - **Day 1 (Star + Taylor):** **8.61 mi** · **4,041 ft** gain · **Class 2** · 2 peaks
 
 <!-- QUICKSTATS_END -->
 
@@ -41,7 +39,7 @@ status_source: "peak_db ascents"
 !!! map ""
     **CalTopo research map:** <https://caltopo.com/m/J6HBR6S>
 
-**Status in DB:** All three 0 ascents (unclimbed). These are the core unclimbed ranked 13ers of the **East Taylor Park / Star Pass cluster** — the densest pocket of unclimbed ranked 13ers on Kyle's near-term list.
+**Status in DB:** Both unclimbed. Star + Taylor are a natural Class 2 pair above the **Mt Tilton Trail** on the east Taylor Park side of the Elk crest — done together in every trip report that hits either. Italian Mountain was originally bundled with this trip; it's actually climbed from a different trailhead system (**Cement Creek** off CR 740, in Gunnison) and gets its own report (forthcoming).
 
 ![Overview map](../maps/star_peak_group.png)
 
@@ -57,61 +55,40 @@ status_source: "peak_db ascents"
 
 ## Peaks covered
 
-A **2-day basecamp weekend from Taylor Park** — camp near the end of CO 742 and climb the
-cluster as two Class 2 days (or link all three in one long push — see *Itinerary options*).
-Hardest move **Class 2** throughout; everything approaches from the **Taylor Park (east)
-side** of the Elk crest, and none carry a wilderness designation at the summit.
+A **Class 2 day trip** on the Mt Tilton Trail out of the east Taylor Park side of the Elk
+crest — Star and Taylor sit 1.25 mi apart on a connecting Class 2 ridge, done together in
+every recorded trip report of either.
 
-| | [Star Peak A](https://www.14ers.com/peaks/10099) | [Taylor Pk A](https://www.14ers.com/peaks/10104) | [Italian Mtn](https://www.14ers.com/peaks/10110) |
-|---|---|---|---|
-| Elevation (LiDAR) | 13,527' (map 13,521') | 13,438' | 13,385' |
-| Lat / Lon | 38.97963, −106.79967 | 38.99204, −106.78261 | 38.94532, −106.75214 |
-| Class (standard) | 2 | 2 | 2 |
-| CO Rank | 241 | 299 | 331 |
-| Prominence | — | 817' | 1,357' |
-| Range | Elk Mtns (Taylor Park) | Elk Mtns (Taylor Park) | Elk Mtns (Taylor Park) |
-| County | Gunnison/Pitkin | Gunnison | Gunnison |
-| 14ers.com | [10099](https://www.14ers.com/peaks/10099/13er-star-peak-a) | [10104](https://www.14ers.com/php14ers/peak.php?peakid=10104) | [10110](https://www.14ers.com/php14ers/peak.php?peakid=10110) |
-| LoJ | [301](https://listsofjohn.com/peak/301) | [365](https://listsofjohn.com/peak/365) | [420](https://listsofjohn.com/peak/420) |
-| peakbagger | [pid 14666](https://peakbagger.com/peak.aspx?pid=14666) | [pid 15740](https://peakbagger.com/peak.aspx?pid=15740) | [pid 16662](https://peakbagger.com/peak.aspx?pid=16662) |
-| Peak DB id | 301 | 365 | 420 |
+| | [Star Peak A](https://www.14ers.com/peaks/10099) | [Taylor Pk A](https://www.14ers.com/peaks/10104) |
+|---|---|---|
+| Elevation (LiDAR) | 13,527' | 13,438' |
+| Lat / Lon | 38.97963, −106.79967 | 38.99204, −106.78261 |
+| Class (standard) | 2 | 2 |
+| CO Rank | #241 | #299 |
+| Prominence | — | 817' |
+| Range | Elk Mtns (Taylor Park) | Elk Mtns (Taylor Park) |
+| County | Gunnison/Pitkin | Gunnison |
+| 14ers.com | [10099](https://www.14ers.com/peaks/10099) | [10104](https://www.14ers.com/peaks/10104) |
+| LoJ | [301](https://listsofjohn.com/peak/301) | [365](https://listsofjohn.com/peak/365) |
+| peakbagger | [pid 14666](https://peakbagger.com/peak.aspx?pid=14666) | [pid 15740](https://peakbagger.com/peak.aspx?pid=15740) |
 
-This is an **approach grouping**, not a summit-proximity guess. All three are reached from the **same Taylor Park road network** (CO 742, east of Taylor Park Reservoir):
-
-- **Star + Taylor are the standard pair** — done together in *every* trip report that hits either (whileyh, John Kirk, Furthermore). They sit 1.25 mi apart on a connecting Class 2 ridge above the Mt Tilton Trail.
-- **Italian** is the geographic outlier (3.5 mi SW across Star Pass) but groups here **by approach** — it comes off the same Taylor Park roads, not the Crested Butte/Aspen side. It's normally climbed on its own (with sub-13k American Flag Mtn and soft-ranked Lambertson Peak).
-- **All three in one push is proven:** josephnephi (LoJ [TR 26881](https://listsofjohn.com/tr?Id=26881) / GPX 16120, 6/28/2024) linked Star + Taylor + Italian + Lambertson **plus** five sub-13k summits on foot from the Mt Tilton TH — a 24.8 mi / 12,585 ft monster. A focused three-peak version is far shorter, but it confirms the on-foot link exists.
-
-**Combos (ranked-13er+ rule):** all three are ranked 13ers, so any pairing counts as a true ranked combo. The neighboring ranked summits (Castle, Cathedral, Castleabra, Electric Pass Pk) are already done — this trip cleans up what's left on the Taylor Park side.
+Neither summit carries a wilderness designation. **Italian Mtn** (13,385'), originally
+bundled with this pair, is climbed from the **Cement Creek TH off CR 740** in Gunnison
+County — a different road system and separate report (see *Other considerations*).
 
 ---
 
-## Itinerary options
+## Itinerary
 
-The cluster works two ways. Pick based on how big a day you want.
-
-**Option A — weekend from one Taylor Park basecamp (recommended):** camp near the end of CO 742 and split the cluster into two manageable Class 2 days:
-
-| Day | Legs | Distance | Gain |
-|---|---|---|---|
-| **Day 1** | Star + Taylor (the clean pair) | **8.6 mi** | **~4,300'** |
-| **Day 2** | Italian Mtn (+ American Flag if wanted) from the CR 744 / Cement Creek spur — or repeat from the Mt Tilton side | **~6 mi** | **~2,500'** |
-
-**Option B — all three in one long day:** link Star + Taylor + Italian on foot from the Mt Tilton TH (the josephnephi line, trimmed of the sub-peak detours):
-
-| Day | Legs | Distance | Gain |
-|---|---|---|---|
-| **Day 1** | Star + Taylor + Italian, one push (Class 2) | **~14–17 mi** | **~6,500–8,000'** |
-
-A committing full alpine day — Italian adds a ~3.5 mi each-way tundra traverse across Star Pass with a big drop (~12,400') and regain.
-
-**Combo stats (from TR GPX):**
+Single Class 2 day — **8.6 mi / ~4,040 ft** from the Mt Tilton Trail TH. The recorded
+route (see below) tags Taylor first (natural approach off the trail), traverses the ridge
+1.25 mi SW to Star, and reverses. Multiple TR sources agree on the mileage:
 
 | Source track | Peaks | Distance | Gain |
 |---|---|---|---|
 | whileyh 2020 (LoJ 17731) | Star + Taylor | 8.6 mi | ~4,311' |
 | John Kirk 2016 (LoJ 7235) | Star + Taylor (+Crystal) | 10.7 mi | ~5,883' |
-| josephnephi 2024 (LoJ 26881) | Star + Taylor + Italian + Lambertson + 5 sub-peaks | 24.8 mi | ~12,585' |
+| peakbagger Star aid1533069 | Star + Taylor | 8.6 mi | — |
 
 ---
 
@@ -120,33 +97,26 @@ A committing full alpine day — Italian adds a ~3.5 mi each-way tundra traverse
 | | |
 |---|---|
 | **Drive from Boulder** | **[3h 40m via Google Maps](https://www.google.com/maps/dir/?api=1&origin=1162+Peakview+Circle,+Boulder,+CO+80302&destination=38.987,-106.757)** (origin: 1162 Peakview Circle) |
-| Primary trailhead | **Mt Tilton Trail, end of CO 742** (~38.987, −106.757, ~10,750') — east of Taylor Park Reservoir, reached via Cottonwood Pass from Buena Vista |
-| Italian alt start | **CR 742 → 748 → 744** (rough 2WD, last ~1.5 mi needs clearance — whileyh 2021), or the **Star Mine end of CO 759 / Cement Creek jct** (4WD — Furthermore 2012). Both are short drives within the Taylor Park network from the Mt Tilton TH. |
+| Trailhead | **Mt Tilton Trail, end of CO 742** (~38.987, −106.757, ~10,750') — east of Taylor Park Reservoir, reached via Cottonwood Pass from Buena Vista |
 | Seasonal access | **Cottonwood Pass / CO 742 is seasonally closed** — typically late May to late October. Verify CDOT before driving. |
 
 ---
 
-## The days, in order
-
-### Day 1 — Star + Taylor (Class 2)
+## Route — Star + Taylor (Class 2)
 
 1. From the **end of CO 742 / Mt Tilton Trail TH**, hike the Mt Tilton Trail ~1.5 mi (trail runs on the **north** side of the stream, contrary to the topo).
 2. At the **Taylor Pass junction**, leave the trail and climb directly **north** to the base of Taylor's west ridge (old mine workings).
 3. Gain the ridge to **Taylor Peak (13,438', Class 2)** — the natural first summit of the pair.
 4. Follow the connecting ridge **SW ~1.25 mi (Class 2)** to **Star Peak A (13,527')**.
-5. Descend back toward the Taylor Pass junction and out — *or*, for Option B, drop SW and traverse to Italian.
+5. Descend back toward the Taylor Pass junction and out via the same trail.
 
 Neither peak carries a formal 14ers.com route description ("no route descriptions… try the Trip Reports") — the standard line is this Taylor→Star ridge from the Mt Tilton Trail, Class 2 throughout.
-
-### Day 2 — Italian Mountain (Class 2)
-
-From the Star–Taylor side, descend SW across the basin/Star Pass area (Class 2 tundra, significant elevation loss) and climb **Italian Mtn (13,385')** from the north/east. As a standalone, Italian is most efficiently done from the **CR 744 or Cement Creek** spur, commonly paired with **American Flag Mountain** (12,723', sub-13k) — standalone TRs use the Taylor Park spurs (CR 744 / CO 759–Cement Creek) and add American Flag Mtn + Lambertson Peak. Class 2 tundra/talus; the highest-prominence peak of the three (1,357').
 
 ---
 
 ## Camps & water
 
-- Dispersed camping plentiful near the end of CO 742 (fills on summer weekends) — the Option-A basecamp.
+- Dispersed camping plentiful near the end of CO 742 (fills on summer weekends) — car camp near the TH if driving in the night before.
 - No wilderness permits — the summits are on Gunnison NF land outside designated wilderness. No fees.
 
 ---
@@ -158,6 +128,19 @@ From the Star–Taylor side, descend SW across the basin/Star Pass area (Class 2
 - **Terrain:** Class 2 tundra, grass, and talus; no technical difficulty on the standard lines. Old mining roads/workings aid the lower Taylor approach.
 - **Storms:** long exposed ridges and tundra — early start, off the high ground by early afternoon (especially for the big one-day link).
 - **Cell coverage:** no submitted reception reports in the 14ers.com community DB for these summits/TH (typical for the East Taylor Park backcountry). Geographic reasoning: the **Mt Tilton TH and lower basins are likely dead** — deep in East Taylor Park, shadowed from towers; **summits may catch intermittent signal** with line-of-sight east, but don't count on it. Carry an **InReach / satellite messenger**, especially for the big one-day link.
+
+---
+
+## Other considerations
+
+**Italian Mountain (originally bundled here) is climbed from a different trailhead.**
+The initial draft of this report grouped Star + Taylor + Italian assuming a shared Taylor
+Park approach, but Italian's standard route is off **Cement Creek Rd (CR 740)** in
+Gunnison County — a separate road system ~5 mi SE of the Mt Tilton TH. climb13ers
+describes it as *"an easy Class 2 hike that can be completed in a morning"* from the
+Cement Creek — Italian Mtn TH (4WD). Italian is worth building as its own report
+(pending); trying to shoehorn it in with Star + Taylor produced a 26+ mi routed day that
+went through Star Peak's basin to reach it.
 
 ---
 

@@ -56,10 +56,8 @@ GAIN_TOL_ABS_FT = 200
 # just a frontmatter typo). Listed here so this gate can ship + catch NEW drift
 # on OTHER reports; each entry should be resolved and REMOVED, not kept forever.
 # Kyle, 2026-07-22: gate landed with these open — track in [[project-report-stat-drift]].
-KNOWN_DRIFT = {
-    "star_peak_group",   # day_italian_recommended.gpx = 26.67 mi (vs ~6 mi expected)
-                         # — route file itself needs investigation.
-}
+KNOWN_DRIFT = set()  # empty — star_peak_group fixed 2026-07-22 (split Italian to
+                     # a separate report; Star+Taylor day trip stands alone).
 
 
 def hav_mi(a, b):
