@@ -7,6 +7,14 @@
 # NOT share a TH with the other unclimbed Elk 13ers Daly A / Siberia, so it stands alone).
 objective_ids: [760]   # PT 13,060 B / "13067" (Class 3, Elk, Snowmass Wilderness)
 
+# peak_db's coord (39.14938,-107.0518) sits ~68 ft SE on a shoulder that CalTopo reads
+# ~13,032' — below the true summit. All 3 recorded tracks converge ~68 ft NW at the knob
+# CalTopo reads ~13,059' (≈ the peak's 13,060'/13,067' elevation), matching peakbagger's
+# surveyed point (39.14954,-107.05189). Move the marker there. (Kyle caught it visually,
+# 2026-07-23; confirmed via analyze_summit_location.py distinct-track convergence.)
+summit_overrides:
+  760: {lat: 39.14955, lon: -107.05191, note: "3-track convergence + pb-surveyed summit; peak_db was ~68 ft SE / ~27 ft low"}
+
 route_build:
   method: from_track   # one recorded pb ascent verbatim (Snowmass Creek → West Snowmass
   track: "trk_pb_1"    # Creek → Pierre Lakes → summit). The graph router stitched 71

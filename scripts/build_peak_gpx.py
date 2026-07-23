@@ -91,6 +91,17 @@ def main():
     climbed = {a["peak_id"] for a in ascents()}
     in_list = {r["peak_id"] for r in peak_lists() if r["list_id"] == LIST_ID}
 
+    # Per-slug summit-coordinate overrides. peak_db's point is authoritative for
+    # NAME/ELEVATION but its lat/lon is sometimes a rounded/benchmark point that sits
+    # off the true summit (Gladstone precedent; PT 13,060 B 2026-07-23 sat ~68 ft SE
+    # on a shoulder ~27 ft below the real summit — caught by recorded-track convergence
+    # + CalTopo elevation, ned10m too coarse to see it). Override keyed by peak_db id:
+    #   summit_overrides:
+    #     760: {lat: 39.14955, lon: -107.05191, note: "tracks converge here; pb-surveyed; +27 ft"}
+    # Only lat/lon change; name + elevation still come from peak_db. Verify with
+    # scripts/analyze_summit_location.py (track convergence) + CalTopo before setting one.
+    overrides = {int(k): v for k, v in (cfg.get("summit_overrides") or {}).items()}
+
     # objective summits → blue peak (sym=peak)
     peak_wpts = []
     objs = []
@@ -99,9 +110,15 @@ def main():
         if not p:
             print(f"  WARN objective id {pid} not in peak_db"); continue
         objs.append(p)
+        lat, lon = p["lat"], p["lon"]
+        ov = overrides.get(pid)
+        if ov:
+            lat, lon = float(ov["lat"]), float(ov["lon"])
+            print(f"  summit override: {p['display_name'].strip(chr(34))} → {lat},{lon}"
+                  f"  ({ov.get('note', 'peaks.yml summit_overrides')})")
         # Marker name = just the peak name (elev/class/status live in the report).
         peak_wpts.append({"name": p["display_name"].strip(chr(34)),
-                          "lat": p["lat"], "lon": p["lon"],
+                          "lat": lat, "lon": lon,
                           "ele_ft": p["elevation_ft"], "sym": "peak"})
 
     # extra summits not in peak_db — LiDAR-dropped soft-ranks still listed on

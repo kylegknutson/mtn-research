@@ -118,78 +118,93 @@ def main():
         print(f"\n=== {name}  (marker {fmt((mlat, mlon))}) ===")
         print(f"  {len(tracks)} recorded track(s); radius {args.radius_mi} mi")
 
-        near_all = []
+        # Near points, keeping track identity (for the distinct-track metric).
+        near = {}
         for fname, pts in tracks:
-            near_all += [p for p in pts if hav_mi(mlat, mlon, p[0], p[1]) <= args.radius_mi]
-        if not near_all:
+            np_ = [p for p in pts if hav_mi(mlat, mlon, p[0], p[1]) <= args.radius_mi]
+            if np_:
+                near[fname] = np_
+        if not near:
             print("  no track points within radius — widen --radius-mi")
             continue
+        near_all = [p for ps in near.values() for p in ps]
+
+        # (A) TRACK CONVERGENCE (behavioral summit): bin near points into cells; for each
+        # cell count DISTINCT tracks passing through (not raw points). The cell the MOST
+        # separate parties pass through is the summit everyone tags — robust vs one party
+        # milling on a flat shoulder (raw density) and vs a false-summit turnaround.
+        from collections import defaultdict
+        cell = 25.0  # m
+        def ckey(p):
+            return (round((p[0] - mlat) * 111320.0 / cell),
+                    round((p[1] - mlon) * 111320.0 * math.cos(math.radians(mlat)) / cell))
+        cell_tracks = defaultdict(set)
+        cell_pts = defaultdict(list)
+        for fname, ps in near.items():
+            for p in ps:
+                k = ckey(p)
+                cell_tracks[k].add(fname)
+                cell_pts[k].append(p)
+        ranked = sorted(cell_tracks, key=lambda k: (len(cell_tracks[k]), len(cell_pts[k])), reverse=True)
+        top = ranked[:5]
+        def cell_centroid(k):
+            ps = cell_pts[k]
+            return (sum(p[0] for p in ps) / len(ps), sum(p[1] for p in ps) / len(ps))
+        conv_k = top[0]
+        conv = cell_centroid(conv_k)
+        print(f"  TRACK convergence: {len(near)} track(s) reach the area; top {cell:.0f} m cells "
+              f"by distinct-tracks:")
+        for k in top:
+            c = cell_centroid(k)
+            print(f"      {fmt(c)}  {len(cell_tracks[k])} track(s), {len(cell_pts[k])} pts  "
+                  f"({hav_mi(mlat, mlon, c[0], c[1]) * 5280:.0f} ft from marker)")
 
         if args.no_dem:
-            print("  (--no-dem: skipping DEM summit + track-visit analysis)")
+            print("  (--no-dem: skipping DEM elevations)")
             continue
 
-        # (1) LOCAL DEM SUMMIT: grid in a TIGHT box around the marker (small enough not to
-        # reach a higher neighbor peak — Clark A is 0.5 mi off), max cell = the summit.
+        # (B) DEM elevations (ned10m — COARSE 10 m; note it can smooth a sharp knob and put
+        # its max on a broad shoulder, so treat it as a cross-check, not the arbiter) at the
+        # marker, the convergence cell, and the top cells; plus the ned10m grid max nearby.
         clat, clon = mlat, mlon
         dlat = args.box_m / 111320.0
         dlon = args.box_m / (111320.0 * math.cos(math.radians(clat)))
         step_lat = args.grid_m / 111320.0
         step_lon = args.grid_m / (111320.0 * math.cos(math.radians(clat)))
-        grid = [(mlat, mlon)]   # probe the marker itself first
+        probes = [(mlat, mlon), conv] + [cell_centroid(k) for k in top[1:]]
+        n_probe = len(probes)
         la = clat - dlat
         while la <= clat + dlat:
             lo = clon - dlon
             while lo <= clon + dlon:
-                grid.append((la, lo))
+                probes.append((la, lo))
                 lo += step_lon
             la += step_lat
-        print(f"  sampling DEM (ned10m): {len(grid)} cells over ±{args.box_m:.0f} m box…")
+        print(f"  sampling DEM (ned10m): {len(probes)} points (±{args.box_m:.0f} m grid + probes)…")
         try:
-            samples = sample_dem(grid)
+            samples = sample_dem(probes)
         except Exception as e:
             print(f"  DEM failed: {e}")
             continue
-        valid = [(la, lo, e) for la, lo, e in samples if e is not None]
-        if not valid:
-            print("  DEM returned no elevations")
-            continue
-        m_ft = valid[0][2] * 3.28084
-        slat, slon, sele = max(valid, key=lambda x: x[2])
-        s_ft = sele * 3.28084
-        print(f"  DEM @ marker:            {m_ft:,.0f} ft")
-        print(f"  DEM local summit:        {fmt((slat, slon))}  {s_ft:,.0f} ft  "
-              f"(marker → summit {hav_mi(mlat, mlon, slat, slon) * 5280:.0f} ft, "
-              f"+{s_ft - m_ft:,.0f} ft)")
+        ft = lambda e: e * 3.28084 if e is not None else float("nan")
+        m_ft = ft(samples[0][2])
+        c_ft = ft(samples[1][2])
+        grid_valid = [(la, lo, e) for la, lo, e in samples[n_probe:] if e is not None]
+        hlat, hlon, hele = max(grid_valid, key=lambda x: x[2]) if grid_valid else (mlat, mlon, None)
+        print(f"  ned10m @ marker:      {m_ft:,.0f} ft")
+        print(f"  ned10m @ convergence: {c_ft:,.0f} ft  ({'+' if c_ft >= m_ft else ''}{c_ft - m_ft:,.0f} ft vs marker)")
+        if hele is not None:
+            print(f"  ned10m grid max:      {fmt((hlat, hlon))}  {ft(hele):,.0f} ft  "
+                  f"({hav_mi(mlat, mlon, hlat, hlon) * 5280:.0f} ft from marker)")
 
-        # (2) TRACK SUMMIT-VISIT: per track, the point of CLOSEST APPROACH to the DEM
-        # summit (where that party actually topped out). Cluster them — this is "where
-        # the tracks linger" at the TOP, immune to approach-corridor bunching and to a
-        # false-summit turnaround on the ridge (Kyle, 2026-07-23).
-        visits = []
-        for fname, pts in tracks:
-            near = [p for p in pts if hav_mi(slat, slon, p[0], p[1]) <= args.radius_mi]
-            if not near:
-                continue
-            ca = min(near, key=lambda p: hav_mi(slat, slon, p[0], p[1]))
-            visits.append((ca, fname, hav_mi(slat, slon, ca[0], ca[1]) * 5280))
-        if visits:
-            vlat = sum(v[0][0] for v in visits) / len(visits)
-            vlon = sum(v[0][1] for v in visits) / len(visits)
-            print(f"  TRACK summit-visit (closest approach to summit), {len(visits)} track(s):")
-            for ca, fname, dft in sorted(visits, key=lambda x: x[1]):
-                print(f"      {fname}: {fmt(ca)}  ({dft:.0f} ft from DEM summit)")
-            print(f"    → mean visit {fmt((vlat, vlon))}, "
-                  f"{hav_mi(slat, slon, vlat, vlon) * 5280:.0f} ft from DEM summit; "
-                  f"marker → visit {hav_mi(mlat, mlon, vlat, vlon) * 5280:.0f} ft")
-
-        mtd = hav_mi(mlat, mlon, slat, slon) * 5280
-        if mtd < 120 and (s_ft - m_ft) < 20:
-            print("  → marker is on the local DEM summit — GOOD, no move needed")
+        cd = hav_mi(mlat, mlon, conv[0], conv[1]) * 5280
+        if len(cell_tracks[conv_k]) >= 2 and cd > 100:
+            print(f"  → tracks from {len(cell_tracks[conv_k])} parties converge ~{cd:.0f} ft from the "
+                  f"marker at {fmt(conv)} — marker likely MISPLACED; verify elevation on CalTopo "
+                  f"(ned10m is too coarse to trust here) and MOVE if that spot is higher. Your call.")
         else:
-            print(f"  → marker sits ~{mtd:.0f} ft from / {s_ft - m_ft:+,.0f} ft below the "
-                  f"local DEM summit — candidate to MOVE to {fmt((slat, slon))} "
-                  f"(confirm against the track visits above; your call)")
+            print(f"  → convergence ~{cd:.0f} ft from marker — marker looks about right, but "
+                  f"confirm against CalTopo elevation.")
 
 
 if __name__ == "__main__":
