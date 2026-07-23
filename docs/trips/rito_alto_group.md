@@ -5,7 +5,7 @@ drive_time: "~4h 30m"
 yds_class: "2"
 gain: "~9,996 ft (3 days incl. pack-in/out)"
 status: unclimbed
-caltopo_id: RU981B8
+caltopo_id: AEUE5H7
 regional_map_id: VKGB00L
 gain_ft: 9996
 class: 2
@@ -40,7 +40,7 @@ status_source: "peak_db ascents (Kyle — all 4 unclimbed)"
     **NOAA weather link:** [Rito Alto basin weather](https://forecast.weather.gov/MapClick.php?lat=38.088&lon=-105.665)
 
 !!! map ""
-    **CalTopo research map:** <https://caltopo.com/m/RU981B8>
+    **CalTopo research map:** <https://caltopo.com/m/AEUE5H7>
 
 **Status in DB:** all 4 unclimbed. Four ranked west-Sangre 13ers arrayed above Rito Alto
 Lake — three on the north crest (**PT 13,062 A "Mas Alto"**, **PT 13,060 A "Alto"**,
@@ -50,7 +50,7 @@ of the crest — **Rito Alto Pk, Hermit Pk A, Eureka Mtn A** — already climbed
 ![Overview map](../maps/rito_alto_group.png)
 
 <!-- PROVENANCE_START -->
-*Note: the recommended route was distilled from **66 recorded GPS tracks** of real trips (14ers.com · ListsofJohn · peakbagger · Kyle's recordings) — all layered on the [interactive CalTopo research map](https://caltopo.com/m/RU981B8).*
+*Note: the recommended route was distilled from **66 recorded GPS tracks** of real trips (14ers.com · ListsofJohn · peakbagger · Kyle's recordings) — all layered on the [interactive CalTopo research map](https://caltopo.com/m/AEUE5H7).*
 <!-- PROVENANCE_END -->
 
 ---
