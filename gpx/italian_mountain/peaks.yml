@@ -1,0 +1,22 @@
+# Italian Mountain — single Class 2 peak, Elks Range (Cement Creek approach).
+#
+# Route: recorded peakbagger ascent (trk_pb_1) trimmed to an Italian-only
+# out-and-back (dropped the American Flag / Lambertson add-on peaks that were
+# on the recording). This is the LONG no-4WD haul up Cement Creek (~12.9 mi RT
+# from the ~10,460' 2WD start). climb13ers' 4 mi / 2,595 ft figure is the 4WD
+# version from the higher Cement Creek - Italian Mtn TH (10,780'); with 4WD the
+# day is much shorter. There is no recorded track OR public trail on the South
+# Ridge from the 4WD TH (the mapped NE Italian Mountain Trail crosses private
+# roads), so the recorded Cement Creek line is the honest recommended route.
+# (Kyle picked the recorded-track option, 2026-07-23.)
+objective_ids: [420]   # Italian Mtn 13,385 (Class 2, Elks/Pearl Pass quad)
+
+route_build:
+  method: from_track
+  track: "route_italian_south_ridge"   # pb ascent, trimmed to Italian-only out-and-back
+
+nearby:
+  include: false
+
+landmarks:
+  - {name: "Cement Creek TH (2WD start, ~10,460')", lat: 38.8923, lon: -106.7184, ele_ft: 10462, kind: trailhead}
