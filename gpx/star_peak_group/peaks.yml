@@ -1,10 +1,15 @@
-# Waypoint config — Star Peak Group day trip (Star + Taylor + Italian).
-objective_ids: [301, 365, 420]   # Star Pk A (301), Taylor Pk A (365), Italian Mtn (420)
+# Waypoint config — Star + Taylor day trip from Mt Tilton Trail TH.
+#
+# Italian Mtn was originally bundled here (2026-06-07 draft), but Italian is
+# climbed from a completely different trailhead — the Cement Creek TH off CR 740
+# in Gunnison County (per climb13ers standard-route description; ~5 mi SE of
+# Tilton on separate road system). Bundling it with Star+Taylor was
+# geographically wrong. Italian gets its own report — see
+# [[project-report-stat-drift]] backlog. (Kyle, 2026-07-22.)
+objective_ids: [301, 365]        # Star Pk A (301), Taylor Pk A (365)
 
-# Per-day objective assignments → one recommended route per day (build_trip_day_routes.py).
 days:
   - {label: "Star + Taylor", objective_ids: [301, 365]}
-  - {label: "Italian", objective_ids: [420]}
 
 nearby:
   include: false
