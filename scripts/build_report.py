@@ -100,6 +100,9 @@ def data_phase(args):
     n_th = sum(1 for lm in cfg.get("landmarks", []) if lm.get("kind", "trailhead") == "trailhead")
     if n_th >= 2:
         run([SCRIPTS / "build_drive_route.py", "--slug", slug])
+        # Drive-time / distance matrix between the trailheads (+ home→TH) — paste
+        # into the report's "Getting there" section. Non-fatal (OSRM best-effort).
+        run([SCRIPTS / "drive_matrix.py", "--slug", slug])
 
     if regional:
         run([SCRIPTS / "caltopo_mytracks.py", "--slug", slug, "--maps", regional,
