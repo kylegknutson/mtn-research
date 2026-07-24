@@ -11,4 +11,6 @@ nearby:
 route_build: {method: from_track, track: "loj_14251"}
 
 landmarks:
-  - {name: "Ute Creek TH (Thirtymile, Rio Grande Reservoir)", lat: 37.7233, lon: -107.259, ele_ft: 9303, kind: trailhead}
+- {name: "Ute Creek TH (Thirtymile, Rio Grande Reservoir)", lat: 37.7233, lon: -107.259, ele_ft: 9303, kind: trailhead}
+summit_overrides:
+  807: {lat: 37.63655, lon: -107.20889, note: 'track summit (4 trk); peak_db was ~60 ft off, ~116 ft low'}

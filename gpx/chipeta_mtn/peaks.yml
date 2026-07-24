@@ -6,4 +6,6 @@ nearby:
   radius_mi: 8
   exclude: []
 landmarks:
-  - {name: "Marshall Pass TH (CR 200 / Colorado Trail)", lat: 38.3942, lon: -106.2472, ele_ft: 10842, kind: trailhead}
+- {name: "Marshall Pass TH (CR 200 / Colorado Trail)", lat: 38.3942, lon: -106.2472, ele_ft: 10842, kind: trailhead}
+summit_overrides:
+  337: {lat: 38.44758, lon: -106.24061, note: 'track summit (10 trk); peak_db was ~63 ft off, ~97 ft low'}

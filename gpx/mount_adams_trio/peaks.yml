@@ -6,4 +6,6 @@ route_build: {method: legs}
 nearby:
   include: false
 landmarks:
-  - {name: "Willow Creek / Willow Lake TH (Crestone)", lat: 37.9889, lon: -105.6626, ele_ft: 8900, kind: trailhead}
+- {name: "Willow Creek / Willow Lake TH (Crestone)", lat: 37.9889, lon: -105.6626, ele_ft: 8900, kind: trailhead}
+summit_overrides:
+  248: {lat: 38.00042, lon: -105.60023, note: 'track summit (13 trk); peak_db was ~93 ft off, ~51 ft low'}

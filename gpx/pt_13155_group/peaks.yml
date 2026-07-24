@@ -6,5 +6,8 @@ nearby:
   radius_mi: 6
   exclude: []
 landmarks:
-  - {name: "Nellie Creek 2WD TH (lower, Uncompahgre road)", lat: 38.0204, lon: -107.4007, ele_ft: 9320, kind: trailhead}
-  - {name: "Nellie Creek 4WD upper TH (~4 mi rough road)", lat: 38.0478, lon: -107.4058, ele_ft: 11430, kind: trailhead}
+- {name: "Nellie Creek 2WD TH (lower, Uncompahgre road)", lat: 38.0204, lon: -107.4007, ele_ft: 9320, kind: trailhead}
+- {name: "Nellie Creek 4WD upper TH (~4 mi rough road)", lat: 38.0478, lon: -107.4058, ele_ft: 11430, kind: trailhead}
+summit_overrides:
+  726: {lat: 38.07269, lon: -107.38886, note: 'track summit (9 trk); peak_db was ~272 ft off, ~59 ft low'}
+  707: {lat: 38.07205, lon: -107.41923, note: 'track summit (6 trk); peak_db was ~578 ft off, ~62 ft low'}

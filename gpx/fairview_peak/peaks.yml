@@ -11,4 +11,6 @@ nearby:
 route_build: {method: from_track, track: "pb_1"}
 
 landmarks:
-  - {name: "Gold Basin 4WD (Gold Creek Rd, upper)", lat: 38.6709, lon: -106.5375, ele_ft: 12030, kind: trailhead}
+- {name: "Gold Basin 4WD (Gold Creek Rd, upper)", lat: 38.6709, lon: -106.5375, ele_ft: 12030, kind: trailhead}
+summit_overrides:
+  591: {lat: 38.68305, lon: -106.5368, note: 'track summit (6 trk); peak_db was ~82 ft off, ~14 ft low'}

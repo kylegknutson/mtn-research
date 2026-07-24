@@ -11,4 +11,6 @@ nearby:
 route_build: {method: from_track, track: "pb_1"}
 
 landmarks:
-  - {name: "Gold Creek / Gold Basin TH (SE approach)", lat: 38.6559, lon: -106.5756, ele_ft: 10060, kind: trailhead}
+- {name: "Gold Creek / Gold Basin TH (SE approach)", lat: 38.6559, lon: -106.5756, ele_ft: 10060, kind: trailhead}
+summit_overrides:
+  541: {lat: 38.68588, lon: -106.62183, note: 'track summit (5 trk); peak_db was ~240 ft off, ~40 ft low'}

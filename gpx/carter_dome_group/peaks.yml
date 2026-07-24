@@ -11,7 +11,11 @@ route_build: {method: graph}
 nearby:
   include: false
 landmarks:
-  - {name: "Pinkham Notch Visitor Center (South TH)", lat: 44.2574, lon: -71.2530, ele_ft: 2032, kind: trailhead}
-  - {name: "Rattle River Trailhead (North TH, RT 2)", lat: 44.3862, lon: -71.0919, ele_ft: 800, kind: trailhead}
-  - {name: "AMC Carter Notch Hut", lat: 44.2617, lon: -71.1956, ele_ft: 3290, kind: landmark}
-  - {name: "Imp Campsite (last water, AT)", lat: 44.3188, lon: -71.1455, ele_ft: 3245, kind: landmark}
+- {name: "Pinkham Notch Visitor Center (South TH)", lat: 44.2574, lon: -71.2530, ele_ft: 2032, kind: trailhead}
+- {name: "Rattle River Trailhead (North TH, RT 2)", lat: 44.3862, lon: -71.0919, ele_ft: 800, kind: trailhead}
+- {name: "AMC Carter Notch Hut", lat: 44.2617, lon: -71.1956, ele_ft: 3290, kind: landmark}
+- {name: "Imp Campsite (last water, AT)", lat: 44.3188, lon: -71.1455, ele_ft: 3245, kind: landmark}
+summit_overrides:
+  -50: {lat: 44.30314, lon: -71.1678, note: 'track summit (23 trk); peak_db was ~126 ft off, ~138 ft low'}
+  -113: {lat: 44.24943, lon: -71.22359, note: 'track summit (13 trk); peak_db was ~72 ft off, ~148 ft low'}
+  -38: {lat: 44.26745, lon: -71.17921, note: 'track summit (11 trk); peak_db was ~129 ft off, ~184 ft low'}

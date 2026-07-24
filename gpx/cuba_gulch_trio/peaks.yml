@@ -13,4 +13,6 @@ nearby:
   include: false
 
 landmarks:
-  - {name: "Minnie Gulch TH (CR 24, upper)", lat: 37.8414, lon: -107.5489, ele_ft: 11046, kind: trailhead}
+- {name: "Minnie Gulch TH (CR 24, upper)", lat: 37.8414, lon: -107.5489, ele_ft: 11046, kind: trailhead}
+summit_overrides:
+  639: {lat: 37.84754, lon: -107.47521, note: 'track summit (11 trk); peak_db was ~116 ft off, ~16 ft low'}

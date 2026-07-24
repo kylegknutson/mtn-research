@@ -9,10 +9,12 @@
 objective_ids: [301, 365]        # Star Pk A (301), Taylor Pk A (365)
 
 days:
-  - {label: "Star + Taylor", objective_ids: [301, 365]}
+- {label: "Star + Taylor", objective_ids: [301, 365]}
 
 nearby:
   include: false
 
 landmarks:
-  - {name: "Mt Tilton Trail TH (end of CO 742)", lat: 38.9872, lon: -106.7573, ele_ft: 10750, kind: trailhead}
+- {name: "Mt Tilton Trail TH (end of CO 742)", lat: 38.9872, lon: -106.7573, ele_ft: 10750, kind: trailhead}
+summit_overrides:
+  301: {lat: 38.97982, lon: -106.79963, note: 'track summit (6 trk); peak_db was ~70 ft off, ~255 ft low'}

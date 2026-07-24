@@ -5,4 +5,6 @@ caltopo_map_id: R1KSN0U   # https://caltopo.com/m/R1KSN0U
 nearby:
   include: false
 landmarks:
-  - {name: "Fish Creek TH", lat: 37.82419, lon: -108.11985, kind: trailhead}
+- {name: "Fish Creek TH", lat: 37.82419, lon: -108.11985, kind: trailhead}
+summit_overrides:
+  489: {lat: 37.85355, lon: -108.10852, note: 'track summit (7 trk); peak_db was ~131 ft off, ~72 ft low'}

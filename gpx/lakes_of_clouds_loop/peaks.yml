@@ -5,6 +5,11 @@ route_build: {method: legs}
 nearby:
   include: false
 landmarks:
-  - {name: "Wild Cherry Creek TH (San Luis Valley / west, near Moffat)", lat: 38.1006, lon: -105.7707, ele_ft: 9000, kind: trailhead}
-  - {name: "Rito Alto Creek TH (alt west approach)", lat: 38.1314, lon: -105.7876, ele_ft: 9100, kind: trailhead}
-  - {name: "Horn Creek / Wet Mtn Valley side (east approach)", lat: 38.1379, lon: -105.6006, ele_ft: 8800, kind: trailhead}
+- {name: "Wild Cherry Creek TH (San Luis Valley / west, near Moffat)", lat: 38.1006, lon: -105.7707, ele_ft: 9000, kind: trailhead}
+- {name: "Rito Alto Creek TH (alt west approach)", lat: 38.1314, lon: -105.7876, ele_ft: 9100, kind: trailhead}
+- {name: "Horn Creek / Wet Mtn Valley side (east approach)", lat: 38.1379, lon: -105.6006, ele_ft: 8800, kind: trailhead}
+summit_overrides:
+  327: {lat: 38.14617, lon: -105.67617, note: 'track summit (17 trk); peak_db was ~97 ft off, ~81 ft low'}
+  307: {lat: 38.12869, lon: -105.6701, note: 'track summit (10 trk); peak_db was ~92 ft off, ~13 ft low'}
+  446: {lat: 38.13894, lon: -105.7138, note: 'track summit (16 trk); peak_db was ~88 ft off, ~58 ft low'}
+  694: {lat: 38.11694, lon: -105.70652, note: 'track summit (10 trk); peak_db was ~69 ft off, ~92 ft low'}

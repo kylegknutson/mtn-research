@@ -6,4 +6,6 @@ route_build: {method: from_track, track: "hunts_recorded_loop"}
 nearby:
   include: false
 landmarks:
-  - {name: "Hunts Pk TH (recorded GPS start, Rainbow Trail side)", lat: 38.3821, lon: -105.9833, kind: trailhead}
+- {name: "Hunts Pk TH (recorded GPS start, Rainbow Trail side)", lat: 38.3821, lon: -105.9833, kind: trailhead}
+summit_overrides:
+  748: {lat: 38.3831, lon: -105.94551, note: 'track summit (5 trk); peak_db was ~89 ft off, ~76 ft low'}

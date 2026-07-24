@@ -6,5 +6,7 @@ nearby:
   include: false
 
 landmarks:
-  - {name: "Pearl Pass Rd TH (Aspen / Castle Creek side)", lat: 39.0173, lon: -106.8134, ele_ft: 10100, kind: trailhead}
-  - {name: "South alt start (Brush Creek)", lat: 38.9652, lon: -106.8470, ele_ft: 10100, kind: trailhead}
+- {name: "Pearl Pass Rd TH (Aspen / Castle Creek side)", lat: 39.0173, lon: -106.8134, ele_ft: 10100, kind: trailhead}
+- {name: "South alt start (Brush Creek)", lat: 38.9652, lon: -106.8470, ele_ft: 10100, kind: trailhead}
+summit_overrides:
+  432: {lat: 38.9809, lon: -106.83403, note: 'track summit (7 trk); peak_db was ~115 ft off, ~88 ft low'}

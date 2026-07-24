@@ -11,4 +11,6 @@ nearby:
 route_build: {method: from_track, track: "loj_14413"}
 
 landmarks:
-  - {name: "Ivy Creek TH (Ivy Creek Campground, FR 526)", lat: 37.6821, lon: -106.9994, ele_ft: 9290, kind: trailhead}
+- {name: "Ivy Creek TH (Ivy Creek Campground, FR 526)", lat: 37.6821, lon: -106.9994, ele_ft: 9290, kind: trailhead}
+summit_overrides:
+  657: {lat: 37.57432, lon: -106.98144, note: 'track summit (4 trk); peak_db was ~157 ft off, ~85 ft low'}

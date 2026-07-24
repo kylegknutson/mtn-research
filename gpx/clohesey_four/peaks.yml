@@ -7,4 +7,6 @@ route_build: {method: frozen}
 nearby:
   include: false
 landmarks:
-  - {name: "Clohesey Lake TH (4WD)", lat: 38.9510, lon: -106.4075, ele_ft: 11000, kind: trailhead}
+- {name: "Clohesey Lake TH (4WD)", lat: 38.9510, lon: -106.4075, ele_ft: 11000, kind: trailhead}
+summit_overrides:
+  339: {lat: 38.93423, lon: -106.42458, note: 'track summit (10 trk); peak_db was ~63 ft off, ~179 ft low'}

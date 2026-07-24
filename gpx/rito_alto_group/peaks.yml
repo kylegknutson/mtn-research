@@ -69,3 +69,5 @@ landmarks:
 # short spur trail up an embankment as the trail goes along the west side of
 # the lake … a little before that [NW] stream crossing, on the left and up a
 # small slope, room for a couple tents."
+summit_overrides:
+  759: {lat: 38.08948, lon: -105.68926, note: 'track summit (4 trk); peak_db was ~117 ft off, ~17 ft low'}

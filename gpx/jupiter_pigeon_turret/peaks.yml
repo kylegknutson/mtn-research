@@ -36,3 +36,7 @@ landmarks:
   lon: -107.6928
   kind: trailhead
   ele_ft: 8270
+summit_overrides:
+  73: {lat: 37.6325, lon: -107.64624, note: 'track summit (9 trk); peak_db was ~124 ft off, ~36 ft low'}
+  115: {lat: 37.6126, lon: -107.59226, note: 'track summit (10 trk); peak_db was ~68 ft off, ~46 ft low'}
+  181: {lat: 37.63762, lon: -107.62504, note: 'track summit (6 trk); peak_db was ~161 ft off, ~247 ft low'}
