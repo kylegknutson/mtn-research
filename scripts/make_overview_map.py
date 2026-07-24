@@ -304,8 +304,11 @@ def build_basemap(lon_min, lon_max, lat_min, lat_max, zoom) -> tuple[Image.Image
     """
     tiles = list(mercantile.tiles(lon_min, lat_min, lon_max, lat_max, zooms=zoom))
     if len(tiles) > MAX_TILES:
-        print(f"Warning: {len(tiles)} tiles at zoom={zoom}, truncating to {MAX_TILES}", file=sys.stderr)
-        tiles = tiles[:MAX_TILES]
+        # NEVER truncate — dropping tiles mis-registers the basemap (overlay shifts
+        # left). The caller (build_map) steps zoom down to fit; if we still land here
+        # something is wrong, so fail loudly rather than ship a shifted map.
+        raise RuntimeError(f"{len(tiles)} tiles > MAX_TILES={MAX_TILES} at zoom {zoom} — "
+                           "caller must reduce zoom (truncating would shift the overlay)")
 
     print(f"Fetching {len(tiles)} tiles at zoom={zoom}…", flush=True)
 
@@ -644,6 +647,17 @@ def build_map(slug: str, out_path: Path, zoom: int | None = None, title: str = "
         zoom = math.ceil(math.log2(360.0 * IMG_W_PX / (256.0 * lon_span_padded)))
         zoom = max(11, min(15, zoom))
 
+    # Cap the tile count WITHOUT truncating coverage. Silently dropping tiles
+    # (tiles[:MAX_TILES]) leaves the canvas too small on the east/south edge, so the
+    # crop clamps and the basemap gets stretched — the whole overlay then renders
+    # shifted LEFT (Kyle, 2026-07-23: pt_13060_b was 290 px / a wide 14-mi route hit
+    # ~90 tiles > MAX_TILES=64). Instead step down to the coarsest-but-still-crisp zoom
+    # that fits, so the basemap always FULLY covers the view and stays pixel-aligned
+    # with the markers/tracks.
+    while zoom > 11 and len(list(mercantile.tiles(
+            lon_min, lat_min, lon_max, lat_max, zooms=zoom))) > MAX_TILES:
+        zoom -= 1
+
     print(f"Extent: lon {lon_min:.4f}–{lon_max:.4f}, lat {lat_min:.4f}–{lat_max:.4f}, zoom={zoom}")
 
     # ── basemap ──────────────────────────────────────────────────────────────
@@ -675,6 +689,17 @@ def build_map(slug: str, out_path: Path, zoom: int | None = None, title: str = "
     origin_py = py_lo
     scale_x = IMG_W_PX / (px_hi - px_lo)
     scale_y = IMG_H_PX / (py_hi - py_lo)
+
+    # COVERAGE GUARD: the cropped basemap must span the full view. If the tiles didn't
+    # cover it (canvas too small → crop clamped narrower than the view span), the resize
+    # stretches the basemap and the overlay renders shifted (Kyle, 2026-07-23: 290 px
+    # left). The zoom-fit loop above prevents this; this asserts it so a regression fails
+    # loudly instead of shipping a mis-registered map.
+    if (crop_x1 - crop_x0) < (px_hi - px_lo) - 2 or (crop_y1 - crop_y0) < (py_hi - py_lo) - 2:
+        raise RuntimeError(
+            f"basemap crop {crop_x1-crop_x0}x{crop_y1-crop_y0} px narrower than view "
+            f"{px_hi-px_lo:.0f}x{py_hi-py_lo:.0f} px at zoom {zoom} — tiles missing; the "
+            f"overlay would render shifted. Lower MAX_TILES-fit zoom or raise MAX_TILES.")
 
     draw = ImageDraw.Draw(img, "RGBA")
 
